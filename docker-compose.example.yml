@@ -1,0 +1,19 @@
+# Copy to docker-compose.yml on the NAS (or paste into your NAS "Container"/"Compose" UI).
+services:
+  planner:
+    # Replace OWNER with the GitHub account/organisation that owns this repository (lowercase).
+    image: ghcr.io/OWNER/planner:latest
+    container_name: planner
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      # EVERYTHING you create lives in this folder: state, attachments, automatic backups.
+      # Include it in your NAS backup. Updating or recreating the container never touches it.
+      - ./data:/data
+    # If the container cannot write to ./data, run it as the owner of that folder:
+    # user: "1000:1000"
+    # environment:
+    #   # Optional HTTP basic auth (otherwise protect the app with your reverse proxy / VPN):
+    #   AUTH_USER: "change-me"
+    #   AUTH_PASSWORD: "change-me-too"
