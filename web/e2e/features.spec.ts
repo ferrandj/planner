@@ -117,3 +117,27 @@ test('installable app: manifest and icons are served, the service worker takes o
   await context.setOffline(false);
   expect(w.errors.filter((e) => !/Failed to load resource|net::ERR|fetch/i.test(e))).toEqual([]);
 });
+
+test('calendar day: the usual class of a subject is offered and added in one click, and kept after a reload', async ({ page, request }) => {
+  await open(page);
+  const monthBtn = page.getByRole('button', { name: 'Mois', exact: true });
+  if (await monthBtn.isVisible()) await monthBtn.click();
+  // the demo schedule has a weekly evening live per subject starting tomorrow; six weeks later nothing is left on that weekday
+  const day = new Date(); day.setDate(day.getDate() + 1 + 42);
+  const label = new Intl.DateTimeFormat('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }).format(day);
+  const cell = page.getByRole('button', { name: new RegExp('^' + label + ', ') });
+  for (let i = 0; i < 5 && !(await cell.isVisible()); i++) await page.getByRole('button', { name: 'Mois suivant' }).click();
+  await cell.click();
+  const dlg = page.getByRole('dialog');
+  const quick = dlg.locator('.quickadd .chips').first().getByRole('button').first();
+  await expect(quick).toBeVisible();
+  await quick.click();
+  await expect(dlg.locator('ul.list li')).toHaveCount(1);
+  await waitSaved(page);
+  const st = await getState(request);
+  expect(st.data.extra.e).toHaveLength(1);
+  expect(st.data.extra.e[0].time).toBe('18:30 – 21:30');
+  await page.reload();
+  await waitSaved(page);
+  expect((await getState(request)).data.extra.e).toHaveLength(1);
+});

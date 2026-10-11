@@ -84,6 +84,9 @@ data/
   A catch-up tile starts at 09:30 (morning) or 14:00 (afternoon/evening), so within a day the morning one is listed
   first. The afternoon and the evening are **one** period: a class in the evening also takes the afternoon.
 - **Calendar**: clicking a day opens a popup with everything planned that day (tick, edit, notes from there too).
+  It also offers one-click buttons to add the usual class of each subject for that weekday (a subject's classes
+  normally come on the same weekday at the same time every week; the planner reads that from the sessions it already
+  has), plus a list to add any other subject/type. An added class is a normal tile you can edit or remove afterwards.
 
 ### Install it as an app (Android, desktop Chrome/Edge)
 

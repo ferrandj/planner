@@ -2,6 +2,9 @@ import { useEffect, useRef, type CSSProperties, type FormEvent, type ReactNode }
 import type { Evt } from '../types';
 import { pad, parse, wdList } from '../lib/dates';
 import { eventsOn, inScope, isDone, isLate, subjectOf, visible } from '../lib/model';
+import { addSession } from '../lib/items';
+import { K } from '../lib/labels';
+import { allChoices, suggestFor, type Suggestion } from '../lib/rhythm';
 import { useApp } from '../state/app';
 import { Row } from './Row';
 import { Seg } from './common';
@@ -58,7 +61,19 @@ function cellLine(e: Evt, ctx: ReturnType<typeof useApp>): ReactNode {
 
 /** What is planned on the clicked day, in a popup. */
 function DayDialog({ day, evs }: { day: string; evs: Evt[] }): ReactNode {
-  const { ui, setUi, fmt, t } = useApp();
+  const { ui, setUi, fmt, t, tf, model, data, update } = useApp();
+  const quick = suggestFor(model, data, day), others = allChoices(model, data);
+  const add = (c: Suggestion): void => update((d) => { addSession(d, c.subject, c.kind, day, c.time); });
+  const chip = (c: Suggestion, key: string): ReactNode => {
+    const s = subjectOf(model, c.subject);
+    if (!s) return null;
+    return (
+      <button key={key} type="button" className={'fchip s' + s.c} style={{ ['--c' as string]: `var(--s${s.c})` } as CSSProperties}
+        aria-label={tf('Ajouter : {s}, {k}, {h}', { s: s.name, k: K(c.kind, t), h: c.time })} onClick={() => add(c)}>
+        ＋ {s.ab} · {K(c.kind, t)} <small>{c.time}</small>
+      </button>
+    );
+  };
   const nested = useRef(false);
   nested.current = !!(ui.editing || ui.menu || ui.noteFor);   // a dialog opened from here handles Escape itself
   const close = (): void => setUi({ sel: null });
@@ -74,6 +89,14 @@ function DayDialog({ day, evs }: { day: string; evs: Evt[] }): ReactNode {
         <div className="mtop acc"><div className="eyebrow">{t('Au programme')}</div><div className="big sm" id="day-t" style={{ textTransform: 'capitalize' }}>{fmt.long.format(parse(day))}</div></div>
         <div className="mbody daybody">
           {evs.length ? <ul className="list">{evs.map((e) => <Row key={e.id} e={e} />)}</ul> : <div className="empty">{t('Rien de prévu ce jour-là.')}</div>}
+          <section className="quickadd" aria-label={t('Ajouter une séance ce jour-là')}>
+            <div className="lbl">{t('Ajouter une séance ce jour-là')}</div>
+            {quick.length > 0 ? <div className="chips">{quick.map((c) => chip(c, c.subject + c.kind))}</div> : <p className="hint">{t("Aucune séance habituelle ce jour-là : choisis une matière ci-dessous.")}</p>}
+            <details>
+              <summary>{t('Autre matière ou autre type')}</summary>
+              <div className="chips">{others.map((c) => chip(c, 'o' + c.subject + c.kind))}</div>
+            </details>
+          </section>
           <div className="opt"><span className="spacer" /><button type="button" className="btn" id="day-close" onClick={close}>{t('Fermer')}</button></div>
         </div>
       </div>

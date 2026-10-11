@@ -34,9 +34,9 @@ export function addExam(d: Data, today: string): string {
   return 'x:' + id;
 }
 
-export function addSession(d: Data, subject: string, kind: SessionKind, date: string): string {
+export function addSession(d: Data, subject: string, kind: SessionKind, date: string, time?: string): string {
   const id = newId();
-  const e: SessionEvt = { id, subject, kind, date, time: kind === 'live' ? '18:30 – 21:30' : '12:30', tag: '' };
+  const e: SessionEvt = { id, subject, kind, date, time: time ?? (kind === 'live' ? '18:30 – 21:30' : '12:30'), tag: '' };
   d.extra.e.push(e);
   return 'e:' + id;
 }

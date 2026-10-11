@@ -148,7 +148,7 @@ describe('calendar day popup', () => {
     await u.click(screen.getByRole('button', { name: 'Mois' }));
     await u.click(screen.getByRole('button', { name: /^lundi 12 octobre 2026, \d+ élément/ }));
     const d = dialog();
-    expect(within(d).getByText(/Live du soir/)).toBeInTheDocument();
+    expect(within(d.querySelector('ul.list') as HTMLElement).getByText(/Live du soir/)).toBeInTheDocument();
     await u.click(within(d).getByRole('button', { name: 'Fermer' }));
     expect(screen.queryByRole('dialog')).toBeNull();
     await u.click(screen.getByRole('button', { name: /^mercredi 14 octobre 2026, / }));
@@ -184,5 +184,36 @@ describe('install as an app', () => {
     await user().click(btn);
     expect(prompt).toHaveBeenCalledTimes(1);
     await vi.waitFor(() => expect(screen.queryByRole('button', { name: /Installer/ })).toBeNull());
+  });
+});
+
+describe('quick add of the usual class from a calendar day', () => {
+  it('a Monday offers the subject whose evening live is usually on Mondays; one click adds it with the usual time, saved and editable', async () => {
+    const srv = new FakeServer();
+    const { sync } = await mountApp({ server: srv });
+    const u = user();
+    await u.click(screen.getByRole('button', { name: 'Mois' }));
+    await u.click(screen.getByRole('button', { name: /^lundi 19 octobre 2026, / }));
+    const q = within(dialog());
+    expect(q.getAllByRole('button', { name: /^Ajouter : / })).toHaveLength(1 + 4);          // 1 suggestion + the 4 manual choices (2 subjects x live/webconf)
+    await u.click(q.getAllByRole('button', { name: 'Ajouter : Maths, Live du soir, 18:30 – 21:30' })[0]);
+    await saved(sync);
+    expect(srv.data.extra.e).toHaveLength(1);
+    expect(srv.data.extra.e[0]).toMatchObject({ subject: 'm1', kind: 'live', date: '2026-10-19', time: '18:30 – 21:30' });
+    expect(within(dialog().querySelector('ul.list') as HTMLElement).getByText(/Live du soir/)).toBeInTheDocument();   // it is now in the day's list
+    expect(within(dialog()).getAllByRole('button', { name: /^Ajouter : / })).toHaveLength(4);   // no longer suggested (already there)
+    await u.click(within(dialog()).getAllByRole('button', { name: /^Éditer/ })[0]);        // and, like every tile, editable
+    expect(within(screen.getAllByRole('dialog')[1]).getByText('Modifier la séance')).toBeInTheDocument();
+  });
+  it('another weekday offers that weekday\'s class, and a day without one still lets you pick any subject', async () => {
+    await mountApp();
+    const u = user();
+    await u.click(screen.getByRole('button', { name: 'Mois' }));
+    await u.click(screen.getByRole('button', { name: /^mercredi 21 octobre 2026, / }));
+    expect(within(dialog()).getAllByRole('button', { name: /^Ajouter : Physics, Webconférence/ }).length).toBeGreaterThan(0);
+    await u.keyboard('{Escape}');
+    await u.click(screen.getByRole('button', { name: /^samedi 24 octobre 2026, / }));
+    expect(within(dialog()).getByText(/Aucune séance habituelle/)).toBeInTheDocument();
+    expect(within(dialog()).getAllByRole('button', { name: /^Ajouter : / })).toHaveLength(4);
   });
 });
