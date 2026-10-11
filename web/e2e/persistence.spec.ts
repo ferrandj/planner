@@ -36,7 +36,7 @@ test('hand-in toggles, language, dark mode and title survive a reload', async ({
   await page.locator('article').first().getByRole('button', { name: /à rendre/ }).first().click();
   await page.getByRole('button', { name: 'Sombre' }).click();
   await page.getByRole('button', { name: 'English' }).click();
-  await page.getByRole('button', { name: /Edit|Édition/ }).click();
+  await page.locator('.editchip').click();
   const title = page.getByLabel(/App title|Titre de l'application/);
   await title.fill('My own planner');
   await waitSaved(page);
