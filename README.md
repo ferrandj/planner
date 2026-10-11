@@ -63,11 +63,18 @@ data/
   seed.json         optional, only read on the very first start
 ```
 
-## Loading your own schedule (privately)
+## The schedule you start with
 
-The repository contains **no** personal or course data. On the very first start (empty `/data`) the app creates a small
-generic demo schedule. To start with your own subjects, assignments, exams and sessions instead, put a `seed.json`
-in the data folder **before the first start**:
+On the very first start (empty `/data`) the app creates its content in this order:
+
+1. `<data folder>/seed.json`, if you put one there (your own schedule, see the format below);
+2. otherwise the **default schedule bundled with the image**, kept in [`seed/default.json`](seed/default.json);
+3. otherwise a small generic demo (only used when the image was built without a default, e.g. in development).
+
+After that first start the data folder is the only source of truth: changing `seed/default.json` or `seed.json` later never
+touches data that already exists. To start over with a different schedule, move the data folder away (or use *Import*).
+
+Format of `seed.json` and `seed/default.json`:
 
 ```json
 {
@@ -84,7 +91,7 @@ in the data folder **before the first start**:
 - `s` subjects (`c` = colour slot 1–4), `d` assignments, `x` exams, `e` sessions (`kind`: `live` or `webconf`).
 - `data` (optional) pre-fills saved settings such as the title.
 - An invalid `seed.json` stops the server with an error instead of silently falling back to the demo.
-- `seed.json` / `private/` / `data/` are in `.gitignore`. **Never commit them** — keep this repository free of personal data.
+- A `seed.json` placed next to the repository is git-ignored on purpose, so a private schedule can be tried without committing it.
 
 Everything in the schedule can then be renamed, re-dated or hidden from the **Édition** tab; those edits are saved as
 changes on top of the seed and can be reverted individually.

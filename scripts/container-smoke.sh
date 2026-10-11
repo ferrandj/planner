@@ -26,6 +26,12 @@ curl -fs "http://127.0.0.1:18088/$JS" -o /dev/null || fail "bundle not served"
 docker logs "$NAME" 2>&1 | grep -q "version ci-smoke" || fail "version not reported in the log"
 [ "$(docker inspect -f '{{.State.Health.Status}}' "$NAME" 2>/dev/null || echo none)" != "unhealthy" ] || fail "unhealthy"
 
+echo "== first start uses the schedule bundled in the image (seed/default.json)"
+HERE="$(cd "$(dirname "$0")/.." && pwd)"
+EXPECT=$(node -e 'const s=require(process.argv[1]);console.log(JSON.stringify([s.base.s.map(x=>x.id),s.base.e.length,s.base.d.length]))' "$HERE/seed/default.json")
+GOT=$(field 's => [s.base.s.map(x=>x.id),s.base.e.length,s.base.d.length]')
+[ "$EXPECT" = "$GOT" ] || fail "image does not start with the bundled default schedule (expected $EXPECT, got $GOT)"
+
 echo "== save data (state + an uploaded file)"
 R=$(rev)
 api -X PUT http://127.0.0.1:18088/api/state -d "{\"baseRev\":$R,\"data\":{\"done\":{\"smoke\":true},\"edits\":{\"app\":{\"title\":\"Smoke test\"}}}}" >/dev/null

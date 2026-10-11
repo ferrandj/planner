@@ -16,12 +16,15 @@ ENV NODE_ENV=production \
     DATA_DIR=/data \
     PORT=8080 \
     PUBLIC_DIR=/app/public \
+    DEFAULT_SEED=/app/default-seed.json \
     APP_VERSION=$APP_VERSION
 
 WORKDIR /app
 COPY package.json ./
 COPY server ./server
 COPY --from=web /web/dist ./public
+# Schedule used on the very first start (empty /data). A seed.json in the data folder overrides it.
+COPY seed/default.json ./default-seed.json
 
 # /data holds EVERYTHING the user creates (state, uploads, backups).
 # Mount a host folder or named volume here; the image itself is disposable.

@@ -122,3 +122,42 @@ test('seed.json is used on first start, invalid seed.json is an error (no silent
   fs.writeFileSync(path.join(dir2, 'seed.json'), '{"base":{}}');
   assert.throws(() => new Store(dir2, { seed: () => seed.load(dir2) }).init(), /seed\.json/);
 });
+
+test('seed order: your seed.json beats the bundled default, which beats the demo; broken files are errors', () => {
+  const mkBase = (id) => ({ s: [{ id, code: 'C', name: id, short: id, ab: 'A', c: 1 }], d: [], x: [], e: [] });
+  const dflt = path.join(tmp(), 'default.json');
+  fs.writeFileSync(dflt, JSON.stringify({ base: mkBase('bundled'), data: { edits: { app: { title: 'Bundled' } } } }));
+  // 1. nothing but the bundled default
+  const d1 = tmp();
+  assert.strictEqual(new Store(d1, { seed: () => seed.load(d1, undefined, dflt) }).init().get().base.s[0].id, 'bundled');
+  // 2. own seed.json wins
+  const d2 = tmp();
+  fs.writeFileSync(path.join(d2, 'seed.json'), JSON.stringify({ base: mkBase('mine') }));
+  assert.strictEqual(new Store(d2, { seed: () => seed.load(d2, undefined, dflt) }).init().get().base.s[0].id, 'mine');
+  // 3. no default configured / default file missing -> generic demo
+  const d3 = tmp();
+  assert.strictEqual(new Store(d3, { seed: () => seed.load(d3, undefined, '/nope/missing.json') }).init().get().base.s[0].id, 'm1');
+  // 4. a broken default is an error, not a silent demo
+  const bad = path.join(tmp(), 'bad.json');
+  fs.writeFileSync(bad, '{"base":{}}');
+  const d4 = tmp();
+  assert.throws(() => new Store(d4, { seed: () => seed.load(d4, undefined, bad) }).init(), /must contain "base"/);
+  // 5. once state exists the default is never applied again
+  const d5 = tmp();
+  const s5 = new Store(d5, { seed: () => seed.load(d5, undefined, dflt) }).init();
+  s5.put({ baseRev: s5.get().rev, data: { done: { keep: true } } });
+  fs.writeFileSync(dflt, JSON.stringify({ base: mkBase('changed-later') }));
+  const again = new Store(d5, { seed: () => seed.load(d5, undefined, dflt) }).init();
+  assert.strictEqual(again.get().base.s[0].id, 'bundled');
+  assert.deepStrictEqual(again.get().data, { done: { keep: true } });
+});
+
+test('the bundled default schedule is valid and contains no contact details', () => {
+  const file = path.join(__dirname, '..', 'seed', 'default.json');
+  const s = JSON.parse(fs.readFileSync(file, 'utf8'));
+  assert.ok(require('../server/store').validBase(s.base));
+  assert.ok(s.base.s.length > 0 && s.base.e.length > 0);
+  const text = JSON.stringify(s);
+  assert.doesNotMatch(text, /@|https?:|\d{8,}/.replace ? /@|https?:/ : /@/);
+  for (const e of s.base.e) assert.ok(s.base.s.some((x) => x.id === e.subject), 'session of unknown subject ' + e.id);
+});
