@@ -40,6 +40,9 @@ export function normalizeData(raw: unknown, viewport: { w: number; h: number } =
   if (!HEX6.test(P.custom || '')) P.custom = '#7b4fe0';
   P.auto = !!P.auto;
   P.autoMax = Number.isInteger(P.autoMax) && (P.autoMax as number) >= 1 && (P.autoMax as number) <= 20 ? P.autoMax : 3;
+  P.remind = P.remind !== false;
+  P.remindLead = [5, 10, 15, 30, 60].includes(P.remindLead as number) ? P.remindLead : 15;
+  P.remindSound = P.remindSound !== false;
   if (!HEX6.test(P.pcustom || '')) P.pcustom = '#7b4fe0';
   x.stickers = d.stickers || {};
   x.bg = bgClean(d.bg, d.bgv !== 2, viewport.w || 1, viewport.h || 1);

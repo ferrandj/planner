@@ -9,6 +9,8 @@ import { Overlays } from './components/Overlays';
 import { slotCss } from './lib/slotColors';
 import { PlanningTab } from './components/PlanningTab';
 import { PrintTab } from './components/PrintTab';
+import { TodayBar } from './components/Today';
+import { ReminderWatcher, RemindersDialog, Toasts } from './components/Reminders';
 import { Banner, Header, LateBar, SimBar, SimTool, Summary, Tabs } from './components/Top';
 
 const SYNC_TXT = {
@@ -47,6 +49,7 @@ export function App(): ReactNode {
       <div className="wrap" id="app">
         <Banner />
         <LateBar />
+        <TodayBar />
         <Header />
         <SimBar />
         <Summary />
@@ -60,6 +63,9 @@ export function App(): ReactNode {
       <div id="alert"><Overlays /></div>
       <div id="decobar"><DecoBar /></div>
       <ContextMenu />
+      <ReminderWatcher />
+      <RemindersDialog />
+      <Toasts />
       <SyncPill />
     </div>
   );

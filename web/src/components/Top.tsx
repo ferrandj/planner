@@ -127,6 +127,7 @@ function ThemeBar(): ReactNode {
       <div className="chips">
         <button type="button" className="fchip" aria-pressed={ui.themePick} onClick={() => setUi({ themePick: !ui.themePick })}><i className="sd" style={{ background: data.prefs.custom }} />{t('Couleur')}</button>
         <button type="button" className="fchip" aria-pressed={ui.deco} onClick={() => setUi({ deco: !ui.deco, ...(ui.deco ? { bsel: null, bgColor: false } : {}) })}>🎀 {t('Décorer')}</button>
+        <button type="button" className="fchip" aria-pressed={ui.remindOpen} onClick={() => setUi({ remindOpen: true })}>🔔 {t('Rappels')}</button>
         <InstallChip />
       </div>
       <Seg value={data.prefs.mode} options={modes} onChange={(m) => update((d) => { d.prefs.mode = m; })} />

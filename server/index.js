@@ -5,6 +5,7 @@ const path = require('path');
 const crypto = require('crypto');
 const { Store } = require('./store');
 const seed = require('./seed');
+const { Push } = require('./push');
 
 const MAX_STATE_BYTES = 32 * 1024 * 1024;
 const MAX_FILE_BYTES = 25 * 1024 * 1024;
@@ -102,6 +103,26 @@ function createServer(opts) {
       res.writeHead(200, headers);
       if (m === 'HEAD') return res.end();
       return fs.createReadStream(f.path).pipe(res);
+    }
+    if (p.indexOf('/api/push/') === 0 || p === '/api/reminders') {
+      const push = opts.push;
+      if (!push) return send(res, 404, { error: 'notifications are not available' });
+      if (p === '/api/push/key' && m === 'GET') return send(res, 200, { publicKey: push.publicKey() });
+      let input;
+      try { input = JSON.parse((await readBody(req, 512 * 1024)).toString('utf8') || '{}'); } catch (e) {
+        if (e.status) throw e;
+        return send(res, 400, { error: 'invalid JSON' });
+      }
+      if (p === '/api/push/subscribe' && m === 'POST') {
+        return push.subscribe(input.subscription, req.headers['user-agent']) ? send(res, 200, { ok: true, devices: push.subs.length }) : send(res, 400, { error: 'invalid subscription' });
+      }
+      if (p === '/api/push/unsubscribe' && m === 'POST') return send(res, 200, { removed: push.unsubscribe(String(input.endpoint || '')) });
+      if (p === '/api/push/test' && m === 'POST') {
+        const results = await push.broadcast({ title: String(input.title || 'Planner').slice(0, 80), body: String(input.body || '').slice(0, 160), tag: 'test' }, 120);
+        return send(res, 200, { devices: push.subs.length, results: results });
+      }
+      if (p === '/api/reminders' && m === 'PUT') return push.setReminders(input.items) ? send(res, 200, { ok: true }) : send(res, 400, { error: 'invalid reminders' });
+      return send(res, 404, { error: 'not found' });
     }
     if (p === '/api/backups' && m === 'GET') return send(res, 200, { backups: store.listBackups() });
     if (p === '/api/backups/restore' && m === 'POST') {
@@ -218,7 +239,9 @@ function main() {
   }
   const every = process.env.SNAPSHOT_INTERVAL_SEC === undefined ? undefined : Math.max(0, parseFloat(process.env.SNAPSHOT_INTERVAL_SEC)) * 1000;
   const store = new Store(dataDir, { seed: function () { return seed.load(dataDir, undefined, process.env.DEFAULT_SEED); }, snapshotEveryMs: every }).init();
-  const server = createServer({ store: store, authUser: process.env.AUTH_USER, authPassword: process.env.AUTH_PASSWORD });
+  const push = new Push(dataDir, { subject: process.env.VAPID_SUBJECT });
+  push.start();
+  const server = createServer({ store: store, push: push, authUser: process.env.AUTH_USER, authPassword: process.env.AUTH_PASSWORD });
   server.listen(port, '0.0.0.0', function () {
     console.log('[planner] version ' + (process.env.APP_VERSION || 'dev') + ' listening on :' + port + ', data in ' + dataDir + ', revision ' + store.get().rev);
   });

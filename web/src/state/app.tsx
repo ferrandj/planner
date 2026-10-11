@@ -11,6 +11,9 @@ import type { SyncClient } from '../lib/sync';
 import { uploadBlob } from '../lib/files';
 import { migrateInlineNotes } from '../lib/migrate';
 
+/** A short message on top of the page: a reminder, an unlocked achievement... */
+export interface Toast { id: string; kind: 'reminder' | 'achievement' | 'info'; title: string; body?: string; icon?: string; /** ms until it goes away by itself (omit: stays until closed) */ ttl?: number }
+
 export type Tab = 'planning' | 'devoirs' | 'print' | 'edit';
 
 /** Everything that is only about what is on screen (never saved). */
@@ -22,6 +25,7 @@ export interface UiState {
   printHelp: boolean; stkPop: boolean; stkTarget: 'print' | 'bg'; stkTab: 'stk' | 'emo'; emoCat: number;
   pmonth: string | null; pall: boolean; stkSel: string | null; // sticker selected on the print sheet
   deco: boolean; bsel: string | null; bgColor: boolean; bgArm: boolean;
+  remindOpen: boolean;
   rsArm: boolean; cpArm: boolean; themePick: boolean; edOpen: Record<string, boolean>; edPick: string | null;
   editing: string | null; menu: { x: number; y: number; key: string | null; doneId: string | null } | null; prevTab: Tab;
   newc: string; bnewc: string; backups: Array<{ name: string; time: number; rev: number; tag: string; size: number }> | null; bakMsg: string;
@@ -32,7 +36,7 @@ export const initialUi = (today: string): UiState => ({
   formOpen: false, form: { title: '', subject: '', date: '', time: '', tend: '' }, sim: null, alertOpen: false,
   noteFor: null, noteMsg: '', printHelp: false, stkPop: false, stkTarget: 'print', stkTab: 'stk', emoCat: 0,
   pmonth: null, pall: false, stkSel: null, deco: false, bsel: null, bgColor: false, bgArm: false,
-  rsArm: false, cpArm: false, themePick: false, edOpen: {}, edPick: null, editing: null, menu: null, prevTab: 'planning', newc: '#d6457f', bnewc: '#d6457f', backups: null, bakMsg: ''
+  remindOpen: false, rsArm: false, cpArm: false, themePick: false, edOpen: {}, edPick: null, editing: null, menu: null, prevTab: 'planning', newc: '#d6457f', bnewc: '#d6457f', backups: null, bakMsg: ''
 });
 
 export interface AppCtx {
@@ -42,7 +46,13 @@ export interface AppCtx {
   /** Change the data: copy, mutate the copy, store it, and hand it to the sync layer. */
   update: (fn: (draft: Data) => void) => void;
   t: Translate; tf: TranslateF; fmt: Fmt; lang: Lang;
-  today: string; ui: UiState; setUi: (p: Partial<UiState> | ((u: UiState) => Partial<UiState>)) => void;
+  today: string;
+  /** the real current day, even while a simulated date is chosen */
+  realToday: string;
+  /** minutes since midnight, refreshed every minute */
+  clock: number;
+  toasts: Toast[]; toast: (t: Omit<Toast, 'id'>) => string; dismissToast: (id: string) => void;
+  ui: UiState; setUi: (p: Partial<UiState> | ((u: UiState) => Partial<UiState>)) => void;
   sync: SyncClient; status: SyncStatus; isDark: boolean;
   /** Drag operations tell the sync layer not to swap the data underneath them. */
   setBusy: (b: boolean) => void;
@@ -151,6 +161,14 @@ export function AppProvider({ boot, sync, children }: { boot: BootResult; sync: 
   const setUi = useCallback((p: Partial<UiState> | ((u: UiState) => Partial<UiState>)) => {
     setUiState((u) => ({ ...u, ...(typeof p === 'function' ? p(u) : p) }));
   }, []);
+  const [toasts, setToasts] = useState<Toast[]>([]);
+  const dismissToast = useCallback((id: string) => setToasts((l) => l.filter((x) => x.id !== id)), []);
+  const toast = useCallback((x: Omit<Toast, 'id'>): string => {
+    const id = 't' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+    setToasts((l) => l.concat({ ...x, id }).slice(-6));
+    if (x.ttl) setTimeout(() => setToasts((l) => l.filter((y) => y.id !== id)), x.ttl);
+    return id;
+  }, []);
   const setBusy = useCallback((b: boolean) => { busy.current = b; }, []);
 
   // opening the app on a day with an assignment due soon shows the alert once
@@ -161,6 +179,6 @@ export function AppProvider({ boot, sync, children }: { boot: BootResult; sync: 
     setUiState((u) => ({ ...u, alertOpen: true }));
   }, []);
 
-  const value: AppCtx = { data, base, model, evs, plan, update, t, tf, fmt, lang: data.prefs.lang, today, ui, setUi, sync, status, isDark, setBusy, adopt };
+  const value: AppCtx = { data, base, model, evs, plan, update, t, tf, fmt, lang: data.prefs.lang, today, realToday: nowDay, clock, toasts, toast, dismissToast, ui, setUi, sync, status, isDark, setBusy, adopt };
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }

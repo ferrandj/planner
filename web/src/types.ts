@@ -36,6 +36,9 @@ export interface Prefs {
   sync?: boolean;   // same sticker decoration on every month
   auto?: boolean;   // automatic catch-up planning switched on
   autoMax?: number; // never more than this many catch-up slots in a row for the same subject
+  remind?: boolean;      // reminders shortly before an event starts (in the app, and on the phone when enabled there)
+  remindLead?: number;   // minutes before the start
+  remindSound?: boolean; // sound and vibration with the in-app reminder
 }
 
 export type Edits = Record<string, Record<string, string>>;

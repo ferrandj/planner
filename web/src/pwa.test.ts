@@ -37,6 +37,13 @@ describe('installable web app (Android and desktop Chrome)', () => {
     expect(size('apple-touch-icon.png')).toEqual([180, 180]);
     expect(html).toMatch(/<title>Planner<\/title>/);
   });
+  it('the service worker shows a notification (with vibration) for a push and opens the app when it is tapped', () => {
+    const sw = readFileSync(join(pub, 'sw.js'), 'utf8');
+    expect(sw).toMatch(/addEventListener\('push'/);
+    expect(sw).toMatch(/showNotification/);
+    expect(sw).toMatch(/vibrate: \[/);
+    expect(sw).toMatch(/addEventListener\('notificationclick'/);
+  });
   it('the service worker never touches the data (/api/) and only caches the app itself', () => {
     const sw = readFileSync(join(pub, 'sw.js'), 'utf8');
     expect(sw).toMatch(/pathname\.includes\('\/api\/'\)[^\n]*\n?[^\n]*return;/);
