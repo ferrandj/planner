@@ -7,7 +7,8 @@
 # From then on the data folder is the only source of truth: updating or re-creating the container never touches it.
 services:
   planner:
-    build: .                         # only used if the image is not on the NAS and the repo files are next to this file
+    # The image is built and published by GitHub: there is NOTHING to build on the NAS (no "build:" line on purpose,
+    # it would make Compose look for a Dockerfile in this folder instead of pulling the image).
     image: ghcr.io/ferrandj/planner:latest
     # :latest = newest release, :1 = only 1.x releases, :1.1.0 = pinned to one release.
     # To update: docker compose pull && docker compose up -d   (or let Watchtower do it, see the label below)

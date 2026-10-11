@@ -110,7 +110,10 @@ jobs:
           cache-from: type=gha,scope=smoke
           cache-to: type=gha,scope=smoke,mode=max
       - name: The deployment file is valid
-        run: docker compose -f docker-compose.yml config -q
+        run: |
+          docker compose -f docker-compose.yml config -q
+          # On the NAS the project folder holds only this file: a "build:" line would make Compose look for a Dockerfile there.
+          if docker compose -f docker-compose.yml config | grep -qE '^\s+build:'; then echo 'docker-compose.yml must not contain build:'; exit 1; fi
       - name: Data survives restart and recreate
         run: bash scripts/container-smoke.sh planner:test
 
