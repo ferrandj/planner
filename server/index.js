@@ -6,7 +6,6 @@ const crypto = require('crypto');
 const { Store } = require('./store');
 const seed = require('./seed');
 
-const PUBLIC_DIR = path.join(__dirname, '..', 'public');
 const MAX_STATE_BYTES = 32 * 1024 * 1024;
 const MAX_FILE_BYTES = 25 * 1024 * 1024;
 const INLINE_TYPES = new Set(['image/png', 'image/jpeg', 'image/webp', 'image/gif', 'image/avif']);
@@ -50,6 +49,7 @@ function send(res, status, body, headers) {
 
 function createServer(opts) {
   const store = opts.store;
+  const PUBLIC_DIR = path.resolve(opts.publicDir || process.env.PUBLIC_DIR || path.join(__dirname, '..', 'web', 'dist'));
   const authUser = opts.authUser, authPass = opts.authPassword;
 
   async function api(req, res, url) {

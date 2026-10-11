@@ -2,8 +2,11 @@
 .github
 .gitignore
 .dockerignore
-node_modules
-npm-debug.log
+**/node_modules
+web/dist
+web/coverage
+web/test-results
+web/playwright-report
 data
 private
 seed*.json

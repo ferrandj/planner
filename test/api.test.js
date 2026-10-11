@@ -13,7 +13,10 @@ const H = { 'X-Planner-Client': '1', 'Content-Type': 'application/json' };
 async function start(extra) {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'planner-api-'));
   const store = new Store(dir, { seed: () => seed.demo(new Date()) }).init();
-  const server = createServer(Object.assign({ store }, extra || {}));
+  const publicDir = fs.mkdtempSync(path.join(os.tmpdir(), 'planner-public-'));
+  fs.writeFileSync(path.join(publicDir, 'index.html'), '<!doctype html><title>t</title>');
+  fs.writeFileSync(path.join(publicDir, 'app.js'), 'console.log(1)');
+  const server = createServer(Object.assign({ store, publicDir }, extra || {}));
   await new Promise((r) => server.listen(0, '127.0.0.1', r));
   const url = 'http://127.0.0.1:' + server.address().port;
   return { url, server, store, dir };
@@ -86,7 +89,7 @@ test('static files, traversal and healthz', async () => {
   const { url, server } = await start();
   try {
     assert.strictEqual((await fetch(url + '/healthz')).status, 200);
-    const r = await fetch(url + '/merge.js');
+    const r = await fetch(url + '/app.js');
     assert.strictEqual(r.status, 200);
     assert.match(r.headers.get('content-security-policy'), /default-src 'self'/);
     const raw = await new Promise((resolve) => {

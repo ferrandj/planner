@@ -1,16 +1,27 @@
 # syntax=docker/dockerfile:1
+
+# ---- 1. build the web app (type-check + production bundle) ----
+FROM node:24-alpine AS web
+WORKDIR /web
+COPY web/package.json web/package-lock.json ./
+RUN npm ci --no-audit --no-fund
+COPY web/ ./
+RUN npm run build
+
+# ---- 2. runtime: tiny Node server + the built app, no build tools, no dev dependencies ----
 FROM node:24-alpine
 
 ARG APP_VERSION=dev
 ENV NODE_ENV=production \
     DATA_DIR=/data \
     PORT=8080 \
+    PUBLIC_DIR=/app/public \
     APP_VERSION=$APP_VERSION
 
 WORKDIR /app
 COPY package.json ./
 COPY server ./server
-COPY public ./public
+COPY --from=web /web/dist ./public
 
 # /data holds EVERYTHING the user creates (state, uploads, backups).
 # Mount a host folder or named volume here; the image itself is disposable.
