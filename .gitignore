@@ -1,0 +1,11 @@
+# Runtime data and anything personal must never be committed.
+data/
+/seed*.json
+/private/
+*.seed.json
+*.local.json
+.env
+.env.*
+node_modules/
+*.log
+.DS_Store

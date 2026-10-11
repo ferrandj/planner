@@ -1,0 +1,13 @@
+.git
+.github
+.gitignore
+.dockerignore
+node_modules
+npm-debug.log
+data
+private
+seed*.json
+*.seed.json
+test
+*.md
+docker-compose*.yml
