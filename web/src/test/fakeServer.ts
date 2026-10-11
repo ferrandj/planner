@@ -7,7 +7,8 @@ import { normalizeData } from '../lib/normalize';
 export class FakeServer {
   rev = 1;
   base: Base = clone(fixtureBase);
-  data: Data = normalizeData({});
+  // a test starts without the English question that opens the app (it has its own tests): they switch it on with `prefs.quiz = true`
+  data: Data = normalizeData({ prefs: { quiz: false } });
   down = false;
   puts: Array<{ baseRev: number; data: Data }> = [];
   files = new Map<string, { type: string; size: number }>();

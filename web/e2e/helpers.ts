@@ -13,7 +13,7 @@ export async function getState(request: APIRequestContext): Promise<ServerState>
 /** Empty the user data on the server (keeps the schedule) so every test starts from the same place. */
 export async function resetData(request: APIRequestContext): Promise<void> {
   const s = await getState(request);
-  const r = await request.put('/api/state', { headers: HDR, data: { baseRev: s.rev, data: {} } });
+  const r = await request.put('/api/state', { headers: HDR, data: { baseRev: s.rev, data: { prefs: { quiz: false } } } });
   expect(r.ok()).toBeTruthy();
 }
 

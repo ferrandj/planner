@@ -193,3 +193,30 @@ test('achievements: ticking a session unlocks medals that stay (even unticked), 
   st = await getState(request);
   expect(Object.values(st.data.stickers).flat().map((s: any) => s.t)).toContain('ach:all|1');
 });
+
+test('English quiz: a question at each opening (French + English), wrong is fine and shows the right one in green, the progress is kept, and it can be switched off', async ({ page, request }) => {
+  const st0 = await getState(request);
+  expect((await request.put('/api/state', { headers: { 'Content-Type': 'application/json', 'X-Planner-Client': '1' }, data: { baseRev: st0.rev, data: { ...st0.data, prefs: { ...st0.data.prefs, quiz: true } } } })).ok()).toBeTruthy();
+  await page.goto('/');
+  const gate = page.getByRole('dialog', { name: /Une question avant d’entrer/ });
+  await expect(gate).toBeVisible();
+  await expect(gate.getByText('Quel est le mot anglais pour 🐱 ?')).toBeVisible();
+  await expect(gate.getByText('What is the English word for 🐱?')).toBeVisible();
+  await gate.getByRole('button', { name: 'dog', exact: true }).click();                         // wrong
+  await expect(gate.locator('.qz-opt.ok')).toHaveText('cat ✓');
+  await expect(gate.locator('.qz-opt.ko')).toHaveText('dog ✗');
+  await gate.getByRole('button', { name: 'Entrer dans le planner' }).click();
+  await expect(gate).toHaveCount(0);
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+  await waitSaved(page);
+  expect((await getState(request)).data.quiz['en-a1-01']).toMatchObject({ ok: 0, ko: 1 });
+
+  await page.reload();                                                                           // asked again at the next opening, and the wrong one comes back
+  await expect(gate.getByText('What is the English word for 🐱?')).toBeVisible();
+  await gate.getByRole('button', { name: 'Désactiver ce quiz' }).click();
+  await waitSaved(page);
+  expect((await getState(request)).data.prefs.quiz).toBe(false);
+  await page.reload();
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+});

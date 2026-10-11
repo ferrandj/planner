@@ -109,7 +109,17 @@ test.describe('server restart', () => {
     proc = spawn('node', [join(here, '..', '..', 'server', 'index.js')], { env: { ...process.env, DATA_DIR: dir, PORT: String(PORT), PUBLIC_DIR: join(here, '..', 'dist') }, stdio: 'ignore' });
     await expect.poll(async () => { try { return (await get(`http://127.0.0.1:${PORT}/healthz`)).status === 200; } catch { return false; } }, { timeout: 15_000 }).toBe(true);
   };
-  test.beforeAll(async () => { dir = mkdtempSync(join(tmpdir(), 'planner-restart-')); await start(); });
+  test.beforeAll(async () => {
+    dir = mkdtempSync(join(tmpdir(), 'planner-restart-'));
+    await start();
+    // this server starts empty: switch the English question off (it has its own test), through the API like any client
+    const { rev } = JSON.parse((await get(`http://127.0.0.1:${PORT}/api/state`)).body) as { rev: number };
+    const body = JSON.stringify({ baseRev: rev, data: { prefs: { quiz: false } } });
+    await new Promise<void>((resolve, reject) => {
+      const rq = http.request({ host: '127.0.0.1', port: PORT, path: '/api/state', method: 'PUT', headers: { ...HDR, 'Content-Length': Buffer.byteLength(body) } }, (res) => { res.resume(); res.on('end', () => (res.statusCode === 200 ? resolve() : reject(new Error('HTTP ' + res.statusCode)))); });
+      rq.on('error', reject); rq.end(body);
+    });
+  });
   test.afterAll(() => { proc?.kill(); rmSync(dir, { recursive: true, force: true }); });
 
   test('everything is still there after the server is stopped and started again', async ({ page }) => {

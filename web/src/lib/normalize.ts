@@ -26,6 +26,7 @@ export function normalizeData(raw: unknown, viewport: { w: number; h: number } =
   x.deleted = d.deleted || {};
   x.notes = d.notes || {}; x.edits = d.edits || {}; x.hidden = d.hidden || {};
   const days = (v: unknown): Record<string, string> => Object.fromEntries(Object.entries(v && typeof v === 'object' ? (v as Record<string, unknown>) : {}).filter(([, y]) => typeof y === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(y))) as Record<string, string>;
+  x.quiz = Object.fromEntries(Object.entries(d.quiz && typeof d.quiz === 'object' ? (d.quiz as Record<string, { ok?: unknown; ko?: unknown; at?: unknown }>) : {}).map(([k, v]) => [k, { ok: Math.max(0, Math.floor(Number(v?.ok)) || 0), ko: Math.max(0, Math.floor(Number(v?.ko)) || 0), at: typeof v?.at === 'string' ? v.at : '' }]));
   x.doneAt = days(d.doneAt); x.ach = days(d.ach);
   x.done = d.done || {}; x.rendu = d.rendu || {}; x.custom = Array.isArray(d.custom) ? d.custom : [];
   const P = (d.prefs = d.prefs || ({} as Data['prefs']));
@@ -42,6 +43,7 @@ export function normalizeData(raw: unknown, viewport: { w: number; h: number } =
   if (!HEX6.test(P.custom || '')) P.custom = '#7b4fe0';
   P.auto = !!P.auto;
   P.autoMax = Number.isInteger(P.autoMax) && (P.autoMax as number) >= 1 && (P.autoMax as number) <= 20 ? P.autoMax : 3;
+  P.quiz = P.quiz !== false;
   P.remind = P.remind !== false;
   P.remindLead = [5, 10, 15, 30, 60].includes(P.remindLead as number) ? P.remindLead : 15;
   P.remindSound = P.remindSound !== false;

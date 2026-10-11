@@ -137,6 +137,19 @@ take it back. Each unlocked medal can be used as a **sticker** (Imprimer → Sti
 locked ones are greyed out until you earn them. Ticks now remember the day they were made, which is what streaks and
 catch-ups are counted on (older ticks count on the day of their class).
 
+### English quiz at the door
+
+Each time the app is opened, a question appears first: **basic English, level A1**, 50 questions that go from easy to a little
+harder (words with pictures, polite phrases and introductions, "to be" / "to have", articles and plurals, numbers, days and months,
+everyday words). The question is shown in the language of the app **and in English underneath**; the four answers are in English.
+A wrong answer is fine: you still get in, the right answer turns **green** and a short explanation says what it means.
+
+The course goes in order: the next question is the first one you have not answered right yet (a wrong answer comes back at the
+next opening); once all 50 are done, the one asked longest ago comes back. Progress is saved with your data and earns English medals.
+
+Turn it off or on again with the **🎓 Quiz** button next to the language flags (or "Désactiver ce quiz" under the question). It is
+a learning tool, not a security lock: it only runs in the browser and does not protect the planner.
+
 ## The schedule you start with
 
 On the very first start (empty `/data`) the app creates its content in this order:
