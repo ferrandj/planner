@@ -17,7 +17,9 @@ export async function resetData(request: APIRequestContext): Promise<void> {
   expect(r.ok()).toBeTruthy();
 }
 
+/** Wait until the last change has reached the server. (The app saves ~0.4 s after the last change, so give the "pending" state time to appear first.) */
 export async function waitSaved(page: Page): Promise<void> {
+  await page.waitForTimeout(600);
   await expect(page.locator('#syncstat')).toHaveClass(/\bsaved\b/, { timeout: 10_000 });
 }
 

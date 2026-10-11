@@ -28,7 +28,9 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  # Plain-Node tests of the server: storage guarantees (atomic writes, snapshots, recovery) and the HTTP API.
+  server:
+    name: Server tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -37,8 +39,81 @@ jobs:
           node-version: 24
       - run: npm test
 
+  # Type-check, unit + component tests with a coverage gate, and a production build of the web app.
+  web:
+    name: Web (types, unit, build)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm run test:coverage
+      - run: npm run build
+      - uses: actions/upload-artifact@v7
+        with:
+          name: web-dist
+          path: web/dist
+          retention-days: 3
+
+  # Real browser against the real server: persistence, reloads, two devices, offline, restart, backups, uploads, accessibility, phone layout.
+  e2e:
+    name: End-to-end (browser)
+    needs: web
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - uses: actions/download-artifact@v8
+        with:
+          name: web-dist
+          path: web/dist
+      - run: npm run e2e
+      - uses: actions/upload-artifact@v7
+        if: failure()
+        with:
+          name: playwright-report
+          path: |
+            web/playwright-report
+            web/test-results
+          retention-days: 7
+
+  # Build the real image and check the promises that matter on the NAS: data survives a restart / recreate, bad permissions are explained.
+  container:
+    name: Container smoke test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: docker/setup-buildx-action@v4
+      - uses: docker/build-push-action@v7
+        with:
+          context: .
+          load: true
+          tags: planner:test
+          build-args: APP_VERSION=ci-smoke
+          cache-from: type=gha,scope=smoke
+          cache-to: type=gha,scope=smoke,mode=max
+      - name: Data survives restart and recreate
+        run: bash scripts/container-smoke.sh planner:test
+
   image:
-    needs: test
+    needs: [server, web, e2e, container]
     runs-on: ubuntu-latest
     permissions:
       contents: write   # create the tag and release

@@ -7,7 +7,7 @@ themes, and a French / English / Spanish interface.
 It runs as a single small Docker container (Node.js, **no runtime dependencies**) and keeps **all** data
 on the server, in one folder you mount from your NAS.
 
-- Image: `ghcr.io/<owner>/planner` — a new GitHub Release and image is published automatically for every change on the default branch (see [Releases & CI](#releases--ci)).
+- Image: `ghcr.io/<owner>/planner` — a new GitHub Release and image is published automatically for every change on the default branch that passes all tests (see [Releases & CI](#releases--ci)).
 - Architectures: `linux/amd64` and `linux/arm64`.
 
 ## Quick start (NAS / any Docker host)
@@ -103,12 +103,18 @@ The app has no accounts. For access from outside your network put it behind your
 
 ## Releases & CI
 
-[`.github/workflows/docker.yml`](.github/workflows/docker.yml) runs on every push and pull request:
+[`.github/workflows/docker.yml`](.github/workflows/docker.yml) runs on every push and pull request. **A release is only
+published when all of these pass**:
 
-1. `npm test` (merge logic, storage guarantees, HTTP API).
-2. Builds the multi-arch image (always, so a broken Dockerfile is caught early).
-3. **On every push to the default branch** (after the tests pass): picks the next version, pushes the image to GHCR,
-   then creates a **GitHub Release** `vX.Y.Z` with generated notes. Uses the built-in `GITHUB_TOKEN`; no secrets to set up.
+1. **Server tests** – storage guarantees (atomic writes, snapshots, corrupt-file recovery, never re-seeding) and the HTTP API.
+2. **Web: types, unit and component tests, build** – TypeScript type-check, ~150 tests with a coverage gate on the logic
+   (merge, sync, schedule rules, import), and the production build.
+3. **End-to-end (real browser + real server)** – ticking and renaming survive a reload, two devices editing at once,
+   offline edits, server restart, backups and restore, export/import, photo upload, printing, accessibility checks, phone layout.
+4. **Container smoke test** – builds the image and checks that data survives a restart and a re-created container, that a
+   corrupt state file is recovered from a backup, and that a permission problem is explained.
+5. Then the multi-arch image is pushed to GHCR and a **GitHub Release** `vX.Y.Z` is created (default branch only), using the
+   built-in `GITHUB_TOKEN` (no secrets to set up).
 
 | Tag | Meaning |
 | --- | --- |
@@ -132,12 +138,27 @@ Point your NAS at `ghcr.io/<owner>/planner` like any other registry image:
 
 ## Development
 
+The server has no dependencies. The web app is React + TypeScript (Vite).
+
 ```sh
-npm test                          # unit + API tests, no dependencies to install
-DATA_DIR=./data node server/index.js   # http://localhost:8080
+npm test                                   # server tests (Node only)
+cd web && npm ci
+npm run dev                                # http://localhost:5173 (needs the server below for /api)
+npm run typecheck && npm test              # types + unit/component tests (add :coverage for the gate)
+npm run build                              # production bundle in web/dist
+DATA_DIR=./data PUBLIC_DIR=./web/dist node ../server/index.js   # http://localhost:8080
+npx playwright install chromium && npm run e2e   # end-to-end tests (starts its own server on a temp folder)
 ```
 
-Layout: `server/` (HTTP API + storage), `public/` (static front-end: `app.js`, `sync.js`, `merge.js`), `test/`.
+Layout:
+
+- `server/` – HTTP API and storage (`store.js` holds the safety guarantees).
+- `web/src/lib/` – pure, unit-tested logic: `merge`, `sync` (browser safety copy, offline queue, conflict merge), `model`
+  (schedule rules), `normalize` (defaults and import of older exports), `edits`, `i18n`.
+- `web/src/components/` – screens. `web/src/state/app.tsx` – app state and theme.
+- `web/e2e/` – Playwright tests. `scripts/container-smoke.sh` – container test used by CI.
+
+The saved data format did not change when the interface was rebuilt, so existing data and `seed.json` files keep working.
 
 ## License
 

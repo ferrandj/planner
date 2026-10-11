@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test';
 import { spawn, type ChildProcess } from 'node:child_process';
+import http from 'node:http';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
@@ -7,6 +8,11 @@ import { fileURLToPath } from 'node:url';
 import { HDR, getState, open, resetData, waitSaved } from './helpers';
 
 const here = dirname(fileURLToPath(import.meta.url));
+
+/** Plain HTTP GET (Node's fetch can be redirected by proxy settings in some environments). */
+const get = (url: string): Promise<{ status: number; body: string }> => new Promise((resolve, reject) => {
+  http.get(url, (res) => { let b = ''; res.setEncoding('utf8'); res.on('data', (c) => (b += c)); res.on('end', () => resolve({ status: res.statusCode || 0, body: b })); }).on('error', reject);
+});
 
 test.beforeEach(async ({ request }) => { await resetData(request); });
 
@@ -96,7 +102,7 @@ test.describe('server restart', () => {
   const PORT = 4190;
   const start = async (): Promise<void> => {
     proc = spawn('node', [join(here, '..', '..', 'server', 'index.js')], { env: { ...process.env, DATA_DIR: dir, PORT: String(PORT), PUBLIC_DIR: join(here, '..', 'dist') }, stdio: 'ignore' });
-    await expect.poll(async () => { try { return (await fetch(`http://127.0.0.1:${PORT}/healthz`)).ok; } catch { return false; } }, { timeout: 15_000 }).toBe(true);
+    await expect.poll(async () => { try { return (await get(`http://127.0.0.1:${PORT}/healthz`)).status === 200; } catch { return false; } }, { timeout: 15_000 }).toBe(true);
   };
   test.beforeAll(async () => { dir = mkdtempSync(join(tmpdir(), 'planner-restart-')); await start(); });
   test.afterAll(() => { proc?.kill(); rmSync(dir, { recursive: true, force: true }); });
@@ -114,13 +120,12 @@ test.describe('server restart', () => {
     await waitSaved(page);
     const fileHref = await page.getByRole('link', { name: /a\.txt/ }).getAttribute('href');
     proc.kill('SIGTERM');
-    await expect.poll(async () => { try { await fetch(`http://127.0.0.1:${PORT}/healthz`); return true; } catch { return false; } }).toBe(false);
+    await expect.poll(async () => { try { await get(`http://127.0.0.1:${PORT}/healthz`); return true; } catch { return false; } }).toBe(false);
     await start();
-    const st = (await (await fetch(`http://127.0.0.1:${PORT}/api/state`)).json()) as { data: { done: object; notes: Record<string, Array<{ v?: string }>> } };
+    const st = JSON.parse((await get(`http://127.0.0.1:${PORT}/api/state`)).body) as { data: { done: object; notes: Record<string, Array<{ v?: string }>> } };
     expect(Object.keys(st.data.done)).toHaveLength(1);
     expect(Object.values(st.data.notes)[0].some((n) => n.v === 'survives a restart')).toBe(true);
-    const f = await fetch(`http://127.0.0.1:${PORT}/${fileHref}`);
-    expect(await f.text()).toBe('file survives too');
+    expect((await get(`http://127.0.0.1:${PORT}/${fileHref}`)).body).toBe('file survives too');
     await page.goto(url);
     await waitSaved(page);
     await page.getByRole('button', { name: 'Tout', exact: true }).click();

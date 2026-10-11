@@ -26,7 +26,7 @@ export default defineConfig({
     launchOptions: { executablePath: process.env.CHROME_PATH || undefined }
   },
   projects: [
-    { name: 'desktop', use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 900 } } },
+    { name: 'desktop', testIgnore: /mobile\.spec\.ts/, use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 900 } } },
     { name: 'phone', testMatch: /mobile\.spec\.ts/, use: { ...devices['Pixel 7'] } }
   ],
   webServer: {

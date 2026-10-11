@@ -37,7 +37,7 @@ test('hand-in toggles, language, dark mode and title survive a reload', async ({
   await page.getByRole('button', { name: 'Sombre' }).click();
   await page.getByRole('button', { name: 'English' }).click();
   await page.getByRole('tab', { name: /Edit|Édition/ }).click();
-  const title = page.getByLabel(/Application title|Titre de l'application/);
+  const title = page.getByLabel(/App title|Titre de l'application/);
   await title.fill('My own planner');
   await waitSaved(page);
   await page.reload();
@@ -130,12 +130,15 @@ test('dragging a sticker on the sheet moves it and the position is kept', async 
   await page.getByRole('button', { name: /Ajouter : Chat/ }).click();
   const stk = page.locator('.sheet .stk.ed');
   const sheet = page.locator('.sheet');
+  await sheet.evaluate((el) => el.scrollIntoView({ block: 'center' }));        // like a user scrolling to the sheet
   const sb = (await sheet.boundingBox())!, kb = (await stk.boundingBox())!;
   await page.mouse.move(kb.x + kb.width / 2, kb.y + kb.height / 2);
   await page.mouse.down();
   await page.mouse.move(sb.x + sb.width * 0.7, sb.y + sb.height * 0.6, { steps: 8 });
   await page.mouse.up();
-  await waitSaved(page);
-  const s = (Object.values((await getState(request)).data.stickers)[0] as Array<{ x: number; y: number }>)[0];
-  expect(s.x).toBeCloseTo(0.7, 1); expect(s.y).toBeCloseTo(0.6, 1);
+  await expect.poll(async () => {
+    const list = Object.values((await getState(request)).data.stickers ?? {})[0] as Array<{ x: number; y: number }> | undefined;
+    const s = list?.[0];
+    return s ? [Math.round(s.x * 10) / 10, Math.round(s.y * 10) / 10] : null;
+  }, { timeout: 10_000 }).toEqual([0.7, 0.6]);
 });
