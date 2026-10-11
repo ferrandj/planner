@@ -109,6 +109,8 @@ jobs:
           build-args: APP_VERSION=ci-smoke
           cache-from: type=gha,scope=smoke
           cache-to: type=gha,scope=smoke,mode=max
+      - name: The deployment file is valid
+        run: docker compose -f docker-compose.yml config -q
       - name: Data survives restart and recreate
         run: bash scripts/container-smoke.sh planner:test
 
