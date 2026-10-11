@@ -1,0 +1,37 @@
+# Planner: ready to deploy. No secrets are needed.
+#
+# Synology (Container Manager): create the folder /volume1/docker/planner/data first, then
+# Container Manager -> Project -> Create -> paste this file (or use "docker compose up -d" over SSH).
+#
+# The first start (empty data folder) fills the planner with the default schedule bundled in the image.
+# From then on the data folder is the only source of truth: updating or re-creating the container never touches it.
+services:
+  planner:
+    build: .                         # only used if the image is not on the NAS and the repo files are next to this file
+    image: ghcr.io/ferrandj/planner:latest
+    # :latest = newest release, :1 = only 1.x releases, :1.1.0 = pinned to one release.
+    # To update: docker compose pull && docker compose up -d   (or let Watchtower do it, see the label below)
+    container_name: planner
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    ports:
+      # <port on the NAS>:<port in the container, keep 8080>  ->  http://<nas-address>:10457
+      - "10457:8080"
+    volumes:
+      # EVERYTHING you create lives in this folder: state, attachments, automatic backups (backups/).
+      # Include it in your NAS backup (Hyper Backup, rsync, ...).
+      - /volume1/docker/planner/data:/data
+    labels:
+      # Lets Watchtower (if you run it) update this container automatically when a new release is published.
+      - com.centurylinklabs.watchtower.enable=true
+
+    # --- Only if needed -------------------------------------------------------------------------
+    # The container runs as user 1000. If the logs say "/data is not writable", run it as the owner of
+    # the data folder instead (find it over SSH with:  ls -ln /volume1/docker/planner   and   id <your-user>):
+    # user: "UID:GID"
+    #
+    # Optional password for the whole app (otherwise protect it with your reverse proxy / VPN):
+    # environment:
+    #   AUTH_USER: "<choose-a-user>"
+    #   AUTH_PASSWORD: "<choose-a-password>"

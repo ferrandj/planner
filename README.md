@@ -7,18 +7,19 @@ themes, and a French / English / Spanish interface.
 It runs as a single small Docker container (Node.js, **no runtime dependencies**) and keeps **all** data
 on the server, in one folder you mount from your NAS.
 
-- Image: `ghcr.io/<owner>/planner` — a new GitHub Release and image is published automatically for every change on the default branch that passes all tests (see [Releases & CI](#releases--ci)).
+- Image: `ghcr.io/ferrandj/planner` — a new GitHub Release and image is published automatically for every change on the default branch that passes all tests (see [Releases & CI](#releases--ci)).
 - Architectures: `linux/amd64` and `linux/arm64`.
 
 ## Quick start (NAS / any Docker host)
 
-1. Copy [`docker-compose.example.yml`](docker-compose.example.yml) to `docker-compose.yml`
-   and replace `OWNER` with the GitHub account that owns this repository (lowercase).
-2. `docker compose up -d`
-3. Open `http://<nas-address>:8080`.
+1. Create the data folder, e.g. `/volume1/docker/planner/data`.
+2. Use [`docker-compose.yml`](docker-compose.yml) from this repository (no secrets in it): on a Synology NAS that is
+   *Container Manager → Project → Create* and paste it, or over SSH `docker compose up -d`.
+   Adjust the host port (`10457`) and the data path if you like.
+3. Open `http://<nas-address>:10457`.
 
-Your data lives in `./data` next to the compose file (mounted at `/data` in the container).
-**Back that folder up** (Hyper Backup, rsync, …). Recreating or updating the container never touches it.
+The first start fills the planner with the default schedule bundled in the image; after that your data folder is the only
+source of truth. **Back that folder up** (Hyper Backup, rsync, …). Recreating or updating the container never touches it.
 
 Update to the latest version:
 
@@ -30,7 +31,7 @@ docker compose pull && docker compose up -d
 > (GitHub → your profile → *Packages* → `planner` → *Package settings* → *Change visibility*), or
 > `docker login ghcr.io` on the NAS with a personal access token that has `read:packages`.
 
-If the container cannot write to `./data`, run it as the owner of that folder with `user: "UID:GID"`
+If the container cannot write to the data folder, run it as the owner of that folder with `user: "UID:GID"` (see the comment in `docker-compose.yml`)
 (the container prints a clear message when `/data` is not writable).
 
 ## Your data is never reset or erased by accident
