@@ -6,11 +6,12 @@ import { isDone, renduCount, subjectOf } from '../lib/model';
 import { partLabel } from '../lib/labels';
 import { useApp } from '../state/app';
 import { editKeyOf } from '../lib/items';
+import { clearDone, setDone } from '../lib/done';
 import { EditBtn, NoteBtn, Toggles, useTileMenu } from './common';
 
 /** One line of the planner: a session, a custom session, an assignment, an exam or an "available from" date. */
 export function Row({ e }: { e: Evt }): ReactNode {
-  const { data, model, plan, t, tf, fmt, today, update } = useApp();
+  const { data, model, plan, t, tf, fmt, today, realToday, update } = useApp();
   const dd = diff(e.date, today), dt = parse(e.date), done = !!e.check && isDone(e, data);
   const key = e.planOf || e.id;                       // a catch-up tile stands for the late session it replans
   const moved = plan.byId[e.id];
@@ -32,12 +33,12 @@ export function Row({ e }: { e: Evt }): ReactNode {
     if (moved && !done) extra = <div className="replanned">↻ {tf('Replanifié : {d} · {p}', { d: fmt.long.format(parse(moved.date)), p: partLabel(moved.part, t) })}</div>;
     const box = (
       <input type="checkbox" className="chk" checked={done} aria-label={tf('Marquer « {t} » comme fait', { t: title })}
-        onChange={(ev) => update((d) => { if (ev.target.checked) d.done[key] = true; else delete d.done[key]; })} />
+        onChange={(ev) => update((d) => { setDone(d, key, ev.target.checked, realToday); })} />
     );
     tail = e.kind === 'perso' ? (
       <span style={{ display: 'flex', gap: 4, alignItems: 'center' }}>
         <button className="del" aria-label={t('Supprimer')}
-          onClick={() => update((d) => { d.custom = d.custom.filter((c) => c.id !== e.id); delete d.done[e.id]; })}>×</button>
+          onClick={() => update((d) => { d.custom = d.custom.filter((c) => c.id !== e.id); clearDone(d, e.id); })}>×</button>
         {box}
       </span>
     ) : box;

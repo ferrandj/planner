@@ -10,6 +10,7 @@ import { slotCss } from './lib/slotColors';
 import { PlanningTab } from './components/PlanningTab';
 import { PrintTab } from './components/PrintTab';
 import { TodayBar } from './components/Today';
+import { AchievementsTab, AchievementWatcher } from './components/Achievements';
 import { ReminderWatcher, RemindersDialog, Toasts } from './components/Reminders';
 import { Banner, Header, LateBar, SimBar, SimTool, Summary, Tabs } from './components/Top';
 
@@ -56,6 +57,7 @@ export function App(): ReactNode {
         <Tabs />
         {ui.tab === 'planning' && <div className="noprint tabbody"><PlanningTab /></div>}
         {ui.tab === 'devoirs' && <div className="noprint tabbody"><DevoirsTab /></div>}
+        {ui.tab === 'success' && <div className="noprint tabbody"><AchievementsTab /></div>}
         {ui.tab === 'edit' && <div className="noprint tabbody"><EditTab /></div>}
         {ui.tab === 'print' && <PrintTab />}
         <SimTool />
@@ -64,6 +66,7 @@ export function App(): ReactNode {
       <div id="decobar"><DecoBar /></div>
       <ContextMenu />
       <ReminderWatcher />
+      <AchievementWatcher />
       <RemindersDialog />
       <Toasts />
       <SyncPill />

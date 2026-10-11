@@ -119,6 +119,24 @@ the planner server holds the schedule and sends an encrypted push (signed with a
 Costs: Web Push is free. WhatsApp, Telegram and SMS are not built in: SMS and the WhatsApp Business API are paid per
 message; a Telegram bot is free but needs a bot token (a secret that stays in the container environment).
 
+### Achievements (🏆 Succès tab)
+
+Steam/PlayStation style medals, each tier with its own picture (the metal goes bronze → silver → gold → platinum → diamond,
+decorations grow with it, and the subject's colour is used for subject medals):
+
+- **Classes**: first live / first web conference **per subject**, then 2, 3, 5, 7, 10, 15, 20... up to the most that exists
+  in your planner (the last tier is "all of them"), and the same for all subjects together;
+- **Rhythm**: catch-ups (classes ticked after their day), streaks of 3 to 60 days with at least one class ticked each day
+  (one rest day per week is tolerated), perfect weeks;
+- **Assignments**: hand-ins, complete assignments;
+- **Your planner**: stickers (up to 20 for the last tier), notes, things you created or changed, dark mode, language, colour,
+  automatic catch-up, a class in every subject.
+
+An unlocked medal stays unlocked for good (the date is saved with your data): unticking, a broken streak or a removed subject never
+take it back. Each unlocked medal can be used as a **sticker** (Imprimer → Stickers et emojis → Succès, or on the app background);
+locked ones are greyed out until you earn them. Ticks now remember the day they were made, which is what streaks and
+catch-ups are counted on (older ticks count on the day of their class).
+
 ## The schedule you start with
 
 On the very first start (empty `/data`) the app creates its content in this order:

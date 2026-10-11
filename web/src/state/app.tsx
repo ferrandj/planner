@@ -5,6 +5,8 @@ import { type Fmt, iso, makeFmt } from '../lib/dates';
 import { makeT } from '../lib/i18n';
 import { clone } from '../lib/merge';
 import { buildEvents, byDate, resolveModel, type Model, type Scope } from '../lib/model';
+import { buildDefs, computeStats, type Def, type Stats } from '../lib/achievements';
+import { slotColor } from '../lib/slotColors';
 import { EMPTY_PLAN, planCatchUp, planTiles, type Plan } from '../lib/catchup';
 import { normalizeData } from '../lib/normalize';
 import type { SyncClient } from '../lib/sync';
@@ -14,7 +16,7 @@ import { migrateInlineNotes } from '../lib/migrate';
 /** A short message on top of the page: a reminder, an unlocked achievement... */
 export interface Toast { id: string; kind: 'reminder' | 'achievement' | 'info'; title: string; body?: string; icon?: string; /** ms until it goes away by itself (omit: stays until closed) */ ttl?: number }
 
-export type Tab = 'planning' | 'devoirs' | 'print' | 'edit';
+export type Tab = 'planning' | 'devoirs' | 'success' | 'print' | 'edit';
 
 /** Everything that is only about what is on screen (never saved). */
 export interface UiState {
@@ -43,6 +45,8 @@ export interface AppCtx {
   data: Data; base: Base; model: Model; evs: Evt[];
   /** where the automatic catch-up planner put the late sessions (empty when it is switched off) */
   plan: Plan;
+  /** achievements: every medal that exists in this planner, where the user stands, and what is unlocked (dates) */
+  ach: { defs: Def[]; byId: Record<string, Def>; stats: Stats; unlocked: Record<string, string> };
   /** Change the data: copy, mutate the copy, store it, and hand it to the sync layer. */
   update: (fn: (draft: Data) => void) => void;
   t: Translate; tf: TranslateF; fmt: Fmt; lang: Lang;
@@ -66,6 +70,16 @@ export function useApp(): AppCtx {
   return c;
 }
 
+const HEXC = /^#[0-9a-f]{6}$/i;
+/** A subject's colour as #rrggbb (its own colour, else the stylesheet's colour for its slot, else one derived from the slot). */
+function subjectHex(s: { c: number; color?: string }): string {
+  if (s.color && HEXC.test(s.color)) return s.color;
+  try {
+    const v = getComputedStyle(document.documentElement).getPropertyValue('--s' + s.c).trim();
+    if (HEXC.test(v)) return v;
+  } catch { /* no stylesheet (tests) */ }
+  return slotColor(s.c, false);
+}
 const minutesNow = (): number => { const d = new Date(); return d.getHours() * 60 + d.getMinutes(); };
 /** Only the half of the day matters to the planner (so it is not recomputed every minute). */
 const dayPart = (min: number): number => (min < 12 * 60 ? 0 : min < 17 * 60 ? 12 * 60 : 17 * 60);
@@ -140,6 +154,10 @@ export function AppProvider({ boot, sync, children }: { boot: BootResult; sync: 
     () => (auto ? planCatchUp({ events: evs0, today, done: data.done, max: autoMax, nowMin }) : EMPTY_PLAN),
     [auto, autoMax, evs0, today, data.done, nowMin]
   );
+  // achievements are counted on the real schedule (not on the catch-up tiles the planner shows)
+  const achStats = useMemo(() => computeStats(model, data, evs0, nowDay), [model, data, evs0, nowDay]);
+  const achDefs = useMemo(() => buildDefs(model, achStats, t, tf, (s) => subjectHex(s)), [model, achStats, t, tf]);
+  const ach = useMemo(() => ({ defs: achDefs, byId: Object.fromEntries(achDefs.map((d) => [d.id, d])), stats: achStats, unlocked: data.ach }), [achDefs, achStats, data.ach]);
   const evs = useMemo(() => (plan.placed.length ? evs0.concat(planTiles(evs0, plan)).sort(byDate) : evs0), [evs0, plan]);
 
   const isDark = useMemo(() => {
@@ -165,7 +183,7 @@ export function AppProvider({ boot, sync, children }: { boot: BootResult; sync: 
   const dismissToast = useCallback((id: string) => setToasts((l) => l.filter((x) => x.id !== id)), []);
   const toast = useCallback((x: Omit<Toast, 'id'>): string => {
     const id = 't' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
-    setToasts((l) => l.concat({ ...x, id }).slice(-6));
+    setToasts((l) => l.concat({ ...x, id }).slice(-4));
     if (x.ttl) setTimeout(() => setToasts((l) => l.filter((y) => y.id !== id)), x.ttl);
     return id;
   }, []);
@@ -179,6 +197,6 @@ export function AppProvider({ boot, sync, children }: { boot: BootResult; sync: 
     setUiState((u) => ({ ...u, alertOpen: true }));
   }, []);
 
-  const value: AppCtx = { data, base, model, evs, plan, update, t, tf, fmt, lang: data.prefs.lang, today, realToday: nowDay, clock, toasts, toast, dismissToast, ui, setUi, sync, status, isDark, setBusy, adopt };
+  const value: AppCtx = { data, base, model, evs, plan, ach, update, t, tf, fmt, lang: data.prefs.lang, today, realToday: nowDay, clock, toasts, toast, dismissToast, ui, setUi, sync, status, isDark, setBusy, adopt };
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }

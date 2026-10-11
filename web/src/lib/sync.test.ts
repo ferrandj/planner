@@ -86,6 +86,19 @@ describe('saving', () => {
   });
 });
 
+describe('changes made while the app is still starting', () => {
+  it('a change made before attach() is not forgotten: it is sent as soon as the client is attached', async () => {
+    const b = await sc.load();
+    live = b.data;
+    live.done = { early: true };
+    sc.changed();                                                         // e.g. a component updating the data in its first effect
+    sc.attach({ getData: () => live, adopt: (d) => { live = d; adopted.push(d); }, onStatus: (s) => statuses.push(s) });
+    await settle(100);
+    expect(srv.data.done).toEqual({ early: true });
+    expect(adopted).toEqual([]);                                          // and the server's older copy never replaced it
+  });
+});
+
 describe('two devices', () => {
   it('a stale write is merged, not overwritten', async () => {
     await boot();
