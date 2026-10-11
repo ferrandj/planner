@@ -61,6 +61,8 @@ function ThemeBar(): ReactNode {
           <button key={l} type="button" className="flag" aria-pressed={data.prefs.lang === l} aria-label={LANGN[l]} title={LANGN[l]} onClick={() => update((d) => { d.prefs.lang = l; })}><Flag lang={l} /></button>
         ))}
       </div>
+      <button type="button" className="fchip editchip" aria-pressed={ui.tab === 'edit'}
+        onClick={() => setUi(ui.tab === 'edit' ? { tab: ui.prevTab || 'planning' } : { tab: 'edit', prevTab: ui.tab })}>✎ {t('Édition')}</button>
     </div>
   );
 }
@@ -100,7 +102,7 @@ export function SimBar(): ReactNode {
 
 export function Tabs(): ReactNode {
   const { ui, setUi, t } = useApp();
-  const tabs: Array<[Tab, string]> = [['planning', t('Planning')], ['devoirs', t('Devoirs')], ['print', t('Imprimer')], ['edit', '✎ ' + t('Édition')]];
+  const tabs: Array<[Tab, string]> = [['planning', t('Planning')], ['devoirs', t('Devoirs')], ['print', t('Imprimer')]];
   return (
     <div className="tabs noprint" role="tablist">
       {tabs.map(([v, label]) => <button key={v} role="tab" aria-selected={ui.tab === v} onClick={() => setUi({ tab: v })}>{label}</button>)}

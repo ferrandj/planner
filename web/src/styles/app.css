@@ -4,7 +4,7 @@
 @font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/instrument-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 /* Base */
 [hidden]{display:none!important}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scrollbar-gutter:stable}
 body{margin:0}
 img{max-width:100%}
 /* Layout: en-tete + 3 repères, onglets Planning / Devoirs, liste groupée par mois ou grille mensuelle, alerte plein écran à J-7 */
@@ -157,7 +157,7 @@ details.tools input{background:var(--surface);border:1px solid var(--line);borde
 .colbtn{width:36px;height:36px;border-radius:50%;border:2px solid var(--line);box-shadow:inset 0 0 0 2px rgba(255,255,255,.6)}
 /* décor de l'application */
 #bg{position:absolute;top:0;bottom:0;left:0;right:0;z-index:0;pointer-events:none;overflow-x:clip;overflow-y:visible}
-body{position:relative;min-height:100vh;min-height:100dvh;box-sizing:border-box}
+body{position:relative;min-height:100vh;box-sizing:border-box}
 .wrap{position:relative;z-index:1}
 .bgs{position:absolute;aspect-ratio:1/1;pointer-events:none;touch-action:none;user-select:none;-webkit-user-select:none}
 body.decorating #bg{z-index:40}
@@ -170,7 +170,7 @@ body.decorating{padding-bottom:150px}
 .drow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .drow .spacer{flex:1}
 /* notes */
-.nrow{margin-top:6px}
+.nrow{margin-top:6px;display:flex;flex-wrap:wrap;gap:6px}
 .nbtn{background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:.78rem;font-weight:600;color:var(--muted)}
 .nbtn.has{color:var(--accent);border-color:var(--accent)}
 .nlist{display:flex;flex-direction:column;gap:10px}
@@ -290,9 +290,11 @@ label.mod{color:var(--accent)}
 .pane>.seg{align-self:flex-start}
 .pside{display:flex;flex-direction:column;gap:14px;min-width:0}
 .pmain{min-width:0}
-@media (orientation:portrait){.hide-narrow{display:none}}
-/* écran plus large que haut : deux volets dès que la largeur dépasse la hauteur */
-@media (orientation:landscape){
+/* Layout switches use the WIDTH only (never orientation or dynamic viewport height): on a nearly square screen (foldable, split
+   screen) a tiny change in height would otherwise flip the layout back and forth, endlessly. */
+@media (max-width:820px){.hide-narrow{display:none}}
+/* écran large : deux volets */
+@media (min-width:821px){
   .only-narrow{display:none}
   .split{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:26px;align-items:start}
   .cols2{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
@@ -301,10 +303,10 @@ label.mod{color:var(--accent)}
   .cal{gap:5px}
   .cell{min-height:clamp(3.4rem,14vh,6.6rem)}
 }
-@media (orientation:landscape) and (min-height:640px){
-  .pane-list{max-height:calc(100vh - 190px);overflow-y:auto;padding-right:8px}
+@media (min-width:821px){
+  .pane-list{max-height:max(30rem,calc(100vh - 190px));overflow-y:auto;padding-right:8px}
 }
-@media (orientation:landscape) and (min-width:900px){
+@media (min-width:900px){
   .dots{display:none}
   .clines{display:flex;flex-direction:column;gap:3px;width:100%}
   .dvs{display:none}
@@ -395,3 +397,13 @@ a.btn,label.btn{display:inline-flex;align-items:center;text-decoration:none;font
 /* The scrollable list pane must scroll, not squash its children (the "À faire / Tout" toggle collapsed to 2px). */
 .pane-list>*{flex-shrink:0}
 label.btn{cursor:pointer}
+
+/* edit buttons on tiles, right-click menu, edit chip next to the flags */
+.edbtn{background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:.78rem;font-weight:600;color:var(--muted);cursor:pointer}
+.edbtn:hover,.edbtn:focus-visible{color:var(--accent);border-color:var(--accent)}
+.ctx{position:fixed;z-index:70;min-width:11rem;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.28);padding:4px}
+.ctx button{display:block;width:100%;text-align:left;background:none;border:0;padding:9px 12px;border-radius:8px;color:var(--fg);font-size:.95rem;cursor:pointer}
+.ctx button:hover,.ctx button:focus-visible{background:var(--surface2)}
+.editchip{font-weight:700}
+.sectionbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.group h2 .btn{margin-left:10px;font-size:.8rem;padding:4px 10px;vertical-align:middle}

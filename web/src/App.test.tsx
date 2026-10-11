@@ -16,7 +16,9 @@ describe('first screen', () => {
     expect(screen.getAllByText('Assignment 1').length).toBeGreaterThan(0);
     expect(screen.getAllByText('22').length).toBeGreaterThan(0);                  // days until 2026-11-02
     expect(screen.getByText('0 / 4')).toBeInTheDocument();                        // nothing handed in yet
-    for (const n of ['Planning', 'Devoirs', 'Imprimer', /Édition/]) expect(tab(n)).toBeInTheDocument();
+    for (const n of ['Planning', 'Devoirs', 'Imprimer']) expect(tab(n)).toBeInTheDocument();
+    expect(screen.queryByRole('tab', { name: /Édition/ })).toBeNull();            // edit mode lives next to the flags
+    expect(screen.getByRole('button', { name: /Édition/ })).toBeInTheDocument();
   });
   it('uses the saved title and subtitle', async () => {
     await mountApp({ seed: (d) => { d.edits.app = { title: 'My planner', eyebrow: 'Spring term' }; } });

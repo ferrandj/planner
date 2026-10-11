@@ -21,6 +21,9 @@ export function bgClean(list: unknown, legacy: boolean, w: number, h: number): S
 export function normalizeData(raw: unknown, viewport: { w: number; h: number } = { w: 1000, h: 800 }): Data {
   const d = (raw && typeof raw === 'object' && !Array.isArray(raw) ? clone(raw) : {}) as Partial<Data> & Record<string, unknown>;
   const x = d as unknown as Data;
+  const ex = (d.extra || {}) as Partial<Data['extra']>;
+  x.extra = { s: Array.isArray(ex.s) ? ex.s : [], d: Array.isArray(ex.d) ? ex.d : [], x: Array.isArray(ex.x) ? ex.x : [], e: Array.isArray(ex.e) ? ex.e : [] };
+  x.deleted = d.deleted || {};
   x.notes = d.notes || {}; x.edits = d.edits || {}; x.hidden = d.hidden || {};
   x.done = d.done || {}; x.rendu = d.rendu || {}; x.custom = Array.isArray(d.custom) ? d.custom : [];
   const P = (d.prefs = d.prefs || ({} as Data['prefs']));
@@ -35,6 +38,8 @@ export function normalizeData(raw: unknown, viewport: { w: number; h: number } =
   if (!['sobre', 'perso'].includes(P.ppal)) P.ppal = 'perso';
   if (!['fr', 'en', 'es'].includes(P.lang)) P.lang = 'fr';
   if (!HEX6.test(P.custom || '')) P.custom = '#7b4fe0';
+  P.auto = !!P.auto;
+  P.autoMax = Number.isInteger(P.autoMax) && (P.autoMax as number) >= 1 && (P.autoMax as number) <= 20 ? P.autoMax : 3;
   if (!HEX6.test(P.pcustom || '')) P.pcustom = '#7b4fe0';
   x.stickers = d.stickers || {};
   x.bg = bgClean(d.bg, d.bgv !== 2, viewport.w || 1, viewport.h || 1);

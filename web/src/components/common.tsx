@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { MouseEvent, ReactNode } from 'react';
 import type { Devoir } from '../types';
 import { useApp } from '../state/app';
 
@@ -38,4 +38,20 @@ export function Seg<T extends string>({ label, value, options, onChange, classNa
       {options.map(([v, text]) => <button key={v} type="button" aria-pressed={value === v} onClick={() => onChange(v)}>{text}</button>)}
     </div>
   );
+}
+
+/** "✎ Éditer" button of a tile: opens the edit dialog for that item. */
+export function EditBtn({ k, label }: { k: string; label: string }): ReactNode {
+  const { setUi, t } = useApp();
+  return <button type="button" className="edbtn" aria-label={t('Éditer') + ' : ' + label} onClick={() => setUi({ editing: k })}>✎ {t('Éditer')}</button>;
+}
+
+/** onContextMenu handler for a tile: right-click (or long-press) opens "Éditer" (and "Marquer comme fait" when it has a tick box). */
+export function useTileMenu(): (key: string | null, doneId?: string | null) => (e: MouseEvent) => void {
+  const { setUi } = useApp();
+  return (key, doneId = null) => (e) => {
+    if (!key && !doneId) return;
+    e.preventDefault();
+    setUi({ menu: { x: e.clientX, y: e.clientY, key, doneId } });
+  };
 }

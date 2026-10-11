@@ -7,7 +7,11 @@ import { mountApp, saved } from './test/render';
 beforeEach(() => { vi.useFakeTimers({ toFake: ['Date'] }); vi.setSystemTime(new Date(2026, 9, 11, 12, 0, 0)); });
 afterEach(() => { vi.useRealTimers(); vi.restoreAllMocks(); });
 const user = (): ReturnType<typeof userEvent.setup> => userEvent.setup({ advanceTimers: () => {} });
-const goto = async (u: ReturnType<typeof userEvent.setup>, name: RegExp | string): Promise<void> => { await u.click(screen.getByRole('tab', { name })); };
+const goto = async (u: ReturnType<typeof userEvent.setup>, name: RegExp | string): Promise<void> => {
+  // Edit mode is a chip next to the language flags, not a tab.
+  if (name instanceof RegExp && name.source === 'Édition') { await u.click(screen.getByRole('button', { name })); return; }
+  await u.click(screen.getByRole('tab', { name }));
+};
 const section = async (u: ReturnType<typeof userEvent.setup>, name: RegExp | string): Promise<void> => { await u.click(screen.getByRole('button', { name })); };
 
 describe('edit tab', () => {

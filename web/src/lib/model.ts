@@ -4,14 +4,45 @@ import { diff } from './dates';
 /** The schedule as the user sees it: reference data with the user's edits layered on top. */
 export interface Model { subjects: Subject[]; devoirs: Devoir[]; exams: Exam[]; events: SessionEvt[] }
 
+type Kind = 's' | 'd' | 'x' | 'e';
+
+/** Reference items followed by the user's own, with the user's edits layered on top (nothing is modified in place). */
+function layer<T extends { id: string }>(g: Kind, list: T[], extra: T[], data: Data): Array<T & { _deleted: boolean }> {
+  return list.concat(extra).map((o) => {
+    const ed = data.edits[g + ':' + o.id] || {};
+    return { ...o, ...ed, _deleted: !!data.deleted[g + ':' + o.id] } as T & { _deleted: boolean };
+  });
+}
+
 export function resolveModel(base: Base, data: Data): Model {
-  const ed = (g: string, id: string): Record<string, string> => data.edits[g + ':' + id] || {};
+  const ex = data.extra || { s: [], d: [], x: [], e: [] };
+  const subjects = layer('s', base.s, ex.s, data).filter((o) => !o._deleted).map((o) => { const m = stripDel(o); m.short = m.name; return m; });
+  const ids = new Set(subjects.map((s) => s.id));
   return {
-    subjects: base.s.map((o) => { const m = { ...o, ...ed('s', o.id) } as Subject; m.short = m.name; return m; }),
-    devoirs: base.d.map((o) => ({ ...o, ...ed('d', o.id) }) as Devoir),
-    exams: base.x.map((o) => ({ ...o, ...ed('x', o.id) }) as Exam),
-    events: base.e.map((o) => ({ ...o, ...ed('e', o.id) }) as SessionEvt)
+    subjects,
+    devoirs: layer('d', base.d, ex.d, data).filter((o) => !o._deleted).map(stripDel),
+    exams: layer('x', base.x, ex.x, data).filter((o) => !o._deleted).map(stripDel),
+    // sessions of a removed subject disappear with it
+    events: layer('e', base.e, ex.e, data).filter((o) => !o._deleted && ids.has(o.subject)).map(stripDel)
   };
+}
+
+function stripDel<T extends { _deleted: boolean }>(o: T): Omit<T, '_deleted'> {
+  const { _deleted, ...rest } = o;
+  void _deleted;
+  return rest;
+}
+
+export interface RemovedItem { key: string; kind: Kind; label: string }
+
+/** Everything the user removed, so it can be restored. */
+export function removedItems(base: Base, data: Data): RemovedItem[] {
+  const ex = data.extra || { s: [], d: [], x: [], e: [] };
+  const out: RemovedItem[] = [];
+  (layer('s', base.s, ex.s, data)).forEach((o) => { if (o._deleted) out.push({ key: 's:' + o.id, kind: 's', label: o.code + ' · ' + o.name }); });
+  (layer('d', base.d, ex.d, data)).forEach((o) => { if (o._deleted) out.push({ key: 'd:' + o.id, kind: 'd', label: o.title }); });
+  (layer('x', base.x, ex.x, data)).forEach((o) => { if (o._deleted) out.push({ key: 'x:' + o.id, kind: 'x', label: o.title }); });
+  return out;
 }
 
 export const appTitle = (data: Data, t: Translate): string => data.edits.app?.title || t('Planning');

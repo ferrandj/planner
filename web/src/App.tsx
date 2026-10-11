@@ -4,7 +4,9 @@ import { useApp } from './state/app';
 import { BackgroundLayer, DecoBar } from './components/Decor';
 import { DevoirsTab } from './components/DevoirsTab';
 import { EditTab } from './components/EditTab';
+import { ContextMenu } from './components/ContextMenu';
 import { Overlays } from './components/Overlays';
+import { slotCss } from './lib/slotColors';
 import { PlanningTab } from './components/PlanningTab';
 import { PrintTab } from './components/PrintTab';
 import { Banner, Header, SimBar, SimTool, Summary, Tabs } from './components/Top';
@@ -13,6 +15,13 @@ const SYNC_TXT = {
   saved: '✓ Enregistré', saving: '… Enregistrement', pending: '… Enregistrement',
   offline: '⚠ Hors ligne : modifications gardées sur cet appareil', cachefull: '⚠ Copie locale pleine : reste connecté au serveur'
 } as const;
+
+function SubjectSlotStyles(): ReactNode {
+  const { base, data } = useApp();
+  const max = base.s.concat(data.extra.s).reduce((m, x) => Math.max(m, x.c || 0), 0);
+  const css = slotCss(max);
+  return css ? <style id="subject-slots">{css}</style> : null;
+}
 
 function SyncPill(): ReactNode {
   const { status, t } = useApp();
@@ -33,6 +42,7 @@ export function App(): ReactNode {
 
   return (
     <div onClickCapture={disarm}>
+      <SubjectSlotStyles />
       <BackgroundLayer />
       <div className="wrap" id="app">
         <Banner />
@@ -48,6 +58,7 @@ export function App(): ReactNode {
       </div>
       <div id="alert"><Overlays /></div>
       <div id="decobar"><DecoBar /></div>
+      <ContextMenu />
       <SyncPill />
     </div>
   );
