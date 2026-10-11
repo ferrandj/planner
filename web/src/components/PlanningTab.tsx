@@ -1,7 +1,7 @@
 import type { CSSProperties, FormEvent, ReactNode } from 'react';
 import type { Evt } from '../types';
 import { pad, parse, wdList } from '../lib/dates';
-import { eventsOn, inScope, isLate, subjectOf, visible } from '../lib/model';
+import { eventsOn, inScope, isDone, isLate, subjectOf, visible } from '../lib/model';
 import { useApp } from '../state/app';
 import { Row } from './Row';
 import { Seg } from './common';
@@ -53,7 +53,7 @@ function cellLine(e: Evt, ctx: ReturnType<typeof useApp>): ReactNode {
   if (e.kind === 'dispo') return <span key={e.id} className="cl cx">{t('Sujet : ') + t(e.title || '')}</span>;
   const s2 = subjectOf(model, e.subject);
   const lab = e.kind === 'live' ? t('Live du soir') : e.kind === 'webconf' ? t('Webconf') + (e.tag ? ' · ' + t(e.tag) : '') : e.title;
-  return <span key={e.id} className={'cl' + (s2 ? ' s' + s2.c : '') + (data.done[e.id] ? ' dn' : '')}>{(s2 ? s2.ab + ' · ' : '') + lab}</span>;
+  return <span key={e.id} className={'cl' + (s2 ? ' s' + s2.c : '') + (isDone(e, data) ? ' dn' : '') + (e.planOf ? ' pl' : '')}>{(e.planOf ? '↻ ' : '') + (s2 ? s2.ab + ' · ' : '') + lab}</span>;
 }
 
 function MonthView({ evs }: { evs: Evt[] }): ReactNode {

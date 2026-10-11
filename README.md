@@ -65,6 +65,23 @@ data/
   seed.json         optional, only read on the very first start
 ```
 
+## Editing, and the automatic catch-up
+
+- **Edit mode** is the "✎ Édition" chip next to the language flags. In it you can add, rename, recolour and remove
+  subjects, assignments, exams and sessions. Anything can also be edited where it is shown: the ✎ button on its tile,
+  or a right-click on it (right-click also ticks a session). Nothing is ever really deleted: removed items sit in
+  "Supprimés" and can be restored. Your own items are stored separately from the reference schedule, so a new
+  reference schedule never touches them.
+- **Late classes counter**: under the next assignment, a coloured bar says how many live / web-conference classes are
+  late (per subject), or congratulates you when you are up to date.
+- **Automatic catch-up** (switch in that bar, off by default). Each day has two work periods: the morning and the
+  afternoon/evening. A period that already holds anything (a class, live, web conference, a personal session, an exam)
+  is never used. The other periods are filled, from now on, with the late classes: per subject from the first to the
+  last, preferring the subject of the next class that is coming, and never more than N in a row for the same
+  subject (N is the number next to the switch, 3 by default). The plan is recomputed on every change (a class you tick,
+  a class you miss, a new session…) and is never stored: it only moves tiles around on screen, ticking a catch-up tile
+  ticks the real class, and switching it off gives you your planner back exactly as it was.
+
 ## The schedule you start with
 
 On the very first start (empty `/data`) the app creates its content in this order:

@@ -4,14 +4,45 @@ import { diff } from './dates';
 /** The schedule as the user sees it: reference data with the user's edits layered on top. */
 export interface Model { subjects: Subject[]; devoirs: Devoir[]; exams: Exam[]; events: SessionEvt[] }
 
+type Kind = 's' | 'd' | 'x' | 'e';
+
+/** Reference items followed by the user's own, with the user's edits layered on top (nothing is modified in place). */
+function layer<T extends { id: string }>(g: Kind, list: T[], extra: T[], data: Data): Array<T & { _deleted: boolean }> {
+  return list.concat(extra).map((o) => {
+    const ed = data.edits[g + ':' + o.id] || {};
+    return { ...o, ...ed, _deleted: !!data.deleted[g + ':' + o.id] } as T & { _deleted: boolean };
+  });
+}
+
 export function resolveModel(base: Base, data: Data): Model {
-  const ed = (g: string, id: string): Record<string, string> => data.edits[g + ':' + id] || {};
+  const ex = data.extra || { s: [], d: [], x: [], e: [] };
+  const subjects = layer('s', base.s, ex.s, data).filter((o) => !o._deleted).map((o) => { const m = stripDel(o); m.short = m.name; return m; });
+  const ids = new Set(subjects.map((s) => s.id));
   return {
-    subjects: base.s.map((o) => { const m = { ...o, ...ed('s', o.id) } as Subject; m.short = m.name; return m; }),
-    devoirs: base.d.map((o) => ({ ...o, ...ed('d', o.id) }) as Devoir),
-    exams: base.x.map((o) => ({ ...o, ...ed('x', o.id) }) as Exam),
-    events: base.e.map((o) => ({ ...o, ...ed('e', o.id) }) as SessionEvt)
+    subjects,
+    devoirs: layer('d', base.d, ex.d, data).filter((o) => !o._deleted).map(stripDel),
+    exams: layer('x', base.x, ex.x, data).filter((o) => !o._deleted).map(stripDel),
+    // sessions of a removed subject disappear with it
+    events: layer('e', base.e, ex.e, data).filter((o) => !o._deleted && ids.has(o.subject)).map(stripDel)
   };
+}
+
+function stripDel<T extends { _deleted: boolean }>(o: T): Omit<T, '_deleted'> {
+  const { _deleted, ...rest } = o;
+  void _deleted;
+  return rest;
+}
+
+export interface RemovedItem { key: string; kind: Kind; label: string }
+
+/** Everything the user removed, so it can be restored. */
+export function removedItems(base: Base, data: Data): RemovedItem[] {
+  const ex = data.extra || { s: [], d: [], x: [], e: [] };
+  const out: RemovedItem[] = [];
+  (layer('s', base.s, ex.s, data)).forEach((o) => { if (o._deleted) out.push({ key: 's:' + o.id, kind: 's', label: o.code + ' · ' + o.name }); });
+  (layer('d', base.d, ex.d, data)).forEach((o) => { if (o._deleted) out.push({ key: 'd:' + o.id, kind: 'd', label: o.title }); });
+  (layer('x', base.x, ex.x, data)).forEach((o) => { if (o._deleted) out.push({ key: 'x:' + o.id, kind: 'x', label: o.title }); });
+  return out;
 }
 
 export const appTitle = (data: Data, t: Translate): string => data.edits.app?.title || t('Planning');
@@ -20,6 +51,9 @@ export const appEyebrow = (data: Data): string => data.edits.app?.eyebrow || '';
 export function subjectOf(m: Model, id: string | undefined): Subject | undefined {
   return id ? m.subjects.find((s) => s.id === id) : undefined;
 }
+
+/** Order of the planner: by date, then by time. */
+export const byDate = (a: Evt, b: Evt): number => (a.date < b.date ? -1 : a.date > b.date ? 1 : (a.time || '') < (b.time || '') ? -1 : 1);
 
 /** Sessions, custom sessions, assignment deadlines, exams and "subject available" dates, sorted by date then time. */
 export function buildEvents(m: Model, data: Data): Evt[] {
@@ -33,8 +67,7 @@ export function buildEvents(m: Model, data: Data): Evt[] {
     if (d.avail) ev.push({ id: 'av:' + d.id, kind: 'dispo', date: d.avail, title: d.title });
   });
   m.exams.forEach((x) => ev.push({ id: x.id, kind: 'exam', date: x.date, end: x.end, title: x.title }));
-  ev.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : (a.time || '') < (b.time || '') ? -1 : 1));
-  return ev;
+  return ev.sort(byDate);
 }
 
 export const renduCount = (m: Model, data: Data, d: Devoir): number => m.subjects.filter((s) => data.rendu[d.id + ':' + s.id]).length;
@@ -49,13 +82,16 @@ export function visible(e: Evt, filter: string): boolean {
 
 export function inScope(e: Evt, scope: Scope, today: string, m: Model, data: Data): boolean {
   if (scope === 'all') return true;
-  if (e.check && data.done[e.id]) return false;
+  if (e.check && isDone(e, data)) return false;
   if (e.kind === 'devoir' && e.devoir && devoirDone(m, data, e.devoir)) return false;
   if (!e.check && e.kind !== 'devoir' && lastDay(e) < today) return false;
   return true;
 }
 
-export const isLate = (e: Evt, today: string, data: Data): boolean => !!e.check && !data.done[e.id] && e.date < today;
+/** Ticked? A catch-up tile is ticked when the late session it stands for is. */
+export const isDone = (e: Evt, data: Data): boolean => !!data.done[e.planOf || e.id];
+
+export const isLate = (e: Evt, today: string, data: Data): boolean => !!e.check && !isDone(e, data) && e.date < today;
 
 /** Assignments due within 7 days (today included) that are not fully handed in. */
 export function dueSoon(m: Model, data: Data, today: string): Devoir[] {
@@ -93,6 +129,9 @@ export function renduTotals(m: Model, data: Data): { done: number; total: number
   return { done, total: m.devoirs.length * m.subjects.length };
 }
 
+/** Late sessions (live / webconference, not ticked, date passed). */
+export const lateSessions = (evs: Evt[], today: string, data: Data): Evt[] =>
+  evs.filter((e) => isLate(e, today, data) && (e.kind === 'live' || e.kind === 'webconf'));
+
 /** Sessions (live / webconference) that are overdue and not ticked: the "to catch up" counter. */
-export const backlogCount = (evs: Evt[], today: string, data: Data): number =>
-  evs.filter((e) => isLate(e, today, data) && (e.kind === 'live' || e.kind === 'webconf')).length;
+export const backlogCount = (evs: Evt[], today: string, data: Data): number => lateSessions(evs, today, data).length;

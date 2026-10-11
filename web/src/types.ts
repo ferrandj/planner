@@ -34,11 +34,20 @@ export interface Prefs {
   ppal: string;     // print palette
   pcustom: string;  // print colour
   sync?: boolean;   // same sticker decoration on every month
+  auto?: boolean;   // automatic catch-up planning switched on
+  autoMax?: number; // never more than this many catch-up slots in a row for the same subject
 }
 
 export type Edits = Record<string, Record<string, string>>;
 
+/** Items the user created themselves (the reference schedule in `Base` stays untouched). */
+export interface Extra { s: Subject[]; d: Devoir[]; x: Exam[]; e: SessionEvt[] }
+
 export interface Data {
+  /** Items added by the user: subjects, assignments, exams, sessions. */
+  extra: Extra;
+  /** Items removed by the user ("s:id", "d:id", "x:id"). Nothing is erased: they can be restored from the edit screen. */
+  deleted: Record<string, boolean>;
   notes: Record<string, Note[]>;
   edits: Edits;
   hidden: Record<string, boolean>;
@@ -72,6 +81,9 @@ export interface Evt {
   title?: string;
   check?: boolean;
   devoir?: Devoir;
+  /** catch-up tile: id of the late session it stands for, and the day that session was originally on */
+  planOf?: string;
+  from?: string;
 }
 
 export type Translate = (s: string) => string;

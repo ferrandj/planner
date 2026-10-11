@@ -3,10 +3,10 @@ import type { Base, Data } from '../types';
 const REQUIRED = new Set(['s:name', 's:code', 's:ab', 'd:title', 'd:date', 'x:date', 'e:date', 'c:date', 'c:title', 'd:ab']);
 
 /** The reference entry for an edit key like "s:math" or "e:math-live-2026-09-14". */
-export function baseOf(base: Base, key: string): Record<string, unknown> {
+export function baseOf(base: Base, key: string, extra?: Data['extra']): Record<string, unknown> {
   const g = key.split(':')[0] as keyof Base, id = key.slice(g.length + 1);
-  const list = base[g] as Array<{ id: string }> | undefined;
-  return (list && (list.find((o) => o.id === id) as unknown as Record<string, unknown>)) || {};
+  const list = ((base[g] as Array<{ id: string }> | undefined) || []).concat((extra && (extra[g] as Array<{ id: string }>)) || []);
+  return (list.find((o) => o.id === id) as unknown as Record<string, unknown>) || {};
 }
 
 /**
@@ -26,7 +26,7 @@ export function setEdit(d: Data, base: Base, key: string, f: string, v: string):
     if (c) c[f] = v;
     return true;
   }
-  const b = baseOf(base, key)[f];
+  const b = baseOf(base, key, d.extra)[f];
   if ((b === undefined ? '' : String(b)) === v) {
     if (d.edits[key]) { delete d.edits[key][f]; if (!Object.keys(d.edits[key]).length) delete d.edits[key]; }
   } else (d.edits[key] = d.edits[key] || {})[f] = v;

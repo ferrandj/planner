@@ -2,15 +2,21 @@ import type { ReactNode } from 'react';
 import type { Evt } from '../types';
 import { diff, parse, range, rel } from '../lib/dates';
 import { evTitle } from '../lib/labels';
-import { renduCount, subjectOf } from '../lib/model';
+import { isDone, renduCount, subjectOf } from '../lib/model';
+import { partLabel } from '../lib/labels';
 import { useApp } from '../state/app';
-import { NoteBtn, Toggles } from './common';
+import { editKeyOf } from '../lib/items';
+import { EditBtn, NoteBtn, Toggles, useTileMenu } from './common';
 
 /** One line of the planner: a session, a custom session, an assignment, an exam or an "available from" date. */
 export function Row({ e }: { e: Evt }): ReactNode {
-  const { data, model, t, tf, fmt, today, update } = useApp();
-  const dd = diff(e.date, today), dt = parse(e.date), done = !!e.check && !!data.done[e.id];
+  const { data, model, plan, t, tf, fmt, today, update } = useApp();
+  const dd = diff(e.date, today), dt = parse(e.date), done = !!e.check && isDone(e, data);
+  const key = e.planOf || e.id;                       // a catch-up tile stands for the late session it replans
+  const moved = plan.byId[e.id];
   const sb = subjectOf(model, e.subject);
+  const menu = useTileMenu();
+  const ek = editKeyOf(e);
   const tags: ReactNode[] = [];
   let title = '', meta = '', tail: ReactNode = null, extra: ReactNode = null;
 
@@ -19,11 +25,14 @@ export function Row({ e }: { e: Evt }): ReactNode {
     if (done) tags.push(<span key="st" className="st ok">{t('Fait')}</span>);
     else if (dd < 0) tags.push(<span key="st" className="st late">{e.kind === 'perso' ? t('En retard') : t('À rattraper')}</span>);
     else if (dd === 0) tags.push(<span key="st" className="st now">{t("Aujourd'hui")}</span>);
+    if (e.planOf) tags.push(<span key="pl" className="st plan">↻ {t('Rattrapage')}</span>);
     title = evTitle(e, t);
-    meta = (e.time ? e.time + ' · ' : '') + rel(dd, t, tf);
+    meta = (e.time ? (e.planOf ? t(e.time) : e.time) + ' · ' : '') + rel(dd, t, tf);
+    if (e.planOf && e.from) meta += ' · ' + tf('initialement le {d}', { d: fmt.long.format(parse(e.from)) });
+    if (moved && !done) extra = <div className="replanned">↻ {tf('Replanifié : {d} · {p}', { d: fmt.long.format(parse(moved.date)), p: partLabel(moved.part, t) })}</div>;
     const box = (
       <input type="checkbox" className="chk" checked={done} aria-label={tf('Marquer « {t} » comme fait', { t: title })}
-        onChange={(ev) => update((d) => { if (ev.target.checked) d.done[e.id] = true; else delete d.done[e.id]; })} />
+        onChange={(ev) => update((d) => { if (ev.target.checked) d.done[key] = true; else delete d.done[key]; })} />
     );
     tail = e.kind === 'perso' ? (
       <span style={{ display: 'flex', gap: 4, alignItems: 'center' }}>
@@ -50,14 +59,14 @@ export function Row({ e }: { e: Evt }): ReactNode {
   }
 
   return (
-    <li className={`row kind-${e.kind}${done ? ' done' : ''}`}>
+    <li className={`row kind-${e.kind}${done ? ' done' : ''}`} onContextMenu={menu(ek, e.check ? key : null)}>
       <div className="dt"><span className="wd">{fmt.wd.format(dt)}</span><span className="dn">{dt.getDate()}</span></div>
       <div className="bd">
         <div className="tags">{tags}</div>
         <div className="tt">{title}</div>
         <div className="mt">{meta}</div>
         {extra}
-        <div className="nrow"><NoteBtn k={e.id} title={(sb ? sb.ab + ' · ' : '') + title + ' · ' + fmt.long.format(dt)} /></div>
+        <div className="nrow"><NoteBtn k={key} title={(sb ? sb.ab + ' · ' : '') + title + ' · ' + fmt.long.format(dt)} />{ek && <EditBtn k={ek} label={title} />}</div>
       </div>
       {tail ?? <span />}
     </li>

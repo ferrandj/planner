@@ -1,38 +1,18 @@
-import { useEffect, useState, type ReactNode } from 'react';
+import { useEffect, type ReactNode } from 'react';
 import type { Evt } from '../types';
 import { HEX6 } from '../lib/colors';
 import { parse } from '../lib/dates';
 import { clearColor, resetAllEdits, resetEdit, setEdit } from '../lib/edits';
 import { fmtSize } from '../lib/files';
 import { K } from '../lib/labels';
-import { appTitle } from '../lib/model';
+import { addDevoir, addExam, addSession, addSubject, removeItem, restoreItem } from '../lib/items';
+import { appTitle, removedItems } from '../lib/model';
 import { mergeImport } from '../lib/normalize';
 import { useApp } from '../state/app';
 import { ColorPicker } from './ColorPicker';
 import { NoteBtn } from './common';
 import { Row } from './Row';
-
-interface EdOpts { wide?: boolean; max?: number; clear?: boolean; options?: Array<[string, string]> }
-
-/** A text/date/select field of an editor card. Edits are saved as you type; a refused blank is restored when leaving the field. */
-function EdInput({ k, f, label, type, val, opt }: { k: string; f: string; label: string; type: string; val: string; opt?: EdOpts }): ReactNode {
-  const { data, base, update, t } = useApp();
-  const [draft, setDraft] = useState(val);
-  const [focus, setFocus] = useState(false);
-  useEffect(() => { if (!focus) setDraft(val); }, [val, focus]);
-  const mod = data.edits[k]?.[f] !== undefined;
-  const commit = (v: string): void => { setDraft(v); update((d) => { setEdit(d, base, k, f, v); }); };
-  return (
-    <label className={(opt?.wide ? 'wide ' : '') + (mod ? 'mod' : '')}>{t(label)}
-      {opt?.options ? (
-        <select value={draft} onChange={(e) => commit(e.target.value)}>{opt.options.map((o) => <option key={o[0]} value={o[0]}>{o[1]}</option>)}</select>
-      ) : (
-        <input type={type} value={draft} maxLength={opt?.max} onFocus={() => setFocus(true)} onBlur={() => { setFocus(false); setDraft(val); }} onChange={(e) => commit(e.target.value)} />
-      )}
-      {opt?.clear && val && <button type="button" className="lnk" onClick={() => commit('')}>{t('Effacer cette date')}</button>}
-    </label>
-  );
-}
+import { EdInput } from './EdInput';
 
 function Head({ id, title, count, def }: { id: string; title: string; count?: string | number; def: boolean }): ReactNode {
   const { ui, setUi } = useApp();
@@ -65,12 +45,12 @@ function Preview({ k }: { k: string }): ReactNode {
   return <div className="pvbox"><span className="lbl">{t('Aperçu')}</span><div className="pv" inert>{inner}</div></div>;
 }
 
-function Card({ k, title, off, children }: { k: string; title: string; off?: boolean; children: ReactNode }): ReactNode {
+function Card({ k, title, off, removable, children }: { k: string; title: string; off?: boolean; removable?: boolean; children: ReactNode }): ReactNode {
   const { data, update, t } = useApp();
   const mod = !!(data.edits[k] && Object.keys(data.edits[k]).length);
   return (
     <div className={'edcard' + (off ? ' off' : '') + (mod ? ' modded' : '')}>
-      <div className="edtop"><strong>{title}</strong>{mod && <><span className="tag">{t('Modifié')}</span><button type="button" className="lnk" onClick={() => update((d) => resetEdit(d, k))}>{t("Rétablir les valeurs d'origine")}</button></>}</div>
+      <div className="edtop"><strong>{title}</strong>{mod && <><span className="tag">{t('Modifié')}</span><button type="button" className="lnk" onClick={() => update((d) => resetEdit(d, k))}>{t("Rétablir les valeurs d'origine")}</button></>}{removable && <button type="button" className="lnk" onClick={() => { if (k.startsWith('s:') && !window.confirm(t('Supprimer cette matière ? Ses séances disparaissent aussi du planning, tu pourras la restaurer dans le mode édition.'))) return; update((d) => removeItem(d, k)); }}>{t('Supprimer')}</button>}</div>
       <div className="form">{children}</div>
       <Preview k={k} />
     </div>
@@ -146,7 +126,9 @@ function Backups(): ReactNode {
 }
 
 export function EditTab(): ReactNode {
-  const { data, model, base, ui, setUi, update, t, fmt } = useApp();
+  const { data, model, base, ui, setUi, update, t, fmt, today } = useApp();
+  const create = (make: (d: typeof data) => string): void => { let key = ''; update((d) => { key = make(d); }); setUi({ editing: key }); };
+  const removed = removedItems(base, data);
   const isOpen = (id: string, def: boolean): boolean => ui.edOpen[id] ?? def;
   const dateOf = (d: string): string => fmt.long.format(parse(d));
   return (
@@ -174,10 +156,11 @@ export function EditTab(): ReactNode {
       <Head id="subj" title={t('Matières')} count={model.subjects.length} def />
       {isOpen('subj', true) && (
         <div className="edbody">
+          <div className="sectionbar" style={{ gridColumn: '1 / -1' }}><button type="button" className="btn" onClick={() => create((d) => addSubject(d, base))}>{t('+ Ajouter une matière')}</button></div>
           {model.subjects.map((x) => {
             const k = 's:' + x.id;
             return (
-              <Card key={x.id} k={k} title={x.code + ' · ' + x.name}>
+              <Card key={x.id} k={k} title={x.code + ' · ' + x.name} removable>
                 <EdInput k={k} f="code" label="Code" type="text" val={x.code} opt={{ max: 12 }} />
                 <EdInput k={k} f="name" label="Nom complet" type="text" val={x.name} opt={{ wide: true, max: 80 }} />
                 <EdInput k={k} f="ab" label="Abréviation" type="text" val={x.ab} opt={{ max: 12 }} />
@@ -197,10 +180,11 @@ export function EditTab(): ReactNode {
       <Head id="dev" title={t('Devoirs')} count={model.devoirs.length} def />
       {isOpen('dev', true) && (
         <div className="edbody">
+          <div className="sectionbar" style={{ gridColumn: '1 / -1' }}><button type="button" className="btn" onClick={() => create((d) => addDevoir(d, base, today))}>{t('+ Ajouter un devoir')}</button></div>
           {model.devoirs.map((x) => {
             const k = 'd:' + x.id;
             return (
-              <Card key={x.id} k={k} title={x.title}>
+              <Card key={x.id} k={k} title={x.title} removable>
                 <EdInput k={k} f="title" label="Titre" type="text" val={x.title} opt={{ wide: true, max: 60 }} />
                 <EdInput k={k} f="ab" label="Abréviation" type="text" val={x.ab} opt={{ max: 12 }} />
                 <EdInput k={k} f="date" label="Date limite de rendu" type="date" val={x.date} />
@@ -214,10 +198,11 @@ export function EditTab(): ReactNode {
       <Head id="exam" title={t('Examens')} count={model.exams.length} def />
       {isOpen('exam', true) && (
         <div className="edbody">
+          <div className="sectionbar" style={{ gridColumn: '1 / -1' }}><button type="button" className="btn" onClick={() => create((d) => addExam(d, today))}>{t("+ Ajouter un examen")}</button></div>
           {model.exams.map((x) => {
             const k = 'x:' + x.id;
             return (
-              <Card key={x.id} k={k} title={x.title + ' · ' + dateOf(x.date)}>
+              <Card key={x.id} k={k} title={x.title + ' · ' + dateOf(x.date)} removable>
                 <EdInput k={k} f="title" label="Titre" type="text" val={x.title} opt={{ wide: true, max: 60 }} />
                 <EdInput k={k} f="date" label="Début" type="date" val={x.date} />
                 <EdInput k={k} f="end" label="Fin" type="date" val={x.end || ''} opt={{ clear: true }} />
@@ -235,6 +220,7 @@ export function EditTab(): ReactNode {
             <Head id={id} title={t('Séances') + ' · ' + sj.ab} count={L.length + (hid ? ` (${hid} ${t('masquée(s)')})` : '')} def={false} />
             {isOpen(id, false) && (
               <div className="edbody">
+                <div className="sectionbar" style={{ gridColumn: '1 / -1' }}><button type="button" className="btn" onClick={() => create((d) => addSession(d, sj.id, 'live', today))}>{t('+ Ajouter une séance')}</button></div>
                 {L.map((e) => {
                   const k = 'e:' + e.id, off = !!data.hidden[e.id];
                   return (
@@ -269,6 +255,15 @@ export function EditTab(): ReactNode {
               </Card>
             );
           }) : <p className="hint">{t("Aucune séance perso. Ajoute-en depuis l'onglet Planning.")}</p>}
+        </div>
+      )}
+
+      <Head id="removed" title={t('Supprimés')} count={removed.length || undefined} def={false} />
+      {isOpen('removed', false) && (
+        <div className="edbody">
+          {removed.length ? removed.map((r) => (
+            <div key={r.key} className="edcard"><div className="edtop"><strong>{r.label}</strong><button type="button" className="btn ghost" onClick={() => update((d) => restoreItem(d, r.key))}>{t('Restaurer')}</button></div></div>
+          )) : <p className="hint">{t('Rien de supprimé.')}</p>}
         </div>
       )}
 

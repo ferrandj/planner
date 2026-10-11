@@ -7,6 +7,7 @@ import { dueSoon } from '../lib/model';
 import { useApp } from '../state/app';
 import { Toggles } from './common';
 import { PrintHelp, StickerPicker } from './StickerPicker';
+import { EditDialog } from './EditDialog';
 
 const nid = (): string => 'n' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
 
@@ -126,6 +127,7 @@ function AlertModal(): ReactNode {
 export function Overlays(): ReactNode {
   const { ui, model, data, today } = useApp();
   if (ui.noteFor) return <NotesModal key={ui.noteFor.key} />;
+  if (ui.editing) return <EditDialog key={ui.editing} />;
   if (ui.stkPop) return <StickerPicker />;
   if (ui.printHelp) return <PrintHelp />;
   if (ui.alertOpen && dueSoon(model, data, today).length) return <AlertModal />;

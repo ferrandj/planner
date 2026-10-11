@@ -36,7 +36,7 @@ test('hand-in toggles, language, dark mode and title survive a reload', async ({
   await page.locator('article').first().getByRole('button', { name: /à rendre/ }).first().click();
   await page.getByRole('button', { name: 'Sombre' }).click();
   await page.getByRole('button', { name: 'English' }).click();
-  await page.getByRole('tab', { name: /Edit|Édition/ }).click();
+  await page.locator('.editchip').click();
   const title = page.getByLabel(/App title|Titre de l'application/);
   await title.fill('My own planner');
   await waitSaved(page);
@@ -53,7 +53,7 @@ test('hand-in toggles, language, dark mode and title survive a reload', async ({
 
 test('renaming a subject is saved and shown everywhere; a blank name is refused', async ({ page, request }) => {
   await open(page);
-  await page.getByRole('tab', { name: /Édition/ }).click();
+  await page.getByRole('button', { name: /Édition/ }).click();
   const name = page.getByLabel('Nom complet').first();
   await name.fill('Linear algebra');
   await waitSaved(page);
