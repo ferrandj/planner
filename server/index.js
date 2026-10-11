@@ -172,12 +172,49 @@ function createServer(opts) {
   });
 }
 
+/**
+ * NAS-friendly start-up. The container starts as root, looks at who owns the data folder and then runs the server as that
+ * user (or, when Docker created the folder as root, hands it to the unprivileged user 1000). Privileges are dropped before
+ * anything listens on the network, so the server itself never runs as root. If the container was started with a fixed
+ * non-root user (compose "user:"), nothing changes and that user must be able to write to the folder.
+ */
+function dropPrivileges(dataDir) {
+  if (typeof process.getuid !== 'function' || process.getuid() !== 0) return null;
+  const st = fs.statSync(dataDir);
+  let uid = st.uid, gid = st.gid;
+  if (uid === 0) { uid = 1000; gid = 1000; }
+  // make sure everything already inside belongs to that user too (ownership only, nothing is ever deleted or rewritten)
+  const todo = [dataDir];
+  while (todo.length) {
+    const dir = todo.pop();
+    const own = fs.lstatSync(dir);
+    if (own.uid !== uid || own.gid !== gid) fs.lchownSync(dir, uid, gid);
+    for (const name of fs.readdirSync(dir)) {
+      const full = path.join(dir, name), e = fs.lstatSync(full);
+      if (e.isDirectory()) todo.push(full);
+      else if (e.uid !== uid || e.gid !== gid) fs.lchownSync(full, uid, gid);
+    }
+  }
+  process.setgroups([]);
+  process.setgid(gid);
+  process.setuid(uid);
+  return { uid: uid, gid: gid };
+}
+
+function describeFolder(dir) {
+  try { const st = fs.statSync(dir); return 'owner ' + st.uid + ':' + st.gid + ', mode ' + (st.mode & 0o777).toString(8); } catch (e) { return 'unreadable (' + e.code + ')'; }
+}
+
 function main() {
   const dataDir = path.resolve(process.env.DATA_DIR || path.join(__dirname, '..', 'data'));
   const port = parseInt(process.env.PORT || '8080', 10);
+  console.log('[planner] starting v' + (process.env.APP_VERSION || 'dev') + ' as uid ' + (process.getuid ? process.getuid() : '?') + ', data folder ' + dataDir);
   fs.mkdirSync(dataDir, { recursive: true });
+  const before = describeFolder(dataDir);
+  const dropped = dropPrivileges(dataDir);
+  if (dropped) console.log('[planner] data folder had ' + before + ' -> running as uid ' + dropped.uid + ', gid ' + dropped.gid);
   try { fs.accessSync(dataDir, fs.constants.W_OK); } catch (e) {
-    throw new Error(dataDir + ' is not writable by this user (uid ' + process.getuid() + '). Fix the folder permissions or run the container with `user: "UID:GID"` of the folder owner.');
+    throw new Error(dataDir + ' is not writable by this user (uid ' + process.getuid() + '; the folder has ' + describeFolder(dataDir) + '). Fix the folder permissions or run the container with `user: "UID:GID"` of the folder owner.');
   }
   const every = process.env.SNAPSHOT_INTERVAL_SEC === undefined ? undefined : Math.max(0, parseFloat(process.env.SNAPSHOT_INTERVAL_SEC)) * 1000;
   const store = new Store(dataDir, { seed: function () { return seed.load(dataDir, undefined, process.env.DEFAULT_SEED); }, snapshotEveryMs: every }).init();

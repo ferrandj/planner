@@ -31,7 +31,8 @@ COPY seed/default.json ./default-seed.json
 RUN mkdir -p /data && chown node:node /data
 VOLUME ["/data"]
 
-USER node
+# The server starts as root only to look at who owns /data, then runs as that user (or as "node", uid 1000, when Docker
+# created the folder as root) BEFORE it listens on the network. So a NAS folder owned by any user just works.
 EXPOSE 8080
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
