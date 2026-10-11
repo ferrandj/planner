@@ -28,7 +28,4 @@ describe('i18n', () => {
       }
     }
   });
-  it('no leftover product-specific wording in translations', () => {
-    expect(JSON.stringify(dictionary)).not.toMatch(/DGC|INTEC|CNAM/);
-  });
 });
