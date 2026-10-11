@@ -74,12 +74,14 @@ export function RemindersDialog(): ReactNode {
   const [note, setNote] = useState('');
   const close = (): void => setUi({ remindOpen: false });
   useEffect(() => { void pushState().then(setState); }, []);
+  const open = ui.remindOpen;
   useEffect(() => {
+    if (!open) return;
     const on = (e: KeyboardEvent): void => { if (e.key === 'Escape') setUi({ remindOpen: false }); };
     document.addEventListener('keydown', on);
     return () => document.removeEventListener('keydown', on);
-  }, [setUi]);
-  if (!ui.remindOpen) return null;
+  }, [open, setUi]);
+  if (!open) return null;
   const api = (p: string, i?: RequestInit): Promise<Response> => sync.api(p, i);
   const p = data.prefs;
 
