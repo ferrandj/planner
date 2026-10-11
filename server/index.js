@@ -6,7 +6,6 @@ const crypto = require('crypto');
 const { Store } = require('./store');
 const seed = require('./seed');
 
-const PUBLIC_DIR = path.join(__dirname, '..', 'public');
 const MAX_STATE_BYTES = 32 * 1024 * 1024;
 const MAX_FILE_BYTES = 25 * 1024 * 1024;
 const INLINE_TYPES = new Set(['image/png', 'image/jpeg', 'image/webp', 'image/gif', 'image/avif']);
@@ -50,6 +49,7 @@ function send(res, status, body, headers) {
 
 function createServer(opts) {
   const store = opts.store;
+  const PUBLIC_DIR = path.resolve(opts.publicDir || process.env.PUBLIC_DIR || path.join(__dirname, '..', 'web', 'dist'));
   const authUser = opts.authUser, authPass = opts.authPassword;
 
   async function api(req, res, url) {
@@ -180,7 +180,7 @@ function main() {
     throw new Error(dataDir + ' is not writable by this user (uid ' + process.getuid() + '). Fix the folder permissions or run the container with `user: "UID:GID"` of the folder owner.');
   }
   const every = process.env.SNAPSHOT_INTERVAL_SEC === undefined ? undefined : Math.max(0, parseFloat(process.env.SNAPSHOT_INTERVAL_SEC)) * 1000;
-  const store = new Store(dataDir, { seed: function () { return seed.load(dataDir); }, snapshotEveryMs: every }).init();
+  const store = new Store(dataDir, { seed: function () { return seed.load(dataDir, undefined, process.env.DEFAULT_SEED); }, snapshotEveryMs: every }).init();
   const server = createServer({ store: store, authUser: process.env.AUTH_USER, authPassword: process.env.AUTH_PASSWORD });
   server.listen(port, '0.0.0.0', function () {
     console.log('[planner] version ' + (process.env.APP_VERSION || 'dev') + ' listening on :' + port + ', data in ' + dataDir + ', revision ' + store.get().rev);

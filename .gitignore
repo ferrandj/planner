@@ -1,5 +1,5 @@
 # Runtime data and anything personal must never be committed.
-data/
+/data/
 /seed*.json
 /private/
 *.seed.json

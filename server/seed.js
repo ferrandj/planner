@@ -2,9 +2,9 @@
 /*
  * Initial content, used ONLY on the very first start when /data has no state.
  *
- * - If <DATA_DIR>/seed.json exists it is used (that is how you load your own
- *   subjects / assignments / sessions without ever committing them to git).
- * - Otherwise a small generic demo is generated, relative to today's date.
+ * 1. <DATA_DIR>/seed.json, if it exists (replace the schedule without rebuilding anything).
+ * 2. The default schedule bundled with the image (DEFAULT_SEED, see seed/default.json).
+ * 3. Otherwise a small generic demo, relative to today's date.
  *
  * seed.json format: { "base": { "s": [], "d": [], "x": [], "e": [] }, "data": { ... optional saved settings ... } }
  *   s = subjects    { id, code, name, short, ab, c (1-4: colour slot) }
@@ -49,15 +49,22 @@ function demo(now) {
   return { base: base, data: { edits: { app: { title: 'Planner' } } } };
 }
 
-function load(dataDir, now) {
-  const file = path.join(dataDir, 'seed.json');
-  if (fs.existsSync(file)) {
-    let s;
-    try { s = JSON.parse(fs.readFileSync(file, 'utf8')); } catch (e) { throw new Error('seed.json is not valid JSON: ' + e.message); }
-    if (!s || !validBase(s.base)) throw new Error('seed.json must contain "base" with arrays s, d, x, e');
-    console.log('[seed] using ' + file);
-    return { base: s.base, data: (s.data && typeof s.data === 'object' && !Array.isArray(s.data)) ? s.data : {} };
-  }
+function readSeed(file) {
+  let s;
+  try { s = JSON.parse(fs.readFileSync(file, 'utf8')); } catch (e) { throw new Error(file + ' is not valid JSON: ' + e.message); }
+  if (!s || !validBase(s.base)) throw new Error(file + ' must contain "base" with arrays s, d, x, e');
+  console.log('[seed] using ' + file);
+  return { base: s.base, data: (s.data && typeof s.data === 'object' && !Array.isArray(s.data)) ? s.data : {} };
+}
+
+/**
+ * Order: <dataDir>/seed.json (your own, wins) -> the default bundled with the image -> generic demo.
+ * An invalid file is an error, never a silent fallback.
+ */
+function load(dataDir, now, defaultSeed) {
+  const own = path.join(dataDir, 'seed.json');
+  if (fs.existsSync(own)) return readSeed(own);
+  if (defaultSeed && fs.existsSync(defaultSeed)) return readSeed(defaultSeed);
   console.log('[seed] no seed.json found, using the generic demo content');
   return demo(now || new Date());
 }
