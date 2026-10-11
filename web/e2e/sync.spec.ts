@@ -67,12 +67,12 @@ test('edits made while offline survive closing the tab and are saved the next ti
   const ctx = await browser.newContext();
   const p1 = await ctx.newPage();
   await open(p1);
-  await ctx.route('**/api/state', (r) => (r.request().method() === 'PUT' ? r.abort() : r.continue()));
+  await ctx.setOffline(true);                                                      // no network at all, including the "last gasp" save when a tab closes
   await p1.getByRole('tab', { name: 'Devoirs' }).click();
   await p1.locator('article').first().getByRole('button', { name: /à rendre/ }).first().click();
   await expect(p1.locator('#syncstat')).toHaveClass(/offline/, { timeout: 10_000 });
   await p1.close();                                                                // tab closed, edit never reached the server
-  await ctx.unroute('**/api/state');
+  await ctx.setOffline(false);
   expect(Object.keys((await getState(request)).data.rendu ?? {})).toHaveLength(0);
   const p2 = await ctx.newPage();
   await open(p2);
