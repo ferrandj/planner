@@ -177,7 +177,7 @@ export function SimBar(): ReactNode {
 
 export function Tabs(): ReactNode {
   const { ui, setUi, t } = useApp();
-  const tabs: Array<[Tab, string]> = [['planning', t('Planning')], ['devoirs', t('Devoirs')], ['print', t('Imprimer')]];
+  const tabs: Array<[Tab, string]> = [['planning', t('Planning')], ['devoirs', t('Devoirs')], ['success', '🏆 ' + t('Succès')], ['print', t('Imprimer')]];
   return (
     <div className="tabs noprint" role="tablist">
       {tabs.map(([v, label]) => <button key={v} role="tab" aria-selected={ui.tab === v} onClick={() => setUi({ tab: v })}>{label}</button>)}

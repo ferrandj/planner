@@ -162,3 +162,34 @@ test("today's agenda is on the first screen", async ({ page }) => {
   await open(page);
   await expect(page.getByRole('region', { name: 'Programme du jour' })).toBeVisible();
 });
+
+test('achievements: ticking a session unlocks medals that stay (even unticked), survive a reload and become stickers', async ({ page, request }) => {
+  await open(page);
+  await page.getByRole('button', { name: 'Tout', exact: true }).click();
+  await page.locator('li.row input.chk').first().click();
+  await expect(page.getByText(/Succès débloqué !/).first()).toBeVisible();
+  await waitSaved(page);
+  let st = await getState(request);
+  const unlocked = Object.keys(st.data.ach);
+  expect(unlocked).toEqual(expect.arrayContaining(['all|1']));
+  expect(Object.keys(st.data.doneAt)).toHaveLength(1);
+
+  await page.locator('li.row input.chk:checked').first().click();           // untick: nothing is taken away
+  await waitSaved(page);
+  st = await getState(request);
+  expect(Object.keys(st.data.done)).toHaveLength(0);
+  expect(Object.keys(st.data.ach)).toEqual(expect.arrayContaining(unlocked));
+
+  await page.reload();
+  await waitSaved(page);
+  await page.getByRole('tab', { name: /Succès/ }).click();
+  await expect(page.getByRole('progressbar', { name: 'Succès débloqués' })).toHaveAttribute('aria-valuenow', String(unlocked.length));
+  await expect(page.getByRole('button', { name: /Première séance suivie — débloqué/ })).toBeVisible();
+
+  await page.getByRole('tab', { name: 'Imprimer' }).click();
+  await page.getByRole('button', { name: 'Stickers et emojis' }).click();
+  await page.getByRole('button', { name: /^Ajouter : Première séance suivie/ }).click();
+  await waitSaved(page);
+  st = await getState(request);
+  expect(Object.values(st.data.stickers).flat().map((s: any) => s.t)).toContain('ach:all|1');
+});

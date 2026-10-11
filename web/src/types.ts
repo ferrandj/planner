@@ -55,6 +55,10 @@ export interface Data {
   edits: Edits;
   hidden: Record<string, boolean>;
   done: Record<string, boolean>;
+  /** day (YYYY-MM-DD) on which each ticked session was ticked (for streaks and "caught up" achievements) */
+  doneAt: Record<string, string>;
+  /** unlocked achievements: id -> day it was unlocked. Only ever grows. */
+  ach: Record<string, string>;
   rendu: Record<string, boolean>;
   custom: CustomEvt[];
   prefs: Prefs;

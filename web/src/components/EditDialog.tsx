@@ -1,6 +1,7 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import { clearColor, resetEdit, setEdit } from '../lib/edits';
 import { splitKey, removeItem } from '../lib/items';
+import { clearDone } from '../lib/done';
 import { useApp } from '../state/app';
 import { ColorPicker } from './ColorPicker';
 import { EdInput } from './EdInput';
@@ -37,7 +38,7 @@ export function EditDialog(): ReactNode {
 
   const remove = (): void => {
     if (kind === 's' && !window.confirm(t('Supprimer cette matière ? Ses séances disparaissent aussi du planning, tu pourras la restaurer dans le mode édition.'))) return;
-    if (kind === 'c') update((d) => { d.custom = d.custom.filter((c) => c.id !== id); delete d.done[id]; });
+    if (kind === 'c') update((d) => { d.custom = d.custom.filter((c) => c.id !== id); clearDone(d, id); });
     else update((d) => removeItem(d, key));
     close();
   };

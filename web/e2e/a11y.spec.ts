@@ -8,7 +8,7 @@ test.beforeEach(async ({ request }) => { await resetData(request); });
 const scan = (page: import('@playwright/test').Page): Promise<import('axe-core').Result[]> =>
   new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa']).disableRules(['color-contrast']).analyze().then((r) => r.violations);
 
-for (const [label, name] of [['planning', 'Planning'], ['devoirs', 'Devoirs'], ['print', 'Imprimer'], ['edit', /Édition/]] as const) {
+for (const [label, name] of [['planning', 'Planning'], ['devoirs', 'Devoirs'], ['success', /Succès/], ['print', 'Imprimer'], ['edit', /Édition/]] as const) {
   test(`no accessibility violations on the ${label} tab`, async ({ page }) => {
     await open(page);
     await page.getByRole(label === 'edit' ? 'button' : 'tab', { name }).click();

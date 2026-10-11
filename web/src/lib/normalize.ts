@@ -25,6 +25,8 @@ export function normalizeData(raw: unknown, viewport: { w: number; h: number } =
   x.extra = { s: Array.isArray(ex.s) ? ex.s : [], d: Array.isArray(ex.d) ? ex.d : [], x: Array.isArray(ex.x) ? ex.x : [], e: Array.isArray(ex.e) ? ex.e : [] };
   x.deleted = d.deleted || {};
   x.notes = d.notes || {}; x.edits = d.edits || {}; x.hidden = d.hidden || {};
+  const days = (v: unknown): Record<string, string> => Object.fromEntries(Object.entries(v && typeof v === 'object' ? (v as Record<string, unknown>) : {}).filter(([, y]) => typeof y === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(y))) as Record<string, string>;
+  x.doneAt = days(d.doneAt); x.ach = days(d.ach);
   x.done = d.done || {}; x.rendu = d.rendu || {}; x.custom = Array.isArray(d.custom) ? d.custom : [];
   const P = (d.prefs = d.prefs || ({} as Data['prefs']));
   const old: Record<string, string> = { bleu: '#3B7BE8', rose: '#E0407A', orange: '#E8782A' };

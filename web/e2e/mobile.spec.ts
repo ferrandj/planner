@@ -7,8 +7,8 @@ test('phone layout: no sideways scrolling on any tab, calendar/list switch works
   const w = watch(page);
   await open(page);
   const overflow = (): Promise<number> => page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
-  for (const name of ['Planning', 'Devoirs', 'Imprimer', /Édition/]) {
-    await page.getByRole(name instanceof RegExp ? 'button' : 'tab', { name }).click();
+  for (const name of ['Planning', 'Devoirs', /Succès/, 'Imprimer', /Édition/]) {
+    await page.getByRole(String(name).includes('Édition') ? 'button' : 'tab', { name }).click();
     expect(await overflow(), `tab ${String(name)}`).toBeLessThanOrEqual(1);
   }
   await page.getByRole('tab', { name: 'Planning' }).click();

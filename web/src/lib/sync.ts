@@ -118,8 +118,8 @@ export class SyncClient {
 
   /** Call after every change to the data. */
   changed(): void {
+    this.dirty = true;              // even before attach(): a change made while the app is still starting up is sent as soon as it is attached
     if (!this.attached) return;
-    this.dirty = true;
     const ok = this.writeCache();
     this.setStatus(ok ? 'pending' : 'cachefull');
     this.schedule(this.debounceMs);

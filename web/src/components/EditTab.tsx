@@ -11,6 +11,7 @@ import { mergeImport } from '../lib/normalize';
 import { useApp } from '../state/app';
 import { ColorPicker } from './ColorPicker';
 import { NoteBtn } from './common';
+import { clearDone } from '../lib/done';
 import { Row } from './Row';
 import { EdInput } from './EdInput';
 
@@ -251,7 +252,7 @@ export function EditTab(): ReactNode {
                 <EdInput k={k} f="date" label="Date" type="date" val={c.date} />
                 <EdInput k={k} f="time" label="Début (facultatif)" type="time" val={c.time || ''} />
                 <EdInput k={k} f="tend" label="Fin (facultatif)" type="time" val={c.tend || ''} />
-                <button type="button" className="btn ghost" onClick={() => update((d) => { d.custom = d.custom.filter((x) => x.id !== c.id); delete d.done[c.id]; })}>{t('Supprimer')}</button>
+                <button type="button" className="btn ghost" onClick={() => update((d) => { d.custom = d.custom.filter((x) => x.id !== c.id); clearDone(d, c.id); })}>{t('Supprimer')}</button>
               </Card>
             );
           }) : <p className="hint">{t("Aucune séance perso. Ajoute-en depuis l'onglet Planning.")}</p>}

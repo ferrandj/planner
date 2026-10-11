@@ -1,9 +1,10 @@
 import { useEffect, type ReactNode } from 'react';
 import { useApp } from '../state/app';
+import { setDone } from '../lib/done';
 
 /** Right-click (or long-press) menu on a tile. */
 export function ContextMenu(): ReactNode {
-  const { ui, setUi, data, update, t } = useApp();
+  const { ui, setUi, data, update, realToday, t } = useApp();
   const m = ui.menu;
   useEffect(() => {
     if (!m) return;
@@ -22,7 +23,7 @@ export function ContextMenu(): ReactNode {
     <div className="ctx" role="menu" style={{ left, top }} onContextMenu={(e) => e.preventDefault()}>
       {m.key && <button role="menuitem" type="button" onClick={() => setUi({ editing: m.key, menu: null })}>✎ {t('Éditer')}</button>}
       {m.doneId && (
-        <button role="menuitem" type="button" onClick={() => { const id = m.doneId as string; update((d) => { if (d.done[id]) delete d.done[id]; else d.done[id] = true; }); setUi({ menu: null }); }}>
+        <button role="menuitem" type="button" onClick={() => { const id = m.doneId as string; update((d) => { setDone(d, id, !d.done[id], realToday); }); setUi({ menu: null }); }}>
           {done ? '☐ ' + t('Marquer comme non fait') : '☑ ' + t('Marquer comme fait')}
         </button>
       )}
