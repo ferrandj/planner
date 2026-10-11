@@ -81,6 +81,22 @@ data/
   subject (N is the number next to the switch, 3 by default). The plan is recomputed on every change (a class you tick,
   a class you miss, a new session…) and is never stored: it only moves tiles around on screen, ticking a catch-up tile
   ticks the real class, and switching it off gives you your planner back exactly as it was.
+  A catch-up tile starts at 09:30 (morning) or 14:00 (afternoon/evening), so within a day the morning one is listed
+  first. The afternoon and the evening are **one** period: a class in the evening also takes the afternoon.
+- **Calendar**: clicking a day opens a popup with everything planned that day (tick, edit, notes from there too).
+
+### Install it as an app (Android, desktop Chrome/Edge)
+
+The planner is an installable web app named **Planner** with a calendar icon: it opens in its own window, without the
+browser bars, and still opens when the server cannot be reached (your changes are then kept on the device and sent
+when it is back).
+
+Browsers only offer a real install on a **secure address (HTTPS)**. On Synology: Control Panel → Login Portal →
+Advanced → Reverse Proxy, create a rule from `https://planner.your-domain` to `http://localhost:10457` (with a
+certificate from Control Panel → Security → Certificate). Then open that address in Chrome on the phone and use
+the **📲 Installer l'application** button in the planner (or Chrome menu → *Install app*). Over plain `http://` on
+the local network Chrome only offers a shortcut, not an app.
+
 
 ## The schedule you start with
 

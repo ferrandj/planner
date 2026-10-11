@@ -83,6 +83,7 @@ export interface Evt {
   devoir?: Devoir;
   /** catch-up tile: id of the late session it stands for, and the day that session was originally on */
   planOf?: string;
+  part?: 'am' | 'pm';
   from?: string;
 }
 

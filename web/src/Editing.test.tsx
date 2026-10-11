@@ -140,3 +140,49 @@ describe('adding and removing', () => {
     expect(dialog()).toBeInTheDocument();
   });
 });
+
+describe('calendar day popup', () => {
+  it('clicking a day opens a popup with what is planned that day; it closes with Fermer, Échap or a click outside', async () => {
+    await mountApp();
+    const u = user();
+    await u.click(screen.getByRole('button', { name: 'Mois' }));
+    await u.click(screen.getByRole('button', { name: /^lundi 12 octobre 2026, \d+ élément/ }));
+    const d = dialog();
+    expect(within(d).getByText(/Live du soir/)).toBeInTheDocument();
+    await u.click(within(d).getByRole('button', { name: 'Fermer' }));
+    expect(screen.queryByRole('dialog')).toBeNull();
+    await u.click(screen.getByRole('button', { name: /^mercredi 14 octobre 2026, / }));
+    expect(within(dialog()).getByText(/Webconférence · Révisions/)).toBeInTheDocument();
+    await u.keyboard('{Escape}');
+    expect(screen.queryByRole('dialog')).toBeNull();
+    await u.click(screen.getByRole('button', { name: /^mardi 13 octobre 2026, / }));
+    expect(within(dialog()).getByText('Rien de prévu ce jour-là.')).toBeInTheDocument();
+    await u.click(dialog());                                                    // the dark area around the popup
+    expect(screen.queryByRole('dialog')).toBeNull();
+  });
+  it('a tile can be edited from the popup, and Échap closes only the edit dialog first', async () => {
+    await mountApp();
+    const u = user();
+    await u.click(screen.getByRole('button', { name: 'Mois' }));
+    await u.click(screen.getByRole('button', { name: /^mercredi 14 octobre 2026, / }));
+    await u.click(within(dialog()).getAllByRole('button', { name: /^Éditer/ })[0]);
+    expect(screen.getAllByRole('dialog')).toHaveLength(2);
+    await u.keyboard('{Escape}');
+    expect(screen.getAllByRole('dialog')).toHaveLength(1);
+  });
+});
+
+describe('install as an app', () => {
+  it('offers "Installer l\'application" only when the browser says the app can be installed, and asks the browser to do it', async () => {
+    await mountApp();
+    expect(screen.queryByRole('button', { name: /Installer/ })).toBeNull();
+    const prompt = vi.fn().mockResolvedValue(undefined);
+    const ev = Object.assign(new Event('beforeinstallprompt', { cancelable: true }), { prompt });
+    fireEvent(window, ev);
+    const btn = await screen.findByRole('button', { name: /Installer l'application/ });
+    expect(ev.defaultPrevented).toBe(true);
+    await user().click(btn);
+    expect(prompt).toHaveBeenCalledTimes(1);
+    await vi.waitFor(() => expect(screen.queryByRole('button', { name: /Installer/ })).toBeNull());
+  });
+});

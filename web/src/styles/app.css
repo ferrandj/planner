@@ -212,6 +212,8 @@ label.mod{color:var(--accent)}
 .mdev+.mdev{border-top:1px solid var(--line);padding-top:18px}
 .modal .btn{font-size:1.1rem;padding:14px}
 .modal.wide{max-width:760px}
+.daybody{max-height:min(70vh,640px);overflow-y:auto}
+.daybody .opt{position:sticky;bottom:0;background:var(--surface);padding-top:8px}
 .egrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(48px,1fr));gap:4px}
 .ebtn{background:#fff;border:1px solid var(--line);border-radius:10px;font-size:1.7rem;line-height:1;padding:6px 0;font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif}
 .ebtn:hover,.ebtn:focus-visible{border-color:var(--accent);outline:2px solid var(--accent)}

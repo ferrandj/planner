@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { Evt } from '../types';
+import { byDate } from './model';
 import { EMPTY_PLAN, partsOfTime, planCatchUp, planTiles } from './catchup';
 
 const TODAY = '2026-10-12'; // a Monday
@@ -109,6 +110,25 @@ describe('catch-up planner', () => {
   it('builds tiles that point back to the late session', () => {
     const events = [ev('c1', 'c', '2026-10-01', 'live'), END];
     const tiles = planTiles(events, run(events));
-    expect(tiles).toEqual([expect.objectContaining({ id: 'plan:c1', planOf: 'c1', date: TODAY, kind: 'live', subject: 'c', from: '2026-10-01', time: 'Matin' })]);
+    expect(tiles).toEqual([expect.objectContaining({ id: 'plan:c1', planOf: 'c1', date: TODAY, kind: 'live', subject: 'c', from: '2026-10-01', time: '09:30', part: 'am' })]);
+  });
+});
+
+describe('catch-up tiles in the day', () => {
+  it('start at 09:30 (morning) and 14:00 (afternoon), so the morning one is listed first, then the afternoon one, then the evening live', () => {
+    const late = [ev('c1', 'c', '2026-10-01'), ev('c2', 'c', '2026-10-02')];
+    const live = ev('live', 'd', TODAY, 'live', '18:30 – 21:30');          // evening live: takes the afternoon/evening period of that day
+    const events = [...late, live, END];
+    const tiles = planTiles(events, run(events));
+    expect(tiles.map((x) => [x.date, x.time, x.part])).toEqual([[TODAY, '09:30', 'am'], ['2026-10-13', '09:30', 'am']]);
+    const day = [live, ...planTiles([...late, END], run([...late, END]))].filter((e) => e.date === TODAY).sort(byDate);
+    expect(day.map((e) => e.time)).toEqual(['09:30', '14:00', '18:30 – 21:30']);
+  });
+  it('the afternoon and the evening are one single period', () => {
+    const events = [ev('c1', 'c', '2026-10-01'), ev('c2', 'c', '2026-10-02'), ev('c3', 'c', '2026-10-03'),
+      ev('aft', 'd', TODAY, 'webconf', '13:30'), ev('eve', 'e', '2026-10-13', 'live', '18:30 – 21:30'), END];
+    const p = run(events);
+    expect(p.placed.some((x) => x.date === TODAY && x.part === 'pm')).toBe(false);
+    expect(p.placed.some((x) => x.date === '2026-10-13' && x.part === 'pm')).toBe(false);
   });
 });

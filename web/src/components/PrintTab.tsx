@@ -26,7 +26,7 @@ function Pline({ e }: { e: Evt }): ReactNode {
   }
   if (e.kind === 'exam') return <div className="pl ex"><b>{t('EXAMEN')}</b> {t(e.title || '')}</div>;
   if (e.kind === 'dispo') return <div className="pl av">{t('Sujet dispo : ') + t(e.title || '')}</div>;
-  return <div className="pl"><i className="pb">{isDone(e, data) ? '✓' : ''}</i><b>{sb ? sb.ab : ''}</b> {e.planOf ? '↻ ' : ''}{evTitle(e, t)}{e.time ? ' ' + (e.planOf ? t(e.time) : e.time) : ''}</div>;
+  return <div className="pl"><i className="pb">{isDone(e, data) ? '✓' : ''}</i><b>{sb ? sb.ab : ''}</b> {e.planOf ? '↻ ' : ''}{evTitle(e, t)}{e.time ? ' ' + e.time : ''}</div>;
 }
 
 function StickersLayer({ month, edit }: { month: string; edit: boolean }): ReactNode {
