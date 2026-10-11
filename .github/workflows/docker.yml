@@ -1,15 +1,28 @@
-name: Test, build and publish image
+name: Test, release and publish image
+
+# Every push to the default branch that passes the tests becomes a new GitHub Release
+# (v1.0.0, v1.0.1, ...) and a new multi-arch image on ghcr.io with matching tags.
+# Other branches and pull requests are test + build only (nothing is published).
+#
+# Version bump: patch by default. Put [minor] or [major] in the first line of the commit
+# message, or run this workflow manually and choose the bump.
 
 on:
   push:
     branches: ['**']
-    tags: ['v*']
   pull_request:
   workflow_dispatch:
+    inputs:
+      bump:
+        description: Version bump for the new release
+        type: choice
+        options: [patch, minor, major]
+        default: patch
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  # Never cancel a release in progress on the default branch (queued runs keep versions in order).
+  cancel-in-progress: ${{ github.ref != format('refs/heads/{0}', github.event.repository.default_branch) }}
 
 permissions:
   contents: read
@@ -28,16 +41,51 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      packages: write
+      contents: write   # create the tag and release
+      packages: write   # push to ghcr.io
     env:
-      # Publish only from the default branch and from version tags. Everything else is build-only.
-      PUBLISH: ${{ github.event_name != 'pull_request' && (github.ref == format('refs/heads/{0}', github.event.repository.default_branch) || startsWith(github.ref, 'refs/tags/v')) }}
+      PUBLISH: ${{ github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
     steps:
       - uses: actions/checkout@v7
 
       - name: Image name (must be lowercase)
         run: echo "IMAGE=ghcr.io/${GITHUB_REPOSITORY,,}" >> "$GITHUB_ENV"
+
+      - name: Work out the version
+        id: ver
+        env:
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+          INPUT_BUMP: ${{ inputs.bump }}
+        run: |
+          if [ "$PUBLISH" != "true" ]; then
+            echo "version=dev" >> "$GITHUB_OUTPUT"; echo "major=0" >> "$GITHUB_OUTPUT"; echo "minor=0" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git fetch --tags --force --quiet origin
+          existing=$(git tag --points-at "$GITHUB_SHA" --list 'v[0-9]*.[0-9]*.[0-9]*' | head -n1)
+          if [ -n "$existing" ]; then
+            v="${existing#v}"   # re-run of a commit that was already released: keep its version
+          else
+            last=$(git tag --list 'v[0-9]*.[0-9]*.[0-9]*' --sort=-v:refname | head -n1)
+            title="${COMMIT_MSG%%$'\n'*}"
+            bump=patch
+            case "$title" in *'[major]'*) bump=major;; *'[minor]'*) bump=minor;; esac
+            if [ -n "$INPUT_BUMP" ]; then bump="$INPUT_BUMP"; fi
+            if [ -z "$last" ]; then
+              v=1.0.0
+            else
+              IFS=. read -r ma mi pa <<< "${last#v}"
+              case "$bump" in
+                major) ma=$((ma+1)); mi=0; pa=0;;
+                minor) mi=$((mi+1)); pa=0;;
+                *) pa=$((pa+1));;
+              esac
+              v="$ma.$mi.$pa"
+            fi
+          fi
+          IFS=. read -r ma mi pa <<< "$v"
+          echo "version=$v" >> "$GITHUB_OUTPUT"; echo "major=$ma" >> "$GITHUB_OUTPUT"; echo "minor=$mi" >> "$GITHUB_OUTPUT"
+          echo "Releasing v$v"
 
       - uses: docker/setup-qemu-action@v4
       - uses: docker/setup-buildx-action@v4
@@ -56,14 +104,16 @@ jobs:
         with:
           images: ${{ env.IMAGE }}
           tags: |
-            type=raw,value=latest,enable={{is_default_branch}}
-            type=ref,event=branch
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
+            type=raw,value=latest,enable=${{ env.PUBLISH == 'true' }}
+            type=raw,value=${{ steps.ver.outputs.version }},enable=${{ env.PUBLISH == 'true' }}
+            type=raw,value=${{ steps.ver.outputs.major }}.${{ steps.ver.outputs.minor }},enable=${{ env.PUBLISH == 'true' }}
+            type=raw,value=${{ steps.ver.outputs.major }},enable=${{ env.PUBLISH == 'true' }}
             type=sha,format=short
+            type=ref,event=pr
           labels: |
             org.opencontainers.image.title=Planner
             org.opencontainers.image.description=Self-hosted study planner
+            org.opencontainers.image.version=${{ steps.ver.outputs.version }}
 
       - name: Build (and push when publishing)
         uses: docker/build-push-action@v6
@@ -73,8 +123,35 @@ jobs:
           push: ${{ env.PUBLISH == 'true' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          build-args: APP_VERSION=${{ steps.ver.outputs.version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
           # Plain manifests keep NAS container UIs happy (no extra attestation entries).
           provenance: false
           sbom: false
+
+      # Only after the image is safely pushed, so a release never points at a missing image.
+      - name: Create the GitHub release
+        if: env.PUBLISH == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.ver.outputs.version }}
+        run: |
+          tag="v$VERSION"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo "Release $tag already exists"
+            exit 0
+          fi
+          {
+            echo '## Docker image'
+            echo
+            echo '```sh'
+            echo "docker pull $IMAGE:$VERSION"
+            echo '```'
+            echo
+            echo "Tags: \`$VERSION\`, \`${{ steps.ver.outputs.major }}.${{ steps.ver.outputs.minor }}\`, \`${{ steps.ver.outputs.major }}\`, \`latest\` (linux/amd64, linux/arm64)."
+            echo
+            echo "Your data lives in the mounted \`/data\` folder and is never touched by an update."
+            echo
+          } > release-header.md
+          gh release create "$tag" --target "$GITHUB_SHA" --title "$tag" --notes-file release-header.md --generate-notes --latest

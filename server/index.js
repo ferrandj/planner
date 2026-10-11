@@ -183,7 +183,7 @@ function main() {
   const store = new Store(dataDir, { seed: function () { return seed.load(dataDir); }, snapshotEveryMs: every }).init();
   const server = createServer({ store: store, authUser: process.env.AUTH_USER, authPassword: process.env.AUTH_PASSWORD });
   server.listen(port, '0.0.0.0', function () {
-    console.log('[planner] listening on :' + port + ', data in ' + dataDir + ', revision ' + store.get().rev);
+    console.log('[planner] version ' + (process.env.APP_VERSION || 'dev') + ' listening on :' + port + ', data in ' + dataDir + ', revision ' + store.get().rev);
   });
   const stop = function () { server.close(function () { process.exit(0); }); setTimeout(function () { process.exit(0); }, 3000).unref(); };
   process.on('SIGTERM', stop);
