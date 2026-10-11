@@ -25,3 +25,8 @@ sync.load().then(
   (boot) => root.render(<StrictMode><AppProvider boot={boot} sync={sync}><App /></AppProvider></StrictMode>),
   () => root.render(<Fatal />)
 );
+
+// Makes the app installable on Android (and desktop Chrome) and able to open without the server. Needs HTTPS (or localhost).
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
+  window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js').catch(() => undefined); });
+}

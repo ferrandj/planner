@@ -1,4 +1,4 @@
-import type { CSSProperties, FormEvent, ReactNode } from 'react';
+import { useEffect, useRef, type CSSProperties, type FormEvent, type ReactNode } from 'react';
 import type { Evt } from '../types';
 import { pad, parse, wdList } from '../lib/dates';
 import { eventsOn, inScope, isDone, isLate, subjectOf, visible } from '../lib/model';
@@ -56,6 +56,31 @@ function cellLine(e: Evt, ctx: ReturnType<typeof useApp>): ReactNode {
   return <span key={e.id} className={'cl' + (s2 ? ' s' + s2.c : '') + (isDone(e, data) ? ' dn' : '') + (e.planOf ? ' pl' : '')}>{(e.planOf ? '↻ ' : '') + (s2 ? s2.ab + ' · ' : '') + lab}</span>;
 }
 
+/** What is planned on the clicked day, in a popup. */
+function DayDialog({ day, evs }: { day: string; evs: Evt[] }): ReactNode {
+  const { ui, setUi, fmt, t } = useApp();
+  const nested = useRef(false);
+  nested.current = !!(ui.editing || ui.menu || ui.noteFor);   // a dialog opened from here handles Escape itself
+  const close = (): void => setUi({ sel: null });
+  useEffect(() => {
+    const on = (e: KeyboardEvent): void => { if (e.key === 'Escape' && !nested.current) setUi({ sel: null }); };
+    document.addEventListener('keydown', on);
+    return () => document.removeEventListener('keydown', on);
+  }, [setUi]);
+  useEffect(() => { document.getElementById('day-close')?.focus(); }, []);
+  return (
+    <div className="ov" role="dialog" aria-modal="true" aria-labelledby="day-t" onClick={(e) => { if (e.target === e.currentTarget) close(); }}>
+      <div className="modal wide">
+        <div className="mtop acc"><div className="eyebrow">{t('Au programme')}</div><div className="big sm" id="day-t" style={{ textTransform: 'capitalize' }}>{fmt.long.format(parse(day))}</div></div>
+        <div className="mbody daybody">
+          {evs.length ? <ul className="list">{evs.map((e) => <Row key={e.id} e={e} />)}</ul> : <div className="empty">{t('Rien de prévu ce jour-là.')}</div>}
+          <div className="opt"><span className="spacer" /><button type="button" className="btn" id="day-close" onClick={close}>{t('Fermer')}</button></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function MonthView({ evs }: { evs: Evt[] }): ReactNode {
   const ctx = useApp();
   const { ui, setUi, model, today, t, tf, fmt } = ctx;
@@ -104,12 +129,7 @@ function MonthView({ evs }: { evs: Evt[] }): ReactNode {
         {model.subjects.map((s) => <span key={s.id}><i className="dot" style={{ ['--c' as string]: `var(--s${s.c})` } as CSSProperties} />{s.short}</span>)}
         <span><i className="dot sq" />{t('Devoir')}</span><span><i className="dot ex" />{t('Examen')}</span>
       </div>
-      {ui.sel && (
-        <section className="group">
-          <h2 style={{ textTransform: 'capitalize' }}>{fmt.long.format(parse(ui.sel))}</h2>
-          {selEvs.length ? <ul className="list">{selEvs.map((e) => <Row key={e.id} e={e} />)}</ul> : <div className="empty">{t('Rien de prévu ce jour-là.')}</div>}
-        </section>
-      )}
+      {ui.sel && <DayDialog day={ui.sel} evs={selEvs} />}
     </>
   );
 }

@@ -30,6 +30,8 @@ export const EMPTY_PLAN: Plan = { placed: [], unplaced: [], byId: {} };
 
 const NOON = 12 * 60;
 const MAX_DAYS = 400;
+/** Where a catch-up tile starts: 09:30 in the morning, 14:00 in the afternoon (so the morning one always comes first in a day). */
+export const START: Record<Part, string> = { am: '09:30', pm: '14:00' };
 /** Today's morning is still usable before noon, today's afternoon/evening until 17:00. */
 const AM_LAST = NOON;
 const PM_LAST = 17 * 60;
@@ -157,7 +159,7 @@ export function planTiles(events: Evt[], plan: Plan): Evt[] {
     const o = orig.get(p.id);
     if (!o) return [];
     return [{
-      id: 'plan:' + o.id, kind: o.kind, date: p.date, time: p.part === 'am' ? 'Matin' : 'Après-midi · soir', tag: o.tag,
+      id: 'plan:' + o.id, kind: o.kind, date: p.date, time: p.part === 'am' ? START.am : START.pm, part: p.part, tag: o.tag,
       subject: o.subject, check: true, planOf: o.id, from: o.date
     } as Evt];
   });

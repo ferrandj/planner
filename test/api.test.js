@@ -113,3 +113,25 @@ test('optional basic auth protects everything except /healthz', async () => {
     assert.strictEqual(bad.status, 401);
   } finally { server.close(); }
 });
+
+test('the app manifest and service worker are served with the right types and are never cached by the browser', async () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'planner-pwa-'));
+  fs.writeFileSync(path.join(dir, 'index.html'), '<!doctype html><title>t</title>');
+  fs.writeFileSync(path.join(dir, 'manifest.webmanifest'), '{"name":"Planner"}');
+  fs.writeFileSync(path.join(dir, 'sw.js'), 'self.addEventListener("fetch",()=>{})');
+  fs.writeFileSync(path.join(dir, 'icon-192.png'), Buffer.from([0x89, 0x50, 0x4e, 0x47]));
+  const store = new Store(fs.mkdtempSync(path.join(os.tmpdir(), 'planner-api-')), { seed: () => seed.demo(new Date()) }).init();
+  const server = createServer({ store, publicDir: dir });
+  await new Promise((r) => server.listen(0, '127.0.0.1', r));
+  const url = 'http://127.0.0.1:' + server.address().port;
+  try {
+    let r = await fetch(url + '/manifest.webmanifest');
+    assert.strictEqual(r.status, 200);
+    assert.match(r.headers.get('content-type'), /^application\/manifest\+json/);
+    r = await fetch(url + '/sw.js');
+    assert.match(r.headers.get('content-type'), /^text\/javascript/);
+    assert.strictEqual(r.headers.get('cache-control'), 'no-cache');          // a new release's worker is picked up at once
+    r = await fetch(url + '/icon-192.png');
+    assert.strictEqual(r.headers.get('content-type'), 'image/png');
+  } finally { server.close(); }
+});

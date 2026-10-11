@@ -96,3 +96,24 @@ test('add a subject and an assignment: kept after a reload; removed ones can be 
   await page.getByRole('button', { name: /Édition/ }).click();
   await expect(page.getByText('Dossier final').first()).toBeVisible();
 });
+
+test('installable app: manifest and icons are served, the service worker takes over, and the app still opens with the server unreachable', async ({ page, context, request }) => {
+  const w = watch(page);
+  await open(page);
+  const m = await (await request.get('/manifest.webmanifest')).json();
+  expect(m.name).toBe('Planner');
+  for (const i of m.icons) expect((await request.get('/' + i.src)).ok(), i.src).toBeTruthy();
+  await expect(page.locator('link[rel="manifest"]')).toHaveCount(1);
+
+  await page.evaluate(async () => { await navigator.serviceWorker.ready; });
+  await page.reload();                                                    // now controlled by the worker, and the page is stored
+  await waitSaved(page);
+  expect(await page.evaluate(() => !!navigator.serviceWorker.controller)).toBe(true);
+
+  await context.setOffline(true);
+  await page.reload();
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();   // the app opens from the stored copy ...
+  await expect(page.locator('#syncstat')).toHaveClass(/offline|pending/, { timeout: 15_000 });   // ... and says it cannot reach the server
+  await context.setOffline(false);
+  expect(w.errors.filter((e) => !/Failed to load resource|net::ERR|fetch/i.test(e))).toEqual([]);
+});

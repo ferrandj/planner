@@ -27,7 +27,7 @@ export function Row({ e }: { e: Evt }): ReactNode {
     else if (dd === 0) tags.push(<span key="st" className="st now">{t("Aujourd'hui")}</span>);
     if (e.planOf) tags.push(<span key="pl" className="st plan">↻ {t('Rattrapage')}</span>);
     title = evTitle(e, t);
-    meta = (e.time ? (e.planOf ? t(e.time) : e.time) + ' · ' : '') + rel(dd, t, tf);
+    meta = (e.time ? e.time + (e.part ? ' (' + partLabel(e.part, t) + ')' : '') + ' · ' : '') + rel(dd, t, tf);
     if (e.planOf && e.from) meta += ' · ' + tf('initialement le {d}', { d: fmt.long.format(parse(e.from)) });
     if (moved && !done) extra = <div className="replanned">↻ {tf('Replanifié : {d} · {p}', { d: fmt.long.format(parse(moved.date)), p: partLabel(moved.part, t) })}</div>;
     const box = (

@@ -7,6 +7,10 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { HDR, getState, open, resetData, waitSaved } from './helpers';
 
+// These tests simulate an unreachable server with the browser's offline switch, which does not apply to pages controlled by a
+// service worker (the worker has its own test in features.spec.ts), so the worker is kept out of the way here.
+test.use({ serviceWorkers: 'block' });
+
 const here = dirname(fileURLToPath(import.meta.url));
 
 /** Plain HTTP GET (Node's fetch can be redirected by proxy settings in some environments). */

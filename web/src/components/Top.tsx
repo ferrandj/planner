@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { diff, iso, parse, rel } from '../lib/dates';
 import { LANGN } from '../lib/i18n';
 import { appEyebrow, appTitle, dueSoon, lateSessions, lateDevoirs, nextDevoir, renduTotals } from '../lib/model';
@@ -102,6 +102,23 @@ export function LateBar(): ReactNode {
   );
 }
 
+interface InstallEvent extends Event { prompt: () => Promise<void> }
+
+/** "Install the app" button, shown only when the browser says the app can be installed (Android Chrome, desktop Chrome/Edge over HTTPS). */
+function InstallChip(): ReactNode {
+  const { t } = useApp();
+  const [ev, setEv] = useState<InstallEvent | null>(null);
+  useEffect(() => {
+    const on = (e: Event): void => { e.preventDefault(); setEv(e as InstallEvent); };
+    const done = (): void => setEv(null);
+    window.addEventListener('beforeinstallprompt', on);
+    window.addEventListener('appinstalled', done);
+    return () => { window.removeEventListener('beforeinstallprompt', on); window.removeEventListener('appinstalled', done); };
+  }, []);
+  if (!ev) return null;
+  return <button type="button" className="fchip" onClick={() => { void ev.prompt().finally(() => setEv(null)); }}>📲 {t("Installer l'application")}</button>;
+}
+
 function ThemeBar(): ReactNode {
   const { data, update, ui, setUi, t } = useApp();
   const modes: Array<[Mode, string]> = [['auto', t('Auto')], ['light', t('Clair')], ['dark', t('Sombre')]];
@@ -110,6 +127,7 @@ function ThemeBar(): ReactNode {
       <div className="chips">
         <button type="button" className="fchip" aria-pressed={ui.themePick} onClick={() => setUi({ themePick: !ui.themePick })}><i className="sd" style={{ background: data.prefs.custom }} />{t('Couleur')}</button>
         <button type="button" className="fchip" aria-pressed={ui.deco} onClick={() => setUi({ deco: !ui.deco, ...(ui.deco ? { bsel: null, bgColor: false } : {}) })}>🎀 {t('Décorer')}</button>
+        <InstallChip />
       </div>
       <Seg value={data.prefs.mode} options={modes} onChange={(m) => update((d) => { d.prefs.mode = m; })} />
       <div className="langs" role="group" aria-label={t('Langue')}>
