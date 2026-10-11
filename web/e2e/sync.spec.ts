@@ -50,6 +50,7 @@ test('a change made on one device shows up on another without reloading', async 
   expect(r.ok()).toBeTruthy();
   await a.evaluate(() => document.dispatchEvent(new Event('visibilitychange')));
   await expect(a.getByRole('tab', { name: 'Calendario' })).toBeVisible({ timeout: 20_000 });
+  await waitSaved(a);          // the app records what it just earned (a medal for changing the language): let that reach the server before the next test starts
 });
 
 test('server unreachable: the edit is kept, the app says so, and it syncs when the server is back', async ({ page, request, context }) => {
