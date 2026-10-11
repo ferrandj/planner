@@ -9,7 +9,7 @@ import { Overlays } from './components/Overlays';
 import { slotCss } from './lib/slotColors';
 import { PlanningTab } from './components/PlanningTab';
 import { PrintTab } from './components/PrintTab';
-import { Banner, Header, SimBar, SimTool, Summary, Tabs } from './components/Top';
+import { Banner, Header, LateBar, SimBar, SimTool, Summary, Tabs } from './components/Top';
 
 const SYNC_TXT = {
   saved: '✓ Enregistré', saving: '… Enregistrement', pending: '… Enregistrement',
@@ -46,6 +46,7 @@ export function App(): ReactNode {
       <BackgroundLayer />
       <div className="wrap" id="app">
         <Banner />
+        <LateBar />
         <Header />
         <SimBar />
         <Summary />

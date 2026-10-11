@@ -62,6 +62,7 @@ export function splitKey(key: string): { kind: string; id: string } {
 
 /** Which editable item a tile stands for ("d:id", "e:id", ...), or null for tiles that are computed (e.g. planned catch-up). */
 export function editKeyOf(e: Evt): string | null {
+  if (e.planOf) return null;
   switch (e.kind) {
     case 'live': case 'webconf': return 'e:' + e.id;
     case 'perso': return 'c:' + e.id;

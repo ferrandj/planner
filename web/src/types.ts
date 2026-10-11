@@ -81,6 +81,9 @@ export interface Evt {
   title?: string;
   check?: boolean;
   devoir?: Devoir;
+  /** catch-up tile: id of the late session it stands for, and the day that session was originally on */
+  planOf?: string;
+  from?: string;
 }
 
 export type Translate = (s: string) => string;

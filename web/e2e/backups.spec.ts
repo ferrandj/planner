@@ -19,7 +19,7 @@ test('a mistaken wipe can be undone from the Backups section', async ({ page, re
   expect(bad.ok()).toBeTruthy();
 
   await page.reload(); await waitSaved(page);
-  await page.getByRole('tab', { name: /Édition/ }).click();
+  await page.getByRole('button', { name: /Édition/ }).click();
   await page.getByRole('button', { name: /Sauvegardes et export/ }).click();
   const list = page.getByRole('button', { name: 'Restaurer' });
   await expect(list.first()).toBeVisible();
@@ -38,7 +38,7 @@ test('a mistaken wipe can be undone from the Backups section', async ({ page, re
 test('export downloads the data and importing it into an emptied planner brings everything back', async ({ page, request }) => {
   await open(page);
   await page.locator('input.chk').nth(0).click();
-  await page.getByRole('tab', { name: /Édition/ }).click();
+  await page.getByRole('button', { name: /Édition/ }).click();
   await page.getByLabel('Nom complet').first().fill('Exported name');
   await waitSaved(page);
   await page.getByRole('button', { name: /Sauvegardes et export/ }).click();
@@ -47,7 +47,7 @@ test('export downloads the data and importing it into an emptied planner brings 
   expect(dl.suggestedFilename()).toMatch(/^planner-export-\d{4}-\d{2}-\d{2}\.json$/);
   await resetData(request);
   await page.reload(); await waitSaved(page);
-  await page.getByRole('tab', { name: /Édition/ }).click();
+  await page.getByRole('button', { name: /Édition/ }).click();
   await page.getByRole('button', { name: /Sauvegardes et export/ }).click();
   page.on('dialog', (d) => void d.accept());
   await page.locator('#imp-file').setInputFiles(path!);

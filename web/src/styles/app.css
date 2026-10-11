@@ -12,7 +12,7 @@ img{max-width:100%}
   --bg:#EAF0F7; --surface:#FFFFFF; --surface2:#F2F6FB; --fg:#12202F; --muted:#51627A; --line:#CFDAE8;
   --accent:#1D5FD1; --accent-ink:#FFFFFF;
   --danger:#B42318; --danger-bg:#FDECEA; --warn:#8A5A00; --warn-bg:#FFF1D6; --ok:#1E7A3C;
-  --alert-bg:#B42318; --alert-ink:#FFFFFF;
+  --alert-bg:#B42318; --alert-ink:#FFFFFF; --lb-bg:#FFE0A8; --lb-ink:#4A2E00; --lb-ok-bg:#D9F2E1; --lb-ok-ink:#12502A;
   --s1:#7A3D9B; --s2:#9A6200; --s3:#0F766E; --s4:#2E7D4F;
   --font-display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
   --font-body:'Instrument Sans','Segoe UI',system-ui,sans-serif;
@@ -23,7 +23,7 @@ img{max-width:100%}
     --bg:#0C1522; --surface:#132033; --surface2:#182A42; --fg:#E6EEF8; --muted:#93A7C2; --line:#243752;
     --accent:#6AA5FF; --accent-ink:#07172E;
     --danger:#FF8A80; --danger-bg:#3A1714; --warn:#F2C265; --warn-bg:#3A2B0E; --ok:#7FD39B;
-    --alert-bg:#FF8A80; --alert-ink:#3A0A06;
+    --alert-bg:#FF8A80; --alert-ink:#3A0A06; --lb-bg:#5A3D08; --lb-ink:#FFE3B0; --lb-ok-bg:#14402A; --lb-ok-ink:#BFEBD0;
     --s1:#CDA0E6; --s2:#E6B462; --s3:#5CD1C8; --s4:#82D3A5;
     color-scheme:dark;
   }
@@ -33,7 +33,7 @@ img{max-width:100%}
 :root[data-scheme="dark"]{
   color-scheme:dark;
   --danger:#FF8A80; --danger-bg:#3A1714; --warn:#F2C265; --warn-bg:#3A2B0E; --ok:#7FD39B;
-  --alert-bg:#FF8A80; --alert-ink:#3A0A06;
+  --alert-bg:#FF8A80; --alert-ink:#3A0A06; --lb-bg:#5A3D08; --lb-ink:#FFE3B0; --lb-ok-bg:#14402A; --lb-ok-ink:#BFEBD0;
   --s1:#CDA0E6; --s2:#E6B462; --s3:#5CD1C8; --s4:#82D3A5;
 }
 :root[data-pal="bleu"]{--bg:#EAF0F7;--surface:#FFFFFF;--surface2:#F2F6FB;--fg:#12202F;--muted:#51627A;--line:#CFDAE8;--accent:#1D5FD1;--accent-ink:#FFFFFF}
@@ -260,6 +260,28 @@ label.mod{color:var(--accent)}
 .nb-r{min-width:0;flex:1 1 260px}
 .nb-t{font-family:var(--font-display);font-size:clamp(1.6rem,4vw,3rem);font-weight:700;line-height:1.05;text-transform:uppercase;text-wrap:balance}
 .nb-d{margin-top:6px;font-size:clamp(1rem,1.8vw,1.25rem);font-weight:600}
+.lb{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;background:var(--lb-bg);color:var(--lb-ink);border-radius:14px;padding:10px 18px}
+.lb.ok{background:var(--lb-ok-bg);color:var(--lb-ok-ink)}
+.lb-main{display:flex;align-items:center;gap:12px;min-width:0}
+.lb-n{font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,5vw,2.8rem);line-height:1}
+.lb-t{display:flex;flex-direction:column;gap:4px;min-width:0}
+.lb-t b{font-size:1.05rem}
+.lb-s{display:flex;flex-wrap:wrap;gap:4px}
+.lb-s .chip{font-style:normal}
+.lb-auto{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-left:auto;font-size:.88rem}
+.lb .sw{display:inline-flex;align-items:center;gap:8px;background:transparent;color:inherit;border:1.5px solid currentColor;border-radius:999px;padding:5px 12px 5px 6px;font:inherit;font-weight:600;cursor:pointer}
+.lb .sw i{width:34px;height:20px;border-radius:999px;background:currentColor;opacity:.35;position:relative;transition:opacity .15s}
+.lb .sw i::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:var(--lb-bg);transition:transform .15s}
+.lb.ok .sw i::after{background:var(--lb-ok-bg)}
+.lb .sw[aria-checked="true"] i{opacity:1}
+.lb .sw[aria-checked="true"] i::after{transform:translateX(14px)}
+.lb-max{display:inline-flex;align-items:center;gap:6px;font-weight:600}
+.lb-max input{width:3.6em;font:inherit;padding:3px 6px;border-radius:8px;border:1px solid currentColor;background:var(--surface);color:var(--fg)}
+.lb-info{font-weight:600}
+.lb-info.warn{color:var(--danger);background:var(--surface);border-radius:8px;padding:2px 8px}
+.st.plan{background:var(--lb-bg);color:var(--lb-ink)}
+.replanned{margin-top:4px;font-size:.85rem;font-weight:600;color:var(--lb-ink);background:var(--lb-bg);border-radius:8px;padding:2px 8px;display:inline-block}
+.cl.pl{border:1px dashed currentColor}
 .nb-late{flex:1 1 100%;background:var(--alert-ink);color:var(--alert-bg);border-radius:10px;padding:8px 12px;font-weight:700}
 
 /* devoirs en gros rouge */

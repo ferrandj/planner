@@ -52,6 +52,9 @@ export function subjectOf(m: Model, id: string | undefined): Subject | undefined
   return id ? m.subjects.find((s) => s.id === id) : undefined;
 }
 
+/** Order of the planner: by date, then by time. */
+export const byDate = (a: Evt, b: Evt): number => (a.date < b.date ? -1 : a.date > b.date ? 1 : (a.time || '') < (b.time || '') ? -1 : 1);
+
 /** Sessions, custom sessions, assignment deadlines, exams and "subject available" dates, sorted by date then time. */
 export function buildEvents(m: Model, data: Data): Evt[] {
   const ev: Evt[] = m.events.filter((e) => !data.hidden[e.id]).map((e) => ({ check: true, ...e }));
@@ -64,8 +67,7 @@ export function buildEvents(m: Model, data: Data): Evt[] {
     if (d.avail) ev.push({ id: 'av:' + d.id, kind: 'dispo', date: d.avail, title: d.title });
   });
   m.exams.forEach((x) => ev.push({ id: x.id, kind: 'exam', date: x.date, end: x.end, title: x.title }));
-  ev.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : (a.time || '') < (b.time || '') ? -1 : 1));
-  return ev;
+  return ev.sort(byDate);
 }
 
 export const renduCount = (m: Model, data: Data, d: Devoir): number => m.subjects.filter((s) => data.rendu[d.id + ':' + s.id]).length;
@@ -80,13 +82,16 @@ export function visible(e: Evt, filter: string): boolean {
 
 export function inScope(e: Evt, scope: Scope, today: string, m: Model, data: Data): boolean {
   if (scope === 'all') return true;
-  if (e.check && data.done[e.id]) return false;
+  if (e.check && isDone(e, data)) return false;
   if (e.kind === 'devoir' && e.devoir && devoirDone(m, data, e.devoir)) return false;
   if (!e.check && e.kind !== 'devoir' && lastDay(e) < today) return false;
   return true;
 }
 
-export const isLate = (e: Evt, today: string, data: Data): boolean => !!e.check && !data.done[e.id] && e.date < today;
+/** Ticked? A catch-up tile is ticked when the late session it stands for is. */
+export const isDone = (e: Evt, data: Data): boolean => !!data.done[e.planOf || e.id];
+
+export const isLate = (e: Evt, today: string, data: Data): boolean => !!e.check && !isDone(e, data) && e.date < today;
 
 /** Assignments due within 7 days (today included) that are not fully handed in. */
 export function dueSoon(m: Model, data: Data, today: string): Devoir[] {
@@ -124,6 +129,9 @@ export function renduTotals(m: Model, data: Data): { done: number; total: number
   return { done, total: m.devoirs.length * m.subjects.length };
 }
 
+/** Late sessions (live / webconference, not ticked, date passed). */
+export const lateSessions = (evs: Evt[], today: string, data: Data): Evt[] =>
+  evs.filter((e) => isLate(e, today, data) && (e.kind === 'live' || e.kind === 'webconf'));
+
 /** Sessions (live / webconference) that are overdue and not ticked: the "to catch up" counter. */
-export const backlogCount = (evs: Evt[], today: string, data: Data): number =>
-  evs.filter((e) => isLate(e, today, data) && (e.kind === 'live' || e.kind === 'webconf')).length;
+export const backlogCount = (evs: Evt[], today: string, data: Data): number => lateSessions(evs, today, data).length;

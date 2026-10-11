@@ -4,7 +4,8 @@ import { CUSTOM_VARS, customTokens, subjectColorFor } from '../lib/colors';
 import { type Fmt, iso, makeFmt } from '../lib/dates';
 import { makeT } from '../lib/i18n';
 import { clone } from '../lib/merge';
-import { buildEvents, resolveModel, type Model, type Scope } from '../lib/model';
+import { buildEvents, byDate, resolveModel, type Model, type Scope } from '../lib/model';
+import { EMPTY_PLAN, planCatchUp, planTiles, type Plan } from '../lib/catchup';
 import { normalizeData } from '../lib/normalize';
 import type { SyncClient } from '../lib/sync';
 import { uploadBlob } from '../lib/files';
@@ -36,6 +37,8 @@ export const initialUi = (today: string): UiState => ({
 
 export interface AppCtx {
   data: Data; base: Base; model: Model; evs: Evt[];
+  /** where the automatic catch-up planner put the late sessions (empty when it is switched off) */
+  plan: Plan;
   /** Change the data: copy, mutate the copy, store it, and hand it to the sync layer. */
   update: (fn: (draft: Data) => void) => void;
   t: Translate; tf: TranslateF; fmt: Fmt; lang: Lang;
@@ -52,6 +55,10 @@ export function useApp(): AppCtx {
   if (!c) throw new Error('useApp outside AppProvider');
   return c;
 }
+
+const minutesNow = (): number => { const d = new Date(); return d.getHours() * 60 + d.getMinutes(); };
+/** Only the half of the day matters to the planner (so it is not recomputed every minute). */
+const dayPart = (min: number): number => (min < 12 * 60 ? 0 : min < 17 * 60 ? 12 * 60 : 17 * 60);
 
 const isTyping = (): boolean => {
   const a = document.activeElement as HTMLElement | null;
@@ -76,6 +83,7 @@ export function AppProvider({ boot, sync, children }: { boot: BootResult; sync: 
   const [base, setBase] = useState<Base>(boot.base);
   const [status, setStatus] = useState<SyncStatus>(boot.offline ? 'offline' : 'saved');
   const [nowDay, setNowDay] = useState(() => iso(new Date()));
+  const [clock, setClock] = useState(() => minutesNow());
   const [ui, setUiState] = useState<UiState>(() => initialUi(iso(new Date())));
   const [sysDark, setSysDark] = useState(() => !!window.matchMedia?.('(prefers-color-scheme: dark)').matches);
   const busy = useRef(false);
@@ -103,7 +111,7 @@ export function AppProvider({ boot, sync, children }: { boot: BootResult; sync: 
 
   // day rollover and system dark-mode changes
   useEffect(() => {
-    const id = setInterval(() => setNowDay(iso(new Date())), 60_000);
+    const id = setInterval(() => { setNowDay(iso(new Date())); setClock(minutesNow()); }, 60_000);
     const mq = window.matchMedia?.('(prefers-color-scheme: dark)');
     const on = (): void => setSysDark(!!mq?.matches);
     mq?.addEventListener?.('change', on);
@@ -111,10 +119,18 @@ export function AppProvider({ boot, sync, children }: { boot: BootResult; sync: 
   }, []);
 
   const model = useMemo(() => resolveModel(base, data), [base, data]);
-  const evs = useMemo(() => buildEvents(model, data), [model, data]);
+  const evs0 = useMemo(() => buildEvents(model, data), [model, data]);
   const { t, tf } = useMemo(() => makeT(data.prefs.lang), [data.prefs.lang]);
   const fmt = useMemo(() => makeFmt(data.prefs.lang), [data.prefs.lang]);
   const today = ui.sim || nowDay;
+  // the planner only needs to know which half of today is still ahead; recomputed when that changes
+  const nowMin = ui.sim ? 0 : dayPart(clock);
+  const auto = !!data.prefs.auto, autoMax = data.prefs.autoMax || 3;
+  const plan = useMemo(
+    () => (auto ? planCatchUp({ events: evs0, today, done: data.done, max: autoMax, nowMin }) : EMPTY_PLAN),
+    [auto, autoMax, evs0, today, data.done, nowMin]
+  );
+  const evs = useMemo(() => (plan.placed.length ? evs0.concat(planTiles(evs0, plan)).sort(byDate) : evs0), [evs0, plan]);
 
   const isDark = useMemo(() => {
     const m = data.prefs.mode;
@@ -145,6 +161,6 @@ export function AppProvider({ boot, sync, children }: { boot: BootResult; sync: 
     setUiState((u) => ({ ...u, alertOpen: true }));
   }, []);
 
-  const value: AppCtx = { data, base, model, evs, update, t, tf, fmt, lang: data.prefs.lang, today, ui, setUi, sync, status, isDark, setBusy, adopt };
+  const value: AppCtx = { data, base, model, evs, plan, update, t, tf, fmt, lang: data.prefs.lang, today, ui, setUi, sync, status, isDark, setBusy, adopt };
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }

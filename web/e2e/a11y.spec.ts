@@ -11,7 +11,7 @@ const scan = (page: import('@playwright/test').Page): Promise<import('axe-core')
 for (const [label, name] of [['planning', 'Planning'], ['devoirs', 'Devoirs'], ['print', 'Imprimer'], ['edit', /Édition/]] as const) {
   test(`no accessibility violations on the ${label} tab`, async ({ page }) => {
     await open(page);
-    await page.getByRole('tab', { name }).click();
+    await page.getByRole(label === 'edit' ? 'button' : 'tab', { name }).click();
     const v = await scan(page);
     expect(v.map((x) => `${x.id}: ${x.nodes.slice(0, 2).map((n) => n.target.join(' ')).join(' | ')}`)).toEqual([]);
   });

@@ -3,7 +3,7 @@ import type { Evt } from '../types';
 import { PRINT_PALS, colOf, softOf } from '../lib/colors';
 import { pad, parse, range, wdList } from '../lib/dates';
 import { evTitle } from '../lib/labels';
-import { appEyebrow, appTitle, eventsOn, monthsList, subjectOf, visible } from '../lib/model';
+import { appEyebrow, appTitle, eventsOn, isDone, monthsList, subjectOf, visible } from '../lib/model';
 import { useApp } from '../state/app';
 import { ColorPicker } from './ColorPicker';
 import { SubjectChips } from './PlanningTab';
@@ -26,7 +26,7 @@ function Pline({ e }: { e: Evt }): ReactNode {
   }
   if (e.kind === 'exam') return <div className="pl ex"><b>{t('EXAMEN')}</b> {t(e.title || '')}</div>;
   if (e.kind === 'dispo') return <div className="pl av">{t('Sujet dispo : ') + t(e.title || '')}</div>;
-  return <div className="pl"><i className="pb">{data.done[e.id] ? '✓' : ''}</i><b>{sb ? sb.ab : ''}</b> {evTitle(e, t)}{e.time ? ' ' + e.time : ''}</div>;
+  return <div className="pl"><i className="pb">{isDone(e, data) ? '✓' : ''}</i><b>{sb ? sb.ab : ''}</b> {e.planOf ? '↻ ' : ''}{evTitle(e, t)}{e.time ? ' ' + (e.planOf ? t(e.time) : e.time) : ''}</div>;
 }
 
 function StickersLayer({ month, edit }: { month: string; edit: boolean }): ReactNode {

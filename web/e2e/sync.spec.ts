@@ -89,7 +89,7 @@ test('a brand-new browser can never wipe saved data (it loads the server state f
   const before = await getState(request);
   const fresh = await (await browser.newContext()).newPage();                       // no local storage at all
   await open(fresh);
-  await fresh.getByRole('tab', { name: /Édition/ }).click();
+  await fresh.getByRole('button', { name: /Édition/ }).click();
   await fresh.getByLabel('Nom complet').first().fill('Changed on a new device');
   await waitSaved(fresh);
   const after = await getState(request);
