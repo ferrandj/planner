@@ -47,7 +47,8 @@ docker rm -f "$NAME" >/dev/null; run; wait_up
 echo "== a corrupt state file is moved aside and recovered from a backup"
 docker rm -f "$NAME" >/dev/null
 ls "$DATA/backups" | grep -q . || fail "no automatic backup was made"
-echo '{ broken' > "$DATA/state.json"
+# the file belongs to the container's user, so damage it from inside a container (as a real disk fault would)
+docker run --rm -v "$DATA:/data" --entrypoint sh "$IMG" -c "echo '{ broken' > /data/state.json"
 run; wait_up
 ls "$DATA" | grep -q '^state.corrupt-' || fail "corrupt file was not kept for inspection"
 [ "$(field 's => !!s.data')" = "true" ] || fail "no state after recovery"
