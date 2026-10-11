@@ -7,7 +7,7 @@ themes, and a French / English / Spanish interface.
 It runs as a single small Docker container (Node.js, **no runtime dependencies**) and keeps **all** data
 on the server, in one folder you mount from your NAS.
 
-- Image: `ghcr.io/<owner>/planner` — built and published by GitHub Actions (see [Releases & CI](#releases--ci)).
+- Image: `ghcr.io/<owner>/planner` — a new GitHub Release and image is published automatically for every change on the default branch (see [Releases & CI](#releases--ci)).
 - Architectures: `linux/amd64` and `linux/arm64`.
 
 ## Quick start (NAS / any Docker host)
@@ -107,10 +107,28 @@ The app has no accounts. For access from outside your network put it behind your
 
 1. `npm test` (merge logic, storage guarantees, HTTP API).
 2. Builds the multi-arch image (always, so a broken Dockerfile is caught early).
-3. **Publishes to GHCR** only from the default branch and from `v*` tags, using the built-in `GITHUB_TOKEN`
-   (no secrets to configure).
+3. **On every push to the default branch** (after the tests pass): picks the next version, pushes the image to GHCR,
+   then creates a **GitHub Release** `vX.Y.Z` with generated notes. Uses the built-in `GITHUB_TOKEN`; no secrets to set up.
 
-Tags: `latest` (default branch), `<branch>`, `sha-<short>`, and `1.2.3` / `1.2` for tags like `v1.2.3`.
+| Tag | Meaning |
+| --- | --- |
+| `1.4.2` | exact release (never changes) |
+| `1.4` / `1` | newest patch / minor of that line |
+| `latest` | newest release |
+| `sha-<short>` | a specific commit |
+
+Version bump is **patch** by default (`v1.0.0`, `v1.0.1`, …). For a bigger step put `[minor]` or `[major]` in the first line of
+the commit (or PR squash) message, or run the workflow manually (*Actions → Run workflow*) and choose the bump.
+Pull requests and other branches never publish anything.
+
+### Connect the NAS to GitHub
+
+Point your NAS at `ghcr.io/<owner>/planner` like any other registry image:
+
+- `:latest` follows every new release; `:1` follows only non-breaking `1.x` releases; `:1.4.2` pins one release.
+- To update automatically, run [Watchtower](https://containrrr.dev/watchtower/) (or your NAS's built-in "auto update" /
+  "check for updates" option) and enable it for this container — the compose example has the label.
+- Your data folder is never touched by an update.
 
 ## Development
 
