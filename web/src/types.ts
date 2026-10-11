@@ -36,6 +36,7 @@ export interface Prefs {
   sync?: boolean;   // same sticker decoration on every month
   auto?: boolean;   // automatic catch-up planning switched on
   autoMax?: number; // never more than this many catch-up slots in a row for the same subject
+  quiz?: boolean;        // the English question asked each time the app is opened (on unless switched off)
   remind?: boolean;      // reminders shortly before an event starts (in the app, and on the phone when enabled there)
   remindLead?: number;   // minutes before the start
   remindSound?: boolean; // sound and vibration with the in-app reminder
@@ -57,6 +58,8 @@ export interface Data {
   done: Record<string, boolean>;
   /** day (YYYY-MM-DD) on which each ticked session was ticked (for streaks and "caught up" achievements) */
   doneAt: Record<string, string>;
+  /** English quiz: for each question, how many times it was answered right / wrong and the last day it was asked */
+  quiz: Record<string, { ok: number; ko: number; at: string }>;
   /** unlocked achievements: id -> day it was unlocked. Only ever grows. */
   ach: Record<string, string>;
   rendu: Record<string, boolean>;

@@ -27,7 +27,7 @@ export interface UiState {
   printHelp: boolean; stkPop: boolean; stkTarget: 'print' | 'bg'; stkTab: 'stk' | 'emo'; emoCat: number;
   pmonth: string | null; pall: boolean; stkSel: string | null; // sticker selected on the print sheet
   deco: boolean; bsel: string | null; bgColor: boolean; bgArm: boolean;
-  remindOpen: boolean;
+  remindOpen: boolean; quizPassed: boolean; quizOpen: boolean;
   rsArm: boolean; cpArm: boolean; themePick: boolean; edOpen: Record<string, boolean>; edPick: string | null;
   editing: string | null; menu: { x: number; y: number; key: string | null; doneId: string | null } | null; prevTab: Tab;
   newc: string; bnewc: string; backups: Array<{ name: string; time: number; rev: number; tag: string; size: number }> | null; bakMsg: string;
@@ -38,7 +38,7 @@ export const initialUi = (today: string): UiState => ({
   formOpen: false, form: { title: '', subject: '', date: '', time: '', tend: '' }, sim: null, alertOpen: false,
   noteFor: null, noteMsg: '', printHelp: false, stkPop: false, stkTarget: 'print', stkTab: 'stk', emoCat: 0,
   pmonth: null, pall: false, stkSel: null, deco: false, bsel: null, bgColor: false, bgArm: false,
-  remindOpen: false, rsArm: false, cpArm: false, themePick: false, edOpen: {}, edPick: null, editing: null, menu: null, prevTab: 'planning', newc: '#d6457f', bnewc: '#d6457f', backups: null, bakMsg: ''
+  remindOpen: false, quizPassed: false, quizOpen: false, rsArm: false, cpArm: false, themePick: false, edOpen: {}, edPick: null, editing: null, menu: null, prevTab: 'planning', newc: '#d6457f', bnewc: '#d6457f', backups: null, bakMsg: ''
 });
 
 export interface AppCtx {

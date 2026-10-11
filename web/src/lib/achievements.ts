@@ -1,6 +1,7 @@
 import type { Data, Evt, Subject, Translate, TranslateF } from '../types';
 import { diff, parse, iso } from './dates';
 import type { Glyph } from './badge';
+import { quizStats } from './quiz';
 import { devoirDone, renduCount, type Model } from './model';
 
 /**
@@ -20,6 +21,7 @@ export interface Stats {
   perfectWeeks: number;
   rendu: { done: number; total: number };
   devoirsComplete: { done: number; total: number };
+  quizMastered: number;
   stickers: number; notes: number; created: number; edits: number;
   dark: boolean; lang: boolean; colour: boolean; auto: boolean; touch: boolean;
 }
@@ -120,11 +122,13 @@ export function computeStats(model: Model, data: Data, evs: Evt[], today: string
   const P = data.prefs;
   const stickers = Object.values(data.stickers).reduce((n, l) => n + l.length, 0) + data.bg.length;
   const created = data.custom.length + data.extra.s.length + data.extra.d.length + data.extra.x.length + data.extra.e.length;
-  const edits = Object.entries(data.edits).reduce((n, [k, f]) => n + (k === 'app' ? Object.keys(f).length : Object.keys(f).length), 0);
+  // the application's own title and subtitle come with the starting data, so they do not count as something the user changed
+  const edits = Object.entries(data.edits).reduce((n, [k, f]) => n + (k === 'app' ? 0 : Object.keys(f).length), 0);
   return {
     totalDone, totalAvail, bySubject, caught, bestStreak: st.best, currentStreak: st.current, perfectWeeks,
     rendu: { done: model.devoirs.reduce((n, d) => n + renduCount(model, data, d), 0), total: model.devoirs.length * model.subjects.length },
     devoirsComplete: { done: model.devoirs.filter((d) => devoirDone(model, data, d)).length, total: model.devoirs.length },
+    quizMastered: quizStats(data.quiz).mastered,
     stickers, notes: Object.values(data.notes).reduce((n, l) => n + l.length, 0), created, edits,
     dark: P.mode === 'dark', lang: P.lang !== 'fr', colour: !['#3b7be8', '#7b4fe0'].includes(P.custom.toLowerCase()), auto: !!P.auto,
     touch: model.subjects.length > 0 && model.subjects.every((s) => (bySubject[s.id].live.done + bySubject[s.id].webconf.done) > 0)
@@ -178,6 +182,8 @@ export function buildDefs(model: Model, stats: Stats, t: Translate, tf: Translat
     ...plain('Premier ajout', '{n} ajouts', 'Ajoute {n} élément(s) toi-même (séance, matière, devoir, examen).') });
   fams.push({ key: 'edit', name: t('Personnalisation'), group: 'planner', glyph: 'edit', tiers: [1, 5, 10, 25], value: stats.edits, label: num, color: '#8a4fd1',
     ...plain('Première modification', '{n} modifications', 'Modifie {n} valeur(s) d’un élément (nom, date, couleur…).') });
+  fams.push({ key: 'quiz', name: t('Anglais'), group: 'planner', glyph: 'globe', tiers: [1, 5, 10, 20, 30, 40, 50], value: stats.quizMastered, label: num, color: '#1d78a8',
+    ...plain('Première question d’anglais réussie', '{n} questions d’anglais réussies', 'Réponds juste à {n} question(s) du quiz d’anglais.') });
   const flag = (key: string, glyph: Glyph, on: boolean, title: string, desc: string, color: string): void => {
     fams.push({ key, name: t(title), group: 'planner', glyph, tiers: [1], value: on ? 1 : 0, label: () => undefined, color, title: () => t(title), desc: () => t(desc) });
   };

@@ -121,6 +121,10 @@ describe('achievements for a planner', () => {
     expect(['dark|1', 'lang|1', 'auto|1'].map((id) => byId(defs, id)?.met)).toEqual([true, true, true]);
     expect(byId(defs, 'colour|1')?.met).toBe(false);
   });
+  it('the title that comes with the starting data is not counted as a change made by the user', () => {
+    expect(make((x) => { x.edits.app = { title: 'T', eyebrow: 'E' }; }).stats.edits).toBe(0);
+    expect(make((x) => { x.edits['s:m1'] = { name: 'N', ab: 'A' }; }).stats.edits).toBe(2);
+  });
   it('a medal exists for every tier of every achievement, with a unique id', () => {
     const { defs } = make();
     expect(new Set(defs.map((x) => x.id)).size).toBe(defs.length);
