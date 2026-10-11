@@ -72,6 +72,7 @@ data/
   or a right-click on it (right-click also ticks a session). Nothing is ever really deleted: removed items sit in
   "Supprimés" and can be restored. Your own items are stored separately from the reference schedule, so a new
   reference schedule never touches them.
+- **Today's agenda** sits under the late counter: what is planned today, in order, with what is under way and what is next.
 - **Late classes counter**: under the next assignment, a coloured bar says how many live / web-conference classes are
   late (per subject), or congratulates you when you are up to date.
 - **Automatic catch-up** (switch in that bar, off by default). Each day has two work periods: the morning and the
@@ -100,6 +101,23 @@ certificate from Control Panel → Security → Certificate). Then open that add
 the **📲 Installer l'application** button in the planner (or Chrome menu → *Install app*). Over plain `http://` on
 the local network Chrome only offers a shortcut, not an app.
 
+
+### Reminders (sound, vibration, phone notification)
+
+Open **🔔 Rappels** (next to the language flags). By default, 15 minutes before anything with a start time (class, live,
+web conference, personal session, catch-up tile) the app shows a message with a sound and a vibration; you can change the
+delay (5 to 60 min) or switch the sound off. Ticked sessions are not announced.
+
+To be warned on the **phone while the app is closed**, press *Activer sur cet appareil* on the phone. This uses Web Push:
+the planner server holds the schedule and sends an encrypted push (signed with a key pair it creates in the data folder,
+`vapid.json`) to the phone's browser, which shows it with the system sound and vibration. It needs:
+
+- the **HTTPS** address described above (browsers refuse push on plain `http://` addresses);
+- the NAS able to reach the internet (the push goes through the browser vendor's push service, e.g. Google's for Chrome);
+- optional: `VAPID_SUBJECT=mailto:you@example.org` in the container environment (some push services ask for a contact).
+
+Costs: Web Push is free. WhatsApp, Telegram and SMS are not built in: SMS and the WhatsApp Business API are paid per
+message; a Telegram bot is free but needs a bot token (a secret that stays in the container environment).
 
 ## The schedule you start with
 

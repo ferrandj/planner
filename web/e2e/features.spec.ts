@@ -141,3 +141,24 @@ test('calendar day: the usual class of a subject is offered and added in one cli
   await waitSaved(page);
   expect((await getState(request)).data.extra.e).toHaveLength(1);
 });
+
+test('reminders: the settings window works and is saved; the server hands out its notification key', async ({ page, request }) => {
+  await open(page);
+  const k = await (await request.get('/api/push/key')).json();
+  expect(Buffer.from(k.publicKey, 'base64url')).toHaveLength(65);
+  await page.getByRole('button', { name: /Rappels/ }).click();
+  const dlg = page.getByRole('dialog');
+  await dlg.getByRole('combobox').selectOption('30');
+  await dlg.getByRole('checkbox', { name: /Son et vibration/ }).uncheck();
+  await waitSaved(page);
+  expect((await getState(request)).data.prefs).toMatchObject({ remindLead: 30, remindSound: false });
+  await dlg.getByRole('button', { name: 'Tester le rappel' }).click();
+  await expect(page.getByRole('alert').filter({ hasText: 'Test du rappel' })).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+});
+
+test("today's agenda is on the first screen", async ({ page }) => {
+  await open(page);
+  await expect(page.getByRole('region', { name: 'Programme du jour' })).toBeVisible();
+});

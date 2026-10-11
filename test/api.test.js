@@ -135,3 +135,49 @@ test('the app manifest and service worker are served with the right types and ar
     assert.strictEqual(r.headers.get('content-type'), 'image/png');
   } finally { server.close(); }
 });
+
+test('notification endpoints: public key, subscribe, schedule, test message, unsubscribe; CSRF header still required', async () => {
+  const { Push } = require('../server/push');
+  const crypto = require('crypto');
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'planner-pushapi-'));
+  const calls = [];
+  const push = new Push(dir, { allowInsecureEndpoints: true, fetchFn: async (u, i) => { calls.push({ u, i }); return { status: 201 }; } });
+  const { server, url } = await (async () => {
+    const store = new Store(fs.mkdtempSync(path.join(os.tmpdir(), 'planner-api-')), { seed: () => seed.demo(new Date()) }).init();
+    const s = createServer({ store, push, publicDir: dir });
+    await new Promise((r) => s.listen(0, '127.0.0.1', r));
+    return { server: s, url: 'http://127.0.0.1:' + s.address().port };
+  })();
+  try {
+    const key = await (await fetch(url + '/api/push/key')).json();
+    assert.strictEqual(Buffer.from(key.publicKey, 'base64url').length, 65);
+    const ecdh = crypto.createECDH('prime256v1'); ecdh.generateKeys();
+    const sub = { endpoint: 'https://push.example.net/abc', keys: { p256dh: ecdh.getPublicKey().toString('base64url'), auth: crypto.randomBytes(16).toString('base64url') } };
+    let r = await fetch(url + '/api/push/subscribe', { method: 'POST', body: JSON.stringify({ subscription: sub }) });
+    assert.strictEqual(r.status, 403);                                          // no client header
+    r = await fetch(url + '/api/push/subscribe', { method: 'POST', headers: H, body: JSON.stringify({ subscription: sub }) });
+    assert.strictEqual(r.status, 200);
+    assert.strictEqual((await r.json()).devices, 1);
+    r = await fetch(url + '/api/push/subscribe', { method: 'POST', headers: H, body: JSON.stringify({ subscription: { endpoint: 'x' } }) });
+    assert.strictEqual(r.status, 400);
+    const soon = Date.now() + 3600000;
+    r = await fetch(url + '/api/reminders', { method: 'PUT', headers: H, body: JSON.stringify({ items: [{ id: 'a', fireAt: soon - 900000, start: soon, title: 'T', body: 'B' }] }) });
+    assert.strictEqual(r.status, 200);
+    assert.strictEqual(push.items.length, 1);
+    r = await fetch(url + '/api/reminders', { method: 'PUT', headers: H, body: JSON.stringify({ items: 'nope' }) });
+    assert.strictEqual(r.status, 400);
+    r = await fetch(url + '/api/push/test', { method: 'POST', headers: H, body: JSON.stringify({ title: 'Test' }) });
+    assert.deepStrictEqual(await r.json(), { devices: 1, results: ['ok'] });
+    assert.strictEqual(calls.length, 1);
+    r = await fetch(url + '/api/push/unsubscribe', { method: 'POST', headers: H, body: JSON.stringify({ endpoint: sub.endpoint }) });
+    assert.deepStrictEqual(await r.json(), { removed: 1 });
+  } finally { server.close(); }
+});
+
+test('without the notification module the endpoints answer 404 (nothing else changes)', async () => {
+  const { url, server } = await start();
+  try {
+    assert.strictEqual((await fetch(url + '/api/push/key')).status, 404);
+    assert.strictEqual((await fetch(url + '/api/state')).status, 200);
+  } finally { server.close(); }
+});

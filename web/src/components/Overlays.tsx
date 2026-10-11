@@ -23,11 +23,14 @@ function NotesModal(): ReactNode {
     if (textRef.current.trim()) addNote({ id: nid(), k: 'text', v: textRef.current.trim() }); // an unsent draft is never lost
     setUi({ noteFor: null, noteMsg: '' });
   };
+  // one listener for the whole life of the dialog: re-registering it on every render could drop it in the middle of a key press
+  const closeRef = useRef(close);
+  closeRef.current = close;
   useEffect(() => {
-    const on = (e: KeyboardEvent): void => { if (e.key === 'Escape') close(); };
+    const on = (e: KeyboardEvent): void => { if (e.key === 'Escape') closeRef.current(); };
     document.addEventListener('keydown', on);
     return () => document.removeEventListener('keydown', on);
-  });
+  }, []);
   const addFiles = async (files: FileList): Promise<void> => {
     for (const f of Array.from(files)) {
       const p = await prepFile(f);

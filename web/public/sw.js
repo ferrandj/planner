@@ -79,3 +79,27 @@ self.addEventListener('fetch', (event) => {
   if (/\/(assets|fonts)\//.test(url.pathname)) return event.respondWith(cacheFirst(req));
   event.respondWith(networkFirst(req));
 });
+
+/* Phone notifications: the server sends a message shortly before something starts. */
+self.addEventListener('push', (event) => {
+  let d = {};
+  try { d = event.data ? event.data.json() : {}; } catch (err) { d = { title: 'Planner', body: event.data ? event.data.text() : '' }; }
+  event.waitUntil((async () => {
+    const wins = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+    if (wins.some((c) => c.visibilityState === 'visible' && c.focused)) return;      // the open app shows its own reminder
+    await self.registration.showNotification(d.title || 'Planner', {
+      body: d.body || '', tag: d.tag || undefined, renotify: true, requireInteraction: true,
+      icon: ROOT + 'icon-192.png', badge: ROOT + 'icon-192.png', vibrate: [200, 100, 200, 100, 400], data: { url: ROOT }
+    });
+  })());
+});
+
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  event.waitUntil((async () => {
+    const wins = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+    const mine = wins.find((c) => c.url.startsWith(ROOT));
+    if (mine) return mine.focus();
+    return self.clients.openWindow(ROOT);
+  })());
+});
