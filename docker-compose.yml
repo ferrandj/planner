@@ -28,8 +28,9 @@ services:
       - com.centurylinklabs.watchtower.enable=true
 
     # --- Only if needed -------------------------------------------------------------------------
-    # The container runs as user 1000. If the logs say "/data is not writable", run it as the owner of
-    # the data folder instead (find it over SSH with:  ls -ln /volume1/docker/planner   and   id <your-user>):
+    # Permissions need no setup: the container runs as whoever owns the data folder (and hands a folder that
+    # Docker created as root to an unprivileged user). Set "user:" only to force one on purpose; then that user
+    # must be able to write to the folder.
     # user: "UID:GID"
     #
     # Optional password for the whole app (otherwise protect it with your reverse proxy / VPN):

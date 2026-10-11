@@ -31,8 +31,9 @@ docker compose pull && docker compose up -d
 > (GitHub → your profile → *Packages* → `planner` → *Package settings* → *Change visibility*), or
 > `docker login ghcr.io` on the NAS with a personal access token that has `read:packages`.
 
-If the container cannot write to the data folder, run it as the owner of that folder with `user: "UID:GID"` (see the comment in `docker-compose.yml`)
-(the container prints a clear message when `/data` is not writable).
+Permissions need no setup: the container runs as whoever owns the data folder, or hands a folder Docker created as root to an
+unprivileged user (it drops root before it listens on the network). If you force a user with `user: "UID:GID"` in the compose
+file, that user must be able to write to the folder; the container prints a clear message when it cannot.
 
 ## Your data is never reset or erased by accident
 

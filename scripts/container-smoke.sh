@@ -59,6 +59,30 @@ run; wait_up
 ls "$DATA" | grep -q '^state.corrupt-' || fail "corrupt file was not kept for inspection"
 [ "$(field 's => !!s.data')" = "true" ] || fail "no state after recovery"
 
+echo "== a folder owned by another user (like a NAS user's shared folder) just works, and the server is not root"
+docker rm -f "$NAME" >/dev/null
+OWN="$(mktemp -d)"; sudo chown 1026:100 "$OWN"; sudo chmod 755 "$OWN"
+docker run -d --name "$NAME" -p 18088:8080 -v "$OWN:/data" "$IMG" >/dev/null; wait_up
+[ "$(stat -c %u "$OWN/state.json")" = "1026" ] || fail "files in the NAS-owned folder are not owned by the folder owner"
+docker logs "$NAME" 2>&1 | grep -q "running as uid 1026" || fail "did not adopt the folder owner"
+[ "$(docker exec "$NAME" sh -c 'awk "/^Uid/{print \$2}" /proc/1/status')" = "1026" ] || fail "server still runs as root"
+docker rm -f "$NAME" >/dev/null; sudo rm -rf "$OWN"
+
+echo "== a root-owned folder (what Docker creates for a missing bind path) just works"
+ROOTD="$(mktemp -d)"; sudo chown 0:0 "$ROOTD"; sudo chmod 755 "$ROOTD"
+docker run -d --name "$NAME" -p 18088:8080 -v "$ROOTD:/data" "$IMG" >/dev/null; wait_up
+[ "$(stat -c %u "$ROOTD/state.json")" = "1000" ] || fail "root-owned folder was not handed to the unprivileged user"
+docker rm -f "$NAME" >/dev/null; sudo rm -rf "$ROOTD"
+
+echo "== existing data with the wrong owner is kept (ownership is repaired, nothing is deleted)"
+KEEP="$(mktemp -d)"; sudo chown 1000:1000 "$KEEP"
+docker run -d --name "$NAME" -p 18088:8080 -v "$KEEP:/data" "$IMG" >/dev/null; wait_up
+R=$(rev); api -X PUT http://127.0.0.1:18088/api/state -d "{\"baseRev\":$R,\"data\":{\"done\":{\"precious\":true}}}" >/dev/null
+docker rm -f "$NAME" >/dev/null; sudo chown -R 0:0 "$KEEP"
+docker run -d --name "$NAME" -p 18088:8080 -v "$KEEP:/data" "$IMG" >/dev/null; wait_up
+[ "$(field 's => s.data.done.precious')" = "true" ] || fail "data lost when the folder had the wrong owner"
+docker rm -f "$NAME" >/dev/null; sudo rm -rf "$KEEP"
+
 echo "== wrong permissions are explained"
 docker rm -f "$NAME" >/dev/null
 RO="$(mktemp -d)"; chmod 555 "$RO"
