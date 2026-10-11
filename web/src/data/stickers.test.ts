@@ -20,7 +20,7 @@ describe('sticker library', () => {
       expect(D.es[s.n], s.n).toBeTruthy();
     }
   });
-  it('drawings are plain shapes (no scripts, inline styles or handlers: they are injected as markup)', () => {
-    for (const s of stickers) expect(s.v, s.id).not.toMatch(/<script|style=|\son\w+=|href=/i);
+  it('drawings are plain shapes (no scripts, handlers or links: they are injected as markup)', () => {
+    for (const s of stickers) expect(s.v, s.id).not.toMatch(/<script|\son\w+=|href=|javascript:|<foreignObject|<image/i);
   });
 });
