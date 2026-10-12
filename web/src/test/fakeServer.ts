@@ -10,6 +10,8 @@ export class FakeServer {
   // a test starts without the English question that opens the app (it has its own tests): they switch it on with `prefs.quiz = true`
   data: Data = normalizeData({ prefs: { quiz: false } });
   down = false;
+  /** what GET api/version answers ('dev' like a development build) */
+  version = 'dev';
   puts: Array<{ baseRev: number; data: Data }> = [];
   files = new Map<string, { type: string; size: number }>();
   backups: Array<{ name: string; time: number; rev: number; tag: string; size: number }> = [];
@@ -20,6 +22,7 @@ export class FakeServer {
     const url = String(input), method = (init.method || 'GET').toUpperCase();
     const json = (status: number, body: unknown): Response => new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } });
     if (url === 'api/state' && method === 'GET') return json(200, { rev: this.rev, base: this.base, data: this.data });
+    if (url === 'api/version') return json(200, { version: this.version });
     if (url === 'api/rev') return json(200, { rev: this.rev });
     if (url === 'api/state' && method === 'PUT') {
       const body = JSON.parse(String(init.body)) as { baseRev: number; data: Data; base?: Base };

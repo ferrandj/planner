@@ -473,6 +473,9 @@ label.btn{cursor:pointer}
 .ach-b[aria-pressed="true"]{border-color:var(--accent,#1D5FD1)}
 .sbtn.locked{opacity:.55;cursor:not-allowed}
 .sv.medal,.badge{display:block}
+.cl-list{display:flex;flex-direction:column;gap:12px;max-height:min(50vh,420px);overflow-y:auto}
+.cl-entry h3{margin:0 0 4px;font-size:1.05rem}.cl-entry h3 small{color:var(--muted);font-weight:400;margin-left:6px}
+.cl-entry ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
 .quiz-gate{z-index:70}
 .qz{display:flex;flex-direction:column;gap:12px}
 .qz-top{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;justify-content:space-between;font-weight:600}
