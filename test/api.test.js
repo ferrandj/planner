@@ -181,3 +181,14 @@ test('without the notification module the endpoints answer 404 (nothing else cha
     assert.strictEqual((await fetch(url + '/api/state')).status, 200);
   } finally { server.close(); }
 });
+
+test('the running version is published (for "what is new")', async () => {
+  const { url, server } = await start({ version: '9.8.7' });
+  try {
+    const r = await fetch(url + '/api/version');
+    assert.strictEqual(r.status, 200);
+    assert.deepStrictEqual(await r.json(), { version: '9.8.7' });
+  } finally { server.close(); }
+  const b = await start();
+  try { assert.match((await (await fetch(b.url + '/api/version')).json()).version, /^.+$/); } finally { b.server.close(); }
+});

@@ -10,6 +10,7 @@ import { slotCss } from './lib/slotColors';
 import { PlanningTab } from './components/PlanningTab';
 import { PrintTab } from './components/PrintTab';
 import { TodayBar } from './components/Today';
+import { ChangelogDialog, NewsStartup } from './components/Changelog';
 import { QuizDialog, QuizGate } from './components/Quiz';
 import { AchievementsTab, AchievementWatcher } from './components/Achievements';
 import { ReminderWatcher, RemindersDialog, Toasts } from './components/Reminders';
@@ -69,6 +70,8 @@ export function App(): ReactNode {
       <ReminderWatcher />
       <AchievementWatcher />
       <RemindersDialog />
+      <NewsStartup />
+      <ChangelogDialog />
       <QuizDialog />
       <QuizGate />
       <Toasts />

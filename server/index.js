@@ -69,6 +69,7 @@ function createServer(opts) {
       const d = store.get();
       return send(res, 200, { rev: d.rev, base: d.base, data: d.data });
     }
+    if (p === '/api/version' && m === 'GET') return send(res, 200, { version: String(opts.version || process.env.APP_VERSION || 'dev') });
     if (p === '/api/rev' && m === 'GET') return send(res, 200, { rev: store.get().rev });
     if (p === '/api/state' && (m === 'PUT' || m === 'POST')) {
       let input;

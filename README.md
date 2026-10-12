@@ -150,6 +150,14 @@ next opening); once all 50 are done, the one asked longest ago comes back. Progr
 Turn it off or on again with the **🎓 Quiz** button next to the language flags (or "Désactiver ce quiz" under the question). It is
 a learning tool, not a security lock: it only runs in the browser and does not protect the planner.
 
+### What is new (after each update)
+
+The first time the app is opened after an update, a window lists what is new since the version that device last saw (written in the
+language of the app). Press *Compris* to close it; it is not shown again for that version. The **🆕 Nouveautés** button next to the
+language flags opens the latest changes at any time, and the switch **Réafficher au prochain démarrage** inside the window brings
+the list back at every start-up until it is switched off again. This is remembered per device (not in your planner data).
+The list lives in `web/src/data/changelog.ts`: add an entry for each release that changes something visible.
+
 ## The schedule you start with
 
 On the very first start (empty `/data`) the app creates its content in this order:

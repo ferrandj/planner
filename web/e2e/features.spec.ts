@@ -220,3 +220,24 @@ test('English quiz: a question at each opening (French + English), wrong is fine
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   await expect(page.getByRole('dialog')).toHaveCount(0);
 });
+
+test('what is new: the button opens it, the "show again" switch brings it back at the next start until switched off', async ({ page, request }) => {
+  expect(typeof (await (await request.get('/api/version')).json()).version).toBe('string');
+  await open(page);
+  await page.getByRole('button', { name: /Nouveautés/ }).click();
+  const dlg = page.getByRole('dialog', { name: /Nouveautés/ });
+  await expect(dlg.getByText('Dernières nouveautés')).toBeVisible();
+  await dlg.getByRole('switch', { name: 'Réafficher au prochain démarrage' }).check();
+  await dlg.getByRole('button', { name: 'Compris' }).click();
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+
+  await page.reload();                                                                 // next start-up
+  await expect(dlg).toBeVisible();
+  await expect(dlg.getByRole('switch')).toBeChecked();
+  await dlg.getByRole('switch').uncheck();
+  await dlg.getByRole('button', { name: 'Compris' }).click();
+
+  await page.reload();
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+});

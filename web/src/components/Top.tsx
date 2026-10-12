@@ -4,6 +4,7 @@ import { LANGN } from '../lib/i18n';
 import { appEyebrow, appTitle, dueSoon, lateSessions, lateDevoirs, nextDevoir, renduTotals } from '../lib/model';
 import type { Lang, Mode } from '../types';
 import { useApp, type Tab } from '../state/app';
+import { NewsChip } from './Changelog';
 import { ColorPicker } from './ColorPicker';
 import { Flag } from './Flags';
 import { Seg } from './common';
@@ -129,6 +130,7 @@ function ThemeBar(): ReactNode {
         <button type="button" className="fchip" aria-pressed={ui.deco} onClick={() => setUi({ deco: !ui.deco, ...(ui.deco ? { bsel: null, bgColor: false } : {}) })}>🎀 {t('Décorer')}</button>
         <button type="button" className="fchip" aria-pressed={ui.remindOpen} onClick={() => setUi({ remindOpen: true })}>🔔 {t('Rappels')}</button>
         <button type="button" className="fchip" aria-pressed={ui.quizOpen} onClick={() => setUi({ quizOpen: true })}>🎓 {t('Quiz')}</button>
+        <NewsChip />
         <InstallChip />
       </div>
       <Seg value={data.prefs.mode} options={modes} onChange={(m) => update((d) => { d.prefs.mode = m; })} />
