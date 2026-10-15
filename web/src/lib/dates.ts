@@ -6,6 +6,8 @@ export function parse(s: string): Date {
   const p = s.split('-').map(Number);
   return new Date(p[0], p[1] - 1, p[2]);
 }
+/** The day `n` days after `day` (before it when negative). */
+export const addDays = (day: string, n: number): string => { const d = parse(day); d.setDate(d.getDate() + n); return iso(d); };
 /** Whole days from b to a (a - b). */
 export const diff = (a: string, b: string): number => Math.round((parse(a).getTime() - parse(b).getTime()) / 864e5);
 

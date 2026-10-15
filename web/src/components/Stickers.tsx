@@ -4,6 +4,7 @@ import groups from '../data/stickerGroups.json';
 import emoji from '../data/emoji.json';
 import { colOf } from '../lib/colors';
 import { badgeMarkup } from '../lib/badge';
+import { rewardIndex, rewardMarkup } from '../lib/rewards';
 import { useApp } from '../state/app';
 
 interface StickerDef { id: string; n: string; v: string }
@@ -22,7 +23,7 @@ function MedalSticker({ id }: { id: string }): ReactNode {
   return <svg className="sv medal" viewBox="0 0 64 64" aria-hidden="true" dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
-/** A sticker (built-in drawing, emoji or achievement medal) in the given colour. Drawings are static, trusted data bundled with the app. */
+/** A sticker (built-in drawing, emoji, achievement medal or reward sticker) in the given colour. Drawings are static, trusted data bundled with the app. */
 export function StickerSvg({ type, color }: { type: string; color: string }): ReactNode {
   if (type.indexOf('emoji:') === 0) {
     return (
@@ -31,6 +32,8 @@ export function StickerSvg({ type, color }: { type: string; color: string }): Re
       </svg>
     );
   }
+  const rw = rewardIndex(type);
+  if (rw !== undefined) return <svg className="sv reward" viewBox="0 0 64 64" aria-hidden="true" dangerouslySetInnerHTML={{ __html: rewardMarkup(rw) }} />;
   if (type.startsWith('ach:')) return <MedalSticker id={type.slice(4)} />;
   const st = STICKERS.find((x) => x.id === type);
   if (!st) return null;

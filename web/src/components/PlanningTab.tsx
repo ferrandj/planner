@@ -61,7 +61,8 @@ function cellLine(e: Evt, ctx: ReturnType<typeof useApp>): ReactNode {
 
 /** What is planned on the clicked day, in a popup. */
 function DayDialog({ day, evs }: { day: string; evs: Evt[] }): ReactNode {
-  const { ui, setUi, fmt, t, tf, model, data, update } = useApp();
+  const { ui, setUi, fmt, t, tf, model, data, update, today } = useApp();
+  const plannable = !!data.prefs.auto && !!data.prefs.autoManual && day >= today;
   const quick = suggestFor(model, data, day), others = allChoices(model, data);
   const add = (c: Suggestion): void => update((d) => { addSession(d, c.subject, c.kind, day, c.time); });
   const chip = (c: Suggestion, key: string): ReactNode => {
@@ -97,6 +98,7 @@ function DayDialog({ day, evs }: { day: string; evs: Evt[] }): ReactNode {
               <div className="chips">{others.map((c) => chip(c, 'o' + c.subject + c.kind))}</div>
             </details>
           </section>
+          {plannable && <button type="button" className="btn ghost" onClick={() => setUi({ sel: null, planDay: day })}>📅 {t('Planifier les rattrapages de ce jour')}</button>}
           <div className="opt"><span className="spacer" /><button type="button" className="btn" id="day-close" onClick={close}>{t('Fermer')}</button></div>
         </div>
       </div>

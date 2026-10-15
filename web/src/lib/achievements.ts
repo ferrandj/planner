@@ -5,7 +5,8 @@ import { quizStats } from './quiz';
 import { devoirDone, renduCount, type Model } from './model';
 
 /**
- * Achievements ("succès"). Each family has tiers (1, 2, 3, 5, 7, 10... up to the most that exists in the planner); each tier is a medal
+ * Achievements ("succès"). Each family has tiers (for sessions: every number 1, 2, 3, 4... up to the most that exists in the planner;
+ * for the other families 1, 2, 3, 5, 7, 10...); each tier is a medal
  * whose metal grows with the tier. Unlocking is permanent: the date is saved in `data.ach` and nothing here ever removes it,
  * so a streak that breaks, a session unticked or a subject removed cannot take a medal away.
  */
@@ -46,6 +47,11 @@ export function ladder(max: number): number[] {
   const t = LADDER.filter((n) => n <= max);
   if (t[t.length - 1] !== max) t.push(max);
   return t;
+}
+
+/** 1, 2, 3, 4... up to `max`, no number skipped (one achievement per session). */
+export function every(max: number): number[] {
+  return Array.from({ length: Math.max(0, Math.floor(max)) }, (_, i) => i + 1);
 }
 
 /** Rank of the metal for tier i out of count: the last tier is always the top one. */
@@ -149,7 +155,7 @@ export function buildDefs(model: Model, stats: Stats, t: Translate, tf: Translat
     desc: (n: number) => tf(hint, { n })
   });
 
-  fams.push({ key: 'all', name: t('Séances suivies'), group: 'sessions', glyph: 'cap', tiers: ladder(stats.totalAvail), value: stats.totalDone, label: num, color: '#3b7be8',
+  fams.push({ key: 'all', name: t('Séances suivies'), group: 'sessions', glyph: 'cap', tiers: every(stats.totalAvail), value: stats.totalDone, label: num, color: '#3b7be8',
     ...plain('Première séance suivie', '{n} séances suivies', 'Coche {n} séance(s) (live ou webconférence), toutes matières confondues.') });
   for (const s of model.subjects) {
     const c = stats.bySubject[s.id];
@@ -158,13 +164,13 @@ export function buildDefs(model: Model, stats: Stats, t: Translate, tf: Translat
       const first = kind === 'live' ? 'Premier live · {s}' : 'Première webconférence · {s}', many = kind === 'live' ? '{n} lives · {s}' : '{n} webconférences · {s}';
       const all = kind === 'live' ? 'Tous les lives · {s}' : 'Toutes les webconférences · {s}';
       fams.push({
-        key: `s:${s.id}:${kind}`, name: tf(kind === 'live' ? 'Lives · {s}' : 'Webconférences · {s}', { s: s.name }), group: 'sessions', glyph: kind, tiers: ladder(cell.avail), value: cell.done, label: num, color: colorOf(s), subject: s,
+        key: `s:${s.id}:${kind}`, name: tf(kind === 'live' ? 'Lives · {s}' : 'Webconférences · {s}', { s: s.name }), group: 'sessions', glyph: kind, tiers: every(cell.avail), value: cell.done, label: num, color: colorOf(s), subject: s,
         title: (n, last) => (last && n > 1 ? tf(all, { s: s.name }) : n === 1 ? tf(first, { s: s.name }) : tf(many, { n, s: s.name })),
         desc: (n) => tf(kind === 'live' ? 'Suis {n} live(s) du soir de {s}.' : 'Suis {n} webconférence(s) de {s}.', { n, s: s.name })
       });
     }
   }
-  fams.push({ key: 'catch', name: t('Rattrapage'), group: 'rhythm', glyph: 'rewind', tiers: [1, 5, 10, 25, 50], value: stats.caught, label: num, color: '#d6457f',
+  fams.push({ key: 'catch', name: t('Rattrapage'), group: 'rhythm', glyph: 'rewind', tiers: every(stats.totalAvail), value: stats.caught, label: num, color: '#d6457f',
     ...plain('Premier rattrapage', '{n} séances rattrapées', 'Coche {n} séance(s) après le jour où elle était prévue.') });
   fams.push({ key: 'streak', name: t('Assiduité'), group: 'rhythm', glyph: 'flame', tiers: [3, 7, 14, 21, 30, 45, 60], value: stats.bestStreak, label: (n) => n + 'j', color: '#e8782a',
     title: (n) => tf('{n} jours de suite', { n }), desc: (n) => tf('Coche au moins une séance {n} jours d’affilée (un jour de repos par semaine est toléré).', { n }) });

@@ -1,5 +1,5 @@
 import { useEffect, useState, type ReactNode } from 'react';
-import { diff, iso, parse, rel } from '../lib/dates';
+import { addDays, diff, iso, parse, rel } from '../lib/dates';
 import { LANGN } from '../lib/i18n';
 import { appEyebrow, appTitle, dueSoon, lateSessions, lateDevoirs, nextDevoir, renduTotals } from '../lib/model';
 import type { Lang, Mode } from '../types';
@@ -65,10 +65,10 @@ function MaxField({ value, onCommit, label }: { value: number; onCommit: (v: num
 
 /** Under the next assignment: how many classes are late (or an encouragement when there are none), and the automatic catch-up switch. */
 export function LateBar(): ReactNode {
-  const { model, data, evs, plan, today, update, t, tf, fmt } = useApp();
+  const { model, data, evs, plan, today, update, setUi, t, tf, fmt } = useApp();
   const late = lateSessions(evs, today, data);
   const bySubject = model.subjects.map((s) => ({ s, n: late.filter((e) => e.subject === s.id).length })).filter((x) => x.n > 0);
-  const auto = !!data.prefs.auto, max = data.prefs.autoMax || 3;
+  const auto = !!data.prefs.auto, max = data.prefs.autoMax || 3, manual = auto && !!data.prefs.autoManual;
   const last = plan.placed.length ? plan.placed[plan.placed.length - 1] : null;
   const cheer = CHEERS[Math.abs(Number(today.replace(/-/g, ''))) % CHEERS.length];
   return (
@@ -89,9 +89,18 @@ export function LateBar(): ReactNode {
           <i aria-hidden="true" />{t('Rattrapage automatique')}
         </button>
         {auto && (
+          <label className="lb-man"><input type="checkbox" checked={manual} onChange={(e) => update((d) => { d.prefs.autoManual = e.target.checked; })} />{t('Je choisis moi-même mes rattrapages')}</label>
+        )}
+        {manual && <button type="button" className="fchip" onClick={() => setUi({ planDay: addDays(today, 1) })}>📅 {t('Planifier demain')}</button>}
+        {auto && !manual && (
           <label className="lb-max">{t('Max. de suite par matière')}<MaxField value={max} onCommit={(v) => update((d) => { d.prefs.autoMax = v; })} label={t('Max. de suite par matière')} /></label>
         )}
-        {auto && late.length > 0 && (
+        {manual && late.length > 0 && (
+          <span className={'lb-info' + (plan.unplaced.length ? ' warn' : '')}>
+            {plan.unplaced.length ? '📅 ' + tf('{n} cours à planifier', { n: plan.unplaced.length }) : '✔ ' + t('Tous les rattrapages sont planifiés')}
+          </span>
+        )}
+        {auto && !manual && late.length > 0 && (
           <span className={'lb-info' + (plan.unplaced.length ? ' warn' : '')}>
             {plan.unplaced.length
               ? '⚠ ' + tf('{n} sans créneau libre avant la fin du planning', { n: plan.unplaced.length })

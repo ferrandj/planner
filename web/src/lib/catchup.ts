@@ -17,7 +17,7 @@ import { diff, iso, parse } from './dates';
  */
 
 export type Part = 'am' | 'pm';
-export interface Placement { id: string; date: string; part: Part }
+export interface Placement { id: string; date: string; part: Part; /** start chosen by the user (manual planning); otherwise the period's usual start */ time?: string }
 export interface Plan {
   placed: Placement[];
   /** late sessions for which no free period was found before the end of the schedule */
@@ -65,6 +65,24 @@ export interface PlanInput {
   nowMin?: number;
 }
 
+/** Periods ("YYYY-MM-DD|am" / "|pm") from `today` on that already hold a session, live, web conference, personal session or exam. */
+export function blockedPeriods(events: Evt[], today: string): Set<string> {
+  const blocked = new Set<string>();
+  events.forEach((e) => {
+    const lastDay = e.end || e.date;
+    if (!BLOCKING.has(e.kind) || lastDay < today || e.planOf) return;
+    const whole = e.kind === 'exam' || !!e.end;
+    const parts = whole ? (['am', 'pm'] as Part[]) : partsOfTime(e.time);
+    for (let d = e.date < today ? today : e.date; d <= lastDay; d = shift(d, 1)) parts.forEach((p) => blocked.add(d + '|' + p));
+  });
+  return blocked;
+}
+
+/** The late, un-ticked sessions (live and web conference), oldest first. */
+export const lateOf = (events: Evt[], today: string, done: Data['done']): Evt[] =>
+  events.filter((e) => e.check && (e.kind === 'live' || e.kind === 'webconf') && !done[e.id] && e.date < today)
+    .sort((a, b) => ((a.date + ' ' + (a.time || '') + ' ' + a.id) < (b.date + ' ' + (b.time || '') + ' ' + b.id) ? -1 : 1));
+
 export function planCatchUp(inp: PlanInput): Plan {
   const { events, today, done } = inp;
   const max = Math.max(1, Math.floor(inp.max) || 3);
@@ -83,16 +101,9 @@ export function planCatchUp(inp: PlanInput): Plan {
   if (!pending) return EMPTY_PLAN;
 
   // 2. periods that already hold something
-  const blocked = new Set<string>();
+  const blocked = blockedPeriods(events, today);
   let last = today;
-  events.forEach((e) => {
-    const lastDay = e.end || e.date;
-    if (lastDay > last) last = lastDay;
-    if (!BLOCKING.has(e.kind) || lastDay < today) return;
-    const whole = e.kind === 'exam' || !!e.end;
-    const parts = whole ? (['am', 'pm'] as Part[]) : partsOfTime(e.time);
-    for (let d = e.date < today ? today : e.date; d <= lastDay; d = shift(d, 1)) parts.forEach((p) => blocked.add(d + '|' + p));
-  });
+  events.forEach((e) => { const lastDay = e.end || e.date; if (lastDay > last) last = lastDay; });
 
   // 3. upcoming classes (to prefer the subject of the next one), by period
   const upcoming = events
@@ -159,8 +170,32 @@ export function planTiles(events: Evt[], plan: Plan): Evt[] {
     const o = orig.get(p.id);
     if (!o) return [];
     return [{
-      id: 'plan:' + o.id, kind: o.kind, date: p.date, time: p.part === 'am' ? START.am : START.pm, part: p.part, tag: o.tag,
+      id: 'plan:' + o.id, kind: o.kind, date: p.date, time: p.time || (p.part === 'am' ? START.am : START.pm), part: p.part, tag: o.tag,
       subject: o.subject, check: true, planOf: o.id, from: o.date
     } as Evt];
   });
+}
+
+/** What the user chose for the late sessions, saved per session: the day and the start time ("09:00"). */
+export type Picks = Record<string, { date: string; time: string }>;
+
+export const partOfHour = (time: string): Part => (Number(time.slice(0, 2)) < 12 ? 'am' : 'pm');
+
+/**
+ * Manual planning: the catch-ups are exactly what the user chose (nothing is moved by itself). A choice is kept as long as its session
+ * is still late and not ticked and its day is not over; a session whose day went by without being ticked goes back to "to plan".
+ */
+export function planManual(inp: { events: Evt[]; today: string; done: Data['done']; picks: Picks }): Plan {
+  const late = lateOf(inp.events, inp.today, inp.done);
+  const placed: Placement[] = [];
+  const byId: Record<string, Placement> = {};
+  for (const e of late) {
+    const k = inp.picks[e.id];
+    if (!k || k.date < inp.today) continue;
+    const p: Placement = { id: e.id, date: k.date, part: partOfHour(k.time), time: k.time };
+    placed.push(p);
+    byId[e.id] = p;
+  }
+  placed.sort((a, b) => (a.date + (a.time || '') < b.date + (b.time || '') ? -1 : 1));
+  return { placed, unplaced: late.filter((e) => !byId[e.id]).map((e) => e.id), byId };
 }

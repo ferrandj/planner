@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { GROUPS, newlyMet, type Def, type Group } from '../lib/achievements';
 import { badgeMarkup } from '../lib/badge';
+import { nextReward, rewardName } from '../lib/rewards';
+import { StickerSvg } from './Stickers';
 import { chime } from '../lib/sound';
 import { parse } from '../lib/dates';
 import { useApp } from '../state/app';
@@ -11,21 +13,32 @@ export function Badge({ def, locked, size = 64 }: { def: Def; locked?: boolean; 
     dangerouslySetInnerHTML={{ __html: badgeMarkup({ glyph: def.glyph, rank: def.rank, label: def.label, color: def.color, locked }) }} />;
 }
 
-/** Records the medals just earned (the date is saved for good) and announces them. */
+/** Records the medals just earned (the date is saved for good), gives each one its reward sticker, and announces them. */
 export function AchievementWatcher(): ReactNode {
-  const { ach, data, update, realToday, toast, setUi, t, tf } = useApp();
+  const { ach, data, update, realToday, toast, t, tf } = useApp();
   const busy = useRef(false);
   useEffect(() => {
     const fresh = newlyMet(ach.defs, data);
-    if (!fresh.length || busy.current) return;
+    const rank = new Map(ach.defs.map((d, i) => [d.id, i]));
+    const dayOf = (id: string): string => data.ach[id] || realToday;
+    // every unlocked achievement has a reward sticker; the ones that have none yet (just unlocked, or unlocked before rewards existed) get the next ones
+    const lacking = [...new Set([...Object.keys(data.ach), ...fresh.map((f) => f.id)])].filter((id) => data.rew[id] === undefined)
+      .sort((a, b) => (dayOf(a) < dayOf(b) ? -1 : dayOf(a) > dayOf(b) ? 1 : (rank.get(a) ?? 1e9) - (rank.get(b) ?? 1e9) || (a < b ? -1 : 1)));
+    if ((!fresh.length && !lacking.length) || busy.current) return;
     busy.current = true;
-    update((d) => { for (const f of fresh) if (!d.ach[f.id]) d.ach[f.id] = realToday; });
-    if (fresh.length <= 3) fresh.forEach((f) => toast({ kind: 'achievement', icon: '🏆', title: t('Succès débloqué !') + ' ' + f.title, body: f.desc, ttl: 7000 }));
-    else toast({ kind: 'achievement', icon: '🏆', title: tf('{n} succès débloqués !', { n: fresh.length }), body: t('Regarde l’onglet Succès : chaque médaille devient un sticker.'), ttl: 12000 });
-    if (data.prefs.remindSound !== false) chime('achievement');
-    void setUi;
+    let k = nextReward(data.rew);
+    const given = new Map(lacking.map((id) => [id, k++]));
+    update((d) => {
+      for (const f of fresh) if (!d.ach[f.id]) d.ach[f.id] = realToday;
+      for (const [id, n] of given) if (d.rew[id] === undefined) d.rew[id] = n;
+    });
+    if (fresh.length <= 3) {
+      fresh.forEach((f) => toast({ kind: 'achievement', icon: '🏆', title: t('Succès débloqué !') + ' ' + f.title,
+        body: f.desc + ' · 🎁 ' + tf('Nouveau sticker : {n}', { n: t(rewardName(given.get(f.id) as number)) }), ttl: 7000 }));
+    } else toast({ kind: 'achievement', icon: '🏆', title: tf('{n} succès débloqués !', { n: fresh.length }), body: t('Regarde l’onglet Succès : chaque succès débloque un sticker en plus.'), ttl: 12000 });
+    if (fresh.length && data.prefs.remindSound !== false) chime('achievement');
     busy.current = false;
-  }, [ach.defs, data, update, realToday, toast, setUi, t, tf]);
+  }, [ach.defs, data, update, realToday, toast, t, tf]);
   return null;
 }
 
@@ -33,7 +46,7 @@ const GROUP_NAME: Record<Group, string> = { sessions: 'Séances', rhythm: 'Rythm
 
 /** The trophy room. */
 export function AchievementsTab(): ReactNode {
-  const { ach, fmt, t, tf } = useApp();
+  const { ach, data, fmt, t, tf } = useApp();
   const [sel, setSel] = useState<string | null>(null);
   const unlockedOf = (d: Def): string | undefined => ach.unlocked[d.id];
   const total = ach.defs.length, got = ach.defs.filter((d) => unlockedOf(d)).length;
@@ -57,8 +70,12 @@ export function AchievementsTab(): ReactNode {
             <h2>{chosen.title}</h2>
             <p>{chosen.desc}</p>
             <p className="hint">{unlockedOf(chosen)
-              ? '✅ ' + tf('Débloqué le {d}', { d: fmt.long.format(parse(unlockedOf(chosen) as string)) }) + ' · ' + t('Utilisable comme sticker : Imprimer → Stickers et emojis → Succès.')
+              ? '✅ ' + tf('Débloqué le {d}', { d: fmt.long.format(parse(unlockedOf(chosen) as string)) })
               : '🔒 ' + tf('Verrouillé : {v} / {n}', { v: Math.min(chosen.value, chosen.n), n: chosen.n })}</p>
+            {data.rew[chosen.id] !== undefined && unlockedOf(chosen) && (
+              <p className="ach-rw"><span className="rw-pic"><StickerSvg type={'rw:' + data.rew[chosen.id]} color="" /></span>
+                🎁 {tf('Sticker gagné : {n} (à retrouver dans le choix des stickers, rubrique Récompenses).', { n: t(rewardName(data.rew[chosen.id])) })}</p>
+            )}
           </div>
           <button type="button" className="btn ghost" onClick={() => setSel(null)}>{t('Fermer')}</button>
         </aside>
@@ -80,13 +97,13 @@ export function AchievementsTab(): ReactNode {
                       <b>{tiers[0].famName}</b>
                       <small>{next && tiers.length > 1 ? `→ ${Math.min(next.value, next.n)} / ${next.n} · ` : ''}{doneN === tiers.length ? '✔ ' : ''}<span className="ach-c">🏅 {doneN}/{tiers.length}</span></small>
                     </div>
-                    <div className="ach-tiers">
+                    <div className={'ach-tiers' + (tiers.length > 30 ? ' many' : '')}>
                       {tiers.map((d) => {
                         const on = !!unlockedOf(d);
                         return (
                           <button key={d.id} type="button" className={'ach-b' + (on ? ' on' : '')} aria-pressed={sel === d.id}
                             aria-label={d.title + ' — ' + (on ? t('débloqué') : t('verrouillé'))} title={d.title} onClick={() => setSel(sel === d.id ? null : d.id)}>
-                            <Badge def={d} locked={!on} size={56} />
+                            <Badge def={d} locked={!on} size={tiers.length > 30 ? 42 : 56} />
                           </button>
                         );
                       })}

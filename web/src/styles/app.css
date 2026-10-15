@@ -471,6 +471,8 @@ label.btn{cursor:pointer}
 .ach-b{background:transparent;border:2px solid transparent;border-radius:12px;padding:0;cursor:pointer;line-height:0;opacity:.75}
 .ach-b.on{opacity:1}
 .ach-b[aria-pressed="true"]{border-color:var(--accent,#1D5FD1)}
+.ach-rw{display:flex;align-items:center;gap:8px}.rw-pic .sv{width:44px;height:44px;display:block}
+.ach-tiers.many{max-height:260px;overflow:auto;gap:2px}
 .sbtn.locked{opacity:.55;cursor:not-allowed}
 .sv.medal,.badge{display:block}
 .cl-list{display:flex;flex-direction:column;gap:12px;max-height:min(50vh,420px);overflow-y:auto}
@@ -504,3 +506,10 @@ label.btn{cursor:pointer}
 .toast-t{min-width:0;overflow-wrap:anywhere}
 .toast-x{background:transparent;border:0;color:var(--muted);font-size:1.4rem;line-height:1;cursor:pointer;padding:0 4px}
 .check{display:flex;gap:8px;align-items:flex-start;font-weight:600}
+.lb-man{display:inline-flex;align-items:center;gap:6px;font-weight:600;cursor:pointer}
+.pd-part{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:0}
+.pd-part legend{font-weight:700;padding:0 6px}
+.pd-row{display:flex;flex-wrap:wrap;gap:10px}
+.pd-row label{display:flex;flex-direction:column;gap:4px;font-size:.85rem;flex:1 1 220px;min-width:0}
+.pd-row label:last-child{flex:0 0 96px}
+.pd-row select{background:var(--surface2);border:1px solid var(--line);border-radius:8px;padding:9px 10px;min-width:0;width:100%}
