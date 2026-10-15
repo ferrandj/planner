@@ -4,7 +4,7 @@ import { monthsList } from '../lib/model';
 import { useApp } from '../state/app';
 import { EMO, EMO_ICON, STK_GROUPS, StickerSvg, stkName } from './Stickers';
 import { Seg } from './common';
-import { Badge } from './Achievements';
+import { REWARD_VARIANTS, rewardName } from '../lib/rewards';
 
 export const stkKey = (sync: boolean | undefined, k: string): string => (sync ? '*' : k);
 const rid = (p: string): string => p + Date.now().toString(36) + Math.random().toString(36).slice(2, 4);
@@ -30,9 +30,17 @@ export function useAddSticker(): (type: string) => void {
 }
 
 export function StickerPicker(): ReactNode {
-  const { ui, setUi, t, tf, ach } = useApp();
+  const { ui, setUi, t, tf, ach, data } = useApp();
   const add = useAddSticker();
-  const unlocked = ach.defs.filter((d) => ach.unlocked[d.id]), locked = ach.defs.filter((d) => !ach.unlocked[d.id]);
+  // one button per different sticker earned (the same one can come back after many achievements)
+  const rewards = (() => {
+    const seen = new Set<number>(), out: Array<{ k: number; title: string }> = [];
+    Object.entries(data.rew).sort((x, y) => x[1] - y[1]).forEach(([id, k]) => {
+      const v = k % REWARD_VARIANTS;
+      if (!seen.has(v)) { seen.add(v); out.push({ k: v, title: ach.byId[id]?.title || '' }); }
+    });
+    return out;
+  })();
   const emo = ui.stkTab === 'emo', pcol = ui.stkTarget === 'bg' ? ui.bnewc : ui.newc;
   const close = useRef<HTMLButtonElement>(null);
   useEffect(() => { close.current?.focus({ preventScroll: true }); }, []);
@@ -67,27 +75,16 @@ export function StickerPicker(): ReactNode {
           ))}
           {!emo && (
             <section>
-              <h3 className="gh">🏆 {t('Succès')}</h3>
-              {unlocked.length === 0 && <p className="hint">{t('Débloque des succès pour les utiliser ici comme stickers.')}</p>}
+              <h3 className="gh">🎁 {t('Récompenses')}</h3>
+              {rewards.length === 0 && <p className="hint">{t('Chaque succès débloqué te donne un sticker mignon en plus : il apparaîtra ici.')}</p>}
               <div className="sgrid">
-                {unlocked.map((d) => (
-                  <button key={d.id} type="button" className="sbtn" aria-label={t('Ajouter : ') + d.title} onClick={() => add('ach:' + d.id)}>
-                    <StickerSvg type={'ach:' + d.id} color={pcol} /><span>{d.title}</span>
+                {rewards.map((r) => (
+                  <button key={r.k} type="button" className="sbtn" aria-label={t('Ajouter : ') + t(rewardName(r.k))} title={r.title} onClick={() => add('rw:' + r.k)}>
+                    <StickerSvg type={'rw:' + r.k} color={pcol} /><span>{t(rewardName(r.k))}</span>
                   </button>
                 ))}
               </div>
-              {locked.length > 0 && (
-                <details>
-                  <summary>{tf('{n} à débloquer', { n: locked.length })}</summary>
-                  <div className="sgrid">
-                    {locked.map((d) => (
-                      <button key={d.id} type="button" className="sbtn locked" disabled aria-label={t('Verrouillé : ') + d.title} title={d.desc}>
-                        <Badge def={d} locked size={56} /><span>🔒 {d.title}</span>
-                      </button>
-                    ))}
-                  </div>
-                </details>
-              )}
+              {ach.defs.length - ach.defs.filter((d) => ach.unlocked[d.id]).length > 0 && <p className="hint">{tf('{n} succès à débloquer pour d’autres stickers.', { n: ach.defs.length - ach.defs.filter((d) => ach.unlocked[d.id]).length })}</p>}
             </section>
           )}
           <button ref={close} className="btn" id="sp-close" onClick={() => setUi({ stkPop: false })}>{t('Fermer')}</button>

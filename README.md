@@ -84,6 +84,14 @@ data/
   ticks the real class, and switching it off gives you your planner back exactly as it was.
   A catch-up tile starts at 09:30 (morning) or 14:00 (afternoon/evening), so within a day the morning one is listed
   first. The afternoon and the evening are **one** period: a class in the evening also takes the afternoon.
+- **Choosing the catch-ups yourself** (tick *Je choisis moi-même mes rattrapages* under the switch; automatic stays the
+  default). Nothing is placed by itself any more: the bar says how many classes are still to plan, and **📅 Planifier
+  demain** (or *Planifier les rattrapages de ce jour* in any calendar day popup) asks what you want to catch up that day:
+  one class for the morning and one for the afternoon/evening (any late class, all subjects), each with an hour (8h, 9h,
+  10h, 11h in the morning; 12h to 21h afterwards). A period already taken by a class cannot be chosen. The dialog starts
+  from what the automatic planner would do, and you change whatever you like. It also opens by itself, **once a day**,
+  when you tick the last class of the day (if tomorrow is not planned yet). Your choices are saved (`picks`, even while
+  the planning is back to automatic); a chosen class that is not done by its day goes back to "to plan".
 - **Calendar**: clicking a day opens a popup with everything planned that day (tick, edit, notes from there too).
   It also offers one-click buttons to add the usual class of each subject for that weekday (a subject's classes
   normally come on the same weekday at the same time every week; the planner reads that from the sessions it already
@@ -124,17 +132,19 @@ message; a Telegram bot is free but needs a bot token (a secret that stays in th
 Steam/PlayStation style medals, each tier with its own picture (the metal goes bronze → silver → gold → platinum → diamond,
 decorations grow with it, and the subject's colour is used for subject medals):
 
-- **Classes**: first live / first web conference **per subject**, then 2, 3, 5, 7, 10, 15, 20... up to the most that exists
-  in your planner (the last tier is "all of them"), and the same for all subjects together;
-- **Rhythm**: catch-ups (classes ticked after their day), streaks of 3 to 60 days with at least one class ticked each day
+- **Classes**: **one achievement per class**: first live / first web conference per subject, then 2, 3, 4, 5, 6... no number
+  skipped, up to the most that exists in your planner (the last one is "all of them"), and the same for all subjects together;
+- **Rhythm**: catch-ups (classes ticked after their day, again one per class), streaks of 3 to 60 days with at least one class ticked each day
   (one rest day per week is tolerated), perfect weeks;
 - **Assignments**: hand-ins, complete assignments;
 - **Your planner**: stickers (up to 20 for the last tier), notes, things you created or changed, dark mode, language, colour,
   automatic catch-up, a class in every subject.
 
 An unlocked medal stays unlocked for good (the date is saved with your data): unticking, a broken streak or a removed subject never
-take it back. Each unlocked medal can be used as a **sticker** (Imprimer → Stickers et emojis → Succès, or on the app background);
-locked ones are greyed out until you earn them. Ticks now remember the day they were made, which is what streaks and
+take it back. Every achievement unlocked also gives an **extra cute two-colour sticker** (30 drawings × 8 colour pairs: jellyfish, octopus, robot, snowman, koala…),
+usable like the others (sticker picker → 🎁 Récompenses, on the print sheet or the app background); the number
+of the sticker is saved with the achievement (`rew`) and never changes. The medal itself is not a sticker any more (stickers
+already placed with a medal are kept). Ticks now remember the day they were made, which is what streaks and
 catch-ups are counted on (older ticks count on the day of their class).
 
 ### English quiz at the door

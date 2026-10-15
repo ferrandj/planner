@@ -70,22 +70,31 @@ describe('achievements', () => {
     expect(screen.getByText(/Débloqué le dimanche 11 octobre 2026/)).toBeInTheDocument();
   });
 
-  it('unlocked medals can be used as stickers; locked ones cannot', async () => {
+  it('each unlocked achievement gives its own extra two-colour sticker, usable from the sticker picker; the medal itself is not a sticker', async () => {
     const srv = new FakeServer();
     const { sync } = await mountApp({ server: srv, seed: (d) => { d.done[LATE] = true; d.ach['s:m1:live|1'] = '2026-10-01'; d.ach['all|1'] = '2026-10-01'; } });
     const u = user();
+    await saved(sync);
+    await vi.waitFor(() => expect(Object.keys(srv.data.rew).length).toBeGreaterThanOrEqual(2));
+    expect(srv.data.rew['all|1']).not.toBe(srv.data.rew['s:m1:live|1']);               // two different stickers
     await u.click(screen.getByRole('tab', { name: 'Imprimer' }));
     await u.click(screen.getByRole('button', { name: 'Stickers et emojis' }));
     const dlg = screen.getByRole('dialog');
-    expect(within(dlg).getByRole('heading', { name: /Succès/ })).toBeInTheDocument();
-    const locked = within(dlg).getAllByRole('button', { name: /^Verrouillé : / });
-    expect(locked.length).toBeGreaterThan(5);
-    locked.forEach((b) => expect(b).toBeDisabled());
-    await u.click(within(dlg).getByRole('button', { name: 'Ajouter : Premier live · Maths' }));
+    expect(within(dlg).getByRole('heading', { name: /Récompenses/ })).toBeInTheDocument();
+    expect(within(dlg).queryByRole('button', { name: /Ajouter : Premier live/ })).toBeNull();      // medals are not stickers any more
+    await u.click(within(dlg).getByRole('button', { name: 'Ajouter : Méduse' }));
     await saved(sync);
     const key = Object.keys(srv.data.stickers)[0];
-    expect(srv.data.stickers[key][0].t).toBe('ach:s:m1:live|1');
-    expect(document.querySelector('.stk svg.medal')).toBeTruthy();                    // drawn with its own colours
+    expect(srv.data.stickers[key][0].t).toMatch(/^rw:\d+$/);
+    expect(document.querySelector('.stk svg.reward')).toBeTruthy();
+  });
+
+  it('rewards are given once and never change: existing ones are kept, new ones continue after the highest', async () => {
+    const srv = new FakeServer();
+    const { sync } = await mountApp({ server: srv, seed: (d) => { d.done[LATE] = true; d.ach['all|1'] = '2026-10-01'; d.rew['all|1'] = 7; d.ach['s:m1:live|1'] = '2026-10-02'; } });
+    await saved(sync);
+    await vi.waitFor(() => expect(srv.data.rew['s:m1:live|1']).toBe(8));
+    expect(srv.data.rew['all|1']).toBe(7);
   });
 
   it('placing stickers unlocks the sticker medals, up to 20 for the last one', async () => {

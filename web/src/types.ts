@@ -35,6 +35,7 @@ export interface Prefs {
   pcustom: string;  // print colour
   sync?: boolean;   // same sticker decoration on every month
   auto?: boolean;   // automatic catch-up planning switched on
+  autoManual?: boolean; // catch-ups are chosen by the user, one day at a time, instead of being placed automatically
   autoMax?: number; // never more than this many catch-up slots in a row for the same subject
   quiz?: boolean;        // the English question asked each time the app is opened (on unless switched off)
   remind?: boolean;      // reminders shortly before an event starts (in the app, and on the phone when enabled there)
@@ -62,6 +63,10 @@ export interface Data {
   quiz: Record<string, { ok: number; ko: number; at: string }>;
   /** unlocked achievements: id -> day it was unlocked. Only ever grows. */
   ach: Record<string, string>;
+  /** reward sticker given with each unlocked achievement: id -> number of the sticker (see lib/rewards). Only ever grows. */
+  rew: Record<string, number>;
+  /** catch-ups chosen by hand: late session id -> the day and start time chosen for it (kept even when the planning is automatic) */
+  picks: Record<string, { date: string; time: string }>;
   rendu: Record<string, boolean>;
   custom: CustomEvt[];
   prefs: Prefs;

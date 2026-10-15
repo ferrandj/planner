@@ -7,7 +7,7 @@ import { clone } from '../lib/merge';
 import { buildEvents, byDate, resolveModel, type Model, type Scope } from '../lib/model';
 import { buildDefs, computeStats, type Def, type Stats } from '../lib/achievements';
 import { slotColor } from '../lib/slotColors';
-import { EMPTY_PLAN, planCatchUp, planTiles, type Plan } from '../lib/catchup';
+import { EMPTY_PLAN, planCatchUp, planManual, planTiles, type Plan } from '../lib/catchup';
 import { normalizeData } from '../lib/normalize';
 import type { SyncClient } from '../lib/sync';
 import { uploadBlob } from '../lib/files';
@@ -29,6 +29,8 @@ export interface UiState {
   deco: boolean; bsel: string | null; bgColor: boolean; bgArm: boolean;
   /** what is new (opened after an update, or from the "Nouveautés" button) */
   news: { version: string; entries: import('../data/changelog').ChangeEntry[] } | null;
+  /** day (YYYY-MM-DD) whose catch-ups are being chosen by hand */
+  planDay: string | null;
   remindOpen: boolean; quizPassed: boolean; quizOpen: boolean;
   rsArm: boolean; cpArm: boolean; themePick: boolean; edOpen: Record<string, boolean>; edPick: string | null;
   editing: string | null; menu: { x: number; y: number; key: string | null; doneId: string | null } | null; prevTab: Tab;
@@ -40,7 +42,7 @@ export const initialUi = (today: string): UiState => ({
   formOpen: false, form: { title: '', subject: '', date: '', time: '', tend: '' }, sim: null, alertOpen: false,
   noteFor: null, noteMsg: '', printHelp: false, stkPop: false, stkTarget: 'print', stkTab: 'stk', emoCat: 0,
   pmonth: null, pall: false, stkSel: null, deco: false, bsel: null, bgColor: false, bgArm: false,
-  news: null, remindOpen: false, quizPassed: false, quizOpen: false, rsArm: false, cpArm: false, themePick: false, edOpen: {}, edPick: null, editing: null, menu: null, prevTab: 'planning', newc: '#d6457f', bnewc: '#d6457f', backups: null, bakMsg: ''
+  news: null, planDay: null, remindOpen: false, quizPassed: false, quizOpen: false, rsArm: false, cpArm: false, themePick: false, edOpen: {}, edPick: null, editing: null, menu: null, prevTab: 'planning', newc: '#d6457f', bnewc: '#d6457f', backups: null, bakMsg: ''
 });
 
 export interface AppCtx {
@@ -152,9 +154,10 @@ export function AppProvider({ boot, sync, children }: { boot: BootResult; sync: 
   // the planner only needs to know which half of today is still ahead; recomputed when that changes
   const nowMin = ui.sim ? 0 : dayPart(clock);
   const auto = !!data.prefs.auto, autoMax = data.prefs.autoMax || 3;
+  const manual = auto && !!data.prefs.autoManual;
   const plan = useMemo(
-    () => (auto ? planCatchUp({ events: evs0, today, done: data.done, max: autoMax, nowMin }) : EMPTY_PLAN),
-    [auto, autoMax, evs0, today, data.done, nowMin]
+    () => (!auto ? EMPTY_PLAN : manual ? planManual({ events: evs0, today, done: data.done, picks: data.picks }) : planCatchUp({ events: evs0, today, done: data.done, max: autoMax, nowMin })),
+    [auto, manual, autoMax, evs0, today, data.done, data.picks, nowMin]
   );
   // achievements are counted on the real schedule (not on the catch-up tiles the planner shows)
   const achStats = useMemo(() => computeStats(model, data, evs0, nowDay), [model, data, evs0, nowDay]);

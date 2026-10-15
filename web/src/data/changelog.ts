@@ -8,6 +8,14 @@ export interface ChangeEntry { version: string; date: string; items: ChangeItem[
 
 export const CHANGELOG: ChangeEntry[] = [
   {
+    version: '1.9.0', date: '2026-10-15',
+    items: [
+      { fr: '🏆 Un succès par séance : plus aucun palier sauté (1, 2, 3, 4, 5…), pour les séances de chaque matière, toutes matières confondues et les rattrapages.', en: '🏆 One achievement per class: no step skipped (1, 2, 3, 4, 5…), for each subject’s classes, all subjects together and catch-ups.', es: '🏆 Un logro por clase: ningún escalón saltado (1, 2, 3, 4, 5…), para las clases de cada asignatura, todas juntas y las recuperaciones.' },
+      { fr: '🎁 Chaque succès débloqué donne un sticker mignon en plus (30 dessins bicolores) : à retrouver dans les stickers, rubrique Récompenses.', en: '🎁 Every achievement you unlock gives an extra cute sticker (30 two-colour drawings): find them in the stickers, under Rewards.', es: '🎁 Cada logro desbloqueado da una pegatina mona extra (30 dibujos bicolores): búscalas en las pegatinas, en Recompensas.' },
+      { fr: '📅 Rattrapages au choix : en cochant « Je choisis moi-même mes rattrapages », l’appli te demande quels cours rattraper demain (matin et après-midi/soir, avec l’heure : 8h, 9h, 10h…), une fois par jour quand tu coches le dernier cours. Le rattrapage automatique reste le choix par défaut.', en: '📅 Catch-ups your way: tick “I choose my catch-ups myself” and the app asks which classes to catch up tomorrow (morning and afternoon/evening, with the hour: 8, 9, 10…), once a day when you tick the last class. Automatic catch-up stays the default.', es: '📅 Recuperaciones a tu manera: marca « Elijo yo mismo mis recuperaciones » y la aplicación te pregunta qué clases recuperar mañana (mañana y tarde/noche, con la hora: 8h, 9h, 10h…), una vez al día al marcar la última clase. La recuperación automática sigue por defecto.' }
+    ]
+  },
+  {
     version: '1.8.0', date: '2026-10-12',
     items: [
       { fr: 'Les nouveautés s’affichent ici après chaque mise à jour, au premier démarrage.', en: 'What is new is shown here after each update, the first time you open the app.', es: 'Las novedades se muestran aquí después de cada actualización, la primera vez que abres la aplicación.' },

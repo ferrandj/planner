@@ -28,6 +28,10 @@ export function normalizeData(raw: unknown, viewport: { w: number; h: number } =
   const days = (v: unknown): Record<string, string> => Object.fromEntries(Object.entries(v && typeof v === 'object' ? (v as Record<string, unknown>) : {}).filter(([, y]) => typeof y === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(y))) as Record<string, string>;
   x.quiz = Object.fromEntries(Object.entries(d.quiz && typeof d.quiz === 'object' ? (d.quiz as Record<string, { ok?: unknown; ko?: unknown; at?: unknown }>) : {}).map(([k, v]) => [k, { ok: Math.max(0, Math.floor(Number(v?.ok)) || 0), ko: Math.max(0, Math.floor(Number(v?.ko)) || 0), at: typeof v?.at === 'string' ? v.at : '' }]));
   x.doneAt = days(d.doneAt); x.ach = days(d.ach);
+  x.rew = Object.fromEntries(Object.entries(d.rew && typeof d.rew === 'object' ? (d.rew as Record<string, unknown>) : {}).filter(([, n]) => Number.isInteger(n) && (n as number) >= 0 && (n as number) < 1e6)) as Record<string, number>;
+  x.picks = Object.fromEntries(Object.entries(d.picks && typeof d.picks === 'object' ? (d.picks as Record<string, { date?: unknown; time?: unknown }>) : {})
+    .filter(([, v]) => v && typeof v.date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v.date) && typeof v.time === 'string' && /^\d{2}:\d{2}$/.test(v.time))
+    .map(([k, v]) => [k, { date: v.date as string, time: v.time as string }]));
   x.done = d.done || {}; x.rendu = d.rendu || {}; x.custom = Array.isArray(d.custom) ? d.custom : [];
   const P = (d.prefs = d.prefs || ({} as Data['prefs']));
   const old: Record<string, string> = { bleu: '#3B7BE8', rose: '#E0407A', orange: '#E8782A' };
@@ -42,6 +46,7 @@ export function normalizeData(raw: unknown, viewport: { w: number; h: number } =
   if (!['fr', 'en', 'es'].includes(P.lang)) P.lang = 'fr';
   if (!HEX6.test(P.custom || '')) P.custom = '#7b4fe0';
   P.auto = !!P.auto;
+  P.autoManual = !!P.autoManual;
   P.autoMax = Number.isInteger(P.autoMax) && (P.autoMax as number) >= 1 && (P.autoMax as number) <= 20 ? P.autoMax : 3;
   P.quiz = P.quiz !== false;
   P.remind = P.remind !== false;

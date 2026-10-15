@@ -66,6 +66,29 @@ test('automatic catch-up: the switch and the limit are saved, tiles appear, noth
   await expect(page.locator('.st.plan')).toHaveCount(0);
 });
 
+test('manual catch-up: I choose the class and the hour for tomorrow, it is saved and kept after a reload', async ({ page, request }) => {
+  await open(page);
+  await simulate(page, 25);
+  await page.getByRole('switch', { name: /Rattrapage automatique/ }).click();
+  await page.getByRole('checkbox', { name: 'Je choisis moi-même mes rattrapages' }).check();
+  await expect(page.locator('.st.plan')).toHaveCount(0);              // nothing is placed by itself
+  await page.getByRole('button', { name: /Planifier demain/ }).click();
+  const dlg = page.getByRole('dialog');
+  const pick = dlg.getByLabel(/Cours à rattraper – Matin/);
+  const options = await pick.locator('option').evaluateAll((l) => l.map((o) => (o as HTMLOptionElement).value).filter(Boolean));
+  expect(options.length).toBeGreaterThan(0);
+  await pick.selectOption(options[0]);
+  await dlg.getByLabel(/Heure – Matin/).selectOption('10:00');
+  await dlg.getByRole('button', { name: 'Enregistrer' }).click();
+  await waitSaved(page);
+  const st = await getState(request);
+  expect(st.data.prefs).toMatchObject({ auto: true, autoManual: true });
+  expect(st.data.picks[options[0]].time).toBe('10:00');                // the class and the hour I chose (the afternoon was only a suggestion)
+  expect(Object.keys(st.data.picks).length).toBeLessThanOrEqual(2);
+  expect(Object.keys(st.data.done)).toHaveLength(0);
+  await expect(page.locator('.st.plan').first()).toBeVisible();
+});
+
 test('add a subject and an assignment: kept after a reload; removed ones can be restored', async ({ page, request }) => {
   await open(page);
   await page.getByRole('button', { name: /Édition/ }).click();
@@ -188,10 +211,10 @@ test('achievements: ticking a session unlocks medals that stay (even unticked), 
 
   await page.getByRole('tab', { name: 'Imprimer' }).click();
   await page.getByRole('button', { name: 'Stickers et emojis' }).click();
-  await page.getByRole('button', { name: /^Ajouter : Première séance suivie/ }).click();
+  await page.getByRole('button', { name: /^Ajouter : Méduse/ }).click();
   await waitSaved(page);
   st = await getState(request);
-  expect(Object.values(st.data.stickers).flat().map((s: any) => s.t)).toContain('ach:all|1');
+  expect(Object.values(st.data.stickers).flat().map((s: any) => s.t)).toContain('rw:0');
 });
 
 test('English quiz: a question at each opening (French + English), wrong is fine and shows the right one in green, the progress is kept, and it can be switched off', async ({ page, request }) => {

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { Evt } from '../types';
 import { byDate } from './model';
-import { EMPTY_PLAN, partsOfTime, planCatchUp, planTiles } from './catchup';
+import { EMPTY_PLAN, blockedPeriods, lateOf, partOfHour, partsOfTime, planCatchUp, planManual, planTiles } from './catchup';
 
 const TODAY = '2026-10-12'; // a Monday
 
@@ -130,5 +130,46 @@ describe('catch-up tiles in the day', () => {
     const p = run(events);
     expect(p.placed.some((x) => x.date === TODAY && x.part === 'pm')).toBe(false);
     expect(p.placed.some((x) => x.date === '2026-10-13' && x.part === 'pm')).toBe(false);
+  });
+});
+
+describe('manual catch-up planning', () => {
+  const late = [ev('c1', 'c', '2026-10-01'), ev('c2', 'c', '2026-10-02'), ev('c3', 'c', '2026-10-03')];
+  const manual = (picks: Record<string, { date: string; time: string }>, done: Record<string, boolean> = {}): ReturnType<typeof run> =>
+    planManual({ events: [...late, END], today: TODAY, done, picks });
+
+  it('knows which period an hour belongs to', () => {
+    expect(['08:00', '11:00', '12:00', '14:00', '21:00'].map(partOfHour)).toEqual(['am', 'am', 'pm', 'pm', 'pm']);
+  });
+
+  it('puts the late classes exactly where the user chose, at the chosen time, and nothing else', () => {
+    const p = manual({ c2: { date: '2026-10-13', time: '10:00' }, c1: { date: '2026-10-13', time: '08:00' } });
+    expect(p.placed.map((x) => [x.id, x.date, x.part, x.time])).toEqual([['c1', '2026-10-13', 'am', '08:00'], ['c2', '2026-10-13', 'am', '10:00']]);
+    expect(p.unplaced).toEqual(['c3']);
+    expect(p.byId.c1.time).toBe('08:00');
+  });
+
+  it('the tiles start at the chosen hour', () => {
+    const events = [...late, END];
+    const tiles = planTiles(events, planManual({ events, today: TODAY, done: {}, picks: { c1: { date: '2026-10-14', time: '17:00' } } }));
+    expect(tiles).toEqual([expect.objectContaining({ id: 'plan:c1', planOf: 'c1', date: '2026-10-14', time: '17:00', part: 'pm' })]);
+  });
+
+  it('a choice is forgotten once the class is ticked, or when its day has gone by (the class goes back to "to plan")', () => {
+    expect(manual({ c1: { date: '2026-10-13', time: '09:00' } }, { c1: true }).placed).toEqual([]);
+    const gone = manual({ c1: { date: '2026-10-11', time: '09:00' } });
+    expect(gone.placed).toEqual([]);
+    expect(gone.unplaced).toEqual(['c1', 'c2', 'c3']);
+    expect(manual({ c1: { date: TODAY, time: '09:00' } }).placed).toHaveLength(1);        // today is still fine
+  });
+
+  it('ignores choices for classes that are not late (or no longer exist)', () => {
+    expect(manual({ nope: { date: '2026-10-13', time: '09:00' }, end: { date: '2026-10-13', time: '09:00' } }).placed).toEqual([]);
+  });
+
+  it('lists late classes oldest first, and the periods already taken', () => {
+    expect(lateOf([late[2], late[0], END, late[1]], TODAY, { c1: true }).map((e) => e.id)).toEqual(['c2', 'c3']);
+    const b = blockedPeriods([ev('live', 'd', '2026-10-13', 'live', '18:30 – 21:30'), { id: 'x', kind: 'exam', date: '2026-10-14', end: '2026-10-15' } as Evt], TODAY);
+    expect([...b].sort()).toEqual(['2026-10-13|pm', '2026-10-14|am', '2026-10-14|pm', '2026-10-15|am', '2026-10-15|pm']);
   });
 });

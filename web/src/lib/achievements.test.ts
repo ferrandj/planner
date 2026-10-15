@@ -1,4 +1,4 @@
-import { buildDefs, computeStats, ladder, newlyMet, rankOf, streaks } from './achievements';
+import { buildDefs, computeStats, every, ladder, newlyMet, rankOf, streaks } from './achievements';
 import { badgeMarkup } from './badge';
 import { base, emptyData } from './fixtures';
 import { buildEvents, resolveModel } from './model';
@@ -27,6 +27,8 @@ describe('tiers', () => {
     expect(ladder(1)).toEqual([1]);
     expect(ladder(4)).toEqual([1, 2, 3, 4]);
     expect(ladder(12)).toEqual([1, 2, 3, 5, 7, 10, 12]);
+    expect(every(0)).toEqual([]);
+    expect(every(9)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
     expect(ladder(20)).toEqual([1, 2, 3, 5, 7, 10, 15, 20]);
   });
   it('the metal grows with the tier and the last tier is always the top one', () => {
@@ -70,7 +72,7 @@ describe('achievements for a planner', () => {
     const { defs } = make();
     expect(defs.filter((d) => d.family === 's:m1:live').map((d) => d.n)).toEqual([1, 2, 3]);
     expect(defs.filter((d) => d.family === 's:m1:webconf').map((d) => d.n)).toEqual([1]);
-    expect(defs.filter((d) => d.family === 'all').map((d) => d.n)).toEqual([1, 2, 3, 5, 6]);
+    expect(defs.filter((d) => d.family === 'all').map((d) => d.n)).toEqual([1, 2, 3, 4, 5, 6]);      // no number is skipped: one achievement per session
     expect(byId(defs, 's:m1:live|1')?.title).toBe('Premier live · Maths');
     expect(byId(defs, 's:m1:live|2')?.title).toBe('2 lives · Maths');
     expect(byId(defs, 's:m1:live|3')?.title).toBe('Tous les lives · Maths');
