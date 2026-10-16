@@ -24,7 +24,7 @@ function standing(e: Evt, nowMin: number, done: boolean): { key: 'done' | 'now' 
 export function TodayBar(): ReactNode {
   const { evs, model, data, today, realToday, clock, update, t, tf, fmt } = useApp();
   const isReal = today === realToday;
-  const items = eventsOn(evs, today).filter((e) => e.kind !== 'dispo').sort((a, b) => order(a) - order(b) || (a.id < b.id ? -1 : 1));
+  const items = eventsOn(evs, today).filter((e) => e.kind !== 'dispo' && !data.displaced[e.id]).sort((a, b) => order(a) - order(b) || (a.id < b.id ? -1 : 1));
   const nextId = isReal ? items.find((e) => { const k = standing(e, clock, !!e.check && isDone(e, data)).key; return k === 'now' || k === 'soon' || k === 'later'; })?.id : undefined;
   const tick = (e: Evt, on: boolean): void => update((d) => { setDone(d, e.planOf || e.id, on, realToday); });
 

@@ -157,8 +157,8 @@ export function AppProvider({ boot, sync, children }: { boot: BootResult; sync: 
   const auto = !!data.prefs.auto, autoMax = data.prefs.autoMax || 3;
   const manual = auto && !!data.prefs.autoManual;
   const plan = useMemo(
-    () => (!auto ? EMPTY_PLAN : manual ? planManual({ events: evs0, today, done: data.done, picks: data.picks }) : planCatchUp({ events: evs0, today, done: data.done, max: autoMax, nowMin })),
-    [auto, manual, autoMax, evs0, today, data.done, data.picks, nowMin]
+    () => (!auto ? EMPTY_PLAN : manual ? planManual({ events: evs0, today, done: data.done, picks: data.picks, displaced: data.displaced }) : planCatchUp({ events: evs0, today, done: data.done, max: autoMax, nowMin, displaced: data.displaced })),
+    [auto, manual, autoMax, evs0, today, data.done, data.picks, data.displaced, nowMin]
   );
   // achievements are counted on the real schedule (not on the catch-up tiles the planner shows)
   const achStats = useMemo(() => computeStats(model, data, evs0, nowDay), [model, data, evs0, nowDay]);

@@ -43,7 +43,7 @@ describe('manual catch-up planning', () => {
     const hour = within(dlg).getByLabelText(/Heure – Matin/) as HTMLSelectElement;
     expect([...hour.options].map((o) => o.textContent)).toEqual(['8h', '9h', '10h', '11h']);
     expect(hour).toBeDisabled();                                                     // nothing chosen yet
-    expect(within(dlg).getByText('Déjà occupé ce jour-là par une séance.')).toBeInTheDocument();   // the live of tomorrow evening takes the afternoon/evening
+    expect(within(dlg).getByText(/Prévu : Maths · Live du soir/)).toBeInTheDocument();                 // the live of tomorrow evening holds the afternoon/evening: it can be replaced
     await u.selectOptions(cls, LATE);
     await u.selectOptions(hour, '10:00');
     await u.click(within(dlg).getByRole('button', { name: 'Enregistrer' }));
@@ -136,5 +136,93 @@ describe('manual catch-up planning', () => {
     await u.click(within(dlg).getByRole('button', { name: 'Enregistrer' }));
     await saved(sync);
     expect(srv.data.picks).toEqual({ [LATE]: { date: '2026-10-13', time: '09:00' } });
+  });
+
+  it('a period held by a personal session or an exam cannot be replaced', async () => {
+    await mountApp({ seed: (d) => { d.prefs.auto = true; d.prefs.autoManual = true; d.custom.push({ id: 'c1', title: 'Gym', subject: '', date: '2026-10-12', time: '09:00', tend: '10:00' }); } });
+    const u = user();
+    await u.click(screen.getByRole('button', { name: /Planifier demain/ }));
+    const dlg = screen.getByRole('dialog');
+    expect(within(dlg).getByText('Déjà occupé ce jour-là par une séance.')).toBeInTheDocument();
+    expect(within(dlg).queryByLabelText(/Cours à rattraper – Matin/)).toBeNull();
+  });
+});
+
+describe('replacing a planned class by a catch-up', () => {
+  const WEB = 'm2-webconf-2026-10-14';
+  const open = async (u: ReturnType<typeof user>): Promise<HTMLElement> => {
+    await u.click(screen.getByRole('button', { name: /^mercredi 14 octobre 2026, / }));
+    await u.click(screen.getByRole('button', { name: /Planifier les rattrapages de ce jour/ }));
+    return screen.getByRole('dialog');
+  };
+
+  it('the class that was there goes straight to "À rattraper" and the late counter grows; the catch-up takes its place', async () => {
+    const srv = new FakeServer();
+    const { sync } = await mountApp({ server: srv, seed: (d) => { d.prefs.auto = true; d.prefs.autoManual = true; } });
+    const u = user();
+    expect(screen.getByText('cours en retard').closest('.lb')!.querySelector('.lb-n')).toHaveTextContent('1');
+    const dlg = await open(u);
+    expect(within(dlg).getByText(/Prévu : Physics · Webconférence/)).toBeInTheDocument();
+    await u.selectOptions(within(dlg).getByLabelText(/Cours à rattraper – Après-midi/), LATE);
+    expect(within(dlg).getByText(/Remplace : Physics · Webconférence.*« À rattraper »/)).toBeInTheDocument();
+    await u.selectOptions(within(dlg).getByLabelText(/Heure – Après-midi/), '15:00');
+    await u.click(within(dlg).getByRole('button', { name: 'Enregistrer' }));
+    await saved(sync);
+    expect(srv.data.displaced).toEqual({ [WEB]: true });
+    expect(srv.data.picks[LATE]).toEqual({ date: '2026-10-14', time: '15:00', replaces: [WEB] });
+    expect(srv.data.done).toEqual({});                                              // nothing is ticked or deleted
+    expect(screen.getByText('cours en retard').closest('.lb')!.querySelector('.lb-n')).toHaveTextContent('2');
+    const late = screen.getByRole('heading', { name: /À rattraper/ }).closest('section') as HTMLElement;
+    expect(within(late).getByText('Remplacé · à rattraper')).toBeInTheDocument();
+    expect(screen.getByText(/1 cours à planifier/)).toBeInTheDocument();           // the replaced class waits to be planned
+  });
+
+  it('cancelling the replacement gives the class its place back; once the catch-up is done the replaced class stays late', async () => {
+    const srv = new FakeServer();
+    const { sync } = await mountApp({ server: srv, seed: (d) => { d.prefs.auto = true; d.prefs.autoManual = true; d.displaced[WEB] = true; d.picks[LATE] = { date: '2026-10-14', time: '15:00', replaces: [WEB] }; } });
+    const u = user();
+    let dlg = await open(u);
+    expect(within(dlg).getByText(/Remplace : Physics · Webconférence/)).toBeInTheDocument();     // shown again when the day is reopened
+    await u.selectOptions(within(dlg).getByLabelText(/Cours à rattraper – Après-midi/), '');
+    await u.click(within(dlg).getByRole('button', { name: 'Enregistrer' }));
+    await saved(sync);
+    expect(srv.data.displaced).toEqual({});
+    expect(srv.data.picks).toEqual({});
+    expect(screen.getByText('cours en retard').closest('.lb')!.querySelector('.lb-n')).toHaveTextContent('1');
+    // again, then the catch-up is ticked: the replacement is final
+    dlg = await open(u);
+    await u.selectOptions(within(dlg).getByLabelText(/Cours à rattraper – Après-midi/), LATE);
+    await u.click(within(dlg).getByRole('button', { name: 'Enregistrer' }));
+    await saved(sync);
+    expect(srv.data.displaced).toEqual({ [WEB]: true });
+    await u.click(within(document.querySelector('.st.plan')!.closest('li') as HTMLElement).getByRole('checkbox'));
+    await saved(sync);
+    expect(srv.data.done[LATE]).toBe(true);
+    expect(srv.data.displaced).toEqual({ [WEB]: true });
+    expect(screen.getByText('cours en retard').closest('.lb')!.querySelector('.lb-n')).toHaveTextContent('1');   // the replaced class is the one left to catch up
+  });
+
+  it('choosing another catch-up for the same period keeps the replacement', async () => {
+    const srv = new FakeServer();
+    const { sync } = await mountApp({ server: srv, seed: (d) => { d.prefs.auto = true; d.prefs.autoManual = true; d.displaced[WEB] = true; d.picks[LATE] = { date: '2026-10-14', time: '15:00', replaces: [WEB] }; } });
+    const u = user();
+    const dlg = await open(u);
+    await u.selectOptions(within(dlg).getByLabelText(/Heure – Après-midi/), '17:00');
+    await u.click(within(dlg).getByRole('button', { name: 'Enregistrer' }));
+    await saved(sync);
+    expect(srv.data.picks[LATE]).toEqual({ date: '2026-10-14', time: '17:00', replaces: [WEB] });
+    expect(srv.data.displaced).toEqual({ [WEB]: true });
+  });
+
+  const planned = (): Element[] => [...document.querySelectorAll('.today-i')].filter((li) => /Live du soir/.test(li.textContent || '') && !/↻/.test(li.textContent || ''));   // not the catch-up tiles
+  it('a class is in the agenda of its day, but not once it was replaced', async () => {
+    vi.setSystemTime(new Date(2026, 9, 12, 8, 0, 0));
+    await mountApp({ seed: (d) => { d.prefs.auto = true; } });
+    expect(planned()).toHaveLength(1);
+  });
+  it('...and gone from it once replaced', async () => {
+    vi.setSystemTime(new Date(2026, 9, 12, 8, 0, 0));
+    await mountApp({ seed: (d) => { d.prefs.auto = true; d.displaced['m1-live-2026-10-12'] = true; } });
+    expect(planned()).toHaveLength(0);
   });
 });

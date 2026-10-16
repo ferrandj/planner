@@ -63,14 +63,16 @@ export interface PlanInput {
   max: number;
   /** minutes since midnight at the moment of planning (0 = the whole of today is available) */
   nowMin?: number;
+  /** classes the user replaced by a catch-up: they are late whatever their date, and no longer hold their period */
+  displaced?: Record<string, boolean>;
 }
 
 /** Periods ("YYYY-MM-DD|am" / "|pm") from `today` on that already hold a session, live, web conference, personal session or exam. */
-export function blockedPeriods(events: Evt[], today: string): Set<string> {
+export function blockedPeriods(events: Evt[], today: string, displaced: Record<string, boolean> = {}): Set<string> {
   const blocked = new Set<string>();
   events.forEach((e) => {
     const lastDay = e.end || e.date;
-    if (!BLOCKING.has(e.kind) || lastDay < today || e.planOf) return;
+    if (!BLOCKING.has(e.kind) || lastDay < today || e.planOf || displaced[e.id]) return;
     const whole = e.kind === 'exam' || !!e.end;
     const parts = whole ? (['am', 'pm'] as Part[]) : partsOfTime(e.time);
     for (let d = e.date < today ? today : e.date; d <= lastDay; d = shift(d, 1)) parts.forEach((p) => blocked.add(d + '|' + p));
@@ -78,13 +80,14 @@ export function blockedPeriods(events: Evt[], today: string): Set<string> {
   return blocked;
 }
 
-/** The late, un-ticked sessions (live and web conference), oldest first. */
-export const lateOf = (events: Evt[], today: string, done: Data['done']): Evt[] =>
-  events.filter((e) => e.check && (e.kind === 'live' || e.kind === 'webconf') && !done[e.id] && e.date < today)
+/** The late, un-ticked sessions (live and web conference), oldest first. A class the user replaced is late even if its day has not come. */
+export const lateOf = (events: Evt[], today: string, done: Data['done'], displaced: Record<string, boolean> = {}): Evt[] =>
+  events.filter((e) => e.check && (e.kind === 'live' || e.kind === 'webconf') && !done[e.id] && (e.date < today || !!displaced[e.id]))
     .sort((a, b) => ((a.date + ' ' + (a.time || '') + ' ' + a.id) < (b.date + ' ' + (b.time || '') + ' ' + b.id) ? -1 : 1));
 
 export function planCatchUp(inp: PlanInput): Plan {
   const { events, today, done } = inp;
+  const displaced = inp.displaced || {};
   const max = Math.max(1, Math.floor(inp.max) || 3);
   const nowMin = inp.nowMin || 0;
 
@@ -93,21 +96,20 @@ export function planCatchUp(inp: PlanInput): Plan {
 
   // 1. the backlog, per subject, first to last
   const queues = new Map<string, Evt[]>();
-  events
-    .filter((e) => e.check && (e.kind === 'live' || e.kind === 'webconf') && !isDone(e) && e.date < today)
+  lateOf(events, today, done, displaced)
     .sort((a, b) => (key(a) < key(b) ? -1 : 1))
     .forEach((e) => { const s = e.subject || ''; if (!queues.has(s)) queues.set(s, []); queues.get(s)!.push(e); });
   const pending = [...queues.values()].reduce((n, q) => n + q.length, 0);
   if (!pending) return EMPTY_PLAN;
 
   // 2. periods that already hold something
-  const blocked = blockedPeriods(events, today);
+  const blocked = blockedPeriods(events, today, displaced);
   let last = today;
   events.forEach((e) => { const lastDay = e.end || e.date; if (lastDay > last) last = lastDay; });
 
   // 3. upcoming classes (to prefer the subject of the next one), by period
   const upcoming = events
-    .filter((e) => e.subject && (e.kind === 'live' || e.kind === 'webconf' || e.kind === 'perso') && e.date >= today && !isDone(e))
+    .filter((e) => e.subject && (e.kind === 'live' || e.kind === 'webconf' || e.kind === 'perso') && e.date >= today && !isDone(e) && !displaced[e.id])
     .flatMap((e) => partsOfTime(e.time).slice(0, 1).map((p) => ({ idx: slotIndex(e.date, p, today), subject: e.subject as string })))
     .sort((a, b) => a.idx - b.idx);
 
@@ -177,7 +179,23 @@ export function planTiles(events: Evt[], plan: Plan): Evt[] {
 }
 
 /** What the user chose for the late sessions, saved per session: the day and the start time ("09:00"). */
-export type Picks = Record<string, { date: string; time: string }>;
+export type Picks = Record<string, { date: string; time: string; replaces?: string[] }>;
+
+/**
+ * What holds a period of a day: the classes that can be replaced by a catch-up (live / web conference not ticked yet) and whatever else
+ * (personal session, exam, a class already ticked): the latter cannot be replaced.
+ */
+export function occupantsOf(events: Evt[], day: string, part: Part, done: Data['done'], displaced: Record<string, boolean> = {}): { replaceable: Evt[]; blockers: Evt[] } {
+  const replaceable: Evt[] = [], blockers: Evt[] = [];
+  for (const e of events) {
+    const lastDay = e.end || e.date;
+    if (!BLOCKING.has(e.kind) || e.planOf || displaced[e.id] || e.date > day || lastDay < day) continue;
+    const whole = e.kind === 'exam' || !!e.end;
+    if (!(whole ? true : partsOfTime(e.time).includes(part))) continue;
+    if (!whole && e.check && (e.kind === 'live' || e.kind === 'webconf') && !done[e.id]) replaceable.push(e); else blockers.push(e);
+  }
+  return { replaceable, blockers };
+}
 
 export const partOfHour = (time: string): Part => (Number(time.slice(0, 2)) < 12 ? 'am' : 'pm');
 
@@ -185,8 +203,8 @@ export const partOfHour = (time: string): Part => (Number(time.slice(0, 2)) < 12
  * Manual planning: the catch-ups are exactly what the user chose (nothing is moved by itself). A choice is kept as long as its session
  * is still late and not ticked and its day is not over; a session whose day went by without being ticked goes back to "to plan".
  */
-export function planManual(inp: { events: Evt[]; today: string; done: Data['done']; picks: Picks }): Plan {
-  const late = lateOf(inp.events, inp.today, inp.done);
+export function planManual(inp: { events: Evt[]; today: string; done: Data['done']; picks: Picks; displaced?: Record<string, boolean> }): Plan {
+  const late = lateOf(inp.events, inp.today, inp.done, inp.displaced);
   const placed: Placement[] = [];
   const byId: Record<string, Placement> = {};
   for (const e of late) {

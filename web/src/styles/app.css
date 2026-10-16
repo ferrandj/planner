@@ -516,3 +516,4 @@ label.btn{cursor:pointer}
 .lib-info{display:grid;grid-template-columns:max-content 1fr;gap:4px 14px;margin:0}
 .lib-info dt{font-weight:700}.lib-info dd{margin:0;min-width:0;overflow-wrap:anywhere}
 .lib-tree{background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0;font-size:.85rem;overflow-x:auto}
+.pd-rep{margin:0 0 8px;font-size:.85rem;color:var(--muted,inherit);opacity:.9}

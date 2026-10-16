@@ -132,6 +132,12 @@ set `user:`). If it cannot be written, the 📁 window says so and the rest of t
   from what the automatic planner would do, and you change whatever you like. It also opens by itself, **once a day**,
   when you tick the last class of the day (if tomorrow is not planned yet). Your choices are saved (`picks`, even while
   the planning is back to automatic); a chosen class that is not done by its day goes back to "to plan".
+  **Replacing a class that is already planned**: when the period you pick already holds a live or web conference (not ticked
+  yet), the dialog says so ("Prévu : …"); choosing a catch-up there **replaces** it. The replaced class goes straight to
+  *À rattraper* (it counts in the late bar, shows "Remplacé · à rattraper", and has to be planned like any late class), no longer
+  gives reminders and no longer appears in that day's agenda. Nothing is deleted: choosing "— Rien —" for that period again
+  gives the class its place back (as long as the catch-up was not done yet; once it is done the replacement stays). A personal
+  session or an exam cannot be replaced.
 - **Calendar**: clicking a day opens a popup with everything planned that day (tick, edit, notes from there too).
   It also offers one-click buttons to add the usual class of each subject for that weekday (a subject's classes
   normally come on the same weekday at the same time every week; the planner reads that from the sessions it already

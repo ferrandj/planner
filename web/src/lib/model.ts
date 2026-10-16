@@ -91,7 +91,8 @@ export function inScope(e: Evt, scope: Scope, today: string, m: Model, data: Dat
 /** Ticked? A catch-up tile is ticked when the late session it stands for is. */
 export const isDone = (e: Evt, data: Data): boolean => !!data.done[e.planOf || e.id];
 
-export const isLate = (e: Evt, today: string, data: Data): boolean => !!e.check && !isDone(e, data) && e.date < today;
+/** Late: its day has gone by without it being ticked, or the user replaced it by a catch-up (it then waits in "À rattraper"). */
+export const isLate = (e: Evt, today: string, data: Data): boolean => !!e.check && !isDone(e, data) && (e.date < today || !!data.displaced[e.id]);
 
 /** Assignments due within 7 days (today included) that are not fully handed in. */
 export function dueSoon(m: Model, data: Data, today: string): Devoir[] {

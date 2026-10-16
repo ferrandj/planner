@@ -31,7 +31,8 @@ export function normalizeData(raw: unknown, viewport: { w: number; h: number } =
   x.rew = Object.fromEntries(Object.entries(d.rew && typeof d.rew === 'object' ? (d.rew as Record<string, unknown>) : {}).filter(([, n]) => Number.isInteger(n) && (n as number) >= 0 && (n as number) < 1e6)) as Record<string, number>;
   x.picks = Object.fromEntries(Object.entries(d.picks && typeof d.picks === 'object' ? (d.picks as Record<string, { date?: unknown; time?: unknown }>) : {})
     .filter(([, v]) => v && typeof v.date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v.date) && typeof v.time === 'string' && /^\d{2}:\d{2}$/.test(v.time))
-    .map(([k, v]) => [k, { date: v.date as string, time: v.time as string }]));
+    .map(([k, v]) => [k, { date: v.date as string, time: v.time as string, ...(Array.isArray((v as { replaces?: unknown }).replaces) ? { replaces: ((v as { replaces: unknown[] }).replaces).filter((r): r is string => typeof r === 'string').slice(0, 10) } : {}) }]));
+  x.displaced = Object.fromEntries(Object.entries(d.displaced && typeof d.displaced === 'object' ? (d.displaced as Record<string, unknown>) : {}).filter(([, v]) => v === true)) as Record<string, boolean>;
   x.done = d.done || {}; x.rendu = d.rendu || {}; x.custom = Array.isArray(d.custom) ? d.custom : [];
   const P = (d.prefs = d.prefs || ({} as Data['prefs']));
   const old: Record<string, string> = { bleu: '#3B7BE8', rose: '#E0407A', orange: '#E8782A' };
