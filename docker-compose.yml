@@ -23,6 +23,10 @@ services:
       # EVERYTHING you create lives in this folder: state, attachments, automatic backups (backups/).
       # Include it in your NAS backup (Hyper Backup, rsync, ...).
       - /volume1/docker/planner/data:/data
+      # Optional: keep the readable copy of your notes and files (one folder per subject, then per class, notes.txt +
+      # attachments) somewhere else, e.g. a folder already shared on your network. Uncomment BOTH this line and
+      # LIBRARY_DIR below. Without them the copy is in data/library.
+      # - /volume1/notes/planner:/library
     labels:
       # Lets Watchtower (if you run it) update this container automatically when a new release is published.
       - com.centurylinklabs.watchtower.enable=true
@@ -35,5 +39,6 @@ services:
     #
     # Optional password for the whole app (otherwise protect it with your reverse proxy / VPN):
     # environment:
+    #   LIBRARY_DIR: /library
     #   AUTH_USER: "<choose-a-user>"
     #   AUTH_PASSWORD: "<choose-a-password>"

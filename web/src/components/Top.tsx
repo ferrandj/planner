@@ -138,6 +138,7 @@ function ThemeBar(): ReactNode {
         <button type="button" className="fchip" aria-pressed={ui.themePick} onClick={() => setUi({ themePick: !ui.themePick })}><i className="sd" style={{ background: data.prefs.custom }} />{t('Couleur')}</button>
         <button type="button" className="fchip" aria-pressed={ui.deco} onClick={() => setUi({ deco: !ui.deco, ...(ui.deco ? { bsel: null, bgColor: false } : {}) })}>🎀 {t('Décorer')}</button>
         <button type="button" className="fchip" aria-pressed={ui.remindOpen} onClick={() => setUi({ remindOpen: true })}>🔔 {t('Rappels')}</button>
+        <button type="button" className="fchip" aria-pressed={ui.libraryOpen} onClick={() => setUi({ libraryOpen: true })}>📁 {t('Bibliothèque')}</button>
         <button type="button" className="fchip" aria-pressed={ui.quizOpen} onClick={() => setUi({ quizOpen: true })}>🎓 {t('Quiz')}</button>
         <NewsChip />
         <InstallChip />

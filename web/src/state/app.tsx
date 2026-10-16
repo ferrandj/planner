@@ -31,6 +31,7 @@ export interface UiState {
   news: { version: string; entries: import('../data/changelog').ChangeEntry[] } | null;
   /** day (YYYY-MM-DD) whose catch-ups are being chosen by hand */
   planDay: string | null;
+  libraryOpen: boolean;
   remindOpen: boolean; quizPassed: boolean; quizOpen: boolean;
   rsArm: boolean; cpArm: boolean; themePick: boolean; edOpen: Record<string, boolean>; edPick: string | null;
   editing: string | null; menu: { x: number; y: number; key: string | null; doneId: string | null } | null; prevTab: Tab;
@@ -42,7 +43,7 @@ export const initialUi = (today: string): UiState => ({
   formOpen: false, form: { title: '', subject: '', date: '', time: '', tend: '' }, sim: null, alertOpen: false,
   noteFor: null, noteMsg: '', printHelp: false, stkPop: false, stkTarget: 'print', stkTab: 'stk', emoCat: 0,
   pmonth: null, pall: false, stkSel: null, deco: false, bsel: null, bgColor: false, bgArm: false,
-  news: null, planDay: null, remindOpen: false, quizPassed: false, quizOpen: false, rsArm: false, cpArm: false, themePick: false, edOpen: {}, edPick: null, editing: null, menu: null, prevTab: 'planning', newc: '#d6457f', bnewc: '#d6457f', backups: null, bakMsg: ''
+  news: null, planDay: null, libraryOpen: false, remindOpen: false, quizPassed: false, quizOpen: false, rsArm: false, cpArm: false, themePick: false, edOpen: {}, edPick: null, editing: null, menu: null, prevTab: 'planning', newc: '#d6457f', bnewc: '#d6457f', backups: null, bakMsg: ''
 });
 
 export interface AppCtx {

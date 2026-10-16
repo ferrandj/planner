@@ -13,6 +13,7 @@ import { TodayBar } from './components/Today';
 import { ChangelogDialog, NewsStartup } from './components/Changelog';
 import { QuizDialog, QuizGate } from './components/Quiz';
 import { AchievementsTab, AchievementWatcher } from './components/Achievements';
+import { LibraryDialog, LibraryWatcher } from './components/Library';
 import { CatchUpAsk, PlanDayDialog } from './components/PlanDay';
 import { ReminderWatcher, RemindersDialog, Toasts } from './components/Reminders';
 import { Banner, Header, LateBar, SimBar, SimTool, Summary, Tabs } from './components/Top';
@@ -71,6 +72,8 @@ export function App(): ReactNode {
       <ReminderWatcher />
       <AchievementWatcher />
       <PlanDayDialog />
+      <LibraryWatcher />
+      <LibraryDialog />
       <CatchUpAsk />
       <RemindersDialog />
       <NewsStartup />

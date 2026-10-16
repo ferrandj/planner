@@ -61,9 +61,49 @@ Export (`Édition → Sauvegardes et export → Exporter`) downloads the full st
 data/
   state.json        current state (revisioned)
   backups/          automatic snapshots  state-<timestamp>-r<rev>[-tag].json
-  files/            attachments (<sha256> + <sha256>.json metadata)
+  files/            attachments (<sha256> + <sha256>.json metadata): the planner's own store, names nobody can read
+  library/          readable copy of the notes and files (see below), or wherever LIBRARY_DIR points
   seed.json         optional, only read on the very first start
 ```
+
+### Notes and files you can read without the planner (📁 Bibliothèque)
+
+The planner keeps its notes in `state.json` and its attachments under hash names, which no one can read without it.
+So the server also keeps a **readable copy**, an ordinary folder you can open from the NAS, a PC or a phone:
+
+```
+library/
+  Maths/
+    2026-10-05 Live du soir/
+      notes.txt            <- the notes and links of that class, as plain text
+      cours.pdf            <- the attachments, under their own names
+    Général/notes.txt      <- notes of the subject itself
+  Devoirs/2026-11-02 Assignment 1/notes.txt
+  Examens/...
+  Autres/...               <- personal sessions without a subject
+  Archives/...             <- notes of something you removed from the planner (kept, never dropped)
+  _Supprimé/               <- what you deleted or renamed in the planner (moved here, never erased)
+  LISEZ-MOI.txt
+```
+
+It is updated a few seconds after every change (and when the app opens), only while the **📁 Bibliothèque** switch is on.
+It is a **copy**: the planner stays the source of truth and rewrites what it generated, so edit your notes in the planner
+(changes made by hand in that folder can be overwritten; a file of yours with the same name is moved to `_Supprimé` first).
+Folder names are always in French, whatever language the screen is in, so that changing the language moves nothing.
+
+**Where it is stored** is set by `LIBRARY_DIR` (default: `library` inside the data folder). To keep it in a folder of
+your choice on the NAS, mount that folder in the container and point `LIBRARY_DIR` at it (see `docker-compose.yml`):
+
+```yaml
+    volumes:
+      - /volume1/docker/planner/data:/data
+      - /volume1/notes/planner:/library      # any folder, e.g. one that is already shared on your network
+    environment:
+      LIBRARY_DIR: /library
+```
+
+The folder must be writable by the same user as the data folder (the container uses the owner of `/data`; otherwise
+set `user:`). If it cannot be written, the 📁 window says so and the rest of the planner is not affected.
 
 ## Editing, and the automatic catch-up
 
@@ -207,6 +247,7 @@ changes on top of the seed and can be reverted individually.
 | --- | --- | --- |
 | `PORT` | `8080` | HTTP port inside the container |
 | `DATA_DIR` | `/data` | Where state, backups and files are stored |
+| `LIBRARY_DIR` | `<DATA_DIR>/library` | Where the readable copy of the notes and files is written (a mounted NAS folder, for example) |
 | `AUTH_USER`, `AUTH_PASSWORD` | unset | Optional HTTP basic auth for the whole app (`/healthz` stays open) |
 | `SNAPSHOT_INTERVAL_SEC` | `15` | Minimum time between automatic snapshots |
 

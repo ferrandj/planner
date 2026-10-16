@@ -16,6 +16,8 @@ export class FakeServer {
   files = new Map<string, { type: string; size: number }>();
   backups: Array<{ name: string; time: number; rev: number; tag: string; size: number }> = [];
   restored: string[] = [];
+  /** the readable copy of the notes: what the app last asked for (null = this server has no library) */
+  library: { entries: Array<{ dir: string[]; text: string; files: Array<{ id: string; name: string }> }>; puts: number } | null = { entries: [], puts: 0 };
 
   fetch = async (input: RequestInfo | URL, init: RequestInit = {}): Promise<Response> => {
     if (this.down) throw new TypeError('Failed to fetch');
@@ -37,6 +39,12 @@ export class FakeServer {
       const blob = init.body as Blob;
       this.files.set(id, { type: String((init.headers as Record<string, string>)['Content-Type']), size: blob.size });
       return json(200, { id, size: blob.size });
+    }
+    if (url === 'api/library') {
+      if (!this.library) return json(200, { enabled: false });
+      if (method === 'PUT') { this.library.entries = JSON.parse(String(init.body)).entries; this.library.puts++; }
+      const files = this.library.entries.reduce((n, e) => n + e.files.length, 0);
+      return json(200, { ok: true, enabled: true, dir: '/data/library', notes: this.library.entries.filter((e) => e.text).length, files, at: this.library.puts ? Date.now() : 0, error: '' });
     }
     if (url === 'api/backups') return json(200, { backups: this.backups });
     if (url === 'api/backups/restore' && method === 'POST') {
