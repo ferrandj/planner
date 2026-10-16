@@ -67,7 +67,9 @@ export interface Data {
   /** reward sticker given with each unlocked achievement: id -> number of the sticker (see lib/rewards). Only ever grows. */
   rew: Record<string, number>;
   /** catch-ups chosen by hand: late session id -> the day and start time chosen for it (kept even when the planning is automatic) */
-  picks: Record<string, { date: string; time: string }>;
+  picks: Record<string, { date: string; time: string; replaces?: string[] }>;
+  /** classes the user replaced by a catch-up: they count as late ("À rattraper") and no longer hold their slot. Only removed when the replacement is cancelled before it was done. */
+  displaced: Record<string, boolean>;
   rendu: Record<string, boolean>;
   custom: CustomEvt[];
   prefs: Prefs;

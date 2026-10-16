@@ -24,6 +24,7 @@ export function Row({ e }: { e: Evt }): ReactNode {
   if (sb) tags.push(<span key="chip" className={`chip s${sb.c}`}>{sb.code + ' · ' + sb.short}</span>);
   if (e.check) {
     if (done) tags.push(<span key="st" className="st ok">{t('Fait')}</span>);
+    else if (data.displaced[key]) tags.push(<span key="st" className="st late">{t('Remplacé · à rattraper')}</span>);
     else if (dd < 0) tags.push(<span key="st" className="st late">{e.kind === 'perso' ? t('En retard') : t('À rattraper')}</span>);
     else if (dd === 0) tags.push(<span key="st" className="st now">{t("Aujourd'hui")}</span>);
     if (e.planOf) tags.push(<span key="pl" className="st plan">↻ {t('Rattrapage')}</span>);

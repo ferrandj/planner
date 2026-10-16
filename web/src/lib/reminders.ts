@@ -23,6 +23,7 @@ export function upcoming(evs: Evt[], model: Model, data: Data, nowMs: number, le
     const start = startAt(e);
     if (start === null || start < nowMs - 60_000 || start > nowMs + days * DAY) continue;
     if (e.check && isDone(e, data)) continue;
+    if (data.displaced[e.id]) continue;                // replaced by a catch-up: nothing happens at that time any more
     const sb = subjectOf(model, e.subject);
     const label = evTitle(e, t);
     out.push({

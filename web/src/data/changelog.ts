@@ -8,6 +8,13 @@ export interface ChangeEntry { version: string; date: string; items: ChangeItem[
 
 export const CHANGELOG: ChangeEntry[] = [
   {
+    version: '1.11.0', date: '2026-10-16',
+    items: [
+      { fr: '🔁 Quand tu choisis un cours à rattraper sur un créneau où un cours est déjà prévu, tu peux le remplacer : le cours remplacé passe directement dans « À rattraper » (et n’apparaît plus dans le programme du jour ni dans les rappels).', en: '🔁 When you pick a class to catch up in a slot where a class is already planned, you can replace it: the replaced class goes straight to “To catch up” (and no longer shows in today’s agenda or reminders).', es: '🔁 Cuando eliges una clase para recuperar en un hueco donde ya hay una clase prevista, puedes reemplazarla: la clase reemplazada pasa directamente a « Por recuperar » (y ya no aparece en el programa del día ni en los recordatorios).' },
+      { fr: 'Rien n’est supprimé : en remettant « — Rien — » sur ce créneau, le cours retrouve sa place.', en: 'Nothing is deleted: choosing “— Nothing —” for that slot again gives the class its place back.', es: 'No se elimina nada: al volver a elegir « — Nada — » en ese hueco, la clase recupera su sitio.' }
+    ]
+  },
+  {
     version: '1.10.0', date: '2026-10-16',
     items: [
       { fr: '📁 Tes notes et tes fichiers sont aussi rangés dans un dossier lisible sans le planner : un dossier par matière, un sous-dossier par cours, avec notes.txt (en texte simple) et les fichiers joints sous leur nom.', en: '📁 Your notes and files are also stored in a folder you can read without the planner: one folder per subject, one sub-folder per class, with notes.txt (plain text) and the attached files under their own names.', es: '📁 Tus notas y tus archivos también se guardan en una carpeta legible sin el planner: una carpeta por asignatura, una subcarpeta por clase, con notes.txt (texto simple) y los archivos adjuntos con su nombre.' },

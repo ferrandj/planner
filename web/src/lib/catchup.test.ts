@@ -1,14 +1,14 @@
 import { describe, expect, it } from 'vitest';
 import type { Evt } from '../types';
 import { byDate } from './model';
-import { EMPTY_PLAN, blockedPeriods, lateOf, partOfHour, partsOfTime, planCatchUp, planManual, planTiles } from './catchup';
+import { EMPTY_PLAN, blockedPeriods, lateOf, occupantsOf, partOfHour, partsOfTime, planCatchUp, planManual, planTiles } from './catchup';
 
 const TODAY = '2026-10-12'; // a Monday
 
 const ev = (id: string, subject: string, date: string, kind: Evt['kind'] = 'webconf', time = '13:30'): Evt =>
   ({ id, subject, date, kind, time, tag: '', check: true });
-const run = (events: Evt[], o: { max?: number; done?: Record<string, boolean>; nowMin?: number } = {}) =>
-  planCatchUp({ events, today: TODAY, done: o.done || {}, max: o.max ?? 3, nowMin: o.nowMin });
+const run = (events: Evt[], o: { max?: number; done?: Record<string, boolean>; nowMin?: number; displaced?: Record<string, boolean> } = {}) =>
+  planCatchUp({ events, today: TODAY, done: o.done || {}, max: o.max ?? 3, nowMin: o.nowMin, displaced: o.displaced });
 const ids = (p: ReturnType<typeof run>): string[] => p.placed.map((x) => x.id);
 /** a far-away last event so that the schedule has room */
 const END = ev('end', 'zz', '2026-12-31', 'perso', '08:00');
@@ -171,5 +171,46 @@ describe('manual catch-up planning', () => {
     expect(lateOf([late[2], late[0], END, late[1]], TODAY, { c1: true }).map((e) => e.id)).toEqual(['c2', 'c3']);
     const b = blockedPeriods([ev('live', 'd', '2026-10-13', 'live', '18:30 – 21:30'), { id: 'x', kind: 'exam', date: '2026-10-14', end: '2026-10-15' } as Evt], TODAY);
     expect([...b].sort()).toEqual(['2026-10-13|pm', '2026-10-14|am', '2026-10-14|pm', '2026-10-15|am', '2026-10-15|pm']);
+  });
+});
+
+describe('replacing a planned class by a catch-up', () => {
+  const late1 = ev('c1', 'c', '2026-10-01');
+  const planned = ev('web', 'd', '2026-10-13', 'webconf', '13:30');
+  const evening = ev('live', 'e', '2026-10-13', 'live', '18:30 – 21:30');
+  const gym = { id: 'gym', kind: 'perso', date: '2026-10-13', time: '09:00 – 10:00', check: true, subject: '' } as Evt;
+  const exam = { id: 'ex', kind: 'exam', date: '2026-10-13', end: '2026-10-14' } as Evt;
+
+  it('a class that can be replaced is a live / web conference not ticked yet; the rest holds its period for good', () => {
+    const o = occupantsOf([planned, evening, gym, late1], '2026-10-13', 'pm', {});
+    expect(o.replaceable.map((e) => e.id)).toEqual(['web', 'live']);                       // the afternoon and the evening are one period
+    expect(o.blockers).toEqual([]);
+    expect(occupantsOf([planned, gym], '2026-10-13', 'am', {}).blockers.map((e) => e.id)).toEqual(['gym']);
+    expect(occupantsOf([planned], '2026-10-13', 'pm', { web: true }).blockers.map((e) => e.id)).toEqual(['web']);   // already ticked: cannot be replaced
+    expect(occupantsOf([exam], '2026-10-14', 'am', {}).blockers.map((e) => e.id)).toEqual(['ex']);
+    expect(occupantsOf([planned], '2026-10-13', 'pm', {}, { web: true })).toEqual({ replaceable: [], blockers: [] });    // already replaced: the period is free
+    expect(occupantsOf([planned], '2026-10-14', 'pm', {}).replaceable).toEqual([]);          // another day
+  });
+
+  it('a replaced class is late whatever its date, and no longer holds its period', () => {
+    expect(lateOf([late1, planned, END], TODAY, {}).map((e) => e.id)).toEqual(['c1']);
+    expect(lateOf([late1, planned, END], TODAY, {}, { web: true }).map((e) => e.id)).toEqual(['c1', 'web']);
+    expect(lateOf([late1, planned, END], TODAY, { web: true }, { web: true }).map((e) => e.id)).toEqual(['c1']);     // ticked: done
+    expect(blockedPeriods([planned], TODAY).has('2026-10-13|pm')).toBe(true);
+    expect(blockedPeriods([planned], TODAY, { web: true }).has('2026-10-13|pm')).toBe(false);
+  });
+
+  it('manual planning: the replaced class waits to be planned, and can itself be placed', () => {
+    const p = planManual({ events: [late1, planned, END], today: TODAY, done: {}, picks: { c1: { date: '2026-10-13', time: '15:00', replaces: ['web'] } }, displaced: { web: true } });
+    expect(p.placed.map((x) => [x.id, x.date, x.time])).toEqual([['c1', '2026-10-13', '15:00']]);
+    expect(p.unplaced).toEqual(['web']);
+    const q = planManual({ events: [late1, planned, END], today: TODAY, done: {}, picks: { c1: { date: '2026-10-13', time: '15:00' }, web: { date: '2026-10-14', time: '09:00' } }, displaced: { web: true } });
+    expect(q.unplaced).toEqual([]);
+  });
+
+  it('automatic planning treats it like any late class: its old period is free, and it is planned later', () => {
+    const p = run([late1, planned, END], { displaced: { web: true } });
+    expect(p.placed.map((x) => [x.id, x.date, x.part])).toEqual([['c1', TODAY, 'am'], ['web', TODAY, 'pm']]);
+    expect(run([late1, planned, END]).placed.map((x) => x.id)).toEqual(['c1']);
   });
 });

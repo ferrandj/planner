@@ -30,6 +30,10 @@ describe('reminders', () => {
     expect(r.some((x) => x.id.startsWith('m1-live-2026-10-05'))).toBe(false);          // past
     expect(upcoming(evs, m, data, NOW, 15, t, tf, 1).some((x) => x.id.startsWith('m2-webconf-2026-10-14'))).toBe(false);   // beyond one day
   });
+  it('gives no reminder for a class that was replaced by a catch-up', () => {
+    const { data, m, evs } = build((d) => { d.displaced['m1-live-2026-10-12'] = true; });
+    expect(upcoming(evs, m, data, NOW, 15, t, tf).some((x) => x.id.startsWith('m1-live-2026-10-12'))).toBe(false);
+  });
   it('includes personal sessions that have a time', () => {
     const { data, m, evs } = build((d) => { d.custom.push({ id: 'c1', title: 'Gym', subject: '', date: '2026-10-12', time: '19:00', tend: '20:00' }, { id: 'c2', title: 'No time', subject: '', date: '2026-10-12', time: '', tend: '' }); });
     const r = upcoming(evs, m, data, NOW, 30, t, tf);
