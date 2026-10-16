@@ -513,3 +513,6 @@ label.btn{cursor:pointer}
 .pd-row label{display:flex;flex-direction:column;gap:4px;font-size:.85rem;flex:1 1 220px;min-width:0}
 .pd-row label:last-child{flex:0 0 96px}
 .pd-row select{background:var(--surface2);border:1px solid var(--line);border-radius:8px;padding:9px 10px;min-width:0;width:100%}
+.lib-info{display:grid;grid-template-columns:max-content 1fr;gap:4px 14px;margin:0}
+.lib-info dt{font-weight:700}.lib-info dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.lib-tree{background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0;font-size:.85rem;overflow-x:auto}

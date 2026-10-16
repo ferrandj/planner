@@ -8,6 +8,13 @@ export interface ChangeEntry { version: string; date: string; items: ChangeItem[
 
 export const CHANGELOG: ChangeEntry[] = [
   {
+    version: '1.10.0', date: '2026-10-16',
+    items: [
+      { fr: '📁 Tes notes et tes fichiers sont aussi rangés dans un dossier lisible sans le planner : un dossier par matière, un sous-dossier par cours, avec notes.txt (en texte simple) et les fichiers joints sous leur nom.', en: '📁 Your notes and files are also stored in a folder you can read without the planner: one folder per subject, one sub-folder per class, with notes.txt (plain text) and the attached files under their own names.', es: '📁 Tus notas y tus archivos también se guardan en una carpeta legible sin el planner: una carpeta por asignatura, una subcarpeta por clase, con notes.txt (texto simple) y los archivos adjuntos con su nombre.' },
+      { fr: 'L’emplacement se choisit dans le docker-compose (LIBRARY_DIR). Le bouton 📁 Bibliothèque montre où il est, ce qu’il contient, et permet de l’éteindre ou de copier tout de suite. Rien n’est jamais effacé : ce que tu supprimes va dans « _Supprimé ».', en: 'You choose where it goes in the docker-compose file (LIBRARY_DIR). The 📁 Library button shows where it is and what it holds, and lets you switch it off or copy right away. Nothing is ever erased: what you delete goes to “_Supprimé”.', es: 'La ubicación se elige en el docker-compose (LIBRARY_DIR). El botón 📁 Biblioteca muestra dónde está y qué contiene, y permite apagarla o copiar ahora mismo. Nunca se borra nada: lo que eliminas va a « _Supprimé ».' }
+    ]
+  },
+  {
     version: '1.9.0', date: '2026-10-15',
     items: [
       { fr: '🏆 Un succès par séance : plus aucun palier sauté (1, 2, 3, 4, 5…), pour les séances de chaque matière, toutes matières confondues et les rattrapages.', en: '🏆 One achievement per class: no step skipped (1, 2, 3, 4, 5…), for each subject’s classes, all subjects together and catch-ups.', es: '🏆 Un logro por clase: ningún escalón saltado (1, 2, 3, 4, 5…), para las clases de cada asignatura, todas juntas y las recuperaciones.' },

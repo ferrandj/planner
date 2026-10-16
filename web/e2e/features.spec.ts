@@ -1,4 +1,6 @@
 import { expect, test } from '@playwright/test';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { getState, open, resetData, watch, waitSaved } from './helpers';
 
 test.beforeEach(async ({ request }) => { await resetData(request); });
@@ -87,6 +89,24 @@ test('manual catch-up: I choose the class and the hour for tomorrow, it is saved
   expect(Object.keys(st.data.picks).length).toBeLessThanOrEqual(2);
   expect(Object.keys(st.data.done)).toHaveLength(0);
   await expect(page.locator('.st.plan').first()).toBeVisible();
+});
+
+test('readable library: a note and a file added in the app appear as plain files in a subject / class folder on the server', async ({ page, request }) => {
+  await open(page);
+  await page.getByRole('button', { name: /Notes et pièces jointes/ }).first().click();
+  await page.getByLabel('Ajouter une note').fill('Penser à relire le chapitre 3');
+  await page.getByRole('button', { name: 'Ajouter le texte' }).click();
+  await page.locator('#nt-file').setInputFiles({ name: 'mon cours.pdf', mimeType: 'application/pdf', buffer: Buffer.from('%PDF-1.4 contenu du cours') });
+  await expect(page.getByText('mon cours.pdf')).toBeVisible();
+  await waitSaved(page);
+  const root = ((await (await request.get('/api/library')).json()) as { dir: string }).dir;      // the folder the server says it uses (same machine)
+  await expect.poll(() => existsSync(root) && readdirSync(root, { recursive: true }).map(String).some((f) => f.endsWith('mon cours.pdf')), { timeout: 15_000 }).toBe(true);
+  const all = readdirSync(root, { recursive: true }).map(String);
+  const notes = all.find((f) => f.endsWith('notes.txt')) as string;
+  expect(notes.split(/[\\/]/)).toHaveLength(3);                                 // subject / class / notes.txt
+  expect(readFileSync(join(root, notes), 'utf8')).toContain('Penser à relire le chapitre 3');
+  expect(readFileSync(join(root, notes.replace('notes.txt', 'mon cours.pdf')), 'utf8')).toBe('%PDF-1.4 contenu du cours');
+  expect(existsSync(join(root, 'LISEZ-MOI.txt'))).toBe(true);
 });
 
 test('add a subject and an assignment: kept after a reload; removed ones can be restored', async ({ page, request }) => {

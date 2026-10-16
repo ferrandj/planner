@@ -40,6 +40,7 @@ export interface Prefs {
   quiz?: boolean;        // the English question asked each time the app is opened (on unless switched off)
   remind?: boolean;      // reminders shortly before an event starts (in the app, and on the phone when enabled there)
   remindLead?: number;   // minutes before the start
+  library?: boolean;     // readable copy of the notes and files on the server (on unless switched off)
   remindSound?: boolean; // sound and vibration with the in-app reminder
 }
 

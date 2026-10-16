@@ -6,6 +6,7 @@ const crypto = require('crypto');
 const { Store } = require('./store');
 const seed = require('./seed');
 const { Push } = require('./push');
+const { Library } = require('./library');
 
 const MAX_STATE_BYTES = 32 * 1024 * 1024;
 const MAX_FILE_BYTES = 25 * 1024 * 1024;
@@ -125,6 +126,20 @@ function createServer(opts) {
       if (p === '/api/reminders' && m === 'PUT') return push.setReminders(input.items) ? send(res, 200, { ok: true }) : send(res, 400, { error: 'invalid reminders' });
       return send(res, 404, { error: 'not found' });
     }
+    if (p === '/api/library') {
+      const lib = opts.library;
+      if (!lib) return send(res, 200, { enabled: false });
+      if (m === 'GET') return send(res, 200, lib.status());
+      if (m === 'PUT') {
+        let input;
+        try { input = JSON.parse((await readBody(req, MAX_STATE_BYTES)).toString('utf8')); } catch (e) {
+          if (e.status) throw e;
+          return send(res, 400, { error: 'invalid JSON' });
+        }
+        const r = lib.sync(input.entries);
+        return send(res, r.ok ? 200 : (r.error === 'invalid library' ? 400 : 500), r);
+      }
+    }
     if (p === '/api/backups' && m === 'GET') return send(res, 200, { backups: store.listBackups() });
     if (p === '/api/backups/restore' && m === 'POST') {
       let input;
@@ -241,10 +256,11 @@ function main() {
   const every = process.env.SNAPSHOT_INTERVAL_SEC === undefined ? undefined : Math.max(0, parseFloat(process.env.SNAPSHOT_INTERVAL_SEC)) * 1000;
   const store = new Store(dataDir, { seed: function () { return seed.load(dataDir, undefined, process.env.DEFAULT_SEED); }, snapshotEveryMs: every }).init();
   const push = new Push(dataDir, { subject: process.env.VAPID_SUBJECT });
+  const library = new Library(path.resolve(process.env.LIBRARY_DIR || path.join(dataDir, 'library')), store);
   push.start();
-  const server = createServer({ store: store, push: push, authUser: process.env.AUTH_USER, authPassword: process.env.AUTH_PASSWORD });
+  const server = createServer({ store: store, push: push, library: library, authUser: process.env.AUTH_USER, authPassword: process.env.AUTH_PASSWORD });
   server.listen(port, '0.0.0.0', function () {
-    console.log('[planner] version ' + (process.env.APP_VERSION || 'dev') + ' listening on :' + port + ', data in ' + dataDir + ', revision ' + store.get().rev);
+    console.log('[planner] version ' + (process.env.APP_VERSION || 'dev') + ' listening on :' + port + ', data in ' + dataDir + ', readable notes in ' + library.dir + ', revision ' + store.get().rev);
   });
   const stop = function () { server.close(function () { process.exit(0); }); setTimeout(function () { process.exit(0); }, 3000).unref(); };
   process.on('SIGTERM', stop);
