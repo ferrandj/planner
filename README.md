@@ -195,13 +195,28 @@ catch-ups are counted on (older ticks count on the day of their class).
 
 ### English quiz at the door
 
-Each time the app is opened, a question appears first: **basic English, level A1**, 50 questions that go from easy to a little
-harder (words with pictures, polite phrases and introductions, "to be" / "to have", articles and plurals, numbers, days and months,
-everyday words). The question is shown in the language of the app **and in English underneath**; the four answers are in English.
-A wrong answer is fine: you still get in, the right answer turns **green** and a short explanation says what it means.
+Each time the app is opened, **five questions** of English come first, from **A1 to A2 then B1** (about 330 questions):
 
-The course goes in order: the next question is the first one you have not answered right yet (a wrong answer comes back at the
-next opening); once all 50 are done, the one asked longest ago comes back. Progress is saved with your data and earns English medals.
+- **A1** (50): words with pictures, polite phrases and introductions, "to be" / "to have", articles and plurals, numbers, days and months, everyday words;
+- **A2** (136): whole sentences: past, present and future, comparing, quantities, prepositions, modals, questions and replies in real situations (shop, restaurant, directions, phone…), "which sentence is correct?", expressions, short texts to read;
+- **B1** (143): present perfect, conditionals, passive, reported speech, relative clauses, linking words, phrasal verbs and collocations, opinions and complaints, longer texts with questions.
+
+Each question is shown in the language of the app **and in English underneath**; the four answers are in English. A wrong answer is
+fine: you still get in, the right answer turns **green** and a short explanation says why (in your language and in English). After
+the fifth question you see the score and the right answers, and then the way in.
+
+**The voice** 🔊: *Écouter la question* reads the question in English; after each answer the **right answer is read aloud**
+(and can be listened to again). The voice is a neural voice (Kokoro, American English), recorded once for every sentence and
+**shipped with the app** (`web/public/audio/en`, about 10 MB): the same clear accent on every device, nothing to install, and it
+keeps working offline once heard (the service worker keeps the recordings). If a recording is missing, the browser's own English
+voice reads the text instead. The 🔊 *Voix* button (or the switch in the 🎓 Quiz window) turns it off. To record the voice for a
+new or changed question, see `scripts/quiz-audio/generate.py` (the questions are in `web/src/data/quizEn*.json`; `qa` is what is read
+for the question, `aa` for the right answer).
+
+**The course goes level by level**: the next questions are always the first ones you have not answered right yet (a wrong answer
+comes back at the next opening), so **a level is finished before the next one starts**; when fewer than five are left they are
+completed with questions to review, and when everything is done the ones asked longest ago come back. Progress is saved with your
+data (per level in the 🎓 Quiz window) and earns English medals.
 
 Turn it off or on again with the **🎓 Quiz** button next to the language flags (or "Désactiver ce quiz" under the question). It is
 a learning tool, not a security lock: it only runs in the browser and does not protect the planner.

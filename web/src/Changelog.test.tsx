@@ -57,7 +57,10 @@ describe('what is new after an update', () => {
     const gate = screen.getByRole('dialog', { name: /Une question avant d’entrer/ });
     await new Promise((r) => setTimeout(r, 30));
     expect(screen.queryByRole('dialog', { name: /Nouveautés/ })).toBeNull();
-    await u.click(within(gate).getByRole('button', { name: 'cat' }));
+    for (let i = 0; i < 5; i++) {                                                  // the five questions of the round
+      await u.click(within(gate).getAllByRole('button').find((b) => b.classList.contains('qz-opt')) as HTMLElement);
+      await u.click(within(gate).getByRole('button', { name: i < 4 ? 'Question suivante' : 'Voir le résultat' }));
+    }
     await u.click(within(gate).getByRole('button', { name: 'Entrer dans le planner' }));
     expect(await screen.findByRole('dialog', { name: /Nouveautés/ })).toBeInTheDocument();
   });

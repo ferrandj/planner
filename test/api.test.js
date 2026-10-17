@@ -92,6 +92,7 @@ test('static files, traversal and healthz', async () => {
     const r = await fetch(url + '/app.js');
     assert.strictEqual(r.status, 200);
     assert.match(r.headers.get('content-security-policy'), /default-src 'self'/);
+    assert.match(r.headers.get('content-security-policy'), /media-src 'self' blob:/);       // the voice of the quiz is played from a blob
     const raw = await new Promise((resolve) => {
       require('net').connect(server.address().port, '127.0.0.1', function () {
         this.write('GET /../server/store.js HTTP/1.1\r\nHost: x\r\nConnection: close\r\n\r\n');

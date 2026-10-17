@@ -1,0 +1,2862 @@
+[
+{
+"id":"en-b1-001",
+"level":"b1",
+"q":"Complete: “I have lived in this city ___ 2018.”",
+"fr":"Complète : « I have lived in this city ___ 2018. »",
+"es":"Completa: « I have lived in this city ___ 2018. »",
+"correct":"since",
+"wrong":[
+"for",
+"from",
+"during"
+],
+"why":{
+"en":"“I have lived in this city since 2018.” With “for” (a length of time) or “since” (a starting point) we use the present perfect for something that started in the past and continues now.",
+"fr":"« I have lived in this city since 2018. » Avec « for » (durée) ou « since » (point de départ), on utilise le present perfect pour ce qui a commencé dans le passé et continue maintenant.",
+"es":"« I have lived in this city since 2018. » Con « for » (duración) o « since » (punto de partida) se usa el present perfect para algo que empezó en el pasado y continúa ahora."
+},
+"qa":"Complete the sentence. I have lived in this city blank 2018.",
+"aa":"I have lived in this city since 2018."
+},
+{
+"id":"en-b1-002",
+"level":"b1",
+"q":"Someone says: “I think we should recycle more.” What do you answer?",
+"fr":"Quelqu’un te dit : « I think we should recycle more. » Que réponds-tu ?",
+"es":"Alguien te dice: « I think we should recycle more. » ¿Qué respondes?",
+"correct":"I agree. It would help the planet.",
+"wrong":[
+"I agree. It helps me yesterday.",
+"I recycle more tomorrow was.",
+"You agree me."
+],
+"why":{
+"en":"To agree with an opinion: “I agree” or “You’re right”.",
+"fr":"Pour être d’accord : « I agree » ou « You’re right ».",
+"es":"Para estar de acuerdo: « I agree » o « You’re right »."
+},
+"qa":"Someone says: I think we should recycle more. What do you answer?",
+"aa":"I agree. It would help the planet."
+},
+{
+"id":"en-b1-003",
+"level":"b1",
+"q":"Complete: “If you heat water to 100 degrees, it ___.”",
+"fr":"Complète : « If you heat water to 100 degrees, it ___. »",
+"es":"Completa: « If you heat water to 100 degrees, it ___. »",
+"correct":"boils",
+"wrong":[
+"will boiled",
+"would boil",
+"boiling"
+],
+"why":{
+"en":"“If you heat water to 100 degrees, it boils.” Zero conditional: if + present, present. It is for general truths.",
+"fr":"« If you heat water to 100 degrees, it boils. » Conditionnel zéro : if + présent, présent. C’est pour les vérités générales.",
+"es":"« If you heat water to 100 degrees, it boils. » Condicional cero: if + presente, presente. Es para verdades generales."
+},
+"qa":"Complete the sentence. If you heat water to 100 degrees, it blank .",
+"aa":"If you heat water to 100 degrees, it boils."
+},
+{
+"id":"en-b1-004",
+"level":"b1",
+"q":"“Mia moved to London last year. At first she found it difficult because everyone spoke so fast, and she missed her family. However, she joined a language club, made friends, and now she says she wouldn’t go back.” Why was it difficult for Mia at first?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"People spoke very fast and she missed her family.",
+"wrong":[
+"She didn’t have a job.",
+"She lost her friends.",
+"The language club was too expensive."
+],
+"why":{
+"en":"“She found it difficult because everyone spoke so fast, and she missed her family.”",
+"fr":"« She found it difficult because everyone spoke so fast, and she missed her family » (tout le monde parlait vite, sa famille lui manquait).",
+"es":"« She found it difficult because everyone spoke so fast, and she missed her family » (todos hablaban rápido y echaba de menos a su familia)."
+},
+"qa":"Mia moved to London last year. At first she found it difficult because everyone spoke so fast, and she missed her family. However, she joined a language club, made friends, and now she says she wouldn't go back. Why was it difficult for Mia at first?",
+"aa":"People spoke very fast and she missed her family."
+},
+{
+"id":"en-b1-005",
+"level":"b1",
+"q":"Complete: “This church ___ in the 12th century.”",
+"fr":"Complète : « This church ___ in the 12th century. »",
+"es":"Completa: « This church ___ in the 12th century. »",
+"correct":"was built",
+"wrong":[
+"built",
+"is built",
+"has build"
+],
+"why":{
+"en":"“This church was built in the 12th century.” Past passive: was / were + past participle.",
+"fr":"« This church was built in the 12th century. » Passif au passé : was / were + participe passé.",
+"es":"« This church was built in the 12th century. » Pasiva en pasado: was / were + participio."
+},
+"qa":"Complete the sentence. This church blank in the 12th century.",
+"aa":"This church was built in the 12th century."
+},
+{
+"id":"en-b1-006",
+"level":"b1",
+"q":"Complete: “He said that he ___ tired.”",
+"fr":"Complète : « He said that he ___ tired. »",
+"es":"Completa: « He said that he ___ tired. »",
+"correct":"was",
+"wrong":[
+"be",
+"were",
+"been"
+],
+"why":{
+"en":"“He said that he was tired.” In reported speech the tense usually goes one step back (is → was, will → would, can → could).",
+"fr":"« He said that he was tired. » Au style indirect, le temps recule d’un cran (is → was, will → would, can → could).",
+"es":"« He said that he was tired. » En estilo indirecto el tiempo retrocede un paso (is → was, will → would, can → could)."
+},
+"qa":"Complete the sentence. He said that he blank tired.",
+"aa":"He said that he was tired."
+},
+{
+"id":"en-b1-007",
+"level":"b1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"If I won the lottery, I would buy a house.",
+"wrong":[
+"If I win the lottery, I would buy a house.",
+"If I would win the lottery, I would buy a house.",
+"If I won the lottery, I will buy a house."
+],
+"why":{
+"en":"Second conditional: if + past simple, would + base verb.",
+"fr":"Deuxième conditionnel : if + prétérit, would + verbe de base.",
+"es":"Segundo condicional: if + pasado simple, would + verbo base."
+},
+"qa":"Which sentence is correct?",
+"aa":"If I won the lottery, I would buy a house."
+},
+{
+"id":"en-b1-008",
+"level":"b1",
+"q":"Complete: “The woman ___ lives next door is a doctor.”",
+"fr":"Complète : « The woman ___ lives next door is a doctor. »",
+"es":"Completa: « The woman ___ lives next door is a doctor. »",
+"correct":"who",
+"wrong":[
+"which",
+"whose",
+"where"
+],
+"why":{
+"en":"“The woman who lives next door is a doctor.” In relative clauses: who = people, which = things, where = places, whose = belonging to someone.",
+"fr":"« The woman who lives next door is a doctor. » Dans les propositions relatives : who = personnes, which = choses, where = lieux, whose = appartenance.",
+"es":"« The woman who lives next door is a doctor. » En las oraciones de relativo: who = personas, which = cosas, where = lugares, whose = pertenencia."
+},
+"qa":"Complete the sentence. The woman blank lives next door is a doctor.",
+"aa":"The woman who lives next door is a doctor."
+},
+{
+"id":"en-b1-009",
+"level":"b1",
+"q":"Complete: “He has a lot of money and a huge car. He ___ be rich.”",
+"fr":"Complète : « He has a lot of money and a huge car. He ___ be rich. »",
+"es":"Completa: « He has a lot of money and a huge car. He ___ be rich. »",
+"correct":"must",
+"wrong":[
+"can’t",
+"should",
+"needn’t"
+],
+"why":{
+"en":"“He has a lot of money and a huge car. He must be rich.” To say you are almost sure: must be (certain), might / could be (possible), can’t be (impossible).",
+"fr":"« He has a lot of money and a huge car. He must be rich. » Pour exprimer une quasi-certitude : must be (certain), might / could be (possible), can’t be (impossible).",
+"es":"« He has a lot of money and a huge car. He must be rich. » Para expresar casi certeza: must be (seguro), might / could be (posible), can’t be (imposible)."
+},
+"qa":"Complete the sentence. He has a lot of money and a huge car. He blank be rich.",
+"aa":"He has a lot of money and a huge car. He must be rich."
+},
+{
+"id":"en-b1-010",
+"level":"b1",
+"q":"What does “to run out of time” mean?",
+"fr":"Que veut dire « to run out of time » ?",
+"es":"¿Qué significa « to run out of time »?",
+"correct":"to have no time left",
+"wrong":[
+"to run very fast",
+"to leave the room",
+"to lose the watch"
+],
+"why":{
+"en":"“Run out of” = have no more of something.",
+"fr":"« Run out of » = ne plus avoir de quelque chose.",
+"es":"« Run out of » = quedarse sin algo."
+},
+"qa":"What does to run out of time mean?",
+"aa":"to have no time left"
+},
+{
+"id":"en-b1-011",
+"level":"b1",
+"q":"Complete: “I enjoy ___ new languages.”",
+"fr":"Complète : « I enjoy ___ new languages. »",
+"es":"Completa: « I enjoy ___ new languages. »",
+"correct":"learning",
+"wrong":[
+"to learn",
+"learn",
+"learned"
+],
+"why":{
+"en":"“I enjoy learning new languages.” After enjoy, avoid, finish, suggest, mind and “be good at” we use the -ing form.",
+"fr":"« I enjoy learning new languages. » Après enjoy, avoid, finish, suggest, mind et « be good at », on utilise la forme en -ing.",
+"es":"« I enjoy learning new languages. » Después de enjoy, avoid, finish, suggest, mind y « be good at » se usa la forma en -ing."
+},
+"qa":"Complete the sentence. I enjoy blank new languages.",
+"aa":"I enjoy learning new languages."
+},
+{
+"id":"en-b1-012",
+"level":"b1",
+"q":"Complete: “___ it was raining, we went for a walk.”",
+"fr":"Complète : « ___ it was raining, we went for a walk. »",
+"es":"Completa: « ___ it was raining, we went for a walk. »",
+"correct":"Although",
+"wrong":[
+"Despite",
+"Because",
+"Unless"
+],
+"why":{
+"en":"“Although it was raining, we went for a walk.” “Although” and “even though” introduce a contrast (+ subject + verb). “Despite / in spite of” are followed by a noun or -ing.",
+"fr":"« Although it was raining, we went for a walk. » « Although » et « even though » introduisent une opposition (+ sujet + verbe). « Despite / in spite of » sont suivis d’un nom ou d’un verbe en -ing.",
+"es":"« Although it was raining, we went for a walk. » « Although » y « even though » introducen un contraste (+ sujeto + verbo). « Despite / in spite of » van seguidos de un nombre o -ing."
+},
+"qa":"Complete the sentence. blank it was raining, we went for a walk.",
+"aa":"Although it was raining, we went for a walk."
+},
+{
+"id":"en-b1-013",
+"level":"b1",
+"q":"Complete: “Don’t ___ up! You are almost there.”",
+"fr":"Complète : « Don’t ___ up! You are almost there. »",
+"es":"Completa: « Don’t ___ up! You are almost there. »",
+"correct":"give",
+"wrong":[
+"take",
+"put",
+"make"
+],
+"why":{
+"en":"“Don’t give up! You are almost there.” A phrasal verb is a verb + a small word, and the meaning changes. “Give up” = stop trying.",
+"fr":"« Don’t give up! You are almost there. » Un phrasal verb est un verbe + une petite particule, et le sens change. « Give up » = abandonner.",
+"es":"« Don’t give up! You are almost there. » Un phrasal verb es un verbo + una partícula, y el significado cambia. « Give up » = rendirse."
+},
+"qa":"Complete the sentence. Don't blank up! You are almost there.",
+"aa":"Don't give up! You are almost there."
+},
+{
+"id":"en-b1-014",
+"level":"b1",
+"q":"Someone says: “I don’t think this restaurant is very good.” What do you answer?",
+"fr":"Quelqu’un te dit : « I don’t think this restaurant is very good. » Que réponds-tu ?",
+"es":"Alguien te dice: « I don’t think this restaurant is very good. » ¿Qué respondes?",
+"correct":"I see what you mean, but I quite like it.",
+"wrong":[
+"I agree what you mean, but I like it quite.",
+"I see you mean, but I like quite.",
+"I am what you mean."
+],
+"why":{
+"en":"A polite way to disagree: “I see what you mean, but…”.",
+"fr":"Façon polie d’exprimer un désaccord : « I see what you mean, but… ».",
+"es":"Una forma educada de discrepar: « I see what you mean, but… »."
+},
+"qa":"Someone says: I don't think this restaurant is very good. What do you answer?",
+"aa":"I see what you mean, but I quite like it."
+},
+{
+"id":"en-b1-015",
+"level":"b1",
+"q":"Complete: “___ the rain, we went for a walk.”",
+"fr":"Complète : « ___ the rain, we went for a walk. »",
+"es":"Completa: « ___ the rain, we went for a walk. »",
+"correct":"Despite",
+"wrong":[
+"Although",
+"Even though",
+"However"
+],
+"why":{
+"en":"“Despite the rain, we went for a walk.” “Although” and “even though” introduce a contrast (+ subject + verb). “Despite / in spite of” are followed by a noun or -ing.",
+"fr":"« Despite the rain, we went for a walk. » « Although » et « even though » introduisent une opposition (+ sujet + verbe). « Despite / in spite of » sont suivis d’un nom ou d’un verbe en -ing.",
+"es":"« Despite the rain, we went for a walk. » « Although » y « even though » introducen un contraste (+ sujeto + verbo). « Despite / in spite of » van seguidos de un nombre o -ing."
+},
+"qa":"Complete the sentence. blank the rain, we went for a walk.",
+"aa":"Despite the rain, we went for a walk."
+},
+{
+"id":"en-b1-016",
+"level":"b1",
+"q":"Complete: “Can you ___ after my cat while I’m away?”",
+"fr":"Complète : « Can you ___ after my cat while I’m away? »",
+"es":"Completa: « Can you ___ after my cat while I’m away? »",
+"correct":"look",
+"wrong":[
+"see",
+"watch",
+"take"
+],
+"why":{
+"en":"“Can you look after my cat while I’m away?” A phrasal verb is a verb + a small word, and the meaning changes. “Look after” = take care of.",
+"fr":"« Can you look after my cat while I’m away? » Un phrasal verb est un verbe + une petite particule, et le sens change. « Look after » = s’occuper de.",
+"es":"« Can you look after my cat while I’m away? » Un phrasal verb es un verbo + una partícula, y el significado cambia. « Look after » = cuidar de."
+},
+"qa":"Complete the sentence. Can you blank after my cat while I'm away?",
+"aa":"Can you look after my cat while I'm away?"
+},
+{
+"id":"en-b1-017",
+"level":"b1",
+"q":"Complete: “We have known each other ___ ten years.”",
+"fr":"Complète : « We have known each other ___ ten years. »",
+"es":"Completa: « We have known each other ___ ten years. »",
+"correct":"for",
+"wrong":[
+"since",
+"from",
+"ago"
+],
+"why":{
+"en":"“We have known each other for ten years.” With “for” (a length of time) or “since” (a starting point) we use the present perfect for something that started in the past and continues now.",
+"fr":"« We have known each other for ten years. » Avec « for » (durée) ou « since » (point de départ), on utilise le present perfect pour ce qui a commencé dans le passé et continue maintenant.",
+"es":"« We have known each other for ten years. » Con « for » (duración) o « since » (punto de partida) se usa el present perfect para algo que empezó en el pasado y continúa ahora."
+},
+"qa":"Complete the sentence. We have known each other blank ten years.",
+"aa":"We have known each other for ten years."
+},
+{
+"id":"en-b1-018",
+"level":"b1",
+"q":"Complete: “If it rains tomorrow, we ___ at home.”",
+"fr":"Complète : « If it rains tomorrow, we ___ at home. »",
+"es":"Completa: « If it rains tomorrow, we ___ at home. »",
+"correct":"will stay",
+"wrong":[
+"would stay",
+"stayed",
+"stay will"
+],
+"why":{
+"en":"“If it rains tomorrow, we will stay at home.” First conditional: if + present simple, will + base verb. It is for real, possible situations.",
+"fr":"« If it rains tomorrow, we will stay at home. » Premier conditionnel : if + présent simple, will + verbe de base. Pour une situation réelle et possible.",
+"es":"« If it rains tomorrow, we will stay at home. » Primer condicional: if + presente simple, will + verbo base. Para situaciones reales y posibles."
+},
+"qa":"Complete the sentence. If it rains tomorrow, we blank at home.",
+"aa":"If it rains tomorrow, we will stay at home."
+},
+{
+"id":"en-b1-019",
+"level":"b1",
+"q":"“Mia moved to London last year. At first she found it difficult because everyone spoke so fast, and she missed her family. However, she joined a language club, made friends, and now she says she wouldn’t go back.” How does Mia feel now?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"She is happy in London.",
+"wrong":[
+"She wants to go home.",
+"She is bored with the club.",
+"She misses everyone."
+],
+"why":{
+"en":"“Now she says she wouldn’t go back”: she prefers to stay in London.",
+"fr":"« Now she says she wouldn’t go back » : elle préfère rester à Londres.",
+"es":"« Now she says she wouldn’t go back »: prefiere quedarse en Londres."
+},
+"qa":"Mia moved to London last year. At first she found it difficult because everyone spoke so fast, and she missed her family. However, she joined a language club, made friends, and now she says she wouldn't go back. How does Mia feel now?",
+"aa":"She is happy in London."
+},
+{
+"id":"en-b1-020",
+"level":"b1",
+"q":"What does “to take part in a competition” mean?",
+"fr":"Que veut dire « to take part in a competition » ?",
+"es":"¿Qué significa « to take part in a competition »?",
+"correct":"to participate in it",
+"wrong":[
+"to win it",
+"to watch it",
+"to organise it"
+],
+"why":{
+"en":"“Take part in” = participate.",
+"fr":"« Take part in » = participer à.",
+"es":"« Take part in » = participar en."
+},
+"qa":"What does to take part in a competition mean?",
+"aa":"to participate in it"
+},
+{
+"id":"en-b1-021",
+"level":"b1",
+"q":"Complete: “She decided ___ abroad for a year.”",
+"fr":"Complète : « She decided ___ abroad for a year. »",
+"es":"Completa: « She decided ___ abroad for a year. »",
+"correct":"to study",
+"wrong":[
+"studying",
+"study",
+"studied"
+],
+"why":{
+"en":"“She decided to study abroad for a year.” After want, decide, hope, plan, promise and “would like” we use “to” + base verb.",
+"fr":"« She decided to study abroad for a year. » Après want, decide, hope, plan, promise et « would like », on utilise « to » + verbe de base.",
+"es":"« She decided to study abroad for a year. » Después de want, decide, hope, plan, promise y « would like » se usa « to » + verbo base."
+},
+"qa":"Complete the sentence. She decided blank abroad for a year.",
+"aa":"She decided to study abroad for a year."
+},
+{
+"id":"en-b1-022",
+"level":"b1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"She asked me where I was going.",
+"wrong":[
+"She asked me where was I going.",
+"She asked me where I am going.",
+"She asked me where did I go."
+],
+"why":{
+"en":"Reported question: normal word order and the tense goes back.",
+"fr":"Question rapportée : ordre normal et le temps recule.",
+"es":"Pregunta indirecta: orden normal y el tiempo retrocede."
+},
+"qa":"Which sentence is correct?",
+"aa":"She asked me where I was going."
+},
+{
+"id":"en-b1-023",
+"level":"b1",
+"q":"Someone says: “Excuse me, could you tell me how to get to the museum?” What do you answer?",
+"fr":"Quelqu’un te dit : « Excuse me, could you tell me how to get to the museum? » Que réponds-tu ?",
+"es":"Alguien te dice: « Excuse me, could you tell me how to get to the museum? » ¿Qué respondes?",
+"correct":"Sure. Take the second street on the right.",
+"wrong":[
+"Sure. I tell you the second street.",
+"Yes, I could yesterday to the museum.",
+"Of course not. It is second."
+],
+"why":{
+"en":"Giving directions: “Take the second street on the right.”",
+"fr":"Pour indiquer un chemin : « Take the second street on the right ».",
+"es":"Para indicar el camino: « Take the second street on the right »."
+},
+"qa":"Someone says: Excuse me, could you tell me how to get to the museum? What do you answer?",
+"aa":"Sure. Take the second street on the right."
+},
+{
+"id":"en-b1-024",
+"level":"b1",
+"q":"Complete: “English ___ all over the world.”",
+"fr":"Complète : « English ___ all over the world. »",
+"es":"Completa: « English ___ all over the world. »",
+"correct":"is spoken",
+"wrong":[
+"speaks",
+"is speak",
+"spoken"
+],
+"why":{
+"en":"“English is spoken all over the world.” The passive is be + past participle. It puts the action, not the person, first.",
+"fr":"« English is spoken all over the world. » Le passif se forme avec be + participe passé. Il met l’action, pas la personne, en premier.",
+"es":"« English is spoken all over the world. » La pasiva se forma con be + participio. Pone la acción, no la persona, en primer lugar."
+},
+"qa":"Complete the sentence. English blank all over the world.",
+"aa":"English is spoken all over the world."
+},
+{
+"id":"en-b1-025",
+"level":"b1",
+"q":"Complete: “The hotel was cheap. ___, it was very clean.”",
+"fr":"Complète : « The hotel was cheap. ___, it was very clean. »",
+"es":"Completa: « The hotel was cheap. ___, it was very clean. »",
+"correct":"However",
+"wrong":[
+"Although",
+"Because",
+"So that"
+],
+"why":{
+"en":"“The hotel was cheap. However, it was very clean.” “However” starts a new sentence to show a contrast; “but” joins two parts of a sentence. Here the second sentence contrasts with the first: the hotel was cheap, but it was good.",
+"fr":"« The hotel was cheap. However, it was very clean. » « However » commence une nouvelle phrase pour marquer un contraste ; « but » relie deux parties d’une phrase. Ici la deuxième phrase s’oppose à ce qu’on attendait : l’hôtel était bon marché mais très propre.",
+"es":"« The hotel was cheap. However, it was very clean. » « However » empieza una frase nueva para marcar contraste; « but » une dos partes de una frase. Aquí la segunda frase contrasta con lo esperado: el hotel era barato pero muy limpio."
+},
+"qa":"Complete the sentence. The hotel was cheap. blank , it was very clean.",
+"aa":"The hotel was cheap. However, it was very clean."
+},
+{
+"id":"en-b1-026",
+"level":"b1",
+"q":"Complete: “She has just left, so she ___ be far away.”",
+"fr":"Complète : « She has just left, so she ___ be far away. »",
+"es":"Completa: « She has just left, so she ___ be far away. »",
+"correct":"can’t",
+"wrong":[
+"must",
+"might to",
+"shall"
+],
+"why":{
+"en":"“She has just left, so she can’t be far away.” To say you are almost sure: must be (certain), might / could be (possible), can’t be (impossible).",
+"fr":"« She has just left, so she can’t be far away. » Pour exprimer une quasi-certitude : must be (certain), might / could be (possible), can’t be (impossible).",
+"es":"« She has just left, so she can’t be far away. » Para expresar casi certeza: must be (seguro), might / could be (posible), can’t be (imposible)."
+},
+"qa":"Complete the sentence. She has just left, so she blank be far away.",
+"aa":"She has just left, so she can't be far away."
+},
+{
+"id":"en-b1-027",
+"level":"b1",
+"q":"Complete: “We have run ___ of milk. I’ll go to the shop.”",
+"fr":"Complète : « We have run ___ of milk. I’ll go to the shop. »",
+"es":"Completa: « We have run ___ of milk. I’ll go to the shop. »",
+"correct":"out",
+"wrong":[
+"off",
+"away",
+"up"
+],
+"why":{
+"en":"“We have run out of milk. I’ll go to the shop.” A phrasal verb is a verb + a small word, and the meaning changes. “Run out of” = have no more.",
+"fr":"« We have run out of milk. I’ll go to the shop. » Un phrasal verb est un verbe + une petite particule, et le sens change. « Run out of » = ne plus en avoir.",
+"es":"« We have run out of milk. I’ll go to the shop. » Un phrasal verb es un verbo + una partícula, y el significado cambia. « Run out of » = quedarse sin."
+},
+"qa":"Complete the sentence. We have run blank of milk. I'll go to the shop.",
+"aa":"We have run out of milk. I'll go to the shop."
+},
+{
+"id":"en-b1-028",
+"level":"b1",
+"q":"Complete: “She ___ in Madrid in 2015, but now she lives in Paris.”",
+"fr":"Complète : « She ___ in Madrid in 2015, but now she lives in Paris. »",
+"es":"Completa: « She ___ in Madrid in 2015, but now she lives in Paris. »",
+"correct":"worked",
+"wrong":[
+"has worked",
+"works",
+"was working since"
+],
+"why":{
+"en":"“She worked in Madrid in 2015, but now she lives in Paris.” Finished time (yesterday, last year, in 2019, ago) = past simple. Time that is not finished or not mentioned = present perfect.",
+"fr":"« She worked in Madrid in 2015, but now she lives in Paris. » Moment terminé (yesterday, last year, in 2019, ago) = prétérit. Moment non terminé ou non précisé = present perfect.",
+"es":"« She worked in Madrid in 2015, but now she lives in Paris. » Tiempo terminado (yesterday, last year, in 2019, ago) = pasado simple. Tiempo no terminado o sin precisar = present perfect."
+},
+"qa":"Complete the sentence. She blank in Madrid in 2015, but now she lives in Paris.",
+"aa":"She worked in Madrid in 2015, but now she lives in Paris."
+},
+{
+"id":"en-b1-029",
+"level":"b1",
+"q":"Complete: “If I ___ more time, I would learn the guitar.”",
+"fr":"Complète : « If I ___ more time, I would learn the guitar. »",
+"es":"Completa: « If I ___ more time, I would learn the guitar. »",
+"correct":"had",
+"wrong":[
+"have",
+"will have",
+"would have"
+],
+"why":{
+"en":"“If I had more time, I would learn the guitar.” Second conditional: if + past simple, would + base verb. It is for unreal or unlikely situations.",
+"fr":"« If I had more time, I would learn the guitar. » Deuxième conditionnel : if + prétérit, would + verbe de base. Pour une situation irréelle ou peu probable.",
+"es":"« If I had more time, I would learn the guitar. » Segundo condicional: if + pasado simple, would + verbo base. Para situaciones irreales o poco probables."
+},
+"qa":"Complete the sentence. If I blank more time, I would learn the guitar.",
+"aa":"If I had more time, I would learn the guitar."
+},
+{
+"id":"en-b1-030",
+"level":"b1",
+"q":"“Dear Mr Brown, I am writing to complain about the laptop I bought in your shop last week. It stopped working after two days. I would like a refund, or a new one if possible. I enclose the receipt. Yours sincerely, Laura Perez” What does Laura want?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"Her money back, or a new laptop.",
+"wrong":[
+"A cheaper laptop.",
+"To work in the shop.",
+"A repair next week."
+],
+"why":{
+"en":"“I would like a refund, or a new one if possible.”",
+"fr":"« I would like a refund, or a new one if possible » (un remboursement, ou un neuf).",
+"es":"« I would like a refund, or a new one if possible » (un reembolso, o uno nuevo)."
+},
+"qa":"Dear Mr Brown, I am writing to complain about the laptop I bought in your shop last week. It stopped working after two days. I would like a refund, or a new one if possible. I enclose the receipt. Yours sincerely, Laura Perez What does Laura want?",
+"aa":"Her money back, or a new laptop."
+},
+{
+"id":"en-b1-031",
+"level":"b1",
+"q":"Complete: “She told me that she ___ call me later.”",
+"fr":"Complète : « She told me that she ___ call me later. »",
+"es":"Completa: « She told me that she ___ call me later. »",
+"correct":"would",
+"wrong":[
+"shall to",
+"can to",
+"does"
+],
+"why":{
+"en":"“She told me that she would call me later.” In reported speech the tense usually goes one step back (is → was, will → would, can → could).",
+"fr":"« She told me that she would call me later. » Au style indirect, le temps recule d’un cran (is → was, will → would, can → could).",
+"es":"« She told me that she would call me later. » En estilo indirecto el tiempo retrocede un paso (is → was, will → would, can → could)."
+},
+"qa":"Complete the sentence. She told me that she blank call me later.",
+"aa":"She told me that she would call me later."
+},
+{
+"id":"en-b1-032",
+"level":"b1",
+"q":"What does “He is under the weather” mean?",
+"fr":"Que veut dire « He is under the weather » ?",
+"es":"¿Qué significa « He is under the weather »?",
+"correct":"He feels a little ill.",
+"wrong":[
+"He is outside in the rain.",
+"He is very angry.",
+"He is on holiday."
+],
+"why":{
+"en":"“Under the weather” = slightly unwell.",
+"fr":"« Under the weather » = un peu malade.",
+"es":"« Under the weather » = algo indispuesto."
+},
+"qa":"What does He is under the weather mean?",
+"aa":"He feels a little ill."
+},
+{
+"id":"en-b1-033",
+"level":"b1",
+"q":"Complete: “He suggested ___ to the beach.”",
+"fr":"Complète : « He suggested ___ to the beach. »",
+"es":"Completa: « He suggested ___ to the beach. »",
+"correct":"going",
+"wrong":[
+"to go",
+"go",
+"went"
+],
+"why":{
+"en":"“He suggested going to the beach.” After enjoy, avoid, finish, suggest, mind and “be good at” we use the -ing form.",
+"fr":"« He suggested going to the beach. » Après enjoy, avoid, finish, suggest, mind et « be good at », on utilise la forme en -ing.",
+"es":"« He suggested going to the beach. » Después de enjoy, avoid, finish, suggest, mind y « be good at » se usa la forma en -ing."
+},
+"qa":"Complete the sentence. He suggested blank to the beach.",
+"aa":"He suggested going to the beach."
+},
+{
+"id":"en-b1-034",
+"level":"b1",
+"q":"Someone says: “Why don’t we go to the beach this weekend?” What do you answer?",
+"fr":"Quelqu’un te dit : « Why don’t we go to the beach this weekend? » Que réponds-tu ?",
+"es":"Alguien te dice: « Why don’t we go to the beach this weekend? » ¿Qué respondes?",
+"correct":"Good idea! Let’s take a picnic.",
+"wrong":[
+"Good idea! We go the beach last weekend.",
+"Why we not go too.",
+"No, I don’t why."
+],
+"why":{
+"en":"“Why don’t we…?” is a suggestion. “Good idea” accepts it.",
+"fr":"« Why don’t we… ? » est une suggestion. « Good idea » l’accepte.",
+"es":"« Why don’t we…? » es una sugerencia. « Good idea » la acepta."
+},
+"qa":"Someone says: Why don't we go to the beach this weekend? What do you answer?",
+"aa":"Good idea! Let's take a picnic."
+},
+{
+"id":"en-b1-035",
+"level":"b1",
+"q":"Complete: “I’m saving money ___ I can travel next summer.”",
+"fr":"Complète : « I’m saving money ___ I can travel next summer. »",
+"es":"Completa: « I’m saving money ___ I can travel next summer. »",
+"correct":"so that",
+"wrong":[
+"because of",
+"despite",
+"in spite"
+],
+"why":{
+"en":"“I’m saving money so that I can travel next summer.” “So that” + subject + can / could gives the purpose of an action; “in order to” + verb also gives a purpose.",
+"fr":"« I’m saving money so that I can travel next summer. » « So that » + sujet + can / could donne le but d’une action ; « in order to » + verbe donne aussi un but.",
+"es":"« I’m saving money so that I can travel next summer. » « So that » + sujeto + can / could da la finalidad de una acción; « in order to » + verbo también."
+},
+"qa":"Complete the sentence. I'm saving money blank I can travel next summer.",
+"aa":"I'm saving money so that I can travel next summer."
+},
+{
+"id":"en-b1-036",
+"level":"b1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"The window was broken by the children.",
+"wrong":[
+"The window broke by the children.",
+"The window was break by the children.",
+"The window has broken by the children."
+],
+"why":{
+"en":"Passive in the past: was + past participle (broken) + by…",
+"fr":"Passif au passé : was + participe passé (broken) + by…",
+"es":"Pasiva en pasado: was + participio (broken) + by…"
+},
+"qa":"Which sentence is correct?",
+"aa":"The window was broken by the children."
+},
+{
+"id":"en-b1-037",
+"level":"b1",
+"q":"Complete: “This is the book ___ I told you about.”",
+"fr":"Complète : « This is the book ___ I told you about. »",
+"es":"Completa: « This is the book ___ I told you about. »",
+"correct":"that",
+"wrong":[
+"who",
+"where",
+"whose"
+],
+"why":{
+"en":"“This is the book that I told you about.” “That” can replace “who” or “which” in a defining relative clause.",
+"fr":"« This is the book that I told you about. » « That » peut remplacer « who » ou « which » dans une relative déterminative.",
+"es":"« This is the book that I told you about. » « That » puede sustituir a « who » o « which » en una oración de relativo especificativa."
+},
+"qa":"Complete the sentence. This is the book blank I told you about.",
+"aa":"This is the book that I told you about."
+},
+{
+"id":"en-b1-038",
+"level":"b1",
+"q":"Complete: “The meeting was ___ off because of the strike.”",
+"fr":"Complète : « The meeting was ___ off because of the strike. »",
+"es":"Completa: « The meeting was ___ off because of the strike. »",
+"correct":"called",
+"wrong":[
+"turned",
+"taken",
+"kept"
+],
+"why":{
+"en":"“The meeting was called off because of the strike.” A phrasal verb is a verb + a small word, and the meaning changes. “Call off” = cancel.",
+"fr":"« The meeting was called off because of the strike. » Un phrasal verb est un verbe + une petite particule, et le sens change. « Call off » = annuler.",
+"es":"« The meeting was called off because of the strike. » Un phrasal verb es un verbo + una partícula, y el significado cambia. « Call off » = cancelar."
+},
+"qa":"Complete the sentence. The meeting was blank off because of the strike.",
+"aa":"The meeting was called off because of the strike."
+},
+{
+"id":"en-b1-039",
+"level":"b1",
+"q":"Complete: “I ___ my homework yet. Can I do it after dinner?”",
+"fr":"Complète : « I ___ my homework yet. Can I do it after dinner? »",
+"es":"Completa: « I ___ my homework yet. Can I do it after dinner? »",
+"correct":"haven’t finished",
+"wrong":[
+"am not finishing",
+"don’t finish",
+"wasn’t finishing"
+],
+"why":{
+"en":"“I haven’t finished my homework yet. Can I do it after dinner?” Finished time (yesterday, last year, in 2019, ago) = past simple. Time that is not finished or not mentioned = present perfect.",
+"fr":"« I haven’t finished my homework yet. Can I do it after dinner? » Moment terminé (yesterday, last year, in 2019, ago) = prétérit. Moment non terminé ou non précisé = present perfect.",
+"es":"« I haven’t finished my homework yet. Can I do it after dinner? » Tiempo terminado (yesterday, last year, in 2019, ago) = pasado simple. Tiempo no terminado o sin precisar = present perfect."
+},
+"qa":"Complete the sentence. I blank my homework yet. Can I do it after dinner?",
+"aa":"I haven't finished my homework yet. Can I do it after dinner?"
+},
+{
+"id":"en-b1-040",
+"level":"b1",
+"q":"Someone says: “I’m afraid the manager is in a meeting.” What do you answer?",
+"fr":"Quelqu’un te dit : « I’m afraid the manager is in a meeting. » Que réponds-tu ?",
+"es":"Alguien te dice: « I’m afraid the manager is in a meeting. » ¿Qué respondes?",
+"correct":"That’s fine. Could I leave a message?",
+"wrong":[
+"That’s fine. I could leave a message yesterday.",
+"It’s fine. Is the message me?",
+"Fine. Leave you a message."
+],
+"why":{
+"en":"“Could I leave a message?” is a polite phone question.",
+"fr":"« Could I leave a message? » est une question polie au téléphone.",
+"es":"« Could I leave a message? » es una pregunta educada por teléfono."
+},
+"qa":"Someone says: I'm afraid the manager is in a meeting. What do you answer?",
+"aa":"That's fine. Could I leave a message?"
+},
+{
+"id":"en-b1-041",
+"level":"b1",
+"q":"Complete: “If I were you, I ___ that job.”",
+"fr":"Complète : « If I were you, I ___ that job. »",
+"es":"Completa: « If I were you, I ___ that job. »",
+"correct":"would take",
+"wrong":[
+"will take",
+"took",
+"would took"
+],
+"why":{
+"en":"“If I were you, I would take that job.” Second conditional: if + past simple, would + base verb. It is for unreal or unlikely situations.",
+"fr":"« If I were you, I would take that job. » Deuxième conditionnel : if + prétérit, would + verbe de base. Pour une situation irréelle ou peu probable.",
+"es":"« If I were you, I would take that job. » Segundo condicional: if + pasado simple, would + verbo base. Para situaciones irreales o poco probables."
+},
+"qa":"Complete the sentence. If I were you, I blank that job.",
+"aa":"If I were you, I would take that job."
+},
+{
+"id":"en-b1-042",
+"level":"b1",
+"q":"“Dear Mr Brown, I am writing to complain about the laptop I bought in your shop last week. It stopped working after two days. I would like a refund, or a new one if possible. I enclose the receipt. Yours sincerely, Laura Perez” What is this text?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"A formal letter of complaint.",
+"wrong":[
+"A message to a friend.",
+"An advertisement.",
+"A weather report."
+],
+"why":{
+"en":"“Dear Mr Brown… I am writing to complain… Yours sincerely” is a formal letter of complaint.",
+"fr":"« Dear Mr Brown… I am writing to complain… Yours sincerely » : une lettre de réclamation formelle.",
+"es":"« Dear Mr Brown… I am writing to complain… Yours sincerely »: una carta formal de queja."
+},
+"qa":"Dear Mr Brown, I am writing to complain about the laptop I bought in your shop last week. It stopped working after two days. I would like a refund, or a new one if possible. I enclose the receipt. Yours sincerely, Laura Perez What is this text?",
+"aa":"A formal letter of complaint."
+},
+{
+"id":"en-b1-043",
+"level":"b1",
+"q":"Complete: “The results will ___ tomorrow morning.”",
+"fr":"Complète : « The results will ___ tomorrow morning. »",
+"es":"Completa: « The results will ___ tomorrow morning. »",
+"correct":"be announced",
+"wrong":[
+"announce",
+"being announced",
+"been announced"
+],
+"why":{
+"en":"“The results will be announced tomorrow morning.” Future passive: will be + past participle.",
+"fr":"« The results will be announced tomorrow morning. » Passif au futur : will be + participe passé.",
+"es":"« The results will be announced tomorrow morning. » Pasiva en futuro: will be + participio."
+},
+"qa":"Complete the sentence. The results will blank tomorrow morning.",
+"aa":"The results will be announced tomorrow morning."
+},
+{
+"id":"en-b1-044",
+"level":"b1",
+"q":"What does “Break a leg!” mean?",
+"fr":"Que veut dire « Break a leg! » ?",
+"es":"¿Qué significa « Break a leg! »?",
+"correct":"Good luck!",
+"wrong":[
+"Be careful!",
+"Run fast!",
+"Don’t fall!"
+],
+"why":{
+"en":"“Break a leg!” is what people say to wish good luck, especially before a show.",
+"fr":"« Break a leg! » se dit pour souhaiter bonne chance, surtout avant un spectacle.",
+"es":"« Break a leg! » se dice para desear suerte, sobre todo antes de un espectáculo."
+},
+"qa":"What does Break a leg! mean?",
+"aa":"Good luck!"
+},
+{
+"id":"en-b1-045",
+"level":"b1",
+"q":"Complete: “I would like ___ you a question.”",
+"fr":"Complète : « I would like ___ you a question. »",
+"es":"Completa: « I would like ___ you a question. »",
+"correct":"to ask",
+"wrong":[
+"asking",
+"ask",
+"asked"
+],
+"why":{
+"en":"“I would like to ask you a question.” After want, decide, hope, plan, promise and “would like” we use “to” + base verb.",
+"fr":"« I would like to ask you a question. » Après want, decide, hope, plan, promise et « would like », on utilise « to » + verbe de base.",
+"es":"« I would like to ask you a question. » Después de want, decide, hope, plan, promise y « would like » se usa « to » + verbo base."
+},
+"qa":"Complete the sentence. I would like blank you a question.",
+"aa":"I would like to ask you a question."
+},
+{
+"id":"en-b1-046",
+"level":"b1",
+"q":"Complete: “She went to the shop ___ buy some milk.”",
+"fr":"Complète : « She went to the shop ___ buy some milk. »",
+"es":"Completa: « She went to the shop ___ buy some milk. »",
+"correct":"to",
+"wrong":[
+"for to",
+"so",
+"in order for"
+],
+"why":{
+"en":"“She went to the shop to buy some milk.” “So that” + subject + can / could gives the purpose of an action; “in order to” + verb also gives a purpose.",
+"fr":"« She went to the shop to buy some milk. » « So that » + sujet + can / could donne le but d’une action ; « in order to » + verbe donne aussi un but.",
+"es":"« She went to the shop to buy some milk. » « So that » + sujeto + can / could da la finalidad de una acción; « in order to » + verbo también."
+},
+"qa":"Complete the sentence. She went to the shop blank buy some milk.",
+"aa":"She went to the shop to buy some milk."
+},
+{
+"id":"en-b1-047",
+"level":"b1",
+"q":"Complete: “I’m not sure where Tom is. He ___ be at the library.”",
+"fr":"Complète : « I’m not sure where Tom is. He ___ be at the library. »",
+"es":"Completa: « I’m not sure where Tom is. He ___ be at the library. »",
+"correct":"might",
+"wrong":[
+"must",
+"can’t",
+"would to"
+],
+"why":{
+"en":"“I’m not sure where Tom is. He might be at the library.” To say you are almost sure: must be (certain), might / could be (possible), can’t be (impossible).",
+"fr":"« I’m not sure where Tom is. He might be at the library. » Pour exprimer une quasi-certitude : must be (certain), might / could be (possible), can’t be (impossible).",
+"es":"« I’m not sure where Tom is. He might be at the library. » Para expresar casi certeza: must be (seguro), might / could be (posible), can’t be (imposible)."
+},
+"qa":"Complete the sentence. I'm not sure where Tom is. He blank be at the library.",
+"aa":"I'm not sure where Tom is. He might be at the library."
+},
+{
+"id":"en-b1-048",
+"level":"b1",
+"q":"Complete: “I need to find ___ what time the train leaves.”",
+"fr":"Complète : « I need to find ___ what time the train leaves. »",
+"es":"Completa: « I need to find ___ what time the train leaves. »",
+"correct":"out",
+"wrong":[
+"up",
+"off",
+"at"
+],
+"why":{
+"en":"“I need to find out what time the train leaves.” A phrasal verb is a verb + a small word, and the meaning changes. “Find out” = discover information.",
+"fr":"« I need to find out what time the train leaves. » Un phrasal verb est un verbe + une petite particule, et le sens change. « Find out » = découvrir, se renseigner.",
+"es":"« I need to find out what time the train leaves. » Un phrasal verb es un verbo + una partícula, y el significado cambia. « Find out » = averiguar."
+},
+"qa":"Complete the sentence. I need to find blank what time the train leaves.",
+"aa":"I need to find out what time the train leaves."
+},
+{
+"id":"en-b1-049",
+"level":"b1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"I have been learning English for two years.",
+"wrong":[
+"I am learning English since two years.",
+"I have learned English since two years.",
+"I learn English for two years."
+],
+"why":{
+"en":"“For” + length of time with the present perfect (continuous).",
+"fr":"« For » + durée avec le present perfect (continu).",
+"es":"« For » + duración con el present perfect (continuous)."
+},
+"qa":"Which sentence is correct?",
+"aa":"I have been learning English for two years."
+},
+{
+"id":"en-b1-050",
+"level":"b1",
+"q":"Complete: “They ___ to Italy three times so far.”",
+"fr":"Complète : « They ___ to Italy three times so far. »",
+"es":"Completa: « They ___ to Italy three times so far. »",
+"correct":"have been",
+"wrong":[
+"were",
+"are",
+"had be"
+],
+"why":{
+"en":"“They have been to Italy three times so far.” Finished time (yesterday, last year, in 2019, ago) = past simple. Time that is not finished or not mentioned = present perfect.",
+"fr":"« They have been to Italy three times so far. » Moment terminé (yesterday, last year, in 2019, ago) = prétérit. Moment non terminé ou non précisé = present perfect.",
+"es":"« They have been to Italy three times so far. » Tiempo terminado (yesterday, last year, in 2019, ago) = pasado simple. Tiempo no terminado o sin precisar = present perfect."
+},
+"qa":"Complete the sentence. They blank to Italy three times so far.",
+"aa":"They have been to Italy three times so far."
+},
+{
+"id":"en-b1-051",
+"level":"b1",
+"q":"Someone says: “I’ve lost my wallet!” What do you answer?",
+"fr":"Quelqu’un te dit : « I’ve lost my wallet! » Que réponds-tu ?",
+"es":"Alguien te dice: « I’ve lost my wallet! » ¿Qué respondes?",
+"correct":"Oh no! When did you last see it?",
+"wrong":[
+"Oh no! When have you last saw it?",
+"Oh no! When you see last?",
+"Oh no! Where did lost you it?"
+],
+"why":{
+"en":"A question about the past moment uses the past simple: When did you last see it?",
+"fr":"Une question sur un moment passé utilise le prétérit : When did you last see it ?",
+"es":"Una pregunta sobre un momento pasado usa el pasado simple: When did you last see it?"
+},
+"qa":"Someone says: I've lost my wallet! What do you answer?",
+"aa":"Oh no! When did you last see it?"
+},
+{
+"id":"en-b1-052",
+"level":"b1",
+"q":"Complete: “It was ___ a cold day that we stayed inside.”",
+"fr":"Complète : « It was ___ a cold day that we stayed inside. »",
+"es":"Completa: « It was ___ a cold day that we stayed inside. »",
+"correct":"such",
+"wrong":[
+"so",
+"too",
+"very much"
+],
+"why":{
+"en":"“It was such a cold day that we stayed inside.” “So” + adjective / adverb, “such a” + adjective + noun.",
+"fr":"« It was such a cold day that we stayed inside. » « So » + adjectif / adverbe, « such a » + adjectif + nom.",
+"es":"« It was such a cold day that we stayed inside. » « So » + adjetivo / adverbio, « such a » + adjetivo + nombre."
+},
+"qa":"Complete the sentence. It was blank a cold day that we stayed inside.",
+"aa":"It was such a cold day that we stayed inside."
+},
+{
+"id":"en-b1-053",
+"level":"b1",
+"q":"Complete: “If she had studied harder, she ___ the exam.”",
+"fr":"Complète : « If she had studied harder, she ___ the exam. »",
+"es":"Completa: « If she had studied harder, she ___ the exam. »",
+"correct":"would have passed",
+"wrong":[
+"would pass",
+"will pass",
+"had passed"
+],
+"why":{
+"en":"“If she had studied harder, she would have passed the exam.” Third conditional: if + past perfect, would have + past participle. It is for imaginary situations in the past.",
+"fr":"« If she had studied harder, she would have passed the exam. » Troisième conditionnel : if + plus-que-parfait, would have + participe passé. Pour une situation imaginaire dans le passé.",
+"es":"« If she had studied harder, she would have passed the exam. » Tercer condicional: if + past perfect, would have + participio. Para situaciones imaginarias en el pasado."
+},
+"qa":"Complete the sentence. If she had studied harder, she blank the exam.",
+"aa":"If she had studied harder, she would have passed the exam."
+},
+{
+"id":"en-b1-054",
+"level":"b1",
+"q":"“Scientists say that most people need between seven and nine hours of sleep. If you sleep less than that for many nights, you may find it hard to concentrate and you may get ill more often.” What can happen if you don’t sleep enough?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"You may find it hard to concentrate.",
+"wrong":[
+"You will become taller.",
+"You will need less food.",
+"You will forget your name."
+],
+"why":{
+"en":"“You may find it hard to concentrate and you may get ill more often.”",
+"fr":"« You may find it hard to concentrate and you may get ill more often ».",
+"es":"« You may find it hard to concentrate and you may get ill more often »."
+},
+"qa":"Scientists say that most people need between seven and nine hours of sleep. If you sleep less than that for many nights, you may find it hard to concentrate and you may get ill more often. What can happen if you don't sleep enough?",
+"aa":"You may find it hard to concentrate."
+},
+{
+"id":"en-b1-055",
+"level":"b1",
+"q":"Complete: “The teacher ___ us to open our books.”",
+"fr":"Complète : « The teacher ___ us to open our books. »",
+"es":"Completa: « The teacher ___ us to open our books. »",
+"correct":"told",
+"wrong":[
+"said",
+"spoke",
+"talked"
+],
+"why":{
+"en":"“The teacher told us to open our books.” “Tell” is followed by a person (told me), “say” is not (said that).",
+"fr":"« The teacher told us to open our books. » « Tell » est suivi d’une personne (told me), « say » non (said that).",
+"es":"« The teacher told us to open our books. » « Tell » va seguido de una persona (told me), « say » no (said that)."
+},
+"qa":"Complete the sentence. The teacher blank us to open our books.",
+"aa":"The teacher told us to open our books."
+},
+{
+"id":"en-b1-056",
+"level":"b1",
+"q":"What does “It’s raining cats and dogs” mean?",
+"fr":"Que veut dire « It’s raining cats and dogs » ?",
+"es":"¿Qué significa « It’s raining cats and dogs »?",
+"correct":"It’s raining very heavily.",
+"wrong":[
+"There are animals in the rain.",
+"It’s raining a little.",
+"It’s going to rain later."
+],
+"why":{
+"en":"An idiom: “raining cats and dogs” = raining very hard.",
+"fr":"Une expression : « raining cats and dogs » = il pleut des cordes.",
+"es":"Una expresión: « raining cats and dogs » = llueve a cántaros."
+},
+"qa":"What does It's raining cats and dogs mean?",
+"aa":"It's raining very heavily."
+},
+{
+"id":"en-b1-057",
+"level":"b1",
+"q":"Complete: “He stopped ___ because he was ill. He doesn’t smoke now.”",
+"fr":"Complète : « He stopped ___ because he was ill. He doesn’t smoke now. »",
+"es":"Completa: « He stopped ___ because he was ill. He doesn’t smoke now. »",
+"correct":"smoking",
+"wrong":[
+"to smoke",
+"smoke",
+"smoked"
+],
+"why":{
+"en":"“He stopped smoking because he was ill. He doesn’t smoke now.” “Stop + -ing” = stop doing something; “stop + to + verb” = stop in order to do something.",
+"fr":"« He stopped smoking because he was ill. He doesn’t smoke now. » « Stop + -ing » = arrêter de faire quelque chose ; « stop + to + verbe » = s’arrêter pour faire quelque chose.",
+"es":"« He stopped smoking because he was ill. He doesn’t smoke now. » « Stop + -ing » = dejar de hacer algo; « stop + to + verbo » = pararse para hacer algo."
+},
+"qa":"Complete the sentence. He stopped blank because he was ill. He doesn't smoke now.",
+"aa":"He stopped smoking because he was ill. He doesn't smoke now."
+},
+{
+"id":"en-b1-058",
+"level":"b1",
+"q":"Complete: “He ___ down the job offer because the salary was too low.”",
+"fr":"Complète : « He ___ down the job offer because the salary was too low. »",
+"es":"Completa: « He ___ down the job offer because the salary was too low. »",
+"correct":"turned",
+"wrong":[
+"put",
+"got",
+"looked"
+],
+"why":{
+"en":"“He turned down the job offer because the salary was too low.” A phrasal verb is a verb + a small word, and the meaning changes. “Turn down” = refuse.",
+"fr":"« He turned down the job offer because the salary was too low. » Un phrasal verb est un verbe + une petite particule, et le sens change. « Turn down » = refuser.",
+"es":"« He turned down the job offer because the salary was too low. » Un phrasal verb es un verbo + una partícula, y el significado cambia. « Turn down » = rechazar."
+},
+"qa":"Complete the sentence. He blank down the job offer because the salary was too low.",
+"aa":"He turned down the job offer because the salary was too low."
+},
+{
+"id":"en-b1-059",
+"level":"b1",
+"q":"Someone says: “I’m sorry, but this isn’t what I ordered.” What do you answer?",
+"fr":"Quelqu’un te dit : « I’m sorry, but this isn’t what I ordered. » Que réponds-tu ?",
+"es":"Alguien te dice: « I’m sorry, but this isn’t what I ordered. » ¿Qué respondes?",
+"correct":"I’m very sorry. I’ll change it right away.",
+"wrong":[
+"I’m very sorry. I change it right away yesterday.",
+"Sorry, you ordered not this.",
+"It is what you ordering."
+],
+"why":{
+"en":"Handling a complaint politely: apologise, then say what you will do.",
+"fr":"Répondre poliment à une plainte : s’excuser, puis dire ce que l’on va faire.",
+"es":"Responder con educación a una queja: disculparse y decir qué se va a hacer."
+},
+"qa":"Someone says: I'm sorry, but this isn't what I ordered. What do you answer?",
+"aa":"I'm very sorry. I'll change it right away."
+},
+{
+"id":"en-b1-060",
+"level":"b1",
+"q":"Complete: “My bike ___ last night.”",
+"fr":"Complète : « My bike ___ last night. »",
+"es":"Completa: « My bike ___ last night. »",
+"correct":"was stolen",
+"wrong":[
+"stolen",
+"was steal",
+"has stole"
+],
+"why":{
+"en":"“My bike was stolen last night.” Past passive: was / were + past participle.",
+"fr":"« My bike was stolen last night. » Passif au passé : was / were + participe passé.",
+"es":"« My bike was stolen last night. » Pasiva en pasado: was / were + participio."
+},
+"qa":"Complete the sentence. My bike blank last night.",
+"aa":"My bike was stolen last night."
+},
+{
+"id":"en-b1-061",
+"level":"b1",
+"q":"Complete: “The film was ___ boring that I fell asleep.”",
+"fr":"Complète : « The film was ___ boring that I fell asleep. »",
+"es":"Completa: « The film was ___ boring that I fell asleep. »",
+"correct":"so",
+"wrong":[
+"such",
+"too much",
+"very"
+],
+"why":{
+"en":"“The film was so boring that I fell asleep.” “So” + adjective / adverb, “such a” + adjective + noun.",
+"fr":"« The film was so boring that I fell asleep. » « So » + adjectif / adverbe, « such a » + adjectif + nom.",
+"es":"« The film was so boring that I fell asleep. » « So » + adjetivo / adverbio, « such a » + adjetivo + nombre."
+},
+"qa":"Complete the sentence. The film was blank boring that I fell asleep.",
+"aa":"The film was so boring that I fell asleep."
+},
+{
+"id":"en-b1-062",
+"level":"b1",
+"q":"Complete: “My cousin ___ his arm last month.”",
+"fr":"Complète : « My cousin ___ his arm last month. »",
+"es":"Completa: « My cousin ___ his arm last month. »",
+"correct":"broke",
+"wrong":[
+"has broken",
+"breaks",
+"was break"
+],
+"why":{
+"en":"“My cousin broke his arm last month.” Finished time (yesterday, last year, in 2019, ago) = past simple. Time that is not finished or not mentioned = present perfect.",
+"fr":"« My cousin broke his arm last month. » Moment terminé (yesterday, last year, in 2019, ago) = prétérit. Moment non terminé ou non précisé = present perfect.",
+"es":"« My cousin broke his arm last month. » Tiempo terminado (yesterday, last year, in 2019, ago) = pasado simple. Tiempo no terminado o sin precisar = present perfect."
+},
+"qa":"Complete the sentence. My cousin blank his arm last month.",
+"aa":"My cousin broke his arm last month."
+},
+{
+"id":"en-b1-063",
+"level":"b1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"He is the man whose car was stolen.",
+"wrong":[
+"He is the man who his car was stolen.",
+"He is the man which car was stolen.",
+"He is the man whose his car was stolen."
+],
+"why":{
+"en":"“Whose” replaces “his / her”: whose car = the car of the man.",
+"fr":"« Whose » remplace « his / her » : whose car = la voiture de l’homme.",
+"es":"« Whose » sustituye a « his / her »: whose car = el coche del hombre."
+},
+"qa":"Which sentence is correct?",
+"aa":"He is the man whose car was stolen."
+},
+{
+"id":"en-b1-064",
+"level":"b1",
+"q":"Complete: “That is the town ___ I was born.”",
+"fr":"Complète : « That is the town ___ I was born. »",
+"es":"Completa: « That is the town ___ I was born. »",
+"correct":"where",
+"wrong":[
+"who",
+"which",
+"whose"
+],
+"why":{
+"en":"“That is the town where I was born.” In relative clauses: who = people, which = things, where = places, whose = belonging to someone.",
+"fr":"« That is the town where I was born. » Dans les propositions relatives : who = personnes, which = choses, where = lieux, whose = appartenance.",
+"es":"« That is the town where I was born. » En las oraciones de relativo: who = personas, which = cosas, where = lugares, whose = pertenencia."
+},
+"qa":"Complete the sentence. That is the town blank I was born.",
+"aa":"That is the town where I was born."
+},
+{
+"id":"en-b1-065",
+"level":"b1",
+"q":"Complete: “If we ___ the bus, we wouldn’t have been late.”",
+"fr":"Complète : « If we ___ the bus, we wouldn’t have been late. »",
+"es":"Completa: « If we ___ the bus, we wouldn’t have been late. »",
+"correct":"hadn’t missed",
+"wrong":[
+"didn’t miss",
+"wouldn’t miss",
+"haven’t missed"
+],
+"why":{
+"en":"“If we hadn’t missed the bus, we wouldn’t have been late.” Third conditional: if + past perfect, would have + past participle. It is for imaginary situations in the past.",
+"fr":"« If we hadn’t missed the bus, we wouldn’t have been late. » Troisième conditionnel : if + plus-que-parfait, would have + participe passé. Pour une situation imaginaire dans le passé.",
+"es":"« If we hadn’t missed the bus, we wouldn’t have been late. » Tercer condicional: if + past perfect, would have + participio. Para situaciones imaginarias en el pasado."
+},
+"qa":"Complete the sentence. If we blank the bus, we wouldn't have been late.",
+"aa":"If we hadn't missed the bus, we wouldn't have been late."
+},
+{
+"id":"en-b1-066",
+"level":"b1",
+"q":"“The old cinema in our town closed in 2010. For years it was empty, but last month it reopened as a library and a café. Local people say they are delighted because there was nowhere to meet before.” What happened to the old cinema?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"It became a library and a café.",
+"wrong":[
+"It was destroyed.",
+"It is still empty.",
+"It became a school."
+],
+"why":{
+"en":"“It reopened as a library and a café.”",
+"fr":"« It reopened as a library and a café » (rouvert en bibliothèque et café).",
+"es":"« It reopened as a library and a café » (reabrió como biblioteca y cafetería)."
+},
+"qa":"The old cinema in our town closed in 2010. For years it was empty, but last month it reopened as a library and a café. Local people say they are delighted because there was nowhere to meet before. What happened to the old cinema?",
+"aa":"It became a library and a café."
+},
+{
+"id":"en-b1-067",
+"level":"b1",
+"q":"What does “to get along with someone” mean?",
+"fr":"Que veut dire « to get along with someone » ?",
+"es":"¿Qué significa « to get along with someone »?",
+"correct":"to have a good relationship with them",
+"wrong":[
+"to walk with them",
+"to travel with them",
+"to work for them"
+],
+"why":{
+"en":"“Get along (with)” = have a friendly relationship.",
+"fr":"« Get along (with) » = bien s’entendre (avec).",
+"es":"« Get along (with) » = llevarse bien (con)."
+},
+"qa":"What does to get along with someone mean?",
+"aa":"to have a good relationship with them"
+},
+{
+"id":"en-b1-068",
+"level":"b1",
+"q":"Complete: “On the way home, I stopped ___ some bread.”",
+"fr":"Complète : « On the way home, I stopped ___ some bread. »",
+"es":"Completa: « On the way home, I stopped ___ some bread. »",
+"correct":"to buy",
+"wrong":[
+"buying",
+"buy",
+"bought"
+],
+"why":{
+"en":"“On the way home, I stopped to buy some bread.” “Stop + -ing” = stop doing something; “stop + to + verb” = stop in order to do something.",
+"fr":"« On the way home, I stopped to buy some bread. » « Stop + -ing » = arrêter de faire quelque chose ; « stop + to + verbe » = s’arrêter pour faire quelque chose.",
+"es":"« On the way home, I stopped to buy some bread. » « Stop + -ing » = dejar de hacer algo; « stop + to + verbo » = pararse para hacer algo."
+},
+"qa":"Complete the sentence. On the way home, I stopped blank some bread.",
+"aa":"On the way home, I stopped to buy some bread."
+},
+{
+"id":"en-b1-069",
+"level":"b1",
+"q":"Complete: “You ___ have told me the truth. Now I’m angry.”",
+"fr":"Complète : « You ___ have told me the truth. Now I’m angry. »",
+"es":"Completa: « You ___ have told me the truth. Now I’m angry. »",
+"correct":"should",
+"wrong":[
+"must",
+"shall",
+"can"
+],
+"why":{
+"en":"“You should have told me the truth. Now I’m angry.” “Should have” + past participle criticises or regrets something in the past.",
+"fr":"« You should have told me the truth. Now I’m angry. » « Should have » + participe passé exprime un reproche ou un regret sur le passé.",
+"es":"« You should have told me the truth. Now I’m angry. » « Should have » + participio expresa reproche o arrepentimiento sobre el pasado."
+},
+"qa":"Complete the sentence. You blank have told me the truth. Now I'm angry.",
+"aa":"You should have told me the truth. Now I'm angry."
+},
+{
+"id":"en-b1-070",
+"level":"b1",
+"q":"Complete: “Please ___ on with your work. The exam is soon.”",
+"fr":"Complète : « Please ___ on with your work. The exam is soon. »",
+"es":"Completa: « Please ___ on with your work. The exam is soon. »",
+"correct":"get",
+"wrong":[
+"put",
+"turn",
+"take"
+],
+"why":{
+"en":"“Please get on with your work. The exam is soon.” A phrasal verb is a verb + a small word, and the meaning changes. “Get on with” = continue doing something.",
+"fr":"« Please get on with your work. The exam is soon. » Un phrasal verb est un verbe + une petite particule, et le sens change. « Get on with » = continuer, s’y remettre.",
+"es":"« Please get on with your work. The exam is soon. » Un phrasal verb es un verbo + una partícula, y el significado cambia. « Get on with » = seguir con."
+},
+"qa":"Complete the sentence. Please blank on with your work. The exam is soon.",
+"aa":"Please get on with your work. The exam is soon."
+},
+{
+"id":"en-b1-071",
+"level":"b1",
+"q":"Someone says: “Would you mind opening the window?” What do you answer?",
+"fr":"Quelqu’un te dit : « Would you mind opening the window? » Que réponds-tu ?",
+"es":"Alguien te dice: « Would you mind opening the window? » ¿Qué respondes?",
+"correct":"Not at all. It is a bit warm in here.",
+"wrong":[
+"Yes, I would mind. I open it.",
+"Not at all. I open yesterday.",
+"I mind not opening."
+],
+"why":{
+"en":"After “Would you mind…?”, “Not at all” means “of course, no problem”.",
+"fr":"Après « Would you mind… ? », « Not at all » veut dire « bien sûr, aucun problème ».",
+"es":"Después de « Would you mind…? », « Not at all » significa « claro, sin problema »."
+},
+"qa":"Someone says: Would you mind opening the window? What do you answer?",
+"aa":"Not at all. It is a bit warm in here."
+},
+{
+"id":"en-b1-072",
+"level":"b1",
+"q":"Complete: “He is not old ___ to drive a car. He is only fifteen.”",
+"fr":"Complète : « He is not old ___ to drive a car. He is only fifteen. »",
+"es":"Completa: « He is not old ___ to drive a car. He is only fifteen. »",
+"correct":"enough",
+"wrong":[
+"too",
+"very",
+"so"
+],
+"why":{
+"en":"“He is not old enough to drive a car. He is only fifteen.” “Too” + adjective = more than is good; adjective + “enough” = as much as needed.",
+"fr":"« He is not old enough to drive a car. He is only fifteen. » « Too » + adjectif = plus qu’il ne faut ; adjectif + « enough » = assez.",
+"es":"« He is not old enough to drive a car. He is only fifteen. » « Too » + adjetivo = más de lo conveniente; adjetivo + « enough » = lo suficiente."
+},
+"qa":"Complete the sentence. He is not old blank to drive a car. He is only fifteen.",
+"aa":"He is not old enough to drive a car. He is only fifteen."
+},
+{
+"id":"en-b1-073",
+"level":"b1",
+"q":"Complete: “I’m tired because I ___ since six o’clock this morning.”",
+"fr":"Complète : « I’m tired because I ___ since six o’clock this morning. »",
+"es":"Completa: « I’m tired because I ___ since six o’clock this morning. »",
+"correct":"have been working",
+"wrong":[
+"am working",
+"worked",
+"was working"
+],
+"why":{
+"en":"“I’m tired because I have been working since six o’clock this morning.” The present perfect continuous (have / has been + verb-ing) stresses an action that started in the past and is still going on, or has just stopped with a visible result.",
+"fr":"« I’m tired because I have been working since six o’clock this morning. » Le present perfect continu (have / has been + verbe en -ing) insiste sur une action commencée dans le passé qui continue encore, ou vient de s’arrêter avec un résultat visible.",
+"es":"« I’m tired because I have been working since six o’clock this morning. » El present perfect continuous (have / has been + verbo en -ing) destaca una acción que empezó en el pasado y continúa, o acaba de parar con un resultado visible."
+},
+"qa":"Complete the sentence. I'm tired because I blank since six o'clock this morning.",
+"aa":"I'm tired because I have been working since six o'clock this morning."
+},
+{
+"id":"en-b1-074",
+"level":"b1",
+"q":"Someone says: “I’ve just passed my driving test!” What do you answer?",
+"fr":"Quelqu’un te dit : « I’ve just passed my driving test! » Que réponds-tu ?",
+"es":"Alguien te dice: « I’ve just passed my driving test! » ¿Qué respondes?",
+"correct":"Congratulations! That’s great news.",
+"wrong":[
+"Congratulations! That is a bad news.",
+"Sorry to hear that.",
+"Good luck for it yesterday."
+],
+"why":{
+"en":"“Congratulations!” is for good news.",
+"fr":"« Congratulations! » s’utilise pour une bonne nouvelle.",
+"es":"« Congratulations! » se usa para buenas noticias."
+},
+"qa":"Someone says: I've just passed my driving test! What do you answer?",
+"aa":"Congratulations! That's great news."
+},
+{
+"id":"en-b1-075",
+"level":"b1",
+"q":"Complete: “You will be late ___ you hurry up.”",
+"fr":"Complète : « You will be late ___ you hurry up. »",
+"es":"Completa: « You will be late ___ you hurry up. »",
+"correct":"unless",
+"wrong":[
+"if",
+"when",
+"although"
+],
+"why":{
+"en":"“You will be late unless you hurry up.” “Unless” means “if … not”.",
+"fr":"« You will be late unless you hurry up. » « Unless » veut dire « si … ne … pas » (à moins que).",
+"es":"« You will be late unless you hurry up. » « Unless » significa « si … no » (a menos que)."
+},
+"qa":"Complete the sentence. You will be late blank you hurry up.",
+"aa":"You will be late unless you hurry up."
+},
+{
+"id":"en-b1-076",
+"level":"b1",
+"q":"“The old cinema in our town closed in 2010. For years it was empty, but last month it reopened as a library and a café. Local people say they are delighted because there was nowhere to meet before.” Why are local people happy?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"There is now a place to meet.",
+"wrong":[
+"The cinema is cheaper.",
+"The café is free.",
+"The town is bigger."
+],
+"why":{
+"en":"“There was nowhere to meet before.”",
+"fr":"« There was nowhere to meet before » (avant, il n’y avait aucun endroit où se retrouver).",
+"es":"« There was nowhere to meet before » (antes no había dónde quedar)."
+},
+"qa":"The old cinema in our town closed in 2010. For years it was empty, but last month it reopened as a library and a café. Local people say they are delighted because there was nowhere to meet before. Why are local people happy?",
+"aa":"There is now a place to meet."
+},
+{
+"id":"en-b1-077",
+"level":"b1",
+"q":"Complete: “The letter ___ by the manager himself.”",
+"fr":"Complète : « The letter ___ by the manager himself. »",
+"es":"Completa: « The letter ___ by the manager himself. »",
+"correct":"was signed",
+"wrong":[
+"signed",
+"is sign",
+"was sign"
+],
+"why":{
+"en":"“The letter was signed by the manager himself.” In the passive, “by” introduces the person or thing that does the action.",
+"fr":"« The letter was signed by the manager himself. » Au passif, « by » introduit celui ou ce qui fait l’action.",
+"es":"« The letter was signed by the manager himself. » En la pasiva, « by » introduce a quien hace la acción."
+},
+"qa":"Complete the sentence. The letter blank by the manager himself.",
+"aa":"The letter was signed by the manager himself."
+},
+{
+"id":"en-b1-078",
+"level":"b1",
+"q":"Complete: “He asked me ___ I wanted a coffee.”",
+"fr":"Complète : « He asked me ___ I wanted a coffee. »",
+"es":"Completa: « He asked me ___ I wanted a coffee. »",
+"correct":"if",
+"wrong":[
+"that",
+"what if",
+"do"
+],
+"why":{
+"en":"“He asked me if I wanted a coffee.” Reported questions use normal word order (no do / does / did) and “if” or “whether” for yes/no questions.",
+"fr":"« He asked me if I wanted a coffee. » Les questions au style indirect gardent l’ordre normal (pas de do / does / did) et utilisent « if » ou « whether » pour oui/non.",
+"es":"« He asked me if I wanted a coffee. » Las preguntas en estilo indirecto usan el orden normal (sin do / does / did) y « if » o « whether » para sí/no."
+},
+"qa":"Complete the sentence. He asked me blank I wanted a coffee.",
+"aa":"He asked me if I wanted a coffee."
+},
+{
+"id":"en-b1-079",
+"level":"b1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"You should have called me earlier.",
+"wrong":[
+"You should called me earlier.",
+"You should have call me earlier.",
+"You should had called me earlier."
+],
+"why":{
+"en":"“Should have” + past participle.",
+"fr":"« Should have » + participe passé.",
+"es":"« Should have » + participio."
+},
+"qa":"Which sentence is correct?",
+"aa":"You should have called me earlier."
+},
+{
+"id":"en-b1-080",
+"level":"b1",
+"q":"What does “on the other hand” mean?",
+"fr":"Que veut dire « on the other hand » ?",
+"es":"¿Qué significa « on the other hand »?",
+"correct":"looking at the opposite side",
+"wrong":[
+"using the right hand",
+"in addition",
+"in the end"
+],
+"why":{
+"en":"“On the other hand” introduces a contrasting point.",
+"fr":"« On the other hand » introduit un point de vue opposé.",
+"es":"« On the other hand » introduce un punto de vista opuesto."
+},
+"qa":"What does on the other hand mean?",
+"aa":"looking at the opposite side"
+},
+{
+"id":"en-b1-081",
+"level":"b1",
+"q":"Complete: “Please remember ___ the door when you leave.”",
+"fr":"Complète : « Please remember ___ the door when you leave. »",
+"es":"Completa: « Please remember ___ the door when you leave. »",
+"correct":"to lock",
+"wrong":[
+"locking",
+"lock",
+"locked"
+],
+"why":{
+"en":"“Please remember to lock the door when you leave.” “Remember + to” = not forget to do something; “remember + -ing” = remember something you did.",
+"fr":"« Please remember to lock the door when you leave. » « Remember + to » = ne pas oublier de faire ; « remember + -ing » = se souvenir d’avoir fait.",
+"es":"« Please remember to lock the door when you leave. » « Remember + to » = no olvidar hacer algo; « remember + -ing » = recordar haber hecho algo."
+},
+"qa":"Complete the sentence. Please remember blank the door when you leave.",
+"aa":"Please remember to lock the door when you leave."
+},
+{
+"id":"en-b1-082",
+"level":"b1",
+"q":"Complete: “The coffee is ___ hot to drink. Let’s wait.”",
+"fr":"Complète : « The coffee is ___ hot to drink. Let’s wait. »",
+"es":"Completa: « The coffee is ___ hot to drink. Let’s wait. »",
+"correct":"too",
+"wrong":[
+"enough",
+"so",
+"such"
+],
+"why":{
+"en":"“The coffee is too hot to drink. Let’s wait.” “Too” + adjective = more than is good; adjective + “enough” = as much as needed.",
+"fr":"« The coffee is too hot to drink. Let’s wait. » « Too » + adjectif = plus qu’il ne faut ; adjectif + « enough » = assez.",
+"es":"« The coffee is too hot to drink. Let’s wait. » « Too » + adjetivo = más de lo conveniente; adjetivo + « enough » = lo suficiente."
+},
+"qa":"Complete the sentence. The coffee is blank hot to drink. Let's wait.",
+"aa":"The coffee is too hot to drink. Let's wait."
+},
+{
+"id":"en-b1-083",
+"level":"b1",
+"q":"Complete: “Don’t ___ off until tomorrow what you can do today.”",
+"fr":"Complète : « Don’t ___ off until tomorrow what you can do today. »",
+"es":"Completa: « Don’t ___ off until tomorrow what you can do today. »",
+"correct":"put",
+"wrong":[
+"turn",
+"take",
+"give"
+],
+"why":{
+"en":"“Don’t put off until tomorrow what you can do today.” A phrasal verb is a verb + a small word, and the meaning changes. “Put off” = delay.",
+"fr":"« Don’t put off until tomorrow what you can do today. » Un phrasal verb est un verbe + une petite particule, et le sens change. « Put off » = reporter, remettre à plus tard.",
+"es":"« Don’t put off until tomorrow what you can do today. » Un phrasal verb es un verbo + una partícula, y el significado cambia. « Put off » = aplazar."
+},
+"qa":"Complete the sentence. Don't blank off until tomorrow what you can do today.",
+"aa":"Don't put off until tomorrow what you can do today."
+},
+{
+"id":"en-b1-084",
+"level":"b1",
+"q":"Complete: “Your eyes are red. ___ you been crying?”",
+"fr":"Complète : « Your eyes are red. ___ you been crying? »",
+"es":"Completa: « Your eyes are red. ___ you been crying? »",
+"correct":"Have",
+"wrong":[
+"Did",
+"Do",
+"Were"
+],
+"why":{
+"en":"“Your eyes are red. Have you been crying?” The present perfect continuous (have / has been + verb-ing) stresses an action that started in the past and is still going on, or has just stopped with a visible result.",
+"fr":"« Your eyes are red. Have you been crying? » Le present perfect continu (have / has been + verbe en -ing) insiste sur une action commencée dans le passé qui continue encore, ou vient de s’arrêter avec un résultat visible.",
+"es":"« Your eyes are red. Have you been crying? » El present perfect continuous (have / has been + verbo en -ing) destaca una acción que empezó en el pasado y continúa, o acaba de parar con un resultado visible."
+},
+"qa":"Complete the sentence. Your eyes are red. blank you been crying?",
+"aa":"Your eyes are red. Have you been crying?"
+},
+{
+"id":"en-b1-085",
+"level":"b1",
+"q":"Someone says: “I’ve got an interview tomorrow.” What do you answer?",
+"fr":"Quelqu’un te dit : « I’ve got an interview tomorrow. » Que réponds-tu ?",
+"es":"Alguien te dice: « I’ve got an interview tomorrow. » ¿Qué respondes?",
+"correct":"Good luck! I’m sure you’ll do well.",
+"wrong":[
+"Congratulations! You did well.",
+"Sorry to hear that.",
+"Good luck! You were well."
+],
+"why":{
+"en":"Before an important event we say “Good luck!”.",
+"fr":"Avant un événement important, on dit « Good luck! ».",
+"es":"Antes de un evento importante se dice « Good luck! »."
+},
+"qa":"Someone says: I've got an interview tomorrow. What do you answer?",
+"aa":"Good luck! I'm sure you'll do well."
+},
+{
+"id":"en-b1-086",
+"level":"b1",
+"q":"Complete: “There are ___ people in the café, so we can sit anywhere.”",
+"fr":"Complète : « There are ___ people in the café, so we can sit anywhere. »",
+"es":"Completa: « There are ___ people in the café, so we can sit anywhere. »",
+"correct":"few",
+"wrong":[
+"little",
+"much",
+"a little"
+],
+"why":{
+"en":"“There are few people in the café, so we can sit anywhere.” “Few” + countable (not many), “little” + uncountable (not much); “a few / a little” = some, enough.",
+"fr":"« There are few people in the café, so we can sit anywhere. » « Few » + dénombrable (peu), « little » + indénombrable (peu) ; « a few / a little » = quelques, un peu.",
+"es":"« There are few people in the café, so we can sit anywhere. » « Few » + contable (pocos), « little » + incontable (poco); « a few / a little » = algunos, un poco."
+},
+"qa":"Complete the sentence. There are blank people in the café, so we can sit anywhere.",
+"aa":"There are few people in the café, so we can sit anywhere."
+},
+{
+"id":"en-b1-087",
+"level":"b1",
+"q":"Complete: “When I was a child I ___ wear a uniform at school.”",
+"fr":"Complète : « When I was a child I ___ wear a uniform at school. »",
+"es":"Completa: « When I was a child I ___ wear a uniform at school. »",
+"correct":"had to",
+"wrong":[
+"must",
+"have to",
+"should"
+],
+"why":{
+"en":"“When I was a child I had to wear a uniform at school.” “Had to” is the past of “must / have to”.",
+"fr":"« When I was a child I had to wear a uniform at school. » « Had to » est le passé de « must / have to ».",
+"es":"« When I was a child I had to wear a uniform at school. » « Had to » es el pasado de « must / have to »."
+},
+"qa":"Complete the sentence. When I was a child I blank wear a uniform at school.",
+"aa":"When I was a child I had to wear a uniform at school."
+},
+{
+"id":"en-b1-088",
+"level":"b1",
+"q":"Complete: “I always ___ a lot of mistakes in my emails.”",
+"fr":"Complète : « I always ___ a lot of mistakes in my emails. »",
+"es":"Completa: « I always ___ a lot of mistakes in my emails. »",
+"correct":"make",
+"wrong":[
+"do",
+"take",
+"have"
+],
+"why":{
+"en":"“I always make a lot of mistakes in my emails.” Some words go together naturally (collocations): make a mistake, do homework, take a photo, have a shower.",
+"fr":"« I always make a lot of mistakes in my emails. » Certains mots vont naturellement ensemble (collocations) : make a mistake, do homework, take a photo, have a shower.",
+"es":"« I always make a lot of mistakes in my emails. » Algunas palabras van juntas de forma natural (colocaciones): make a mistake, do homework, take a photo, have a shower."
+},
+"qa":"Complete the sentence. I always blank a lot of mistakes in my emails.",
+"aa":"I always make a lot of mistakes in my emails."
+},
+{
+"id":"en-b1-089",
+"level":"b1",
+"q":"Complete: “I’ll call you as soon as I ___ home.”",
+"fr":"Complète : « I’ll call you as soon as I ___ home. »",
+"es":"Completa: « I’ll call you as soon as I ___ home. »",
+"correct":"get",
+"wrong":[
+"will get",
+"am getting",
+"got"
+],
+"why":{
+"en":"“I’ll call you as soon as I get home.” After when, as soon as, before, after, until we use the present simple (not “will”) for the future.",
+"fr":"« I’ll call you as soon as I get home. » Après when, as soon as, before, after, until, on utilise le présent simple (pas « will ») pour parler du futur.",
+"es":"« I’ll call you as soon as I get home. » Después de when, as soon as, before, after, until se usa el presente simple (no « will ») para el futuro."
+},
+"qa":"Complete the sentence. I'll call you as soon as I blank home.",
+"aa":"I'll call you as soon as I get home."
+},
+{
+"id":"en-b1-090",
+"level":"b1",
+"q":"“When I was young, I used to spend every summer with my grandparents in the mountains. We had no television, so we played cards, read books and walked in the forest. Now I live in a big city, and those holidays are my best memories.” What did the writer do at his grandparents’ house?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"He played cards, read and walked in the forest.",
+"wrong":[
+"He watched television all day.",
+"He worked on a farm.",
+"He studied for exams."
+],
+"why":{
+"en":"“We had no television, so we played cards, read books and walked in the forest.”",
+"fr":"« We had no television, so we played cards, read books and walked in the forest ».",
+"es":"« We had no television, so we played cards, read books and walked in the forest »."
+},
+"qa":"When I was young, I used to spend every summer with my grandparents in the mountains. We had no television, so we played cards, read books and walked in the forest. Now I live in a big city, and those holidays are my best memories. What did the writer do at his grandparents' house?",
+"aa":"He played cards, read and walked in the forest."
+},
+{
+"id":"en-b1-091",
+"level":"b1",
+"q":"What does “to be in charge of a project” mean?",
+"fr":"Que veut dire « to be in charge of a project » ?",
+"es":"¿Qué significa « to be in charge of a project »?",
+"correct":"to be responsible for it",
+"wrong":[
+"to pay for it",
+"to be afraid of it",
+"to forget it"
+],
+"why":{
+"en":"“Be in charge of” = be responsible for.",
+"fr":"« Be in charge of » = être responsable de.",
+"es":"« Be in charge of » = ser responsable de."
+},
+"qa":"What does to be in charge of a project mean?",
+"aa":"to be responsible for it"
+},
+{
+"id":"en-b1-092",
+"level":"b1",
+"q":"Complete: “I remember ___ this song when I was a child.”",
+"fr":"Complète : « I remember ___ this song when I was a child. »",
+"es":"Completa: « I remember ___ this song when I was a child. »",
+"correct":"hearing",
+"wrong":[
+"to hear",
+"hear",
+"heard to"
+],
+"why":{
+"en":"“I remember hearing this song when I was a child.” “Remember + to” = not forget to do something; “remember + -ing” = remember something you did.",
+"fr":"« I remember hearing this song when I was a child. » « Remember + to » = ne pas oublier de faire ; « remember + -ing » = se souvenir d’avoir fait.",
+"es":"« I remember hearing this song when I was a child. » « Remember + to » = no olvidar hacer algo; « remember + -ing » = recordar haber hecho algo."
+},
+"qa":"Complete the sentence. I remember blank this song when I was a child.",
+"aa":"I remember hearing this song when I was a child."
+},
+{
+"id":"en-b1-093",
+"level":"b1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"I’m looking forward to seeing you.",
+"wrong":[
+"I’m looking forward to see you.",
+"I’m looking forward seeing you.",
+"I look forward to seeing you now."
+],
+"why":{
+"en":"In “look forward to”, “to” is a preposition, so it is followed by -ing.",
+"fr":"Dans « look forward to », « to » est une préposition : elle est suivie du -ing.",
+"es":"En « look forward to », « to » es una preposición: va seguida de -ing."
+},
+"qa":"Which sentence is correct?",
+"aa":"I'm looking forward to seeing you."
+},
+{
+"id":"en-b1-094",
+"level":"b1",
+"q":"Complete: “I have a friend ___ father is a pilot.”",
+"fr":"Complète : « I have a friend ___ father is a pilot. »",
+"es":"Completa: « I have a friend ___ father is a pilot. »",
+"correct":"whose",
+"wrong":[
+"who",
+"which",
+"that"
+],
+"why":{
+"en":"“I have a friend whose father is a pilot.” In relative clauses: who = people, which = things, where = places, whose = belonging to someone.",
+"fr":"« I have a friend whose father is a pilot. » Dans les propositions relatives : who = personnes, which = choses, where = lieux, whose = appartenance.",
+"es":"« I have a friend whose father is a pilot. » En las oraciones de relativo: who = personas, which = cosas, where = lugares, whose = pertenencia."
+},
+"qa":"Complete the sentence. I have a friend blank father is a pilot.",
+"aa":"I have a friend whose father is a pilot."
+},
+{
+"id":"en-b1-095",
+"level":"b1",
+"q":"Complete: “When we arrived at the cinema, the film ___.”",
+"fr":"Complète : « When we arrived at the cinema, the film ___. »",
+"es":"Completa: « When we arrived at the cinema, the film ___. »",
+"correct":"had already started",
+"wrong":[
+"has already started",
+"already starting",
+"was already start"
+],
+"why":{
+"en":"“When we arrived at the cinema, the film had already started.” The past perfect (had + past participle) is for an action that happened before another action in the past.",
+"fr":"« When we arrived at the cinema, the film had already started. » Le plus-que-parfait (had + participe passé) sert pour une action antérieure à une autre action passée.",
+"es":"« When we arrived at the cinema, the film had already started. » El past perfect (had + participio) se usa para una acción anterior a otra acción pasada."
+},
+"qa":"Complete the sentence. When we arrived at the cinema, the film blank .",
+"aa":"When we arrived at the cinema, the film had already started."
+},
+{
+"id":"en-b1-096",
+"level":"b1",
+"q":"Someone says: “Do you fancy going out for dinner tonight?” What do you answer?",
+"fr":"Quelqu’un te dit : « Do you fancy going out for dinner tonight? » Que réponds-tu ?",
+"es":"Alguien te dice: « Do you fancy going out for dinner tonight? » ¿Qué respondes?",
+"correct":"I’d love to, but I’m afraid I’m busy.",
+"wrong":[
+"I’d love to, but I’m afraid I’m business.",
+"I’d love, but busy am I.",
+"I fancy not to go out."
+],
+"why":{
+"en":"A polite refusal: “I’d love to, but…”.",
+"fr":"Un refus poli : « I’d love to, but… ».",
+"es":"Un rechazo educado: « I’d love to, but… »."
+},
+"qa":"Someone says: Do you fancy going out for dinner tonight? What do you answer?",
+"aa":"I'd love to, but I'm afraid I'm busy."
+},
+{
+"id":"en-b1-097",
+"level":"b1",
+"q":"Complete: “Mobile phones must ___ off during the exam.”",
+"fr":"Complète : « Mobile phones must ___ off during the exam. »",
+"es":"Completa: « Mobile phones must ___ off during the exam. »",
+"correct":"be turned",
+"wrong":[
+"turn",
+"being turned",
+"to turn"
+],
+"why":{
+"en":"“Mobile phones must be turned off during the exam.” The passive is be + past participle. It puts the action, not the person, first.",
+"fr":"« Mobile phones must be turned off during the exam. » Le passif se forme avec be + participe passé. Il met l’action, pas la personne, en premier.",
+"es":"« Mobile phones must be turned off during the exam. » La pasiva se forma con be + participio. Pone la acción, no la persona, en primer lugar."
+},
+"qa":"Complete the sentence. Mobile phones must blank off during the exam.",
+"aa":"Mobile phones must be turned off during the exam."
+},
+{
+"id":"en-b1-098",
+"level":"b1",
+"q":"Complete: “I have ___ time, so I can’t help you now.”",
+"fr":"Complète : « I have ___ time, so I can’t help you now. »",
+"es":"Completa: « I have ___ time, so I can’t help you now. »",
+"correct":"little",
+"wrong":[
+"few",
+"many",
+"a few"
+],
+"why":{
+"en":"“I have little time, so I can’t help you now.” “Few” + countable (not many), “little” + uncountable (not much); “a few / a little” = some, enough.",
+"fr":"« I have little time, so I can’t help you now. » « Few » + dénombrable (peu), « little » + indénombrable (peu) ; « a few / a little » = quelques, un peu.",
+"es":"« I have little time, so I can’t help you now. » « Few » + contable (pocos), « little » + incontable (poco); « a few / a little » = algunos, un poco."
+},
+"qa":"Complete the sentence. I have blank time, so I can't help you now.",
+"aa":"I have little time, so I can't help you now."
+},
+{
+"id":"en-b1-099",
+"level":"b1",
+"q":"Complete: “Can you ___ me a favour?”",
+"fr":"Complète : « Can you ___ me a favour? »",
+"es":"Completa: « Can you ___ me a favour? »",
+"correct":"do",
+"wrong":[
+"make",
+"take",
+"give out"
+],
+"why":{
+"en":"“Can you do me a favour?” Some words go together naturally (collocations): make a mistake, do homework, take a photo, have a shower.",
+"fr":"« Can you do me a favour? » Certains mots vont naturellement ensemble (collocations) : make a mistake, do homework, take a photo, have a shower.",
+"es":"« Can you do me a favour? » Algunas palabras van juntas de forma natural (colocaciones): make a mistake, do homework, take a photo, have a shower."
+},
+"qa":"Complete the sentence. Can you blank me a favour?",
+"aa":"Can you do me a favour?"
+},
+{
+"id":"en-b1-100",
+"level":"b1",
+"q":"Complete: “Wait here until the doctor ___ you.”",
+"fr":"Complète : « Wait here until the doctor ___ you. »",
+"es":"Completa: « Wait here until the doctor ___ you. »",
+"correct":"calls",
+"wrong":[
+"will call",
+"is calling",
+"called"
+],
+"why":{
+"en":"“Wait here until the doctor calls you.” After when, as soon as, before, after, until we use the present simple (not “will”) for the future.",
+"fr":"« Wait here until the doctor calls you. » Après when, as soon as, before, after, until, on utilise le présent simple (pas « will ») pour parler du futur.",
+"es":"« Wait here until the doctor calls you. » Después de when, as soon as, before, after, until se usa el presente simple (no « will ») para el futuro."
+},
+"qa":"Complete the sentence. Wait here until the doctor blank you.",
+"aa":"Wait here until the doctor calls you."
+},
+{
+"id":"en-b1-101",
+"level":"b1",
+"q":"“Our flight was cancelled because of fog, so the airline gave us a hotel for the night and a new flight the next morning. We were annoyed at first, but the hotel was lovely and we had a very good dinner.” What does the writer think about the hotel?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"It was lovely.",
+"wrong":[
+"It was too noisy.",
+"It was very far away.",
+"It was too expensive."
+],
+"why":{
+"en":"“The hotel was lovely and we had a very good dinner.”",
+"fr":"« The hotel was lovely and we had a very good dinner » (l’hôtel était charmant).",
+"es":"« The hotel was lovely and we had a very good dinner » (el hotel era encantador)."
+},
+"qa":"Our flight was cancelled because of fog, so the airline gave us a hotel for the night and a new flight the next morning. We were annoyed at first, but the hotel was lovely and we had a very good dinner. What does the writer think about the hotel?",
+"aa":"It was lovely."
+},
+{
+"id":"en-b1-102",
+"level":"b1",
+"q":"Complete: “She asked where ___.”",
+"fr":"Complète : « She asked where ___. »",
+"es":"Completa: « She asked where ___. »",
+"correct":"I lived",
+"wrong":[
+"did I live",
+"do I live",
+"I do live"
+],
+"why":{
+"en":"“She asked where I lived.” Reported questions use normal word order (no do / does / did) and “if” or “whether” for yes/no questions.",
+"fr":"« She asked where I lived. » Les questions au style indirect gardent l’ordre normal (pas de do / does / did) et utilisent « if » ou « whether » pour oui/non.",
+"es":"« She asked where I lived. » Las preguntas en estilo indirecto usan el orden normal (sin do / does / did) y « if » o « whether » para sí/no."
+},
+"qa":"Complete the sentence. She asked where blank .",
+"aa":"She asked where I lived."
+},
+{
+"id":"en-b1-103",
+"level":"b1",
+"q":"What does “as far as I know” mean?",
+"fr":"Que veut dire « as far as I know » ?",
+"es":"¿Qué significa « as far as I know »?",
+"correct":"to the best of my knowledge",
+"wrong":[
+"as long as I travel",
+"when I know",
+"so far from me"
+],
+"why":{
+"en":"“As far as I know” = I think so, but I am not completely sure.",
+"fr":"« As far as I know » = à ma connaissance.",
+"es":"« As far as I know » = que yo sepa."
+},
+"qa":"What does as far as I know mean?",
+"aa":"to the best of my knowledge"
+},
+{
+"id":"en-b1-104",
+"level":"b1",
+"q":"Complete: “She is good ___ explaining difficult things.”",
+"fr":"Complète : « She is good ___ explaining difficult things. »",
+"es":"Completa: « She is good ___ explaining difficult things. »",
+"correct":"at",
+"wrong":[
+"in",
+"on",
+"for"
+],
+"why":{
+"en":"“She is good at explaining difficult things.” Adjectives also take fixed prepositions: afraid of, interested in, good at, worried about, tired of.",
+"fr":"« She is good at explaining difficult things. » Les adjectifs ont aussi des prépositions fixes : afraid of, interested in, good at, worried about, tired of.",
+"es":"« She is good at explaining difficult things. » Los adjetivos también llevan preposiciones fijas: afraid of, interested in, good at, worried about, tired of."
+},
+"qa":"Complete the sentence. She is good blank explaining difficult things.",
+"aa":"She is good at explaining difficult things."
+},
+{
+"id":"en-b1-105",
+"level":"b1",
+"q":"Someone says: “What’s your opinion about online lessons?” What do you answer?",
+"fr":"Quelqu’un te dit : « What’s your opinion about online lessons? » Que réponds-tu ?",
+"es":"Alguien te dice: « What’s your opinion about online lessons? » ¿Qué respondes?",
+"correct":"In my opinion, they are useful, but not for everything.",
+"wrong":[
+"In my opinion, they were useful, not everything for.",
+"For my opinion, useful are.",
+"My opinion say they useful."
+],
+"why":{
+"en":"To give an opinion: “In my opinion…” or “I think that…”.",
+"fr":"Pour donner son avis : « In my opinion… » ou « I think that… ».",
+"es":"Para dar una opinión: « In my opinion… » o « I think that… »."
+},
+"qa":"Someone says: What's your opinion about online lessons? What do you answer?",
+"aa":"In my opinion, they are useful, but not for everything."
+},
+{
+"id":"en-b1-106",
+"level":"b1",
+"q":"Complete: “I don’t like tea, and ___ does my brother.”",
+"fr":"Complète : « I don’t like tea, and ___ does my brother. »",
+"es":"Completa: « I don’t like tea, and ___ does my brother. »",
+"correct":"neither",
+"wrong":[
+"so",
+"either",
+"too"
+],
+"why":{
+"en":"“I don’t like tea, and neither does my brother.” “Neither” = not one and not the other (negative meaning, so a positive verb); “either” is used with a negative verb.",
+"fr":"« I don’t like tea, and neither does my brother. » « Neither » = ni l’un ni l’autre (sens négatif, verbe positif) ; « either » s’emploie avec un verbe négatif.",
+"es":"« I don’t like tea, and neither does my brother. » « Neither » = ni uno ni otro (sentido negativo, verbo afirmativo); « either » se usa con verbo negativo."
+},
+"qa":"Complete the sentence. I don't like tea, and blank does my brother.",
+"aa":"I don't like tea, and neither does my brother."
+},
+{
+"id":"en-b1-107",
+"level":"b1",
+"q":"Complete: “She was sad because she ___ her keys.”",
+"fr":"Complète : « She was sad because she ___ her keys. »",
+"es":"Completa: « She was sad because she ___ her keys. »",
+"correct":"had lost",
+"wrong":[
+"has lost",
+"loses",
+"was losing"
+],
+"why":{
+"en":"“She was sad because she had lost her keys.” The past perfect (had + past participle) is for an action that happened before another action in the past.",
+"fr":"« She was sad because she had lost her keys. » Le plus-que-parfait (had + participe passé) sert pour une action antérieure à une autre action passée.",
+"es":"« She was sad because she had lost her keys. » El past perfect (had + participio) se usa para una acción anterior a otra acción pasada."
+},
+"qa":"Complete the sentence. She was sad because she blank her keys.",
+"aa":"She was sad because she had lost her keys."
+},
+{
+"id":"en-b1-108",
+"level":"b1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"He told me that he had never been to Japan.",
+"wrong":[
+"He said me that he had never been to Japan.",
+"He told that he never has been to Japan.",
+"He told me that he has never be to Japan."
+],
+"why":{
+"en":"“Tell” is followed by a person (told me), and the tense goes back: had been.",
+"fr":"« Tell » est suivi d’une personne (told me), et le temps recule : had been.",
+"es":"« Tell » va seguido de una persona (told me) y el tiempo retrocede: had been."
+},
+"qa":"Which sentence is correct?",
+"aa":"He told me that he had never been to Japan."
+},
+{
+"id":"en-b1-109",
+"level":"b1",
+"q":"Complete: “We ___ live in the country, but now we live in the city.”",
+"fr":"Complète : « We ___ live in the country, but now we live in the city. »",
+"es":"Completa: « We ___ live in the country, but now we live in the city. »",
+"correct":"used to",
+"wrong":[
+"use to",
+"are used to",
+"were use to"
+],
+"why":{
+"en":"“We used to live in the country, but now we live in the city.” “Used to” + base verb talks about past habits or states that are no longer true.",
+"fr":"« We used to live in the country, but now we live in the city. » « Used to » + verbe de base parle d’habitudes ou d’états passés qui ne sont plus vrais.",
+"es":"« We used to live in the country, but now we live in the city. » « Used to » + verbo base habla de hábitos o estados pasados que ya no son ciertos."
+},
+"qa":"Complete the sentence. We blank live in the country, but now we live in the city.",
+"aa":"We used to live in the country, but now we live in the city."
+},
+{
+"id":"en-b1-110",
+"level":"b1",
+"q":"Complete: “Let’s ___ a break for ten minutes.”",
+"fr":"Complète : « Let’s ___ a break for ten minutes. »",
+"es":"Completa: « Let’s ___ a break for ten minutes. »",
+"correct":"take",
+"wrong":[
+"do",
+"make",
+"put"
+],
+"why":{
+"en":"“Let’s take a break for ten minutes.” Some words go together naturally (collocations): make a mistake, do homework, take a photo, have a shower.",
+"fr":"« Let’s take a break for ten minutes. » Certains mots vont naturellement ensemble (collocations) : make a mistake, do homework, take a photo, have a shower.",
+"es":"« Let’s take a break for ten minutes. » Algunas palabras van juntas de forma natural (colocaciones): make a mistake, do homework, take a photo, have a shower."
+},
+"qa":"Complete the sentence. Let's blank a break for ten minutes.",
+"aa":"Let's take a break for ten minutes."
+},
+{
+"id":"en-b1-111",
+"level":"b1",
+"q":"Someone says: “I’ve been waiting for an hour!” What do you answer?",
+"fr":"Quelqu’un te dit : « I’ve been waiting for an hour! » Que réponds-tu ?",
+"es":"Alguien te dice: « I’ve been waiting for an hour! » ¿Qué respondes?",
+"correct":"I’m really sorry. The traffic was terrible.",
+"wrong":[
+"I’m really sorry. The traffic is terrible yesterday.",
+"You are welcome. The traffic is terrible.",
+"Really sorry. I have waited."
+],
+"why":{
+"en":"We explain a past delay with the past simple: “The traffic was terrible.”",
+"fr":"On explique un retard passé avec le prétérit : « The traffic was terrible ».",
+"es":"Se explica un retraso pasado con el pasado simple: « The traffic was terrible »."
+},
+"qa":"Someone says: I've been waiting for an hour! What do you answer?",
+"aa":"I'm really sorry. The traffic was terrible."
+},
+{
+"id":"en-b1-112",
+"level":"b1",
+"q":"Complete: “What ___ you do if you won a million euros?”",
+"fr":"Complète : « What ___ you do if you won a million euros? »",
+"es":"Completa: « What ___ you do if you won a million euros? »",
+"correct":"would",
+"wrong":[
+"will",
+"did",
+"do"
+],
+"why":{
+"en":"“What would you do if you won a million euros?” Second conditional: if + past simple, would + base verb. It is for unreal or unlikely situations.",
+"fr":"« What would you do if you won a million euros? » Deuxième conditionnel : if + prétérit, would + verbe de base. Pour une situation irréelle ou peu probable.",
+"es":"« What would you do if you won a million euros? » Segundo condicional: if + pasado simple, would + verbo base. Para situaciones irreales o poco probables."
+},
+"qa":"Complete the sentence. What blank you do if you won a million euros?",
+"aa":"What would you do if you won a million euros?"
+},
+{
+"id":"en-b1-113",
+"level":"b1",
+"q":"“Our flight was cancelled because of fog, so the airline gave us a hotel for the night and a new flight the next morning. We were annoyed at first, but the hotel was lovely and we had a very good dinner.” Why was the flight cancelled?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"Because of fog.",
+"wrong":[
+"Because of a strike.",
+"Because of a storm.",
+"Because there were few passengers."
+],
+"why":{
+"en":"“Our flight was cancelled because of fog.”",
+"fr":"« Our flight was cancelled because of fog » (à cause du brouillard).",
+"es":"« Our flight was cancelled because of fog » (por la niebla)."
+},
+"qa":"Our flight was cancelled because of fog, so the airline gave us a hotel for the night and a new flight the next morning. We were annoyed at first, but the hotel was lovely and we had a very good dinner. Why was the flight cancelled?",
+"aa":"Because of fog."
+},
+{
+"id":"en-b1-114",
+"level":"b1",
+"q":"Complete: “Rice ___ in many Asian countries.”",
+"fr":"Complète : « Rice ___ in many Asian countries. »",
+"es":"Completa: « Rice ___ in many Asian countries. »",
+"correct":"is grown",
+"wrong":[
+"grows",
+"is grew",
+"grown"
+],
+"why":{
+"en":"“Rice is grown in many Asian countries.” The passive is be + past participle. It puts the action, not the person, first.",
+"fr":"« Rice is grown in many Asian countries. » Le passif se forme avec be + participe passé. Il met l’action, pas la personne, en premier.",
+"es":"« Rice is grown in many Asian countries. » La pasiva se forma con be + participio. Pone la acción, no la persona, en primer lugar."
+},
+"qa":"Complete the sentence. Rice blank in many Asian countries.",
+"aa":"Rice is grown in many Asian countries."
+},
+{
+"id":"en-b1-115",
+"level":"b1",
+"q":"What does “to look something up” mean?",
+"fr":"Que veut dire « to look something up » ?",
+"es":"¿Qué significa « to look something up »?",
+"correct":"to search for information about it",
+"wrong":[
+"to look at it from above",
+"to lift it",
+"to raise your eyes"
+],
+"why":{
+"en":"“Look up” (a word) = search for it in a dictionary or online.",
+"fr":"« Look up » (un mot) = le chercher dans un dictionnaire ou en ligne.",
+"es":"« Look up » (una palabra) = buscarla en un diccionario o en internet."
+},
+"qa":"What does to look something up mean?",
+"aa":"to search for information about it"
+},
+{
+"id":"en-b1-116",
+"level":"b1",
+"q":"Complete: “It depends ___ the weather.”",
+"fr":"Complète : « It depends ___ the weather. »",
+"es":"Completa: « It depends ___ the weather. »",
+"correct":"on",
+"wrong":[
+"of",
+"from",
+"to"
+],
+"why":{
+"en":"“It depends on the weather.” Many verbs need a fixed preposition: depend on, apologise for, listen to, look for, wait for.",
+"fr":"« It depends on the weather. » Beaucoup de verbes veulent une préposition fixe : depend on, apologise for, listen to, look for, wait for.",
+"es":"« It depends on the weather. » Muchos verbos exigen una preposición fija: depend on, apologise for, listen to, look for, wait for."
+},
+"qa":"Complete the sentence. It depends blank the weather.",
+"aa":"It depends on the weather."
+},
+{
+"id":"en-b1-117",
+"level":"b1",
+"q":"Complete: “You like jazz, ___ you?”",
+"fr":"Complète : « You like jazz, ___ you? »",
+"es":"Completa: « You like jazz, ___ you? »",
+"correct":"don’t",
+"wrong":[
+"aren’t",
+"do",
+"didn’t"
+],
+"why":{
+"en":"“You like jazz, don’t you?” Question tags: a positive sentence takes a negative tag, a negative sentence takes a positive tag.",
+"fr":"« You like jazz, don’t you? » Les question tags : une phrase positive prend un tag négatif, une phrase négative prend un tag positif.",
+"es":"« You like jazz, don’t you? » Las question tags: una frase afirmativa lleva tag negativo; una negativa, tag positivo."
+},
+"qa":"Complete the sentence. You like jazz, blank you?",
+"aa":"You like jazz, don't you?"
+},
+{
+"id":"en-b1-118",
+"level":"b1",
+"q":"Complete: “While I ___ the dishes, I dropped a glass.”",
+"fr":"Complète : « While I ___ the dishes, I dropped a glass. »",
+"es":"Completa: « While I ___ the dishes, I dropped a glass. »",
+"correct":"was washing",
+"wrong":[
+"wash",
+"have washed",
+"am washing"
+],
+"why":{
+"en":"“While I was washing the dishes, I dropped a glass.” A longer action in progress uses the past continuous (was / were + verb-ing); the short action that interrupts it uses the past simple.",
+"fr":"« While I was washing the dishes, I dropped a glass. » Une action longue en cours se met au past continuous (was / were + verbe en -ing) ; l’action courte qui l’interrompt, au prétérit.",
+"es":"« While I was washing the dishes, I dropped a glass. » Una acción larga en curso va en past continuous (was / were + verbo en -ing); la corta que la interrumpe, en pasado simple."
+},
+"qa":"Complete the sentence. While I blank the dishes, I dropped a glass.",
+"aa":"While I was washing the dishes, I dropped a glass."
+},
+{
+"id":"en-b1-119",
+"level":"b1",
+"q":"Complete: “She ___ a decision after a long discussion.”",
+"fr":"Complète : « She ___ a decision after a long discussion. »",
+"es":"Completa: « She ___ a decision after a long discussion. »",
+"correct":"made",
+"wrong":[
+"did",
+"took out",
+"had done"
+],
+"why":{
+"en":"“She made a decision after a long discussion.” Some words go together naturally (collocations): make a mistake, do homework, take a photo, have a shower.",
+"fr":"« She made a decision after a long discussion. » Certains mots vont naturellement ensemble (collocations) : make a mistake, do homework, take a photo, have a shower.",
+"es":"« She made a decision after a long discussion. » Algunas palabras van juntas de forma natural (colocaciones): make a mistake, do homework, take a photo, have a shower."
+},
+"qa":"Complete the sentence. She blank a decision after a long discussion.",
+"aa":"She made a decision after a long discussion."
+},
+{
+"id":"en-b1-120",
+"level":"b1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"Although he was tired, he finished the report.",
+"wrong":[
+"Although he was tired, but he finished the report.",
+"Despite he was tired, he finished the report.",
+"Although of being tired, he finished the report."
+],
+"why":{
+"en":"“Although” + clause; do not add “but” in the same sentence.",
+"fr":"« Although » + proposition ; on n’ajoute pas « but » dans la même phrase.",
+"es":"« Although » + oración; no se añade « but » en la misma frase."
+},
+"qa":"Which sentence is correct?",
+"aa":"Although he was tired, he finished the report."
+},
+{
+"id":"en-b1-121",
+"level":"b1",
+"q":"Complete: “A dictionary is a book ___ gives the meaning of words.”",
+"fr":"Complète : « A dictionary is a book ___ gives the meaning of words. »",
+"es":"Completa: « A dictionary is a book ___ gives the meaning of words. »",
+"correct":"which",
+"wrong":[
+"who",
+"where",
+"whose"
+],
+"why":{
+"en":"“A dictionary is a book which gives the meaning of words.” In relative clauses: who = people, which = things, where = places, whose = belonging to someone.",
+"fr":"« A dictionary is a book which gives the meaning of words. » Dans les propositions relatives : who = personnes, which = choses, where = lieux, whose = appartenance.",
+"es":"« A dictionary is a book which gives the meaning of words. » En las oraciones de relativo: who = personas, which = cosas, where = lugares, whose = pertenencia."
+},
+"qa":"Complete the sentence. A dictionary is a book blank gives the meaning of words.",
+"aa":"A dictionary is a book which gives the meaning of words."
+},
+{
+"id":"en-b1-122",
+"level":"b1",
+"q":"Someone says: “Do you mind if I sit here?” What do you answer?",
+"fr":"Quelqu’un te dit : « Do you mind if I sit here? » Que réponds-tu ?",
+"es":"Alguien te dice: « Do you mind if I sit here? » ¿Qué respondes?",
+"correct":"Not at all. Please do.",
+"wrong":[
+"Yes, please. I mind.",
+"I’m sitting yesterday.",
+"Not at all. I mind it."
+],
+"why":{
+"en":"“Do you mind if…?” asks permission; “Not at all” means “no problem”.",
+"fr":"« Do you mind if… ? » demande la permission ; « Not at all » veut dire « pas de problème ».",
+"es":"« Do you mind if…? » pide permiso; « Not at all » significa « sin problema »."
+},
+"qa":"Someone says: Do you mind if I sit here? What do you answer?",
+"aa":"Not at all. Please do."
+},
+{
+"id":"en-b1-123",
+"level":"b1",
+"q":"Complete: “She isn’t at home, ___ she?”",
+"fr":"Complète : « She isn’t at home, ___ she? »",
+"es":"Completa: « She isn’t at home, ___ she? »",
+"correct":"is",
+"wrong":[
+"isn’t",
+"does",
+"was"
+],
+"why":{
+"en":"“She isn’t at home, is she?” Question tags: a positive sentence takes a negative tag, a negative sentence takes a positive tag.",
+"fr":"« She isn’t at home, is she? » Les question tags : une phrase positive prend un tag négatif, une phrase négative prend un tag positif.",
+"es":"« She isn’t at home, is she? » Las question tags: una frase afirmativa lleva tag negativo; una negativa, tag positivo."
+},
+"qa":"Complete the sentence. She isn't at home, blank she?",
+"aa":"She isn't at home, is she?"
+},
+{
+"id":"en-b1-124",
+"level":"b1",
+"q":"Complete: “I wish I ___ a bigger flat. This one is too small.”",
+"fr":"Complète : « I wish I ___ a bigger flat. This one is too small. »",
+"es":"Completa: « I wish I ___ a bigger flat. This one is too small. »",
+"correct":"had",
+"wrong":[
+"have",
+"would have",
+"has"
+],
+"why":{
+"en":"“I wish I had a bigger flat. This one is too small.” “I wish” + past simple expresses a present wish that is not true; “I wish” + past perfect expresses a regret about the past.",
+"fr":"« I wish I had a bigger flat. This one is too small. » « I wish » + prétérit exprime un souhait irréel au présent ; « I wish » + plus-que-parfait exprime un regret sur le passé.",
+"es":"« I wish I had a bigger flat. This one is too small. » « I wish » + pasado simple expresa un deseo irreal en el presente; « I wish » + past perfect, un arrepentimiento del pasado."
+},
+"qa":"Complete the sentence. I wish I blank a bigger flat. This one is too small.",
+"aa":"I wish I had a bigger flat. This one is too small."
+},
+{
+"id":"en-b1-125",
+"level":"b1",
+"q":"“Online shopping has changed how we buy things. It is easy and often cheaper, and the products arrive at your door. On the other hand, small local shops are losing customers, and many people now spend less time talking to others when they shop.” What is the writer’s point of view?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"Online shopping has good and bad sides.",
+"wrong":[
+"Online shopping is always the best.",
+"Nobody uses online shopping.",
+"Local shops are getting more customers."
+],
+"why":{
+"en":"He lists advantages (easy, cheaper) and then disadvantages with “On the other hand”.",
+"fr":"Il donne des avantages (facile, moins cher) puis des inconvénients avec « On the other hand ».",
+"es":"Da ventajas (fácil, más barato) y luego inconvenientes con « On the other hand »."
+},
+"qa":"Online shopping has changed how we buy things. It is easy and often cheaper, and the products arrive at your door. On the other hand, small local shops are losing customers, and many people now spend less time talking to others when they shop. What is the writer's point of view?",
+"aa":"Online shopping has good and bad sides."
+},
+{
+"id":"en-b1-126",
+"level":"b1",
+"q":"Complete: “They said they ___ the news the day before.”",
+"fr":"Complète : « They said they ___ the news the day before. »",
+"es":"Completa: « They said they ___ the news the day before. »",
+"correct":"had heard",
+"wrong":[
+"hearing",
+"hear",
+"have heard"
+],
+"why":{
+"en":"“They said they had heard the news the day before.” In reported speech the tense usually goes one step back (is → was, will → would, can → could).",
+"fr":"« They said they had heard the news the day before. » Au style indirect, le temps recule d’un cran (is → was, will → would, can → could).",
+"es":"« They said they had heard the news the day before. » En estilo indirecto el tiempo retrocede un paso (is → was, will → would, can → could)."
+},
+"qa":"Complete the sentence. They said they blank the news the day before.",
+"aa":"They said they had heard the news the day before."
+},
+{
+"id":"en-b1-127",
+"level":"b1",
+"q":"What does “a once-in-a-lifetime chance” mean?",
+"fr":"Que veut dire « a once-in-a-lifetime chance » ?",
+"es":"¿Qué significa « a once-in-a-lifetime chance »?",
+"correct":"a chance that comes only one time",
+"wrong":[
+"a chance for every day",
+"a chance to live longer",
+"a chance for all of us"
+],
+"why":{
+"en":"“Once in a lifetime” = something that happens only once.",
+"fr":"« Once in a lifetime » = quelque chose qui n’arrive qu’une fois.",
+"es":"« Once in a lifetime » = algo que solo ocurre una vez."
+},
+"qa":"What does a once-in-a-lifetime chance mean?",
+"aa":"a chance that comes only one time"
+},
+{
+"id":"en-b1-128",
+"level":"b1",
+"q":"Complete: “He apologised ___ being late.”",
+"fr":"Complète : « He apologised ___ being late. »",
+"es":"Completa: « He apologised ___ being late. »",
+"correct":"for",
+"wrong":[
+"of",
+"about",
+"to"
+],
+"why":{
+"en":"“He apologised for being late.” Many verbs need a fixed preposition: depend on, apologise for, listen to, look for, wait for.",
+"fr":"« He apologised for being late. » Beaucoup de verbes veulent une préposition fixe : depend on, apologise for, listen to, look for, wait for.",
+"es":"« He apologised for being late. » Muchos verbos exigen una preposición fija: depend on, apologise for, listen to, look for, wait for."
+},
+"qa":"Complete the sentence. He apologised blank being late.",
+"aa":"He apologised for being late."
+},
+{
+"id":"en-b1-129",
+"level":"b1",
+"q":"Complete: “This time next week I ___ on a beach in Greece.”",
+"fr":"Complète : « This time next week I ___ on a beach in Greece. »",
+"es":"Completa: « This time next week I ___ on a beach in Greece. »",
+"correct":"will be lying",
+"wrong":[
+"lie",
+"have lain",
+"was lying"
+],
+"why":{
+"en":"“This time next week I will be lying on a beach in Greece.” “Will be + verb-ing” says what will be in progress at a moment in the future.",
+"fr":"« This time next week I will be lying on a beach in Greece. » « Will be + verbe en -ing » dit ce qui sera en cours à un moment futur.",
+"es":"« This time next week I will be lying on a beach in Greece. » « Will be + verbo en -ing » dice lo que estará en curso en un momento futuro."
+},
+"qa":"Complete the sentence. This time next week I blank on a beach in Greece.",
+"aa":"This time next week I will be lying on a beach in Greece."
+},
+{
+"id":"en-b1-130",
+"level":"b1",
+"q":"Complete: “I’m not used ___ up early.”",
+"fr":"Complète : « I’m not used ___ up early. »",
+"es":"Completa: « I’m not used ___ up early. »",
+"correct":"to getting",
+"wrong":[
+"to get",
+"getting",
+"get"
+],
+"why":{
+"en":"“I’m not used to getting up early.” “Be used to” + verb-ing / noun means “be accustomed to”.",
+"fr":"« I’m not used to getting up early. » « Be used to » + verbe en -ing / nom veut dire « être habitué à ».",
+"es":"« I’m not used to getting up early. » « Be used to » + verbo en -ing / nombre significa « estar acostumbrado a »."
+},
+"qa":"Complete the sentence. I'm not used blank up early.",
+"aa":"I'm not used to getting up early."
+},
+{
+"id":"en-b1-131",
+"level":"b1",
+"q":"Complete: “He ___ a shower and went to bed.”",
+"fr":"Complète : « He ___ a shower and went to bed. »",
+"es":"Completa: « He ___ a shower and went to bed. »",
+"correct":"had",
+"wrong":[
+"made",
+"did",
+"put"
+],
+"why":{
+"en":"“He had a shower and went to bed.” Some words go together naturally (collocations): make a mistake, do homework, take a photo, have a shower.",
+"fr":"« He had a shower and went to bed. » Certains mots vont naturellement ensemble (collocations) : make a mistake, do homework, take a photo, have a shower.",
+"es":"« He had a shower and went to bed. » Algunas palabras van juntas de forma natural (colocaciones): make a mistake, do homework, take a photo, have a shower."
+},
+"qa":"Complete the sentence. He blank a shower and went to bed.",
+"aa":"He had a shower and went to bed."
+},
+{
+"id":"en-b1-132",
+"level":"b1",
+"q":"Someone says: “I’d like to book a table for four people.” What do you answer?",
+"fr":"Quelqu’un te dit : « I’d like to book a table for four people. » Que réponds-tu ?",
+"es":"Alguien te dice: « I’d like to book a table for four people. » ¿Qué respondes?",
+"correct":"Certainly. For what time, please?",
+"wrong":[
+"Certainly. For time what?",
+"Certainly. What time you want for.",
+"No, I’m book."
+],
+"why":{
+"en":"A restaurant employee asks for the time: “For what time, please?”",
+"fr":"Un employé de restaurant demande l’heure : « For what time, please ? »",
+"es":"Un empleado de restaurante pregunta la hora: « For what time, please? »"
+},
+"qa":"Someone says: I'd like to book a table for four people. What do you answer?",
+"aa":"Certainly. For what time, please?"
+},
+{
+"id":"en-b1-133",
+"level":"b1",
+"q":"Complete: “The new museum ___ next year.”",
+"fr":"Complète : « The new museum ___ next year. »",
+"es":"Completa: « The new museum ___ next year. »",
+"correct":"will be opened",
+"wrong":[
+"will open by",
+"opened",
+"is opening by"
+],
+"why":{
+"en":"“The new museum will be opened next year.” Future passive: will be + past participle.",
+"fr":"« The new museum will be opened next year. » Passif au futur : will be + participe passé.",
+"es":"« The new museum will be opened next year. » Pasiva en futuro: will be + participio."
+},
+"qa":"Complete the sentence. The new museum blank next year.",
+"aa":"The new museum will be opened next year."
+},
+{
+"id":"en-b1-134",
+"level":"b1",
+"q":"Complete: “I love chocolate. — So ___ I.”",
+"fr":"Complète : « I love chocolate. — So ___ I. »",
+"es":"Completa: « I love chocolate. — So ___ I. »",
+"correct":"do",
+"wrong":[
+"am",
+"have",
+"did"
+],
+"why":{
+"en":"“I love chocolate. — So do I.” “So + auxiliary + subject” agrees with a positive sentence; “Neither + auxiliary + subject” agrees with a negative one.",
+"fr":"« I love chocolate. — So do I. » « So + auxiliaire + sujet » approuve une phrase positive ; « Neither + auxiliaire + sujet » approuve une phrase négative.",
+"es":"« I love chocolate. — So do I. » « So + auxiliar + sujeto » está de acuerdo con una frase afirmativa; « Neither + auxiliar + sujeto », con una negativa."
+},
+"qa":"Complete the sentence. I love chocolate. So blank I.",
+"aa":"I love chocolate. So do I."
+},
+{
+"id":"en-b1-135",
+"level":"b1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"There isn’t much milk left.",
+"wrong":[
+"There isn’t many milk left.",
+"There aren’t much milk left.",
+"There isn’t a few milk left."
+],
+"why":{
+"en":"“Milk” is uncountable, so we use “much”.",
+"fr":"« Milk » est indénombrable, donc on utilise « much ».",
+"es":"« Milk » es incontable, así que se usa « much »."
+},
+"qa":"Which sentence is correct?",
+"aa":"There isn't much milk left."
+},
+{
+"id":"en-b1-136",
+"level":"b1",
+"q":"Complete: “I wish I ___ the tickets earlier. Now they are sold out.”",
+"fr":"Complète : « I wish I ___ the tickets earlier. Now they are sold out. »",
+"es":"Completa: « I wish I ___ the tickets earlier. Now they are sold out. »",
+"correct":"had bought",
+"wrong":[
+"bought",
+"would buy",
+"have bought"
+],
+"why":{
+"en":"“I wish I had bought the tickets earlier. Now they are sold out.” “I wish” + past simple expresses a present wish that is not true; “I wish” + past perfect expresses a regret about the past.",
+"fr":"« I wish I had bought the tickets earlier. Now they are sold out. » « I wish » + prétérit exprime un souhait irréel au présent ; « I wish » + plus-que-parfait exprime un regret sur le passé.",
+"es":"« I wish I had bought the tickets earlier. Now they are sold out. » « I wish » + pasado simple expresa un deseo irreal en el presente; « I wish » + past perfect, un arrepentimiento del pasado."
+},
+"qa":"Complete the sentence. I wish I blank the tickets earlier. Now they are sold out.",
+"aa":"I wish I had bought the tickets earlier. Now they are sold out."
+},
+{
+"id":"en-b1-137",
+"level":"b1",
+"q":"“To make a good first impression at an interview, arrive ten minutes early, dress neatly and look the interviewer in the eye. Don’t forget to ask a question at the end: it shows that you are interested in the job.” Why should you ask a question at the end of an interview?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"It shows you are interested.",
+"wrong":[
+"It makes the interview shorter.",
+"It is a rule of the company.",
+"It helps you arrive early."
+],
+"why":{
+"en":"“Don’t forget to ask a question at the end: it shows that you are interested in the job.”",
+"fr":"« Ask a question at the end: it shows that you are interested » (cela montre que le poste t’intéresse).",
+"es":"« Ask a question at the end: it shows that you are interested » (muestra que te interesa el puesto)."
+},
+"qa":"To make a good first impression at an interview, arrive ten minutes early, dress neatly and look the interviewer in the eye. Don't forget to ask a question at the end: it shows that you are interested in the job. Why should you ask a question at the end of an interview?",
+"aa":"It shows you are interested."
+},
+{
+"id":"en-b1-138",
+"level":"b1",
+"q":"What does “to be fed up with the noise” mean?",
+"fr":"Que veut dire « to be fed up with the noise » ?",
+"es":"¿Qué significa « to be fed up with the noise »?",
+"correct":"to be tired of it and annoyed",
+"wrong":[
+"to be full of it",
+"to listen to it",
+"to enjoy it"
+],
+"why":{
+"en":"“Be fed up with” = have had enough of something.",
+"fr":"« Be fed up with » = en avoir assez de.",
+"es":"« Be fed up with » = estar harto/a de."
+},
+"qa":"What does to be fed up with the noise mean?",
+"aa":"to be tired of it and annoyed"
+},
+{
+"id":"en-b1-139",
+"level":"b1",
+"q":"Complete: “I’m worried ___ my exam next week.”",
+"fr":"Complète : « I’m worried ___ my exam next week. »",
+"es":"Completa: « I’m worried ___ my exam next week. »",
+"correct":"about",
+"wrong":[
+"of",
+"for",
+"with"
+],
+"why":{
+"en":"“I’m worried about my exam next week.” Adjectives also take fixed prepositions: afraid of, interested in, good at, worried about, tired of.",
+"fr":"« I’m worried about my exam next week. » Les adjectifs ont aussi des prépositions fixes : afraid of, interested in, good at, worried about, tired of.",
+"es":"« I’m worried about my exam next week. » Los adjetivos también llevan preposiciones fijas: afraid of, interested in, good at, worried about, tired of."
+},
+"qa":"Complete the sentence. I'm worried blank my exam next week.",
+"aa":"I'm worried about my exam next week."
+},
+{
+"id":"en-b1-140",
+"level":"b1",
+"q":"Complete: “Look at the time! The train ___ in five minutes.”",
+"fr":"Complète : « Look at the time! The train ___ in five minutes. »",
+"es":"Completa: « Look at the time! The train ___ in five minutes. »",
+"correct":"leaves",
+"wrong":[
+"left",
+"has left",
+"is leaving yesterday"
+],
+"why":{
+"en":"“Look at the time! The train leaves in five minutes.” For timetables and schedules we use the present simple, even for the future.",
+"fr":"« Look at the time! The train leaves in five minutes. » Pour les horaires, on utilise le présent simple, même pour le futur.",
+"es":"« Look at the time! The train leaves in five minutes. » Para horarios se usa el presente simple, incluso para el futuro."
+},
+"qa":"Complete the sentence. Look at the time! The train blank in five minutes.",
+"aa":"Look at the time! The train leaves in five minutes."
+},
+{
+"id":"en-b1-141",
+"level":"b1",
+"q":"Complete: “It’s very ___ to park in the city centre.”",
+"fr":"Complète : « It’s very ___ to park in the city centre. »",
+"es":"Completa: « It’s very ___ to park in the city centre. »",
+"correct":"difficult",
+"wrong":[
+"difficulty",
+"difficultly",
+"difficults"
+],
+"why":{
+"en":"“It’s very difficult to park in the city centre.” After “is / be” we need an adjective, not a noun or an adverb.",
+"fr":"« It’s very difficult to park in the city centre. » Après « is / be », il faut un adjectif, pas un nom ni un adverbe.",
+"es":"« It’s very difficult to park in the city centre. » Después de « is / be » hace falta un adjetivo, no un nombre ni un adverbio."
+},
+"qa":"Complete the sentence. It's very blank to park in the city centre.",
+"aa":"It's very difficult to park in the city centre."
+},
+{
+"id":"en-b1-142",
+"level":"b1",
+"q":"Someone says: “I can’t find my phone anywhere.” What do you answer?",
+"fr":"Quelqu’un te dit : « I can’t find my phone anywhere. » Que réponds-tu ?",
+"es":"Alguien te dice: « I can’t find my phone anywhere. » ¿Qué respondes?",
+"correct":"Have you checked your coat pockets?",
+"wrong":[
+"Did you checking your coat pockets?",
+"Have you check your coat pockets?",
+"Do you checked your coat pockets?"
+],
+"why":{
+"en":"“Have you checked…?” is the present perfect used to suggest something.",
+"fr":"« Have you checked… ? » est un present perfect pour suggérer quelque chose.",
+"es":"« Have you checked…? » es un present perfect para sugerir algo."
+},
+"qa":"Someone says: I can't find my phone anywhere. What do you answer?",
+"aa":"Have you checked your coat pockets?"
+},
+{
+"id":"en-b1-143",
+"level":"b1",
+"q":"Complete: “I can’t swim. — Neither ___ I.”",
+"fr":"Complète : « I can’t swim. — Neither ___ I. »",
+"es":"Completa: « I can’t swim. — Neither ___ I. »",
+"correct":"can",
+"wrong":[
+"do",
+"am",
+"will"
+],
+"why":{
+"en":"“I can’t swim. — Neither can I.” “So + auxiliary + subject” agrees with a positive sentence; “Neither + auxiliary + subject” agrees with a negative one.",
+"fr":"« I can’t swim. — Neither can I. » « So + auxiliaire + sujet » approuve une phrase positive ; « Neither + auxiliaire + sujet » approuve une phrase négative.",
+"es":"« I can’t swim. — Neither can I. » « So + auxiliar + sujeto » está de acuerdo con una frase afirmativa; « Neither + auxiliar + sujeto », con una negativa."
+},
+"qa":"Complete the sentence. I can't swim. Neither blank I.",
+"aa":"I can't swim. Neither can I."
+}
+]

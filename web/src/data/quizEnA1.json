@@ -1,0 +1,1002 @@
+[
+{
+"id":"en-a1-01",
+"level":"a1",
+"q":"What is the English word for 🐱?",
+"fr":"Quel est le mot anglais pour 🐱 ?",
+"es":"¿Cómo se dice 🐱 en inglés?",
+"correct":"cat",
+"wrong":[
+"dog",
+"cow",
+"pig"
+],
+"why":{
+"en":"🐱 = “cat”.",
+"fr":"🐱 se dit « cat » (chat).",
+"es":"🐱 se dice “cat” (gato)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"cat"
+},
+{
+"id":"en-a1-02",
+"level":"a1",
+"q":"What is the English word for 🐶?",
+"fr":"Quel est le mot anglais pour 🐶 ?",
+"es":"¿Cómo se dice 🐶 en inglés?",
+"correct":"dog",
+"wrong":[
+"fish",
+"bird",
+"horse"
+],
+"why":{
+"en":"🐶 = “dog”.",
+"fr":"🐶 se dit « dog » (chien).",
+"es":"🐶 se dice “dog” (perro)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"dog"
+},
+{
+"id":"en-a1-03",
+"level":"a1",
+"q":"What is the English word for 🍎?",
+"fr":"Quel est le mot anglais pour 🍎 ?",
+"es":"¿Cómo se dice 🍎 en inglés?",
+"correct":"apple",
+"wrong":[
+"banana",
+"orange",
+"cake"
+],
+"why":{
+"en":"🍎 = “apple”.",
+"fr":"🍎 se dit « apple » (pomme).",
+"es":"🍎 se dice “apple” (manzana)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"apple"
+},
+{
+"id":"en-a1-04",
+"level":"a1",
+"q":"What is the English word for 🍞?",
+"fr":"Quel est le mot anglais pour 🍞 ?",
+"es":"¿Cómo se dice 🍞 en inglés?",
+"correct":"bread",
+"wrong":[
+"milk",
+"cheese",
+"egg"
+],
+"why":{
+"en":"🍞 = “bread”.",
+"fr":"🍞 se dit « bread » (pain).",
+"es":"🍞 se dice “bread” (pan)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"bread"
+},
+{
+"id":"en-a1-05",
+"level":"a1",
+"q":"What is the English word for 🥛?",
+"fr":"Quel est le mot anglais pour 🥛 ?",
+"es":"¿Cómo se dice 🥛 en inglés?",
+"correct":"milk",
+"wrong":[
+"water",
+"juice",
+"tea"
+],
+"why":{
+"en":"🥛 = “milk”.",
+"fr":"🥛 se dit « milk » (lait).",
+"es":"🥛 se dice “milk” (leche)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"milk"
+},
+{
+"id":"en-a1-06",
+"level":"a1",
+"q":"What is the English word for 🏠?",
+"fr":"Quel est le mot anglais pour 🏠 ?",
+"es":"¿Cómo se dice 🏠 en inglés?",
+"correct":"house",
+"wrong":[
+"car",
+"school",
+"tree"
+],
+"why":{
+"en":"🏠 = “house”.",
+"fr":"🏠 se dit « house » (maison).",
+"es":"🏠 se dice “house” (casa)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"house"
+},
+{
+"id":"en-a1-07",
+"level":"a1",
+"q":"What is the English word for 🚗?",
+"fr":"Quel est le mot anglais pour 🚗 ?",
+"es":"¿Cómo se dice 🚗 en inglés?",
+"correct":"car",
+"wrong":[
+"bus",
+"bike",
+"train"
+],
+"why":{
+"en":"🚗 = “car”.",
+"fr":"🚗 se dit « car » (voiture).",
+"es":"🚗 se dice “car” (coche)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"car"
+},
+{
+"id":"en-a1-08",
+"level":"a1",
+"q":"What is the English word for 📖?",
+"fr":"Quel est le mot anglais pour 📖 ?",
+"es":"¿Cómo se dice 📖 en inglés?",
+"correct":"book",
+"wrong":[
+"pen",
+"desk",
+"bag"
+],
+"why":{
+"en":"📖 = “book”.",
+"fr":"📖 se dit « book » (livre).",
+"es":"📖 se dice “book” (libro)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"book"
+},
+{
+"id":"en-a1-09",
+"level":"a1",
+"q":"What is the English word for ☀️?",
+"fr":"Quel est le mot anglais pour ☀️ ?",
+"es":"¿Cómo se dice ☀️ en inglés?",
+"correct":"sun",
+"wrong":[
+"moon",
+"star",
+"cloud"
+],
+"why":{
+"en":"☀️ = “sun”.",
+"fr":"☀️ se dit « sun » (soleil).",
+"es":"☀️ se dice “sun” (sol)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"sun"
+},
+{
+"id":"en-a1-10",
+"level":"a1",
+"q":"What is the English word for 🌧️?",
+"fr":"Quel est le mot anglais pour 🌧️ ?",
+"es":"¿Cómo se dice 🌧️ en inglés?",
+"correct":"rain",
+"wrong":[
+"snow",
+"wind",
+"sun"
+],
+"why":{
+"en":"🌧️ = “rain”.",
+"fr":"🌧️ se dit « rain » (pluie).",
+"es":"🌧️ se dice “rain” (lluvia)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"rain"
+},
+{
+"id":"en-a1-11",
+"level":"a1",
+"q":"What is the English word for 🔴?",
+"fr":"Quel est le mot anglais pour 🔴 ?",
+"es":"¿Cómo se dice 🔴 en inglés?",
+"correct":"red",
+"wrong":[
+"blue",
+"green",
+"yellow"
+],
+"why":{
+"en":"🔴 = “red”.",
+"fr":"🔴 se dit « red » (rouge).",
+"es":"🔴 se dice “red” (rojo)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"red"
+},
+{
+"id":"en-a1-12",
+"level":"a1",
+"q":"What is the English word for 💧?",
+"fr":"Quel est le mot anglais pour 💧 ?",
+"es":"¿Cómo se dice 💧 en inglés?",
+"correct":"water",
+"wrong":[
+"fire",
+"milk",
+"tea"
+],
+"why":{
+"en":"💧 = “water”.",
+"fr":"💧 se dit « water » (eau).",
+"es":"💧 se dice “water” (agua)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"water"
+},
+{
+"id":"en-a1-13",
+"level":"a1",
+"q":"“Hello! How are you?” Which answer is good?",
+"fr":"« Hello! How are you? » Quelle réponse convient ?",
+"es":"« Hello! How are you? » ¿Qué respuesta es adecuada?",
+"correct":"I'm fine, thank you.",
+"wrong":[
+"I'm twelve.",
+"It's Monday.",
+"Yes, please."
+],
+"why":{
+"en":"“How are you?” asks how you feel. You can answer “I’m fine, thank you.”",
+"fr":"« How are you? » demande comment tu vas. On répond « I’m fine, thank you. » (Je vais bien, merci.)",
+"es":"« How are you? » pregunta cómo estás. Se responde « I’m fine, thank you. » (Estoy bien, gracias.)"
+},
+"qa":"Hello! How are you? Which answer is good?",
+"aa":"I'm fine, thank you."
+},
+{
+"id":"en-a1-14",
+"level":"a1",
+"q":"What do you say in the morning?",
+"fr":"Que dit-on le matin ?",
+"es":"¿Qué se dice por la mañana?",
+"correct":"Good morning",
+"wrong":[
+"Good night",
+"Good evening",
+"See you"
+],
+"why":{
+"en":"“Good morning” is how you greet people in the morning.",
+"fr":"« Good morning » = bonjour (le matin).",
+"es":"« Good morning » = buenos días."
+},
+"qa":"What do you say in the morning?",
+"aa":"Good morning"
+},
+{
+"id":"en-a1-15",
+"level":"a1",
+"q":"What do you say before you go to bed?",
+"fr":"Que dit-on avant d'aller dormir ?",
+"es":"¿Qué se dice antes de ir a dormir?",
+"correct":"Good night",
+"wrong":[
+"Good morning",
+"Good afternoon",
+"Welcome"
+],
+"why":{
+"en":"“Good night” is for the end of the day, before sleeping.",
+"fr":"« Good night » = bonne nuit.",
+"es":"« Good night » = buenas noches (al despedirse)."
+},
+"qa":"What do you say before you go to bed?",
+"aa":"Good night"
+},
+{
+"id":"en-a1-16",
+"level":"a1",
+"q":"Someone says “Thank you!”. What do you answer?",
+"fr":"Quelqu’un te dit « Thank you! ». Que réponds-tu ?",
+"es":"Alguien te dice « Thank you! ». ¿Qué respondes?",
+"correct":"You're welcome.",
+"wrong":[
+"Good morning.",
+"I'm sorry.",
+"See you."
+],
+"why":{
+"en":"“You’re welcome” is the polite answer to “Thank you”.",
+"fr":"« You’re welcome » = de rien.",
+"es":"« You’re welcome » = de nada."
+},
+"qa":"Someone says Thank you!. What do you answer?",
+"aa":"You're welcome."
+},
+{
+"id":"en-a1-17",
+"level":"a1",
+"q":"You step on someone's foot. What do you say?",
+"fr":"Tu marches sur le pied de quelqu'un. Que dis-tu ?",
+"es":"Pisas el pie de alguien. ¿Qué dices?",
+"correct":"Sorry!",
+"wrong":[
+"Please.",
+"Hello.",
+"Goodbye."
+],
+"why":{
+"en":"“Sorry” is what you say when you make a mistake or hurt someone.",
+"fr":"« Sorry » = pardon, désolé.",
+"es":"« Sorry » = perdón, lo siento."
+},
+"qa":"You step on someone's foot. What do you say?",
+"aa":"Sorry!"
+},
+{
+"id":"en-a1-18",
+"level":"a1",
+"q":"You are leaving. What do you say?",
+"fr":"Tu t’en vas. Que dis-tu ?",
+"es":"Te vas. ¿Qué dices?",
+"correct":"Goodbye!",
+"wrong":[
+"Hello!",
+"Welcome!",
+"Please!"
+],
+"why":{
+"en":"“Goodbye” is what you say when you leave.",
+"fr":"« Goodbye » = au revoir.",
+"es":"« Goodbye » = adiós."
+},
+"qa":"You are leaving. What do you say?",
+"aa":"Goodbye!"
+},
+{
+"id":"en-a1-19",
+"level":"a1",
+"q":"“What’s your name?” Which answer is good?",
+"fr":"« What’s your name? » Quelle réponse convient ?",
+"es":"« What’s your name? » ¿Qué respuesta es adecuada?",
+"correct":"My name is Anna.",
+"wrong":[
+"I'm fine.",
+"I'm ten.",
+"It's red."
+],
+"why":{
+"en":"“What’s your name?” asks for your name: “My name is…”.",
+"fr":"« What’s your name? » = comment tu t’appelles ? On répond « My name is Anna. »",
+"es":"« What’s your name? » = ¿cómo te llamas? Se responde « My name is Anna. »"
+},
+"qa":"What's your name? Which answer is good?",
+"aa":"My name is Anna."
+},
+{
+"id":"en-a1-20",
+"level":"a1",
+"q":"“How old are you?” Which answer is good?",
+"fr":"« How old are you? » Quelle réponse convient ?",
+"es":"« How old are you? » ¿Qué respuesta es adecuada?",
+"correct":"I'm twenty.",
+"wrong":[
+"I'm happy.",
+"I'm Tom.",
+"I'm here."
+],
+"why":{
+"en":"“How old are you?” asks your age: “I’m twenty.”",
+"fr":"« How old are you? » = quel âge as-tu ? On répond « I’m twenty. »",
+"es":"« How old are you? » = ¿cuántos años tienes? Se responde « I’m twenty. »"
+},
+"qa":"How old are you? Which answer is good?",
+"aa":"I'm twenty."
+},
+{
+"id":"en-a1-21",
+"level":"a1",
+"q":"“Where are you from?” Which answer is good?",
+"fr":"« Where are you from? » Quelle réponse convient ?",
+"es":"« Where are you from? » ¿Qué respuesta es adecuada?",
+"correct":"I'm from France.",
+"wrong":[
+"I'm from Monday.",
+"I'm a teacher.",
+"I'm very well."
+],
+"why":{
+"en":"“Where are you from?” asks for your country or town: “I’m from…”.",
+"fr":"« Where are you from? » = d’où viens-tu ? On répond « I’m from France. »",
+"es":"« Where are you from? » = ¿de dónde eres? Se responde « I’m from France. »"
+},
+"qa":"Where are you from? Which answer is good?",
+"aa":"I'm from France."
+},
+{
+"id":"en-a1-22",
+"level":"a1",
+"q":"Someone says “Nice to meet you.” What do you answer?",
+"fr":"Quelqu’un te dit « Nice to meet you. ». Que réponds-tu ?",
+"es":"Alguien te dice « Nice to meet you. ». ¿Qué respondes?",
+"correct":"Nice to meet you, too.",
+"wrong":[
+"You're welcome.",
+"Good night.",
+"I'm eight."
+],
+"why":{
+"en":"You answer “Nice to meet you, too.” (too = also).",
+"fr":"« Nice to meet you, too. » = enchanté(e) aussi.",
+"es":"« Nice to meet you, too. » = encantado/a yo también."
+},
+"qa":"Someone says Nice to meet you. What do you answer?",
+"aa":"Nice to meet you, too."
+},
+{
+"id":"en-a1-23",
+"level":"a1",
+"q":"I ___ a student.",
+"fr":"Complète : « I ___ a student. »",
+"es":"Completa: « I ___ a student. »",
+"correct":"am",
+"wrong":[
+"is",
+"are",
+"be"
+],
+"why":{
+"en":"With “I” we use “am”: I am.",
+"fr":"Avec « I » (je), on utilise « am » : I am (je suis).",
+"es":"Con « I » (yo) se usa « am »: I am (yo soy)."
+},
+"qa":"Complete the sentence. I blank a student.",
+"aa":"I am a student."
+},
+{
+"id":"en-a1-24",
+"level":"a1",
+"q":"She ___ happy.",
+"fr":"Complète : « She ___ happy. »",
+"es":"Completa: « She ___ happy. »",
+"correct":"is",
+"wrong":[
+"am",
+"are",
+"be"
+],
+"why":{
+"en":"With he, she, it we use “is”.",
+"fr":"Avec he, she, it (il, elle), on utilise « is ».",
+"es":"Con he, she, it (él, ella) se usa « is »."
+},
+"qa":"Complete the sentence. She blank happy.",
+"aa":"She is happy."
+},
+{
+"id":"en-a1-25",
+"level":"a1",
+"q":"They ___ at home.",
+"fr":"Complète : « They ___ at home. »",
+"es":"Completa: « They ___ at home. »",
+"correct":"are",
+"wrong":[
+"is",
+"am",
+"be"
+],
+"why":{
+"en":"With you, we, they we use “are”.",
+"fr":"Avec you, we, they (vous, nous, ils), on utilise « are ».",
+"es":"Con you, we, they (vosotros, nosotros, ellos) se usa « are »."
+},
+"qa":"Complete the sentence. They blank at home.",
+"aa":"They are at home."
+},
+{
+"id":"en-a1-26",
+"level":"a1",
+"q":"He ___ a new bike.",
+"fr":"Complète : « He ___ a new bike. »",
+"es":"Completa: « He ___ a new bike. »",
+"correct":"has",
+"wrong":[
+"have",
+"is",
+"are"
+],
+"why":{
+"en":"“To have” becomes “has” with he, she, it.",
+"fr":"« To have » (avoir) devient « has » avec he, she, it.",
+"es":"« To have » (tener) se convierte en « has » con he, she, it."
+},
+"qa":"Complete the sentence. He blank a new bike.",
+"aa":"He has a new bike."
+},
+{
+"id":"en-a1-27",
+"level":"a1",
+"q":"I ___ two brothers.",
+"fr":"Complète : « I ___ two brothers. »",
+"es":"Completa: « I ___ two brothers. »",
+"correct":"have",
+"wrong":[
+"has",
+"am",
+"is"
+],
+"why":{
+"en":"With I, you, we, they we say “have”.",
+"fr":"Avec I, you, we, they, on dit « have » (j’ai).",
+"es":"Con I, you, we, they se dice « have » (tengo)."
+},
+"qa":"Complete the sentence. I blank two brothers.",
+"aa":"I have two brothers."
+},
+{
+"id":"en-a1-28",
+"level":"a1",
+"q":"This is ___ apple.",
+"fr":"Complète : « This is ___ apple. »",
+"es":"Completa: « This is ___ apple. »",
+"correct":"an",
+"wrong":[
+"a",
+"two",
+"many"
+],
+"why":{
+"en":"We use “an” before a vowel sound: an apple, an egg.",
+"fr":"On utilise « an » devant une voyelle : an apple, an egg.",
+"es":"Se usa « an » delante de una vocal: an apple, an egg."
+},
+"qa":"Complete the sentence. This is blank apple.",
+"aa":"This is an apple."
+},
+{
+"id":"en-a1-29",
+"level":"a1",
+"q":"I have ___ dog.",
+"fr":"Complète : « I have ___ dog. »",
+"es":"Completa: « I have ___ dog. »",
+"correct":"a",
+"wrong":[
+"an",
+"two",
+"many"
+],
+"why":{
+"en":"We use “a” before a consonant sound: a dog, a book.",
+"fr":"On utilise « a » devant une consonne : a dog, a book.",
+"es":"Se usa « a » delante de una consonante: a dog, a book."
+},
+"qa":"Complete the sentence. I have blank dog.",
+"aa":"I have a dog."
+},
+{
+"id":"en-a1-30",
+"level":"a1",
+"q":"One cat, two ___.",
+"fr":"Complète : « One cat, two ___. »",
+"es":"Completa: « One cat, two ___. »",
+"correct":"cats",
+"wrong":[
+"cat",
+"cates",
+"catten"
+],
+"why":{
+"en":"Most plurals just add -s: cat → cats.",
+"fr":"La plupart des pluriels ajoutent -s : cat → cats.",
+"es":"La mayoría de plurales añaden -s: cat → cats."
+},
+"qa":"Complete the sentence. One cat, two blank .",
+"aa":"One cat, two cats."
+},
+{
+"id":"en-a1-31",
+"level":"a1",
+"q":"One child, two ___.",
+"fr":"Complète : « One child, two ___. »",
+"es":"Completa: « One child, two ___. »",
+"correct":"children",
+"wrong":[
+"childs",
+"childes",
+"childen"
+],
+"why":{
+"en":"“Child” has an irregular plural: children.",
+"fr":"« Child » a un pluriel irrégulier : children.",
+"es":"« Child » tiene un plural irregular: children."
+},
+"qa":"Complete the sentence. One child, two blank .",
+"aa":"One child, two children."
+},
+{
+"id":"en-a1-32",
+"level":"a1",
+"q":"___ is your name?",
+"fr":"Complète : « ___ is your name? »",
+"es":"Completa: « ___ is your name? »",
+"correct":"What",
+"wrong":[
+"Where",
+"Who",
+"When"
+],
+"why":{
+"en":"“What” asks about a thing: What is your name?",
+"fr":"« What » (quoi, quel) : What is your name?",
+"es":"« What » (qué, cuál): What is your name?"
+},
+"qa":"Complete the sentence. blank is your name?",
+"aa":"What is your name?"
+},
+{
+"id":"en-a1-33",
+"level":"a1",
+"q":"The book is ___ the table.",
+"fr":"Complète : « The book is ___ the table. »",
+"es":"Completa: « The book is ___ the table. »",
+"correct":"on",
+"wrong":[
+"at",
+"to",
+"of"
+],
+"why":{
+"en":"“On” means touching the top of something: on the table.",
+"fr":"« On » = sur : on the table (sur la table).",
+"es":"« On » = sobre, encima de: on the table (sobre la mesa)."
+},
+"qa":"Complete the sentence. The book is blank the table.",
+"aa":"The book is on the table."
+},
+{
+"id":"en-a1-34",
+"level":"a1",
+"q":"This is my sister. ___ name is Maria.",
+"fr":"Complète : « This is my sister. ___ name is Maria. »",
+"es":"Completa: « This is my sister. ___ name is Maria. »",
+"correct":"Her",
+"wrong":[
+"His",
+"Its",
+"My"
+],
+"why":{
+"en":"“Her” is for a girl or a woman: her name.",
+"fr":"« Her » = son/sa (d’une fille ou d’une femme) : her name.",
+"es":"« Her » = su (de una chica o mujer): her name."
+},
+"qa":"Complete the sentence. This is my sister. blank name is Maria.",
+"aa":"This is my sister. Her name is Maria."
+},
+{
+"id":"en-a1-35",
+"level":"a1",
+"q":"What is the English word for 3?",
+"fr":"Quel est le mot anglais pour 3 ?",
+"es":"¿Cómo se dice 3 en inglés?",
+"correct":"three",
+"wrong":[
+"tree",
+"thirty",
+"free"
+],
+"why":{
+"en":"3 = three. (A “tree” is an arbre / un árbol; 30 = thirty.)",
+"fr":"3 = three. (« tree » = arbre ; 30 = thirty.)",
+"es":"3 = three. (« tree » = árbol; 30 = thirty.)"
+},
+"qa":"What is the English word for this number?",
+"aa":"three"
+},
+{
+"id":"en-a1-36",
+"level":"a1",
+"q":"What is the English word for 7?",
+"fr":"Quel est le mot anglais pour 7 ?",
+"es":"¿Cómo se dice 7 en inglés?",
+"correct":"seven",
+"wrong":[
+"six",
+"seventeen",
+"seventy"
+],
+"why":{
+"en":"7 = seven. 17 = seventeen, 70 = seventy.",
+"fr":"7 = seven. 17 = seventeen, 70 = seventy.",
+"es":"7 = seven. 17 = seventeen, 70 = seventy."
+},
+"qa":"What is the English word for this number?",
+"aa":"seven"
+},
+{
+"id":"en-a1-37",
+"level":"a1",
+"q":"What is the English word for 12?",
+"fr":"Quel est le mot anglais pour 12 ?",
+"es":"¿Cómo se dice 12 en inglés?",
+"correct":"twelve",
+"wrong":[
+"two",
+"ten",
+"twenty"
+],
+"why":{
+"en":"12 = twelve. 20 = twenty.",
+"fr":"12 = twelve. 20 = twenty.",
+"es":"12 = twelve. 20 = twenty."
+},
+"qa":"What is the English word for this number?",
+"aa":"twelve"
+},
+{
+"id":"en-a1-38",
+"level":"a1",
+"q":"What day comes after Monday?",
+"fr":"Quel jour vient après Monday (lundi) ?",
+"es":"¿Qué día viene después de Monday (lunes)?",
+"correct":"Tuesday",
+"wrong":[
+"Sunday",
+"Thursday",
+"Friday"
+],
+"why":{
+"en":"Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.",
+"fr":"Monday (lundi), Tuesday (mardi), Wednesday (mercredi), Thursday (jeudi), Friday (vendredi), Saturday (samedi), Sunday (dimanche).",
+"es":"Monday (lunes), Tuesday (martes), Wednesday (miércoles), Thursday (jueves), Friday (viernes), Saturday (sábado), Sunday (domingo)."
+},
+"qa":"What day comes after Monday?",
+"aa":"Tuesday"
+},
+{
+"id":"en-a1-39",
+"level":"a1",
+"q":"Which word is a month?",
+"fr":"Quel mot est un mois ?",
+"es":"¿Qué palabra es un mes?",
+"correct":"March",
+"wrong":[
+"Monday",
+"Morning",
+"Mother"
+],
+"why":{
+"en":"March is a month (mars). Monday is a day, morning is a part of the day.",
+"fr":"« March » = mars. « Monday » est un jour, « morning » le matin.",
+"es":"« March » = marzo. « Monday » es un día, « morning » la mañana."
+},
+"qa":"Which word is a month?",
+"aa":"March"
+},
+{
+"id":"en-a1-40",
+"level":"a1",
+"q":"It is 3:00. What do you say?",
+"fr":"Il est 3 h. Que dit-on ?",
+"es":"Son las 3:00. ¿Qué se dice?",
+"correct":"It's three o'clock.",
+"wrong":[
+"It's three years.",
+"It's three days.",
+"It's third."
+],
+"why":{
+"en":"For a full hour we say “It’s … o’clock”.",
+"fr":"Pour une heure pile : « It’s three o’clock » (il est trois heures).",
+"es":"Para una hora en punto: « It’s three o’clock » (son las tres)."
+},
+"qa":"It is three oh oh. What do you say?",
+"aa":"It's three o'clock."
+},
+{
+"id":"en-a1-41",
+"level":"a1",
+"q":"Which days are the weekend?",
+"fr":"Quels jours forment le week-end ?",
+"es":"¿Qué días forman el fin de semana?",
+"correct":"Saturday and Sunday",
+"wrong":[
+"Monday and Tuesday",
+"Friday and Monday",
+"Wednesday and Thursday"
+],
+"why":{
+"en":"The weekend is Saturday and Sunday.",
+"fr":"Le week-end, c’est Saturday (samedi) et Sunday (dimanche).",
+"es":"El fin de semana es Saturday (sábado) y Sunday (domingo)."
+},
+"qa":"Which days are the weekend?",
+"aa":"Saturday and Sunday"
+},
+{
+"id":"en-a1-42",
+"level":"a1",
+"q":"Which is the first month of the year?",
+"fr":"Quel est le premier mois de l’année ?",
+"es":"¿Cuál es el primer mes del año?",
+"correct":"January",
+"wrong":[
+"December",
+"June",
+"March"
+],
+"why":{
+"en":"January is the first month, December the last.",
+"fr":"January (janvier) est le premier mois, December (décembre) le dernier.",
+"es":"January (enero) es el primer mes, December (diciembre) el último."
+},
+"qa":"Which is the first month of the year?",
+"aa":"January"
+},
+{
+"id":"en-a1-43",
+"level":"a1",
+"q":"Your mother and your father are your ___.",
+"fr":"Ta mère et ton père sont tes ___.",
+"es":"Tu madre y tu padre son tus ___.",
+"correct":"parents",
+"wrong":[
+"children",
+"friends",
+"teachers"
+],
+"why":{
+"en":"Mother + father = parents.",
+"fr":"Mother + father = parents (les parents).",
+"es":"Mother + father = parents (los padres)."
+},
+"qa":"Complete the sentence. Your mother and your father are your blank .",
+"aa":"Your mother and your father are your parents."
+},
+{
+"id":"en-a1-44",
+"level":"a1",
+"q":"Your mother's mother is your ___.",
+"fr":"La mère de ta mère est ta ___.",
+"es":"La madre de tu madre es tu ___.",
+"correct":"grandmother",
+"wrong":[
+"aunt",
+"sister",
+"daughter"
+],
+"why":{
+"en":"The mother of your mother or father is your grandmother.",
+"fr":"« Grandmother » = grand-mère.",
+"es":"« Grandmother » = abuela."
+},
+"qa":"Complete the sentence. Your mother's mother is your blank .",
+"aa":"Your mother's mother is your grandmother."
+},
+{
+"id":"en-a1-45",
+"level":"a1",
+"q":"I ___ breakfast at eight o’clock.",
+"fr":"Complète : « I ___ breakfast at eight o’clock. »",
+"es":"Completa: « I ___ breakfast at eight o’clock. »",
+"correct":"have",
+"wrong":[
+"am",
+"are",
+"is"
+],
+"why":{
+"en":"In English we “have” breakfast, lunch and dinner.",
+"fr":"En anglais, on « have » breakfast (prend le petit-déjeuner).",
+"es":"En inglés se dice « have breakfast » (desayunar)."
+},
+"qa":"Complete the sentence. I blank breakfast at eight o'clock.",
+"aa":"I have breakfast at eight o'clock."
+},
+{
+"id":"en-a1-46",
+"level":"a1",
+"q":"You write with a ___.",
+"fr":"On écrit avec un ___.",
+"es":"Se escribe con un ___.",
+"correct":"pen",
+"wrong":[
+"cup",
+"shoe",
+"fork"
+],
+"why":{
+"en":"You write with a pen (or a pencil).",
+"fr":"« Pen » = stylo.",
+"es":"« Pen » = bolígrafo."
+},
+"qa":"Complete the sentence. You write with a blank .",
+"aa":"You write with a pen."
+},
+{
+"id":"en-a1-47",
+"level":"a1",
+"q":"What is the opposite of “big”?",
+"fr":"Quel est le contraire de « big » ?",
+"es":"¿Cuál es lo contrario de « big »?",
+"correct":"small",
+"wrong":[
+"tall",
+"hot",
+"new"
+],
+"why":{
+"en":"big ↔ small.",
+"fr":"big (grand) ↔ small (petit).",
+"es":"big (grande) ↔ small (pequeño)."
+},
+"qa":"What is the opposite of big?",
+"aa":"small"
+},
+{
+"id":"en-a1-48",
+"level":"a1",
+"q":"What is the opposite of “hot”?",
+"fr":"Quel est le contraire de « hot » ?",
+"es":"¿Cuál es lo contrario de « hot »?",
+"correct":"cold",
+"wrong":[
+"warm",
+"sad",
+"old"
+],
+"why":{
+"en":"hot ↔ cold.",
+"fr":"hot (chaud) ↔ cold (froid).",
+"es":"hot (caliente) ↔ cold (frío)."
+},
+"qa":"What is the opposite of hot?",
+"aa":"cold"
+},
+{
+"id":"en-a1-49",
+"level":"a1",
+"q":"What colour is the sky on a sunny day?",
+"fr":"De quelle couleur est le ciel un jour de soleil ?",
+"es":"¿De qué color es el cielo en un día de sol?",
+"correct":"blue",
+"wrong":[
+"green",
+"black",
+"red"
+],
+"why":{
+"en":"The sky is blue.",
+"fr":"Le ciel est « blue » (bleu).",
+"es":"El cielo es « blue » (azul)."
+},
+"qa":"What colour is the sky on a sunny day?",
+"aa":"blue"
+},
+{
+"id":"en-a1-50",
+"level":"a1",
+"q":"Complete: “I ___ English.”",
+"fr":"Complète : « I ___ English. »",
+"es":"Completa: « I ___ English. »",
+"correct":"speak",
+"wrong":[
+"speaks",
+"speaking",
+"am speak"
+],
+"why":{
+"en":"With “I” the verb has no ending: I speak. Well done!",
+"fr":"Avec « I », le verbe ne change pas : I speak (je parle). Bravo !",
+"es":"Con « I », el verbo no cambia: I speak (hablo). ¡Muy bien!"
+},
+"qa":"Complete the sentence. I blank English.",
+"aa":"I speak English."
+}
+]

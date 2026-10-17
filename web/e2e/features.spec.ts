@@ -237,7 +237,7 @@ test('achievements: ticking a session unlocks medals that stay (even unticked), 
   expect(Object.values(st.data.stickers).flat().map((s: any) => s.t)).toContain('rw:0');
 });
 
-test('English quiz: a question at each opening (French + English), wrong is fine and shows the right one in green, the progress is kept, and it can be switched off', async ({ page, request }) => {
+test('English quiz: five questions at each opening (French + English) read aloud, wrong is fine and shows the right one in green, the progress is kept, and it can be switched off', async ({ page, request }) => {
   const st0 = await getState(request);
   expect((await request.put('/api/state', { headers: { 'Content-Type': 'application/json', 'X-Planner-Client': '1' }, data: { baseRev: st0.rev, data: { ...st0.data, prefs: { ...st0.data.prefs, quiz: true } } } })).ok()).toBeTruthy();
   await page.goto('/');
@@ -245,16 +245,34 @@ test('English quiz: a question at each opening (French + English), wrong is fine
   await expect(gate).toBeVisible();
   await expect(gate.getByText('Quel est le mot anglais pour 🐱 ?')).toBeVisible();
   await expect(gate.getByText('What is the English word for 🐱?')).toBeVisible();
+  await expect(gate.getByText('1 / 5')).toBeVisible();
+  // the voice: a recording of the right answer is fetched and is a real mp3 (the page allows playing it)
+  const recording = page.waitForResponse((r) => /\/audio\/en\/[0-9a-f]{12}\.mp3$/.test(r.url()));
   await gate.getByRole('button', { name: 'dog', exact: true }).click();                         // wrong
+  const res = await recording;
+  expect(res.status()).toBe(200);
+  expect(res.headers()['content-type']).toBe('audio/mpeg');
+  const file = await request.get(res.url());                                                    // and the file itself is a real, non-empty recording
+  expect(file.ok()).toBeTruthy();
+  expect((await file.body()).length).toBeGreaterThan(1500);
   await expect(gate.locator('.qz-opt.ok')).toHaveText('cat ✓');
   await expect(gate.locator('.qz-opt.ko')).toHaveText('dog ✗');
+  for (let i = 2; i <= 5; i++) {                                                                // the four other questions
+    await gate.getByRole('button', { name: 'Question suivante' }).click();
+    await expect(gate.getByText(`${i} / 5`)).toBeVisible();
+    await gate.locator('.qz-opt').first().click();
+  }
+  await gate.getByRole('button', { name: 'Voir le résultat' }).click();
+  await expect(gate.getByText(/bonnes réponses sur 5/)).toBeVisible();
   await gate.getByRole('button', { name: 'Entrer dans le planner' }).click();
   await expect(gate).toHaveCount(0);
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   await waitSaved(page);
-  expect((await getState(request)).data.quiz['en-a1-01']).toMatchObject({ ok: 0, ko: 1 });
+  const log = (await getState(request)).data.quiz;
+  expect(log['en-a1-01']).toMatchObject({ ok: 0, ko: 1 });
+  expect(Object.keys(log)).toHaveLength(5);
 
-  await page.reload();                                                                           // asked again at the next opening, and the wrong one comes back
+  await page.reload();                                                                           // asked again at the next opening, and the wrong one comes back first
   await expect(gate.getByText('What is the English word for 🐱?')).toBeVisible();
   await gate.getByRole('button', { name: 'Désactiver ce quiz' }).click();
   await waitSaved(page);
