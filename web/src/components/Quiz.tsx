@@ -1,46 +1,94 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { QUESTIONS } from '../data/quizEnA1';
-import { pickQuestion, quizStats, recordAnswer, shuffled } from '../lib/quiz';
+import { LEVELS } from '../data/quizBank';
+import { levelStats, pickRound, quizStats, recordAnswer, shuffled } from '../lib/quiz';
+import { stopVoice, voice } from '../lib/voice';
 import { useApp } from '../state/app';
 
-/** One question: asked in the language of the app and in English, answers in English. A wrong answer is fine: the right one turns green. */
+/**
+ * A round of questions: asked in the language of the app and in English, answers in English. A wrong answer is fine: the right one
+ * turns green. The voice reads the question when asked to (🔊) and the right answer after each answer.
+ */
 export function QuizCard({ onDone, doneLabel }: { onDone: () => void; doneLabel: string }): ReactNode {
   const { data, update, realToday, lang, t, tf } = useApp();
-  const [q] = useState(() => pickQuestion(data.quiz, QUESTIONS));
-  const [shown] = useState(() => shuffled(q));
-  const [chosen, setChosen] = useState<number | null>(null);
+  const [before] = useState(() => levelStats(data.quiz));              // progress when the round started
+  const [round] = useState(() => pickRound(data.quiz).map((q) => ({ q, shown: shuffled(q) })));
+  const [i, setI] = useState(0);
+  const [chosen, setChosen] = useState<Array<number | null>>(() => round.map(() => null));
   const next = useRef<HTMLButtonElement>(null);
-  const stats = quizStats(data.quiz);
-  const answered = chosen !== null, right = answered && chosen === shown.answer;
+  const voiceOn = data.prefs.quizVoice !== false;
+  const finished = i >= round.length;
+  const cur = round[Math.min(i, round.length - 1)];
+  const pickedHere = chosen[Math.min(i, round.length - 1)];
+  const answered = pickedHere !== null, right = answered && pickedHere === cur.shown.answer;
+  const lvl = LEVELS.find((l) => l.id === cur.q.level)!;
+  const lstat = levelStats(data.quiz).find((x) => x.id === cur.q.level)!;
 
-  useEffect(() => { if (answered) next.current?.focus({ preventScroll: true }); }, [answered]);
+  useEffect(() => () => stopVoice(), []);
+  useEffect(() => { if (answered) next.current?.focus({ preventScroll: true }); }, [answered, i]);
 
-  const pick = (i: number): void => {
-    if (answered) return;
-    setChosen(i);
-    update((d) => { recordAnswer(d, q.id, i === shown.answer, realToday); });     // saved at once, even if the page is closed right after
+  const pick = (k: number): void => {
+    if (answered || finished) return;
+    setChosen((c) => c.map((v, j) => (j === i ? k : v)));
+    update((d) => { recordAnswer(d, cur.q.id, k === cur.shown.answer, realToday); });     // saved at once, even if the page is closed right after
+    if (voiceOn) void voice.play(cur.q.aa);
   };
-  const local = lang === 'en' ? null : lang === 'fr' ? q.fr : q.es;
+  const local = lang === 'en' ? null : lang === 'fr' ? cur.q.fr : cur.q.es;
+
+  if (finished) {
+    const score = chosen.filter((c, j) => c === round[j].shown.answer).length;
+    const after = levelStats(data.quiz);
+    const finishedNow = after.filter((x, j) => x.done && !before[j].done);
+    const nextLevel = after.find((x) => !x.done);
+    return (
+      <div className="qz">
+        <div className="qz-top"><span className="qz-lvl">🎓 {t('Anglais')} · {t('Résultat')}</span></div>
+        <h2 className="qz-score" id="qz-q" role="status">{tf('{a} bonnes réponses sur {b}', { a: score, b: round.length })}</h2>
+        <p className="qz-dots" aria-hidden="true">{round.map((r, j) => <span key={r.q.id}>{chosen[j] === r.shown.answer ? '✅' : '❌'}</span>)}</p>
+        <ul className="qz-recap">
+          {round.map((r, j) => (
+            <li key={r.q.id} className={chosen[j] === r.shown.answer ? 'ok' : 'ko'}>
+              <span lang="en">{r.q.aa}</span>
+              <button type="button" className="qz-say" aria-label={t('Écouter la bonne réponse') + ' : ' + r.q.aa} onClick={() => void voice.play(r.q.aa)}>🔊</button>
+            </li>
+          ))}
+        </ul>
+        {finishedNow.map((x) => (
+          <p key={x.id} className="qz-up" role="status">🎉 {nextLevel ? tf('Niveau {l} terminé ! Tu passes au niveau {n}.', { l: x.name, n: nextLevel.name }) : tf('Niveau {l} terminé ! Tu as fini tous les niveaux : on révise.', { l: x.name })}</p>
+        ))}
+        <div className="qz-levels">
+          {after.map((x) => (
+            <span key={x.id} className={'qz-lv' + (x.done ? ' done' : '')}>{x.name} <b>{x.mastered}/{x.total}</b></span>
+          ))}
+        </div>
+        <div className="qz-foot">
+          <button ref={next} type="button" className="btn" onClick={onDone}>{doneLabel}</button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="qz">
       <div className="qz-top">
-        <span className="qz-lvl">🎓 {t('Anglais de base')} · A1</span>
-        <span className="qz-prog" aria-label={tf('{a} questions réussies sur {b}', { a: stats.mastered, b: stats.total })}>
-          <i style={{ width: (stats.mastered / stats.total) * 100 + '%' }} /><b>{stats.mastered}/{stats.total}</b>
+        <span className="qz-lvl">🎓 {t('Anglais')} · {lvl.name}</span>
+        <span className="qz-count" aria-label={tf('Question {a} sur {b}', { a: i + 1, b: round.length })}>{i + 1} / {round.length}</span>
+        <span className="qz-prog" aria-label={tf('{a} questions réussies sur {b}', { a: lstat.mastered, b: lstat.total })}>
+          <i style={{ width: (lstat.mastered / lstat.total) * 100 + '%' }} /><b>{lstat.mastered}/{lstat.total}</b>
         </span>
+        <button type="button" className="fchip" aria-pressed={voiceOn} title={t('Voix')} onClick={() => { if (voiceOn) stopVoice(); update((d) => { d.prefs.quizVoice = !voiceOn; }); }}>{voiceOn ? '🔊' : '🔇'} {t('Voix')}</button>
       </div>
       <h2 className="qz-q" id="qz-q">
         {local && <span className="qz-local">{local}</span>}
-        <span className="qz-en" lang="en">{local && <span aria-hidden="true">🇬🇧 </span>}{q.q}</span>
+        <span className="qz-en" lang="en">{local && <span aria-hidden="true">🇬🇧 </span>}{cur.q.q}</span>
       </h2>
+      <p className="qz-listen"><button type="button" className="fchip" onClick={() => void voice.play(cur.q.qa)}>🔊 {t('Écouter la question')}</button></p>
       <div className="qz-opts" role="group" aria-labelledby="qz-q">
-        {shown.options.map((o, i) => {
-          const state = !answered ? '' : i === shown.answer ? ' ok' : i === chosen ? ' ko' : ' dim';
+        {cur.shown.options.map((o, k) => {
+          const state = !answered ? '' : k === cur.shown.answer ? ' ok' : k === pickedHere ? ' ko' : ' dim';
           return (
-            <button key={o} type="button" lang="en" className={'qz-opt' + state} aria-pressed={chosen === i} aria-disabled={answered}
-              onClick={() => pick(i)}>
-              {o}{answered && i === shown.answer ? ' ✓' : ''}{answered && i === chosen && i !== shown.answer ? ' ✗' : ''}
+            <button key={o} type="button" lang="en" className={'qz-opt' + state} aria-pressed={pickedHere === k} aria-disabled={answered}
+              onClick={() => pick(k)}>
+              {o}{answered && k === cur.shown.answer ? ' ✓' : ''}{answered && k === pickedHere && k !== cur.shown.answer ? ' ✗' : ''}
             </button>
           );
         })}
@@ -48,12 +96,13 @@ export function QuizCard({ onDone, doneLabel }: { onDone: () => void; doneLabel:
       {answered && (
         <div className="qz-res" role="status">
           <b className={right ? 'good' : 'bad'}>{right ? t('✅ Bravo !') : t('❌ Pas tout à fait : la bonne réponse est en vert.')}</b>
-          <p>{lang === 'en' ? q.why.en : q.why[lang]}</p>
-          {lang !== 'en' && <p className="qz-why-en" lang="en">{q.why.en}</p>}
+          <p>{lang === 'en' ? cur.q.why.en : cur.q.why[lang]}</p>
+          {lang !== 'en' && <p className="qz-why-en" lang="en">{cur.q.why.en}</p>}
+          <button type="button" className="fchip" onClick={() => void voice.play(cur.q.aa)}>🔊 {t('Écouter la bonne réponse')}</button>
         </div>
       )}
       <div className="qz-foot">
-        <button ref={next} type="button" className="btn" disabled={!answered} onClick={onDone}>{doneLabel}</button>
+        <button ref={next} type="button" className="btn" disabled={!answered} onClick={() => { stopVoice(); setI(i + 1); }}>{i + 1 < round.length ? t('Question suivante') : t('Voir le résultat')}</button>
       </div>
     </div>
   );
@@ -88,18 +137,25 @@ export function QuizDialog(): ReactNode {
     return () => document.removeEventListener('keydown', on);
   }, [open, setUi]);
   if (!open) return null;
-  const on = data.prefs.quiz !== false, s = quizStats(data.quiz);
+  const on = data.prefs.quiz !== false, s = quizStats(data.quiz), lv = levelStats(data.quiz);
+  const voiceOn = data.prefs.quizVoice !== false;
   const close = (): void => { setUi({ quizOpen: false }); setPractice(0); };
   return (
     <div className="ov" role="dialog" aria-modal="true" aria-labelledby="qd-t" onClick={(e) => { if (e.target === e.currentTarget) close(); }}>
       <div className="modal wide">
-        <div className="mtop acc"><div className="eyebrow" id="qd-t">🎓 {t('Quiz d’anglais')}</div><div className="big sm">{t('Anglais de base')} · A1</div></div>
+        <div className="mtop acc"><div className="eyebrow" id="qd-t">🎓 {t('Quiz d’anglais')}</div><div className="big sm">{t('Anglais')} · A1 → B1</div></div>
         <div className="mbody">
           <label className="check">
             <input type="checkbox" role="switch" checked={on} onChange={(e) => { update((d) => { d.prefs.quiz = e.target.checked; }); setUi({ quizPassed: true }); }} /> {t('Poser une question à chaque ouverture')}
           </label>
-          <p className="hint">{tf('{a} questions réussies sur {b} · {r} bonnes réponses, {w} erreurs au total.', { a: s.mastered, b: s.total, r: s.right, w: s.wrong })}</p>
-          {practice > 0 ? <QuizCard key={practice} onDone={() => setPractice(0)} doneLabel={t('Terminer')} /> : <button type="button" className="btn" onClick={() => setPractice(1)}>{t('Une question pour s’entraîner')}</button>}
+          <label className="check">
+            <input type="checkbox" role="switch" checked={voiceOn} onChange={(e) => { if (!e.target.checked) stopVoice(); update((d) => { d.prefs.quizVoice = e.target.checked; }); }} /> {t('Voix : lire la bonne réponse à voix haute')}
+          </label>
+          <div className="qz-levels">
+            {lv.map((x) => <span key={x.id} className={'qz-lv' + (x.done ? ' done' : '')}>{x.name} <b>{x.mastered}/{x.total}</b></span>)}
+          </div>
+          <p className="hint">{tf('{a} questions réussies sur {b} · {r} bonnes réponses, {w} erreurs au total.', { a: s.mastered, b: s.total, r: s.right, w: s.wrong })} {t('Chaque ouverture pose 5 questions ; quand toutes les questions d’un niveau sont réussies, le niveau suivant commence.')}</p>
+          {practice > 0 ? <QuizCard key={practice} onDone={() => setPractice(0)} doneLabel={t('Terminer')} /> : <button type="button" className="btn" onClick={() => setPractice(1)}>{t('Cinq questions pour s’entraîner')}</button>}
           <div className="opt"><span className="spacer" /><button type="button" className="btn ghost" onClick={close}>{t('Fermer')}</button></div>
         </div>
       </div>

@@ -50,6 +50,7 @@ export function normalizeData(raw: unknown, viewport: { w: number; h: number } =
   P.autoManual = !!P.autoManual;
   P.autoMax = Number.isInteger(P.autoMax) && (P.autoMax as number) >= 1 && (P.autoMax as number) <= 20 ? P.autoMax : 3;
   P.quiz = P.quiz !== false;
+  P.quizVoice = P.quizVoice !== false;
   P.remind = P.remind !== false;
   P.remindLead = [5, 10, 15, 30, 60].includes(P.remindLead as number) ? P.remindLead : 15;
   P.remindSound = P.remindSound !== false;

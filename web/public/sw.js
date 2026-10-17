@@ -1,6 +1,6 @@
 /* Planner service worker: lets the app open (and be installed) like a real app, even with the server out of reach.
  *
- * It only ever stores the app itself (page, scripts, styles, fonts, icons). It NEVER touches /api/ (your data, your files):
+ * It only ever stores the app itself (page, scripts, styles, fonts, icons, the voice recordings of the English quiz). It NEVER touches /api/ (your data, your files):
  * those always go straight to the server, and the app keeps its own safety copy of your data (see lib/sync.ts).
  * Bump VERSION to drop everything that was stored before. */
 const VERSION = 'v1';
@@ -76,7 +76,7 @@ self.addEventListener('fetch', (event) => {
   if (url.origin !== self.location.origin) return;
   if (url.pathname.includes('/api/') || url.pathname.endsWith('/healthz')) return;     // data: never cached, never intercepted
   if (req.mode === 'navigate') return event.respondWith(page(req));
-  if (/\/(assets|fonts)\//.test(url.pathname)) return event.respondWith(cacheFirst(req));
+  if (/\/(assets|fonts|audio)\//.test(url.pathname)) return event.respondWith(cacheFirst(req));
   event.respondWith(networkFirst(req));
 });
 

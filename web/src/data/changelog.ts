@@ -8,6 +8,14 @@ export interface ChangeEntry { version: string; date: string; items: ChangeItem[
 
 export const CHANGELOG: ChangeEntry[] = [
   {
+    version: '1.12.0', date: '2026-10-17',
+    items: [
+      { fr: '🎓 Le quiz d’anglais pose maintenant 5 questions à chaque ouverture, avec le bilan à la fin.', en: '🎓 The English quiz now asks 5 questions each time you open the app, with a summary at the end.', es: '🎓 El quiz de inglés ahora hace 5 preguntas cada vez que abres la aplicación, con un resumen al final.' },
+      { fr: '🔊 Une voix lit la question en anglais (bouton « Écouter la question ») et la bonne réponse après chaque réponse. Elle peut être coupée avec le bouton Voix.', en: '🔊 A voice reads the question in English (“Listen to the question” button) and the right answer after each answer. It can be switched off with the Voice button.', es: '🔊 Una voz lee la pregunta en inglés (botón « Escuchar la pregunta ») y la respuesta correcta después de cada respuesta. Se puede apagar con el botón Voz.' },
+      { fr: '📚 Beaucoup plus de questions : niveaux A2 et B1, avec des phrases entières (grammaire, situations de la vie courante, expressions, petits textes). Quand toutes les questions d’un niveau sont réussies, on passe au niveau suivant.', en: '📚 Many more questions: levels A2 and B1, with whole sentences (grammar, everyday situations, expressions, short texts). When every question of a level has been answered right, you move on to the next level.', es: '📚 Muchas más preguntas: niveles A2 y B1, con frases completas (gramática, situaciones cotidianas, expresiones, textos cortos). Cuando se han acertado todas las preguntas de un nivel, pasas al siguiente.' }
+    ]
+  },
+  {
     version: '1.11.0', date: '2026-10-16',
     items: [
       { fr: '🔁 Quand tu choisis un cours à rattraper sur un créneau où un cours est déjà prévu, tu peux le remplacer : le cours remplacé passe directement dans « À rattraper » (et n’apparaît plus dans le programme du jour ni dans les rappels).', en: '🔁 When you pick a class to catch up in a slot where a class is already planned, you can replace it: the replaced class goes straight to “To catch up” (and no longer shows in today’s agenda or reminders).', es: '🔁 Cuando eliges una clase para recuperar en un hueco donde ya hay una clase prevista, puedes reemplazarla: la clase reemplazada pasa directamente a « Por recuperar » (y ya no aparece en el programa del día ni en los recordatorios).' },
