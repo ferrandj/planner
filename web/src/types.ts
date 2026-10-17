@@ -38,7 +38,8 @@ export interface Prefs {
   autoManual?: boolean; // catch-ups are chosen by the user, one day at a time, instead of being placed automatically
   autoMax?: number; // never more than this many catch-up slots in a row for the same subject
   quiz?: boolean;        // the English questions asked each time the app is opened (on unless switched off)
-  quizVoice?: boolean;   // the quiz reads the right answer aloud (on unless switched off)
+  quizVoice?: boolean;   // the quiz reads the questions and right answers aloud (on unless switched off)
+  quizLevel?: 'auto' | 'a1' | 'a2' | 'b1'; // level of the questions: 'auto' goes through A1, A2, B1 in turn
   remind?: boolean;      // reminders shortly before an event starts (in the app, and on the phone when enabled there)
   remindLead?: number;   // minutes before the start
   library?: boolean;     // readable copy of the notes and files on the server (on unless switched off)

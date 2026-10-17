@@ -8,9 +8,9 @@ const master = (d: ReturnType<typeof emptyData>, list: typeof A1): void => list.
 describe('the question bank (English, levels A1, A2 and B1)', () => {
   it('has the three levels in order, with plenty of questions in A2 and B1', () => {
     expect(LEVELS.map((l) => l.name)).toEqual(['A1', 'A2', 'B1']);
-    expect(A1).toHaveLength(50);
-    expect(A2.length).toBeGreaterThanOrEqual(100);
-    expect(B1.length).toBeGreaterThanOrEqual(100);
+    expect(A1).toHaveLength(250);                                  // 50 + 200 added later (the first ids never change)
+    expect(A2).toHaveLength(336);
+    expect(B1).toHaveLength(343);
     expect(QUESTIONS).toHaveLength(A1.length + A2.length + B1.length);
     expect(new Set(QUESTIONS.map((q) => q.id)).size).toBe(QUESTIONS.length);
     LEVELS.forEach((l) => l.questions.forEach((q) => expect(q.id.startsWith('en-' + l.id + '-'), q.id).toBe(true)));
@@ -61,10 +61,10 @@ describe('which questions come next', () => {
   });
   it('the next level starts when every question of the level has been answered right', () => {
     const d = emptyData();
-    master(d, A1.slice(0, 49));
+    master(d, A1.slice(0, -1));
     expect(currentLevel(d.quiz).id).toBe('a1');
-    expect(pickRound(d.quiz).map((q) => q.id)).toEqual([A1[49], ...A2.slice(0, 4)].map((q) => q.id));      // the last A1 question, then A2 follows
-    recordAnswer(d, A1[49].id, true, '2026-10-12');
+    expect(pickRound(d.quiz).map((q) => q.id)).toEqual([A1[A1.length - 1], ...A2.slice(0, 4)].map((q) => q.id));      // the last A1 question, then A2 follows
+    recordAnswer(d, A1[A1.length - 1].id, true, '2026-10-12');
     expect(currentLevel(d.quiz).id).toBe('a2');
     expect(levelStats(d.quiz).map((x) => [x.name, x.done])).toEqual([['A1', true], ['A2', false], ['B1', false]]);
     expect(pickRound(d.quiz).map((q) => q.level)).toEqual(['a2', 'a2', 'a2', 'a2', 'a2']);
@@ -92,6 +92,25 @@ describe('which questions come next', () => {
   });
 });
 
+describe('choosing the level', () => {
+  it('only the questions of the chosen level are asked, in the order of the course', () => {
+    const d = emptyData();
+    expect(pickRound(d.quiz, 5, QUESTIONS, Math.random, 'b1').map((q) => q.id)).toEqual(B1.slice(0, 5).map((q) => q.id));
+    expect(pickRound(d.quiz, 5, QUESTIONS, Math.random, 'a2').every((q) => q.level === 'a2')).toBe(true);
+    master(d, B1.slice(0, 3));
+    expect(pickRound(d.quiz, 5, QUESTIONS, Math.random, 'b1').map((q) => q.id)).toEqual(B1.slice(3, 8).map((q) => q.id));
+    expect(pickRound(d.quiz).map((q) => q.level)).toEqual(['a1', 'a1', 'a1', 'a1', 'a1']);        // auto is not affected by what was done in B1
+  });
+  it('a chosen level that is finished is reviewed, never mixed with another level', () => {
+    const d = emptyData();
+    master(d, A1);
+    const r = pickRound(d.quiz, 5, QUESTIONS, () => 0, 'a1');
+    expect(r).toHaveLength(5);
+    expect(r.every((q) => q.level === 'a1')).toBe(true);
+    expect(pickRound(d.quiz, 5, QUESTIONS, () => 0).every((q) => q.level === 'a2')).toBe(true);   // while auto moves on to A2
+  });
+});
+
 describe('answers', () => {
   it('are shuffled, with the right one always findable', () => {
     const q = A1[0];
@@ -108,6 +127,6 @@ describe('answers', () => {
     recordAnswer(d, 'en-a1-01', false, '2026-10-12'); recordAnswer(d, 'en-a1-01', true, '2026-10-13'); recordAnswer(d, 'en-a1-02', false, '2026-10-13');
     expect(d.quiz['en-a1-01']).toEqual({ ok: 1, ko: 1, at: '2026-10-13' });
     expect(quizStats(d.quiz)).toEqual({ mastered: 1, total: QUESTIONS.length, right: 1, wrong: 2 });
-    expect(levelStats(d.quiz)[0]).toMatchObject({ mastered: 1, total: 50, done: false });
+    expect(levelStats(d.quiz)[0]).toMatchObject({ mastered: 1, total: 250, done: false });
   });
 });

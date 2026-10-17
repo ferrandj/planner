@@ -284,6 +284,34 @@ test('English quiz: five questions at each opening (French + English) read aloud
   await expect(page.getByRole('dialog')).toHaveCount(0);
 });
 
+test('English quiz: a button skips it and opens the site, and the level of the questions can be chosen', async ({ page, request }) => {
+  const st0 = await getState(request);
+  expect((await request.put('/api/state', { headers: { 'Content-Type': 'application/json', 'X-Planner-Client': '1' }, data: { baseRev: st0.rev, data: { ...st0.data, prefs: { ...st0.data.prefs, quiz: true } } } })).ok()).toBeTruthy();
+  await page.goto('/');
+  const gate = page.getByRole('dialog', { name: /Une question avant d’entrer/ });
+  await expect(gate).toBeVisible();
+  await gate.getByRole('button', { name: 'Passer et accéder au site' }).click();                 // straight to the site, nothing answered
+  await expect(gate).toHaveCount(0);
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+  await waitSaved(page);
+  expect(Object.keys((await getState(request)).data.quiz ?? {})).toHaveLength(0);              // nothing was recorded
+
+  await page.reload();                                                                           // asked again at the next opening
+  await expect(gate).toBeVisible();
+  await expect(gate.getByText(/Anglais · A1/)).toBeVisible();
+  await gate.getByRole('button', { name: /Niveau B1 : \d+ réussies sur 343/ }).click();         // choose the level
+  await expect(gate.getByText(/Anglais · B1/)).toBeVisible();
+  await expect(gate.getByText('1 / 5')).toBeVisible();
+  await gate.locator('.qz-opt').first().click();
+  await waitSaved(page);
+  const st = await getState(request);
+  expect(st.data.prefs.quizLevel).toBe('b1');
+  expect(Object.keys(st.data.quiz)).toHaveLength(1);
+  expect(Object.keys(st.data.quiz)[0]).toMatch(/^en-b1-/);
+  await gate.getByRole('button', { name: 'Passer et accéder au site' }).click();
+  await expect(gate).toHaveCount(0);
+});
+
 test('what is new: the button opens it, the "show again" switch brings it back at the next start until switched off', async ({ page, request }) => {
   expect(typeof (await (await request.get('/api/version')).json()).version).toBe('string');
   await open(page);
