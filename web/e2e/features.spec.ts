@@ -252,7 +252,9 @@ test('English quiz: five questions at each opening (French + English) read aloud
   const res = await recording;
   expect(res.status()).toBe(200);
   expect(res.headers()['content-type']).toBe('audio/mpeg');
-  expect((await res.body()).length).toBeGreaterThan(1500);
+  const file = await request.get(res.url());                                                    // and the file itself is a real, non-empty recording
+  expect(file.ok()).toBeTruthy();
+  expect((await file.body()).length).toBeGreaterThan(1500);
   await expect(gate.locator('.qz-opt.ok')).toHaveText('cat ✓');
   await expect(gate.locator('.qz-opt.ko')).toHaveText('dog ✗');
   for (let i = 2; i <= 5; i++) {                                                                // the four other questions
