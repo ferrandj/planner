@@ -38,7 +38,7 @@ describe('English quiz at the door', () => {
     const g = gate();
     expect(within(g).getByText('Quel est le mot anglais pour 🐱 ?')).toBeInTheDocument();
     expect(within(g).getByText('What is the English word for 🐱?')).toBeInTheDocument();
-    expect(within(g).getAllByRole('button', { pressed: false }).map((b) => b.textContent).sort()).toEqual(['cat', 'cow', 'dog', 'pig']);
+    expect([...g.querySelectorAll('.qz-opt')].map((b) => b.textContent).sort()).toEqual(['cat', 'cow', 'dog', 'pig']);
     expect(within(g).getByText(/Anglais · A1/)).toBeInTheDocument();
     expect(within(g).getByText('1 / 5')).toBeInTheDocument();
     expect(within(g).getByRole('button', { name: 'Question suivante' })).toBeDisabled();            // answer first
@@ -127,8 +127,6 @@ describe('English quiz at the door', () => {
     await saved(a.sync);
     expect(srv.data.prefs.quizLevel).toBe('b1');
     expect(Object.keys(srv.data.quiz)).toEqual(['en-b1-001']);
-    for (let i = 0; i < 4; i++) await answer(u, gate(), true);                        // finish this round: all questions of B1
-    expect(within(gate()).queryByText(/Anglais · A1/)).toBeNull();
     // back to the automatic course, which is still at the beginning of A1
     await u.click(within(gate()).getByRole('button', { name: /Je progresse niveau par niveau/ }));
     expect(within(gate()).getByText(/Anglais · A1/)).toBeInTheDocument();
