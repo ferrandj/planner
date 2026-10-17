@@ -294,7 +294,7 @@ test('English quiz: a button skips it and opens the site, and the level of the q
   await expect(gate).toHaveCount(0);
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   await waitSaved(page);
-  expect(Object.keys((await getState(request)).data.quiz)).toHaveLength(0);
+  expect(Object.keys((await getState(request)).data.quiz ?? {})).toHaveLength(0);              // nothing was recorded
 
   await page.reload();                                                                           // asked again at the next opening
   await expect(gate).toBeVisible();
