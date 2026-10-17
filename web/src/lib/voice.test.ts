@@ -2,7 +2,10 @@ import { vi } from 'vitest';
 import audio from '../data/quizAudio.json';
 import { hasRecording, stopVoice, voice } from './voice';
 
-const KNOWN = Object.keys(audio as Record<string, string>)[0];
+const TEXTS = Object.keys(audio as Record<string, string>);
+const KNOWN = TEXTS[0];                                           // (what was fetched stays in memory: each test that fetches uses its own text)
+/** a successful answer carrying a small sound (the jsdom Blob cannot go through the Node Response class) */
+const okSound = async (): Promise<Response> => ({ ok: true, blob: async () => new Blob(['mp3'], { type: 'audio/mpeg' }) }) as unknown as Response;
 
 class FakeAudio {
   static made: FakeAudio[] = [];
@@ -34,7 +37,7 @@ describe('the voice of the quiz', () => {
   });
 
   it('plays the recording (fetched from the app, once), and keeps it for the next time', async () => {
-    const f = vi.fn(async () => new Response(new Blob(['mp3'], { type: 'audio/mpeg' })));
+    const f = vi.fn(okSound);
     vi.stubGlobal('fetch', f);
     expect(await voice.play(KNOWN)).toBe('recording');
     expect(f).toHaveBeenCalledWith('audio/en/' + (audio as Record<string, string>)[KNOWN]);
@@ -56,12 +59,12 @@ describe('the voice of the quiz', () => {
   it('falls back to the browser when the recording cannot be fetched or played', async () => {
     const spoken = browserVoices([]);
     vi.stubGlobal('fetch', vi.fn(async () => { throw new TypeError('offline'); }));
-    expect(await voice.play(KNOWN)).toBe('browser');
+    expect(await voice.play(TEXTS[1])).toBe('browser');
     vi.stubGlobal('fetch', vi.fn(async () => new Response('x', { status: 404 })));
-    expect(await voice.play(KNOWN)).toBe('browser');
-    vi.stubGlobal('fetch', vi.fn(async () => new Response(new Blob(['mp3']))));
+    expect(await voice.play(TEXTS[2])).toBe('browser');
+    vi.stubGlobal('fetch', vi.fn(okSound));
     FakeAudio.fail = true;
-    expect(await voice.play(KNOWN)).toBe('browser');
+    expect(await voice.play(TEXTS[3])).toBe('browser');
     expect(spoken.length).toBe(3);
     expect(spoken[0].lang).toBe('en-US');                              // no English voice installed: the language is still asked
   });
@@ -74,10 +77,10 @@ describe('the voice of the quiz', () => {
   });
 
   it('can be stopped', async () => {
-    vi.stubGlobal('fetch', vi.fn(async () => new Response(new Blob(['mp3']))));
+    vi.stubGlobal('fetch', vi.fn(okSound));
     const cancel = vi.fn();
     vi.stubGlobal('speechSynthesis', { cancel, getVoices: () => [], speak: vi.fn() });
-    await voice.play(KNOWN);
+    await voice.play(TEXTS[4]);
     stopVoice();
     expect(FakeAudio.made.at(-1)!.paused).toBe(true);
     expect(cancel).toHaveBeenCalled();
