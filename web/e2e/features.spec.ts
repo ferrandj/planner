@@ -240,9 +240,11 @@ test('achievements: ticking a session unlocks medals that stay (even unticked), 
 test('English quiz: five questions at each opening (French + English) read aloud, wrong is fine and shows the right one in green, the progress is kept, and it can be switched off', async ({ page, request }) => {
   const st0 = await getState(request);
   expect((await request.put('/api/state', { headers: { 'Content-Type': 'application/json', 'X-Planner-Client': '1' }, data: { baseRev: st0.rev, data: { ...st0.data, prefs: { ...st0.data.prefs, quiz: true } } } })).ok()).toBeTruthy();
+  const readByItself = page.waitForResponse((r) => /\/audio\/en\/[0-9a-f]{12}\.mp3$/.test(r.url()));
   await page.goto('/');
   const gate = page.getByRole('dialog', { name: /Une question avant d’entrer/ });
   await expect(gate).toBeVisible();
+  expect((await readByItself).status()).toBe(200);                                              // the question is read as soon as it appears (no click on "Écouter")
   await expect(gate.getByText('Quel est le mot anglais pour 🐱 ?')).toBeVisible();
   await expect(gate.getByText('What is the English word for 🐱?')).toBeVisible();
   await expect(gate.getByText('1 / 5')).toBeVisible();

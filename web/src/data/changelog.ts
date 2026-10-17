@@ -8,6 +8,13 @@ export interface ChangeEntry { version: string; date: string; items: ChangeItem[
 
 export const CHANGELOG: ChangeEntry[] = [
   {
+    version: '1.13.0', date: '2026-10-17',
+    items: [
+      { fr: '🔊 Dans le quiz d’anglais, la voix se lance toute seule : chaque question est lue dès qu’elle apparaît, puis la bonne réponse après ta réponse. Plus besoin de cliquer sur « Écouter ».', en: '🔊 In the English quiz the voice now starts by itself: each question is read as soon as it appears, then the right answer after you answer. No need to click “Listen” any more.', es: '🔊 En el quiz de inglés la voz se inicia sola: cada pregunta se lee en cuanto aparece y, después de tu respuesta, la respuesta correcta. Ya no hace falta pulsar « Escuchar ».' },
+      { fr: 'Si ton navigateur refuse de lancer un son avant le premier clic, un message te le dit pour la première question ; ensuite tout se lance seul. Le bouton 🔊 Voix coupe la lecture automatique.', en: 'If your browser refuses to start a sound before the first click, a message tells you for the first question; after that everything starts by itself. The 🔊 Voice button switches the automatic reading off.', es: 'Si tu navegador se niega a iniciar un sonido antes del primer clic, un mensaje te lo dice para la primera pregunta; después todo se inicia solo. El botón 🔊 Voz desactiva la lectura automática.' }
+    ]
+  },
+  {
     version: '1.12.0', date: '2026-10-17',
     items: [
       { fr: '🎓 Le quiz d’anglais pose maintenant 5 questions à chaque ouverture, avec le bilan à la fin.', en: '🎓 The English quiz now asks 5 questions each time you open the app, with a summary at the end.', es: '🎓 El quiz de inglés ahora hace 5 preguntas cada vez que abres la aplicación, con un resumen al final.' },

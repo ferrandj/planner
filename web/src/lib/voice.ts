@@ -52,7 +52,8 @@ export function stopVoice(): void {
   if (typeof speechSynthesis !== 'undefined') speechSynthesis.cancel();
 }
 
-export type Spoken = 'recording' | 'browser' | 'none';
+/** `blocked`: the browser refuses to start a sound until the page has been touched (it works again after a click). */
+export type Spoken = 'recording' | 'browser' | 'blocked' | 'none';
 
 export const voice = {
   /** Reads `text` aloud (English), replacing whatever was being read. */
@@ -67,7 +68,10 @@ export const voice = {
         playing = a;
         await a.play();
         return 'recording';
-      } catch { /* blocked or unreadable: try the browser's voice */ }
+      } catch (e) {
+        if (e instanceof Error && e.name === 'NotAllowedError') { playing = null; return 'blocked'; }   // no click on the page yet: the browser's own voice would be refused too
+        /* unreadable: try the browser's voice */
+      }
     }
     return speakWithBrowser(t) ? 'browser' : 'none';
   }

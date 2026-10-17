@@ -16,6 +16,7 @@ export function QuizCard({ onDone, doneLabel }: { onDone: () => void; doneLabel:
   const [chosen, setChosen] = useState<Array<number | null>>(() => round.map(() => null));
   const next = useRef<HTMLButtonElement>(null);
   const voiceOn = data.prefs.quizVoice !== false;
+  const [blocked, setBlocked] = useState(false);                     // the browser refused to start the voice by itself
   const finished = i >= round.length;
   const cur = round[Math.min(i, round.length - 1)];
   const pickedHere = chosen[Math.min(i, round.length - 1)];
@@ -24,13 +25,21 @@ export function QuizCard({ onDone, doneLabel }: { onDone: () => void; doneLabel:
   const lstat = levelStats(data.quiz).find((x) => x.id === cur.q.level)!;
 
   useEffect(() => () => stopVoice(), []);
+  // the voice reads each question by itself (unless switched off); the browser may refuse until the page has been clicked once
+  useEffect(() => {
+    if (!voiceOn || finished || chosen[i] !== null) return;
+    let live = true;
+    void voice.play(round[i].q.qa).then((r) => { if (live) setBlocked(r === 'blocked'); });
+    return () => { live = false; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [i, voiceOn]);
   useEffect(() => { if (answered) next.current?.focus({ preventScroll: true }); }, [answered, i]);
 
   const pick = (k: number): void => {
     if (answered || finished) return;
     setChosen((c) => c.map((v, j) => (j === i ? k : v)));
     update((d) => { recordAnswer(d, cur.q.id, k === cur.shown.answer, realToday); });     // saved at once, even if the page is closed right after
-    if (voiceOn) void voice.play(cur.q.aa);
+    if (voiceOn) void voice.play(cur.q.aa).then((r) => setBlocked(r === 'blocked'));
   };
   const local = lang === 'en' ? null : lang === 'fr' ? cur.q.fr : cur.q.es;
 
@@ -81,7 +90,10 @@ export function QuizCard({ onDone, doneLabel }: { onDone: () => void; doneLabel:
         {local && <span className="qz-local">{local}</span>}
         <span className="qz-en" lang="en">{local && <span aria-hidden="true">🇬🇧 </span>}{cur.q.q}</span>
       </h2>
-      <p className="qz-listen"><button type="button" className="fchip" onClick={() => void voice.play(cur.q.qa)}>🔊 {t('Écouter la question')}</button></p>
+      <p className="qz-listen">
+        <button type="button" className={'fchip' + (blocked ? ' pulse' : '')} onClick={() => { void voice.play(cur.q.qa).then((r) => setBlocked(r === 'blocked')); }}>🔊 {t('Écouter la question')}</button>
+        {blocked && <span className="qz-hint" role="status"> {t('Ton navigateur attend un clic avant de lancer la voix : appuie sur « Écouter la question ». Ensuite elle se lancera toute seule.')}</span>}
+      </p>
       <div className="qz-opts" role="group" aria-labelledby="qz-q">
         {cur.shown.options.map((o, k) => {
           const state = !answered ? '' : k === cur.shown.answer ? ' ok' : k === pickedHere ? ' ko' : ' dim';

@@ -205,8 +205,10 @@ Each question is shown in the language of the app **and in English underneath**;
 fine: you still get in, the right answer turns **green** and a short explanation says why (in your language and in English). After
 the fifth question you see the score and the right answers, and then the way in.
 
-**The voice** 🔊: *Écouter la question* reads the question in English; after each answer the **right answer is read aloud**
-(and can be listened to again). The voice is a neural voice (Kokoro, American English), recorded once for every sentence and
+**The voice** 🔊 starts **by itself**: each question is read in English as soon as it appears, and after each answer the **right
+answer is read aloud**; *Écouter la question* / *Écouter la bonne réponse* read them again. Browsers refuse to start a sound before
+the page has been clicked once, so on some devices the very first question stays silent until you press *Écouter la question*
+(a hint says so); after that everything starts by itself (an installed app on Android is usually allowed from the start). The voice is a neural voice (Kokoro, American English), recorded once for every sentence and
 **shipped with the app** (`web/public/audio/en`, about 10 MB): the same clear accent on every device, nothing to install, and it
 keeps working offline once heard (the service worker keeps the recordings). If a recording is missing, the browser's own English
 voice reads the text instead. The 🔊 *Voix* button (or the switch in the 🎓 Quiz window) turns it off. To record the voice for a

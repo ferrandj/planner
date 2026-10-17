@@ -64,10 +64,11 @@ describe('English quiz at the door', () => {
     expect(within(g).getByRole('button', { name: 'dog ✗' })).toHaveClass('ko');
     expect(within(g).getByText(/Pas tout à fait/)).toBeInTheDocument();
     expect(within(g).getByText(/🐱 se dit « cat » \(chat\)/)).toBeInTheDocument();
-    expect(voice.play).toHaveBeenCalledWith('cat');                                  // the voice says the right answer
+    expect(voice.play).toHaveBeenNthCalledWith(1, 'What is the English word for this picture?');   // the question was read by itself...
+    expect(voice.play).toHaveBeenNthCalledWith(2, 'cat');                            // ...and the voice says the right answer
     await u.click(within(g).getByRole('button', { name: 'cow' }));                 // the answer cannot be changed afterwards
     expect(within(g).getByRole('button', { name: 'cow' })).not.toHaveClass('ko');
-    expect(voice.play).toHaveBeenCalledTimes(1);
+    expect(voice.play).toHaveBeenCalledTimes(2);
   });
 
   it('the question and the right answer can be listened to at any time', async () => {
@@ -86,11 +87,49 @@ describe('English quiz at the door', () => {
     const a = await mountApp({ server: srv, seed: on });
     const u = user();
     const g = gate();
+    expect(voice.play).toHaveBeenCalledTimes(1);                                     // the first question was read when it appeared
     await u.click(within(g).getByRole('button', { name: /Voix/ }));
     await u.click(within(g).getByRole('button', { name: 'cat' }));
-    expect(voice.play).not.toHaveBeenCalled();
+    expect(voice.play).toHaveBeenCalledTimes(1);                                     // nothing more once switched off
     await saved(a.sync);
     expect(srv.data.prefs.quizVoice).toBe(false);
+  });
+
+  it('each question is read as soon as it appears, with no click on "Écouter" (the voice is on by default)', async () => {
+    await mountApp({ seed: on });
+    const u = user();
+    expect(voice.play).toHaveBeenCalledTimes(1);
+    expect(voice.play).toHaveBeenLastCalledWith('What is the English word for this picture?');
+    await u.click(within(gate()).getByRole('button', { name: 'cat' }));
+    await u.click(within(gate()).getByRole('button', { name: 'Question suivante' }));
+    expect(within(gate()).getByText('2 / 5')).toBeInTheDocument();
+    expect(voice.play).toHaveBeenLastCalledWith('What is the English word for this picture?');
+    expect(voice.play).toHaveBeenCalledTimes(3);                                     // question 1, its right answer, question 2
+  });
+
+  it('with the voice switched off nothing starts by itself, but the buttons still read on request', async () => {
+    await mountApp({ seed: (d) => { on(d); d.prefs.quizVoice = false; } });
+    const u = user();
+    const g = gate();
+    await u.click(within(g).getByRole('button', { name: 'cat' }));
+    expect(voice.play).not.toHaveBeenCalled();
+    await u.click(within(g).getByRole('button', { name: /Écouter la bonne réponse/ }));
+    expect(voice.play).toHaveBeenCalledWith('cat');
+  });
+
+  it('if the browser refuses to start the sound by itself, it says what to do, and the voice runs by itself after the first click', async () => {
+    (voice.play as ReturnType<typeof vi.fn>).mockResolvedValueOnce('blocked');
+    await mountApp({ seed: on });
+    const u = user();
+    const g = gate();
+    expect(await within(g).findByText(/Ton navigateur attend un clic/)).toBeInTheDocument();
+    await u.click(within(g).getByRole('button', { name: /Écouter la question/ }));
+    expect(voice.play).toHaveBeenCalledTimes(2);
+    await vi.waitFor(() => expect(within(g).queryByText(/Ton navigateur attend un clic/)).toBeNull());
+    await u.click(within(g).getByRole('button', { name: 'cat' }));
+    await u.click(within(g).getByRole('button', { name: 'Question suivante' }));
+    expect(voice.play).toHaveBeenCalledTimes(4);                                     // the next question started by itself
+    expect(within(gate()).queryByText(/Ton navigateur attend un clic/)).toBeNull();
   });
 
   it('after five answers: the score, the right answers and the way in; everything is saved', async () => {
