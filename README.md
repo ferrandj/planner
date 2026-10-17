@@ -195,11 +195,13 @@ catch-ups are counted on (older ticks count on the day of their class).
 
 ### English quiz at the door
 
-Each time the app is opened, **five questions** of English come first, from **A1 to A2 then B1** (about 330 questions):
+Each time the app is opened, **five questions** of English come first, from **A1 to A2 then B1** (about 930 questions):
 
-- **A1** (50): words with pictures, polite phrases and introductions, "to be" / "to have", articles and plurals, numbers, days and months, everyday words;
-- **A2** (136): whole sentences: past, present and future, comparing, quantities, prepositions, modals, questions and replies in real situations (shop, restaurant, directions, phone…), "which sentence is correct?", expressions, short texts to read;
-- **B1** (143): present perfect, conditionals, passive, reported speech, relative clauses, linking words, phrasal verbs and collocations, opinions and complaints, longer texts with questions.
+- **A1** (250): words with pictures (animals, food, objects, places, transport, clothes, body, jobs, colours), opposites, numbers, time and calendar, "to be" / "to have", articles and plurals, this / that, prepositions, can, present simple and continuous, simple dialogues, very short texts;
+- **A2** (336): whole sentences: past, present and future, comparing, quantities, prepositions of time, place and movement, modals, reflexive pronouns, questions and replies in real situations (shop, restaurant, directions, phone…), "which sentence is correct?", expressions, short texts to read;
+- **B1** (343): present perfect, past perfect and future perfect, conditionals and wishes, passive (all tenses), reported speech, relative clauses, linking words, phrasal verbs and collocations, word forms, confusing words (borrow / lend, bring / take…), idioms, opinions and complaints, longer texts with questions.
+
+**Skip it, or choose your level**: a **Passer et accéder au site** button under the questions lets you in at once (nothing is recorded, the quiz is asked again at the next opening; "Désactiver ce quiz" turns it off for good). The **Niveau** chips (*Auto*, *A1*, *A2*, *B1*) in the questions and in the 🎓 Quiz window choose where the questions come from: *Auto* goes through A1, A2 and B1 in turn (below), a level of your choice asks only that level (and reviews it when it is finished). Changing the level starts a new round; what was answered is kept.
 
 Each question is shown in the language of the app **and in English underneath**; the four answers are in English. A wrong answer is
 fine: you still get in, the right answer turns **green** and a short explanation says why (in your language and in English). After
@@ -215,7 +217,7 @@ voice reads the text instead. The 🔊 *Voix* button (or the switch in the 🎓 
 new or changed question, see `scripts/quiz-audio/generate.py` (the questions are in `web/src/data/quizEn*.json`; `qa` is what is read
 for the question, `aa` for the right answer).
 
-**The course goes level by level**: the next questions are always the first ones you have not answered right yet (a wrong answer
+**In Auto mode the course goes level by level**: the next questions are always the first ones you have not answered right yet (a wrong answer
 comes back at the next opening), so **a level is finished before the next one starts**; when fewer than five are left they are
 completed with questions to review, and when everything is done the ones asked longest ago come back. Progress is saved with your
 data (per level in the 🎓 Quiz window) and earns English medals.

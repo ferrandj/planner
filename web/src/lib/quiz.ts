@@ -12,8 +12,10 @@ const askedAt = (log: QuizLog, q: Question): number => Date.parse(log[q.id]?.at 
 /**
  * The questions for this visit: the next ones in the course that have not been answered right yet (so a wrong answer comes back,
  * and a level is finished before the next one starts). When fewer than `count` are left, the rest are the ones asked longest ago.
+ * With a chosen `level`, only the questions of that level are asked (the same way).
  */
-export function pickRound(log: QuizLog, count: number = ROUND, questions: Question[] = QUESTIONS, rand: () => number = Math.random): Question[] {
+export function pickRound(log: QuizLog, count: number = ROUND, all: Question[] = QUESTIONS, rand: () => number = Math.random, level: Level | 'auto' = 'auto'): Question[] {
+  const questions = level === 'auto' ? all : all.filter((q) => q.level === level);       // a chosen level: only its questions
   const out = questions.filter((q) => !mastered(log, q)).slice(0, count);
   if (out.length >= count) return out;
   const rest = questions.filter((q) => !out.includes(q)).sort((a, b) => askedAt(log, a) - askedAt(log, b) || a.id.localeCompare(b.id));

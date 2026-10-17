@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { LEVELS } from '../data/quizBank';
-import { levelStats, pickRound, quizStats, recordAnswer, shuffled } from '../lib/quiz';
+import { LEVELS, QUESTIONS, type Level } from '../data/quizBank';
+import { levelStats, pickRound, quizStats, recordAnswer, ROUND, shuffled } from '../lib/quiz';
 import { stopVoice, voice } from '../lib/voice';
 import { useApp } from '../state/app';
 
@@ -8,10 +8,35 @@ import { useApp } from '../state/app';
  * A round of questions: asked in the language of the app and in English, answers in English. A wrong answer is fine: the right one
  * turns green. The voice reads the question when asked to (🔊) and the right answer after each answer.
  */
-export function QuizCard({ onDone, doneLabel }: { onDone: () => void; doneLabel: string }): ReactNode {
+export function QuizCard(props: { onDone: () => void; doneLabel: string }): ReactNode {
+  const { data } = useApp();
+  return <QuizRound key={data.prefs.quizLevel ?? 'auto'} {...props} />;          // choosing another level starts a new round
+}
+
+/** Which level the questions come from: "auto" goes through A1, A2 and B1 in turn; or one level of your choice. */
+export function LevelPicker(): ReactNode {
+  const { data, update, t, tf } = useApp();
+  const level = data.prefs.quizLevel ?? 'auto';
+  const stats = levelStats(data.quiz);
+  const options: Array<['auto' | Level, string, string]> = [
+    ['auto', t('Auto'), t('Je progresse niveau par niveau : A1, puis A2, puis B1.')],
+    ...stats.map((x): ['auto' | Level, string, string] => [x.id, x.name + (x.done ? ' ✓' : ''), tf('Niveau {l} : {a} réussies sur {b}', { l: x.name, a: x.mastered, b: x.total })])
+  ];
+  return (
+    <div className="qz-pick" role="group" aria-label={t('Niveau des questions')}>
+      <span className="qz-pick-l">{t('Niveau')}</span>
+      {options.map(([id, label, title]) => (
+        <button key={id} type="button" className="fchip" aria-pressed={level === id} title={title} aria-label={title}
+          onClick={() => { if (level !== id) update((d) => { d.prefs.quizLevel = id; }); }}>{label}</button>
+      ))}
+    </div>
+  );
+}
+
+function QuizRound({ onDone, doneLabel }: { onDone: () => void; doneLabel: string }): ReactNode {
   const { data, update, realToday, lang, t, tf } = useApp();
   const [before] = useState(() => levelStats(data.quiz));              // progress when the round started
-  const [round] = useState(() => pickRound(data.quiz).map((q) => ({ q, shown: shuffled(q) })));
+  const [round] = useState(() => pickRound(data.quiz, ROUND, QUESTIONS, Math.random, data.prefs.quizLevel ?? 'auto').map((q) => ({ q, shown: shuffled(q) })));
   const [i, setI] = useState(0);
   const [chosen, setChosen] = useState<Array<number | null>>(() => round.map(() => null));
   const next = useRef<HTMLButtonElement>(null);
@@ -86,6 +111,7 @@ export function QuizCard({ onDone, doneLabel }: { onDone: () => void; doneLabel:
         </span>
         <button type="button" className="fchip" aria-pressed={voiceOn} title={t('Voix')} onClick={() => { if (voiceOn) stopVoice(); update((d) => { d.prefs.quizVoice = !voiceOn; }); }}>{voiceOn ? '🔊' : '🔇'} {t('Voix')}</button>
       </div>
+      <LevelPicker />
       <h2 className="qz-q" id="qz-q">
         {local && <span className="qz-local">{local}</span>}
         <span className="qz-en" lang="en">{local && <span aria-hidden="true">🇬🇧 </span>}{cur.q.q}</span>
@@ -130,7 +156,10 @@ export function QuizGate(): ReactNode {
         <div className="mtop acc"><div className="eyebrow" id="qz-t">{t('Une question avant d’entrer')}</div><div className="big sm">{t('Quiz d’anglais')}</div></div>
         <div className="mbody">
           <QuizCard onDone={() => setUi({ quizPassed: true })} doneLabel={t('Entrer dans le planner')} />
-          <button type="button" className="lnk" onClick={() => { update((d) => { d.prefs.quiz = false; }); setUi({ quizPassed: true }); }}>{t('Désactiver ce quiz')}</button>
+          <div className="qz-skip">
+            <button type="button" className="btn ghost" onClick={() => setUi({ quizPassed: true })}>{t('Passer et accéder au site')}</button>
+            <button type="button" className="lnk" onClick={() => { update((d) => { d.prefs.quiz = false; }); setUi({ quizPassed: true }); }}>{t('Désactiver ce quiz')}</button>
+          </div>
         </div>
       </div>
     </div>
@@ -163,6 +192,7 @@ export function QuizDialog(): ReactNode {
           <label className="check">
             <input type="checkbox" role="switch" checked={voiceOn} onChange={(e) => { if (!e.target.checked) stopVoice(); update((d) => { d.prefs.quizVoice = e.target.checked; }); }} /> {t('Voix : lire la bonne réponse à voix haute')}
           </label>
+          <LevelPicker />
           <div className="qz-levels">
             {lv.map((x) => <span key={x.id} className={'qz-lv' + (x.done ? ' done' : '')}>{x.name} <b>{x.mastered}/{x.total}</b></span>)}
           </div>

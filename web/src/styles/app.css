@@ -533,3 +533,6 @@ label.btn{cursor:pointer}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(29,95,209,.5)}50%{box-shadow:0 0 0 6px rgba(29,95,209,0)}}
 @media (prefers-reduced-motion:reduce){.fchip.pulse{animation:none}}
 .qz-hint{font-size:.88rem;color:var(--muted)}
+.qz-pick{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.qz-pick-l{font-weight:700;font-size:.9rem}
+.qz-skip{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}

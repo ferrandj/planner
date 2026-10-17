@@ -14,7 +14,8 @@ const gate = (): HTMLElement => screen.getByRole('dialog', { name: /Une question
 
 /** The question on screen, found in the bank. */
 const current = (g: HTMLElement): (typeof QUESTIONS)[number] => {
-  const q = QUESTIONS.filter((x) => (g.textContent || '').includes(x.q)).sort((a, b) => b.q.length - a.q.length)[0];
+  const buttons = [...g.querySelectorAll('.qz-opt')].map((b) => (b.textContent || '').replace(/ [✓✗]$/, '')).sort();
+  const q = QUESTIONS.filter((x) => (g.textContent || '').includes(x.q) && JSON.stringify([x.correct, ...x.wrong].sort()) === JSON.stringify(buttons))[0];
   if (!q) throw new Error('question not found: ' + (g.textContent || '').slice(0, 120));
   return q;
 };
@@ -95,6 +96,54 @@ describe('English quiz at the door', () => {
     expect(srv.data.prefs.quizVoice).toBe(false);
   });
 
+  it('a button lets you skip the quiz and go straight to the site (nothing is recorded, the quiz stays on)', async () => {
+    const srv = new FakeServer();
+    const a = await mountApp({ server: srv, seed: on });
+    const u = user();
+    await u.click(within(gate()).getByRole('button', { name: 'Passer et accéder au site' }));
+    expect(screen.queryByRole('dialog', { name: /Une question avant/ })).toBeNull();
+    await saved(a.sync);
+    expect(srv.data.quiz).toEqual({});
+    expect(srv.data.prefs.quiz).toBe(true);
+    a.utils.unmount();
+    await mountApp({ server: srv });                                                 // the next opening asks again
+    expect(gate()).toBeInTheDocument();
+  });
+
+  it('the level of the questions can be chosen: auto by default, or A1, A2, B1 (a new round starts, progress is kept)', async () => {
+    const srv = new FakeServer();
+    const a = await mountApp({ server: srv, seed: on });
+    const u = user();
+    const g = gate();
+    const picker = within(g).getByRole('group', { name: 'Niveau des questions' });
+    expect(within(picker).getByRole('button', { name: /Je progresse niveau par niveau/ })).toHaveAttribute('aria-pressed', 'true');
+    expect(within(g).getByText(/Anglais · A1/)).toBeInTheDocument();
+    await u.click(within(picker).getByRole('button', { name: /Niveau B1 : 0 réussies sur 343/ }));
+    const b1 = gate();
+    expect(within(b1).getByText(/Anglais · B1/)).toBeInTheDocument();
+    expect(within(b1).getByText('1 / 5')).toBeInTheDocument();
+    expect(current(b1).level).toBe('b1');
+    await u.click(within(b1).getByRole('button', { name: current(b1).correct }));
+    await saved(a.sync);
+    expect(srv.data.prefs.quizLevel).toBe('b1');
+    expect(Object.keys(srv.data.quiz)).toEqual(['en-b1-001']);
+    for (let i = 0; i < 4; i++) await answer(u, gate(), true);                        // finish this round: all questions of B1
+    expect(within(gate()).queryByText(/Anglais · A1/)).toBeNull();
+    // back to the automatic course, which is still at the beginning of A1
+    await u.click(within(gate()).getByRole('button', { name: /Je progresse niveau par niveau/ }));
+    expect(within(gate()).getByText(/Anglais · A1/)).toBeInTheDocument();
+    await saved(a.sync);
+    expect(srv.data.prefs.quizLevel).toBe('auto');
+  });
+
+  it('a level that is completely done is reviewed (the questions asked longest ago)', async () => {
+    await mountApp({ seed: (d) => { on(d); d.prefs.quizLevel = 'a1'; QUESTIONS.filter((q) => q.level === 'a1').forEach((q, i) => { d.quiz[q.id] = { ok: 1, ko: 0, at: i < 5 ? '2026-09-01' : '2026-10-01' }; }); } });
+    const g = gate();
+    expect(within(g).getByText(/Anglais · A1/)).toBeInTheDocument();
+    expect(within(g).getByRole('button', { name: /Niveau A1 : 250 réussies sur 250/ })).toBeInTheDocument();
+    expect(['en-a1-01', 'en-a1-02', 'en-a1-03', 'en-a1-04', 'en-a1-05']).toContain(current(g).id);              // one of the five asked longest ago
+  });
+
   it('each question is read as soon as it appears, with no click on "Écouter" (the voice is on by default)', async () => {
     await mountApp({ seed: on });
     const u = user();
@@ -165,7 +214,7 @@ describe('English quiz at the door', () => {
 
   it('finishing a level moves on to the next one, with a message', async () => {
     const srv = new FakeServer();
-    const a = await mountApp({ server: srv, seed: (d) => { on(d); QUESTIONS.slice(0, 49).forEach((q) => { d.quiz[q.id] = { ok: 1, ko: 0, at: '2026-10-10' }; }); } });
+    const a = await mountApp({ server: srv, seed: (d) => { on(d); QUESTIONS.slice(0, 249).forEach((q) => { d.quiz[q.id] = { ok: 1, ko: 0, at: '2026-10-10' }; }); } });
     const u = user();
     const g = gate();
     expect(within(g).getByText(/Anglais · A1/)).toBeInTheDocument();
@@ -174,7 +223,7 @@ describe('English quiz at the door', () => {
     await playRound(u, [true, true, true, false]);
     const done = gate();
     expect(within(done).getByText(/Niveau A1 terminé ! Tu passes au niveau A2\./)).toBeInTheDocument();
-    expect([...done.querySelectorAll('.qz-lv.done')].map((e) => e.textContent)).toEqual(['A1 50/50']);
+    expect([...done.querySelectorAll('.qz-lv.done')].map((e) => e.textContent)).toEqual(['A1 250/250']);
     await u.click(within(done).getByRole('button', { name: 'Entrer dans le planner' }));
     await saved(a.sync);
     expect(srv.data.quiz['en-a2-001'].ok).toBe(1);
@@ -211,7 +260,7 @@ describe('English quiz at the door', () => {
     await u.click(screen.getByRole('button', { name: /Quiz/ }));
     const d = screen.getByRole('dialog', { name: /Quiz d’anglais/ });
     expect(within(d).getByText(new RegExp('1 questions réussies sur ' + QUESTIONS.length + ' · 2 bonnes réponses, 1 erreurs'))).toBeInTheDocument();
-    expect([...d.querySelectorAll('.qz-lv')].map((e) => e.textContent)).toEqual(['A1 1/50', expect.stringMatching(/^A2 0\//), expect.stringMatching(/^B1 0\//)]);
+    expect([...d.querySelectorAll('.qz-lv')].map((e) => e.textContent)).toEqual(['A1 1/250', expect.stringMatching(/^A2 0\//), expect.stringMatching(/^B1 0\//)]);
     const sw = within(d).getByRole('switch', { name: /Poser une question/ });
     expect(sw).not.toBeChecked();
     await u.click(sw);

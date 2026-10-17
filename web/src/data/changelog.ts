@@ -8,6 +8,14 @@ export interface ChangeEntry { version: string; date: string; items: ChangeItem[
 
 export const CHANGELOG: ChangeEntry[] = [
   {
+    version: '1.14.0', date: '2026-10-17',
+    items: [
+      { fr: '⏭️ Un bouton « Passer et accéder au site » permet d’entrer tout de suite sans répondre au quiz d’anglais (il sera reposé à la prochaine ouverture).', en: '⏭️ A “Skip and go to the site” button lets you in at once without answering the English quiz (it will be asked again at the next opening).', es: '⏭️ Un botón « Saltar y entrar en el sitio » permite entrar enseguida sin responder al quiz de inglés (se volverá a preguntar en la próxima apertura).' },
+      { fr: '🎚️ Tu peux choisir ton niveau (Auto, A1, A2 ou B1) directement dans les questions et dans la fenêtre 🎓 Quiz.', en: '🎚️ You can choose your level (Auto, A1, A2 or B1) right in the questions and in the 🎓 Quiz window.', es: '🎚️ Puedes elegir tu nivel (Auto, A1, A2 o B1) directamente en las preguntas y en la ventana 🎓 Quiz.' },
+      { fr: '📚 600 questions de plus : 200 en A1, 200 en A2 et 200 en B1 (près de 930 au total), toutes avec la voix.', en: '📚 600 more questions: 200 in A1, 200 in A2 and 200 in B1 (almost 930 in total), all with the voice.', es: '📚 600 preguntas más: 200 en A1, 200 en A2 y 200 en B1 (casi 930 en total), todas con la voz.' }
+    ]
+  },
+  {
     version: '1.13.0', date: '2026-10-17',
     items: [
       { fr: '🔊 Dans le quiz d’anglais, la voix se lance toute seule : chaque question est lue dès qu’elle apparaît, puis la bonne réponse après ta réponse. Plus besoin de cliquer sur « Écouter ».', en: '🔊 In the English quiz the voice now starts by itself: each question is read as soon as it appears, then the right answer after you answer. No need to click “Listen” any more.', es: '🔊 En el quiz de inglés la voz se inicia sola: cada pregunta se lee en cuanto aparece y, después de tu respuesta, la respuesta correcta. Ya no hace falta pulsar « Escuchar ».' },

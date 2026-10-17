@@ -998,5 +998,4005 @@
 },
 "qa":"Complete the sentence. I blank English.",
 "aa":"I speak English."
+},
+{
+"id":"en-a1-051",
+"level":"a1",
+"q":"What is the English word for 🐴?",
+"fr":"Quel est le mot anglais pour 🐴 ?",
+"es":"¿Cómo se dice 🐴 en inglés?",
+"correct":"horse",
+"wrong":[
+"rabbit",
+"monkey",
+"bee"
+],
+"why":{
+"en":"🐴 = “horse”.",
+"fr":"🐴 se dit « horse » (cheval).",
+"es":"🐴 se dice « horse » (caballo)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"horse"
+},
+{
+"id":"en-a1-052",
+"level":"a1",
+"q":"Complete: “My brother ___ twelve years old.”",
+"fr":"Complète : « My brother ___ twelve years old. »",
+"es":"Completa: « My brother ___ twelve years old. »",
+"correct":"is",
+"wrong":[
+"am",
+"are",
+"be"
+],
+"why":{
+"en":"“My brother is twelve years old.” With he, she, it (and one person or thing) we use “is”.",
+"fr":"« My brother is twelve years old. » Avec he, she, it (une seule personne ou chose), on utilise « is ».",
+"es":"« My brother is twelve years old. » Con he, she, it (una sola persona o cosa) se usa « is »."
+},
+"qa":"Complete the sentence. My brother blank twelve years old.",
+"aa":"My brother is twelve years old."
+},
+{
+"id":"en-a1-053",
+"level":"a1",
+"q":"Someone says: “What’s your favourite colour?” What do you answer?",
+"fr":"Quelqu’un te dit : « What’s your favourite colour? » Que réponds-tu ?",
+"es":"Alguien te dice: « What’s your favourite colour? » ¿Qué respondes?",
+"correct":"My favourite colour is blue.",
+"wrong":[
+"I’m twelve.",
+"It’s Monday.",
+"Yes, I do."
+],
+"why":{
+"en":"“My favourite colour is…” answers a question about colours.",
+"fr":"« My favourite colour is… » répond à une question sur les couleurs.",
+"es":"« My favourite colour is… » responde a una pregunta sobre colores."
+},
+"qa":"Someone says: What's your favourite colour? What do you answer?",
+"aa":"My favourite colour is blue."
+},
+{
+"id":"en-a1-054",
+"level":"a1",
+"q":"What is the opposite of “happy”?",
+"fr":"Quel est le contraire de « happy » ?",
+"es":"¿Cuál es lo contrario de « happy »?",
+"correct":"sad",
+"wrong":[
+"tall",
+"new",
+"cold"
+],
+"why":{
+"en":"happy ↔ sad.",
+"fr":"happy ↔ sad (triste).",
+"es":"happy ↔ sad (triste)."
+},
+"qa":"What is the opposite of happy?",
+"aa":"sad"
+},
+{
+"id":"en-a1-055",
+"level":"a1",
+"q":"What is two plus three?",
+"fr":"Combien font deux plus trois ?",
+"es":"¿Cuánto es dos más tres?",
+"correct":"five",
+"wrong":[
+"four",
+"six",
+"three"
+],
+"why":{
+"en":"2 + 3 = 5 (five).",
+"fr":"2 + 3 = 5 (five : cinq).",
+"es":"2 + 3 = 5 (five: cinco)."
+},
+"qa":"What is two plus three?",
+"aa":"five"
+},
+{
+"id":"en-a1-056",
+"level":"a1",
+"q":"“My name is Sara. I am ten. I have a brother and a dog. My brother’s name is Leo.” How old is Sara?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"She is ten.",
+"wrong":[
+"She is eleven.",
+"She is a dog.",
+"She has ten."
+],
+"why":{
+"en":"“I am ten.”",
+"fr":"« I am ten » : elle a dix ans.",
+"es":"« I am ten »: tiene diez años."
+},
+"qa":"My name is Sara. I am ten. I have a brother and a dog. My brother's name is Leo. How old is Sara?",
+"aa":"She is ten."
+},
+{
+"id":"en-a1-057",
+"level":"a1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"I am a student.",
+"wrong":[
+"I is a student.",
+"I are a student.",
+"I be a student."
+],
+"why":{
+"en":"With “I” we say “am”.",
+"fr":"Avec « I » on dit « am ».",
+"es":"Con « I » se dice « am »."
+},
+"qa":"Which sentence is correct?",
+"aa":"I am a student."
+},
+{
+"id":"en-a1-058",
+"level":"a1",
+"q":"What is the English word for 🐷?",
+"fr":"Quel est le mot anglais pour 🐷 ?",
+"es":"¿Cómo se dice 🐷 en inglés?",
+"correct":"pig",
+"wrong":[
+"bear",
+"frog",
+"mouse"
+],
+"why":{
+"en":"🐷 = “pig”.",
+"fr":"🐷 se dit « pig » (cochon).",
+"es":"🐷 se dice « pig » (cerdo)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"pig"
+},
+{
+"id":"en-a1-059",
+"level":"a1",
+"q":"Complete: “We ___ at school today.”",
+"fr":"Complète : « We ___ at school today. »",
+"es":"Completa: « We ___ at school today. »",
+"correct":"are",
+"wrong":[
+"is",
+"am",
+"be"
+],
+"why":{
+"en":"“We are at school today.” With you, we, they (and several people or things) we use “are”.",
+"fr":"« We are at school today. » Avec you, we, they (plusieurs personnes ou choses), on utilise « are ».",
+"es":"« We are at school today. » Con you, we, they (varias personas o cosas) se usa « are »."
+},
+"qa":"Complete the sentence. We blank at school today.",
+"aa":"We are at school today."
+},
+{
+"id":"en-a1-060",
+"level":"a1",
+"q":"What is the English word for 🐑?",
+"fr":"Quel est le mot anglais pour 🐑 ?",
+"es":"¿Cómo se dice 🐑 en inglés?",
+"correct":"sheep",
+"wrong":[
+"elephant",
+"turtle",
+"wolf"
+],
+"why":{
+"en":"🐑 = “sheep”.",
+"fr":"🐑 se dit « sheep » (mouton).",
+"es":"🐑 se dice « sheep » (oveja)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"sheep"
+},
+{
+"id":"en-a1-061",
+"level":"a1",
+"q":"What is the English word for 🐔?",
+"fr":"Quel est le mot anglais pour 🐔 ?",
+"es":"¿Cómo se dice 🐔 en inglés?",
+"correct":"chicken",
+"wrong":[
+"lion",
+"snake",
+"giraffe"
+],
+"why":{
+"en":"🐔 = “chicken”.",
+"fr":"🐔 se dit « chicken » (poule).",
+"es":"🐔 se dice « chicken » (gallina)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"chicken"
+},
+{
+"id":"en-a1-062",
+"level":"a1",
+"q":"Complete: “I ___ very tired.”",
+"fr":"Complète : « I ___ very tired. »",
+"es":"Completa: « I ___ very tired. »",
+"correct":"am",
+"wrong":[
+"is",
+"are",
+"be"
+],
+"why":{
+"en":"“I am very tired.” With “I” we use “am”: I am.",
+"fr":"« I am very tired. » Avec « I » (je), on utilise « am » : I am (je suis).",
+"es":"« I am very tired. » Con « I » (yo) se usa « am »: I am (yo soy)."
+},
+"qa":"Complete the sentence. I blank very tired.",
+"aa":"I am very tired."
+},
+{
+"id":"en-a1-063",
+"level":"a1",
+"q":"What is the English word for 🦆?",
+"fr":"Quel est le mot anglais pour 🦆 ?",
+"es":"¿Cómo se dice 🦆 en inglés?",
+"correct":"duck",
+"wrong":[
+"tiger",
+"butterfly",
+"penguin"
+],
+"why":{
+"en":"🦆 = “duck”.",
+"fr":"🦆 se dit « duck » (canard).",
+"es":"🦆 se dice « duck » (pato)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"duck"
+},
+{
+"id":"en-a1-064",
+"level":"a1",
+"q":"Someone says: “Where do you live?” What do you answer?",
+"fr":"Quelqu’un te dit : « Where do you live? » Que réponds-tu ?",
+"es":"Alguien te dice: « Where do you live? » ¿Qué respondes?",
+"correct":"I live in Paris.",
+"wrong":[
+"I’m fine, thank you.",
+"It’s five o’clock.",
+"I’m a teacher."
+],
+"why":{
+"en":"“Where do you live?” asks for your town: “I live in…”.",
+"fr":"« Where do you live? » demande où tu habites : « I live in… ».",
+"es":"« Where do you live? » pregunta dónde vives: « I live in… »."
+},
+"qa":"Someone says: Where do you live? What do you answer?",
+"aa":"I live in Paris."
+},
+{
+"id":"en-a1-065",
+"level":"a1",
+"q":"What is ten minus four?",
+"fr":"Combien font dix moins quatre ?",
+"es":"¿Cuánto es diez menos cuatro?",
+"correct":"six",
+"wrong":[
+"five",
+"seven",
+"fourteen"
+],
+"why":{
+"en":"10 − 4 = 6 (six).",
+"fr":"10 − 4 = 6 (six : six).",
+"es":"10 − 4 = 6 (six: seis)."
+},
+"qa":"What is ten minus four?",
+"aa":"six"
+},
+{
+"id":"en-a1-066",
+"level":"a1",
+"q":"Complete: “The dogs ___ in the garden.”",
+"fr":"Complète : « The dogs ___ in the garden. »",
+"es":"Completa: « The dogs ___ in the garden. »",
+"correct":"are",
+"wrong":[
+"is",
+"am",
+"be"
+],
+"why":{
+"en":"“The dogs are in the garden.” With you, we, they (and several people or things) we use “are”.",
+"fr":"« The dogs are in the garden. » Avec you, we, they (plusieurs personnes ou choses), on utilise « are ».",
+"es":"« The dogs are in the garden. » Con you, we, they (varias personas o cosas) se usa « are »."
+},
+"qa":"Complete the sentence. The dogs blank in the garden.",
+"aa":"The dogs are in the garden."
+},
+{
+"id":"en-a1-067",
+"level":"a1",
+"q":"What is the English word for 🐟?",
+"fr":"Quel est le mot anglais pour 🐟 ?",
+"es":"¿Cómo se dice 🐟 en inglés?",
+"correct":"fish",
+"wrong":[
+"monkey",
+"bee",
+"owl"
+],
+"why":{
+"en":"🐟 = “fish”.",
+"fr":"🐟 se dit « fish » (poisson).",
+"es":"🐟 se dice « fish » (pez)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"fish"
+},
+{
+"id":"en-a1-068",
+"level":"a1",
+"q":"What is the opposite of “fast”?",
+"fr":"Quel est le contraire de « fast » ?",
+"es":"¿Cuál es lo contrario de « fast »?",
+"correct":"slow",
+"wrong":[
+"small",
+"warm",
+"dark"
+],
+"why":{
+"en":"fast ↔ slow.",
+"fr":"fast ↔ slow (lent).",
+"es":"fast ↔ slow (lento)."
+},
+"qa":"What is the opposite of fast?",
+"aa":"slow"
+},
+{
+"id":"en-a1-069",
+"level":"a1",
+"q":"What is the English word for 🐰?",
+"fr":"Quel est le mot anglais pour 🐰 ?",
+"es":"¿Cómo se dice 🐰 en inglés?",
+"correct":"rabbit",
+"wrong":[
+"frog",
+"mouse",
+"dolphin"
+],
+"why":{
+"en":"🐰 = “rabbit”.",
+"fr":"🐰 se dit « rabbit » (lapin).",
+"es":"🐰 se dice « rabbit » (conejo)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"rabbit"
+},
+{
+"id":"en-a1-070",
+"level":"a1",
+"q":"Complete: “My mother ___ a nice car.”",
+"fr":"Complète : « My mother ___ a nice car. »",
+"es":"Completa: « My mother ___ a nice car. »",
+"correct":"has",
+"wrong":[
+"have",
+"is",
+"are"
+],
+"why":{
+"en":"“My mother has a nice car.” “Have” with I, you, we, they; “has” with he, she, it.",
+"fr":"« My mother has a nice car. » « Have » avec I, you, we, they ; « has » avec he, she, it.",
+"es":"« My mother has a nice car. » « Have » con I, you, we, they; « has » con he, she, it."
+},
+"qa":"Complete the sentence. My mother blank a nice car.",
+"aa":"My mother has a nice car."
+},
+{
+"id":"en-a1-071",
+"level":"a1",
+"q":"What is the English word for 🐻?",
+"fr":"Quel est le mot anglais pour 🐻 ?",
+"es":"¿Cómo se dice 🐻 en inglés?",
+"correct":"bear",
+"wrong":[
+"turtle",
+"wolf",
+"horse"
+],
+"why":{
+"en":"🐻 = “bear”.",
+"fr":"🐻 se dit « bear » (ours).",
+"es":"🐻 se dice « bear » (oso)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"bear"
+},
+{
+"id":"en-a1-072",
+"level":"a1",
+"q":"Complete: “We ___ a big family.”",
+"fr":"Complète : « We ___ a big family. »",
+"es":"Completa: « We ___ a big family. »",
+"correct":"have",
+"wrong":[
+"has",
+"are",
+"is"
+],
+"why":{
+"en":"“We have a big family.” “Have” with I, you, we, they; “has” with he, she, it.",
+"fr":"« We have a big family. » « Have » avec I, you, we, they ; « has » avec he, she, it.",
+"es":"« We have a big family. » « Have » con I, you, we, they; « has » con he, she, it."
+},
+"qa":"Complete the sentence. We blank a big family.",
+"aa":"We have a big family."
+},
+{
+"id":"en-a1-073",
+"level":"a1",
+"q":"“My name is Sara. I am ten. I have a brother and a dog. My brother’s name is Leo.” What is the name of Sara’s brother?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"Leo.",
+"wrong":[
+"Max.",
+"Sara.",
+"Tom."
+],
+"why":{
+"en":"“My brother’s name is Leo.”",
+"fr":"« My brother’s name is Leo » : son frère s’appelle Leo.",
+"es":"« My brother’s name is Leo »: su hermano se llama Leo."
+},
+"qa":"My name is Sara. I am ten. I have a brother and a dog. My brother's name is Leo. What is the name of Sara's brother?",
+"aa":"Leo."
+},
+{
+"id":"en-a1-074",
+"level":"a1",
+"q":"What is the English word for 🐘?",
+"fr":"Quel est le mot anglais pour 🐘 ?",
+"es":"¿Cómo se dice 🐘 en inglés?",
+"correct":"elephant",
+"wrong":[
+"snake",
+"giraffe",
+"pig"
+],
+"why":{
+"en":"🐘 = “elephant”.",
+"fr":"🐘 se dit « elephant » (éléphant).",
+"es":"🐘 se dice « elephant » (elefante)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"elephant"
+},
+{
+"id":"en-a1-075",
+"level":"a1",
+"q":"Someone says: “Can you swim?” What do you answer?",
+"fr":"Quelqu’un te dit : « Can you swim? » Que réponds-tu ?",
+"es":"Alguien te dice: « Can you swim? » ¿Qué respondes?",
+"correct":"Yes, I can.",
+"wrong":[
+"Yes, I swim can.",
+"Yes, I do swim.",
+"Yes, I am swim."
+],
+"why":{
+"en":"Short answer with “can”: Yes, I can. / No, I can’t.",
+"fr":"Réponse courte avec « can » : Yes, I can. / No, I can’t.",
+"es":"Respuesta corta con « can »: Yes, I can. / No, I can’t."
+},
+"qa":"Someone says: Can you swim? What do you answer?",
+"aa":"Yes, I can."
+},
+{
+"id":"en-a1-076",
+"level":"a1",
+"q":"What is three times three?",
+"fr":"Combien font trois fois trois ?",
+"es":"¿Cuánto es tres por tres?",
+"correct":"nine",
+"wrong":[
+"six",
+"twelve",
+"eight"
+],
+"why":{
+"en":"3 × 3 = 9 (nine).",
+"fr":"3 × 3 = 9 (nine : neuf).",
+"es":"3 × 3 = 9 (nine: nueve)."
+},
+"qa":"What is three times three?",
+"aa":"nine"
+},
+{
+"id":"en-a1-077",
+"level":"a1",
+"q":"What is the English word for 🦁?",
+"fr":"Quel est le mot anglais pour 🦁 ?",
+"es":"¿Cómo se dice 🦁 en inglés?",
+"correct":"lion",
+"wrong":[
+"butterfly",
+"penguin",
+"sheep"
+],
+"why":{
+"en":"🦁 = “lion”.",
+"fr":"🦁 se dit « lion » (lion).",
+"es":"🦁 se dice « lion » (león)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"lion"
+},
+{
+"id":"en-a1-078",
+"level":"a1",
+"q":"Complete: “It is ___ orange.”",
+"fr":"Complète : « It is ___ orange. »",
+"es":"Completa: « It is ___ orange. »",
+"correct":"an",
+"wrong":[
+"a",
+"the a",
+"two"
+],
+"why":{
+"en":"“It is an orange.” “A” before a consonant sound, “an” before a vowel sound.",
+"fr":"« It is an orange. » « A » devant une consonne, « an » devant une voyelle.",
+"es":"« It is an orange. » « A » delante de una consonante, « an » delante de una vocal."
+},
+"qa":"Complete the sentence. It is blank orange.",
+"aa":"It is an orange."
+},
+{
+"id":"en-a1-079",
+"level":"a1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"She has two sisters.",
+"wrong":[
+"She have two sisters.",
+"She has two sister.",
+"She haves two sisters."
+],
+"why":{
+"en":"“Has” with she, and the plural sisters after “two”.",
+"fr":"« Has » avec she, et le pluriel sisters après « two ».",
+"es":"« Has » con she, y el plural sisters después de « two »."
+},
+"qa":"Which sentence is correct?",
+"aa":"She has two sisters."
+},
+{
+"id":"en-a1-080",
+"level":"a1",
+"q":"What is the English word for 🐯?",
+"fr":"Quel est le mot anglais pour 🐯 ?",
+"es":"¿Cómo se dice 🐯 en inglés?",
+"correct":"tiger",
+"wrong":[
+"bee",
+"owl",
+"chicken"
+],
+"why":{
+"en":"🐯 = “tiger”.",
+"fr":"🐯 se dit « tiger » (tigre).",
+"es":"🐯 se dice « tiger » (tigre)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"tiger"
+},
+{
+"id":"en-a1-081",
+"level":"a1",
+"q":"Complete: “She has ___ new bike.”",
+"fr":"Complète : « She has ___ new bike. »",
+"es":"Completa: « She has ___ new bike. »",
+"correct":"a",
+"wrong":[
+"an",
+"two",
+"many"
+],
+"why":{
+"en":"“She has a new bike.” “A” before a consonant sound, “an” before a vowel sound.",
+"fr":"« She has a new bike. » « A » devant une consonne, « an » devant une voyelle.",
+"es":"« She has a new bike. » « A » delante de una consonante, « an » delante de una vocal."
+},
+"qa":"Complete the sentence. She has blank new bike.",
+"aa":"She has a new bike."
+},
+{
+"id":"en-a1-082",
+"level":"a1",
+"q":"What is the English word for 🐵?",
+"fr":"Quel est le mot anglais pour 🐵 ?",
+"es":"¿Cómo se dice 🐵 en inglés?",
+"correct":"monkey",
+"wrong":[
+"mouse",
+"dolphin",
+"duck"
+],
+"why":{
+"en":"🐵 = “monkey”.",
+"fr":"🐵 se dit « monkey » (singe).",
+"es":"🐵 se dice « monkey » (mono)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"monkey"
+},
+{
+"id":"en-a1-083",
+"level":"a1",
+"q":"What is the opposite of “full”?",
+"fr":"Quel est le contraire de « full » ?",
+"es":"¿Cuál es lo contrario de « full »?",
+"correct":"empty",
+"wrong":[
+"short",
+"angry",
+"young"
+],
+"why":{
+"en":"full ↔ empty.",
+"fr":"full ↔ empty (vide).",
+"es":"full ↔ empty (vacío)."
+},
+"qa":"What is the opposite of full?",
+"aa":"empty"
+},
+{
+"id":"en-a1-084",
+"level":"a1",
+"q":"What is the English word for 🐸?",
+"fr":"Quel est le mot anglais pour 🐸 ?",
+"es":"¿Cómo se dice 🐸 en inglés?",
+"correct":"frog",
+"wrong":[
+"wolf",
+"horse",
+"fish"
+],
+"why":{
+"en":"🐸 = “frog”.",
+"fr":"🐸 se dit « frog » (grenouille).",
+"es":"🐸 se dice « frog » (rana)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"frog"
+},
+{
+"id":"en-a1-085",
+"level":"a1",
+"q":"Complete: “I have three ___.”",
+"fr":"Complète : « I have three ___. »",
+"es":"Completa: « I have three ___. »",
+"correct":"brothers",
+"wrong":[
+"brother",
+"brothres",
+"brotheres"
+],
+"why":{
+"en":"“I have three brothers.” Most plurals add -s; some are irregular (man → men, woman → women, foot → feet, tooth → teeth, child → children).",
+"fr":"« I have three brothers. » La plupart des pluriels ajoutent -s ; certains sont irréguliers (man → men, woman → women, foot → feet, tooth → teeth, child → children).",
+"es":"« I have three brothers. » La mayoría de plurales añaden -s; algunos son irregulares (man → men, woman → women, foot → feet, tooth → teeth, child → children)."
+},
+"qa":"Complete the sentence. I have three blank .",
+"aa":"I have three brothers."
+},
+{
+"id":"en-a1-086",
+"level":"a1",
+"q":"Someone says: “Do you like pizza?” What do you answer?",
+"fr":"Quelqu’un te dit : « Do you like pizza? » Que réponds-tu ?",
+"es":"Alguien te dice: « Do you like pizza? » ¿Qué respondes?",
+"correct":"Yes, I do.",
+"wrong":[
+"Yes, I like.",
+"Yes, I am.",
+"Yes, I does."
+],
+"why":{
+"en":"Short answer with “do”: Yes, I do. / No, I don’t.",
+"fr":"Réponse courte avec « do » : Yes, I do. / No, I don’t.",
+"es":"Respuesta corta con « do »: Yes, I do. / No, I don’t."
+},
+"qa":"Someone says: Do you like pizza? What do you answer?",
+"aa":"Yes, I do."
+},
+{
+"id":"en-a1-087",
+"level":"a1",
+"q":"What number comes after nineteen?",
+"fr":"Quel nombre vient après dix-neuf (nineteen) ?",
+"es":"¿Qué número viene después de diecinueve (nineteen)?",
+"correct":"twenty",
+"wrong":[
+"eighteen",
+"thirty",
+"twelve"
+],
+"why":{
+"en":"19 → 20: twenty.",
+"fr":"19 → 20 : twenty (vingt).",
+"es":"19 → 20: twenty (veinte)."
+},
+"qa":"What number comes after nineteen?",
+"aa":"twenty"
+},
+{
+"id":"en-a1-088",
+"level":"a1",
+"q":"What is the English word for 🐢?",
+"fr":"Quel est le mot anglais pour 🐢 ?",
+"es":"¿Cómo se dice 🐢 en inglés?",
+"correct":"turtle",
+"wrong":[
+"giraffe",
+"pig",
+"rabbit"
+],
+"why":{
+"en":"🐢 = “turtle”.",
+"fr":"🐢 se dit « turtle » (tortue).",
+"es":"🐢 se dice « turtle » (tortuga)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"turtle"
+},
+{
+"id":"en-a1-089",
+"level":"a1",
+"q":"Complete: “There are two ___ in the room.”",
+"fr":"Complète : « There are two ___ in the room. »",
+"es":"Completa: « There are two ___ in the room. »",
+"correct":"women",
+"wrong":[
+"woman",
+"womans",
+"womens"
+],
+"why":{
+"en":"“There are two women in the room.” Most plurals add -s; some are irregular (man → men, woman → women, foot → feet, tooth → teeth, child → children).",
+"fr":"« There are two women in the room. » La plupart des pluriels ajoutent -s ; certains sont irréguliers (man → men, woman → women, foot → feet, tooth → teeth, child → children).",
+"es":"« There are two women in the room. » La mayoría de plurales añaden -s; algunos son irregulares (man → men, woman → women, foot → feet, tooth → teeth, child → children)."
+},
+"qa":"Complete the sentence. There are two blank in the room.",
+"aa":"There are two women in the room."
+},
+{
+"id":"en-a1-090",
+"level":"a1",
+"q":"What is the English word for 🐍?",
+"fr":"Quel est le mot anglais pour 🐍 ?",
+"es":"¿Cómo se dice 🐍 en inglés?",
+"correct":"snake",
+"wrong":[
+"penguin",
+"sheep",
+"bear"
+],
+"why":{
+"en":"🐍 = “snake”.",
+"fr":"🐍 se dit « snake » (serpent).",
+"es":"🐍 se dice « snake » (serpiente)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"snake"
+},
+{
+"id":"en-a1-091",
+"level":"a1",
+"q":"What is the English word for 🦋?",
+"fr":"Quel est le mot anglais pour 🦋 ?",
+"es":"¿Cómo se dice 🦋 en inglés?",
+"correct":"butterfly",
+"wrong":[
+"owl",
+"chicken",
+"elephant"
+],
+"why":{
+"en":"🦋 = “butterfly”.",
+"fr":"🦋 se dit « butterfly » (papillon).",
+"es":"🦋 se dice « butterfly » (mariposa)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"butterfly"
+},
+{
+"id":"en-a1-092",
+"level":"a1",
+"q":"Complete: “The baby has two ___.”",
+"fr":"Complète : « The baby has two ___. »",
+"es":"Completa: « The baby has two ___. »",
+"correct":"feet",
+"wrong":[
+"foots",
+"foot",
+"feets"
+],
+"why":{
+"en":"“The baby has two feet.” Most plurals add -s; some are irregular (man → men, woman → women, foot → feet, tooth → teeth, child → children).",
+"fr":"« The baby has two feet. » La plupart des pluriels ajoutent -s ; certains sont irréguliers (man → men, woman → women, foot → feet, tooth → teeth, child → children).",
+"es":"« The baby has two feet. » La mayoría de plurales añaden -s; algunos son irregulares (man → men, woman → women, foot → feet, tooth → teeth, child → children)."
+},
+"qa":"Complete the sentence. The baby has two blank .",
+"aa":"The baby has two feet."
+},
+{
+"id":"en-a1-093",
+"level":"a1",
+"q":"“It is Saturday. Tom gets up at nine. He has breakfast with his mum. Then he plays football in the park.” Where does Tom play football?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"In the park.",
+"wrong":[
+"At school.",
+"At home.",
+"In the garden of his mum."
+],
+"why":{
+"en":"“He plays football in the park.”",
+"fr":"« He plays football in the park » : dans le parc.",
+"es":"« He plays football in the park »: en el parque."
+},
+"qa":"It is Saturday. Tom gets up at nine. He has breakfast with his mum. Then he plays football in the park. Where does Tom play football?",
+"aa":"In the park."
+},
+{
+"id":"en-a1-094",
+"level":"a1",
+"q":"What is the English word for 🍌?",
+"fr":"Quel est le mot anglais pour 🍌 ?",
+"es":"¿Cómo se dice 🍌 en inglés?",
+"correct":"banana",
+"wrong":[
+"watermelon",
+"cheese",
+"cake"
+],
+"why":{
+"en":"🍌 = “banana”.",
+"fr":"🍌 se dit « banana » (banane).",
+"es":"🍌 se dice « banana » (plátano)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"banana"
+},
+{
+"id":"en-a1-095",
+"level":"a1",
+"q":"Someone says: “What time is it?” What do you answer?",
+"fr":"Quelqu’un te dit : « What time is it? » Que réponds-tu ?",
+"es":"Alguien te dice: « What time is it? » ¿Qué respondes?",
+"correct":"It’s half past two.",
+"wrong":[
+"It’s Tuesday.",
+"It’s two dogs.",
+"It’s my pen."
+],
+"why":{
+"en":"“What time is it?” asks the time.",
+"fr":"« What time is it? » demande l’heure.",
+"es":"« What time is it? » pregunta la hora."
+},
+"qa":"Someone says: What time is it? What do you answer?",
+"aa":"It's half past two."
+},
+{
+"id":"en-a1-096",
+"level":"a1",
+"q":"What is the English word for 5?",
+"fr":"Quel est le mot anglais pour 5 ?",
+"es":"¿Cómo se dice 5 en inglés?",
+"correct":"five",
+"wrong":[
+"four",
+"fifteen",
+"fifty"
+],
+"why":{
+"en":"5 = five. 15 = fifteen, 50 = fifty.",
+"fr":"5 = five. 15 = fifteen, 50 = fifty.",
+"es":"5 = five. 15 = fifteen, 50 = fifty."
+},
+"qa":"What is the English word for this number?",
+"aa":"five"
+},
+{
+"id":"en-a1-097",
+"level":"a1",
+"q":"What is the opposite of “long”?",
+"fr":"Quel est le contraire de « long » ?",
+"es":"¿Cuál es lo contrario de « long »?",
+"correct":"short",
+"wrong":[
+"slow",
+"sad",
+"dirty"
+],
+"why":{
+"en":"long ↔ short.",
+"fr":"long ↔ short (court).",
+"es":"long ↔ short (corto)."
+},
+"qa":"What is the opposite of long?",
+"aa":"short"
+},
+{
+"id":"en-a1-098",
+"level":"a1",
+"q":"What is the English word for 🍊?",
+"fr":"Quel est le mot anglais pour 🍊 ?",
+"es":"¿Cómo se dice 🍊 en inglés?",
+"correct":"orange",
+"wrong":[
+"lemon",
+"egg",
+"cookie"
+],
+"why":{
+"en":"🍊 = “orange”.",
+"fr":"🍊 se dit « orange » (orange).",
+"es":"🍊 se dice « orange » (naranja)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"orange"
+},
+{
+"id":"en-a1-099",
+"level":"a1",
+"q":"Complete: “Look at ___ girl over there!”",
+"fr":"Complète : « Look at ___ girl over there! »",
+"es":"Completa: « Look at ___ girl over there! »",
+"correct":"that",
+"wrong":[
+"those",
+"these",
+"them"
+],
+"why":{
+"en":"“Look at that girl over there!” “This / these” for things that are near, “that / those” for things that are far.",
+"fr":"« Look at that girl over there! » « This / these » pour ce qui est proche, « that / those » pour ce qui est loin.",
+"es":"« Look at that girl over there! » « This / these » para lo que está cerca, « that / those » para lo que está lejos."
+},
+"qa":"Complete the sentence. Look at blank girl over there!",
+"aa":"Look at that girl over there!"
+},
+{
+"id":"en-a1-100",
+"level":"a1",
+"q":"What is the English word for 🍇?",
+"fr":"Quel est le mot anglais pour 🍇 ?",
+"es":"¿Cómo se dice 🍇 en inglés?",
+"correct":"grapes",
+"wrong":[
+"carrot",
+"pizza",
+"chocolate"
+],
+"why":{
+"en":"🍇 = “grapes”.",
+"fr":"🍇 se dit « grapes » (raisin).",
+"es":"🍇 se dice « grapes » (uvas)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"grapes"
+},
+{
+"id":"en-a1-101",
+"level":"a1",
+"q":"Complete: “___ are my shoes, here on the floor.”",
+"fr":"Complète : « ___ are my shoes, here on the floor. »",
+"es":"Completa: « ___ are my shoes, here on the floor. »",
+"correct":"These",
+"wrong":[
+"That",
+"This is",
+"Those is"
+],
+"why":{
+"en":"“These are my shoes, here on the floor.” “This / these” for things that are near, “that / those” for things that are far.",
+"fr":"« These are my shoes, here on the floor. » « This / these » pour ce qui est proche, « that / those » pour ce qui est loin.",
+"es":"« These are my shoes, here on the floor. » « This / these » para lo que está cerca, « that / those » para lo que está lejos."
+},
+"qa":"Complete the sentence. blank are my shoes, here on the floor.",
+"aa":"These are my shoes, here on the floor."
+},
+{
+"id":"en-a1-102",
+"level":"a1",
+"q":"What is the English word for 🍓?",
+"fr":"Quel est le mot anglais pour 🍓 ?",
+"es":"¿Cómo se dice 🍓 en inglés?",
+"correct":"strawberry",
+"wrong":[
+"potato",
+"hamburger",
+"ice cream"
+],
+"why":{
+"en":"🍓 = “strawberry”.",
+"fr":"🍓 se dit « strawberry » (fraise).",
+"es":"🍓 se dice « strawberry » (fresa)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"strawberry"
+},
+{
+"id":"en-a1-103",
+"level":"a1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"The cat is under the table.",
+"wrong":[
+"The cat is in under the table.",
+"The cat under the table is.",
+"The cat are under the table."
+],
+"why":{
+"en":"Subject + is + place: The cat is under the table.",
+"fr":"Sujet + is + lieu : The cat is under the table.",
+"es":"Sujeto + is + lugar: The cat is under the table."
+},
+"qa":"Which sentence is correct?",
+"aa":"The cat is under the table."
+},
+{
+"id":"en-a1-104",
+"level":"a1",
+"q":"What is the English word for 🍒?",
+"fr":"Quel est le mot anglais pour 🍒 ?",
+"es":"¿Cómo se dice 🍒 en inglés?",
+"correct":"cherries",
+"wrong":[
+"tomato",
+"spaghetti",
+"croissant"
+],
+"why":{
+"en":"🍒 = “cherries”.",
+"fr":"🍒 se dit « cherries » (cerises).",
+"es":"🍒 se dice « cherries » (cerezas)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"cherries"
+},
+{
+"id":"en-a1-105",
+"level":"a1",
+"q":"Complete: “The cat is ___ the chair.”",
+"fr":"Complète : « The cat is ___ the chair. »",
+"es":"Completa: « The cat is ___ the chair. »",
+"correct":"under",
+"wrong":[
+"at",
+"of",
+"to"
+],
+"why":{
+"en":"“The cat is under the chair.” Prepositions of place: in (inside), on (on top of), under (below), next to (beside), behind, in front of, between.",
+"fr":"« The cat is under the chair. » Prépositions de lieu : in (dans), on (sur), under (sous), next to (à côté de), behind (derrière), in front of (devant), between (entre).",
+"es":"« The cat is under the chair. » Preposiciones de lugar: in (dentro), on (sobre), under (debajo), next to (al lado de), behind (detrás), in front of (delante de), between (entre)."
+},
+"qa":"Complete the sentence. The cat is blank the chair.",
+"aa":"The cat is under the chair."
+},
+{
+"id":"en-a1-106",
+"level":"a1",
+"q":"Someone says: “Happy birthday!” What do you answer?",
+"fr":"Quelqu’un te dit : « Happy birthday! » Que réponds-tu ?",
+"es":"Alguien te dice: « Happy birthday! » ¿Qué respondes?",
+"correct":"Thank you!",
+"wrong":[
+"You’re welcome.",
+"See you.",
+"Good morning."
+],
+"why":{
+"en":"We say “Thank you!” to thank someone.",
+"fr":"On dit « Thank you! » pour remercier.",
+"es":"Se dice « Thank you! » para dar las gracias."
+},
+"qa":"Someone says: Happy birthday! What do you answer?",
+"aa":"Thank you!"
+},
+{
+"id":"en-a1-107",
+"level":"a1",
+"q":"What is the English word for 9?",
+"fr":"Quel est le mot anglais pour 9 ?",
+"es":"¿Cómo se dice 9 en inglés?",
+"correct":"nine",
+"wrong":[
+"five",
+"ninety",
+"nineteen"
+],
+"why":{
+"en":"9 = nine. 19 = nineteen, 90 = ninety.",
+"fr":"9 = nine. 19 = nineteen, 90 = ninety.",
+"es":"9 = nine. 19 = nineteen, 90 = ninety."
+},
+"qa":"What is the English word for this number?",
+"aa":"nine"
+},
+{
+"id":"en-a1-108",
+"level":"a1",
+"q":"What is the English word for 🍍?",
+"fr":"Quel est le mot anglais pour 🍍 ?",
+"es":"¿Cómo se dice 🍍 en inglés?",
+"correct":"pineapple",
+"wrong":[
+"corn",
+"cake",
+"mushroom"
+],
+"why":{
+"en":"🍍 = “pineapple”.",
+"fr":"🍍 se dit « pineapple » (ananas).",
+"es":"🍍 se dice « pineapple » (piña)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"pineapple"
+},
+{
+"id":"en-a1-109",
+"level":"a1",
+"q":"Complete: “The bank is ___ the school and the shop.”",
+"fr":"Complète : « The bank is ___ the school and the shop. »",
+"es":"Completa: « The bank is ___ the school and the shop. »",
+"correct":"between",
+"wrong":[
+"under",
+"in",
+"on"
+],
+"why":{
+"en":"“The bank is between the school and the shop.” Prepositions of place: in (inside), on (on top of), under (below), next to (beside), behind, in front of, between.",
+"fr":"« The bank is between the school and the shop. » Prépositions de lieu : in (dans), on (sur), under (sous), next to (à côté de), behind (derrière), in front of (devant), between (entre).",
+"es":"« The bank is between the school and the shop. » Preposiciones de lugar: in (dentro), on (sobre), under (debajo), next to (al lado de), behind (detrás), in front of (delante de), between (entre)."
+},
+"qa":"Complete the sentence. The bank is blank the school and the shop.",
+"aa":"The bank is between the school and the shop."
+},
+{
+"id":"en-a1-110",
+"level":"a1",
+"q":"What is the English word for 🍉?",
+"fr":"Quel est le mot anglais pour 🍉 ?",
+"es":"¿Cómo se dice 🍉 en inglés?",
+"correct":"watermelon",
+"wrong":[
+"cheese",
+"cookie",
+"peach"
+],
+"why":{
+"en":"🍉 = “watermelon”.",
+"fr":"🍉 se dit « watermelon » (pastèque).",
+"es":"🍉 se dice « watermelon » (sandía)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"watermelon"
+},
+{
+"id":"en-a1-111",
+"level":"a1",
+"q":"What is the opposite of “good”?",
+"fr":"Quel est le contraire de « good » ?",
+"es":"¿Cuál es lo contrario de « good »?",
+"correct":"bad",
+"wrong":[
+"soft",
+"high",
+"cheap"
+],
+"why":{
+"en":"good ↔ bad.",
+"fr":"good ↔ bad (mauvais).",
+"es":"good ↔ bad (malo)."
+},
+"qa":"What is the opposite of good?",
+"aa":"bad"
+},
+{
+"id":"en-a1-112",
+"level":"a1",
+"q":"What is the English word for 🍋?",
+"fr":"Quel est le mot anglais pour 🍋 ?",
+"es":"¿Cómo se dice 🍋 en inglés?",
+"correct":"lemon",
+"wrong":[
+"egg",
+"chocolate",
+"banana"
+],
+"why":{
+"en":"🍋 = “lemon”.",
+"fr":"🍋 se dit « lemon » (citron).",
+"es":"🍋 se dice « lemon » (limón)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"lemon"
+},
+{
+"id":"en-a1-113",
+"level":"a1",
+"q":"Complete: “The bus stop is ___ my house. I can see it from the window.”",
+"fr":"Complète : « The bus stop is ___ my house. I can see it from the window. »",
+"es":"Completa: « The bus stop is ___ my house. I can see it from the window. »",
+"correct":"next to",
+"wrong":[
+"in",
+"at the",
+"on"
+],
+"why":{
+"en":"“The bus stop is next to my house. I can see it from the window.” Prepositions of place: in (inside), on (on top of), under (below), next to (beside), behind, in front of, between.",
+"fr":"« The bus stop is next to my house. I can see it from the window. » Prépositions de lieu : in (dans), on (sur), under (sous), next to (à côté de), behind (derrière), in front of (devant), between (entre).",
+"es":"« The bus stop is next to my house. I can see it from the window. » Preposiciones de lugar: in (dentro), on (sobre), under (debajo), next to (al lado de), behind (detrás), in front of (delante de), between (entre)."
+},
+"qa":"Complete the sentence. The bus stop is blank my house. I can see it from the window.",
+"aa":"The bus stop is next to my house. I can see it from the window."
+},
+{
+"id":"en-a1-114",
+"level":"a1",
+"q":"“It is Saturday. Tom gets up at nine. He has breakfast with his mum. Then he plays football in the park.” Who does Tom have breakfast with?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"His mum.",
+"wrong":[
+"His dad.",
+"His friends.",
+"His teacher."
+],
+"why":{
+"en":"“He has breakfast with his mum.”",
+"fr":"« He has breakfast with his mum » : avec sa maman.",
+"es":"« He has breakfast with his mum »: con su mamá."
+},
+"qa":"It is Saturday. Tom gets up at nine. He has breakfast with his mum. Then he plays football in the park. Who does Tom have breakfast with?",
+"aa":"His mum."
+},
+{
+"id":"en-a1-115",
+"level":"a1",
+"q":"What is the English word for 🥕?",
+"fr":"Quel est le mot anglais pour 🥕 ?",
+"es":"¿Cómo se dice 🥕 en inglés?",
+"correct":"carrot",
+"wrong":[
+"pizza",
+"ice cream",
+"orange"
+],
+"why":{
+"en":"🥕 = “carrot”.",
+"fr":"🥕 se dit « carrot » (carotte).",
+"es":"🥕 se dice « carrot » (zanahoria)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"carrot"
+},
+{
+"id":"en-a1-116",
+"level":"a1",
+"q":"Complete: “This is Anna. ___ father is a teacher.”",
+"fr":"Complète : « This is Anna. ___ father is a teacher. »",
+"es":"Completa: « This is Anna. ___ father is a teacher. »",
+"correct":"Her",
+"wrong":[
+"His",
+"She",
+"Hers"
+],
+"why":{
+"en":"“This is Anna. Her father is a teacher.” Possessive adjectives: my, your, his, her, our, their (before a noun).",
+"fr":"« This is Anna. Her father is a teacher. » Adjectifs possessifs : my, your, his, her, our, their (devant un nom).",
+"es":"« This is Anna. Her father is a teacher. » Adjetivos posesivos: my, your, his, her, our, their (delante de un nombre)."
+},
+"qa":"Complete the sentence. This is Anna. blank father is a teacher.",
+"aa":"This is Anna. Her father is a teacher."
+},
+{
+"id":"en-a1-117",
+"level":"a1",
+"q":"Someone says: “Have a nice day!” What do you answer?",
+"fr":"Quelqu’un te dit : « Have a nice day! » Que réponds-tu ?",
+"es":"Alguien te dice: « Have a nice day! » ¿Qué respondes?",
+"correct":"You too!",
+"wrong":[
+"Yes, I have.",
+"Nice to meet you.",
+"I’m sorry."
+],
+"why":{
+"en":"“You too!” returns a wish.",
+"fr":"« You too! » renvoie un souhait.",
+"es":"« You too! » devuelve un deseo."
+},
+"qa":"Someone says: Have a nice day! What do you answer?",
+"aa":"You too!"
+},
+{
+"id":"en-a1-118",
+"level":"a1",
+"q":"What is the English word for 15?",
+"fr":"Quel est le mot anglais pour 15 ?",
+"es":"¿Cómo se dice 15 en inglés?",
+"correct":"fifteen",
+"wrong":[
+"fifty",
+"five",
+"fourteen"
+],
+"why":{
+"en":"15 = fifteen. 50 = fifty.",
+"fr":"15 = fifteen. 50 = fifty.",
+"es":"15 = fifteen. 50 = fifty."
+},
+"qa":"What is the English word for this number?",
+"aa":"fifteen"
+},
+{
+"id":"en-a1-119",
+"level":"a1",
+"q":"What is the English word for 🥔?",
+"fr":"Quel est le mot anglais pour 🥔 ?",
+"es":"¿Cómo se dice 🥔 en inglés?",
+"correct":"potato",
+"wrong":[
+"hamburger",
+"croissant",
+"grapes"
+],
+"why":{
+"en":"🥔 = “potato”.",
+"fr":"🥔 se dit « potato » (pomme de terre).",
+"es":"🥔 se dice « potato » (patata)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"potato"
+},
+{
+"id":"en-a1-120",
+"level":"a1",
+"q":"What is the English word for 🍅?",
+"fr":"Quel est le mot anglais pour 🍅 ?",
+"es":"¿Cómo se dice 🍅 en inglés?",
+"correct":"tomato",
+"wrong":[
+"spaghetti",
+"mushroom",
+"strawberry"
+],
+"why":{
+"en":"🍅 = “tomato”.",
+"fr":"🍅 se dit « tomato » (tomate).",
+"es":"🍅 se dice « tomato » (tomate)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"tomato"
+},
+{
+"id":"en-a1-121",
+"level":"a1",
+"q":"Complete: “We love ___ new house.”",
+"fr":"Complète : « We love ___ new house. »",
+"es":"Completa: « We love ___ new house. »",
+"correct":"our",
+"wrong":[
+"we",
+"us",
+"ours is"
+],
+"why":{
+"en":"“We love our new house.” Possessive adjectives: my, your, his, her, our, their (before a noun).",
+"fr":"« We love our new house. » Adjectifs possessifs : my, your, his, her, our, their (devant un nom).",
+"es":"« We love our new house. » Adjetivos posesivos: my, your, his, her, our, their (delante de un nombre)."
+},
+"qa":"Complete the sentence. We love blank new house.",
+"aa":"We love our new house."
+},
+{
+"id":"en-a1-122",
+"level":"a1",
+"q":"What is the English word for 🌽?",
+"fr":"Quel est le mot anglais pour 🌽 ?",
+"es":"¿Cómo se dice 🌽 en inglés?",
+"correct":"corn",
+"wrong":[
+"cake",
+"peach",
+"cherries"
+],
+"why":{
+"en":"🌽 = “corn”.",
+"fr":"🌽 se dit « corn » (maïs).",
+"es":"🌽 se dice « corn » (maíz)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"corn"
+},
+{
+"id":"en-a1-123",
+"level":"a1",
+"q":"Complete: “This is ___ bag. It is Tom’s.”",
+"fr":"Complète : « This is ___ bag. It is Tom’s. »",
+"es":"Completa: « This is ___ bag. It is Tom’s. »",
+"correct":"his",
+"wrong":[
+"her",
+"its",
+"their"
+],
+"why":{
+"en":"“This is his bag. It is Tom’s.” Possessive adjectives: my, your, his, her, our, their (before a noun).",
+"fr":"« This is his bag. It is Tom’s. » Adjectifs possessifs : my, your, his, her, our, their (devant un nom).",
+"es":"« This is his bag. It is Tom’s. » Adjetivos posesivos: my, your, his, her, our, their (delante de un nombre)."
+},
+"qa":"Complete the sentence. This is blank bag. It is Tom's.",
+"aa":"This is his bag. It is Tom's."
+},
+{
+"id":"en-a1-124",
+"level":"a1",
+"q":"What is the English word for 🧀?",
+"fr":"Quel est le mot anglais pour 🧀 ?",
+"es":"¿Cómo se dice 🧀 en inglés?",
+"correct":"cheese",
+"wrong":[
+"cookie",
+"banana",
+"pineapple"
+],
+"why":{
+"en":"🧀 = “cheese”.",
+"fr":"🧀 se dit « cheese » (fromage).",
+"es":"🧀 se dice « cheese » (queso)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"cheese"
+},
+{
+"id":"en-a1-125",
+"level":"a1",
+"q":"What is the opposite of “day”?",
+"fr":"Quel est le contraire de « day » ?",
+"es":"¿Cuál es lo contrario de « day »?",
+"correct":"night",
+"wrong":[
+"week",
+"morning",
+"noon"
+],
+"why":{
+"en":"day ↔ night.",
+"fr":"day ↔ night (nuit).",
+"es":"day ↔ night (noche)."
+},
+"qa":"What is the opposite of day?",
+"aa":"night"
+},
+{
+"id":"en-a1-126",
+"level":"a1",
+"q":"What is the English word for 🥚?",
+"fr":"Quel est le mot anglais pour 🥚 ?",
+"es":"¿Cómo se dice 🥚 en inglés?",
+"correct":"egg",
+"wrong":[
+"chocolate",
+"orange",
+"watermelon"
+],
+"why":{
+"en":"🥚 = “egg”.",
+"fr":"🥚 se dit « egg » (œuf).",
+"es":"🥚 se dice « egg » (huevo)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"egg"
+},
+{
+"id":"en-a1-127",
+"level":"a1",
+"q":"Someone says: “Can I have some water, please?” What do you answer?",
+"fr":"Quelqu’un te dit : « Can I have some water, please? » Que réponds-tu ?",
+"es":"Alguien te dice: « Can I have some water, please? » ¿Qué respondes?",
+"correct":"Yes, here you are.",
+"wrong":[
+"Yes, I am water.",
+"No, you are welcome.",
+"Yes, it’s Monday."
+],
+"why":{
+"en":"“Here you are” = here it is, when you give something.",
+"fr":"« Here you are » = voilà, quand on donne quelque chose.",
+"es":"« Here you are » = aquí tienes, cuando das algo."
+},
+"qa":"Someone says: Can I have some water, please? What do you answer?",
+"aa":"Yes, here you are."
+},
+{
+"id":"en-a1-128",
+"level":"a1",
+"q":"What is the English word for 100?",
+"fr":"Quel est le mot anglais pour 100 ?",
+"es":"¿Cómo se dice 100 en inglés?",
+"correct":"one hundred",
+"wrong":[
+"one thousand",
+"ten",
+"one million"
+],
+"why":{
+"en":"100 = one hundred.",
+"fr":"100 = one hundred (cent).",
+"es":"100 = one hundred (cien)."
+},
+"qa":"What is the English word for this number?",
+"aa":"one hundred"
+},
+{
+"id":"en-a1-129",
+"level":"a1",
+"q":"Complete: “This is ___ book.”",
+"fr":"Complète : « This is ___ book. »",
+"es":"Completa: « This is ___ book. »",
+"correct":"Anna’s",
+"wrong":[
+"Annas",
+"Anna",
+"Annas’"
+],
+"why":{
+"en":"“This is Anna’s book.” To say who something belongs to: name + ’s (Tom’s bag).",
+"fr":"« This is Anna’s book. » Pour dire à qui appartient quelque chose : nom + ’s (Tom’s bag).",
+"es":"« This is Anna’s book. » Para decir de quién es algo: nombre + ’s (Tom’s bag)."
+},
+"qa":"Complete the sentence. This is blank book.",
+"aa":"This is Anna's book."
+},
+{
+"id":"en-a1-130",
+"level":"a1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"They don’t like fish.",
+"wrong":[
+"They doesn’t like fish.",
+"They not like fish.",
+"They don’t likes fish."
+],
+"why":{
+"en":"With they: don’t + base verb.",
+"fr":"Avec they : don’t + verbe de base.",
+"es":"Con they: don’t + verbo base."
+},
+"qa":"Which sentence is correct?",
+"aa":"They don't like fish."
+},
+{
+"id":"en-a1-131",
+"level":"a1",
+"q":"What is the English word for 🍕?",
+"fr":"Quel est le mot anglais pour 🍕 ?",
+"es":"¿Cómo se dice 🍕 en inglés?",
+"correct":"pizza",
+"wrong":[
+"ice cream",
+"grapes",
+"lemon"
+],
+"why":{
+"en":"🍕 = “pizza”.",
+"fr":"🍕 se dit « pizza » (pizza).",
+"es":"🍕 se dice « pizza » (pizza)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"pizza"
+},
+{
+"id":"en-a1-132",
+"level":"a1",
+"q":"Complete: “A bird ___ fly.”",
+"fr":"Complète : « A bird ___ fly. »",
+"es":"Completa: « A bird ___ fly. »",
+"correct":"can",
+"wrong":[
+"cans",
+"is",
+"does"
+],
+"why":{
+"en":"“A bird can fly.” “Can” + base verb for what you are able to do; “can’t” for what you are not able to do.",
+"fr":"« A bird can fly. » « Can » + verbe de base pour ce que l’on sait faire ; « can’t » pour ce que l’on ne sait pas faire.",
+"es":"« A bird can fly. » « Can » + verbo base para lo que sabes hacer; « can’t » para lo que no sabes hacer."
+},
+"qa":"Complete the sentence. A bird blank fly.",
+"aa":"A bird can fly."
+},
+{
+"id":"en-a1-133",
+"level":"a1",
+"q":"What is the English word for 🍔?",
+"fr":"Quel est le mot anglais pour 🍔 ?",
+"es":"¿Cómo se dice 🍔 en inglés?",
+"correct":"hamburger",
+"wrong":[
+"croissant",
+"strawberry",
+"carrot"
+],
+"why":{
+"en":"🍔 = “hamburger”.",
+"fr":"🍔 se dit « hamburger » (hamburger).",
+"es":"🍔 se dice « hamburger » (hamburguesa)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"hamburger"
+},
+{
+"id":"en-a1-134",
+"level":"a1",
+"q":"“This is my room. It is small. There is a bed, a desk and a lamp. My books are on the desk.” Where are the books?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"On the desk.",
+"wrong":[
+"On the bed.",
+"Under the lamp.",
+"In the room of the desk."
+],
+"why":{
+"en":"“My books are on the desk.”",
+"fr":"« My books are on the desk » : sur le bureau.",
+"es":"« My books are on the desk »: sobre el escritorio."
+},
+"qa":"This is my room. It is small. There is a bed, a desk and a lamp. My books are on the desk. Where are the books?",
+"aa":"On the desk."
+},
+{
+"id":"en-a1-135",
+"level":"a1",
+"q":"What is the English word for ⏰?",
+"fr":"Quel est le mot anglais pour ⏰ ?",
+"es":"¿Cómo se dice ⏰ en inglés?",
+"correct":"alarm clock",
+"wrong":[
+"pencil",
+"bed",
+"balloon"
+],
+"why":{
+"en":"⏰ = “alarm clock”.",
+"fr":"⏰ se dit « alarm clock » (réveil).",
+"es":"⏰ se dice « alarm clock » (despertador)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"alarm clock"
+},
+{
+"id":"en-a1-136",
+"level":"a1",
+"q":"Complete: “A fish ___ walk.”",
+"fr":"Complète : « A fish ___ walk. »",
+"es":"Completa: « A fish ___ walk. »",
+"correct":"can’t",
+"wrong":[
+"can",
+"doesn’t",
+"isn’t"
+],
+"why":{
+"en":"“A fish can’t walk.” “Can” + base verb for what you are able to do; “can’t” for what you are not able to do.",
+"fr":"« A fish can’t walk. » « Can » + verbe de base pour ce que l’on sait faire ; « can’t » pour ce que l’on ne sait pas faire.",
+"es":"« A fish can’t walk. » « Can » + verbo base para lo que sabes hacer; « can’t » para lo que no sabes hacer."
+},
+"qa":"Complete the sentence. A fish blank walk.",
+"aa":"A fish can't walk."
+},
+{
+"id":"en-a1-137",
+"level":"a1",
+"q":"What is the English word for 📱?",
+"fr":"Quel est le mot anglais pour 📱 ?",
+"es":"¿Cómo se dice 📱 en inglés?",
+"correct":"phone",
+"wrong":[
+"scissors",
+"door",
+"bell"
+],
+"why":{
+"en":"📱 = “phone”.",
+"fr":"📱 se dit « phone » (téléphone).",
+"es":"📱 se dice « phone » (teléfono)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"phone"
+},
+{
+"id":"en-a1-138",
+"level":"a1",
+"q":"Someone says: “What’s this?” What do you answer?",
+"fr":"Quelqu’un te dit : « What’s this? » Que réponds-tu ?",
+"es":"Alguien te dice: « What’s this? » ¿Qué respondes?",
+"correct":"It’s a pen.",
+"wrong":[
+"He’s a pen.",
+"I’m a pen.",
+"They’re a pen."
+],
+"why":{
+"en":"For a thing we say “It’s a…”.",
+"fr":"Pour une chose, on dit « It’s a… ».",
+"es":"Para una cosa se dice « It’s a… »."
+},
+"qa":"Someone says: What's this? What do you answer?",
+"aa":"It's a pen."
+},
+{
+"id":"en-a1-139",
+"level":"a1",
+"q":"How many days are there in a week?",
+"fr":"Combien y a-t-il de jours dans une semaine ?",
+"es":"¿Cuántos días hay en una semana?",
+"correct":"seven",
+"wrong":[
+"five",
+"six",
+"eight"
+],
+"why":{
+"en":"A week has seven days.",
+"fr":"Une semaine a sept jours (seven).",
+"es":"Una semana tiene siete días (seven)."
+},
+"qa":"How many days are there in a week?",
+"aa":"seven"
+},
+{
+"id":"en-a1-140",
+"level":"a1",
+"q":"What is the opposite of “early”?",
+"fr":"Quel est le contraire de « early » ?",
+"es":"¿Cuál es lo contrario de « early »?",
+"correct":"late",
+"wrong":[
+"near",
+"fast",
+"old"
+],
+"why":{
+"en":"early ↔ late.",
+"fr":"early ↔ late (tard).",
+"es":"early ↔ late (tarde)."
+},
+"qa":"What is the opposite of early?",
+"aa":"late"
+},
+{
+"id":"en-a1-141",
+"level":"a1",
+"q":"What is the English word for 💻?",
+"fr":"Quel est le mot anglais pour 💻 ?",
+"es":"¿Cómo se dice 💻 en inglés?",
+"correct":"computer",
+"wrong":[
+"light bulb",
+"television",
+"candle"
+],
+"why":{
+"en":"💻 = “computer”.",
+"fr":"💻 se dit « computer » (ordinateur).",
+"es":"💻 se dice « computer » (ordenador)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"computer"
+},
+{
+"id":"en-a1-142",
+"level":"a1",
+"q":"Complete: “I ___ like fish.”",
+"fr":"Complète : « I ___ like fish. »",
+"es":"Completa: « I ___ like fish. »",
+"correct":"don’t",
+"wrong":[
+"doesn’t",
+"am not",
+"not"
+],
+"why":{
+"en":"“I don’t like fish.” Present simple questions and negatives use “do / does” (does with he, she, it) + the base verb.",
+"fr":"« I don’t like fish. » Questions et négations au présent simple : « do / does » (does avec he, she, it) + verbe de base.",
+"es":"« I don’t like fish. » Preguntas y negaciones en presente simple: « do / does » (does con he, she, it) + verbo base."
+},
+"qa":"Complete the sentence. I blank like fish.",
+"aa":"I don't like fish."
+},
+{
+"id":"en-a1-143",
+"level":"a1",
+"q":"What is the English word for 📷?",
+"fr":"Quel est le mot anglais pour 📷 ?",
+"es":"¿Cómo se dice 📷 en inglés?",
+"correct":"camera",
+"wrong":[
+"umbrella",
+"guitar",
+"spoon"
+],
+"why":{
+"en":"📷 = “camera”.",
+"fr":"📷 se dit « camera » (appareil photo).",
+"es":"📷 se dice « camera » (cámara)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"camera"
+},
+{
+"id":"en-a1-144",
+"level":"a1",
+"q":"Complete: “He ___ play tennis on Sundays.”",
+"fr":"Complète : « He ___ play tennis on Sundays. »",
+"es":"Completa: « He ___ play tennis on Sundays. »",
+"correct":"doesn’t",
+"wrong":[
+"don’t",
+"isn’t",
+"not"
+],
+"why":{
+"en":"“He doesn’t play tennis on Sundays.” Present simple questions and negatives use “do / does” (does with he, she, it) + the base verb.",
+"fr":"« He doesn’t play tennis on Sundays. » Questions et négations au présent simple : « do / does » (does avec he, she, it) + verbe de base.",
+"es":"« He doesn’t play tennis on Sundays. » Preguntas y negaciones en presente simple: « do / does » (does con he, she, it) + verbo base."
+},
+"qa":"Complete the sentence. He blank play tennis on Sundays.",
+"aa":"He doesn't play tennis on Sundays."
+},
+{
+"id":"en-a1-145",
+"level":"a1",
+"q":"What is the English word for 🔑?",
+"fr":"Quel est le mot anglais pour 🔑 ?",
+"es":"¿Cómo se dice 🔑 en inglés?",
+"correct":"key",
+"wrong":[
+"glasses",
+"present",
+"hammer"
+],
+"why":{
+"en":"🔑 = “key”.",
+"fr":"🔑 se dit « key » (clé).",
+"es":"🔑 se dice « key » (llave)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"key"
+},
+{
+"id":"en-a1-146",
+"level":"a1",
+"q":"What is the English word for 🎒?",
+"fr":"Quel est le mot anglais pour 🎒 ?",
+"es":"¿Cómo se dice 🎒 en inglés?",
+"correct":"backpack",
+"wrong":[
+"chair",
+"balloon",
+"tent"
+],
+"why":{
+"en":"🎒 = “backpack”.",
+"fr":"🎒 se dit « backpack » (sac à dos).",
+"es":"🎒 se dice « backpack » (mochila)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"backpack"
+},
+{
+"id":"en-a1-147",
+"level":"a1",
+"q":"Complete: “___ you like music?”",
+"fr":"Complète : « ___ you like music? »",
+"es":"Completa: « ___ you like music? »",
+"correct":"Do",
+"wrong":[
+"Does",
+"Are",
+"Is"
+],
+"why":{
+"en":"“Do you like music?” Present simple questions and negatives use “do / does” (does with he, she, it) + the base verb.",
+"fr":"« Do you like music? » Questions et négations au présent simple : « do / does » (does avec he, she, it) + verbe de base.",
+"es":"« Do you like music? » Preguntas y negaciones en presente simple: « do / does » (does con he, she, it) + verbo base."
+},
+"qa":"Complete the sentence. blank you like music?",
+"aa":"Do you like music?"
+},
+{
+"id":"en-a1-148",
+"level":"a1",
+"q":"Someone says: “Who is she?” What do you answer?",
+"fr":"Quelqu’un te dit : « Who is she? » Que réponds-tu ?",
+"es":"Alguien te dice: « Who is she? » ¿Qué respondes?",
+"correct":"She’s my sister.",
+"wrong":[
+"It’s my sister.",
+"He’s my sister.",
+"She my sister is."
+],
+"why":{
+"en":"For a woman: “She’s…”.",
+"fr":"Pour une femme : « She’s… ».",
+"es":"Para una mujer: « She’s… »."
+},
+"qa":"Someone says: Who is she? What do you answer?",
+"aa":"She's my sister."
+},
+{
+"id":"en-a1-149",
+"level":"a1",
+"q":"How many months are there in a year?",
+"fr":"Combien y a-t-il de mois dans une année ?",
+"es":"¿Cuántos meses hay en un año?",
+"correct":"twelve",
+"wrong":[
+"ten",
+"eleven",
+"thirteen"
+],
+"why":{
+"en":"A year has twelve months.",
+"fr":"Une année a douze mois (twelve).",
+"es":"Un año tiene doce meses (twelve)."
+},
+"qa":"How many months are there in a year?",
+"aa":"twelve"
+},
+{
+"id":"en-a1-150",
+"level":"a1",
+"q":"What is the English word for ✏️?",
+"fr":"Quel est le mot anglais pour ✏️ ?",
+"es":"¿Cómo se dice ✏️ en inglés?",
+"correct":"pencil",
+"wrong":[
+"bed",
+"bell",
+"shower"
+],
+"why":{
+"en":"✏️ = “pencil”.",
+"fr":"✏️ se dit « pencil » (crayon).",
+"es":"✏️ se dice « pencil » (lápiz)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"pencil"
+},
+{
+"id":"en-a1-151",
+"level":"a1",
+"q":"Complete: “___ she speak English?”",
+"fr":"Complète : « ___ she speak English? »",
+"es":"Completa: « ___ she speak English? »",
+"correct":"Does",
+"wrong":[
+"Do",
+"Is",
+"Are"
+],
+"why":{
+"en":"“Does she speak English?” Present simple questions and negatives use “do / does” (does with he, she, it) + the base verb.",
+"fr":"« Does she speak English? » Questions et négations au présent simple : « do / does » (does avec he, she, it) + verbe de base.",
+"es":"« Does she speak English? » Preguntas y negaciones en presente simple: « do / does » (does con he, she, it) + verbo base."
+},
+"qa":"Complete the sentence. blank she speak English?",
+"aa":"Does she speak English?"
+},
+{
+"id":"en-a1-152",
+"level":"a1",
+"q":"What is the English word for ✂️?",
+"fr":"Quel est le mot anglais pour ✂️ ?",
+"es":"¿Cómo se dice ✂️ en inglés?",
+"correct":"scissors",
+"wrong":[
+"door",
+"candle",
+"alarm clock"
+],
+"why":{
+"en":"✂️ = “scissors”.",
+"fr":"✂️ se dit « scissors » (ciseaux).",
+"es":"✂️ se dice « scissors » (tijeras)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"scissors"
+},
+{
+"id":"en-a1-153",
+"level":"a1",
+"q":"What is the opposite of “easy”?",
+"fr":"Quel est le contraire de « easy » ?",
+"es":"¿Cuál es lo contrario de « easy »?",
+"correct":"difficult",
+"wrong":[
+"clean",
+"quiet",
+"hungry"
+],
+"why":{
+"en":"easy ↔ difficult.",
+"fr":"easy ↔ difficult (difficile).",
+"es":"easy ↔ difficult (difícil)."
+},
+"qa":"What is the opposite of easy?",
+"aa":"difficult"
+},
+{
+"id":"en-a1-154",
+"level":"a1",
+"q":"“This is my room. It is small. There is a bed, a desk and a lamp. My books are on the desk.” Is the room big?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"No, it is small.",
+"wrong":[
+"Yes, it is big.",
+"Yes, it is.",
+"No, it has a bed."
+],
+"why":{
+"en":"“It is small.”",
+"fr":"« It is small » : elle est petite.",
+"es":"« It is small »: es pequeña."
+},
+"qa":"This is my room. It is small. There is a bed, a desk and a lamp. My books are on the desk. Is the room big?",
+"aa":"No, it is small."
+},
+{
+"id":"en-a1-155",
+"level":"a1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"There are three books on the desk.",
+"wrong":[
+"There is three books on the desk.",
+"There are three book on the desk.",
+"It has three books on the desk."
+],
+"why":{
+"en":"“There are” + plural.",
+"fr":"« There are » + pluriel.",
+"es":"« There are » + plural."
+},
+"qa":"Which sentence is correct?",
+"aa":"There are three books on the desk."
+},
+{
+"id":"en-a1-156",
+"level":"a1",
+"q":"What is the English word for 💡?",
+"fr":"Quel est le mot anglais pour 💡 ?",
+"es":"¿Cómo se dice 💡 en inglés?",
+"correct":"light bulb",
+"wrong":[
+"television",
+"spoon",
+"phone"
+],
+"why":{
+"en":"💡 = “light bulb”.",
+"fr":"💡 se dit « light bulb » (ampoule).",
+"es":"💡 se dice « light bulb » (bombilla)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"light bulb"
+},
+{
+"id":"en-a1-157",
+"level":"a1",
+"q":"Complete: “My sister ___ in a shop.”",
+"fr":"Complète : « My sister ___ in a shop. »",
+"es":"Completa: « My sister ___ in a shop. »",
+"correct":"works",
+"wrong":[
+"work",
+"working",
+"are work"
+],
+"why":{
+"en":"“My sister works in a shop.” In the present simple, add -s to the verb with he, she, it.",
+"fr":"« My sister works in a shop. » Au présent simple, on ajoute -s au verbe avec he, she, it.",
+"es":"« My sister works in a shop. » En presente simple se añade -s al verbo con he, she, it."
+},
+"qa":"Complete the sentence. My sister blank in a shop.",
+"aa":"My sister works in a shop."
+},
+{
+"id":"en-a1-158",
+"level":"a1",
+"q":"What is the English word for ☂️?",
+"fr":"Quel est le mot anglais pour ☂️ ?",
+"es":"¿Cómo se dice ☂️ en inglés?",
+"correct":"umbrella",
+"wrong":[
+"guitar",
+"hammer",
+"computer"
+],
+"why":{
+"en":"☂️ = “umbrella”.",
+"fr":"☂️ se dit « umbrella » (parapluie).",
+"es":"☂️ se dice « umbrella » (paraguas)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"umbrella"
+},
+{
+"id":"en-a1-159",
+"level":"a1",
+"q":"Someone says: “Where is the toilet?” What do you answer?",
+"fr":"Quelqu’un te dit : « Where is the toilet? » Que réponds-tu ?",
+"es":"Alguien te dice: « Where is the toilet? » ¿Qué respondes?",
+"correct":"It’s over there, on the left.",
+"wrong":[
+"It’s at seven o’clock.",
+"I’m the toilet.",
+"Yes, please."
+],
+"why":{
+"en":"“Where is…?” asks for a place.",
+"fr":"« Where is… ? » demande un lieu.",
+"es":"« Where is…? » pregunta un lugar."
+},
+"qa":"Someone says: Where is the toilet? What do you answer?",
+"aa":"It's over there, on the left."
+},
+{
+"id":"en-a1-160",
+"level":"a1",
+"q":"Which day comes before Friday?",
+"fr":"Quel jour vient avant Friday (vendredi) ?",
+"es":"¿Qué día viene antes de Friday (viernes)?",
+"correct":"Thursday",
+"wrong":[
+"Saturday",
+"Sunday",
+"Tuesday"
+],
+"why":{
+"en":"Thursday comes before Friday.",
+"fr":"Thursday (jeudi) vient avant Friday (vendredi).",
+"es":"Thursday (jueves) viene antes de Friday (viernes)."
+},
+"qa":"Which day comes before Friday?",
+"aa":"Thursday"
+},
+{
+"id":"en-a1-161",
+"level":"a1",
+"q":"Complete: “The train ___ at six o’clock.”",
+"fr":"Complète : « The train ___ at six o’clock. »",
+"es":"Completa: « The train ___ at six o’clock. »",
+"correct":"leaves",
+"wrong":[
+"leave",
+"leaving",
+"are leaving"
+],
+"why":{
+"en":"“The train leaves at six o’clock.” In the present simple, add -s to the verb with he, she, it.",
+"fr":"« The train leaves at six o’clock. » Au présent simple, on ajoute -s au verbe avec he, she, it.",
+"es":"« The train leaves at six o’clock. » En presente simple se añade -s al verbo con he, she, it."
+},
+"qa":"Complete the sentence. The train blank at six o'clock.",
+"aa":"The train leaves at six o'clock."
+},
+{
+"id":"en-a1-162",
+"level":"a1",
+"q":"What is the English word for 👓?",
+"fr":"Quel est le mot anglais pour 👓 ?",
+"es":"¿Cómo se dice 👓 en inglés?",
+"correct":"glasses",
+"wrong":[
+"present",
+"tent",
+"camera"
+],
+"why":{
+"en":"👓 = “glasses”.",
+"fr":"👓 se dit « glasses » (lunettes).",
+"es":"👓 se dice « glasses » (gafas)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"glasses"
+},
+{
+"id":"en-a1-163",
+"level":"a1",
+"q":"What is the English word for 🪑?",
+"fr":"Quel est le mot anglais pour 🪑 ?",
+"es":"¿Cómo se dice 🪑 en inglés?",
+"correct":"chair",
+"wrong":[
+"balloon",
+"shower",
+"key"
+],
+"why":{
+"en":"🪑 = “chair”.",
+"fr":"🪑 se dit « chair » (chaise).",
+"es":"🪑 se dice « chair » (silla)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"chair"
+},
+{
+"id":"en-a1-164",
+"level":"a1",
+"q":"Complete: “___ is a bank near the station.”",
+"fr":"Complète : « ___ is a bank near the station. »",
+"es":"Completa: « ___ is a bank near the station. »",
+"correct":"There",
+"wrong":[
+"They",
+"Here are",
+"It are"
+],
+"why":{
+"en":"“There is a bank near the station.” “There is” for one thing, “there are” for several.",
+"fr":"« There is a bank near the station. » « There is » pour une chose, « there are » pour plusieurs.",
+"es":"« There is a bank near the station. » « There is » para una cosa, « there are » para varias."
+},
+"qa":"Complete the sentence. blank is a bank near the station.",
+"aa":"There is a bank near the station."
+},
+{
+"id":"en-a1-165",
+"level":"a1",
+"q":"What is the English word for 🛏️?",
+"fr":"Quel est le mot anglais pour 🛏️ ?",
+"es":"¿Cómo se dice 🛏️ en inglés?",
+"correct":"bed",
+"wrong":[
+"bell",
+"alarm clock",
+"backpack"
+],
+"why":{
+"en":"🛏️ = “bed”.",
+"fr":"🛏️ se dit « bed » (lit).",
+"es":"🛏️ se dice « bed » (cama)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"bed"
+},
+{
+"id":"en-a1-166",
+"level":"a1",
+"q":"Complete: “There ___ three apples on the table.”",
+"fr":"Complète : « There ___ three apples on the table. »",
+"es":"Completa: « There ___ three apples on the table. »",
+"correct":"are",
+"wrong":[
+"is",
+"am",
+"be"
+],
+"why":{
+"en":"“There are three apples on the table.” “There is” for one thing, “there are” for several.",
+"fr":"« There are three apples on the table. » « There is » pour une chose, « there are » pour plusieurs.",
+"es":"« There are three apples on the table. » « There is » para una cosa, « there are » para varias."
+},
+"qa":"Complete the sentence. There blank three apples on the table.",
+"aa":"There are three apples on the table."
+},
+{
+"id":"en-a1-167",
+"level":"a1",
+"q":"What is the English word for 🚪?",
+"fr":"Quel est le mot anglais pour 🚪 ?",
+"es":"¿Cómo se dice 🚪 en inglés?",
+"correct":"door",
+"wrong":[
+"candle",
+"phone",
+"pencil"
+],
+"why":{
+"en":"🚪 = “door”.",
+"fr":"🚪 se dit « door » (porte).",
+"es":"🚪 se dice « door » (puerta)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"door"
+},
+{
+"id":"en-a1-168",
+"level":"a1",
+"q":"What is the opposite of “clean”?",
+"fr":"Quel est le contraire de « clean » ?",
+"es":"¿Cuál es lo contrario de « clean »?",
+"correct":"dirty",
+"wrong":[
+"empty",
+"loud",
+"thin"
+],
+"why":{
+"en":"clean ↔ dirty.",
+"fr":"clean ↔ dirty (sale).",
+"es":"clean ↔ dirty (sucio)."
+},
+"qa":"What is the opposite of clean?",
+"aa":"dirty"
+},
+{
+"id":"en-a1-169",
+"level":"a1",
+"q":"Someone says: “Are you hungry?” What do you answer?",
+"fr":"Quelqu’un te dit : « Are you hungry? » Que réponds-tu ?",
+"es":"Alguien te dice: « Are you hungry? » ¿Qué respondes?",
+"correct":"Yes, I am. Let’s eat!",
+"wrong":[
+"Yes, I do.",
+"Yes, I have.",
+"Yes, it is."
+],
+"why":{
+"en":"Short answer with “be”: Yes, I am.",
+"fr":"Réponse courte avec « be » : Yes, I am.",
+"es":"Respuesta corta con « be »: Yes, I am."
+},
+"qa":"Someone says: Are you hungry? What do you answer?",
+"aa":"Yes, I am. Let's eat!"
+},
+{
+"id":"en-a1-170",
+"level":"a1",
+"q":"Which month comes after June?",
+"fr":"Quel mois vient après June (juin) ?",
+"es":"¿Qué mes viene después de June (junio)?",
+"correct":"July",
+"wrong":[
+"May",
+"August",
+"April"
+],
+"why":{
+"en":"June, July, August.",
+"fr":"June (juin), July (juillet), August (août).",
+"es":"June (junio), July (julio), August (agosto)."
+},
+"qa":"Which month comes after June?",
+"aa":"July"
+},
+{
+"id":"en-a1-171",
+"level":"a1",
+"q":"What is the English word for 📺?",
+"fr":"Quel est le mot anglais pour 📺 ?",
+"es":"¿Cómo se dice 📺 en inglés?",
+"correct":"television",
+"wrong":[
+"spoon",
+"computer",
+"scissors"
+],
+"why":{
+"en":"📺 = “television”.",
+"fr":"📺 se dit « television » (télévision).",
+"es":"📺 se dice « television » (televisión)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"television"
+},
+{
+"id":"en-a1-172",
+"level":"a1",
+"q":"Complete: “___ is your teacher? — Mr Smith.”",
+"fr":"Complète : « ___ is your teacher? — Mr Smith. »",
+"es":"Completa: « ___ is your teacher? — Mr Smith. »",
+"correct":"Who",
+"wrong":[
+"What",
+"Where",
+"When"
+],
+"why":{
+"en":"“Who is your teacher? — Mr Smith.” Question words: what (thing), who (person), where (place), when (time), why (reason), how (way).",
+"fr":"« Who is your teacher? — Mr Smith. » Mots interrogatifs : what (chose), who (personne), where (lieu), when (moment), why (raison), how (manière).",
+"es":"« Who is your teacher? — Mr Smith. » Palabras interrogativas: what (cosa), who (persona), where (lugar), when (momento), why (razón), how (manera)."
+},
+"qa":"Complete the sentence. blank is your teacher? Mr Smith.",
+"aa":"Who is your teacher? Mr Smith."
+},
+{
+"id":"en-a1-173",
+"level":"a1",
+"q":"What is the English word for 🏫?",
+"fr":"Quel est le mot anglais pour 🏫 ?",
+"es":"¿Cómo se dice 🏫 en inglés?",
+"correct":"school",
+"wrong":[
+"castle",
+"tree",
+"train"
+],
+"why":{
+"en":"🏫 = “school”.",
+"fr":"🏫 se dit « school » (école).",
+"es":"🏫 se dice « school » (colegio)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"school"
+},
+{
+"id":"en-a1-174",
+"level":"a1",
+"q":"“Anna likes animals. She has two cats and a rabbit. She does not have a dog. Her cats are black.” How many cats does Anna have?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"Two.",
+"wrong":[
+"One.",
+"Three.",
+"Four."
+],
+"why":{
+"en":"“She has two cats and a rabbit.”",
+"fr":"« She has two cats and a rabbit » : deux chats et un lapin.",
+"es":"« She has two cats and a rabbit »: dos gatos y un conejo."
+},
+"qa":"Anna likes animals. She has two cats and a rabbit. She does not have a dog. Her cats are black. How many cats does Anna have?",
+"aa":"Two."
+},
+{
+"id":"en-a1-175",
+"level":"a1",
+"q":"What is the English word for 🏥?",
+"fr":"Quel est le mot anglais pour 🏥 ?",
+"es":"¿Cómo se dice 🏥 en inglés?",
+"correct":"hospital",
+"wrong":[
+"bridge",
+"flower",
+"plane"
+],
+"why":{
+"en":"🏥 = “hospital”.",
+"fr":"🏥 se dit « hospital » (hôpital).",
+"es":"🏥 se dice « hospital » (hospital)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"hospital"
+},
+{
+"id":"en-a1-176",
+"level":"a1",
+"q":"Complete: “___ do you live? — In Lyon.”",
+"fr":"Complète : « ___ do you live? — In Lyon. »",
+"es":"Completa: « ___ do you live? — In Lyon. »",
+"correct":"Where",
+"wrong":[
+"Who",
+"When",
+"Why"
+],
+"why":{
+"en":"“Where do you live? — In Lyon.” Question words: what (thing), who (person), where (place), when (time), why (reason), how (way).",
+"fr":"« Where do you live? — In Lyon. » Mots interrogatifs : what (chose), who (personne), where (lieu), when (moment), why (raison), how (manière).",
+"es":"« Where do you live? — In Lyon. » Palabras interrogativas: what (cosa), who (persona), where (lugar), when (momento), why (razón), how (manera)."
+},
+"qa":"Complete the sentence. blank do you live? In Lyon.",
+"aa":"Where do you live? In Lyon."
+},
+{
+"id":"en-a1-177",
+"level":"a1",
+"q":"What is the English word for 🏦?",
+"fr":"Quel est le mot anglais pour 🏦 ?",
+"es":"¿Cómo se dice 🏦 en inglés?",
+"correct":"bank",
+"wrong":[
+"beach",
+"bus",
+"bicycle"
+],
+"why":{
+"en":"🏦 = “bank”.",
+"fr":"🏦 se dit « bank » (banque).",
+"es":"🏦 se dice « bank » (banco)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"bank"
+},
+{
+"id":"en-a1-178",
+"level":"a1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"What is your name?",
+"wrong":[
+"What your name is?",
+"What are your name?",
+"Your name what is?"
+],
+"why":{
+"en":"Question word + is + subject: What is your name?",
+"fr":"Mot interrogatif + is + sujet : What is your name ?",
+"es":"Palabra interrogativa + is + sujeto: What is your name?"
+},
+"qa":"Which sentence is correct?",
+"aa":"What is your name?"
+},
+{
+"id":"en-a1-179",
+"level":"a1",
+"q":"Complete: “___ is your birthday? — In May.”",
+"fr":"Complète : « ___ is your birthday? — In May. »",
+"es":"Completa: « ___ is your birthday? — In May. »",
+"correct":"When",
+"wrong":[
+"Who",
+"What",
+"Where is"
+],
+"why":{
+"en":"“When is your birthday? — In May.” Question words: what (thing), who (person), where (place), when (time), why (reason), how (way).",
+"fr":"« When is your birthday? — In May. » Mots interrogatifs : what (chose), who (personne), where (lieu), when (moment), why (raison), how (manière).",
+"es":"« When is your birthday? — In May. » Palabras interrogativas: what (cosa), who (persona), where (lugar), when (momento), why (razón), how (manera)."
+},
+"qa":"Complete the sentence. blank is your birthday? In May.",
+"aa":"When is your birthday? In May."
+},
+{
+"id":"en-a1-180",
+"level":"a1",
+"q":"Someone says: “Do you speak English?” What do you answer?",
+"fr":"Quelqu’un te dit : « Do you speak English? » Que réponds-tu ?",
+"es":"Alguien te dice: « Do you speak English? » ¿Qué respondes?",
+"correct":"Yes, a little.",
+"wrong":[
+"Yes, I’m a little.",
+"No, I speak not.",
+"Yes, I am English."
+],
+"why":{
+"en":"“A little” = not very well, but some.",
+"fr":"« A little » = un peu.",
+"es":"« A little » = un poco."
+},
+"qa":"Someone says: Do you speak English? What do you answer?",
+"aa":"Yes, a little."
+},
+{
+"id":"en-a1-181",
+"level":"a1",
+"q":"Which season comes after winter?",
+"fr":"Quelle saison vient après winter (l’hiver) ?",
+"es":"¿Qué estación viene después de winter (invierno)?",
+"correct":"spring",
+"wrong":[
+"summer",
+"autumn",
+"winter"
+],
+"why":{
+"en":"Winter, spring, summer, autumn.",
+"fr":"Winter (hiver), spring (printemps), summer (été), autumn (automne).",
+"es":"Winter (invierno), spring (primavera), summer (verano), autumn (otoño)."
+},
+"qa":"Which season comes after winter?",
+"aa":"spring"
+},
+{
+"id":"en-a1-182",
+"level":"a1",
+"q":"What is the English word for ⛪?",
+"fr":"Quel est le mot anglais pour ⛪ ?",
+"es":"¿Cómo se dice ⛪ en inglés?",
+"correct":"church",
+"wrong":[
+"mountain",
+"train",
+"ship"
+],
+"why":{
+"en":"⛪ = “church”.",
+"fr":"⛪ se dit « church » (église).",
+"es":"⛪ se dice « church » (iglesia)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"church"
+},
+{
+"id":"en-a1-183",
+"level":"a1",
+"q":"What is the opposite of “young”?",
+"fr":"Quel est le contraire de « young » ?",
+"es":"¿Cuál es lo contrario de « young »?",
+"correct":"old",
+"wrong":[
+"happy",
+"small",
+"fat"
+],
+"why":{
+"en":"young ↔ old.",
+"fr":"young ↔ old (vieux).",
+"es":"young ↔ old (viejo)."
+},
+"qa":"What is the opposite of young?",
+"aa":"old"
+},
+{
+"id":"en-a1-184",
+"level":"a1",
+"q":"What is the English word for 🏰?",
+"fr":"Quel est le mot anglais pour 🏰 ?",
+"es":"¿Cómo se dice 🏰 en inglés?",
+"correct":"castle",
+"wrong":[
+"tree",
+"plane",
+"helicopter"
+],
+"why":{
+"en":"🏰 = “castle”.",
+"fr":"🏰 se dit « castle » (château).",
+"es":"🏰 se dice « castle » (castillo)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"castle"
+},
+{
+"id":"en-a1-185",
+"level":"a1",
+"q":"Complete: “___ is he sad? — Because he lost his dog.”",
+"fr":"Complète : « ___ is he sad? — Because he lost his dog. »",
+"es":"Completa: « ___ is he sad? — Because he lost his dog. »",
+"correct":"Why",
+"wrong":[
+"Who",
+"When",
+"Where"
+],
+"why":{
+"en":"“Why is he sad? — Because he lost his dog.” Question words: what (thing), who (person), where (place), when (time), why (reason), how (way).",
+"fr":"« Why is he sad? — Because he lost his dog. » Mots interrogatifs : what (chose), who (personne), where (lieu), when (moment), why (raison), how (manière).",
+"es":"« Why is he sad? — Because he lost his dog. » Palabras interrogativas: what (cosa), who (persona), where (lugar), when (momento), why (razón), how (manera)."
+},
+"qa":"Complete the sentence. blank is he sad? Because he lost his dog.",
+"aa":"Why is he sad? Because he lost his dog."
+},
+{
+"id":"en-a1-186",
+"level":"a1",
+"q":"What is the English word for 🌉?",
+"fr":"Quel est le mot anglais pour 🌉 ?",
+"es":"¿Cómo se dice 🌉 en inglés?",
+"correct":"bridge",
+"wrong":[
+"flower",
+"bicycle",
+"school"
+],
+"why":{
+"en":"🌉 = “bridge”.",
+"fr":"🌉 se dit « bridge » (pont).",
+"es":"🌉 se dice « bridge » (puente)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"bridge"
+},
+{
+"id":"en-a1-187",
+"level":"a1",
+"q":"Complete: “Look! The children ___ in the park.”",
+"fr":"Complète : « Look! The children ___ in the park. »",
+"es":"Completa: « Look! The children ___ in the park. »",
+"correct":"are playing",
+"wrong":[
+"plays",
+"play is",
+"is playing"
+],
+"why":{
+"en":"“Look! The children are playing in the park.” Use am / is / are + verb-ing for something that is happening now.",
+"fr":"« Look! The children are playing in the park. » On utilise am / is / are + verbe en -ing pour ce qui se passe maintenant.",
+"es":"« Look! The children are playing in the park. » Se usa am / is / are + verbo en -ing para lo que ocurre ahora."
+},
+"qa":"Complete the sentence. Look! The children blank in the park.",
+"aa":"Look! The children are playing in the park."
+},
+{
+"id":"en-a1-188",
+"level":"a1",
+"q":"What is the English word for 🏖️?",
+"fr":"Quel est le mot anglais pour 🏖️ ?",
+"es":"¿Cómo se dice 🏖️ en inglés?",
+"correct":"beach",
+"wrong":[
+"bus",
+"ship",
+"hospital"
+],
+"why":{
+"en":"🏖️ = “beach”.",
+"fr":"🏖️ se dit « beach » (plage).",
+"es":"🏖️ se dice « beach » (playa)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"beach"
+},
+{
+"id":"en-a1-189",
+"level":"a1",
+"q":"What is the English word for ⛰️?",
+"fr":"Quel est le mot anglais pour ⛰️ ?",
+"es":"¿Cómo se dice ⛰️ en inglés?",
+"correct":"mountain",
+"wrong":[
+"train",
+"helicopter",
+"bank"
+],
+"why":{
+"en":"⛰️ = “mountain”.",
+"fr":"⛰️ se dit « mountain » (montagne).",
+"es":"⛰️ se dice « mountain » (montaña)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"mountain"
+},
+{
+"id":"en-a1-190",
+"level":"a1",
+"q":"Someone says: “How old is your brother?” What do you answer?",
+"fr":"Quelqu’un te dit : « How old is your brother? » Que réponds-tu ?",
+"es":"Alguien te dice: « How old is your brother? » ¿Qué respondes?",
+"correct":"He’s ten.",
+"wrong":[
+"He has ten.",
+"It’s ten.",
+"He is ten years."
+],
+"why":{
+"en":"We say “He’s ten.” (= He is ten.)",
+"fr":"On dit « He’s ten. » (= il a dix ans).",
+"es":"Se dice « He’s ten. » (= tiene diez años)."
+},
+"qa":"Someone says: How old is your brother? What do you answer?",
+"aa":"He's ten."
+},
+{
+"id":"en-a1-191",
+"level":"a1",
+"q":"Which day is the first day of the week in many countries?",
+"fr":"Quel est le premier jour de la semaine dans beaucoup de pays ?",
+"es":"¿Cuál es el primer día de la semana en muchos países?",
+"correct":"Monday",
+"wrong":[
+"Wednesday",
+"Saturday",
+"Friday"
+],
+"why":{
+"en":"Monday is the first day of the working week.",
+"fr":"Monday (lundi) est le premier jour de la semaine de travail.",
+"es":"Monday (lunes) es el primer día de la semana laboral."
+},
+"qa":"Which day is the first day of the week in many countries?",
+"aa":"Monday"
+},
+{
+"id":"en-a1-192",
+"level":"a1",
+"q":"Complete: “I ___ a book now.”",
+"fr":"Complète : « I ___ a book now. »",
+"es":"Completa: « I ___ a book now. »",
+"correct":"am reading",
+"wrong":[
+"reads",
+"are reading",
+"read am"
+],
+"why":{
+"en":"“I am reading a book now.” Use am / is / are + verb-ing for something that is happening now.",
+"fr":"« I am reading a book now. » On utilise am / is / are + verbe en -ing pour ce qui se passe maintenant.",
+"es":"« I am reading a book now. » Se usa am / is / are + verbo en -ing para lo que ocurre ahora."
+},
+"qa":"Complete the sentence. I blank a book now.",
+"aa":"I am reading a book now."
+},
+{
+"id":"en-a1-193",
+"level":"a1",
+"q":"What is the English word for 👕?",
+"fr":"Quel est le mot anglais pour 👕 ?",
+"es":"¿Cómo se dice 👕 en inglés?",
+"correct":"T-shirt",
+"wrong":[
+"coat",
+"cap",
+"gloves"
+],
+"why":{
+"en":"👕 = “T-shirt”.",
+"fr":"👕 se dit « T-shirt » (tee-shirt).",
+"es":"👕 se dice « T-shirt » (camiseta)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"T-shirt"
+},
+{
+"id":"en-a1-194",
+"level":"a1",
+"q":"“Anna likes animals. She has two cats and a rabbit. She does not have a dog. Her cats are black.” What colour are Anna’s cats?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"Black.",
+"wrong":[
+"White.",
+"Brown.",
+"Red."
+],
+"why":{
+"en":"“Her cats are black.”",
+"fr":"« Her cats are black » : ses chats sont noirs.",
+"es":"« Her cats are black »: sus gatos son negros."
+},
+"qa":"Anna likes animals. She has two cats and a rabbit. She does not have a dog. Her cats are black. What colour are Anna's cats?",
+"aa":"Black."
+},
+{
+"id":"en-a1-195",
+"level":"a1",
+"q":"Complete: “___ the door, please.”",
+"fr":"Complète : « ___ the door, please. »",
+"es":"Completa: « ___ the door, please. »",
+"correct":"Open",
+"wrong":[
+"Opening",
+"To open",
+"Opens"
+],
+"why":{
+"en":"“Open the door, please.” To give an order or an instruction, start with the base verb. “Don’t” + verb means “do not”.",
+"fr":"« Open the door, please. » Pour un ordre ou une consigne, on commence par le verbe de base. « Don’t » + verbe = ne pas.",
+"es":"« Open the door, please. » Para una orden o instrucción se empieza con el verbo base. « Don’t » + verbo = no."
+},
+"qa":"Complete the sentence. blank the door, please.",
+"aa":"Open the door, please."
+},
+{
+"id":"en-a1-196",
+"level":"a1",
+"q":"What is the English word for 👖?",
+"fr":"Quel est le mot anglais pour 👖 ?",
+"es":"¿Cómo se dice 👖 en inglés?",
+"correct":"jeans",
+"wrong":[
+"socks",
+"scarf",
+"boot"
+],
+"why":{
+"en":"👖 = “jeans”.",
+"fr":"👖 se dit « jeans » (jean).",
+"es":"👖 se dice « jeans » (vaqueros)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"jeans"
+},
+{
+"id":"en-a1-197",
+"level":"a1",
+"q":"What is the opposite of “up”?",
+"fr":"Quel est le contraire de « up » ?",
+"es":"¿Cuál es lo contrario de « up »?",
+"correct":"down",
+"wrong":[
+"out",
+"left",
+"near"
+],
+"why":{
+"en":"up ↔ down.",
+"fr":"up ↔ down (en bas).",
+"es":"up ↔ down (abajo)."
+},
+"qa":"What is the opposite of up?",
+"aa":"down"
+},
+{
+"id":"en-a1-198",
+"level":"a1",
+"q":"What is the English word for 👗?",
+"fr":"Quel est le mot anglais pour 👗 ?",
+"es":"¿Cómo se dice 👗 en inglés?",
+"correct":"dress",
+"wrong":[
+"cap",
+"gloves",
+"tie"
+],
+"why":{
+"en":"👗 = “dress”.",
+"fr":"👗 se dit « dress » (robe).",
+"es":"👗 se dice « dress » (vestido)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"dress"
+},
+{
+"id":"en-a1-199",
+"level":"a1",
+"q":"Complete: “___ run in the classroom!”",
+"fr":"Complète : « ___ run in the classroom! »",
+"es":"Completa: « ___ run in the classroom! »",
+"correct":"Don’t",
+"wrong":[
+"Not",
+"Doesn’t",
+"No"
+],
+"why":{
+"en":"“Don’t run in the classroom!” To give an order or an instruction, start with the base verb. “Don’t” + verb means “do not”.",
+"fr":"« Don’t run in the classroom! » Pour un ordre ou une consigne, on commence par le verbe de base. « Don’t » + verbe = ne pas.",
+"es":"« Don’t run in the classroom! » Para una orden o instrucción se empieza con el verbo base. « Don’t » + verbo = no."
+},
+"qa":"Complete the sentence. blank run in the classroom!",
+"aa":"Don't run in the classroom!"
+},
+{
+"id":"en-a1-200",
+"level":"a1",
+"q":"What is the English word for 🧥?",
+"fr":"Quel est le mot anglais pour 🧥 ?",
+"es":"¿Cómo se dice 🧥 en inglés?",
+"correct":"coat",
+"wrong":[
+"scarf",
+"boot",
+"T-shirt"
+],
+"why":{
+"en":"🧥 = “coat”.",
+"fr":"🧥 se dit « coat » (manteau).",
+"es":"🧥 se dice « coat » (abrigo)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"coat"
+},
+{
+"id":"en-a1-201",
+"level":"a1",
+"q":"Someone says: “What do you do at the weekend?” What do you answer?",
+"fr":"Quelqu’un te dit : « What do you do at the weekend? » Que réponds-tu ?",
+"es":"Alguien te dice: « What do you do at the weekend? » ¿Qué respondes?",
+"correct":"I play football with my friends.",
+"wrong":[
+"I am playing football yesterday.",
+"I plays football.",
+"I football play."
+],
+"why":{
+"en":"Present simple for habits: I play…",
+"fr":"Présent simple pour les habitudes : I play…",
+"es":"Presente simple para costumbres: I play…"
+},
+"qa":"Someone says: What do you do at the weekend? What do you answer?",
+"aa":"I play football with my friends."
+},
+{
+"id":"en-a1-202",
+"level":"a1",
+"q":"It is 6:15. What do you say?",
+"fr":"Il est 6 h 15. Que dit-on ?",
+"es":"Son las 6:15. ¿Qué se dice?",
+"correct":"It’s a quarter past six.",
+"wrong":[
+"It’s a quarter to six.",
+"It’s half past six.",
+"It’s six o’clock."
+],
+"why":{
+"en":"6:15: “It’s a quarter past six.”",
+"fr":"6:15 : « It’s a quarter past six. »",
+"es":"6:15: « It’s a quarter past six. »"
+},
+"qa":"It is six fifteen. What do you say?",
+"aa":"It's a quarter past six."
+},
+{
+"id":"en-a1-203",
+"level":"a1",
+"q":"Complete: “The class starts ___ nine o’clock.”",
+"fr":"Complète : « The class starts ___ nine o’clock. »",
+"es":"Completa: « The class starts ___ nine o’clock. »",
+"correct":"at",
+"wrong":[
+"on",
+"in",
+"to"
+],
+"why":{
+"en":"“The class starts at nine o’clock.” Time: at + hour, on + day, in + month or season.",
+"fr":"« The class starts at nine o’clock. » Temps : at + heure, on + jour, in + mois ou saison.",
+"es":"« The class starts at nine o’clock. » Tiempo: at + hora, on + día, in + mes o estación."
+},
+"qa":"Complete the sentence. The class starts blank nine o'clock.",
+"aa":"The class starts at nine o'clock."
+},
+{
+"id":"en-a1-204",
+"level":"a1",
+"q":"What is the English word for 🧦?",
+"fr":"Quel est le mot anglais pour 🧦 ?",
+"es":"¿Cómo se dice 🧦 en inglés?",
+"correct":"socks",
+"wrong":[
+"gloves",
+"tie",
+"jeans"
+],
+"why":{
+"en":"🧦 = “socks”.",
+"fr":"🧦 se dit « socks » (chaussettes).",
+"es":"🧦 se dice « socks » (calcetines)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"socks"
+},
+{
+"id":"en-a1-205",
+"level":"a1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"He can play the guitar.",
+"wrong":[
+"He cans play the guitar.",
+"He can to play the guitar.",
+"He can plays the guitar."
+],
+"why":{
+"en":"“Can” is followed by the base verb, with no -s and no “to”.",
+"fr":"« Can » est suivi du verbe de base, sans -s ni « to ».",
+"es":"« Can » va seguido del verbo base, sin -s ni « to »."
+},
+"qa":"Which sentence is correct?",
+"aa":"He can play the guitar."
+},
+{
+"id":"en-a1-206",
+"level":"a1",
+"q":"What is the English word for 🧢?",
+"fr":"Quel est le mot anglais pour 🧢 ?",
+"es":"¿Cómo se dice 🧢 en inglés?",
+"correct":"cap",
+"wrong":[
+"boot",
+"T-shirt",
+"dress"
+],
+"why":{
+"en":"🧢 = “cap”.",
+"fr":"🧢 se dit « cap » (casquette).",
+"es":"🧢 se dice « cap » (gorra)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"cap"
+},
+{
+"id":"en-a1-207",
+"level":"a1",
+"q":"Complete: “I go to school ___ Monday.”",
+"fr":"Complète : « I go to school ___ Monday. »",
+"es":"Completa: « I go to school ___ Monday. »",
+"correct":"on",
+"wrong":[
+"at",
+"in",
+"to"
+],
+"why":{
+"en":"“I go to school on Monday.” Time: at + hour, on + day, in + month or season.",
+"fr":"« I go to school on Monday. » Temps : at + heure, on + jour, in + mois ou saison.",
+"es":"« I go to school on Monday. » Tiempo: at + hora, on + día, in + mes o estación."
+},
+"qa":"Complete the sentence. I go to school blank Monday.",
+"aa":"I go to school on Monday."
+},
+{
+"id":"en-a1-208",
+"level":"a1",
+"q":"What is the English word for 👁️?",
+"fr":"Quel est le mot anglais pour 👁️ ?",
+"es":"¿Cómo se dice 👁️ en inglés?",
+"correct":"eye",
+"wrong":[
+"nose",
+"hand",
+"foot"
+],
+"why":{
+"en":"👁️ = “eye”.",
+"fr":"👁️ se dit « eye » (œil).",
+"es":"👁️ se dice « eye » (ojo)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"eye"
+},
+{
+"id":"en-a1-209",
+"level":"a1",
+"q":"Complete: “We have a holiday ___ July.”",
+"fr":"Complète : « We have a holiday ___ July. »",
+"es":"Completa: « We have a holiday ___ July. »",
+"correct":"in",
+"wrong":[
+"on",
+"at",
+"to"
+],
+"why":{
+"en":"“We have a holiday in July.” Time: at + hour, on + day, in + month or season.",
+"fr":"« We have a holiday in July. » Temps : at + heure, on + jour, in + mois ou saison.",
+"es":"« We have a holiday in July. » Tiempo: at + hora, on + día, in + mes o estación."
+},
+"qa":"Complete the sentence. We have a holiday blank July.",
+"aa":"We have a holiday in July."
+},
+{
+"id":"en-a1-210",
+"level":"a1",
+"q":"What is the English word for 👂?",
+"fr":"Quel est le mot anglais pour 👂 ?",
+"es":"¿Cómo se dice 👂 en inglés?",
+"correct":"ear",
+"wrong":[
+"mouth",
+"foot",
+"tooth"
+],
+"why":{
+"en":"👂 = “ear”.",
+"fr":"👂 se dit « ear » (oreille).",
+"es":"👂 se dice « ear » (oreja)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"ear"
+},
+{
+"id":"en-a1-211",
+"level":"a1",
+"q":"What is the opposite of “open”?",
+"fr":"Quel est le contraire de « open » ?",
+"es":"¿Cuál es lo contrario de « open »?",
+"correct":"closed",
+"wrong":[
+"dirty",
+"heavy",
+"wet"
+],
+"why":{
+"en":"open ↔ closed.",
+"fr":"open ↔ closed (fermé).",
+"es":"open ↔ closed (cerrado)."
+},
+"qa":"What is the opposite of open?",
+"aa":"closed"
+},
+{
+"id":"en-a1-212",
+"level":"a1",
+"q":"Someone says: “What’s the date today?” What do you answer?",
+"fr":"Quelqu’un te dit : « What’s the date today? » Que réponds-tu ?",
+"es":"Alguien te dice: « What’s the date today? » ¿Qué respondes?",
+"correct":"It’s the fifth of May.",
+"wrong":[
+"It’s five o’clock.",
+"It’s Monday morning.",
+"It’s in May the fifth."
+],
+"why":{
+"en":"For the date: “It’s the fifth of May.”",
+"fr":"Pour la date : « It’s the fifth of May ».",
+"es":"Para la fecha: « It’s the fifth of May »."
+},
+"qa":"Someone says: What's the date today? What do you answer?",
+"aa":"It's the fifth of May."
+},
+{
+"id":"en-a1-213",
+"level":"a1",
+"q":"It is 8:45. What do you say?",
+"fr":"Il est 8 h 45. Que dit-on ?",
+"es":"Son las 8:45. ¿Qué se dice?",
+"correct":"It’s a quarter to nine.",
+"wrong":[
+"It’s a quarter past nine.",
+"It’s half past eight.",
+"It’s nine o’clock."
+],
+"why":{
+"en":"8:45: “It’s a quarter to nine.”",
+"fr":"8:45 : « It’s a quarter to nine. »",
+"es":"8:45: « It’s a quarter to nine. »"
+},
+"qa":"It is eight forty-five. What do you say?",
+"aa":"It's a quarter to nine."
+},
+{
+"id":"en-a1-214",
+"level":"a1",
+"q":"What is the English word for 👃?",
+"fr":"Quel est le mot anglais pour 👃 ?",
+"es":"¿Cómo se dice 👃 en inglés?",
+"correct":"nose",
+"wrong":[
+"hand",
+"tooth",
+"leg"
+],
+"why":{
+"en":"👃 = “nose”.",
+"fr":"👃 se dit « nose » (nez).",
+"es":"👃 se dice « nose » (nariz)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"nose"
+},
+{
+"id":"en-a1-215",
+"level":"a1",
+"q":"“The shop opens at eight in the morning and closes at six in the evening. It is closed on Sunday.” When is the shop closed?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"On Sunday.",
+"wrong":[
+"On Monday.",
+"At eight.",
+"In the evening."
+],
+"why":{
+"en":"“It is closed on Sunday.”",
+"fr":"« It is closed on Sunday » : fermé le dimanche.",
+"es":"« It is closed on Sunday »: cerrado el domingo."
+},
+"qa":"The shop opens at eight in the morning and closes at six in the evening. It is closed on Sunday. When is the shop closed?",
+"aa":"On Sunday."
+},
+{
+"id":"en-a1-216",
+"level":"a1",
+"q":"Complete: “I would like ___ water, please.”",
+"fr":"Complète : « I would like ___ water, please. »",
+"es":"Completa: « I would like ___ water, please. »",
+"correct":"some",
+"wrong":[
+"any",
+"an",
+"many"
+],
+"why":{
+"en":"“I would like some water, please.” “Some” in positive sentences, “any” in negatives and questions.",
+"fr":"« I would like some water, please. » « Some » dans les phrases positives, « any » dans les négations et les questions.",
+"es":"« I would like some water, please. » « Some » en frases afirmativas, « any » en negativas y preguntas."
+},
+"qa":"Complete the sentence. I would like blank water, please.",
+"aa":"I would like some water, please."
+},
+{
+"id":"en-a1-217",
+"level":"a1",
+"q":"What is the English word for 👄?",
+"fr":"Quel est le mot anglais pour 👄 ?",
+"es":"¿Cómo se dice 👄 en inglés?",
+"correct":"mouth",
+"wrong":[
+"foot",
+"leg",
+"eye"
+],
+"why":{
+"en":"👄 = “mouth”.",
+"fr":"👄 se dit « mouth » (bouche).",
+"es":"👄 se dice « mouth » (boca)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"mouth"
+},
+{
+"id":"en-a1-218",
+"level":"a1",
+"q":"What is the English word for ⭐?",
+"fr":"Quel est le mot anglais pour ⭐ ?",
+"es":"¿Cómo se dice ⭐ en inglés?",
+"correct":"star",
+"wrong":[
+"cloud",
+"fire",
+"rainbow"
+],
+"why":{
+"en":"⭐ = “star”.",
+"fr":"⭐ se dit « star » (étoile).",
+"es":"⭐ se dice « star » (estrella)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"star"
+},
+{
+"id":"en-a1-219",
+"level":"a1",
+"q":"Complete: “We haven’t got ___ bread.”",
+"fr":"Complète : « We haven’t got ___ bread. »",
+"es":"Completa: « We haven’t got ___ bread. »",
+"correct":"any",
+"wrong":[
+"some",
+"a",
+"an"
+],
+"why":{
+"en":"“We haven’t got any bread.” “Some” in positive sentences, “any” in negatives and questions.",
+"fr":"« We haven’t got any bread. » « Some » dans les phrases positives, « any » dans les négations et les questions.",
+"es":"« We haven’t got any bread. » « Some » en frases afirmativas, « any » en negativas y preguntas."
+},
+"qa":"Complete the sentence. We haven't got blank bread.",
+"aa":"We haven't got any bread."
+},
+{
+"id":"en-a1-220",
+"level":"a1",
+"q":"What is the English word for 🌙?",
+"fr":"Quel est le mot anglais pour 🌙 ?",
+"es":"¿Cómo se dice 🌙 en inglés?",
+"correct":"moon",
+"wrong":[
+"snow",
+"rainbow",
+"wave"
+],
+"why":{
+"en":"🌙 = “moon”.",
+"fr":"🌙 se dit « moon » (lune).",
+"es":"🌙 se dice « moon » (luna)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"moon"
+},
+{
+"id":"en-a1-221",
+"level":"a1",
+"q":"Someone says: “Is this your bag?” What do you answer?",
+"fr":"Quelqu’un te dit : « Is this your bag? » Que réponds-tu ?",
+"es":"Alguien te dice: « Is this your bag? » ¿Qué respondes?",
+"correct":"No, it isn’t. Mine is red.",
+"wrong":[
+"No, I’m not.",
+"No, it doesn’t.",
+"No, they aren’t."
+],
+"why":{
+"en":"Short answer with “is”: No, it isn’t.",
+"fr":"Réponse courte avec « is » : No, it isn’t.",
+"es":"Respuesta corta con « is »: No, it isn’t."
+},
+"qa":"Someone says: Is this your bag? What do you answer?",
+"aa":"No, it isn't. Mine is red."
+},
+{
+"id":"en-a1-222",
+"level":"a1",
+"q":"It is 12:00. What do you say?",
+"fr":"Il est 12 h 00. Que dit-on ?",
+"es":"Son las 12:00. ¿Qué se dice?",
+"correct":"It’s twelve o’clock.",
+"wrong":[
+"It’s a quarter past twelve.",
+"It’s half past twelve.",
+"It’s eleven o’clock."
+],
+"why":{
+"en":"12:00: “It’s twelve o’clock.”",
+"fr":"12:00 : « It’s twelve o’clock. »",
+"es":"12:00: « It’s twelve o’clock. »"
+},
+"qa":"It is twelve o’clock. What do you say?",
+"aa":"It's twelve o'clock."
+},
+{
+"id":"en-a1-223",
+"level":"a1",
+"q":"Complete: “Tom is my friend. I like ___ very much.”",
+"fr":"Complète : « Tom is my friend. I like ___ very much. »",
+"es":"Completa: « Tom is my friend. I like ___ very much. »",
+"correct":"him",
+"wrong":[
+"he",
+"his",
+"her"
+],
+"why":{
+"en":"“Tom is my friend. I like him very much.” After a verb, use me, you, him, her, it, us, them.",
+"fr":"« Tom is my friend. I like him very much. » Après un verbe, on utilise me, you, him, her, it, us, them.",
+"es":"« Tom is my friend. I like him very much. » Después de un verbo se usa me, you, him, her, it, us, them."
+},
+"qa":"Complete the sentence. Tom is my friend. I like blank very much.",
+"aa":"Tom is my friend. I like him very much."
+},
+{
+"id":"en-a1-224",
+"level":"a1",
+"q":"What is the English word for ☁️?",
+"fr":"Quel est le mot anglais pour ☁️ ?",
+"es":"¿Cómo se dice ☁️ en inglés?",
+"correct":"cloud",
+"wrong":[
+"fire",
+"wave",
+"palm tree"
+],
+"why":{
+"en":"☁️ = “cloud”.",
+"fr":"☁️ se dit « cloud » (nuage).",
+"es":"☁️ se dice « cloud » (nube)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"cloud"
+},
+{
+"id":"en-a1-225",
+"level":"a1",
+"q":"What is the opposite of “rich”?",
+"fr":"Quel est le contraire de « rich » ?",
+"es":"¿Cuál es lo contrario de « rich »?",
+"correct":"poor",
+"wrong":[
+"tired",
+"thin",
+"quiet"
+],
+"why":{
+"en":"rich ↔ poor.",
+"fr":"rich ↔ poor (pauvre).",
+"es":"rich ↔ poor (pobre)."
+},
+"qa":"What is the opposite of rich?",
+"aa":"poor"
+},
+{
+"id":"en-a1-226",
+"level":"a1",
+"q":"What is the English word for ❄️?",
+"fr":"Quel est le mot anglais pour ❄️ ?",
+"es":"¿Cómo se dice ❄️ en inglés?",
+"correct":"snow",
+"wrong":[
+"rainbow",
+"palm tree",
+"star"
+],
+"why":{
+"en":"❄️ = “snow”.",
+"fr":"❄️ se dit « snow » (neige).",
+"es":"❄️ se dice « snow » (nieve)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"snow"
+},
+{
+"id":"en-a1-227",
+"level":"a1",
+"q":"Complete: “Where are my keys? I can’t find ___.”",
+"fr":"Complète : « Where are my keys? I can’t find ___. »",
+"es":"Completa: « Where are my keys? I can’t find ___. »",
+"correct":"them",
+"wrong":[
+"they",
+"their",
+"it is"
+],
+"why":{
+"en":"“Where are my keys? I can’t find them.” After a verb, use me, you, him, her, it, us, them.",
+"fr":"« Where are my keys? I can’t find them. » Après un verbe, on utilise me, you, him, her, it, us, them.",
+"es":"« Where are my keys? I can’t find them. » Después de un verbo se usa me, you, him, her, it, us, them."
+},
+"qa":"Complete the sentence. Where are my keys? I can't find blank .",
+"aa":"Where are my keys? I can't find them."
+},
+{
+"id":"en-a1-228",
+"level":"a1",
+"q":"What is the English word for 👩‍⚕️?",
+"fr":"Quel est le mot anglais pour 👩‍⚕️ ?",
+"es":"¿Cómo se dice 👩‍⚕️ en inglés?",
+"correct":"doctor",
+"wrong":[
+"cook",
+"firefighter",
+"police officer"
+],
+"why":{
+"en":"👩‍⚕️ = “doctor”.",
+"fr":"👩‍⚕️ se dit « doctor » (médecin).",
+"es":"👩‍⚕️ se dice « doctor » (médica)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"doctor"
+},
+{
+"id":"en-a1-229",
+"level":"a1",
+"q":"Which sentence is correct?",
+"fr":"Quelle phrase est correcte ?",
+"es":"¿Qué frase es correcta?",
+"correct":"We are happy today.",
+"wrong":[
+"We is happy today.",
+"We am happy today.",
+"We happy are today."
+],
+"why":{
+"en":"With we: are.",
+"fr":"Avec we : are.",
+"es":"Con we: are."
+},
+"qa":"Which sentence is correct?",
+"aa":"We are happy today."
+},
+{
+"id":"en-a1-230",
+"level":"a1",
+"q":"Complete: “I like tea ___ I don’t like coffee.”",
+"fr":"Complète : « I like tea ___ I don’t like coffee. »",
+"es":"Completa: « I like tea ___ I don’t like coffee. »",
+"correct":"but",
+"wrong":[
+"and",
+"or",
+"because"
+],
+"why":{
+"en":"“I like tea but I don’t like coffee.” “And” adds, “but” contrasts, “or” gives a choice.",
+"fr":"« I like tea but I don’t like coffee. » « And » ajoute, « but » oppose, « or » propose un choix.",
+"es":"« I like tea but I don’t like coffee. » « And » añade, « but » opone, « or » da una opción."
+},
+"qa":"Complete the sentence. I like tea blank I don't like coffee.",
+"aa":"I like tea but I don't like coffee."
+},
+{
+"id":"en-a1-231",
+"level":"a1",
+"q":"What is the English word for 👩‍🏫?",
+"fr":"Quel est le mot anglais pour 👩‍🏫 ?",
+"es":"¿Cómo se dice 👩‍🏫 en inglés?",
+"correct":"teacher",
+"wrong":[
+"firefighter",
+"police officer",
+"pilot"
+],
+"why":{
+"en":"👩‍🏫 = “teacher”.",
+"fr":"👩‍🏫 se dit « teacher » (professeure).",
+"es":"👩‍🏫 se dice « teacher » (profesora)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"teacher"
+},
+{
+"id":"en-a1-232",
+"level":"a1",
+"q":"Someone says: “See you tomorrow!” What do you answer?",
+"fr":"Quelqu’un te dit : « See you tomorrow! » Que réponds-tu ?",
+"es":"Alguien te dice: « See you tomorrow! » ¿Qué respondes?",
+"correct":"See you! Bye!",
+"wrong":[
+"Yes, I see.",
+"You’re welcome.",
+"Good morning!"
+],
+"why":{
+"en":"A friendly goodbye: “See you!”",
+"fr":"Un au revoir amical : « See you! »",
+"es":"Una despedida amistosa: « See you! »"
+},
+"qa":"Someone says: See you tomorrow! What do you answer?",
+"aa":"See you! Bye!"
+},
+{
+"id":"en-a1-233",
+"level":"a1",
+"q":"It is 4:30. What do you say?",
+"fr":"Il est 4 h 30. Que dit-on ?",
+"es":"Son las 4:30. ¿Qué se dice?",
+"correct":"It’s half past four.",
+"wrong":[
+"It’s half past five.",
+"It’s four o’clock.",
+"It’s a quarter to four."
+],
+"why":{
+"en":"4:30: “It’s half past four.”",
+"fr":"4:30 : « It’s half past four. »",
+"es":"4:30: « It’s half past four. »"
+},
+"qa":"It is four thirty. What do you say?",
+"aa":"It's half past four."
+},
+{
+"id":"en-a1-234",
+"level":"a1",
+"q":"What is the English word for 👨‍🍳?",
+"fr":"Quel est le mot anglais pour 👨‍🍳 ?",
+"es":"¿Cómo se dice 👨‍🍳 en inglés?",
+"correct":"cook",
+"wrong":[
+"police officer",
+"pilot",
+"farmer"
+],
+"why":{
+"en":"👨‍🍳 = “cook”.",
+"fr":"👨‍🍳 se dit « cook » (cuisinier).",
+"es":"👨‍🍳 se dice « cook » (cocinero)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"cook"
+},
+{
+"id":"en-a1-235",
+"level":"a1",
+"q":"“The shop opens at eight in the morning and closes at six in the evening. It is closed on Sunday.” What time does the shop close?",
+"fr":"Lis le texte, puis réponds.",
+"es":"Lee el texto y responde.",
+"correct":"At six in the evening.",
+"wrong":[
+"At eight in the morning.",
+"At six in the morning.",
+"At eight in the evening."
+],
+"why":{
+"en":"“Closes at six in the evening.”",
+"fr":"« Closes at six in the evening » : ferme à dix-huit heures.",
+"es":"« Closes at six in the evening »: cierra a las seis de la tarde."
+},
+"qa":"The shop opens at eight in the morning and closes at six in the evening. It is closed on Sunday. What time does the shop close?",
+"aa":"At six in the evening."
+},
+{
+"id":"en-a1-236",
+"level":"a1",
+"q":"Complete: “Do you want tea ___ coffee?”",
+"fr":"Complète : « Do you want tea ___ coffee? »",
+"es":"Completa: « Do you want tea ___ coffee? »",
+"correct":"or",
+"wrong":[
+"and",
+"but",
+"so"
+],
+"why":{
+"en":"“Do you want tea or coffee?” “And” adds, “but” contrasts, “or” gives a choice.",
+"fr":"« Do you want tea or coffee? » « And » ajoute, « but » oppose, « or » propose un choix.",
+"es":"« Do you want tea or coffee? » « And » añade, « but » opone, « or » da una opción."
+},
+"qa":"Complete the sentence. Do you want tea blank coffee?",
+"aa":"Do you want tea or coffee?"
+},
+{
+"id":"en-a1-237",
+"level":"a1",
+"q":"What is the English word for 👨‍🚒?",
+"fr":"Quel est le mot anglais pour 👨‍🚒 ?",
+"es":"¿Cómo se dice 👨‍🚒 en inglés?",
+"correct":"firefighter",
+"wrong":[
+"pilot",
+"farmer",
+"doctor"
+],
+"why":{
+"en":"👨‍🚒 = “firefighter”.",
+"fr":"👨‍🚒 se dit « firefighter » (pompier).",
+"es":"👨‍🚒 se dice « firefighter » (bombero)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"firefighter"
+},
+{
+"id":"en-a1-238",
+"level":"a1",
+"q":"Complete: “How ___ apples do you want?”",
+"fr":"Complète : « How ___ apples do you want? »",
+"es":"Completa: « How ___ apples do you want? »",
+"correct":"many",
+"wrong":[
+"much",
+"a lot",
+"little"
+],
+"why":{
+"en":"“How many apples do you want?” “How many” + plural noun asks about a number; “How much” asks about price or an uncountable quantity.",
+"fr":"« How many apples do you want? » « How many » + nom pluriel demande un nombre ; « How much » demande un prix ou une quantité d’indénombrable.",
+"es":"« How many apples do you want? » « How many » + nombre plural pregunta un número; « How much » pregunta un precio o una cantidad incontable."
+},
+"qa":"Complete the sentence. How blank apples do you want?",
+"aa":"How many apples do you want?"
+},
+{
+"id":"en-a1-239",
+"level":"a1",
+"q":"What is the English word for 👮?",
+"fr":"Quel est le mot anglais pour 👮 ?",
+"es":"¿Cómo se dice 👮 en inglés?",
+"correct":"police officer",
+"wrong":[
+"farmer",
+"doctor",
+"teacher"
+],
+"why":{
+"en":"👮 = “police officer”.",
+"fr":"👮 se dit « police officer » (policier).",
+"es":"👮 se dice « police officer » (policía)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"police officer"
+},
+{
+"id":"en-a1-240",
+"level":"a1",
+"q":"What is the opposite of “hungry”?",
+"fr":"Quel est le contraire de « hungry » ?",
+"es":"¿Cuál es lo contrario de « hungry »?",
+"correct":"full",
+"wrong":[
+"thirsty",
+"sleepy",
+"angry"
+],
+"why":{
+"en":"hungry ↔ full.",
+"fr":"hungry ↔ full (rassasié).",
+"es":"hungry ↔ full (lleno)."
+},
+"qa":"What is the opposite of hungry?",
+"aa":"full"
+},
+{
+"id":"en-a1-241",
+"level":"a1",
+"q":"What colour is 🟢?",
+"fr":"De quelle couleur est 🟢 ?",
+"es":"¿De qué color es 🟢?",
+"correct":"green",
+"wrong":[
+"blue",
+"orange",
+"black"
+],
+"why":{
+"en":"🟢 is green.",
+"fr":"🟢 est « green » (vert).",
+"es":"🟢 es « green » (verde)."
+},
+"qa":"What colour is this?",
+"aa":"green"
+},
+{
+"id":"en-a1-242",
+"level":"a1",
+"q":"Complete: “Are you a student? — Yes, I ___.”",
+"fr":"Complète : « Are you a student? — Yes, I ___. »",
+"es":"Completa: « Are you a student? — Yes, I ___. »",
+"correct":"am",
+"wrong":[
+"are",
+"do",
+"is"
+],
+"why":{
+"en":"“Are you a student? — Yes, I am.” Short answers repeat the verb of the question: Are you…? Yes, I am. / No, I’m not.",
+"fr":"« Are you a student? — Yes, I am. » Les réponses courtes reprennent le verbe de la question : Are you… ? Yes, I am. / No, I’m not.",
+"es":"« Are you a student? — Yes, I am. » Las respuestas cortas repiten el verbo de la pregunta: Are you…? Yes, I am. / No, I’m not."
+},
+"qa":"Complete the sentence. Are you a student? Yes, I blank .",
+"aa":"Are you a student? Yes, I am."
+},
+{
+"id":"en-a1-243",
+"level":"a1",
+"q":"Someone says: “Excuse me, what’s the time?” What do you answer?",
+"fr":"Quelqu’un te dit : « Excuse me, what’s the time? » Que réponds-tu ?",
+"es":"Alguien te dice: « Excuse me, what’s the time? » ¿Qué respondes?",
+"correct":"It’s a quarter past three.",
+"wrong":[
+"It’s a quarter pasts three.",
+"They’re three.",
+"It’s three o’clocks."
+],
+"why":{
+"en":"We give the time with “It’s…”.",
+"fr":"On donne l’heure avec « It’s… ».",
+"es":"La hora se da con « It’s… »."
+},
+"qa":"Someone says: Excuse me, what's the time? What do you answer?",
+"aa":"It's a quarter past three."
+},
+{
+"id":"en-a1-244",
+"level":"a1",
+"q":"It is 10:05. What do you say?",
+"fr":"Il est 10 h 05. Que dit-on ?",
+"es":"Son las 10:05. ¿Qué se dice?",
+"correct":"It’s five past ten.",
+"wrong":[
+"It’s ten past five.",
+"It’s five to ten.",
+"It’s ten o’clock."
+],
+"why":{
+"en":"10:05: “It’s five past ten.”",
+"fr":"10:05 : « It’s five past ten. »",
+"es":"10:05: « It’s five past ten. »"
+},
+"qa":"It is ten oh five. What do you say?",
+"aa":"It's five past ten."
+},
+{
+"id":"en-a1-245",
+"level":"a1",
+"q":"What colour is 🔵?",
+"fr":"De quelle couleur est 🔵 ?",
+"es":"¿De qué color es 🔵?",
+"correct":"blue",
+"wrong":[
+"yellow",
+"purple",
+"white"
+],
+"why":{
+"en":"🔵 is blue.",
+"fr":"🔵 est « blue » (bleu).",
+"es":"🔵 es « blue » (azul)."
+},
+"qa":"What colour is this?",
+"aa":"blue"
+},
+{
+"id":"en-a1-246",
+"level":"a1",
+"q":"Complete: “Does she like pizza? — No, she ___.”",
+"fr":"Complète : « Does she like pizza? — No, she ___. »",
+"es":"Completa: « Does she like pizza? — No, she ___. »",
+"correct":"doesn’t",
+"wrong":[
+"don’t",
+"isn’t",
+"not"
+],
+"why":{
+"en":"“Does she like pizza? — No, she doesn’t.” Short answers repeat the verb of the question: Are you…? Yes, I am. / No, I’m not.",
+"fr":"« Does she like pizza? — No, she doesn’t. » Les réponses courtes reprennent le verbe de la question : Are you… ? Yes, I am. / No, I’m not.",
+"es":"« Does she like pizza? — No, she doesn’t. » Las respuestas cortas repiten el verbo de la pregunta: Are you…? Yes, I am. / No, I’m not."
+},
+"qa":"Complete the sentence. Does she like pizza? No, she blank .",
+"aa":"Does she like pizza? No, she doesn't."
+},
+{
+"id":"en-a1-247",
+"level":"a1",
+"q":"What colour is 🟡?",
+"fr":"De quelle couleur est 🟡 ?",
+"es":"¿De qué color es 🟡?",
+"correct":"yellow",
+"wrong":[
+"orange",
+"black",
+"brown"
+],
+"why":{
+"en":"🟡 is yellow.",
+"fr":"🟡 est « yellow » (jaune).",
+"es":"🟡 es « yellow » (amarillo)."
+},
+"qa":"What colour is this?",
+"aa":"yellow"
+},
+{
+"id":"en-a1-248",
+"level":"a1",
+"q":"What colour is 🟠?",
+"fr":"De quelle couleur est 🟠 ?",
+"es":"¿De qué color es 🟠?",
+"correct":"orange",
+"wrong":[
+"purple",
+"white",
+"green"
+],
+"why":{
+"en":"🟠 is orange.",
+"fr":"🟠 est « orange » (orange).",
+"es":"🟠 es « orange » (naranja)."
+},
+"qa":"What colour is this?",
+"aa":"orange"
+},
+{
+"id":"en-a1-249",
+"level":"a1",
+"q":"Complete: “I like ___ football with my friends.”",
+"fr":"Complète : « I like ___ football with my friends. »",
+"es":"Completa: « I like ___ football with my friends. »",
+"correct":"playing",
+"wrong":[
+"play",
+"to played",
+"plays"
+],
+"why":{
+"en":"“I like playing football with my friends.” “Like” + noun, or “like” + verb-ing, says what you enjoy.",
+"fr":"« I like playing football with my friends. » « Like » + nom, ou « like » + verbe en -ing, dit ce que l’on aime.",
+"es":"« I like playing football with my friends. » « Like » + nombre, o « like » + verbo en -ing, dice lo que te gusta."
+},
+"qa":"Complete the sentence. I like blank football with my friends.",
+"aa":"I like playing football with my friends."
+},
+{
+"id":"en-a1-250",
+"level":"a1",
+"q":"What colour is 🟣?",
+"fr":"De quelle couleur est 🟣 ?",
+"es":"¿De qué color es 🟣?",
+"correct":"purple",
+"wrong":[
+"black",
+"brown",
+"blue"
+],
+"why":{
+"en":"🟣 is purple.",
+"fr":"🟣 est « purple » (violet).",
+"es":"🟣 es « purple » (morado)."
+},
+"qa":"What colour is this?",
+"aa":"purple"
 }
 ]
