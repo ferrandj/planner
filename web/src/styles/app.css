@@ -529,3 +529,7 @@ label.btn{cursor:pointer}
 .qz-levels{display:flex;flex-wrap:wrap;gap:8px}
 .qz-lv{padding:4px 12px;border-radius:99px;border:1px solid var(--line);font-size:.9rem}
 .qz-lv.done{background:#e8f5e9;border-color:#1e7a3c;color:#14532d}
+.fchip.pulse{animation:pulse 1.4s ease-in-out infinite;border-color:var(--accent,#1D5FD1)}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(29,95,209,.5)}50%{box-shadow:0 0 0 6px rgba(29,95,209,0)}}
+@media (prefers-reduced-motion:reduce){.fchip.pulse{animation:none}}
+.qz-hint{font-size:.88rem;color:var(--muted)}

@@ -69,6 +69,15 @@ describe('the voice of the quiz', () => {
     expect(spoken[0].lang).toBe('en-US');                              // no English voice installed: the language is still asked
   });
 
+  it('says "blocked" (and does not pretend) when the browser refuses to play before the page has been clicked', async () => {
+    vi.stubGlobal('fetch', vi.fn(okSound));
+    const spoken = browserVoices([{ name: 'Google US English', lang: 'en-US' }]);
+    class Refused extends FakeAudio { play(): Promise<void> { return Promise.reject(Object.assign(new Error('blocked'), { name: 'NotAllowedError' })); } }
+    vi.stubGlobal('Audio', Refused);
+    expect(await voice.play(TEXTS[5])).toBe('blocked');
+    expect(spoken).toHaveLength(0);                                    // the browser's own voice would be refused as well
+  });
+
   it('says so when nothing can speak, and ignores empty text', async () => {
     vi.stubGlobal('fetch', vi.fn());
     vi.stubGlobal('speechSynthesis', undefined);
