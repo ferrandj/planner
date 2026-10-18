@@ -213,7 +213,7 @@ the fifth question you see the score and the right answers, and then the way in.
 answer is read aloud**; *Écouter la question* / *Écouter la bonne réponse* read them again. Browsers refuse to start a sound before
 the page has been clicked once, so on some devices the very first question stays silent until you press *Écouter la question*
 (a hint says so); after that everything starts by itself (an installed app on Android is usually allowed from the start). The voice is a neural voice (Kokoro, American English), recorded once for every sentence and
-**shipped with the app** (`web/public/audio/en`, about 10 MB): the same clear accent on every device, nothing to install, and it
+**shipped with the app** (`web/public/audio/en`, about 28 MB): the same clear accent on every device, nothing to install, and it
 keeps working offline once heard (the service worker keeps the recordings). If a recording is missing, the browser's own English
 voice reads the text instead. The 🔊 *Voix* button (or the switch in the 🎓 Quiz window) turns it off. To record the voice for a
 new or changed question, see `scripts/quiz-audio/generate.py` (the questions are in `web/src/data/quizEn*.json`; `qa` is what is read
