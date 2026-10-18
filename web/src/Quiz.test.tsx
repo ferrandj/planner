@@ -66,7 +66,7 @@ describe('English quiz at the door', () => {
     expect(within(g).getByText(/Pas tout à fait/)).toBeInTheDocument();
     expect(within(g).getByText(/🐱 se dit « cat » \(chat\)/)).toBeInTheDocument();
     expect(voice.play).toHaveBeenNthCalledWith(1, 'What is the English word for this picture?');   // the question was read by itself...
-    expect(voice.play).toHaveBeenNthCalledWith(2, 'cat');                            // ...and the voice says the right answer
+    expect(voice.play).toHaveBeenNthCalledWith(2, 'It’s a cat.');                            // ...and the voice says the right answer
     await u.click(within(g).getByRole('button', { name: 'cow' }));                 // the answer cannot be changed afterwards
     expect(within(g).getByRole('button', { name: 'cow' })).not.toHaveClass('ko');
     expect(voice.play).toHaveBeenCalledTimes(2);
@@ -80,7 +80,20 @@ describe('English quiz at the door', () => {
     expect(voice.play).toHaveBeenLastCalledWith('What is the English word for this picture?');
     await u.click(within(g).getByRole('button', { name: 'cat' }));
     await u.click(within(g).getByRole('button', { name: /Écouter la bonne réponse/ }));
-    expect(voice.play).toHaveBeenLastCalledWith('cat');
+    expect(voice.play).toHaveBeenLastCalledWith('It’s a cat.');
+  });
+
+  it('after an answer it offers a slower playback and a sentence to repeat aloud', async () => {
+    await mountApp({ seed: on });
+    const u = user();
+    const g = gate();
+    expect(within(g).queryByText(/Répète à voix haute/)).toBeNull();
+    await u.click(within(g).getByRole('button', { name: 'cat' }));
+    const say = g.querySelector('.qz-say-it') as HTMLElement;
+    expect(say).toHaveTextContent('Répète à voix haute');
+    expect(say.querySelector('[lang="en"]')).toHaveTextContent('It’s a cat.');
+    await u.click(within(g).getByRole('button', { name: /Plus lentement/ }));
+    expect(voice.play).toHaveBeenLastCalledWith('It’s a cat.', true);
   });
 
   it('the voice can be switched off: nothing is read, and the choice is kept', async () => {
@@ -118,7 +131,7 @@ describe('English quiz at the door', () => {
     const picker = within(g).getByRole('group', { name: 'Niveau des questions' });
     expect(within(picker).getByRole('button', { name: /Je progresse niveau par niveau/ })).toHaveAttribute('aria-pressed', 'true');
     expect(within(g).getByText(/Anglais · A1/)).toBeInTheDocument();
-    await u.click(within(picker).getByRole('button', { name: /Niveau B1 : 0 réussies sur 343/ }));
+    await u.click(within(picker).getByRole('button', { name: /Niveau B1 : 0 réussies sur 443/ }));
     const b1 = gate();
     expect(within(b1).getByText(/Anglais · B1/)).toBeInTheDocument();
     expect(within(b1).getByText('1 / 5')).toBeInTheDocument();
@@ -138,7 +151,7 @@ describe('English quiz at the door', () => {
     await mountApp({ seed: (d) => { on(d); d.prefs.quizLevel = 'a1'; QUESTIONS.filter((q) => q.level === 'a1').forEach((q, i) => { d.quiz[q.id] = { ok: 1, ko: 0, at: i < 5 ? '2026-09-01' : '2026-10-01' }; }); } });
     const g = gate();
     expect(within(g).getByText(/Anglais · A1/)).toBeInTheDocument();
-    expect(within(g).getByRole('button', { name: /Niveau A1 : 250 réussies sur 250/ })).toBeInTheDocument();
+    expect(within(g).getByRole('button', { name: /Niveau A1 : 355 réussies sur 355/ })).toBeInTheDocument();
     expect(['en-a1-01', 'en-a1-02', 'en-a1-03', 'en-a1-04', 'en-a1-05']).toContain(current(g).id);              // one of the five asked longest ago
   });
 
@@ -161,7 +174,7 @@ describe('English quiz at the door', () => {
     await u.click(within(g).getByRole('button', { name: 'cat' }));
     expect(voice.play).not.toHaveBeenCalled();
     await u.click(within(g).getByRole('button', { name: /Écouter la bonne réponse/ }));
-    expect(voice.play).toHaveBeenCalledWith('cat');
+    expect(voice.play).toHaveBeenCalledWith('It’s a cat.');
   });
 
   it('if the browser refuses to start the sound by itself, it says what to do, and the voice runs by itself after the first click', async () => {
@@ -186,7 +199,7 @@ describe('English quiz at the door', () => {
     await playRound(u, [true, true, false, true, true]);
     const g = gate();
     expect(within(g).getByText('4 bonnes réponses sur 5')).toBeInTheDocument();
-    expect(within(g).getAllByRole('listitem').map((li) => li.textContent?.replace('🔊', ''))).toEqual(['cat', 'dog', 'apple', 'bread', 'milk']);
+    expect(within(g).getAllByRole('listitem').map((li) => li.textContent?.replace('🔊', ''))).toEqual(['It’s a cat.', 'It’s a dog.', 'It’s an apple.', 'It’s bread.', 'It’s milk.']);
     expect(within(g).getByText('A1')).toBeInTheDocument();
     await u.click(within(g).getByRole('button', { name: 'Entrer dans le planner' }));
     expect(screen.queryByRole('dialog', { name: /Une question avant/ })).toBeNull();
@@ -212,7 +225,7 @@ describe('English quiz at the door', () => {
 
   it('finishing a level moves on to the next one, with a message', async () => {
     const srv = new FakeServer();
-    const a = await mountApp({ server: srv, seed: (d) => { on(d); QUESTIONS.slice(0, 249).forEach((q) => { d.quiz[q.id] = { ok: 1, ko: 0, at: '2026-10-10' }; }); } });
+    const a = await mountApp({ server: srv, seed: (d) => { on(d); QUESTIONS.slice(0, 354).forEach((q) => { d.quiz[q.id] = { ok: 1, ko: 0, at: '2026-10-10' }; }); } });
     const u = user();
     const g = gate();
     expect(within(g).getByText(/Anglais · A1/)).toBeInTheDocument();
@@ -221,7 +234,7 @@ describe('English quiz at the door', () => {
     await playRound(u, [true, true, true, false]);
     const done = gate();
     expect(within(done).getByText(/Niveau A1 terminé ! Tu passes au niveau A2\./)).toBeInTheDocument();
-    expect([...done.querySelectorAll('.qz-lv.done')].map((e) => e.textContent)).toEqual(['A1 250/250']);
+    expect([...done.querySelectorAll('.qz-lv.done')].map((e) => e.textContent)).toEqual(['A1 355/355']);
     await u.click(within(done).getByRole('button', { name: 'Entrer dans le planner' }));
     await saved(a.sync);
     expect(srv.data.quiz['en-a2-001'].ok).toBe(1);
@@ -258,7 +271,7 @@ describe('English quiz at the door', () => {
     await u.click(screen.getByRole('button', { name: /Quiz/ }));
     const d = screen.getByRole('dialog', { name: /Quiz d’anglais/ });
     expect(within(d).getByText(new RegExp('1 questions réussies sur ' + QUESTIONS.length + ' · 2 bonnes réponses, 1 erreurs'))).toBeInTheDocument();
-    expect([...d.querySelectorAll('.qz-lv')].map((e) => e.textContent)).toEqual(['A1 1/250', expect.stringMatching(/^A2 0\//), expect.stringMatching(/^B1 0\//)]);
+    expect([...d.querySelectorAll('.qz-lv')].map((e) => e.textContent)).toEqual(['A1 1/355', expect.stringMatching(/^A2 0\//), expect.stringMatching(/^B1 0\//)]);
     const sw = within(d).getByRole('switch', { name: /Poser une question/ });
     expect(sw).not.toBeChecked();
     await u.click(sw);

@@ -36,13 +36,13 @@ function browserVoice(): SpeechSynthesisVoice | undefined {
   return list.sort((a, b) => score(b) - score(a))[0];
 }
 
-function speakWithBrowser(text: string): boolean {
+function speakWithBrowser(text: string, slow = false): boolean {
   if (typeof speechSynthesis === 'undefined' || typeof SpeechSynthesisUtterance === 'undefined') return false;
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
   const v = browserVoice();
   if (v) { u.voice = v; u.lang = v.lang; } else u.lang = 'en-US';
-  u.rate = 0.9;
+  u.rate = slow ? 0.6 : 0.9;
   speechSynthesis.speak(u);
   return true;
 }
@@ -56,8 +56,8 @@ export function stopVoice(): void {
 export type Spoken = 'recording' | 'browser' | 'blocked' | 'none';
 
 export const voice = {
-  /** Reads `text` aloud (English), replacing whatever was being read. */
-  async play(text: string): Promise<Spoken> {
+  /** Reads `text` aloud (English), replacing whatever was being read. `slow`: the same recording at 70 % speed (the pitch does not change), to hear every sound. */
+  async play(text: string, slow = false): Promise<Spoken> {
     const t = text.trim();
     if (!t) return 'none';
     stopVoice();
@@ -65,6 +65,7 @@ export const voice = {
     if (url) {
       try {
         const a = new Audio(url);
+        if (slow) a.playbackRate = 0.7;
         playing = a;
         await a.play();
         return 'recording';
@@ -73,6 +74,6 @@ export const voice = {
         /* unreadable: try the browser's voice */
       }
     }
-    return speakWithBrowser(t) ? 'browser' : 'none';
+    return speakWithBrowser(t, slow) ? 'browser' : 'none';
   }
 };

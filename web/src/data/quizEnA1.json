@@ -17,7 +17,7 @@
 "es":"🐱 se dice “cat” (gato)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"cat"
+"aa":"It’s a cat."
 },
 {
 "id":"en-a1-02",
@@ -37,7 +37,7 @@
 "es":"🐶 se dice “dog” (perro)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"dog"
+"aa":"It’s a dog."
 },
 {
 "id":"en-a1-03",
@@ -57,7 +57,7 @@
 "es":"🍎 se dice “apple” (manzana)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"apple"
+"aa":"It’s an apple."
 },
 {
 "id":"en-a1-04",
@@ -77,7 +77,7 @@
 "es":"🍞 se dice “bread” (pan)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"bread"
+"aa":"It’s bread."
 },
 {
 "id":"en-a1-05",
@@ -97,7 +97,7 @@
 "es":"🥛 se dice “milk” (leche)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"milk"
+"aa":"It’s milk."
 },
 {
 "id":"en-a1-06",
@@ -117,7 +117,7 @@
 "es":"🏠 se dice “house” (casa)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"house"
+"aa":"It’s a house."
 },
 {
 "id":"en-a1-07",
@@ -137,7 +137,7 @@
 "es":"🚗 se dice “car” (coche)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"car"
+"aa":"It’s a car."
 },
 {
 "id":"en-a1-08",
@@ -157,7 +157,7 @@
 "es":"📖 se dice “book” (libro)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"book"
+"aa":"It’s a book."
 },
 {
 "id":"en-a1-09",
@@ -177,7 +177,7 @@
 "es":"☀️ se dice “sun” (sol)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"sun"
+"aa":"It’s the sun."
 },
 {
 "id":"en-a1-10",
@@ -197,7 +197,7 @@
 "es":"🌧️ se dice “rain” (lluvia)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"rain"
+"aa":"I love the rain."
 },
 {
 "id":"en-a1-11",
@@ -217,7 +217,7 @@
 "es":"🔴 se dice “red” (rojo)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"red"
+"aa":"It’s red."
 },
 {
 "id":"en-a1-12",
@@ -237,7 +237,27 @@
 "es":"💧 se dice “water” (agua)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"water"
+"aa":"It’s water."
+},
+{
+"id":"en-a1-35",
+"level":"a1",
+"q":"What is the English word for 3?",
+"fr":"Quel est le mot anglais pour 3 ?",
+"es":"¿Cómo se dice 3 en inglés?",
+"correct":"three",
+"wrong":[
+"tree",
+"thirty",
+"free"
+],
+"why":{
+"en":"3 = three. (A “tree” is an arbre / un árbol; 30 = thirty.)",
+"fr":"3 = three. (« tree » = arbre ; 30 = thirty.)",
+"es":"3 = three. (« tree » = árbol; 30 = thirty.)"
+},
+"qa":"What is the English word for this number?",
+"aa":"It’s three."
 },
 {
 "id":"en-a1-13",
@@ -260,6 +280,26 @@
 "aa":"I'm fine, thank you."
 },
 {
+"id":"en-a1-251",
+"level":"a1",
+"q":"Listen. Which word do you hear?",
+"fr":"Écoute. Quel mot entends-tu ?",
+"es":"Escucha. ¿Qué palabra oyes?",
+"correct":"ship",
+"wrong":[
+"sheep",
+"chip",
+"sip"
+],
+"why":{
+"en":"You heard “ship”. “ship” has a short sound /ɪ/ (like “sit”); “sheep” has a long sound /iː/ (like “see”).",
+"fr":"Tu as entendu « ship ». « ship » a un son court /ɪ/ (comme « sit ») ; « sheep » a un son long /iː/ (comme « see »).",
+"es":"Has oído « ship ». « ship » tiene un sonido corto /ɪ/ (como « sit »); « sheep » uno largo /iː/ (como « see »)."
+},
+"qa":"ship",
+"aa":"ship"
+},
+{
 "id":"en-a1-14",
 "level":"a1",
 "q":"What do you say in the morning?",
@@ -278,6 +318,46 @@
 },
 "qa":"What do you say in the morning?",
 "aa":"Good morning"
+},
+{
+"id":"en-a1-252",
+"level":"a1",
+"q":"You meet someone for the first time. What do you say?",
+"fr":"Tu rencontres quelqu’un pour la première fois. Que dis-tu ?",
+"es":"Conoces a alguien por primera vez. ¿Qué dices?",
+"correct":"Nice to meet you.",
+"wrong":[
+"Good night.",
+"See you later.",
+"How much is it?"
+],
+"why":{
+"en":"“Nice to meet you” is what we say the first time. Say it with a smile!",
+"fr":"« Nice to meet you » se dit la première fois. Dis-le avec un sourire !",
+"es":"« Nice to meet you » se dice la primera vez. ¡Dilo con una sonrisa!"
+},
+"qa":"You meet someone for the first time. What do you say?",
+"aa":"Nice to meet you."
+},
+{
+"id":"en-a1-36",
+"level":"a1",
+"q":"What is the English word for 7?",
+"fr":"Quel est le mot anglais pour 7 ?",
+"es":"¿Cómo se dice 7 en inglés?",
+"correct":"seven",
+"wrong":[
+"six",
+"seventeen",
+"seventy"
+],
+"why":{
+"en":"7 = seven. 17 = seventeen, 70 = seventy.",
+"fr":"7 = seven. 17 = seventeen, 70 = seventy.",
+"es":"7 = seven. 17 = seventeen, 70 = seventy."
+},
+"qa":"What is the English word for this number?",
+"aa":"It’s seven."
 },
 {
 "id":"en-a1-15",
@@ -300,6 +380,26 @@
 "aa":"Good night"
 },
 {
+"id":"en-a1-253",
+"level":"a1",
+"q":"Which word has the same vowel sound as “see”?",
+"fr":"Quel mot a le même son de voyelle que « see » ?",
+"es":"¿Qué palabra tiene el mismo sonido de vocal que « see »?",
+"correct":"tea",
+"wrong":[
+"cat",
+"cup",
+"sit"
+],
+"why":{
+"en":"“see” and “tea” share the sound /iː/. Not the same: “cat” /æ/. “cup” /ʌ/. “sit” /ɪ/.",
+"fr":"« see » et « tea » ont le même son /iː/. Pas le même : « cat » /æ/. « cup » /ʌ/. « sit » /ɪ/.",
+"es":"« see » y « tea » tienen el mismo sonido /iː/. No es igual: « cat » /æ/. « cup » /ʌ/. « sit » /ɪ/."
+},
+"qa":"Which word has the same vowel sound as see?",
+"aa":"see. tea."
+},
+{
 "id":"en-a1-16",
 "level":"a1",
 "q":"Someone says “Thank you!”. What do you answer?",
@@ -318,6 +418,26 @@
 },
 "qa":"Someone says Thank you!. What do you answer?",
 "aa":"You're welcome."
+},
+{
+"id":"en-a1-37",
+"level":"a1",
+"q":"What is the English word for 12?",
+"fr":"Quel est le mot anglais pour 12 ?",
+"es":"¿Cómo se dice 12 en inglés?",
+"correct":"twelve",
+"wrong":[
+"two",
+"ten",
+"twenty"
+],
+"why":{
+"en":"12 = twelve. 20 = twenty.",
+"fr":"12 = twelve. 20 = twenty.",
+"es":"12 = twelve. 20 = twenty."
+},
+"qa":"What is the English word for this number?",
+"aa":"It’s twelve."
 },
 {
 "id":"en-a1-17",
@@ -340,6 +460,26 @@
 "aa":"Sorry!"
 },
 {
+"id":"en-a1-254",
+"level":"a1",
+"q":"Which word rhymes with “cat”?",
+"fr":"Quel mot rime avec « cat » ?",
+"es":"¿Qué palabra rima con « cat »?",
+"correct":"hat",
+"wrong":[
+"cut",
+"cap",
+"car"
+],
+"why":{
+"en":"“cat” and “hat” rhyme: they end with the same sound /æt/. The spelling can be different!",
+"fr":"« cat » et « hat » riment : ils finissent par le même son /æt/. L’orthographe peut être différente !",
+"es":"« cat » y « hat » riman: acaban con el mismo sonido /æt/. ¡La ortografía puede ser distinta!"
+},
+"qa":"Which word rhymes with cat?",
+"aa":"cat. hat."
+},
+{
 "id":"en-a1-18",
 "level":"a1",
 "q":"You are leaving. What do you say?",
@@ -358,6 +498,46 @@
 },
 "qa":"You are leaving. What do you say?",
 "aa":"Goodbye!"
+},
+{
+"id":"en-a1-051",
+"level":"a1",
+"q":"What is the English word for 🐴?",
+"fr":"Quel est le mot anglais pour 🐴 ?",
+"es":"¿Cómo se dice 🐴 en inglés?",
+"correct":"horse",
+"wrong":[
+"rabbit",
+"monkey",
+"bee"
+],
+"why":{
+"en":"🐴 = “horse”.",
+"fr":"🐴 se dit « horse » (cheval).",
+"es":"🐴 se dice « horse » (caballo)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a horse."
+},
+{
+"id":"en-a1-255",
+"level":"a1",
+"q":"Listen carefully, then answer: How old is Tom?",
+"fr":"Écoute bien, puis réponds : How old is Tom?",
+"es":"Escucha bien y responde: How old is Tom?",
+"correct":"Twenty",
+"wrong":[
+"Twelve",
+"Thirteen",
+"Thirty"
+],
+"why":{
+"en":"You heard: “Hello, my name is Tom. I am twenty years old. I live in London.” Twenty, not twelve!",
+"fr":"Tu as entendu : « Hello, my name is Tom. I am twenty years old. I live in London. » Twenty (vingt), pas twelve (douze) !",
+"es":"Has oído: « Hello, my name is Tom. I am twenty years old. I live in London. » Twenty (veinte), ¡no twelve (doce)!"
+},
+"qa":"Hello, my name is Tom. I am twenty years old. I live in London. How old is Tom?",
+"aa":"Twenty"
 },
 {
 "id":"en-a1-19",
@@ -400,6 +580,46 @@
 "aa":"I'm twenty."
 },
 {
+"id":"en-a1-256",
+"level":"a1",
+"q":"Which word has a different vowel sound?",
+"fr":"Quel mot a un son de voyelle différent ?",
+"es":"¿Qué palabra tiene un sonido de vocal distinto?",
+"correct":"cake",
+"wrong":[
+"cat",
+"hat",
+"bad"
+],
+"why":{
+"en":"“cake” is /eɪ/; the others are /æ/.",
+"fr":"« cake » se dit /eɪ/ ; les autres se disent /æ/.",
+"es":"« cake » se dice /eɪ/; las otras se dicen /æ/."
+},
+"qa":"Which word has a different vowel sound? cat, hat, bad, cake.",
+"aa":"cat, hat, bad, cake."
+},
+{
+"id":"en-a1-058",
+"level":"a1",
+"q":"What is the English word for 🐷?",
+"fr":"Quel est le mot anglais pour 🐷 ?",
+"es":"¿Cómo se dice 🐷 en inglés?",
+"correct":"pig",
+"wrong":[
+"bear",
+"frog",
+"mouse"
+],
+"why":{
+"en":"🐷 = “pig”.",
+"fr":"🐷 se dit « pig » (cochon).",
+"es":"🐷 se dice « pig » (cerdo)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a pig."
+},
+{
 "id":"en-a1-21",
 "level":"a1",
 "q":"“Where are you from?” Which answer is good?",
@@ -418,6 +638,26 @@
 },
 "qa":"Where are you from? Which answer is good?",
 "aa":"I'm from France."
+},
+{
+"id":"en-a1-257",
+"level":"a1",
+"q":"Put the words in order: “my / name / is / Anna”",
+"fr":"Remets les mots dans l’ordre : « my / name / is / Anna »",
+"es":"Ordena las palabras: « my / name / is / Anna »",
+"correct":"My name is Anna.",
+"wrong":[
+"Name my is Anna.",
+"My is name Anna.",
+"Anna name my is."
+],
+"why":{
+"en":"“My name is Anna.” Subject, verb, then the rest.",
+"fr":"« My name is Anna. » Sujet, verbe, puis le reste.",
+"es":"« My name is Anna. » Sujeto, verbo y el resto."
+},
+"qa":"Put the words in order. my , name , is , Anna",
+"aa":"My name is Anna."
 },
 {
 "id":"en-a1-22",
@@ -440,6 +680,26 @@
 "aa":"Nice to meet you, too."
 },
 {
+"id":"en-a1-060",
+"level":"a1",
+"q":"What is the English word for 🐑?",
+"fr":"Quel est le mot anglais pour 🐑 ?",
+"es":"¿Cómo se dice 🐑 en inglés?",
+"correct":"sheep",
+"wrong":[
+"elephant",
+"turtle",
+"wolf"
+],
+"why":{
+"en":"🐑 = “sheep”.",
+"fr":"🐑 se dit « sheep » (mouton).",
+"es":"🐑 se dice « sheep » (oveja)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a sheep."
+},
+{
 "id":"en-a1-23",
 "level":"a1",
 "q":"I ___ a student.",
@@ -460,6 +720,26 @@
 "aa":"I am a student."
 },
 {
+"id":"en-a1-258",
+"level":"a1",
+"q":"Which word sounds the same as “sun”?",
+"fr":"Quel mot se prononce comme « sun » ?",
+"es":"¿Qué palabra suena igual que « sun »?",
+"correct":"son",
+"wrong":[
+"soon",
+"sin",
+"sand"
+],
+"why":{
+"en":"“sun” and “son” sound the same (/sʌn/) but are spelled differently: “sun” shines in the sky, “son” is a boy child.",
+"fr":"« sun » et « son » se prononcent pareil (/sʌn/) mais s’écrivent différemment : « sun » = soleil, « son » = fils.",
+"es":"« sun » y « son » suenan igual (/sʌn/) pero se escriben distinto: « sun » = sol, « son » = hijo."
+},
+"qa":"Which word sounds the same as sun?",
+"aa":"sun. son."
+},
+{
 "id":"en-a1-24",
 "level":"a1",
 "q":"She ___ happy.",
@@ -478,6 +758,46 @@
 },
 "qa":"Complete the sentence. She blank happy.",
 "aa":"She is happy."
+},
+{
+"id":"en-a1-061",
+"level":"a1",
+"q":"What is the English word for 🐔?",
+"fr":"Quel est le mot anglais pour 🐔 ?",
+"es":"¿Cómo se dice 🐔 en inglés?",
+"correct":"chicken",
+"wrong":[
+"lion",
+"snake",
+"giraffe"
+],
+"why":{
+"en":"🐔 = “chicken”.",
+"fr":"🐔 se dit « chicken » (poule).",
+"es":"🐔 se dice « chicken » (gallina)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a chicken."
+},
+{
+"id":"en-a1-259",
+"level":"a1",
+"q":"Which word is stressed on the SECOND syllable?",
+"fr":"Quel mot est accentué sur la DEUXIÈME syllabe ?",
+"es":"¿Qué palabra se acentúa en la SEGUNDA sílaba?",
+"correct":"hotel",
+"wrong":[
+"water",
+"doctor",
+"picture"
+],
+"why":{
+"en":"We say ho-TEL: the loud, long part is the second one. The others are WA-ter, DOC-tor, PIC-ture.",
+"fr":"On dit ho-TEL : la partie forte et longue est la deuxième. Les autres sont WA-ter, DOC-tor, PIC-ture.",
+"es":"Se dice ho-TEL: la parte fuerte y larga es la segunda. Las otras son WA-ter, DOC-tor, PIC-ture."
+},
+"qa":"Which word is stressed on the second syllable? hotel, water, doctor, picture.",
+"aa":"hotel."
 },
 {
 "id":"en-a1-25",
@@ -520,6 +840,46 @@
 "aa":"He has a new bike."
 },
 {
+"id":"en-a1-260",
+"level":"a1",
+"q":"Which letter is silent in “knife”?",
+"fr":"Quelle lettre ne se prononce pas dans « knife » ?",
+"es":"¿Qué letra no se pronuncia en « knife »?",
+"correct":"k",
+"wrong":[
+"n",
+"i",
+"f"
+],
+"why":{
+"en":"In “knife” the “k” is silent: we say “nife”.",
+"fr":"Dans « knife », le « k » ne se prononce pas : on dit “nife”.",
+"es":"En « knife », la « k » no se pronuncia: se dice “nife”."
+},
+"qa":"Which letter is silent in knife? knife.",
+"aa":"knife."
+},
+{
+"id":"en-a1-063",
+"level":"a1",
+"q":"What is the English word for 🦆?",
+"fr":"Quel est le mot anglais pour 🦆 ?",
+"es":"¿Cómo se dice 🦆 en inglés?",
+"correct":"duck",
+"wrong":[
+"tiger",
+"butterfly",
+"penguin"
+],
+"why":{
+"en":"🦆 = “duck”.",
+"fr":"🦆 se dit « duck » (canard).",
+"es":"🦆 se dice « duck » (pato)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a duck."
+},
+{
 "id":"en-a1-27",
 "level":"a1",
 "q":"I ___ two brothers.",
@@ -538,6 +898,26 @@
 },
 "qa":"Complete the sentence. I blank two brothers.",
 "aa":"I have two brothers."
+},
+{
+"id":"en-a1-261",
+"level":"a1",
+"q":"What does “No problem” mean?",
+"fr":"Que veut dire « No problem » ?",
+"es":"¿Qué significa « No problem »?",
+"correct":"It is fine, do not worry",
+"wrong":[
+"I have a problem",
+"I do not know",
+"It is not possible"
+],
+"why":{
+"en":"“No problem” answers “thank you” or “sorry”.",
+"fr":"« No problem » répond à « thank you » ou « sorry ».",
+"es":"« No problem » responde a « thank you » o « sorry »."
+},
+"qa":"What does No problem mean?",
+"aa":"It is fine, do not worry"
 },
 {
 "id":"en-a1-28",
@@ -560,6 +940,26 @@
 "aa":"This is an apple."
 },
 {
+"id":"en-a1-067",
+"level":"a1",
+"q":"What is the English word for 🐟?",
+"fr":"Quel est le mot anglais pour 🐟 ?",
+"es":"¿Cómo se dice 🐟 en inglés?",
+"correct":"fish",
+"wrong":[
+"monkey",
+"bee",
+"owl"
+],
+"why":{
+"en":"🐟 = “fish”.",
+"fr":"🐟 se dit « fish » (poisson).",
+"es":"🐟 se dice « fish » (pez)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a fish."
+},
+{
 "id":"en-a1-29",
 "level":"a1",
 "q":"I have ___ dog.",
@@ -580,6 +980,26 @@
 "aa":"I have a dog."
 },
 {
+"id":"en-a1-262",
+"level":"a1",
+"q":"Listen. Which word do you hear?",
+"fr":"Écoute. Quel mot entends-tu ?",
+"es":"Escucha. ¿Qué palabra oyes?",
+"correct":"sheep",
+"wrong":[
+"ship",
+"sleep",
+"cheap"
+],
+"why":{
+"en":"You heard “sheep”. Long /iː/ in “sheep”, short /ɪ/ in “ship”. Open your mouth like a smile!",
+"fr":"Tu as entendu « sheep ». Long /iː/ dans « sheep », court /ɪ/ dans « ship ». Souris pour le /iː/ !",
+"es":"Has oído « sheep ». Largo /iː/ en « sheep », corto /ɪ/ en « ship ». ¡Sonríe para el /iː/!"
+},
+"qa":"sheep",
+"aa":"sheep"
+},
+{
 "id":"en-a1-30",
 "level":"a1",
 "q":"One cat, two ___.",
@@ -598,6 +1018,46 @@
 },
 "qa":"Complete the sentence. One cat, two blank .",
 "aa":"One cat, two cats."
+},
+{
+"id":"en-a1-069",
+"level":"a1",
+"q":"What is the English word for 🐰?",
+"fr":"Quel est le mot anglais pour 🐰 ?",
+"es":"¿Cómo se dice 🐰 en inglés?",
+"correct":"rabbit",
+"wrong":[
+"frog",
+"mouse",
+"dolphin"
+],
+"why":{
+"en":"🐰 = “rabbit”.",
+"fr":"🐰 se dit « rabbit » (lapin).",
+"es":"🐰 se dice « rabbit » (conejo)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a rabbit."
+},
+{
+"id":"en-a1-263",
+"level":"a1",
+"q":"You want a coffee in a café. What do you say?",
+"fr":"Tu veux un café dans un café. Que dis-tu ?",
+"es":"Quieres un café en una cafetería. ¿Qué dices?",
+"correct":"Can I have a coffee, please?",
+"wrong":[
+"I have a coffee, you?",
+"Give coffee me.",
+"A coffee is me."
+],
+"why":{
+"en":"“Can I have …, please?” is the polite way to order.",
+"fr":"« Can I have …, please? » est la façon polie de commander.",
+"es":"« Can I have …, please? » es la forma educada de pedir."
+},
+"qa":"You want a coffee in a café. What do you say?",
+"aa":"Can I have a coffee, please?"
 },
 {
 "id":"en-a1-31",
@@ -640,6 +1100,46 @@
 "aa":"What is your name?"
 },
 {
+"id":"en-a1-071",
+"level":"a1",
+"q":"What is the English word for 🐻?",
+"fr":"Quel est le mot anglais pour 🐻 ?",
+"es":"¿Cómo se dice 🐻 en inglés?",
+"correct":"bear",
+"wrong":[
+"turtle",
+"wolf",
+"horse"
+],
+"why":{
+"en":"🐻 = “bear”.",
+"fr":"🐻 se dit « bear » (ours).",
+"es":"🐻 se dice « bear » (oso)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a bear."
+},
+{
+"id":"en-a1-264",
+"level":"a1",
+"q":"Which word has the same vowel sound as “cat”?",
+"fr":"Quel mot a le même son de voyelle que « cat » ?",
+"es":"¿Qué palabra tiene el mismo sonido de vocal que « cat »?",
+"correct":"black",
+"wrong":[
+"bed",
+"sit",
+"cup"
+],
+"why":{
+"en":"“cat” and “black” share the sound /æ/. Not the same: “bed” /e/. “sit” /ɪ/. “cup” /ʌ/.",
+"fr":"« cat » et « black » ont le même son /æ/. Pas le même : « bed » /e/. « sit » /ɪ/. « cup » /ʌ/.",
+"es":"« cat » y « black » tienen el mismo sonido /æ/. No es igual: « bed » /e/. « sit » /ɪ/. « cup » /ʌ/."
+},
+"qa":"Which word has the same vowel sound as cat?",
+"aa":"cat. black."
+},
+{
 "id":"en-a1-33",
 "level":"a1",
 "q":"The book is ___ the table.",
@@ -658,6 +1158,26 @@
 },
 "qa":"Complete the sentence. The book is blank the table.",
 "aa":"The book is on the table."
+},
+{
+"id":"en-a1-265",
+"level":"a1",
+"q":"Listen carefully, then answer: When does the shop close?",
+"fr":"Écoute bien, puis réponds : When does the shop close?",
+"es":"Escucha bien y responde: When does the shop close?",
+"correct":"At six o’clock",
+"wrong":[
+"At nine o’clock",
+"At seven o’clock",
+"At noon"
+],
+"why":{
+"en":"You heard: “The shop opens at nine o’clock and closes at six.”",
+"fr":"Tu as entendu : « The shop opens at nine o’clock and closes at six. »",
+"es":"Has oído: « The shop opens at nine o’clock and closes at six. »"
+},
+"qa":"The shop opens at nine o'clock and closes at six. When does the shop close?",
+"aa":"At six o'clock"
 },
 {
 "id":"en-a1-34",
@@ -680,64 +1200,24 @@
 "aa":"This is my sister. Her name is Maria."
 },
 {
-"id":"en-a1-35",
+"id":"en-a1-074",
 "level":"a1",
-"q":"What is the English word for 3?",
-"fr":"Quel est le mot anglais pour 3 ?",
-"es":"¿Cómo se dice 3 en inglés?",
-"correct":"three",
+"q":"What is the English word for 🐘?",
+"fr":"Quel est le mot anglais pour 🐘 ?",
+"es":"¿Cómo se dice 🐘 en inglés?",
+"correct":"elephant",
 "wrong":[
-"tree",
-"thirty",
-"free"
+"snake",
+"giraffe",
+"pig"
 ],
 "why":{
-"en":"3 = three. (A “tree” is an arbre / un árbol; 30 = thirty.)",
-"fr":"3 = three. (« tree » = arbre ; 30 = thirty.)",
-"es":"3 = three. (« tree » = árbol; 30 = thirty.)"
+"en":"🐘 = “elephant”.",
+"fr":"🐘 se dit « elephant » (éléphant).",
+"es":"🐘 se dice « elephant » (elefante)."
 },
-"qa":"What is the English word for this number?",
-"aa":"three"
-},
-{
-"id":"en-a1-36",
-"level":"a1",
-"q":"What is the English word for 7?",
-"fr":"Quel est le mot anglais pour 7 ?",
-"es":"¿Cómo se dice 7 en inglés?",
-"correct":"seven",
-"wrong":[
-"six",
-"seventeen",
-"seventy"
-],
-"why":{
-"en":"7 = seven. 17 = seventeen, 70 = seventy.",
-"fr":"7 = seven. 17 = seventeen, 70 = seventy.",
-"es":"7 = seven. 17 = seventeen, 70 = seventy."
-},
-"qa":"What is the English word for this number?",
-"aa":"seven"
-},
-{
-"id":"en-a1-37",
-"level":"a1",
-"q":"What is the English word for 12?",
-"fr":"Quel est le mot anglais pour 12 ?",
-"es":"¿Cómo se dice 12 en inglés?",
-"correct":"twelve",
-"wrong":[
-"two",
-"ten",
-"twenty"
-],
-"why":{
-"en":"12 = twelve. 20 = twenty.",
-"fr":"12 = twelve. 20 = twenty.",
-"es":"12 = twelve. 20 = twenty."
-},
-"qa":"What is the English word for this number?",
-"aa":"twelve"
+"qa":"What is the English word for this picture?",
+"aa":"It’s an elephant."
 },
 {
 "id":"en-a1-38",
@@ -760,6 +1240,26 @@
 "aa":"Tuesday"
 },
 {
+"id":"en-a1-266",
+"level":"a1",
+"q":"Listen. Which word do you hear?",
+"fr":"Écoute. Quel mot entends-tu ?",
+"es":"Escucha. ¿Qué palabra oyes?",
+"correct":"bad",
+"wrong":[
+"bed",
+"bud",
+"bat"
+],
+"why":{
+"en":"You heard “bad”. “bad” has the open sound /æ/: open your mouth wide. “bed” has /e/.",
+"fr":"Tu as entendu « bad ». « bad » a le son ouvert /æ/ : ouvre grand la bouche. « bed » a /e/.",
+"es":"Has oído « bad ». « bad » tiene el sonido abierto /æ/: abre mucho la boca. « bed » tiene /e/."
+},
+"qa":"bad",
+"aa":"bad"
+},
+{
 "id":"en-a1-39",
 "level":"a1",
 "q":"Which word is a month?",
@@ -778,6 +1278,46 @@
 },
 "qa":"Which word is a month?",
 "aa":"March"
+},
+{
+"id":"en-a1-077",
+"level":"a1",
+"q":"What is the English word for 🦁?",
+"fr":"Quel est le mot anglais pour 🦁 ?",
+"es":"¿Cómo se dice 🦁 en inglés?",
+"correct":"lion",
+"wrong":[
+"butterfly",
+"penguin",
+"sheep"
+],
+"why":{
+"en":"🦁 = “lion”.",
+"fr":"🦁 se dit « lion » (lion).",
+"es":"🦁 se dice « lion » (león)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a lion."
+},
+{
+"id":"en-a1-267",
+"level":"a1",
+"q":"You did not understand what someone said. What do you say?",
+"fr":"Tu n’as pas compris ce que quelqu’un a dit. Que dis-tu ?",
+"es":"No has entendido lo que alguien ha dicho. ¿Qué dices?",
+"correct":"Sorry, can you say that again?",
+"wrong":[
+"Yes, of course.",
+"Goodbye.",
+"I’m fine, thanks."
+],
+"why":{
+"en":"Never be shy to ask: “Sorry, can you say that again?”",
+"fr":"N’aie pas peur de demander : « Sorry, can you say that again? »",
+"es":"No tengas vergüenza de pedirlo: « Sorry, can you say that again? »"
+},
+"qa":"You did not understand what someone said. What do you say?",
+"aa":"Sorry, can you say that again?"
 },
 {
 "id":"en-a1-40",
@@ -820,6 +1360,46 @@
 "aa":"Saturday and Sunday"
 },
 {
+"id":"en-a1-080",
+"level":"a1",
+"q":"What is the English word for 🐯?",
+"fr":"Quel est le mot anglais pour 🐯 ?",
+"es":"¿Cómo se dice 🐯 en inglés?",
+"correct":"tiger",
+"wrong":[
+"bee",
+"owl",
+"chicken"
+],
+"why":{
+"en":"🐯 = “tiger”.",
+"fr":"🐯 se dit « tiger » (tigre).",
+"es":"🐯 se dice « tiger » (tigre)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a tiger."
+},
+{
+"id":"en-a1-268",
+"level":"a1",
+"q":"Which word rhymes with “day”?",
+"fr":"Quel mot rime avec « day » ?",
+"es":"¿Qué palabra rima con « day »?",
+"correct":"play",
+"wrong":[
+"do",
+"dad",
+"door"
+],
+"why":{
+"en":"“day” and “play” rhyme: they end with the same sound /eɪ/. The spelling can be different!",
+"fr":"« day » et « play » riment : ils finissent par le même son /eɪ/. L’orthographe peut être différente !",
+"es":"« day » y « play » riman: acaban con el mismo sonido /eɪ/. ¡La ortografía puede ser distinta!"
+},
+"qa":"Which word rhymes with day?",
+"aa":"day. play."
+},
+{
 "id":"en-a1-42",
 "level":"a1",
 "q":"Which is the first month of the year?",
@@ -838,6 +1418,26 @@
 },
 "qa":"Which is the first month of the year?",
 "aa":"January"
+},
+{
+"id":"en-a1-269",
+"level":"a1",
+"q":"Which word has a different vowel sound?",
+"fr":"Quel mot a un son de voyelle différent ?",
+"es":"¿Qué palabra tiene un sonido de vocal distinto?",
+"correct":"bed",
+"wrong":[
+"bee",
+"tea",
+"key"
+],
+"why":{
+"en":"“bed” is /e/; the others are /iː/.",
+"fr":"« bed » se dit /e/ ; les autres se disent /iː/.",
+"es":"« bed » se dice /e/; las otras se dicen /iː/."
+},
+"qa":"Which word has a different vowel sound? bee, tea, key, bed.",
+"aa":"bee, tea, key, bed."
 },
 {
 "id":"en-a1-43",
@@ -860,6 +1460,26 @@
 "aa":"Your mother and your father are your parents."
 },
 {
+"id":"en-a1-082",
+"level":"a1",
+"q":"What is the English word for 🐵?",
+"fr":"Quel est le mot anglais pour 🐵 ?",
+"es":"¿Cómo se dice 🐵 en inglés?",
+"correct":"monkey",
+"wrong":[
+"mouse",
+"dolphin",
+"duck"
+],
+"why":{
+"en":"🐵 = “monkey”.",
+"fr":"🐵 se dit « monkey » (singe).",
+"es":"🐵 se dice « monkey » (mono)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a monkey."
+},
+{
 "id":"en-a1-44",
 "level":"a1",
 "q":"Your mother's mother is your ___.",
@@ -880,6 +1500,26 @@
 "aa":"Your mother's mother is your grandmother."
 },
 {
+"id":"en-a1-270",
+"level":"a1",
+"q":"Put the words in order: “where / is / the / station”",
+"fr":"Remets les mots dans l’ordre : « where / is / the / station »",
+"es":"Ordena las palabras: « where / is / the / station »",
+"correct":"Where is the station?",
+"wrong":[
+"Where the station is?",
+"Is where the station?",
+"The station where is?"
+],
+"why":{
+"en":"“Where is the station?” In a question the verb “is” comes before the subject.",
+"fr":"« Where is the station? » Dans une question, le verbe « is » vient avant le sujet.",
+"es":"« Where is the station? » En una pregunta el verbo « is » va antes del sujeto."
+},
+"qa":"Put the words in order. where , is , the , station",
+"aa":"Where is the station?"
+},
+{
 "id":"en-a1-45",
 "level":"a1",
 "q":"I ___ breakfast at eight o’clock.",
@@ -898,6 +1538,46 @@
 },
 "qa":"Complete the sentence. I blank breakfast at eight o'clock.",
 "aa":"I have breakfast at eight o'clock."
+},
+{
+"id":"en-a1-084",
+"level":"a1",
+"q":"What is the English word for 🐸?",
+"fr":"Quel est le mot anglais pour 🐸 ?",
+"es":"¿Cómo se dice 🐸 en inglés?",
+"correct":"frog",
+"wrong":[
+"wolf",
+"horse",
+"fish"
+],
+"why":{
+"en":"🐸 = “frog”.",
+"fr":"🐸 se dit « frog » (grenouille).",
+"es":"🐸 se dice « frog » (rana)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a frog."
+},
+{
+"id":"en-a1-271",
+"level":"a1",
+"q":"Which word sounds the same as “two”?",
+"fr":"Quel mot se prononce comme « two » ?",
+"es":"¿Qué palabra suena igual que « two »?",
+"correct":"too",
+"wrong":[
+"toe",
+"tie",
+"tea"
+],
+"why":{
+"en":"“two” and “too” sound the same (/tuː/) but are spelled differently: “two” is the number 2, “too” means also or too much.",
+"fr":"« two » et « too » se prononcent pareil (/tuː/) mais s’écrivent différemment : « two » = le chiffre 2, « too » = aussi ou trop.",
+"es":"« two » y « too » suenan igual (/tuː/) pero se escriben distinto: « two » = el número 2, « too » = también o demasiado."
+},
+"qa":"Which word sounds the same as two?",
+"aa":"two. too."
 },
 {
 "id":"en-a1-46",
@@ -940,6 +1620,46 @@
 "aa":"small"
 },
 {
+"id":"en-a1-088",
+"level":"a1",
+"q":"What is the English word for 🐢?",
+"fr":"Quel est le mot anglais pour 🐢 ?",
+"es":"¿Cómo se dice 🐢 en inglés?",
+"correct":"turtle",
+"wrong":[
+"giraffe",
+"pig",
+"rabbit"
+],
+"why":{
+"en":"🐢 = “turtle”.",
+"fr":"🐢 se dit « turtle » (tortue).",
+"es":"🐢 se dice « turtle » (tortuga)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a turtle."
+},
+{
+"id":"en-a1-272",
+"level":"a1",
+"q":"Which word has the same vowel sound as “sun”?",
+"fr":"Quel mot a le même son de voyelle que « sun » ?",
+"es":"¿Qué palabra tiene el mismo sonido de vocal que « sun »?",
+"correct":"bus",
+"wrong":[
+"book",
+"pen",
+"pie"
+],
+"why":{
+"en":"“sun” and “bus” share the sound /ʌ/. Not the same: “book” /ʊ/. “pen” /e/. “pie” /aɪ/.",
+"fr":"« sun » et « bus » ont le même son /ʌ/. Pas le même : « book » /ʊ/. « pen » /e/. « pie » /aɪ/.",
+"es":"« sun » y « bus » tienen el mismo sonido /ʌ/. No es igual: « book » /ʊ/. « pen » /e/. « pie » /aɪ/."
+},
+"qa":"Which word has the same vowel sound as sun?",
+"aa":"sun. bus."
+},
+{
 "id":"en-a1-48",
 "level":"a1",
 "q":"What is the opposite of “hot”?",
@@ -958,6 +1678,46 @@
 },
 "qa":"What is the opposite of hot?",
 "aa":"cold"
+},
+{
+"id":"en-a1-273",
+"level":"a1",
+"q":"Which letter is silent in “write”?",
+"fr":"Quelle lettre ne se prononce pas dans « write » ?",
+"es":"¿Qué letra no se pronuncia en « write »?",
+"correct":"w",
+"wrong":[
+"r",
+"i",
+"t"
+],
+"why":{
+"en":"In “write” the “w” is silent: we say “rite”.",
+"fr":"Dans « write », le « w » ne se prononce pas : on dit “rite”.",
+"es":"En « write », la « w » no se pronuncia: se dice “rite”."
+},
+"qa":"Which letter is silent in write? write.",
+"aa":"write."
+},
+{
+"id":"en-a1-090",
+"level":"a1",
+"q":"What is the English word for 🐍?",
+"fr":"Quel est le mot anglais pour 🐍 ?",
+"es":"¿Cómo se dice 🐍 en inglés?",
+"correct":"snake",
+"wrong":[
+"penguin",
+"sheep",
+"bear"
+],
+"why":{
+"en":"🐍 = “snake”.",
+"fr":"🐍 se dit « snake » (serpent).",
+"es":"🐍 se dice « snake » (serpiente)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a snake."
 },
 {
 "id":"en-a1-49",
@@ -1000,24 +1760,44 @@
 "aa":"I speak English."
 },
 {
-"id":"en-a1-051",
+"id":"en-a1-274",
 "level":"a1",
-"q":"What is the English word for 🐴?",
-"fr":"Quel est le mot anglais pour 🐴 ?",
-"es":"¿Cómo se dice 🐴 en inglés?",
-"correct":"horse",
+"q":"Listen. Which word do you hear?",
+"fr":"Écoute. Quel mot entends-tu ?",
+"es":"Escucha. ¿Qué palabra oyes?",
+"correct":"pen",
 "wrong":[
-"rabbit",
-"monkey",
-"bee"
+"pan",
+"pin",
+"ten"
 ],
 "why":{
-"en":"🐴 = “horse”.",
-"fr":"🐴 se dit « horse » (cheval).",
-"es":"🐴 se dice « horse » (caballo)."
+"en":"You heard “pen”. “pen” = /e/, “pan” = /æ/, “pin” = /ɪ/. Three different vowels!",
+"fr":"Tu as entendu « pen ». « pen » = /e/, « pan » = /æ/, « pin » = /ɪ/. Trois voyelles différentes !",
+"es":"Has oído « pen ». « pen » = /e/, « pan » = /æ/, « pin » = /ɪ/. ¡Tres vocales distintas!"
+},
+"qa":"pen",
+"aa":"pen"
+},
+{
+"id":"en-a1-091",
+"level":"a1",
+"q":"What is the English word for 🦋?",
+"fr":"Quel est le mot anglais pour 🦋 ?",
+"es":"¿Cómo se dice 🦋 en inglés?",
+"correct":"butterfly",
+"wrong":[
+"owl",
+"chicken",
+"elephant"
+],
+"why":{
+"en":"🦋 = “butterfly”.",
+"fr":"🦋 se dit « butterfly » (papillon).",
+"es":"🦋 se dice « butterfly » (mariposa)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"horse"
+"aa":"It’s a butterfly."
 },
 {
 "id":"en-a1-052",
@@ -1040,6 +1820,26 @@
 "aa":"My brother is twelve years old."
 },
 {
+"id":"en-a1-275",
+"level":"a1",
+"q":"You are lost. You look for the station. What do you say?",
+"fr":"Tu es perdu(e). Tu cherches la gare. Que dis-tu ?",
+"es":"Estás perdido/a. Buscas la estación. ¿Qué dices?",
+"correct":"Excuse me, where is the station?",
+"wrong":[
+"Excuse me, what is the station?",
+"Excuse me, who is the station?",
+"Excuse me, when is the station?"
+],
+"why":{
+"en":"“Where” asks about a place.",
+"fr":"« Where » demande un lieu.",
+"es":"« Where » pregunta por un lugar."
+},
+"qa":"You are lost. You look for the station. What do you say?",
+"aa":"Excuse me, where is the station?"
+},
+{
 "id":"en-a1-053",
 "level":"a1",
 "q":"Someone says: “What’s your favourite colour?” What do you answer?",
@@ -1058,6 +1858,26 @@
 },
 "qa":"Someone says: What's your favourite colour? What do you answer?",
 "aa":"My favourite colour is blue."
+},
+{
+"id":"en-a1-094",
+"level":"a1",
+"q":"What is the English word for 🍌?",
+"fr":"Quel est le mot anglais pour 🍌 ?",
+"es":"¿Cómo se dice 🍌 en inglés?",
+"correct":"banana",
+"wrong":[
+"watermelon",
+"cheese",
+"cake"
+],
+"why":{
+"en":"🍌 = “banana”.",
+"fr":"🍌 se dit « banana » (banane).",
+"es":"🍌 se dice « banana » (plátano)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a banana."
 },
 {
 "id":"en-a1-054",
@@ -1080,6 +1900,26 @@
 "aa":"sad"
 },
 {
+"id":"en-a1-276",
+"level":"a1",
+"q":"Listen carefully, then answer: What is the sister’s job?",
+"fr":"Écoute bien, puis réponds : What is the sister’s job?",
+"es":"Escucha bien y responde: What is the sister’s job?",
+"correct":"She is a doctor.",
+"wrong":[
+"She is a teacher.",
+"She is a student.",
+"She is a nurse."
+],
+"why":{
+"en":"You heard: “I have two brothers and one sister. My sister is a doctor.”",
+"fr":"Tu as entendu : « I have two brothers and one sister. My sister is a doctor. »",
+"es":"Has oído: « I have two brothers and one sister. My sister is a doctor. »"
+},
+"qa":"I have two brothers and one sister. My sister is a doctor. What is the sister's job?",
+"aa":"She is a doctor."
+},
+{
 "id":"en-a1-055",
 "level":"a1",
 "q":"What is two plus three?",
@@ -1098,6 +1938,46 @@
 },
 "qa":"What is two plus three?",
 "aa":"five"
+},
+{
+"id":"en-a1-096",
+"level":"a1",
+"q":"What is the English word for 5?",
+"fr":"Quel est le mot anglais pour 5 ?",
+"es":"¿Cómo se dice 5 en inglés?",
+"correct":"five",
+"wrong":[
+"four",
+"fifteen",
+"fifty"
+],
+"why":{
+"en":"5 = five. 15 = fifteen, 50 = fifty.",
+"fr":"5 = five. 15 = fifteen, 50 = fifty.",
+"es":"5 = five. 15 = fifteen, 50 = fifty."
+},
+"qa":"What is the English word for this number?",
+"aa":"It’s five."
+},
+{
+"id":"en-a1-277",
+"level":"a1",
+"q":"Which word is stressed on the SECOND syllable?",
+"fr":"Quel mot est accentué sur la DEUXIÈME syllabe ?",
+"es":"¿Qué palabra se acentúa en la SEGUNDA sílaba?",
+"correct":"police",
+"wrong":[
+"table",
+"window",
+"happy"
+],
+"why":{
+"en":"We say po-LICE: the loud, long part is the second one. The others are TA-ble, WIN-dow, HAP-py.",
+"fr":"On dit po-LICE : la partie forte et longue est la deuxième. Les autres sont TA-ble, WIN-dow, HAP-py.",
+"es":"Se dice po-LICE: la parte fuerte y larga es la segunda. Las otras son TA-ble, WIN-dow, HAP-py."
+},
+"qa":"Which word is stressed on the second syllable? police, table, window, happy.",
+"aa":"police."
 },
 {
 "id":"en-a1-056",
@@ -1140,24 +2020,44 @@
 "aa":"I am a student."
 },
 {
-"id":"en-a1-058",
+"id":"en-a1-278",
 "level":"a1",
-"q":"What is the English word for 🐷?",
-"fr":"Quel est le mot anglais pour 🐷 ?",
-"es":"¿Cómo se dice 🐷 en inglés?",
-"correct":"pig",
+"q":"What does “What’s up?” mean?",
+"fr":"Que veut dire « What’s up? » ?",
+"es":"¿Qué significa « What’s up? »?",
+"correct":"How are things?",
 "wrong":[
-"bear",
-"frog",
-"mouse"
+"What is above?",
+"Where is it?",
+"Who is there?"
 ],
 "why":{
-"en":"🐷 = “pig”.",
-"fr":"🐷 se dit « pig » (cochon).",
-"es":"🐷 se dice « pig » (cerdo)."
+"en":"“What’s up?” is an informal “how are you?”.",
+"fr":"« What’s up? » est un « comment ça va ? » familier.",
+"es":"« What’s up? » es un « ¿qué tal? » informal."
+},
+"qa":"What does What's up? mean?",
+"aa":"How are things?"
+},
+{
+"id":"en-a1-098",
+"level":"a1",
+"q":"What is the English word for 🍊?",
+"fr":"Quel est le mot anglais pour 🍊 ?",
+"es":"¿Cómo se dice 🍊 en inglés?",
+"correct":"orange",
+"wrong":[
+"lemon",
+"egg",
+"cookie"
+],
+"why":{
+"en":"🍊 = “orange”.",
+"fr":"🍊 se dit « orange » (orange).",
+"es":"🍊 se dice « orange » (naranja)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"pig"
+"aa":"It’s an orange."
 },
 {
 "id":"en-a1-059",
@@ -1180,44 +2080,24 @@
 "aa":"We are at school today."
 },
 {
-"id":"en-a1-060",
+"id":"en-a1-279",
 "level":"a1",
-"q":"What is the English word for 🐑?",
-"fr":"Quel est le mot anglais pour 🐑 ?",
-"es":"¿Cómo se dice 🐑 en inglés?",
-"correct":"sheep",
+"q":"Which word has the same vowel sound as “bed”?",
+"fr":"Quel mot a le même son de voyelle que « bed » ?",
+"es":"¿Qué palabra tiene el mismo sonido de vocal que « bed »?",
+"correct":"red",
 "wrong":[
-"elephant",
-"turtle",
-"wolf"
+"bad",
+"bid",
+"bud"
 ],
 "why":{
-"en":"🐑 = “sheep”.",
-"fr":"🐑 se dit « sheep » (mouton).",
-"es":"🐑 se dice « sheep » (oveja)."
+"en":"“bed” and “red” share the sound /e/. Not the same: “bad” /æ/. “bid” /ɪ/. “bud” /ʌ/.",
+"fr":"« bed » et « red » ont le même son /e/. Pas le même : « bad » /æ/. « bid » /ɪ/. « bud » /ʌ/.",
+"es":"« bed » y « red » tienen el mismo sonido /e/. No es igual: « bad » /æ/. « bid » /ɪ/. « bud » /ʌ/."
 },
-"qa":"What is the English word for this picture?",
-"aa":"sheep"
-},
-{
-"id":"en-a1-061",
-"level":"a1",
-"q":"What is the English word for 🐔?",
-"fr":"Quel est le mot anglais pour 🐔 ?",
-"es":"¿Cómo se dice 🐔 en inglés?",
-"correct":"chicken",
-"wrong":[
-"lion",
-"snake",
-"giraffe"
-],
-"why":{
-"en":"🐔 = “chicken”.",
-"fr":"🐔 se dit « chicken » (poule).",
-"es":"🐔 se dice « chicken » (gallina)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"chicken"
+"qa":"Which word has the same vowel sound as bed?",
+"aa":"bed. red."
 },
 {
 "id":"en-a1-062",
@@ -1240,24 +2120,24 @@
 "aa":"I am very tired."
 },
 {
-"id":"en-a1-063",
+"id":"en-a1-100",
 "level":"a1",
-"q":"What is the English word for 🦆?",
-"fr":"Quel est le mot anglais pour 🦆 ?",
-"es":"¿Cómo se dice 🦆 en inglés?",
-"correct":"duck",
+"q":"What is the English word for 🍇?",
+"fr":"Quel est le mot anglais pour 🍇 ?",
+"es":"¿Cómo se dice 🍇 en inglés?",
+"correct":"grapes",
 "wrong":[
-"tiger",
-"butterfly",
-"penguin"
+"carrot",
+"pizza",
+"chocolate"
 ],
 "why":{
-"en":"🦆 = “duck”.",
-"fr":"🦆 se dit « duck » (canard).",
-"es":"🦆 se dice « duck » (pato)."
+"en":"🍇 = “grapes”.",
+"fr":"🍇 se dit « grapes » (raisin).",
+"es":"🍇 se dice « grapes » (uvas)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"duck"
+"aa":"They’re grapes."
 },
 {
 "id":"en-a1-064",
@@ -1280,6 +2160,26 @@
 "aa":"I live in Paris."
 },
 {
+"id":"en-a1-280",
+"level":"a1",
+"q":"Listen. Which word do you hear?",
+"fr":"Écoute. Quel mot entends-tu ?",
+"es":"Escucha. ¿Qué palabra oyes?",
+"correct":"cup",
+"wrong":[
+"cap",
+"cop",
+"cut"
+],
+"why":{
+"en":"You heard “cup”. “cup” has the short sound /ʌ/, like “sun”. “cap” has /æ/.",
+"fr":"Tu as entendu « cup ». « cup » a le son court /ʌ/, comme « sun ». « cap » a /æ/.",
+"es":"Has oído « cup ». « cup » tiene el sonido corto /ʌ/, como « sun ». « cap » tiene /æ/."
+},
+"qa":"cup",
+"aa":"cup"
+},
+{
 "id":"en-a1-065",
 "level":"a1",
 "q":"What is ten minus four?",
@@ -1298,6 +2198,46 @@
 },
 "qa":"What is ten minus four?",
 "aa":"six"
+},
+{
+"id":"en-a1-102",
+"level":"a1",
+"q":"What is the English word for 🍓?",
+"fr":"Quel est le mot anglais pour 🍓 ?",
+"es":"¿Cómo se dice 🍓 en inglés?",
+"correct":"strawberry",
+"wrong":[
+"potato",
+"hamburger",
+"ice cream"
+],
+"why":{
+"en":"🍓 = “strawberry”.",
+"fr":"🍓 se dit « strawberry » (fraise).",
+"es":"🍓 se dice « strawberry » (fresa)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a strawberry."
+},
+{
+"id":"en-a1-281",
+"level":"a1",
+"q":"You want to know the price of a T-shirt. What do you say?",
+"fr":"Tu veux connaître le prix d’un T-shirt. Que dis-tu ?",
+"es":"Quieres saber el precio de una camiseta. ¿Qué dices?",
+"correct":"How much is this T-shirt?",
+"wrong":[
+"How many is this T-shirt?",
+"How long is this T-shirt?",
+"What much is this T-shirt?"
+],
+"why":{
+"en":"“How much” is for prices.",
+"fr":"« How much » sert pour les prix.",
+"es":"« How much » se usa para los precios."
+},
+"qa":"You want to know the price of a T-shirt. What do you say?",
+"aa":"How much is this T-shirt?"
 },
 {
 "id":"en-a1-066",
@@ -1320,26 +2260,6 @@
 "aa":"The dogs are in the garden."
 },
 {
-"id":"en-a1-067",
-"level":"a1",
-"q":"What is the English word for 🐟?",
-"fr":"Quel est le mot anglais pour 🐟 ?",
-"es":"¿Cómo se dice 🐟 en inglés?",
-"correct":"fish",
-"wrong":[
-"monkey",
-"bee",
-"owl"
-],
-"why":{
-"en":"🐟 = “fish”.",
-"fr":"🐟 se dit « fish » (poisson).",
-"es":"🐟 se dice « fish » (pez)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"fish"
-},
-{
 "id":"en-a1-068",
 "level":"a1",
 "q":"What is the opposite of “fast”?",
@@ -1360,24 +2280,44 @@
 "aa":"slow"
 },
 {
-"id":"en-a1-069",
+"id":"en-a1-282",
 "level":"a1",
-"q":"What is the English word for 🐰?",
-"fr":"Quel est le mot anglais pour 🐰 ?",
-"es":"¿Cómo se dice 🐰 en inglés?",
-"correct":"rabbit",
+"q":"Which word rhymes with “tree”?",
+"fr":"Quel mot rime avec « tree » ?",
+"es":"¿Qué palabra rima con « tree »?",
+"correct":"key",
 "wrong":[
-"frog",
-"mouse",
-"dolphin"
+"tray",
+"try",
+"toe"
 ],
 "why":{
-"en":"🐰 = “rabbit”.",
-"fr":"🐰 se dit « rabbit » (lapin).",
-"es":"🐰 se dice « rabbit » (conejo)."
+"en":"“tree” and “key” rhyme: they end with the same sound /iː/. The spelling can be different!",
+"fr":"« tree » et « key » riment : ils finissent par le même son /iː/. L’orthographe peut être différente !",
+"es":"« tree » y « key » riman: acaban con el mismo sonido /iː/. ¡La ortografía puede ser distinta!"
+},
+"qa":"Which word rhymes with tree?",
+"aa":"tree. key."
+},
+{
+"id":"en-a1-104",
+"level":"a1",
+"q":"What is the English word for 🍒?",
+"fr":"Quel est le mot anglais pour 🍒 ?",
+"es":"¿Cómo se dice 🍒 en inglés?",
+"correct":"cherries",
+"wrong":[
+"tomato",
+"spaghetti",
+"croissant"
+],
+"why":{
+"en":"🍒 = “cherries”.",
+"fr":"🍒 se dit « cherries » (cerises).",
+"es":"🍒 se dice « cherries » (cerezas)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"rabbit"
+"aa":"They’re cherries."
 },
 {
 "id":"en-a1-070",
@@ -1400,24 +2340,24 @@
 "aa":"My mother has a nice car."
 },
 {
-"id":"en-a1-071",
+"id":"en-a1-283",
 "level":"a1",
-"q":"What is the English word for 🐻?",
-"fr":"Quel est le mot anglais pour 🐻 ?",
-"es":"¿Cómo se dice 🐻 en inglés?",
-"correct":"bear",
+"q":"Which word has a different vowel sound?",
+"fr":"Quel mot a un son de voyelle différent ?",
+"es":"¿Qué palabra tiene un sonido de vocal distinto?",
+"correct":"book",
 "wrong":[
-"turtle",
-"wolf",
-"horse"
+"moon",
+"blue",
+"food"
 ],
 "why":{
-"en":"🐻 = “bear”.",
-"fr":"🐻 se dit « bear » (ours).",
-"es":"🐻 se dice « bear » (oso)."
+"en":"“book” is /ʊ/; the others are /uː/.",
+"fr":"« book » se dit /ʊ/ ; les autres se disent /uː/.",
+"es":"« book » se dice /ʊ/; las otras se dicen /uː/."
 },
-"qa":"What is the English word for this picture?",
-"aa":"bear"
+"qa":"Which word has a different vowel sound? moon, blue, food, book.",
+"aa":"moon, blue, food, book."
 },
 {
 "id":"en-a1-072",
@@ -1440,6 +2380,26 @@
 "aa":"We have a big family."
 },
 {
+"id":"en-a1-107",
+"level":"a1",
+"q":"What is the English word for 9?",
+"fr":"Quel est le mot anglais pour 9 ?",
+"es":"¿Cómo se dice 9 en inglés?",
+"correct":"nine",
+"wrong":[
+"five",
+"ninety",
+"nineteen"
+],
+"why":{
+"en":"9 = nine. 19 = nineteen, 90 = ninety.",
+"fr":"9 = nine. 19 = nineteen, 90 = ninety.",
+"es":"9 = nine. 19 = nineteen, 90 = ninety."
+},
+"qa":"What is the English word for this number?",
+"aa":"It’s nine."
+},
+{
 "id":"en-a1-073",
 "level":"a1",
 "q":"“My name is Sara. I am ten. I have a brother and a dog. My brother’s name is Leo.” What is the name of Sara’s brother?",
@@ -1460,24 +2420,24 @@
 "aa":"Leo."
 },
 {
-"id":"en-a1-074",
+"id":"en-a1-284",
 "level":"a1",
-"q":"What is the English word for 🐘?",
-"fr":"Quel est le mot anglais pour 🐘 ?",
-"es":"¿Cómo se dice 🐘 en inglés?",
-"correct":"elephant",
+"q":"Put the words in order: “I / a / have / sister”",
+"fr":"Remets les mots dans l’ordre : « I / a / have / sister »",
+"es":"Ordena las palabras: « I / a / have / sister »",
+"correct":"I have a sister.",
 "wrong":[
-"snake",
-"giraffe",
-"pig"
+"I a have sister.",
+"Have I a sister.",
+"I sister have a."
 ],
 "why":{
-"en":"🐘 = “elephant”.",
-"fr":"🐘 se dit « elephant » (éléphant).",
-"es":"🐘 se dice « elephant » (elefante)."
+"en":"“I have a sister.” English keeps the order: who, what they do, what.",
+"fr":"« I have a sister. » L’anglais garde l’ordre : qui, ce qu’il fait, quoi.",
+"es":"« I have a sister. » El inglés mantiene el orden: quién, qué hace, qué."
 },
-"qa":"What is the English word for this picture?",
-"aa":"elephant"
+"qa":"Put the words in order. I , a , have , sister",
+"aa":"I have a sister."
 },
 {
 "id":"en-a1-075",
@@ -1500,6 +2460,46 @@
 "aa":"Yes, I can."
 },
 {
+"id":"en-a1-108",
+"level":"a1",
+"q":"What is the English word for 🍍?",
+"fr":"Quel est le mot anglais pour 🍍 ?",
+"es":"¿Cómo se dice 🍍 en inglés?",
+"correct":"pineapple",
+"wrong":[
+"corn",
+"cake",
+"mushroom"
+],
+"why":{
+"en":"🍍 = “pineapple”.",
+"fr":"🍍 se dit « pineapple » (ananas).",
+"es":"🍍 se dice « pineapple » (piña)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a pineapple."
+},
+{
+"id":"en-a1-285",
+"level":"a1",
+"q":"Which word sounds the same as “eye”?",
+"fr":"Quel mot se prononce comme « eye » ?",
+"es":"¿Qué palabra suena igual que « eye »?",
+"correct":"I",
+"wrong":[
+"it",
+"ill",
+"ice"
+],
+"why":{
+"en":"“eye” and “I” sound the same (/aɪ/) but are spelled differently: “eye” is a part of the face, “I” is me.",
+"fr":"« eye » et « I » se prononcent pareil (/aɪ/) mais s’écrivent différemment : « eye » = l’œil, « I » = je.",
+"es":"« eye » y « I » suenan igual (/aɪ/) pero se escriben distinto: « eye » = el ojo, « I » = yo."
+},
+"qa":"Which word sounds the same as eye?",
+"aa":"eye. I."
+},
+{
 "id":"en-a1-076",
 "level":"a1",
 "q":"What is three times three?",
@@ -1518,26 +2518,6 @@
 },
 "qa":"What is three times three?",
 "aa":"nine"
-},
-{
-"id":"en-a1-077",
-"level":"a1",
-"q":"What is the English word for 🦁?",
-"fr":"Quel est le mot anglais pour 🦁 ?",
-"es":"¿Cómo se dice 🦁 en inglés?",
-"correct":"lion",
-"wrong":[
-"butterfly",
-"penguin",
-"sheep"
-],
-"why":{
-"en":"🦁 = “lion”.",
-"fr":"🦁 se dit « lion » (lion).",
-"es":"🦁 se dice « lion » (león)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"lion"
 },
 {
 "id":"en-a1-078",
@@ -1560,6 +2540,46 @@
 "aa":"It is an orange."
 },
 {
+"id":"en-a1-110",
+"level":"a1",
+"q":"What is the English word for 🍉?",
+"fr":"Quel est le mot anglais pour 🍉 ?",
+"es":"¿Cómo se dice 🍉 en inglés?",
+"correct":"watermelon",
+"wrong":[
+"cheese",
+"cookie",
+"peach"
+],
+"why":{
+"en":"🍉 = “watermelon”.",
+"fr":"🍉 se dit « watermelon » (pastèque).",
+"es":"🍉 se dice « watermelon » (sandía)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a watermelon."
+},
+{
+"id":"en-a1-286",
+"level":"a1",
+"q":"Which word has the same vowel sound as “my”?",
+"fr":"Quel mot a le même son de voyelle que « my » ?",
+"es":"¿Qué palabra tiene el mismo sonido de vocal que « my »?",
+"correct":"night",
+"wrong":[
+"knee",
+"now",
+"bus"
+],
+"why":{
+"en":"“my” and “night” share the sound /aɪ/. Not the same: “knee” /iː/. “now” /aʊ/. “bus” /ʌ/.",
+"fr":"« my » et « night » ont le même son /aɪ/. Pas le même : « knee » /iː/. « now » /aʊ/. « bus » /ʌ/.",
+"es":"« my » y « night » tienen el mismo sonido /aɪ/. No es igual: « knee » /iː/. « now » /aʊ/. « bus » /ʌ/."
+},
+"qa":"Which word has the same vowel sound as my?",
+"aa":"my. night."
+},
+{
 "id":"en-a1-079",
 "level":"a1",
 "q":"Which sentence is correct?",
@@ -1580,24 +2600,24 @@
 "aa":"She has two sisters."
 },
 {
-"id":"en-a1-080",
+"id":"en-a1-287",
 "level":"a1",
-"q":"What is the English word for 🐯?",
-"fr":"Quel est le mot anglais pour 🐯 ?",
-"es":"¿Cómo se dice 🐯 en inglés?",
-"correct":"tiger",
+"q":"Which letter is silent in “hour”?",
+"fr":"Quelle lettre ne se prononce pas dans « hour » ?",
+"es":"¿Qué letra no se pronuncia en « hour »?",
+"correct":"h",
 "wrong":[
-"bee",
-"owl",
-"chicken"
+"o",
+"u",
+"r"
 ],
 "why":{
-"en":"🐯 = “tiger”.",
-"fr":"🐯 se dit « tiger » (tigre).",
-"es":"🐯 se dice « tiger » (tigre)."
+"en":"In “hour” the “h” is silent: we say “our”.",
+"fr":"Dans « hour », le « h » ne se prononce pas : on dit “our”.",
+"es":"En « hour », la « h » no se pronuncia: se dice “our”."
 },
-"qa":"What is the English word for this picture?",
-"aa":"tiger"
+"qa":"Which letter is silent in hour? hour.",
+"aa":"hour."
 },
 {
 "id":"en-a1-081",
@@ -1620,24 +2640,24 @@
 "aa":"She has a new bike."
 },
 {
-"id":"en-a1-082",
+"id":"en-a1-112",
 "level":"a1",
-"q":"What is the English word for 🐵?",
-"fr":"Quel est le mot anglais pour 🐵 ?",
-"es":"¿Cómo se dice 🐵 en inglés?",
-"correct":"monkey",
+"q":"What is the English word for 🍋?",
+"fr":"Quel est le mot anglais pour 🍋 ?",
+"es":"¿Cómo se dice 🍋 en inglés?",
+"correct":"lemon",
 "wrong":[
-"mouse",
-"dolphin",
-"duck"
+"egg",
+"chocolate",
+"banana"
 ],
 "why":{
-"en":"🐵 = “monkey”.",
-"fr":"🐵 se dit « monkey » (singe).",
-"es":"🐵 se dice « monkey » (mono)."
+"en":"🍋 = “lemon”.",
+"fr":"🍋 se dit « lemon » (citron).",
+"es":"🍋 se dice « lemon » (limón)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"monkey"
+"aa":"It’s a lemon."
 },
 {
 "id":"en-a1-083",
@@ -1660,24 +2680,24 @@
 "aa":"empty"
 },
 {
-"id":"en-a1-084",
+"id":"en-a1-288",
 "level":"a1",
-"q":"What is the English word for 🐸?",
-"fr":"Quel est le mot anglais pour 🐸 ?",
-"es":"¿Cómo se dice 🐸 en inglés?",
-"correct":"frog",
+"q":"Listen carefully, then answer: When does the speaker go to the dentist?",
+"fr":"Écoute bien, puis réponds : When does the speaker go to the dentist?",
+"es":"Escucha bien y responde: When does the speaker go to the dentist?",
+"correct":"On Wednesday",
 "wrong":[
-"wolf",
-"horse",
-"fish"
+"On Monday",
+"On Tuesday",
+"On Thursday"
 ],
 "why":{
-"en":"🐸 = “frog”.",
-"fr":"🐸 se dit « frog » (grenouille).",
-"es":"🐸 se dice « frog » (rana)."
+"en":"You heard: “Today is Monday. Tomorrow is Tuesday. On Wednesday I go to the dentist.”",
+"fr":"Tu as entendu : « Today is Monday. Tomorrow is Tuesday. On Wednesday I go to the dentist. »",
+"es":"Has oído: « Today is Monday. Tomorrow is Tuesday. On Wednesday I go to the dentist. »"
 },
-"qa":"What is the English word for this picture?",
-"aa":"frog"
+"qa":"Today is Monday. Tomorrow is Tuesday. On Wednesday I go to the dentist. When does the speaker go to the dentist?",
+"aa":"On Wednesday"
 },
 {
 "id":"en-a1-085",
@@ -1698,6 +2718,46 @@
 },
 "qa":"Complete the sentence. I have three blank .",
 "aa":"I have three brothers."
+},
+{
+"id":"en-a1-115",
+"level":"a1",
+"q":"What is the English word for 🥕?",
+"fr":"Quel est le mot anglais pour 🥕 ?",
+"es":"¿Cómo se dice 🥕 en inglés?",
+"correct":"carrot",
+"wrong":[
+"pizza",
+"ice cream",
+"orange"
+],
+"why":{
+"en":"🥕 = “carrot”.",
+"fr":"🥕 se dit « carrot » (carotte).",
+"es":"🥕 se dice « carrot » (zanahoria)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a carrot."
+},
+{
+"id":"en-a1-289",
+"level":"a1",
+"q":"Listen. Which word do you hear?",
+"fr":"Écoute. Quel mot entends-tu ?",
+"es":"Escucha. ¿Qué palabra oyes?",
+"correct":"full",
+"wrong":[
+"fool",
+"fall",
+"feel"
+],
+"why":{
+"en":"You heard “full”. “full” has a short /ʊ/; “fool” has a long /uː/.",
+"fr":"Tu as entendu « full ». « full » a un /ʊ/ court ; « fool » a un /uː/ long.",
+"es":"Has oído « full ». « full » tiene un /ʊ/ corto; « fool » uno /uː/ largo."
+},
+"qa":"full",
+"aa":"full"
 },
 {
 "id":"en-a1-086",
@@ -1740,24 +2800,44 @@
 "aa":"twenty"
 },
 {
-"id":"en-a1-088",
+"id":"en-a1-118",
 "level":"a1",
-"q":"What is the English word for 🐢?",
-"fr":"Quel est le mot anglais pour 🐢 ?",
-"es":"¿Cómo se dice 🐢 en inglés?",
-"correct":"turtle",
+"q":"What is the English word for 15?",
+"fr":"Quel est le mot anglais pour 15 ?",
+"es":"¿Cómo se dice 15 en inglés?",
+"correct":"fifteen",
 "wrong":[
-"giraffe",
-"pig",
-"rabbit"
+"fifty",
+"five",
+"fourteen"
 ],
 "why":{
-"en":"🐢 = “turtle”.",
-"fr":"🐢 se dit « turtle » (tortue).",
-"es":"🐢 se dice « turtle » (tortuga)."
+"en":"15 = fifteen. 50 = fifty.",
+"fr":"15 = fifteen. 50 = fifty.",
+"es":"15 = fifteen. 50 = fifty."
 },
-"qa":"What is the English word for this picture?",
-"aa":"turtle"
+"qa":"What is the English word for this number?",
+"aa":"It’s fifteen."
+},
+{
+"id":"en-a1-290",
+"level":"a1",
+"q":"A friend asks: “How are you?” What do you say?",
+"fr":"Un ami te demande : « How are you ? » Que dis-tu ?",
+"es":"Un amigo te pregunta: « How are you? » ¿Qué dices?",
+"correct":"I’m fine, thank you. And you?",
+"wrong":[
+"I’m fine, how old?",
+"My name is fine.",
+"It’s two o’clock."
+],
+"why":{
+"en":"Answer, then give the question back: “And you?”",
+"fr":"Réponds, puis renvoie la question : « And you? »",
+"es":"Responde y devuelve la pregunta: « And you? »"
+},
+"qa":"A friend asks: How are you? What do you say?",
+"aa":"I'm fine, thank you. And you?"
 },
 {
 "id":"en-a1-089",
@@ -1780,44 +2860,24 @@
 "aa":"There are two women in the room."
 },
 {
-"id":"en-a1-090",
+"id":"en-a1-291",
 "level":"a1",
-"q":"What is the English word for 🐍?",
-"fr":"Quel est le mot anglais pour 🐍 ?",
-"es":"¿Cómo se dice 🐍 en inglés?",
-"correct":"snake",
+"q":"Which word has the same vowel sound as “day”?",
+"fr":"Quel mot a le même son de voyelle que « day » ?",
+"es":"¿Qué palabra tiene el mismo sonido de vocal que « day »?",
+"correct":"late",
 "wrong":[
-"penguin",
-"sheep",
-"bear"
+"cat",
+"see",
+"pie"
 ],
 "why":{
-"en":"🐍 = “snake”.",
-"fr":"🐍 se dit « snake » (serpent).",
-"es":"🐍 se dice « snake » (serpiente)."
+"en":"“day” and “late” share the sound /eɪ/. Not the same: “cat” /æ/. “see” /iː/. “pie” /aɪ/.",
+"fr":"« day » et « late » ont le même son /eɪ/. Pas le même : « cat » /æ/. « see » /iː/. « pie » /aɪ/.",
+"es":"« day » y « late » tienen el mismo sonido /eɪ/. No es igual: « cat » /æ/. « see » /iː/. « pie » /aɪ/."
 },
-"qa":"What is the English word for this picture?",
-"aa":"snake"
-},
-{
-"id":"en-a1-091",
-"level":"a1",
-"q":"What is the English word for 🦋?",
-"fr":"Quel est le mot anglais pour 🦋 ?",
-"es":"¿Cómo se dice 🦋 en inglés?",
-"correct":"butterfly",
-"wrong":[
-"owl",
-"chicken",
-"elephant"
-],
-"why":{
-"en":"🦋 = “butterfly”.",
-"fr":"🦋 se dit « butterfly » (papillon).",
-"es":"🦋 se dice « butterfly » (mariposa)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"butterfly"
+"qa":"Which word has the same vowel sound as day?",
+"aa":"day. late."
 },
 {
 "id":"en-a1-092",
@@ -1840,6 +2900,26 @@
 "aa":"The baby has two feet."
 },
 {
+"id":"en-a1-119",
+"level":"a1",
+"q":"What is the English word for 🥔?",
+"fr":"Quel est le mot anglais pour 🥔 ?",
+"es":"¿Cómo se dice 🥔 en inglés?",
+"correct":"potato",
+"wrong":[
+"hamburger",
+"croissant",
+"grapes"
+],
+"why":{
+"en":"🥔 = “potato”.",
+"fr":"🥔 se dit « potato » (pomme de terre).",
+"es":"🥔 se dice « potato » (patata)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a potato."
+},
+{
 "id":"en-a1-093",
 "level":"a1",
 "q":"“It is Saturday. Tom gets up at nine. He has breakfast with his mum. Then he plays football in the park.” Where does Tom play football?",
@@ -1860,24 +2940,24 @@
 "aa":"In the park."
 },
 {
-"id":"en-a1-094",
+"id":"en-a1-292",
 "level":"a1",
-"q":"What is the English word for 🍌?",
-"fr":"Quel est le mot anglais pour 🍌 ?",
-"es":"¿Cómo se dice 🍌 en inglés?",
-"correct":"banana",
+"q":"Listen. Which word do you hear?",
+"fr":"Écoute. Quel mot entends-tu ?",
+"es":"Escucha. ¿Qué palabra oyes?",
+"correct":"beat",
 "wrong":[
-"watermelon",
-"cheese",
-"cake"
+"bit",
+"bet",
+"bite"
 ],
 "why":{
-"en":"🍌 = “banana”.",
-"fr":"🍌 se dit « banana » (banane).",
-"es":"🍌 se dice « banana » (plátano)."
+"en":"You heard “beat”. “beat” has a long /iː/; “bit” has a short /ɪ/.",
+"fr":"Tu as entendu « beat ». « beat » a un /iː/ long ; « bit » a un /ɪ/ court.",
+"es":"Has oído « beat ». « beat » tiene un /iː/ largo; « bit » uno /ɪ/ corto."
 },
-"qa":"What is the English word for this picture?",
-"aa":"banana"
+"qa":"beat",
+"aa":"beat"
 },
 {
 "id":"en-a1-095",
@@ -1900,24 +2980,44 @@
 "aa":"It's half past two."
 },
 {
-"id":"en-a1-096",
+"id":"en-a1-120",
 "level":"a1",
-"q":"What is the English word for 5?",
-"fr":"Quel est le mot anglais pour 5 ?",
-"es":"¿Cómo se dice 5 en inglés?",
-"correct":"five",
+"q":"What is the English word for 🍅?",
+"fr":"Quel est le mot anglais pour 🍅 ?",
+"es":"¿Cómo se dice 🍅 en inglés?",
+"correct":"tomato",
 "wrong":[
-"four",
-"fifteen",
-"fifty"
+"spaghetti",
+"mushroom",
+"strawberry"
 ],
 "why":{
-"en":"5 = five. 15 = fifteen, 50 = fifty.",
-"fr":"5 = five. 15 = fifteen, 50 = fifty.",
-"es":"5 = five. 15 = fifteen, 50 = fifty."
+"en":"🍅 = “tomato”.",
+"fr":"🍅 se dit « tomato » (tomate).",
+"es":"🍅 se dice « tomato » (tomate)."
 },
-"qa":"What is the English word for this number?",
-"aa":"five"
+"qa":"What is the English word for this picture?",
+"aa":"It’s a tomato."
+},
+{
+"id":"en-a1-293",
+"level":"a1",
+"q":"It is late in the evening. You go to bed. What do you say?",
+"fr":"Il est tard le soir. Tu vas te coucher. Que dis-tu ?",
+"es":"Es tarde por la noche. Te vas a la cama. ¿Qué dices?",
+"correct":"Good night.",
+"wrong":[
+"Good morning.",
+"Good afternoon.",
+"Good evening."
+],
+"why":{
+"en":"“Good night” is for going to sleep. “Good evening” is a greeting when you arrive.",
+"fr":"« Good night » se dit pour aller dormir. « Good evening » est un bonjour du soir.",
+"es":"« Good night » se dice para irse a dormir. « Good evening » es un saludo al llegar por la tarde-noche."
+},
+"qa":"It is late in the evening. You go to bed. What do you say?",
+"aa":"Good night."
 },
 {
 "id":"en-a1-097",
@@ -1940,24 +3040,24 @@
 "aa":"short"
 },
 {
-"id":"en-a1-098",
+"id":"en-a1-122",
 "level":"a1",
-"q":"What is the English word for 🍊?",
-"fr":"Quel est le mot anglais pour 🍊 ?",
-"es":"¿Cómo se dice 🍊 en inglés?",
-"correct":"orange",
+"q":"What is the English word for 🌽?",
+"fr":"Quel est le mot anglais pour 🌽 ?",
+"es":"¿Cómo se dice 🌽 en inglés?",
+"correct":"corn",
 "wrong":[
-"lemon",
-"egg",
-"cookie"
+"cake",
+"peach",
+"cherries"
 ],
 "why":{
-"en":"🍊 = “orange”.",
-"fr":"🍊 se dit « orange » (orange).",
-"es":"🍊 se dice « orange » (naranja)."
+"en":"🌽 = “corn”.",
+"fr":"🌽 se dit « corn » (maïs).",
+"es":"🌽 se dice « corn » (maíz)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"orange"
+"aa":"It’s corn."
 },
 {
 "id":"en-a1-099",
@@ -1980,24 +3080,24 @@
 "aa":"Look at that girl over there!"
 },
 {
-"id":"en-a1-100",
+"id":"en-a1-294",
 "level":"a1",
-"q":"What is the English word for 🍇?",
-"fr":"Quel est le mot anglais pour 🍇 ?",
-"es":"¿Cómo se dice 🍇 en inglés?",
-"correct":"grapes",
+"q":"Which word rhymes with “blue”?",
+"fr":"Quel mot rime avec « blue » ?",
+"es":"¿Qué palabra rima con « blue »?",
+"correct":"shoe",
 "wrong":[
-"carrot",
-"pizza",
-"chocolate"
+"blow",
+"boy",
+"black"
 ],
 "why":{
-"en":"🍇 = “grapes”.",
-"fr":"🍇 se dit « grapes » (raisin).",
-"es":"🍇 se dice « grapes » (uvas)."
+"en":"“blue” and “shoe” rhyme: they end with the same sound /uː/. The spelling can be different!",
+"fr":"« blue » et « shoe » riment : ils finissent par le même son /uː/. L’orthographe peut être différente !",
+"es":"« blue » y « shoe » riman: acaban con el mismo sonido /uː/. ¡La ortografía puede ser distinta!"
 },
-"qa":"What is the English word for this picture?",
-"aa":"grapes"
+"qa":"Which word rhymes with blue?",
+"aa":"blue. shoe."
 },
 {
 "id":"en-a1-101",
@@ -2020,24 +3120,44 @@
 "aa":"These are my shoes, here on the floor."
 },
 {
-"id":"en-a1-102",
+"id":"en-a1-295",
 "level":"a1",
-"q":"What is the English word for 🍓?",
-"fr":"Quel est le mot anglais pour 🍓 ?",
-"es":"¿Cómo se dice 🍓 en inglés?",
-"correct":"strawberry",
+"q":"Which word has a different vowel sound?",
+"fr":"Quel mot a un son de voyelle différent ?",
+"es":"¿Qué palabra tiene un sonido de vocal distinto?",
+"correct":"bike",
 "wrong":[
-"potato",
-"hamburger",
-"ice cream"
+"sun",
+"cup",
+"bus"
 ],
 "why":{
-"en":"🍓 = “strawberry”.",
-"fr":"🍓 se dit « strawberry » (fraise).",
-"es":"🍓 se dice « strawberry » (fresa)."
+"en":"“bike” is /aɪ/; the others are /ʌ/.",
+"fr":"« bike » se dit /aɪ/ ; les autres se disent /ʌ/.",
+"es":"« bike » se dice /aɪ/; las otras se dicen /ʌ/."
+},
+"qa":"Which word has a different vowel sound? sun, cup, bus, bike.",
+"aa":"sun, cup, bus, bike."
+},
+{
+"id":"en-a1-124",
+"level":"a1",
+"q":"What is the English word for 🧀?",
+"fr":"Quel est le mot anglais pour 🧀 ?",
+"es":"¿Cómo se dice 🧀 en inglés?",
+"correct":"cheese",
+"wrong":[
+"cookie",
+"banana",
+"pineapple"
+],
+"why":{
+"en":"🧀 = “cheese”.",
+"fr":"🧀 se dit « cheese » (fromage).",
+"es":"🧀 se dice « cheese » (queso)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"strawberry"
+"aa":"It’s cheese."
 },
 {
 "id":"en-a1-103",
@@ -2060,26 +3180,6 @@
 "aa":"The cat is under the table."
 },
 {
-"id":"en-a1-104",
-"level":"a1",
-"q":"What is the English word for 🍒?",
-"fr":"Quel est le mot anglais pour 🍒 ?",
-"es":"¿Cómo se dice 🍒 en inglés?",
-"correct":"cherries",
-"wrong":[
-"tomato",
-"spaghetti",
-"croissant"
-],
-"why":{
-"en":"🍒 = “cherries”.",
-"fr":"🍒 se dit « cherries » (cerises).",
-"es":"🍒 se dice « cherries » (cerezas)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"cherries"
-},
-{
 "id":"en-a1-105",
 "level":"a1",
 "q":"Complete: “The cat is ___ the chair.”",
@@ -2098,6 +3198,46 @@
 },
 "qa":"Complete the sentence. The cat is blank the chair.",
 "aa":"The cat is under the chair."
+},
+{
+"id":"en-a1-296",
+"level":"a1",
+"q":"Put the words in order: “you / do / like / tea”",
+"fr":"Remets les mots dans l’ordre : « you / do / like / tea »",
+"es":"Ordena las palabras: « you / do / like / tea »",
+"correct":"Do you like tea?",
+"wrong":[
+"You do like tea?",
+"Like you do tea?",
+"Do like you tea?"
+],
+"why":{
+"en":"“Do you like tea?” Questions with “like” start with “do”.",
+"fr":"« Do you like tea? » Les questions avec « like » commencent par « do ».",
+"es":"« Do you like tea? » Las preguntas con « like » empiezan con « do »."
+},
+"qa":"Put the words in order. you , do , like , tea",
+"aa":"Do you like tea?"
+},
+{
+"id":"en-a1-126",
+"level":"a1",
+"q":"What is the English word for 🥚?",
+"fr":"Quel est le mot anglais pour 🥚 ?",
+"es":"¿Cómo se dice 🥚 en inglés?",
+"correct":"egg",
+"wrong":[
+"chocolate",
+"orange",
+"watermelon"
+],
+"why":{
+"en":"🥚 = “egg”.",
+"fr":"🥚 se dit « egg » (œuf).",
+"es":"🥚 se dice « egg » (huevo)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s an egg."
 },
 {
 "id":"en-a1-106",
@@ -2120,44 +3260,24 @@
 "aa":"Thank you!"
 },
 {
-"id":"en-a1-107",
+"id":"en-a1-297",
 "level":"a1",
-"q":"What is the English word for 9?",
-"fr":"Quel est le mot anglais pour 9 ?",
-"es":"¿Cómo se dice 9 en inglés?",
-"correct":"nine",
+"q":"Which word sounds the same as “one”?",
+"fr":"Quel mot se prononce comme « one » ?",
+"es":"¿Qué palabra suena igual que « one »?",
+"correct":"won",
 "wrong":[
-"five",
-"ninety",
-"nineteen"
+"want",
+"own",
+"once"
 ],
 "why":{
-"en":"9 = nine. 19 = nineteen, 90 = ninety.",
-"fr":"9 = nine. 19 = nineteen, 90 = ninety.",
-"es":"9 = nine. 19 = nineteen, 90 = ninety."
+"en":"“one” and “won” sound the same (/wʌn/) but are spelled differently: “one” is the number 1, “won” is the past of “win”.",
+"fr":"« one » et « won » se prononcent pareil (/wʌn/) mais s’écrivent différemment : « one » = le chiffre 1, « won » = passé de « win » (gagner).",
+"es":"« one » y « won » suenan igual (/wʌn/) pero se escriben distinto: « one » = el número 1, « won » = pasado de « win » (ganar)."
 },
-"qa":"What is the English word for this number?",
-"aa":"nine"
-},
-{
-"id":"en-a1-108",
-"level":"a1",
-"q":"What is the English word for 🍍?",
-"fr":"Quel est le mot anglais pour 🍍 ?",
-"es":"¿Cómo se dice 🍍 en inglés?",
-"correct":"pineapple",
-"wrong":[
-"corn",
-"cake",
-"mushroom"
-],
-"why":{
-"en":"🍍 = “pineapple”.",
-"fr":"🍍 se dit « pineapple » (ananas).",
-"es":"🍍 se dice « pineapple » (piña)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"pineapple"
+"qa":"Which word sounds the same as one?",
+"aa":"one. won."
 },
 {
 "id":"en-a1-109",
@@ -2180,24 +3300,24 @@
 "aa":"The bank is between the school and the shop."
 },
 {
-"id":"en-a1-110",
+"id":"en-a1-128",
 "level":"a1",
-"q":"What is the English word for 🍉?",
-"fr":"Quel est le mot anglais pour 🍉 ?",
-"es":"¿Cómo se dice 🍉 en inglés?",
-"correct":"watermelon",
+"q":"What is the English word for 100?",
+"fr":"Quel est le mot anglais pour 100 ?",
+"es":"¿Cómo se dice 100 en inglés?",
+"correct":"one hundred",
 "wrong":[
-"cheese",
-"cookie",
-"peach"
+"one thousand",
+"ten",
+"one million"
 ],
 "why":{
-"en":"🍉 = “watermelon”.",
-"fr":"🍉 se dit « watermelon » (pastèque).",
-"es":"🍉 se dice « watermelon » (sandía)."
+"en":"100 = one hundred.",
+"fr":"100 = one hundred (cent).",
+"es":"100 = one hundred (cien)."
 },
-"qa":"What is the English word for this picture?",
-"aa":"watermelon"
+"qa":"What is the English word for this number?",
+"aa":"It’s one hundred."
 },
 {
 "id":"en-a1-111",
@@ -2220,24 +3340,24 @@
 "aa":"bad"
 },
 {
-"id":"en-a1-112",
+"id":"en-a1-298",
 "level":"a1",
-"q":"What is the English word for 🍋?",
-"fr":"Quel est le mot anglais pour 🍋 ?",
-"es":"¿Cómo se dice 🍋 en inglés?",
-"correct":"lemon",
+"q":"Listen carefully, then answer: How much are a coffee and a cake together?",
+"fr":"Écoute bien, puis réponds : How much are a coffee and a cake together?",
+"es":"Escucha bien y responde: How much are a coffee and a cake together?",
+"correct":"Five pounds",
 "wrong":[
-"egg",
-"chocolate",
-"banana"
+"Two pounds",
+"Three pounds",
+"Six pounds"
 ],
 "why":{
-"en":"🍋 = “lemon”.",
-"fr":"🍋 se dit « lemon » (citron).",
-"es":"🍋 se dice « lemon » (limón)."
+"en":"You heard: “A coffee is two pounds and a cake is three pounds.”",
+"fr":"Tu as entendu : « A coffee is two pounds and a cake is three pounds. »",
+"es":"Has oído: « A coffee is two pounds and a cake is three pounds. »"
 },
-"qa":"What is the English word for this picture?",
-"aa":"lemon"
+"qa":"A coffee is two pounds and a cake is three pounds. How much are a coffee and a cake together?",
+"aa":"Five pounds"
 },
 {
 "id":"en-a1-113",
@@ -2260,6 +3380,46 @@
 "aa":"The bus stop is next to my house. I can see it from the window."
 },
 {
+"id":"en-a1-131",
+"level":"a1",
+"q":"What is the English word for 🍕?",
+"fr":"Quel est le mot anglais pour 🍕 ?",
+"es":"¿Cómo se dice 🍕 en inglés?",
+"correct":"pizza",
+"wrong":[
+"ice cream",
+"grapes",
+"lemon"
+],
+"why":{
+"en":"🍕 = “pizza”.",
+"fr":"🍕 se dit « pizza » (pizza).",
+"es":"🍕 se dice « pizza » (pizza)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a pizza."
+},
+{
+"id":"en-a1-299",
+"level":"a1",
+"q":"Which word is stressed on the SECOND syllable?",
+"fr":"Quel mot est accentué sur la DEUXIÈME syllabe ?",
+"es":"¿Qué palabra se acentúa en la SEGUNDA sílaba?",
+"correct":"guitar",
+"wrong":[
+"pencil",
+"teacher",
+"orange"
+],
+"why":{
+"en":"We say gui-TAR: the loud, long part is the second one. The others are PEN-cil, TEA-cher, OR-ange.",
+"fr":"On dit gui-TAR : la partie forte et longue est la deuxième. Les autres sont PEN-cil, TEA-cher, OR-ange.",
+"es":"Se dice gui-TAR: la parte fuerte y larga es la segunda. Las otras son PEN-cil, TEA-cher, OR-ange."
+},
+"qa":"Which word is stressed on the second syllable? guitar, pencil, teacher, orange.",
+"aa":"guitar."
+},
+{
 "id":"en-a1-114",
 "level":"a1",
 "q":"“It is Saturday. Tom gets up at nine. He has breakfast with his mum. Then he plays football in the park.” Who does Tom have breakfast with?",
@@ -2278,26 +3438,6 @@
 },
 "qa":"It is Saturday. Tom gets up at nine. He has breakfast with his mum. Then he plays football in the park. Who does Tom have breakfast with?",
 "aa":"His mum."
-},
-{
-"id":"en-a1-115",
-"level":"a1",
-"q":"What is the English word for 🥕?",
-"fr":"Quel est le mot anglais pour 🥕 ?",
-"es":"¿Cómo se dice 🥕 en inglés?",
-"correct":"carrot",
-"wrong":[
-"pizza",
-"ice cream",
-"orange"
-],
-"why":{
-"en":"🥕 = “carrot”.",
-"fr":"🥕 se dit « carrot » (carotte).",
-"es":"🥕 se dice « carrot » (zanahoria)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"carrot"
 },
 {
 "id":"en-a1-116",
@@ -2320,6 +3460,46 @@
 "aa":"This is Anna. Her father is a teacher."
 },
 {
+"id":"en-a1-300",
+"level":"a1",
+"q":"What does “Take care” mean?",
+"fr":"Que veut dire « Take care » ?",
+"es":"¿Qué significa « Take care »?",
+"correct":"Look after yourself (a kind goodbye)",
+"wrong":[
+"Be careful with it",
+"Take this with you",
+"Pay attention"
+],
+"why":{
+"en":"“Take care” is a warm way to say goodbye.",
+"fr":"« Take care » est une façon chaleureuse de dire au revoir.",
+"es":"« Take care » es una forma cariñosa de despedirse."
+},
+"qa":"What does Take care mean?",
+"aa":"Look after yourself (a kind goodbye)"
+},
+{
+"id":"en-a1-133",
+"level":"a1",
+"q":"What is the English word for 🍔?",
+"fr":"Quel est le mot anglais pour 🍔 ?",
+"es":"¿Cómo se dice 🍔 en inglés?",
+"correct":"hamburger",
+"wrong":[
+"croissant",
+"strawberry",
+"carrot"
+],
+"why":{
+"en":"🍔 = “hamburger”.",
+"fr":"🍔 se dit « hamburger » (hamburger).",
+"es":"🍔 se dice « hamburger » (hamburguesa)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a hamburger."
+},
+{
 "id":"en-a1-117",
 "level":"a1",
 "q":"Someone says: “Have a nice day!” What do you answer?",
@@ -2340,64 +3520,24 @@
 "aa":"You too!"
 },
 {
-"id":"en-a1-118",
+"id":"en-a1-301",
 "level":"a1",
-"q":"What is the English word for 15?",
-"fr":"Quel est le mot anglais pour 15 ?",
-"es":"¿Cómo se dice 15 en inglés?",
-"correct":"fifteen",
+"q":"Which word has the same vowel sound as “moon”?",
+"fr":"Quel mot a le même son de voyelle que « moon » ?",
+"es":"¿Qué palabra tiene el mismo sonido de vocal que « moon »?",
+"correct":"blue",
 "wrong":[
-"fifty",
-"five",
-"fourteen"
+"book",
+"cup",
+"cat"
 ],
 "why":{
-"en":"15 = fifteen. 50 = fifty.",
-"fr":"15 = fifteen. 50 = fifty.",
-"es":"15 = fifteen. 50 = fifty."
+"en":"“moon” and “blue” share the sound /uː/. Not the same: “book” /ʊ/. “cup” /ʌ/. “cat” /æ/.",
+"fr":"« moon » et « blue » ont le même son /uː/. Pas le même : « book » /ʊ/. « cup » /ʌ/. « cat » /æ/.",
+"es":"« moon » y « blue » tienen el mismo sonido /uː/. No es igual: « book » /ʊ/. « cup » /ʌ/. « cat » /æ/."
 },
-"qa":"What is the English word for this number?",
-"aa":"fifteen"
-},
-{
-"id":"en-a1-119",
-"level":"a1",
-"q":"What is the English word for 🥔?",
-"fr":"Quel est le mot anglais pour 🥔 ?",
-"es":"¿Cómo se dice 🥔 en inglés?",
-"correct":"potato",
-"wrong":[
-"hamburger",
-"croissant",
-"grapes"
-],
-"why":{
-"en":"🥔 = “potato”.",
-"fr":"🥔 se dit « potato » (pomme de terre).",
-"es":"🥔 se dice « potato » (patata)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"potato"
-},
-{
-"id":"en-a1-120",
-"level":"a1",
-"q":"What is the English word for 🍅?",
-"fr":"Quel est le mot anglais pour 🍅 ?",
-"es":"¿Cómo se dice 🍅 en inglés?",
-"correct":"tomato",
-"wrong":[
-"spaghetti",
-"mushroom",
-"strawberry"
-],
-"why":{
-"en":"🍅 = “tomato”.",
-"fr":"🍅 se dit « tomato » (tomate).",
-"es":"🍅 se dice « tomato » (tomate)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"tomato"
+"qa":"Which word has the same vowel sound as moon?",
+"aa":"moon. blue."
 },
 {
 "id":"en-a1-121",
@@ -2420,24 +3560,24 @@
 "aa":"We love our new house."
 },
 {
-"id":"en-a1-122",
+"id":"en-a1-135",
 "level":"a1",
-"q":"What is the English word for 🌽?",
-"fr":"Quel est le mot anglais pour 🌽 ?",
-"es":"¿Cómo se dice 🌽 en inglés?",
-"correct":"corn",
+"q":"What is the English word for ⏰?",
+"fr":"Quel est le mot anglais pour ⏰ ?",
+"es":"¿Cómo se dice ⏰ en inglés?",
+"correct":"alarm clock",
 "wrong":[
-"cake",
-"peach",
-"cherries"
+"pencil",
+"bed",
+"balloon"
 ],
 "why":{
-"en":"🌽 = “corn”.",
-"fr":"🌽 se dit « corn » (maïs).",
-"es":"🌽 se dice « corn » (maíz)."
+"en":"⏰ = “alarm clock”.",
+"fr":"⏰ se dit « alarm clock » (réveil).",
+"es":"⏰ se dice « alarm clock » (despertador)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"corn"
+"aa":"It’s an alarm clock."
 },
 {
 "id":"en-a1-123",
@@ -2460,24 +3600,24 @@
 "aa":"This is his bag. It is Tom's."
 },
 {
-"id":"en-a1-124",
+"id":"en-a1-302",
 "level":"a1",
-"q":"What is the English word for 🧀?",
-"fr":"Quel est le mot anglais pour 🧀 ?",
-"es":"¿Cómo se dice 🧀 en inglés?",
-"correct":"cheese",
+"q":"Which letter is silent in “climb”?",
+"fr":"Quelle lettre ne se prononce pas dans « climb » ?",
+"es":"¿Qué letra no se pronuncia en « climb »?",
+"correct":"b",
 "wrong":[
-"cookie",
-"banana",
-"pineapple"
+"c",
+"l",
+"m"
 ],
 "why":{
-"en":"🧀 = “cheese”.",
-"fr":"🧀 se dit « cheese » (fromage).",
-"es":"🧀 se dice « cheese » (queso)."
+"en":"In “climb” the “b” is silent: we say “clime”.",
+"fr":"Dans « climb », le « b » ne se prononce pas : on dit “clime”.",
+"es":"En « climb », la « b » no se pronuncia: se dice “clime”."
 },
-"qa":"What is the English word for this picture?",
-"aa":"cheese"
+"qa":"Which letter is silent in climb? climb.",
+"aa":"climb."
 },
 {
 "id":"en-a1-125",
@@ -2500,24 +3640,44 @@
 "aa":"night"
 },
 {
-"id":"en-a1-126",
+"id":"en-a1-137",
 "level":"a1",
-"q":"What is the English word for 🥚?",
-"fr":"Quel est le mot anglais pour 🥚 ?",
-"es":"¿Cómo se dice 🥚 en inglés?",
-"correct":"egg",
+"q":"What is the English word for 📱?",
+"fr":"Quel est le mot anglais pour 📱 ?",
+"es":"¿Cómo se dice 📱 en inglés?",
+"correct":"phone",
 "wrong":[
-"chocolate",
-"orange",
-"watermelon"
+"scissors",
+"door",
+"bell"
 ],
 "why":{
-"en":"🥚 = “egg”.",
-"fr":"🥚 se dit « egg » (œuf).",
-"es":"🥚 se dice « egg » (huevo)."
+"en":"📱 = “phone”.",
+"fr":"📱 se dit « phone » (téléphone).",
+"es":"📱 se dice « phone » (teléfono)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"egg"
+"aa":"It’s a phone."
+},
+{
+"id":"en-a1-303",
+"level":"a1",
+"q":"Listen. Which word do you hear?",
+"fr":"Écoute. Quel mot entends-tu ?",
+"es":"Escucha. ¿Qué palabra oyes?",
+"correct":"three",
+"wrong":[
+"tree",
+"free",
+"see"
+],
+"why":{
+"en":"You heard “three”. For “th” /θ/ put your tongue between your teeth and blow. “tree” starts with a normal /t/.",
+"fr":"Tu as entendu « three ». Pour « th » /θ/ mets la langue entre les dents et souffle. « tree » commence par un /t/ normal.",
+"es":"Has oído « three ». Para « th » /θ/ pon la lengua entre los dientes y sopla. « tree » empieza con una /t/ normal."
+},
+"qa":"three",
+"aa":"three"
 },
 {
 "id":"en-a1-127",
@@ -2540,26 +3700,6 @@
 "aa":"Yes, here you are."
 },
 {
-"id":"en-a1-128",
-"level":"a1",
-"q":"What is the English word for 100?",
-"fr":"Quel est le mot anglais pour 100 ?",
-"es":"¿Cómo se dice 100 en inglés?",
-"correct":"one hundred",
-"wrong":[
-"one thousand",
-"ten",
-"one million"
-],
-"why":{
-"en":"100 = one hundred.",
-"fr":"100 = one hundred (cent).",
-"es":"100 = one hundred (cien)."
-},
-"qa":"What is the English word for this number?",
-"aa":"one hundred"
-},
-{
 "id":"en-a1-129",
 "level":"a1",
 "q":"Complete: “This is ___ book.”",
@@ -2578,6 +3718,46 @@
 },
 "qa":"Complete the sentence. This is blank book.",
 "aa":"This is Anna's book."
+},
+{
+"id":"en-a1-304",
+"level":"a1",
+"q":"You need help. What do you say?",
+"fr":"Tu as besoin d’aide. Que dis-tu ?",
+"es":"Necesitas ayuda. ¿Qué dices?",
+"correct":"Can you help me, please?",
+"wrong":[
+"Can you help I, please?",
+"You can help me yes?",
+"Help me you can please?"
+],
+"why":{
+"en":"After “help” we say “me”, not “I”.",
+"fr":"Après « help », on dit « me », pas « I ».",
+"es":"Después de « help » se dice « me », no « I »."
+},
+"qa":"You need help. What do you say?",
+"aa":"Can you help me, please?"
+},
+{
+"id":"en-a1-141",
+"level":"a1",
+"q":"What is the English word for 💻?",
+"fr":"Quel est le mot anglais pour 💻 ?",
+"es":"¿Cómo se dice 💻 en inglés?",
+"correct":"computer",
+"wrong":[
+"light bulb",
+"television",
+"candle"
+],
+"why":{
+"en":"💻 = “computer”.",
+"fr":"💻 se dit « computer » (ordinateur).",
+"es":"💻 se dice « computer » (ordenador)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a computer."
 },
 {
 "id":"en-a1-130",
@@ -2600,24 +3780,24 @@
 "aa":"They don't like fish."
 },
 {
-"id":"en-a1-131",
+"id":"en-a1-305",
 "level":"a1",
-"q":"What is the English word for 🍕?",
-"fr":"Quel est le mot anglais pour 🍕 ?",
-"es":"¿Cómo se dice 🍕 en inglés?",
-"correct":"pizza",
+"q":"Listen. Which word do you hear?",
+"fr":"Écoute. Quel mot entends-tu ?",
+"es":"Escucha. ¿Qué palabra oyes?",
+"correct":"think",
 "wrong":[
-"ice cream",
-"grapes",
-"lemon"
+"sink",
+"thing",
+"drink"
 ],
 "why":{
-"en":"🍕 = “pizza”.",
-"fr":"🍕 se dit « pizza » (pizza).",
-"es":"🍕 se dice « pizza » (pizza)."
+"en":"You heard “think”. “think” starts with /θ/ (tongue between the teeth); “sink” starts with /s/.",
+"fr":"Tu as entendu « think ». « think » commence par /θ/ (langue entre les dents) ; « sink » commence par /s/.",
+"es":"Has oído « think ». « think » empieza con /θ/ (lengua entre los dientes); « sink » empieza con /s/."
 },
-"qa":"What is the English word for this picture?",
-"aa":"pizza"
+"qa":"think",
+"aa":"think"
 },
 {
 "id":"en-a1-132",
@@ -2640,24 +3820,24 @@
 "aa":"A bird can fly."
 },
 {
-"id":"en-a1-133",
+"id":"en-a1-143",
 "level":"a1",
-"q":"What is the English word for 🍔?",
-"fr":"Quel est le mot anglais pour 🍔 ?",
-"es":"¿Cómo se dice 🍔 en inglés?",
-"correct":"hamburger",
+"q":"What is the English word for 📷?",
+"fr":"Quel est le mot anglais pour 📷 ?",
+"es":"¿Cómo se dice 📷 en inglés?",
+"correct":"camera",
 "wrong":[
-"croissant",
-"strawberry",
-"carrot"
+"umbrella",
+"guitar",
+"spoon"
 ],
 "why":{
-"en":"🍔 = “hamburger”.",
-"fr":"🍔 se dit « hamburger » (hamburger).",
-"es":"🍔 se dice « hamburger » (hamburguesa)."
+"en":"📷 = “camera”.",
+"fr":"📷 se dit « camera » (appareil photo).",
+"es":"📷 se dice « camera » (cámara)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"hamburger"
+"aa":"It’s a camera."
 },
 {
 "id":"en-a1-134",
@@ -2680,24 +3860,24 @@
 "aa":"On the desk."
 },
 {
-"id":"en-a1-135",
+"id":"en-a1-306",
 "level":"a1",
-"q":"What is the English word for ⏰?",
-"fr":"Quel est le mot anglais pour ⏰ ?",
-"es":"¿Cómo se dice ⏰ en inglés?",
-"correct":"alarm clock",
+"q":"You arrive ten minutes late. What do you say?",
+"fr":"Tu arrives avec dix minutes de retard. Que dis-tu ?",
+"es":"Llegas diez minutos tarde. ¿Qué dices?",
+"correct":"Sorry, I’m late.",
 "wrong":[
-"pencil",
-"bed",
-"balloon"
+"Sorry, I am lated.",
+"Sorry, I have late.",
+"Sorry, I late."
 ],
 "why":{
-"en":"⏰ = “alarm clock”.",
-"fr":"⏰ se dit « alarm clock » (réveil).",
-"es":"⏰ se dice « alarm clock » (despertador)."
+"en":"“I’m late” = I am late. “Late” is an adjective, it does not change.",
+"fr":"« I’m late » = je suis en retard. « Late » est un adjectif, il ne change pas.",
+"es":"« I’m late » = llego tarde. « Late » es un adjetivo, no cambia."
 },
-"qa":"What is the English word for this picture?",
-"aa":"alarm clock"
+"qa":"You arrive ten minutes late. What do you say?",
+"aa":"Sorry, I'm late."
 },
 {
 "id":"en-a1-136",
@@ -2720,24 +3900,44 @@
 "aa":"A fish can't walk."
 },
 {
-"id":"en-a1-137",
+"id":"en-a1-145",
 "level":"a1",
-"q":"What is the English word for 📱?",
-"fr":"Quel est le mot anglais pour 📱 ?",
-"es":"¿Cómo se dice 📱 en inglés?",
-"correct":"phone",
+"q":"What is the English word for 🔑?",
+"fr":"Quel est le mot anglais pour 🔑 ?",
+"es":"¿Cómo se dice 🔑 en inglés?",
+"correct":"key",
 "wrong":[
-"scissors",
-"door",
-"bell"
+"glasses",
+"present",
+"hammer"
 ],
 "why":{
-"en":"📱 = “phone”.",
-"fr":"📱 se dit « phone » (téléphone).",
-"es":"📱 se dice « phone » (teléfono)."
+"en":"🔑 = “key”.",
+"fr":"🔑 se dit « key » (clé).",
+"es":"🔑 se dice « key » (llave)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"phone"
+"aa":"It’s a key."
+},
+{
+"id":"en-a1-307",
+"level":"a1",
+"q":"Which word has the same vowel sound as “book”?",
+"fr":"Quel mot a le même son de voyelle que « book » ?",
+"es":"¿Qué palabra tiene el mismo sonido de vocal que « book »?",
+"correct":"good",
+"wrong":[
+"moon",
+"cup",
+"cat"
+],
+"why":{
+"en":"“book” and “good” share the sound /ʊ/. Not the same: “moon” /uː/. “cup” /ʌ/. “cat” /æ/.",
+"fr":"« book » et « good » ont le même son /ʊ/. Pas le même : « moon » /uː/. « cup » /ʌ/. « cat » /æ/.",
+"es":"« book » y « good » tienen el mismo sonido /ʊ/. No es igual: « moon » /uː/. « cup » /ʌ/. « cat » /æ/."
+},
+"qa":"Which word has the same vowel sound as book?",
+"aa":"book. good."
 },
 {
 "id":"en-a1-138",
@@ -2780,6 +3980,46 @@
 "aa":"seven"
 },
 {
+"id":"en-a1-308",
+"level":"a1",
+"q":"Which word rhymes with “night”?",
+"fr":"Quel mot rime avec « night » ?",
+"es":"¿Qué palabra rima con « night »?",
+"correct":"white",
+"wrong":[
+"knit",
+"nine",
+"nut"
+],
+"why":{
+"en":"“night” and “white” rhyme: they end with the same sound /aɪt/. The spelling can be different!",
+"fr":"« night » et « white » riment : ils finissent par le même son /aɪt/. L’orthographe peut être différente !",
+"es":"« night » y « white » riman: acaban con el mismo sonido /aɪt/. ¡La ortografía puede ser distinta!"
+},
+"qa":"Which word rhymes with night?",
+"aa":"night. white."
+},
+{
+"id":"en-a1-146",
+"level":"a1",
+"q":"What is the English word for 🎒?",
+"fr":"Quel est le mot anglais pour 🎒 ?",
+"es":"¿Cómo se dice 🎒 en inglés?",
+"correct":"backpack",
+"wrong":[
+"chair",
+"balloon",
+"tent"
+],
+"why":{
+"en":"🎒 = “backpack”.",
+"fr":"🎒 se dit « backpack » (sac à dos).",
+"es":"🎒 se dice « backpack » (mochila)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a backpack."
+},
+{
 "id":"en-a1-140",
 "level":"a1",
 "q":"What is the opposite of “early”?",
@@ -2800,24 +4040,24 @@
 "aa":"late"
 },
 {
-"id":"en-a1-141",
+"id":"en-a1-309",
 "level":"a1",
-"q":"What is the English word for 💻?",
-"fr":"Quel est le mot anglais pour 💻 ?",
-"es":"¿Cómo se dice 💻 en inglés?",
-"correct":"computer",
+"q":"Listen carefully, then answer: What is the weather like?",
+"fr":"Écoute bien, puis réponds : What is the weather like?",
+"es":"Escucha bien y responde: What is the weather like?",
+"correct":"Cold and rainy",
 "wrong":[
-"light bulb",
-"television",
-"candle"
+"Hot and sunny",
+"Cold and snowy",
+"Warm and windy"
 ],
 "why":{
-"en":"💻 = “computer”.",
-"fr":"💻 se dit « computer » (ordinateur).",
-"es":"💻 se dice « computer » (ordenador)."
+"en":"You heard: “It is cold and rainy today. Take your umbrella.”",
+"fr":"Tu as entendu : « It is cold and rainy today. Take your umbrella. »",
+"es":"Has oído: « It is cold and rainy today. Take your umbrella. »"
 },
-"qa":"What is the English word for this picture?",
-"aa":"computer"
+"qa":"It is cold and rainy today. Take your umbrella. What is the weather like?",
+"aa":"Cold and rainy"
 },
 {
 "id":"en-a1-142",
@@ -2840,24 +4080,24 @@
 "aa":"I don't like fish."
 },
 {
-"id":"en-a1-143",
+"id":"en-a1-150",
 "level":"a1",
-"q":"What is the English word for 📷?",
-"fr":"Quel est le mot anglais pour 📷 ?",
-"es":"¿Cómo se dice 📷 en inglés?",
-"correct":"camera",
+"q":"What is the English word for ✏️?",
+"fr":"Quel est le mot anglais pour ✏️ ?",
+"es":"¿Cómo se dice ✏️ en inglés?",
+"correct":"pencil",
 "wrong":[
-"umbrella",
-"guitar",
-"spoon"
+"bed",
+"bell",
+"shower"
 ],
 "why":{
-"en":"📷 = “camera”.",
-"fr":"📷 se dit « camera » (appareil photo).",
-"es":"📷 se dice « camera » (cámara)."
+"en":"✏️ = “pencil”.",
+"fr":"✏️ se dit « pencil » (crayon).",
+"es":"✏️ se dice « pencil » (lápiz)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"camera"
+"aa":"It’s a pencil."
 },
 {
 "id":"en-a1-144",
@@ -2880,44 +4120,24 @@
 "aa":"He doesn't play tennis on Sundays."
 },
 {
-"id":"en-a1-145",
+"id":"en-a1-310",
 "level":"a1",
-"q":"What is the English word for 🔑?",
-"fr":"Quel est le mot anglais pour 🔑 ?",
-"es":"¿Cómo se dice 🔑 en inglés?",
-"correct":"key",
+"q":"Which word has a different ending sound?",
+"fr":"Quel mot a un son final différent ?",
+"es":"¿Qué palabra tiene un sonido final distinto?",
+"correct":"dogs",
 "wrong":[
-"glasses",
-"present",
-"hammer"
+"cats",
+"hats",
+"books"
 ],
 "why":{
-"en":"🔑 = “key”.",
-"fr":"🔑 se dit « key » (clé).",
-"es":"🔑 se dice « key » (llave)."
+"en":"“dogs” is /z/; the others are /s/.",
+"fr":"« dogs » se dit /z/ ; les autres se disent /s/.",
+"es":"« dogs » se dice /z/; las otras se dicen /s/."
 },
-"qa":"What is the English word for this picture?",
-"aa":"key"
-},
-{
-"id":"en-a1-146",
-"level":"a1",
-"q":"What is the English word for 🎒?",
-"fr":"Quel est le mot anglais pour 🎒 ?",
-"es":"¿Cómo se dice 🎒 en inglés?",
-"correct":"backpack",
-"wrong":[
-"chair",
-"balloon",
-"tent"
-],
-"why":{
-"en":"🎒 = “backpack”.",
-"fr":"🎒 se dit « backpack » (sac à dos).",
-"es":"🎒 se dice « backpack » (mochila)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"backpack"
+"qa":"Which word has a different ending sound? cats, hats, books, dogs.",
+"aa":"cats, hats, books, dogs."
 },
 {
 "id":"en-a1-147",
@@ -2938,6 +4158,46 @@
 },
 "qa":"Complete the sentence. blank you like music?",
 "aa":"Do you like music?"
+},
+{
+"id":"en-a1-152",
+"level":"a1",
+"q":"What is the English word for ✂️?",
+"fr":"Quel est le mot anglais pour ✂️ ?",
+"es":"¿Cómo se dice ✂️ en inglés?",
+"correct":"scissors",
+"wrong":[
+"door",
+"candle",
+"alarm clock"
+],
+"why":{
+"en":"✂️ = “scissors”.",
+"fr":"✂️ se dit « scissors » (ciseaux).",
+"es":"✂️ se dice « scissors » (tijeras)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"They’re scissors."
+},
+{
+"id":"en-a1-311",
+"level":"a1",
+"q":"Put the words in order: “is / she / from / Spain”",
+"fr":"Remets les mots dans l’ordre : « is / she / from / Spain »",
+"es":"Ordena las palabras: « is / she / from / Spain »",
+"correct":"She is from Spain.",
+"wrong":[
+"Is she from Spain.",
+"She from is Spain.",
+"From Spain she is."
+],
+"why":{
+"en":"“She is from Spain.” Say it like this: She + is + from + place.",
+"fr":"« She is from Spain. » Dis-le ainsi : She + is + from + lieu.",
+"es":"« She is from Spain. » Dilo así: She + is + from + lugar."
+},
+"qa":"Put the words in order. is , she , from , Spain",
+"aa":"She is from Spain."
 },
 {
 "id":"en-a1-148",
@@ -2980,24 +4240,44 @@
 "aa":"twelve"
 },
 {
-"id":"en-a1-150",
+"id":"en-a1-156",
 "level":"a1",
-"q":"What is the English word for ✏️?",
-"fr":"Quel est le mot anglais pour ✏️ ?",
-"es":"¿Cómo se dice ✏️ en inglés?",
-"correct":"pencil",
+"q":"What is the English word for 💡?",
+"fr":"Quel est le mot anglais pour 💡 ?",
+"es":"¿Cómo se dice 💡 en inglés?",
+"correct":"light bulb",
 "wrong":[
-"bed",
-"bell",
-"shower"
+"television",
+"spoon",
+"phone"
 ],
 "why":{
-"en":"✏️ = “pencil”.",
-"fr":"✏️ se dit « pencil » (crayon).",
-"es":"✏️ se dice « pencil » (lápiz)."
+"en":"💡 = “light bulb”.",
+"fr":"💡 se dit « light bulb » (ampoule).",
+"es":"💡 se dice « light bulb » (bombilla)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"pencil"
+"aa":"It’s a light bulb."
+},
+{
+"id":"en-a1-312",
+"level":"a1",
+"q":"Which word sounds the same as “no”?",
+"fr":"Quel mot se prononce comme « no » ?",
+"es":"¿Qué palabra suena igual que « no »?",
+"correct":"know",
+"wrong":[
+"now",
+"nod",
+"note"
+],
+"why":{
+"en":"“no” and “know” sound the same (/noʊ/) but are spelled differently: “no” is the opposite of yes, “know” means to have knowledge.",
+"fr":"« no » et « know » se prononcent pareil (/noʊ/) mais s’écrivent différemment : « no » = non, « know » = savoir.",
+"es":"« no » y « know » suenan igual (/noʊ/) pero se escriben distinto: « no » = no, « know » = saber."
+},
+"qa":"Which word sounds the same as no?",
+"aa":"no. know."
 },
 {
 "id":"en-a1-151",
@@ -3020,24 +4300,24 @@
 "aa":"Does she speak English?"
 },
 {
-"id":"en-a1-152",
+"id":"en-a1-313",
 "level":"a1",
-"q":"What is the English word for ✂️?",
-"fr":"Quel est le mot anglais pour ✂️ ?",
-"es":"¿Cómo se dice ✂️ en inglés?",
-"correct":"scissors",
+"q":"Listen. Which word do you hear?",
+"fr":"Écoute. Quel mot entends-tu ?",
+"es":"Escucha. ¿Qué palabra oyes?",
+"correct":"very",
 "wrong":[
-"door",
-"candle",
-"alarm clock"
+"berry",
+"ferry",
+"vary"
 ],
 "why":{
-"en":"✂️ = “scissors”.",
-"fr":"✂️ se dit « scissors » (ciseaux).",
-"es":"✂️ se dice « scissors » (tijeras)."
+"en":"You heard “very”. For /v/ your top teeth touch your lower lip. For /b/ your two lips touch.",
+"fr":"Tu as entendu « very ». Pour /v/ les dents du haut touchent la lèvre du bas. Pour /b/ les deux lèvres se touchent.",
+"es":"Has oído « very ». Para /v/ los dientes de arriba tocan el labio de abajo. Para /b/ se tocan los dos labios."
 },
-"qa":"What is the English word for this picture?",
-"aa":"scissors"
+"qa":"very",
+"aa":"very"
 },
 {
 "id":"en-a1-153",
@@ -3060,6 +4340,26 @@
 "aa":"difficult"
 },
 {
+"id":"en-a1-158",
+"level":"a1",
+"q":"What is the English word for ☂️?",
+"fr":"Quel est le mot anglais pour ☂️ ?",
+"es":"¿Cómo se dice ☂️ en inglés?",
+"correct":"umbrella",
+"wrong":[
+"guitar",
+"hammer",
+"computer"
+],
+"why":{
+"en":"☂️ = “umbrella”.",
+"fr":"☂️ se dit « umbrella » (parapluie).",
+"es":"☂️ se dice « umbrella » (paraguas)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s an umbrella."
+},
+{
 "id":"en-a1-154",
 "level":"a1",
 "q":"“This is my room. It is small. There is a bed, a desk and a lamp. My books are on the desk.” Is the room big?",
@@ -3078,6 +4378,46 @@
 },
 "qa":"This is my room. It is small. There is a bed, a desk and a lamp. My books are on the desk. Is the room big?",
 "aa":"No, it is small."
+},
+{
+"id":"en-a1-314",
+"level":"a1",
+"q":"You ask someone the time. What do you say?",
+"fr":"Tu demandes l’heure. Que dis-tu ?",
+"es":"Preguntas la hora. ¿Qué dices?",
+"correct":"What time is it?",
+"wrong":[
+"What hour is it?",
+"How time is it?",
+"Which time is it?"
+],
+"why":{
+"en":"In English we say “What time”, not “what hour” (careful: a French trap!).",
+"fr":"En anglais on dit « What time », pas « what hour » (attention, piège du français !).",
+"es":"En inglés se dice « What time », no « what hour » (¡cuidado con la trampa del francés/español!)."
+},
+"qa":"You ask someone the time. What do you say?",
+"aa":"What time is it?"
+},
+{
+"id":"en-a1-162",
+"level":"a1",
+"q":"What is the English word for 👓?",
+"fr":"Quel est le mot anglais pour 👓 ?",
+"es":"¿Cómo se dice 👓 en inglés?",
+"correct":"glasses",
+"wrong":[
+"present",
+"tent",
+"camera"
+],
+"why":{
+"en":"👓 = “glasses”.",
+"fr":"👓 se dit « glasses » (lunettes).",
+"es":"👓 se dice « glasses » (gafas)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"They’re glasses."
 },
 {
 "id":"en-a1-155",
@@ -3100,24 +4440,24 @@
 "aa":"There are three books on the desk."
 },
 {
-"id":"en-a1-156",
+"id":"en-a1-315",
 "level":"a1",
-"q":"What is the English word for 💡?",
-"fr":"Quel est le mot anglais pour 💡 ?",
-"es":"¿Cómo se dice 💡 en inglés?",
-"correct":"light bulb",
+"q":"Which word has the same vowel sound as “now”?",
+"fr":"Quel mot a le même son de voyelle que « now » ?",
+"es":"¿Qué palabra tiene el mismo sonido de vocal que « now »?",
+"correct":"house",
 "wrong":[
-"television",
-"spoon",
-"phone"
+"boy",
+"bus",
+"see"
 ],
 "why":{
-"en":"💡 = “light bulb”.",
-"fr":"💡 se dit « light bulb » (ampoule).",
-"es":"💡 se dice « light bulb » (bombilla)."
+"en":"“now” and “house” share the sound /aʊ/. Not the same: “boy” /ɔɪ/. “bus” /ʌ/. “see” /iː/.",
+"fr":"« now » et « house » ont le même son /aʊ/. Pas le même : « boy » /ɔɪ/. « bus » /ʌ/. « see » /iː/.",
+"es":"« now » y « house » tienen el mismo sonido /aʊ/. No es igual: « boy » /ɔɪ/. « bus » /ʌ/. « see » /iː/."
 },
-"qa":"What is the English word for this picture?",
-"aa":"light bulb"
+"qa":"Which word has the same vowel sound as now?",
+"aa":"now. house."
 },
 {
 "id":"en-a1-157",
@@ -3140,24 +4480,24 @@
 "aa":"My sister works in a shop."
 },
 {
-"id":"en-a1-158",
+"id":"en-a1-163",
 "level":"a1",
-"q":"What is the English word for ☂️?",
-"fr":"Quel est le mot anglais pour ☂️ ?",
-"es":"¿Cómo se dice ☂️ en inglés?",
-"correct":"umbrella",
+"q":"What is the English word for 🪑?",
+"fr":"Quel est le mot anglais pour 🪑 ?",
+"es":"¿Cómo se dice 🪑 en inglés?",
+"correct":"chair",
 "wrong":[
-"guitar",
-"hammer",
-"computer"
+"balloon",
+"shower",
+"key"
 ],
 "why":{
-"en":"☂️ = “umbrella”.",
-"fr":"☂️ se dit « umbrella » (parapluie).",
-"es":"☂️ se dice « umbrella » (paraguas)."
+"en":"🪑 = “chair”.",
+"fr":"🪑 se dit « chair » (chaise).",
+"es":"🪑 se dice « chair » (silla)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"umbrella"
+"aa":"It’s a chair."
 },
 {
 "id":"en-a1-159",
@@ -3180,6 +4520,26 @@
 "aa":"It's over there, on the left."
 },
 {
+"id":"en-a1-316",
+"level":"a1",
+"q":"Which letter is silent in “Wednesday”?",
+"fr":"Quelle lettre ne se prononce pas dans « Wednesday » ?",
+"es":"¿Qué letra no se pronuncia en « Wednesday »?",
+"correct":"d",
+"wrong":[
+"W",
+"n",
+"y"
+],
+"why":{
+"en":"In “Wednesday” the “d” is silent: we say “Wenzday”.",
+"fr":"Dans « Wednesday », le « d » ne se prononce pas : on dit “Wenzday”.",
+"es":"En « Wednesday », la « d » no se pronuncia: se dice “Wenzday”."
+},
+"qa":"Which letter is silent in Wednesday? Wednesday.",
+"aa":"Wednesday."
+},
+{
 "id":"en-a1-160",
 "level":"a1",
 "q":"Which day comes before Friday?",
@@ -3198,6 +4558,46 @@
 },
 "qa":"Which day comes before Friday?",
 "aa":"Thursday"
+},
+{
+"id":"en-a1-317",
+"level":"a1",
+"q":"Listen carefully, then answer: What colour are the shoes?",
+"fr":"Écoute bien, puis réponds : What colour are the shoes?",
+"es":"Escucha bien y responde: What colour are the shoes?",
+"correct":"Red",
+"wrong":[
+"Green",
+"Blue",
+"Black"
+],
+"why":{
+"en":"You heard: “My favourite colour is green. My bag is green and my shoes are red.”",
+"fr":"Tu as entendu : « My favourite colour is green. My bag is green and my shoes are red. »",
+"es":"Has oído: « My favourite colour is green. My bag is green and my shoes are red. »"
+},
+"qa":"My favourite colour is green. My bag is green and my shoes are red. What colour are the shoes?",
+"aa":"Red"
+},
+{
+"id":"en-a1-165",
+"level":"a1",
+"q":"What is the English word for 🛏️?",
+"fr":"Quel est le mot anglais pour 🛏️ ?",
+"es":"¿Cómo se dice 🛏️ en inglés?",
+"correct":"bed",
+"wrong":[
+"bell",
+"alarm clock",
+"backpack"
+],
+"why":{
+"en":"🛏️ = “bed”.",
+"fr":"🛏️ se dit « bed » (lit).",
+"es":"🛏️ se dice « bed » (cama)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a bed."
 },
 {
 "id":"en-a1-161",
@@ -3220,46 +4620,6 @@
 "aa":"The train leaves at six o'clock."
 },
 {
-"id":"en-a1-162",
-"level":"a1",
-"q":"What is the English word for 👓?",
-"fr":"Quel est le mot anglais pour 👓 ?",
-"es":"¿Cómo se dice 👓 en inglés?",
-"correct":"glasses",
-"wrong":[
-"present",
-"tent",
-"camera"
-],
-"why":{
-"en":"👓 = “glasses”.",
-"fr":"👓 se dit « glasses » (lunettes).",
-"es":"👓 se dice « glasses » (gafas)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"glasses"
-},
-{
-"id":"en-a1-163",
-"level":"a1",
-"q":"What is the English word for 🪑?",
-"fr":"Quel est le mot anglais pour 🪑 ?",
-"es":"¿Cómo se dice 🪑 en inglés?",
-"correct":"chair",
-"wrong":[
-"balloon",
-"shower",
-"key"
-],
-"why":{
-"en":"🪑 = “chair”.",
-"fr":"🪑 se dit « chair » (chaise).",
-"es":"🪑 se dice « chair » (silla)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"chair"
-},
-{
 "id":"en-a1-164",
 "level":"a1",
 "q":"Complete: “___ is a bank near the station.”",
@@ -3280,24 +4640,44 @@
 "aa":"There is a bank near the station."
 },
 {
-"id":"en-a1-165",
+"id":"en-a1-318",
 "level":"a1",
-"q":"What is the English word for 🛏️?",
-"fr":"Quel est le mot anglais pour 🛏️ ?",
-"es":"¿Cómo se dice 🛏️ en inglés?",
-"correct":"bed",
+"q":"Which word is stressed on the SECOND syllable?",
+"fr":"Quel mot est accentué sur la DEUXIÈME syllabe ?",
+"es":"¿Qué palabra se acentúa en la SEGUNDA sílaba?",
+"correct":"today",
 "wrong":[
-"bell",
-"alarm clock",
-"backpack"
+"monkey",
+"Sunday",
+"listen"
 ],
 "why":{
-"en":"🛏️ = “bed”.",
-"fr":"🛏️ se dit « bed » (lit).",
-"es":"🛏️ se dice « bed » (cama)."
+"en":"We say to-DAY: the loud, long part is the second one. The others are MON-key, SUN-day, LIS-ten.",
+"fr":"On dit to-DAY : la partie forte et longue est la deuxième. Les autres sont MON-key, SUN-day, LIS-ten.",
+"es":"Se dice to-DAY: la parte fuerte y larga es la segunda. Las otras son MON-key, SUN-day, LIS-ten."
+},
+"qa":"Which word is stressed on the second syllable? today, monkey, Sunday, listen.",
+"aa":"today."
+},
+{
+"id":"en-a1-167",
+"level":"a1",
+"q":"What is the English word for 🚪?",
+"fr":"Quel est le mot anglais pour 🚪 ?",
+"es":"¿Cómo se dice 🚪 en inglés?",
+"correct":"door",
+"wrong":[
+"candle",
+"phone",
+"pencil"
+],
+"why":{
+"en":"🚪 = “door”.",
+"fr":"🚪 se dit « door » (porte).",
+"es":"🚪 se dice « door » (puerta)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"bed"
+"aa":"It’s a door."
 },
 {
 "id":"en-a1-166",
@@ -3320,24 +4700,24 @@
 "aa":"There are three apples on the table."
 },
 {
-"id":"en-a1-167",
+"id":"en-a1-319",
 "level":"a1",
-"q":"What is the English word for 🚪?",
-"fr":"Quel est le mot anglais pour 🚪 ?",
-"es":"¿Cómo se dice 🚪 en inglés?",
-"correct":"door",
+"q":"What does “Excuse me” mean?",
+"fr":"Que veut dire « Excuse me » ?",
+"es":"¿Qué significa « Excuse me »?",
+"correct":"A polite way to get someone’s attention",
 "wrong":[
-"candle",
-"phone",
-"pencil"
+"I am very sorry for the mistake",
+"You can go first",
+"Please sit down"
 ],
 "why":{
-"en":"🚪 = “door”.",
-"fr":"🚪 se dit « door » (porte).",
-"es":"🚪 se dice « door » (puerta)."
+"en":"Use “Excuse me” to ask someone something or to pass.",
+"fr":"On dit « Excuse me » pour demander quelque chose ou passer.",
+"es":"Se dice « Excuse me » para preguntar algo o pasar."
 },
-"qa":"What is the English word for this picture?",
-"aa":"door"
+"qa":"What does Excuse me mean?",
+"aa":"A polite way to get someone's attention"
 },
 {
 "id":"en-a1-168",
@@ -3360,6 +4740,26 @@
 "aa":"dirty"
 },
 {
+"id":"en-a1-171",
+"level":"a1",
+"q":"What is the English word for 📺?",
+"fr":"Quel est le mot anglais pour 📺 ?",
+"es":"¿Cómo se dice 📺 en inglés?",
+"correct":"television",
+"wrong":[
+"spoon",
+"computer",
+"scissors"
+],
+"why":{
+"en":"📺 = “television”.",
+"fr":"📺 se dit « television » (télévision).",
+"es":"📺 se dice « television » (televisión)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a television."
+},
+{
 "id":"en-a1-169",
 "level":"a1",
 "q":"Someone says: “Are you hungry?” What do you answer?",
@@ -3378,6 +4778,26 @@
 },
 "qa":"Someone says: Are you hungry? What do you answer?",
 "aa":"Yes, I am. Let's eat!"
+},
+{
+"id":"en-a1-320",
+"level":"a1",
+"q":"Listen. Which word do you hear?",
+"fr":"Écoute. Quel mot entends-tu ?",
+"es":"Escucha. ¿Qué palabra oyes?",
+"correct":"light",
+"wrong":[
+"right",
+"night",
+"fight"
+],
+"why":{
+"en":"You heard “light”. /l/ touches the roof of the mouth with the tongue tip; /r/ does not touch anything.",
+"fr":"Tu as entendu « light ». /l/ : le bout de la langue touche le palais ; /r/ : la langue ne touche rien.",
+"es":"Has oído « light ». /l/: la punta de la lengua toca el paladar; /r/: no toca nada."
+},
+"qa":"light",
+"aa":"light"
 },
 {
 "id":"en-a1-170",
@@ -3400,24 +4820,44 @@
 "aa":"July"
 },
 {
-"id":"en-a1-171",
+"id":"en-a1-173",
 "level":"a1",
-"q":"What is the English word for 📺?",
-"fr":"Quel est le mot anglais pour 📺 ?",
-"es":"¿Cómo se dice 📺 en inglés?",
-"correct":"television",
+"q":"What is the English word for 🏫?",
+"fr":"Quel est le mot anglais pour 🏫 ?",
+"es":"¿Cómo se dice 🏫 en inglés?",
+"correct":"school",
 "wrong":[
-"spoon",
-"computer",
-"scissors"
+"castle",
+"tree",
+"train"
 ],
 "why":{
-"en":"📺 = “television”.",
-"fr":"📺 se dit « television » (télévision).",
-"es":"📺 se dice « television » (televisión)."
+"en":"🏫 = “school”.",
+"fr":"🏫 se dit « school » (école).",
+"es":"🏫 se dice « school » (colegio)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"television"
+"aa":"It’s a school."
+},
+{
+"id":"en-a1-321",
+"level":"a1",
+"q":"You say your age: you are 20. What do you say?",
+"fr":"Tu donnes ton âge : tu as 20 ans. Que dis-tu ?",
+"es":"Dices tu edad: tienes 20 años. ¿Qué dices?",
+"correct":"I’m twenty years old.",
+"wrong":[
+"I have twenty years.",
+"I am twenty years.",
+"I have twenty years old."
+],
+"why":{
+"en":"In English you ARE twenty, you do not “have” twenty. Another trap for French speakers!",
+"fr":"En anglais on EST vingt ans, on n’« a » pas vingt ans. Un autre piège pour les francophones !",
+"es":"En inglés SE ES de veinte años, no se « tiene ». ¡Otra trampa!"
+},
+"qa":"You say your age: you are 20. What do you say?",
+"aa":"I'm twenty years old."
 },
 {
 "id":"en-a1-172",
@@ -3440,26 +4880,6 @@
 "aa":"Who is your teacher? Mr Smith."
 },
 {
-"id":"en-a1-173",
-"level":"a1",
-"q":"What is the English word for 🏫?",
-"fr":"Quel est le mot anglais pour 🏫 ?",
-"es":"¿Cómo se dice 🏫 en inglés?",
-"correct":"school",
-"wrong":[
-"castle",
-"tree",
-"train"
-],
-"why":{
-"en":"🏫 = “school”.",
-"fr":"🏫 se dit « school » (école).",
-"es":"🏫 se dice « school » (colegio)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"school"
-},
-{
 "id":"en-a1-174",
 "level":"a1",
 "q":"“Anna likes animals. She has two cats and a rabbit. She does not have a dog. Her cats are black.” How many cats does Anna have?",
@@ -3480,6 +4900,26 @@
 "aa":"Two."
 },
 {
+"id":"en-a1-322",
+"level":"a1",
+"q":"Which word rhymes with “name”?",
+"fr":"Quel mot rime avec « name » ?",
+"es":"¿Qué palabra rima con « name »?",
+"correct":"game",
+"wrong":[
+"man",
+"mean",
+"meat"
+],
+"why":{
+"en":"“name” and “game” rhyme: they end with the same sound /eɪm/. The spelling can be different!",
+"fr":"« name » et « game » riment : ils finissent par le même son /eɪm/. L’orthographe peut être différente !",
+"es":"« name » y « game » riman: acaban con el mismo sonido /eɪm/. ¡La ortografía puede ser distinta!"
+},
+"qa":"Which word rhymes with name?",
+"aa":"name. game."
+},
+{
 "id":"en-a1-175",
 "level":"a1",
 "q":"What is the English word for 🏥?",
@@ -3497,7 +4937,7 @@
 "es":"🏥 se dice « hospital » (hospital)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"hospital"
+"aa":"It’s a hospital."
 },
 {
 "id":"en-a1-176",
@@ -3520,24 +4960,24 @@
 "aa":"Where do you live? In Lyon."
 },
 {
-"id":"en-a1-177",
+"id":"en-a1-323",
 "level":"a1",
-"q":"What is the English word for 🏦?",
-"fr":"Quel est le mot anglais pour 🏦 ?",
-"es":"¿Cómo se dice 🏦 en inglés?",
-"correct":"bank",
+"q":"Which word has a different vowel sound?",
+"fr":"Quel mot a un son de voyelle différent ?",
+"es":"¿Qué palabra tiene un sonido de vocal distinto?",
+"correct":"tea",
 "wrong":[
-"beach",
-"bus",
-"bicycle"
+"play",
+"day",
+"say"
 ],
 "why":{
-"en":"🏦 = “bank”.",
-"fr":"🏦 se dit « bank » (banque).",
-"es":"🏦 se dice « bank » (banco)."
+"en":"“tea” is /iː/; the others are /eɪ/.",
+"fr":"« tea » se dit /iː/ ; les autres se disent /eɪ/.",
+"es":"« tea » se dice /iː/; las otras se dicen /eɪ/."
 },
-"qa":"What is the English word for this picture?",
-"aa":"bank"
+"qa":"Which word has a different vowel sound? play, day, say, tea.",
+"aa":"play, day, say, tea."
 },
 {
 "id":"en-a1-178",
@@ -3560,6 +5000,26 @@
 "aa":"What is your name?"
 },
 {
+"id":"en-a1-177",
+"level":"a1",
+"q":"What is the English word for 🏦?",
+"fr":"Quel est le mot anglais pour 🏦 ?",
+"es":"¿Cómo se dice 🏦 en inglés?",
+"correct":"bank",
+"wrong":[
+"beach",
+"bus",
+"bicycle"
+],
+"why":{
+"en":"🏦 = “bank”.",
+"fr":"🏦 se dit « bank » (banque).",
+"es":"🏦 se dice « bank » (banco)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a bank."
+},
+{
 "id":"en-a1-179",
 "level":"a1",
 "q":"Complete: “___ is your birthday? — In May.”",
@@ -3578,6 +5038,26 @@
 },
 "qa":"Complete the sentence. blank is your birthday? In May.",
 "aa":"When is your birthday? In May."
+},
+{
+"id":"en-a1-324",
+"level":"a1",
+"q":"Put the words in order: “half / it / is / past / two”",
+"fr":"Remets les mots dans l’ordre : « half / it / is / past / two »",
+"es":"Ordena las palabras: « half / it / is / past / two »",
+"correct":"It is half past two.",
+"wrong":[
+"It is past half two.",
+"It is two half past.",
+"Half it is past two."
+],
+"why":{
+"en":"“It is half past two.” “Half past two” = 2:30.",
+"fr":"« It is half past two. » « Half past two » = 2 h 30.",
+"es":"« It is half past two. » « Half past two » = las 2:30."
+},
+"qa":"Put the words in order. half , it , is , past , two",
+"aa":"It is half past two."
 },
 {
 "id":"en-a1-180",
@@ -3600,6 +5080,46 @@
 "aa":"Yes, a little."
 },
 {
+"id":"en-a1-182",
+"level":"a1",
+"q":"What is the English word for ⛪?",
+"fr":"Quel est le mot anglais pour ⛪ ?",
+"es":"¿Cómo se dice ⛪ en inglés?",
+"correct":"church",
+"wrong":[
+"mountain",
+"train",
+"ship"
+],
+"why":{
+"en":"⛪ = “church”.",
+"fr":"⛪ se dit « church » (église).",
+"es":"⛪ se dice « church » (iglesia)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a church."
+},
+{
+"id":"en-a1-325",
+"level":"a1",
+"q":"Which word sounds the same as “hear”?",
+"fr":"Quel mot se prononce comme « hear » ?",
+"es":"¿Qué palabra suena igual que « hear »?",
+"correct":"here",
+"wrong":[
+"her",
+"hair",
+"hare"
+],
+"why":{
+"en":"“hear” and “here” sound the same (/hɪər/) but are spelled differently: We “hear” with our ears; “here” is the opposite of “there”.",
+"fr":"« hear » et « here » se prononcent pareil (/hɪər/) mais s’écrivent différemment : On « hear » (entend) avec les oreilles ; « here » = ici.",
+"es":"« hear » y « here » suenan igual (/hɪər/) pero se escriben distinto: Se « hear » (oye) con las orejas; « here » = aquí."
+},
+"qa":"Which word sounds the same as hear?",
+"aa":"hear. here."
+},
+{
 "id":"en-a1-181",
 "level":"a1",
 "q":"Which season comes after winter?",
@@ -3618,26 +5138,6 @@
 },
 "qa":"Which season comes after winter?",
 "aa":"spring"
-},
-{
-"id":"en-a1-182",
-"level":"a1",
-"q":"What is the English word for ⛪?",
-"fr":"Quel est le mot anglais pour ⛪ ?",
-"es":"¿Cómo se dice ⛪ en inglés?",
-"correct":"church",
-"wrong":[
-"mountain",
-"train",
-"ship"
-],
-"why":{
-"en":"⛪ = “church”.",
-"fr":"⛪ se dit « church » (église).",
-"es":"⛪ se dice « church » (iglesia)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"church"
 },
 {
 "id":"en-a1-183",
@@ -3660,6 +5160,26 @@
 "aa":"old"
 },
 {
+"id":"en-a1-326",
+"level":"a1",
+"q":"Which word has the same first sound as “phone”?",
+"fr":"Quel mot a le même premier son que « phone » ?",
+"es":"¿Qué palabra tiene el mismo primer sonido que « phone »?",
+"correct":"fish",
+"wrong":[
+"pen",
+"hand",
+"van"
+],
+"why":{
+"en":"“phone” and “fish” share the sound /f/. Not the same: “pen” /p/. “hand” /h/. “van” /v/.",
+"fr":"« phone » et « fish » ont le même son /f/. Pas le même : « pen » /p/. « hand » /h/. « van » /v/.",
+"es":"« phone » y « fish » tienen el mismo sonido /f/. No es igual: « pen » /p/. « hand » /h/. « van » /v/."
+},
+"qa":"Which word has the same first sound as phone?",
+"aa":"phone. fish."
+},
+{
 "id":"en-a1-184",
 "level":"a1",
 "q":"What is the English word for 🏰?",
@@ -3677,7 +5197,7 @@
 "es":"🏰 se dice « castle » (castillo)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"castle"
+"aa":"It’s a castle."
 },
 {
 "id":"en-a1-185",
@@ -3700,24 +5220,24 @@
 "aa":"Why is he sad? Because he lost his dog."
 },
 {
-"id":"en-a1-186",
+"id":"en-a1-327",
 "level":"a1",
-"q":"What is the English word for 🌉?",
-"fr":"Quel est le mot anglais pour 🌉 ?",
-"es":"¿Cómo se dice 🌉 en inglés?",
-"correct":"bridge",
+"q":"Listen. Which word do you hear?",
+"fr":"Écoute. Quel mot entends-tu ?",
+"es":"Escucha. ¿Qué palabra oyes?",
+"correct":"wine",
 "wrong":[
-"flower",
-"bicycle",
-"school"
+"vine",
+"wide",
+"line"
 ],
 "why":{
-"en":"🌉 = “bridge”.",
-"fr":"🌉 se dit « bridge » (pont).",
-"es":"🌉 se dice « bridge » (puente)."
+"en":"You heard “wine”. “wine” starts with /w/ (round lips, like “oo”); “vine” starts with /v/.",
+"fr":"Tu as entendu « wine ». « wine » commence par /w/ (lèvres arrondies, comme « ou ») ; « vine » commence par /v/.",
+"es":"Has oído « wine ». « wine » empieza con /w/ (labios redondos, como « u »); « vine » empieza con /v/."
 },
-"qa":"What is the English word for this picture?",
-"aa":"bridge"
+"qa":"wine",
+"aa":"wine"
 },
 {
 "id":"en-a1-187",
@@ -3740,44 +5260,24 @@
 "aa":"Look! The children are playing in the park."
 },
 {
-"id":"en-a1-188",
+"id":"en-a1-186",
 "level":"a1",
-"q":"What is the English word for 🏖️?",
-"fr":"Quel est le mot anglais pour 🏖️ ?",
-"es":"¿Cómo se dice 🏖️ en inglés?",
-"correct":"beach",
+"q":"What is the English word for 🌉?",
+"fr":"Quel est le mot anglais pour 🌉 ?",
+"es":"¿Cómo se dice 🌉 en inglés?",
+"correct":"bridge",
 "wrong":[
-"bus",
-"ship",
-"hospital"
+"flower",
+"bicycle",
+"school"
 ],
 "why":{
-"en":"🏖️ = “beach”.",
-"fr":"🏖️ se dit « beach » (plage).",
-"es":"🏖️ se dice « beach » (playa)."
+"en":"🌉 = “bridge”.",
+"fr":"🌉 se dit « bridge » (pont).",
+"es":"🌉 se dice « bridge » (puente)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"beach"
-},
-{
-"id":"en-a1-189",
-"level":"a1",
-"q":"What is the English word for ⛰️?",
-"fr":"Quel est le mot anglais pour ⛰️ ?",
-"es":"¿Cómo se dice ⛰️ en inglés?",
-"correct":"mountain",
-"wrong":[
-"train",
-"helicopter",
-"bank"
-],
-"why":{
-"en":"⛰️ = “mountain”.",
-"fr":"⛰️ se dit « mountain » (montagne).",
-"es":"⛰️ se dice « mountain » (montaña)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"mountain"
+"aa":"It’s a bridge."
 },
 {
 "id":"en-a1-190",
@@ -3800,6 +5300,26 @@
 "aa":"He's ten."
 },
 {
+"id":"en-a1-328",
+"level":"a1",
+"q":"You are hungry. What do you say?",
+"fr":"Tu as faim. Que dis-tu ?",
+"es":"Tienes hambre. ¿Qué dices?",
+"correct":"I’m hungry.",
+"wrong":[
+"I have hungry.",
+"I have hunger.",
+"I am hunger."
+],
+"why":{
+"en":"“Hungry” is an adjective: I am hungry (not “I have hunger”).",
+"fr":"« Hungry » est un adjectif : I am hungry (et non « I have hunger »).",
+"es":"« Hungry » es un adjetivo: I am hungry (no « I have hunger »)."
+},
+"qa":"You are hungry. What do you say?",
+"aa":"I'm hungry."
+},
+{
 "id":"en-a1-191",
 "level":"a1",
 "q":"Which day is the first day of the week in many countries?",
@@ -3818,6 +5338,46 @@
 },
 "qa":"Which day is the first day of the week in many countries?",
 "aa":"Monday"
+},
+{
+"id":"en-a1-188",
+"level":"a1",
+"q":"What is the English word for 🏖️?",
+"fr":"Quel est le mot anglais pour 🏖️ ?",
+"es":"¿Cómo se dice 🏖️ en inglés?",
+"correct":"beach",
+"wrong":[
+"bus",
+"ship",
+"hospital"
+],
+"why":{
+"en":"🏖️ = “beach”.",
+"fr":"🏖️ se dit « beach » (plage).",
+"es":"🏖️ se dice « beach » (playa)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a beach."
+},
+{
+"id":"en-a1-329",
+"level":"a1",
+"q":"Listen carefully, then answer: When does Anna have breakfast?",
+"fr":"Écoute bien, puis réponds : When does Anna have breakfast?",
+"es":"Escucha bien y responde: When does Anna have breakfast?",
+"correct":"At half past seven",
+"wrong":[
+"At seven",
+"At eight",
+"At half past eight"
+],
+"why":{
+"en":"You heard: “Anna gets up at seven. She has breakfast at half past seven. She goes to school at eight.”",
+"fr":"Tu as entendu : « Anna gets up at seven. She has breakfast at half past seven. She goes to school at eight. »",
+"es":"Has oído: « Anna gets up at seven. She has breakfast at half past seven. She goes to school at eight. »"
+},
+"qa":"Anna gets up at seven. She has breakfast at half past seven. She goes to school at eight. When does Anna have breakfast?",
+"aa":"At half past seven"
 },
 {
 "id":"en-a1-192",
@@ -3840,26 +5400,6 @@
 "aa":"I am reading a book now."
 },
 {
-"id":"en-a1-193",
-"level":"a1",
-"q":"What is the English word for 👕?",
-"fr":"Quel est le mot anglais pour 👕 ?",
-"es":"¿Cómo se dice 👕 en inglés?",
-"correct":"T-shirt",
-"wrong":[
-"coat",
-"cap",
-"gloves"
-],
-"why":{
-"en":"👕 = “T-shirt”.",
-"fr":"👕 se dit « T-shirt » (tee-shirt).",
-"es":"👕 se dice « T-shirt » (camiseta)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"T-shirt"
-},
-{
 "id":"en-a1-194",
 "level":"a1",
 "q":"“Anna likes animals. She has two cats and a rabbit. She does not have a dog. Her cats are black.” What colour are Anna’s cats?",
@@ -3878,6 +5418,46 @@
 },
 "qa":"Anna likes animals. She has two cats and a rabbit. She does not have a dog. Her cats are black. What colour are Anna's cats?",
 "aa":"Black."
+},
+{
+"id":"en-a1-330",
+"level":"a1",
+"q":"Which word has the same first sound as “knee”?",
+"fr":"Quel mot a le même premier son que « knee » ?",
+"es":"¿Qué palabra tiene el mismo primer sonido que « knee »?",
+"correct":"nose",
+"wrong":[
+"key",
+"tea",
+"go"
+],
+"why":{
+"en":"“knee” and “nose” share the sound /n/. Not the same: “key” /k/. “tea” /t/. “go” /ɡ/.",
+"fr":"« knee » et « nose » ont le même son /n/. Pas le même : « key » /k/. « tea » /t/. « go » /ɡ/.",
+"es":"« knee » y « nose » tienen el mismo sonido /n/. No es igual: « key » /k/. « tea » /t/. « go » /ɡ/."
+},
+"qa":"Which word has the same first sound as knee?",
+"aa":"knee. nose."
+},
+{
+"id":"en-a1-189",
+"level":"a1",
+"q":"What is the English word for ⛰️?",
+"fr":"Quel est le mot anglais pour ⛰️ ?",
+"es":"¿Cómo se dice ⛰️ en inglés?",
+"correct":"mountain",
+"wrong":[
+"train",
+"helicopter",
+"bank"
+],
+"why":{
+"en":"⛰️ = “mountain”.",
+"fr":"⛰️ se dit « mountain » (montagne).",
+"es":"⛰️ se dice « mountain » (montaña)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a mountain."
 },
 {
 "id":"en-a1-195",
@@ -3900,24 +5480,24 @@
 "aa":"Open the door, please."
 },
 {
-"id":"en-a1-196",
+"id":"en-a1-331",
 "level":"a1",
-"q":"What is the English word for 👖?",
-"fr":"Quel est le mot anglais pour 👖 ?",
-"es":"¿Cómo se dice 👖 en inglés?",
-"correct":"jeans",
+"q":"Which letter is silent in “listen”?",
+"fr":"Quelle lettre ne se prononce pas dans « listen » ?",
+"es":"¿Qué letra no se pronuncia en « listen »?",
+"correct":"t",
 "wrong":[
-"socks",
-"scarf",
-"boot"
+"l",
+"s",
+"n"
 ],
 "why":{
-"en":"👖 = “jeans”.",
-"fr":"👖 se dit « jeans » (jean).",
-"es":"👖 se dice « jeans » (vaqueros)."
+"en":"In “listen” the “t” is silent: we say “lissen”.",
+"fr":"Dans « listen », le « t » ne se prononce pas : on dit “lissen”.",
+"es":"En « listen », la « t » no se pronuncia: se dice “lissen”."
 },
-"qa":"What is the English word for this picture?",
-"aa":"jeans"
+"qa":"Which letter is silent in listen? listen.",
+"aa":"listen."
 },
 {
 "id":"en-a1-197",
@@ -3940,24 +5520,24 @@
 "aa":"down"
 },
 {
-"id":"en-a1-198",
+"id":"en-a1-193",
 "level":"a1",
-"q":"What is the English word for 👗?",
-"fr":"Quel est le mot anglais pour 👗 ?",
-"es":"¿Cómo se dice 👗 en inglés?",
-"correct":"dress",
+"q":"What is the English word for 👕?",
+"fr":"Quel est le mot anglais pour 👕 ?",
+"es":"¿Cómo se dice 👕 en inglés?",
+"correct":"T-shirt",
 "wrong":[
+"coat",
 "cap",
-"gloves",
-"tie"
+"gloves"
 ],
 "why":{
-"en":"👗 = “dress”.",
-"fr":"👗 se dit « dress » (robe).",
-"es":"👗 se dice « dress » (vestido)."
+"en":"👕 = “T-shirt”.",
+"fr":"👕 se dit « T-shirt » (tee-shirt).",
+"es":"👕 se dice « T-shirt » (camiseta)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"dress"
+"aa":"It’s a T-shirt."
 },
 {
 "id":"en-a1-199",
@@ -3980,24 +5560,24 @@
 "aa":"Don't run in the classroom!"
 },
 {
-"id":"en-a1-200",
+"id":"en-a1-332",
 "level":"a1",
-"q":"What is the English word for 🧥?",
-"fr":"Quel est le mot anglais pour 🧥 ?",
-"es":"¿Cómo se dice 🧥 en inglés?",
-"correct":"coat",
+"q":"Listen. Which word do you hear?",
+"fr":"Écoute. Quel mot entends-tu ?",
+"es":"Escucha. ¿Qué palabra oyes?",
+"correct":"hat",
 "wrong":[
-"scarf",
-"boot",
-"T-shirt"
+"hot",
+"heart",
+"hit"
 ],
 "why":{
-"en":"🧥 = “coat”.",
-"fr":"🧥 se dit « coat » (manteau).",
-"es":"🧥 se dice « coat » (abrigo)."
+"en":"You heard “hat”. “hat” has the open /æ/ sound. Remember to say the /h/ with a little breath!",
+"fr":"Tu as entendu « hat ». « hat » a le son ouvert /æ/. N’oublie pas le /h/ avec un petit souffle !",
+"es":"Has oído « hat ». « hat » tiene el sonido abierto /æ/. ¡No olvides la /h/ con un poco de aire!"
 },
-"qa":"What is the English word for this picture?",
-"aa":"coat"
+"qa":"hat",
+"aa":"hat"
 },
 {
 "id":"en-a1-201",
@@ -4018,6 +5598,46 @@
 },
 "qa":"Someone says: What do you do at the weekend? What do you answer?",
 "aa":"I play football with my friends."
+},
+{
+"id":"en-a1-196",
+"level":"a1",
+"q":"What is the English word for 👖?",
+"fr":"Quel est le mot anglais pour 👖 ?",
+"es":"¿Cómo se dice 👖 en inglés?",
+"correct":"jeans",
+"wrong":[
+"socks",
+"scarf",
+"boot"
+],
+"why":{
+"en":"👖 = “jeans”.",
+"fr":"👖 se dit « jeans » (jean).",
+"es":"👖 se dice « jeans » (vaqueros)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"They’re jeans."
+},
+{
+"id":"en-a1-333",
+"level":"a1",
+"q":"In a restaurant, you want to pay. What do you say?",
+"fr":"Au restaurant, tu veux payer. Que dis-tu ?",
+"es":"En un restaurante quieres pagar. ¿Qué dices?",
+"correct":"Can I have the bill, please?",
+"wrong":[
+"Can I have the addition, please?",
+"Can I have the invoice, please?",
+"Can I pay the bill you, please?"
+],
+"why":{
+"en":"In English, the restaurant “bill” (in American English “check”) is not the “addition”.",
+"fr":"En anglais, l’addition du restaurant se dit « bill » (en américain « check »).",
+"es":"En inglés, la cuenta del restaurante se dice « bill » (en inglés americano « check »)."
+},
+"qa":"In a restaurant, you want to pay. What do you say?",
+"aa":"Can I have the bill, please?"
 },
 {
 "id":"en-a1-202",
@@ -4060,24 +5680,44 @@
 "aa":"The class starts at nine o'clock."
 },
 {
-"id":"en-a1-204",
+"id":"en-a1-198",
 "level":"a1",
-"q":"What is the English word for 🧦?",
-"fr":"Quel est le mot anglais pour 🧦 ?",
-"es":"¿Cómo se dice 🧦 en inglés?",
-"correct":"socks",
+"q":"What is the English word for 👗?",
+"fr":"Quel est le mot anglais pour 👗 ?",
+"es":"¿Cómo se dice 👗 en inglés?",
+"correct":"dress",
 "wrong":[
+"cap",
 "gloves",
-"tie",
-"jeans"
+"tie"
 ],
 "why":{
-"en":"🧦 = “socks”.",
-"fr":"🧦 se dit « socks » (chaussettes).",
-"es":"🧦 se dice « socks » (calcetines)."
+"en":"👗 = “dress”.",
+"fr":"👗 se dit « dress » (robe).",
+"es":"👗 se dice « dress » (vestido)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"socks"
+"aa":"It’s a dress."
+},
+{
+"id":"en-a1-334",
+"level":"a1",
+"q":"Which word rhymes with “moon”?",
+"fr":"Quel mot rime avec « moon » ?",
+"es":"¿Qué palabra rima con « moon »?",
+"correct":"spoon",
+"wrong":[
+"man",
+"mine",
+"mouse"
+],
+"why":{
+"en":"“moon” and “spoon” rhyme: they end with the same sound /uːn/. The spelling can be different!",
+"fr":"« moon » et « spoon » riment : ils finissent par le même son /uːn/. L’orthographe peut être différente !",
+"es":"« moon » y « spoon » riman: acaban con el mismo sonido /uːn/. ¡La ortografía puede ser distinta!"
+},
+"qa":"Which word rhymes with moon?",
+"aa":"moon. spoon."
 },
 {
 "id":"en-a1-205",
@@ -4100,24 +5740,44 @@
 "aa":"He can play the guitar."
 },
 {
-"id":"en-a1-206",
+"id":"en-a1-335",
 "level":"a1",
-"q":"What is the English word for 🧢?",
-"fr":"Quel est le mot anglais pour 🧢 ?",
-"es":"¿Cómo se dice 🧢 en inglés?",
-"correct":"cap",
+"q":"Which word has a different vowel sound?",
+"fr":"Quel mot a un son de voyelle différent ?",
+"es":"¿Qué palabra tiene un sonido de vocal distinto?",
+"correct":"see",
 "wrong":[
-"boot",
-"T-shirt",
-"dress"
+"ship",
+"fish",
+"sit"
 ],
 "why":{
-"en":"🧢 = “cap”.",
-"fr":"🧢 se dit « cap » (casquette).",
-"es":"🧢 se dice « cap » (gorra)."
+"en":"“see” is /iː/; the others are /ɪ/.",
+"fr":"« see » se dit /iː/ ; les autres se disent /ɪ/.",
+"es":"« see » se dice /iː/; las otras se dicen /ɪ/."
+},
+"qa":"Which word has a different vowel sound? ship, fish, sit, see.",
+"aa":"ship, fish, sit, see."
+},
+{
+"id":"en-a1-200",
+"level":"a1",
+"q":"What is the English word for 🧥?",
+"fr":"Quel est le mot anglais pour 🧥 ?",
+"es":"¿Cómo se dice 🧥 en inglés?",
+"correct":"coat",
+"wrong":[
+"scarf",
+"boot",
+"T-shirt"
+],
+"why":{
+"en":"🧥 = “coat”.",
+"fr":"🧥 se dit « coat » (manteau).",
+"es":"🧥 se dice « coat » (abrigo)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"cap"
+"aa":"It’s a coat."
 },
 {
 "id":"en-a1-207",
@@ -4140,26 +5800,6 @@
 "aa":"I go to school on Monday."
 },
 {
-"id":"en-a1-208",
-"level":"a1",
-"q":"What is the English word for 👁️?",
-"fr":"Quel est le mot anglais pour 👁️ ?",
-"es":"¿Cómo se dice 👁️ en inglés?",
-"correct":"eye",
-"wrong":[
-"nose",
-"hand",
-"foot"
-],
-"why":{
-"en":"👁️ = “eye”.",
-"fr":"👁️ se dit « eye » (œil).",
-"es":"👁️ se dice « eye » (ojo)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"eye"
-},
-{
 "id":"en-a1-209",
 "level":"a1",
 "q":"Complete: “We have a holiday ___ July.”",
@@ -4180,24 +5820,44 @@
 "aa":"We have a holiday in July."
 },
 {
-"id":"en-a1-210",
+"id":"en-a1-336",
 "level":"a1",
-"q":"What is the English word for 👂?",
-"fr":"Quel est le mot anglais pour 👂 ?",
-"es":"¿Cómo se dice 👂 en inglés?",
-"correct":"ear",
+"q":"Put the words in order: “don’t / understand / I”",
+"fr":"Remets les mots dans l’ordre : « don’t / understand / I »",
+"es":"Ordena las palabras: « don’t / understand / I »",
+"correct":"I don’t understand.",
 "wrong":[
-"mouth",
-"foot",
-"tooth"
+"I understand don’t.",
+"Don’t I understand.",
+"I no understand."
 ],
 "why":{
-"en":"👂 = “ear”.",
-"fr":"👂 se dit « ear » (oreille).",
-"es":"👂 se dice « ear » (oreja)."
+"en":"“I don’t understand.” The negative is “don’t” before the verb.",
+"fr":"« I don’t understand. » La négation « don’t » se met avant le verbe.",
+"es":"« I don’t understand. » La negación « don’t » va antes del verbo."
+},
+"qa":"Put the words in order. don't , understand , I",
+"aa":"I don't understand."
+},
+{
+"id":"en-a1-204",
+"level":"a1",
+"q":"What is the English word for 🧦?",
+"fr":"Quel est le mot anglais pour 🧦 ?",
+"es":"¿Cómo se dice 🧦 en inglés?",
+"correct":"socks",
+"wrong":[
+"gloves",
+"tie",
+"jeans"
+],
+"why":{
+"en":"🧦 = “socks”.",
+"fr":"🧦 se dit « socks » (chaussettes).",
+"es":"🧦 se dice « socks » (calcetines)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"ear"
+"aa":"They’re socks."
 },
 {
 "id":"en-a1-211",
@@ -4220,6 +5880,26 @@
 "aa":"closed"
 },
 {
+"id":"en-a1-337",
+"level":"a1",
+"q":"Which word sounds the same as “blue”?",
+"fr":"Quel mot se prononce comme « blue » ?",
+"es":"¿Qué palabra suena igual que « blue »?",
+"correct":"blew",
+"wrong":[
+"blow",
+"glue",
+"black"
+],
+"why":{
+"en":"“blue” and “blew” sound the same (/bluː/) but are spelled differently: “blue” is a colour, “blew” is the past of “blow”.",
+"fr":"« blue » et « blew » se prononcent pareil (/bluː/) mais s’écrivent différemment : « blue » = bleu, « blew » = passé de « blow » (souffler).",
+"es":"« blue » y « blew » suenan igual (/bluː/) pero se escriben distinto: « blue » = azul, « blew » = pasado de « blow » (soplar)."
+},
+"qa":"Which word sounds the same as blue?",
+"aa":"blue. blew."
+},
+{
 "id":"en-a1-212",
 "level":"a1",
 "q":"Someone says: “What’s the date today?” What do you answer?",
@@ -4238,6 +5918,26 @@
 },
 "qa":"Someone says: What's the date today? What do you answer?",
 "aa":"It's the fifth of May."
+},
+{
+"id":"en-a1-206",
+"level":"a1",
+"q":"What is the English word for 🧢?",
+"fr":"Quel est le mot anglais pour 🧢 ?",
+"es":"¿Cómo se dice 🧢 en inglés?",
+"correct":"cap",
+"wrong":[
+"boot",
+"T-shirt",
+"dress"
+],
+"why":{
+"en":"🧢 = “cap”.",
+"fr":"🧢 se dit « cap » (casquette).",
+"es":"🧢 se dice « cap » (gorra)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a cap."
 },
 {
 "id":"en-a1-213",
@@ -4260,24 +5960,24 @@
 "aa":"It's a quarter to nine."
 },
 {
-"id":"en-a1-214",
+"id":"en-a1-338",
 "level":"a1",
-"q":"What is the English word for 👃?",
-"fr":"Quel est le mot anglais pour 👃 ?",
-"es":"¿Cómo se dice 👃 en inglés?",
-"correct":"nose",
+"q":"Which word has the same first sound as “city”?",
+"fr":"Quel mot a le même premier son que « city » ?",
+"es":"¿Qué palabra tiene el mismo primer sonido que « city »?",
+"correct":"sun",
 "wrong":[
-"hand",
-"tooth",
-"leg"
+"cat",
+"chair",
+"zoo"
 ],
 "why":{
-"en":"👃 = “nose”.",
-"fr":"👃 se dit « nose » (nez).",
-"es":"👃 se dice « nose » (nariz)."
+"en":"“city” and “sun” share the sound /s/. Not the same: “cat” /k/. “chair” /tʃ/. “zoo” /z/.",
+"fr":"« city » et « sun » ont le même son /s/. Pas le même : « cat » /k/. « chair » /tʃ/. « zoo » /z/.",
+"es":"« city » y « sun » tienen el mismo sonido /s/. No es igual: « cat » /k/. « chair » /tʃ/. « zoo » /z/."
 },
-"qa":"What is the English word for this picture?",
-"aa":"nose"
+"qa":"Which word has the same first sound as city?",
+"aa":"city. sun."
 },
 {
 "id":"en-a1-215",
@@ -4300,6 +6000,46 @@
 "aa":"On Sunday."
 },
 {
+"id":"en-a1-339",
+"level":"a1",
+"q":"Listen carefully, then answer: What does the speaker not like?",
+"fr":"Écoute bien, puis réponds : What does the speaker not like?",
+"es":"Escucha bien y responde: What does the speaker not like?",
+"correct":"Fish",
+"wrong":[
+"Pizza",
+"Pasta",
+"Meat"
+],
+"why":{
+"en":"You heard: “I like pizza and pasta, but I do not like fish.”",
+"fr":"Tu as entendu : « I like pizza and pasta, but I do not like fish. »",
+"es":"Has oído: « I like pizza and pasta, but I do not like fish. »"
+},
+"qa":"I like pizza and pasta, but I do not like fish. What does the speaker not like?",
+"aa":"Fish"
+},
+{
+"id":"en-a1-208",
+"level":"a1",
+"q":"What is the English word for 👁️?",
+"fr":"Quel est le mot anglais pour 👁️ ?",
+"es":"¿Cómo se dice 👁️ en inglés?",
+"correct":"eye",
+"wrong":[
+"nose",
+"hand",
+"foot"
+],
+"why":{
+"en":"👁️ = “eye”.",
+"fr":"👁️ se dit « eye » (œil).",
+"es":"👁️ se dice « eye » (ojo)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s an eye."
+},
+{
 "id":"en-a1-216",
 "level":"a1",
 "q":"Complete: “I would like ___ water, please.”",
@@ -4318,46 +6058,6 @@
 },
 "qa":"Complete the sentence. I would like blank water, please.",
 "aa":"I would like some water, please."
-},
-{
-"id":"en-a1-217",
-"level":"a1",
-"q":"What is the English word for 👄?",
-"fr":"Quel est le mot anglais pour 👄 ?",
-"es":"¿Cómo se dice 👄 en inglés?",
-"correct":"mouth",
-"wrong":[
-"foot",
-"leg",
-"eye"
-],
-"why":{
-"en":"👄 = “mouth”.",
-"fr":"👄 se dit « mouth » (bouche).",
-"es":"👄 se dice « mouth » (boca)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"mouth"
-},
-{
-"id":"en-a1-218",
-"level":"a1",
-"q":"What is the English word for ⭐?",
-"fr":"Quel est le mot anglais pour ⭐ ?",
-"es":"¿Cómo se dice ⭐ en inglés?",
-"correct":"star",
-"wrong":[
-"cloud",
-"fire",
-"rainbow"
-],
-"why":{
-"en":"⭐ = “star”.",
-"fr":"⭐ se dit « star » (étoile).",
-"es":"⭐ se dice « star » (estrella)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"star"
 },
 {
 "id":"en-a1-219",
@@ -4380,24 +6080,44 @@
 "aa":"We haven't got any bread."
 },
 {
-"id":"en-a1-220",
+"id":"en-a1-340",
 "level":"a1",
-"q":"What is the English word for 🌙?",
-"fr":"Quel est le mot anglais pour 🌙 ?",
-"es":"¿Cómo se dice 🌙 en inglés?",
-"correct":"moon",
+"q":"Which word is stressed on the SECOND syllable?",
+"fr":"Quel mot est accentué sur la DEUXIÈME syllabe ?",
+"es":"¿Qué palabra se acentúa en la SEGUNDA sílaba?",
+"correct":"prefer",
 "wrong":[
-"snow",
-"rainbow",
-"wave"
+"open",
+"visit",
+"answer"
 ],
 "why":{
-"en":"🌙 = “moon”.",
-"fr":"🌙 se dit « moon » (lune).",
-"es":"🌙 se dice « moon » (luna)."
+"en":"We say pre-FER: the loud, long part is the second one. The others are O-pen, VIS-it, AN-swer.",
+"fr":"On dit pre-FER : la partie forte et longue est la deuxième. Les autres sont O-pen, VIS-it, AN-swer.",
+"es":"Se dice pre-FER: la parte fuerte y larga es la segunda. Las otras son O-pen, VIS-it, AN-swer."
+},
+"qa":"Which word is stressed on the second syllable? prefer, open, visit, answer.",
+"aa":"prefer."
+},
+{
+"id":"en-a1-210",
+"level":"a1",
+"q":"What is the English word for 👂?",
+"fr":"Quel est le mot anglais pour 👂 ?",
+"es":"¿Cómo se dice 👂 en inglés?",
+"correct":"ear",
+"wrong":[
+"mouth",
+"foot",
+"tooth"
+],
+"why":{
+"en":"👂 = “ear”.",
+"fr":"👂 se dit « ear » (oreille).",
+"es":"👂 se dice « ear » (oreja)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"moon"
+"aa":"It’s an ear."
 },
 {
 "id":"en-a1-221",
@@ -4420,6 +6140,26 @@
 "aa":"No, it isn't. Mine is red."
 },
 {
+"id":"en-a1-341",
+"level":"a1",
+"q":"What does “Of course” mean?",
+"fr":"Que veut dire « Of course » ?",
+"es":"¿Qué significa « Of course »?",
+"correct":"Yes, certainly",
+"wrong":[
+"Maybe later",
+"No, thank you",
+"I do not know"
+],
+"why":{
+"en":"“Of course” = bien sûr.",
+"fr":"« Of course » = bien sûr.",
+"es":"« Of course » = por supuesto."
+},
+"qa":"What does Of course mean?",
+"aa":"Yes, certainly"
+},
+{
 "id":"en-a1-222",
 "level":"a1",
 "q":"It is 12:00. What do you say?",
@@ -4438,6 +6178,26 @@
 },
 "qa":"It is twelve o’clock. What do you say?",
 "aa":"It's twelve o'clock."
+},
+{
+"id":"en-a1-214",
+"level":"a1",
+"q":"What is the English word for 👃?",
+"fr":"Quel est le mot anglais pour 👃 ?",
+"es":"¿Cómo se dice 👃 en inglés?",
+"correct":"nose",
+"wrong":[
+"hand",
+"tooth",
+"leg"
+],
+"why":{
+"en":"👃 = “nose”.",
+"fr":"👃 se dit « nose » (nez).",
+"es":"👃 se dice « nose » (nariz)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a nose."
 },
 {
 "id":"en-a1-223",
@@ -4460,24 +6220,24 @@
 "aa":"Tom is my friend. I like him very much."
 },
 {
-"id":"en-a1-224",
+"id":"en-a1-342",
 "level":"a1",
-"q":"What is the English word for ☁️?",
-"fr":"Quel est le mot anglais pour ☁️ ?",
-"es":"¿Cómo se dice ☁️ en inglés?",
-"correct":"cloud",
+"q":"Listen. Which word do you hear?",
+"fr":"Écoute. Quel mot entends-tu ?",
+"es":"Escucha. ¿Qué palabra oyes?",
+"correct":"walk",
 "wrong":[
-"fire",
-"wave",
-"palm tree"
+"work",
+"wall",
+"wake"
 ],
 "why":{
-"en":"☁️ = “cloud”.",
-"fr":"☁️ se dit « cloud » (nuage).",
-"es":"☁️ se dice « cloud » (nube)."
+"en":"You heard “walk”. “walk” and “work” are not the same: the “l” in “walk” is silent, and the vowels differ.",
+"fr":"Tu as entendu « walk ». « walk » et « work » ne sont pas pareils : le « l » de « walk » est muet, et les voyelles diffèrent.",
+"es":"Has oído « walk ». « walk » y « work » no son iguales: la « l » de « walk » es muda y las vocales son distintas."
 },
-"qa":"What is the English word for this picture?",
-"aa":"cloud"
+"qa":"walk",
+"aa":"walk"
 },
 {
 "id":"en-a1-225",
@@ -4500,24 +6260,44 @@
 "aa":"poor"
 },
 {
-"id":"en-a1-226",
+"id":"en-a1-343",
 "level":"a1",
-"q":"What is the English word for ❄️?",
-"fr":"Quel est le mot anglais pour ❄️ ?",
-"es":"¿Cómo se dice ❄️ en inglés?",
-"correct":"snow",
+"q":"It is your friend’s birthday. What do you say?",
+"fr":"C’est l’anniversaire de ton ami. Que dis-tu ?",
+"es":"Es el cumpleaños de tu amigo. ¿Qué dices?",
+"correct":"Happy birthday!",
 "wrong":[
-"rainbow",
-"palm tree",
-"star"
+"Good birthday!",
+"Nice birthday!",
+"Happy anniversary!"
 ],
 "why":{
-"en":"❄️ = “snow”.",
-"fr":"❄️ se dit « snow » (neige).",
-"es":"❄️ se dice « snow » (nieve)."
+"en":"“Happy birthday!” For a wedding anniversary we say “Happy anniversary”.",
+"fr":"« Happy birthday! ». Pour un anniversaire de mariage on dit « Happy anniversary ».",
+"es":"« Happy birthday! ». Para un aniversario de boda se dice « Happy anniversary »."
+},
+"qa":"It is your friend's birthday. What do you say?",
+"aa":"Happy birthday!"
+},
+{
+"id":"en-a1-217",
+"level":"a1",
+"q":"What is the English word for 👄?",
+"fr":"Quel est le mot anglais pour 👄 ?",
+"es":"¿Cómo se dice 👄 en inglés?",
+"correct":"mouth",
+"wrong":[
+"foot",
+"leg",
+"eye"
+],
+"why":{
+"en":"👄 = “mouth”.",
+"fr":"👄 se dit « mouth » (bouche).",
+"es":"👄 se dice « mouth » (boca)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"snow"
+"aa":"It’s a mouth."
 },
 {
 "id":"en-a1-227",
@@ -4540,26 +6320,6 @@
 "aa":"Where are my keys? I can't find them."
 },
 {
-"id":"en-a1-228",
-"level":"a1",
-"q":"What is the English word for 👩‍⚕️?",
-"fr":"Quel est le mot anglais pour 👩‍⚕️ ?",
-"es":"¿Cómo se dice 👩‍⚕️ en inglés?",
-"correct":"doctor",
-"wrong":[
-"cook",
-"firefighter",
-"police officer"
-],
-"why":{
-"en":"👩‍⚕️ = “doctor”.",
-"fr":"👩‍⚕️ se dit « doctor » (médecin).",
-"es":"👩‍⚕️ se dice « doctor » (médica)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"doctor"
-},
-{
 "id":"en-a1-229",
 "level":"a1",
 "q":"Which sentence is correct?",
@@ -4578,6 +6338,46 @@
 },
 "qa":"Which sentence is correct?",
 "aa":"We are happy today."
+},
+{
+"id":"en-a1-344",
+"level":"a1",
+"q":"Which word has the same first sound as “church”?",
+"fr":"Quel mot a le même premier son que « church » ?",
+"es":"¿Qué palabra tiene el mismo primer sonido que « church »?",
+"correct":"chair",
+"wrong":[
+"shoe",
+"cat",
+"sit"
+],
+"why":{
+"en":"“church” and “chair” share the sound /tʃ/. Not the same: “shoe” /ʃ/. “cat” /k/. “sit” /s/.",
+"fr":"« church » et « chair » ont le même son /tʃ/. Pas le même : « shoe » /ʃ/. « cat » /k/. « sit » /s/.",
+"es":"« church » y « chair » tienen el mismo sonido /tʃ/. No es igual: « shoe » /ʃ/. « cat » /k/. « sit » /s/."
+},
+"qa":"Which word has the same first sound as church?",
+"aa":"church. chair."
+},
+{
+"id":"en-a1-218",
+"level":"a1",
+"q":"What is the English word for ⭐?",
+"fr":"Quel est le mot anglais pour ⭐ ?",
+"es":"¿Cómo se dice ⭐ en inglés?",
+"correct":"star",
+"wrong":[
+"cloud",
+"fire",
+"rainbow"
+],
+"why":{
+"en":"⭐ = “star”.",
+"fr":"⭐ se dit « star » (étoile).",
+"es":"⭐ se dice « star » (estrella)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a star."
 },
 {
 "id":"en-a1-230",
@@ -4600,24 +6400,24 @@
 "aa":"I like tea but I don't like coffee."
 },
 {
-"id":"en-a1-231",
+"id":"en-a1-345",
 "level":"a1",
-"q":"What is the English word for 👩‍🏫?",
-"fr":"Quel est le mot anglais pour 👩‍🏫 ?",
-"es":"¿Cómo se dice 👩‍🏫 en inglés?",
-"correct":"teacher",
+"q":"Which letter is silent in “half”?",
+"fr":"Quelle lettre ne se prononce pas dans « half » ?",
+"es":"¿Qué letra no se pronuncia en « half »?",
+"correct":"l",
 "wrong":[
-"firefighter",
-"police officer",
-"pilot"
+"h",
+"a",
+"f"
 ],
 "why":{
-"en":"👩‍🏫 = “teacher”.",
-"fr":"👩‍🏫 se dit « teacher » (professeure).",
-"es":"👩‍🏫 se dice « teacher » (profesora)."
+"en":"In “half” the “l” is silent: we say “haf”.",
+"fr":"Dans « half », le « l » ne se prononce pas : on dit “haf”.",
+"es":"En « half », la « l » no se pronuncia: se dice “haf”."
 },
-"qa":"What is the English word for this picture?",
-"aa":"teacher"
+"qa":"Which letter is silent in half? half.",
+"aa":"half."
 },
 {
 "id":"en-a1-232",
@@ -4640,6 +6440,26 @@
 "aa":"See you! Bye!"
 },
 {
+"id":"en-a1-220",
+"level":"a1",
+"q":"What is the English word for 🌙?",
+"fr":"Quel est le mot anglais pour 🌙 ?",
+"es":"¿Cómo se dice 🌙 en inglés?",
+"correct":"moon",
+"wrong":[
+"snow",
+"rainbow",
+"wave"
+],
+"why":{
+"en":"🌙 = “moon”.",
+"fr":"🌙 se dit « moon » (lune).",
+"es":"🌙 se dice « moon » (luna)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s the moon."
+},
+{
 "id":"en-a1-233",
 "level":"a1",
 "q":"It is 4:30. What do you say?",
@@ -4660,24 +6480,24 @@
 "aa":"It's half past four."
 },
 {
-"id":"en-a1-234",
+"id":"en-a1-346",
 "level":"a1",
-"q":"What is the English word for 👨‍🍳?",
-"fr":"Quel est le mot anglais pour 👨‍🍳 ?",
-"es":"¿Cómo se dice 👨‍🍳 en inglés?",
-"correct":"cook",
+"q":"Listen. Which word do you hear?",
+"fr":"Écoute. Quel mot entends-tu ?",
+"es":"Escucha. ¿Qué palabra oyes?",
+"correct":"thirty",
 "wrong":[
-"police officer",
-"pilot",
-"farmer"
+"thirteen",
+"thirsty",
+"forty"
 ],
 "why":{
-"en":"👨‍🍳 = “cook”.",
-"fr":"👨‍🍳 se dit « cook » (cuisinier).",
-"es":"👨‍🍳 se dice « cook » (cocinero)."
+"en":"You heard “thirty”. “THIR-ty” is stressed on the first part. “thir-TEEN” is stressed on the end.",
+"fr":"Tu as entendu « thirty ». « THIR-ty » est accentué au début. « thir-TEEN » est accentué à la fin.",
+"es":"Has oído « thirty ». « THIR-ty » se acentúa al principio. « thir-TEEN » se acentúa al final."
 },
-"qa":"What is the English word for this picture?",
-"aa":"cook"
+"qa":"thirty",
+"aa":"thirty"
 },
 {
 "id":"en-a1-235",
@@ -4700,6 +6520,46 @@
 "aa":"At six in the evening."
 },
 {
+"id":"en-a1-224",
+"level":"a1",
+"q":"What is the English word for ☁️?",
+"fr":"Quel est le mot anglais pour ☁️ ?",
+"es":"¿Cómo se dice ☁️ en inglés?",
+"correct":"cloud",
+"wrong":[
+"fire",
+"wave",
+"palm tree"
+],
+"why":{
+"en":"☁️ = “cloud”.",
+"fr":"☁️ se dit « cloud » (nuage).",
+"es":"☁️ se dice « cloud » (nube)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"It’s a cloud."
+},
+{
+"id":"en-a1-347",
+"level":"a1",
+"q":"Someone says: “Thank you very much!” What do you answer?",
+"fr":"Quelqu’un te dit : « Thank you very much! » Que réponds-tu ?",
+"es":"Alguien te dice: « Thank you very much! » ¿Qué respondes?",
+"correct":"You’re welcome.",
+"wrong":[
+"I’m welcome.",
+"Yes, please.",
+"Good night."
+],
+"why":{
+"en":"“You’re welcome” = de rien.",
+"fr":"« You’re welcome » = de rien.",
+"es":"« You’re welcome » = de nada."
+},
+"qa":"Someone says: Thank you very much! What do you answer?",
+"aa":"You're welcome."
+},
+{
 "id":"en-a1-236",
 "level":"a1",
 "q":"Complete: “Do you want tea ___ coffee?”",
@@ -4718,26 +6578,6 @@
 },
 "qa":"Complete the sentence. Do you want tea blank coffee?",
 "aa":"Do you want tea or coffee?"
-},
-{
-"id":"en-a1-237",
-"level":"a1",
-"q":"What is the English word for 👨‍🚒?",
-"fr":"Quel est le mot anglais pour 👨‍🚒 ?",
-"es":"¿Cómo se dice 👨‍🚒 en inglés?",
-"correct":"firefighter",
-"wrong":[
-"pilot",
-"farmer",
-"doctor"
-],
-"why":{
-"en":"👨‍🚒 = “firefighter”.",
-"fr":"👨‍🚒 se dit « firefighter » (pompier).",
-"es":"👨‍🚒 se dice « firefighter » (bombero)."
-},
-"qa":"What is the English word for this picture?",
-"aa":"firefighter"
 },
 {
 "id":"en-a1-238",
@@ -4760,24 +6600,44 @@
 "aa":"How many apples do you want?"
 },
 {
-"id":"en-a1-239",
+"id":"en-a1-348",
 "level":"a1",
-"q":"What is the English word for 👮?",
-"fr":"Quel est le mot anglais pour 👮 ?",
-"es":"¿Cómo se dice 👮 en inglés?",
-"correct":"police officer",
+"q":"Which word rhymes with “ring”?",
+"fr":"Quel mot rime avec « ring » ?",
+"es":"¿Qué palabra rima con « ring »?",
+"correct":"sing",
 "wrong":[
-"farmer",
-"doctor",
-"teacher"
+"rain",
+"run",
+"rice"
 ],
 "why":{
-"en":"👮 = “police officer”.",
-"fr":"👮 se dit « police officer » (policier).",
-"es":"👮 se dice « police officer » (policía)."
+"en":"“ring” and “sing” rhyme: they end with the same sound /ɪŋ/. The spelling can be different!",
+"fr":"« ring » et « sing » riment : ils finissent par le même son /ɪŋ/. L’orthographe peut être différente !",
+"es":"« ring » y « sing » riman: acaban con el mismo sonido /ɪŋ/. ¡La ortografía puede ser distinta!"
+},
+"qa":"Which word rhymes with ring?",
+"aa":"ring. sing."
+},
+{
+"id":"en-a1-226",
+"level":"a1",
+"q":"What is the English word for ❄️?",
+"fr":"Quel est le mot anglais pour ❄️ ?",
+"es":"¿Cómo se dice ❄️ en inglés?",
+"correct":"snow",
+"wrong":[
+"rainbow",
+"palm tree",
+"star"
+],
+"why":{
+"en":"❄️ = “snow”.",
+"fr":"❄️ se dit « snow » (neige).",
+"es":"❄️ se dice « snow » (nieve)."
 },
 "qa":"What is the English word for this picture?",
-"aa":"police officer"
+"aa":"Look at the snow."
 },
 {
 "id":"en-a1-240",
@@ -4800,6 +6660,26 @@
 "aa":"full"
 },
 {
+"id":"en-a1-349",
+"level":"a1",
+"q":"Which word has a different vowel sound?",
+"fr":"Quel mot a un son de voyelle différent ?",
+"es":"¿Qué palabra tiene un sonido de vocal distinto?",
+"correct":"phone",
+"wrong":[
+"one",
+"done",
+"son"
+],
+"why":{
+"en":"“phone” is /oʊ/; the others are /ʌ/.",
+"fr":"« phone » se dit /oʊ/ ; les autres se disent /ʌ/.",
+"es":"« phone » se dice /oʊ/; las otras se dicen /ʌ/."
+},
+"qa":"Which word has a different vowel sound? one, done, son, phone.",
+"aa":"one, done, son, phone."
+},
+{
 "id":"en-a1-241",
 "level":"a1",
 "q":"What colour is 🟢?",
@@ -4818,6 +6698,26 @@
 },
 "qa":"What colour is this?",
 "aa":"green"
+},
+{
+"id":"en-a1-228",
+"level":"a1",
+"q":"What is the English word for 👩‍⚕️?",
+"fr":"Quel est le mot anglais pour 👩‍⚕️ ?",
+"es":"¿Cómo se dice 👩‍⚕️ en inglés?",
+"correct":"doctor",
+"wrong":[
+"cook",
+"firefighter",
+"police officer"
+],
+"why":{
+"en":"👩‍⚕️ = “doctor”.",
+"fr":"👩‍⚕️ se dit « doctor » (médecin).",
+"es":"👩‍⚕️ se dice « doctor » (médica)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"He’s a doctor."
 },
 {
 "id":"en-a1-242",
@@ -4840,6 +6740,26 @@
 "aa":"Are you a student? Yes, I am."
 },
 {
+"id":"en-a1-350",
+"level":"a1",
+"q":"Put the words in order: “much / is / how / this”",
+"fr":"Remets les mots dans l’ordre : « much / is / how / this »",
+"es":"Ordena las palabras: « much / is / how / this »",
+"correct":"How much is this?",
+"wrong":[
+"How is much this?",
+"This is how much?",
+"How this is much?"
+],
+"why":{
+"en":"“How much is this?” To ask the price: “How much is this?”",
+"fr":"« How much is this? » Pour demander le prix : « How much is this? »",
+"es":"« How much is this? » Para preguntar el precio: « How much is this? »"
+},
+"qa":"Put the words in order. much , is , how , this",
+"aa":"How much is this?"
+},
+{
 "id":"en-a1-243",
 "level":"a1",
 "q":"Someone says: “Excuse me, what’s the time?” What do you answer?",
@@ -4858,6 +6778,46 @@
 },
 "qa":"Someone says: Excuse me, what's the time? What do you answer?",
 "aa":"It's a quarter past three."
+},
+{
+"id":"en-a1-231",
+"level":"a1",
+"q":"What is the English word for 👩‍🏫?",
+"fr":"Quel est le mot anglais pour 👩‍🏫 ?",
+"es":"¿Cómo se dice 👩‍🏫 en inglés?",
+"correct":"teacher",
+"wrong":[
+"firefighter",
+"police officer",
+"pilot"
+],
+"why":{
+"en":"👩‍🏫 = “teacher”.",
+"fr":"👩‍🏫 se dit « teacher » (professeure).",
+"es":"👩‍🏫 se dice « teacher » (profesora)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"She’s a teacher."
+},
+{
+"id":"en-a1-351",
+"level":"a1",
+"q":"Which word sounds the same as “meet”?",
+"fr":"Quel mot se prononce comme « meet » ?",
+"es":"¿Qué palabra suena igual que « meet »?",
+"correct":"meat",
+"wrong":[
+"mat",
+"melt",
+"mate"
+],
+"why":{
+"en":"“meet” and “meat” sound the same (/miːt/) but are spelled differently: You “meet” a friend and you eat “meat”.",
+"fr":"« meet » et « meat » se prononcent pareil (/miːt/) mais s’écrivent différemment : On « meet » (rencontre) un ami et on mange de la « meat » (viande).",
+"es":"« meet » y « meat » suenan igual (/miːt/) pero se escriben distinto: Se « meet » (conoce) a un amigo y se come « meat » (carne)."
+},
+"qa":"Which word sounds the same as meet?",
+"aa":"meet. meat."
 },
 {
 "id":"en-a1-244",
@@ -4900,6 +6860,46 @@
 "aa":"blue"
 },
 {
+"id":"en-a1-352",
+"level":"a1",
+"q":"Listen carefully, then answer: Which platform does the train leave from?",
+"fr":"Écoute bien, puis réponds : Which platform does the train leave from?",
+"es":"Escucha bien y responde: Which platform does the train leave from?",
+"correct":"Platform four",
+"wrong":[
+"Platform two",
+"Platform ten",
+"Platform fourteen"
+],
+"why":{
+"en":"You heard: “The train to Paris leaves from platform four at ten past two.” Four, not fourteen: listen to the end of the word.",
+"fr":"Tu as entendu : « The train to Paris leaves from platform four at ten past two. » Four (quatre), pas fourteen (quatorze) : écoute la fin du mot.",
+"es":"Has oído: « The train to Paris leaves from platform four at ten past two. » Four (cuatro), no fourteen (catorce): escucha el final de la palabra."
+},
+"qa":"The train to Paris leaves from platform four at ten past two. Which platform does the train leave from?",
+"aa":"Platform four"
+},
+{
+"id":"en-a1-234",
+"level":"a1",
+"q":"What is the English word for 👨‍🍳?",
+"fr":"Quel est le mot anglais pour 👨‍🍳 ?",
+"es":"¿Cómo se dice 👨‍🍳 en inglés?",
+"correct":"cook",
+"wrong":[
+"police officer",
+"pilot",
+"farmer"
+],
+"why":{
+"en":"👨‍🍳 = “cook”.",
+"fr":"👨‍🍳 se dit « cook » (cuisinier).",
+"es":"👨‍🍳 se dice « cook » (cocinero)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"He’s a cook."
+},
+{
 "id":"en-a1-246",
 "level":"a1",
 "q":"Complete: “Does she like pizza? — No, she ___.”",
@@ -4918,6 +6918,26 @@
 },
 "qa":"Complete the sentence. Does she like pizza? No, she blank .",
 "aa":"Does she like pizza? No, she doesn't."
+},
+{
+"id":"en-a1-353",
+"level":"a1",
+"q":"Which word has the same last sound as “dogs”?",
+"fr":"Quel mot a le même dernier son que « dogs » ?",
+"es":"¿Qué palabra tiene el mismo último sonido que « dogs »?",
+"correct":"bags",
+"wrong":[
+"cats",
+"bikes",
+"books"
+],
+"why":{
+"en":"“dogs” and “bags” share the sound /z/. Not the same: “cats” /s/. “bikes” /s/. “books” /s/.",
+"fr":"« dogs » et « bags » ont le même son /z/. Pas le même : « cats » /s/. « bikes » /s/. « books » /s/.",
+"es":"« dogs » y « bags » tienen el mismo sonido /z/. No es igual: « cats » /s/. « bikes » /s/. « books » /s/."
+},
+"qa":"Which word has the same last sound as dogs?",
+"aa":"dogs. bags."
 },
 {
 "id":"en-a1-247",
@@ -4940,6 +6960,26 @@
 "aa":"yellow"
 },
 {
+"id":"en-a1-237",
+"level":"a1",
+"q":"What is the English word for 👨‍🚒?",
+"fr":"Quel est le mot anglais pour 👨‍🚒 ?",
+"es":"¿Cómo se dice 👨‍🚒 en inglés?",
+"correct":"firefighter",
+"wrong":[
+"pilot",
+"farmer",
+"doctor"
+],
+"why":{
+"en":"👨‍🚒 = “firefighter”.",
+"fr":"👨‍🚒 se dit « firefighter » (pompier).",
+"es":"👨‍🚒 se dice « firefighter » (bombero)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"She’s a firefighter."
+},
+{
 "id":"en-a1-248",
 "level":"a1",
 "q":"What colour is 🟠?",
@@ -4960,6 +7000,26 @@
 "aa":"orange"
 },
 {
+"id":"en-a1-354",
+"level":"a1",
+"q":"Listen. Which word do you hear?",
+"fr":"Écoute. Quel mot entends-tu ?",
+"es":"Escucha. ¿Qué palabra oyes?",
+"correct":"fifteen",
+"wrong":[
+"fifty",
+"fifth",
+"fixed"
+],
+"why":{
+"en":"You heard “fifteen”. “fif-TEEN” ends with a long, strong “teen”. “FIF-ty” ends quickly.",
+"fr":"Tu as entendu « fifteen ». « fif-TEEN » finit par un « teen » long et fort. « FIF-ty » finit vite.",
+"es":"Has oído « fifteen ». « fif-TEEN » acaba con un « teen » largo y fuerte. « FIF-ty » acaba rápido."
+},
+"qa":"fifteen",
+"aa":"fifteen"
+},
+{
 "id":"en-a1-249",
 "level":"a1",
 "q":"Complete: “I like ___ football with my friends.”",
@@ -4978,6 +7038,46 @@
 },
 "qa":"Complete the sentence. I like blank football with my friends.",
 "aa":"I like playing football with my friends."
+},
+{
+"id":"en-a1-239",
+"level":"a1",
+"q":"What is the English word for 👮?",
+"fr":"Quel est le mot anglais pour 👮 ?",
+"es":"¿Cómo se dice 👮 en inglés?",
+"correct":"police officer",
+"wrong":[
+"farmer",
+"doctor",
+"teacher"
+],
+"why":{
+"en":"👮 = “police officer”.",
+"fr":"👮 se dit « police officer » (policier).",
+"es":"👮 se dice « police officer » (policía)."
+},
+"qa":"What is the English word for this picture?",
+"aa":"He’s a police officer."
+},
+{
+"id":"en-a1-355",
+"level":"a1",
+"q":"Someone says: “Would you like some tea?” What do you answer?",
+"fr":"Quelqu’un te dit : « Would you like some tea? » Que réponds-tu ?",
+"es":"Alguien te dice: « Would you like some tea? » ¿Qué respondes?",
+"correct":"Yes, please.",
+"wrong":[
+"Yes, I like.",
+"Thank you, you’re welcome.",
+"No, I’m thirteen."
+],
+"why":{
+"en":"To accept politely: “Yes, please.” To refuse: “No, thank you.”",
+"fr":"Pour accepter poliment : « Yes, please. » Pour refuser : « No, thank you. »",
+"es":"Para aceptar con educación: « Yes, please. » Para rechazar: « No, thank you. »"
+},
+"qa":"Someone says: Would you like some tea? What do you answer?",
+"aa":"Yes, please."
 },
 {
 "id":"en-a1-250",

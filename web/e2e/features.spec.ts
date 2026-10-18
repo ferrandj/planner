@@ -299,7 +299,7 @@ test('English quiz: a button skips it and opens the site, and the level of the q
   await page.reload();                                                                           // asked again at the next opening
   await expect(gate).toBeVisible();
   await expect(gate.getByText(/Anglais · A1/)).toBeVisible();
-  await gate.getByRole('button', { name: /Niveau B1 : \d+ réussies sur 343/ }).click();         // choose the level
+  await gate.getByRole('button', { name: /Niveau B1 : \d+ réussies sur 443/ }).click();         // choose the level
   await expect(gate.getByText(/Anglais · B1/)).toBeVisible();
   await expect(gate.getByText('1 / 5')).toBeVisible();
   await gate.locator('.qz-opt').first().click();

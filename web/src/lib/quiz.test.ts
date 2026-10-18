@@ -8,9 +8,9 @@ const master = (d: ReturnType<typeof emptyData>, list: typeof A1): void => list.
 describe('the question bank (English, levels A1, A2 and B1)', () => {
   it('has the three levels in order, with plenty of questions in A2 and B1', () => {
     expect(LEVELS.map((l) => l.name)).toEqual(['A1', 'A2', 'B1']);
-    expect(A1).toHaveLength(250);                                  // 50 + 200 added later (the first ids never change)
-    expect(A2).toHaveLength(336);
-    expect(B1).toHaveLength(343);
+    expect(A1).toHaveLength(355);                                  // 50 + 200 + 105 added later (the first ids never change)
+    expect(A2).toHaveLength(436);
+    expect(B1).toHaveLength(443);
     expect(QUESTIONS).toHaveLength(A1.length + A2.length + B1.length);
     expect(new Set(QUESTIONS.map((q) => q.id)).size).toBe(QUESTIONS.length);
     LEVELS.forEach((l) => l.questions.forEach((q) => expect(q.id.startsWith('en-' + l.id + '-'), q.id).toBe(true)));
@@ -127,6 +127,6 @@ describe('answers', () => {
     recordAnswer(d, 'en-a1-01', false, '2026-10-12'); recordAnswer(d, 'en-a1-01', true, '2026-10-13'); recordAnswer(d, 'en-a1-02', false, '2026-10-13');
     expect(d.quiz['en-a1-01']).toEqual({ ok: 1, ko: 1, at: '2026-10-13' });
     expect(quizStats(d.quiz)).toEqual({ mastered: 1, total: QUESTIONS.length, right: 1, wrong: 2 });
-    expect(levelStats(d.quiz)[0]).toMatchObject({ mastered: 1, total: 250, done: false });
+    expect(levelStats(d.quiz)[0]).toMatchObject({ mastered: 1, total: 355, done: false });
   });
 });
