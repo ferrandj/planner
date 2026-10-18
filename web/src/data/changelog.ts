@@ -8,6 +8,16 @@ export interface ChangeEntry { version: string; date: string; items: ChangeItem[
 
 export const CHANGELOG: ChangeEntry[] = [
   {
+    version: '1.15.0', date: '2026-10-18',
+    items: [
+      { fr: '🗣️ Le quiz d’anglais t’apprend maintenant à bien prononcer : 305 nouvelles questions, A1 : 105, A2 : 100 et B1 : 100, avec des phrases entières et pas seulement des mots.', en: '🗣️ The English quiz now teaches you to pronounce well: 305 new questions (A1: 105, A2: 100, B1: 100) with whole sentences, not only words.', es: '🗣️ El quiz de inglés ahora te enseña a pronunciar bien: 305 preguntas nuevas (A1: 105, A2: 100, B1: 100) con frases enteras y no solo palabras.' },
+      { fr: '👂 Écoute-et-choisis (quel mot ou quelle phrase entends-tu ?), sons identiques, rimes, intrus, lettres muettes, accent des mots, terminaisons -ed et -s, mots qui se prononcent pareil, rythme de la phrase, petites phrases de la vraie vie, remise en ordre, textes à écouter seulement.', en: '👂 Listen-and-choose (which word or sentence do you hear?), same sounds, rhymes, odd one out, silent letters, word stress, -ed and -s endings, words that sound alike, sentence rhythm, real-life phrases, putting words in order, listen-only texts.', es: '👂 Escucha y elige (¿qué palabra o frase oyes?), sonidos iguales, rimas, intruso, letras mudas, acento de las palabras, terminaciones -ed y -s, palabras que suenan igual, ritmo de la frase, frases de la vida real, ordenar palabras, textos solo para escuchar.' },
+      { fr: '🐢 Après chaque réponse : « Plus lentement » et « Répète à voix haute » pour imiter la voix.', en: '🐢 After each answer: “Slower” and “Say it out loud” to copy the voice.', es: '🐢 Después de cada respuesta: « Más despacio » y « Repítelo en voz alta » para imitar la voz.' },
+      { fr: '🖼️ En A1, les questions avec image sont mieux mélangées avec les autres, et la bonne réponse est dite en phrase (« It’s a horse. »).', en: '🖼️ In A1, picture questions are now better mixed with the others, and the right answer is said as a sentence (“It’s a horse.”).', es: '🖼️ En A1, las preguntas con imagen se mezclan mejor con las demás y la respuesta correcta se dice en frase (« It’s a horse. »).' },
+      { fr: '📂 Les listes « À rattraper » et « À suivre » (et chaque mois) se replient, sont classées par date, et le mois est affiché à côté du jour.', en: '📂 The “To catch up” and “Coming up” lists (and each month) can be folded, are sorted by date, and the month is shown next to the day.', es: '📂 Las listas « Por recuperar » y « Próximas » (y cada mes) se pueden plegar, están ordenadas por fecha y el mes se muestra junto al día.' }
+    ]
+  },
+  {
     version: '1.14.0', date: '2026-10-17',
     items: [
       { fr: '⏭️ Un bouton « Passer et accéder au site » permet d’entrer tout de suite sans répondre au quiz d’anglais (il sera reposé à la prochaine ouverture).', en: '⏭️ A “Skip and go to the site” button lets you in at once without answering the English quiz (it will be asked again at the next opening).', es: '⏭️ Un botón « Saltar y entrar en el sitio » permite entrar enseguida sin responder al quiz de inglés (se volverá a preguntar en la próxima apertura).' },

@@ -136,7 +136,11 @@ function QuizRound({ onDone, doneLabel }: { onDone: () => void; doneLabel: strin
           <b className={right ? 'good' : 'bad'}>{right ? t('✅ Bravo !') : t('❌ Pas tout à fait : la bonne réponse est en vert.')}</b>
           <p>{lang === 'en' ? cur.q.why.en : cur.q.why[lang]}</p>
           {lang !== 'en' && <p className="qz-why-en" lang="en">{cur.q.why.en}</p>}
-          <button type="button" className="fchip" onClick={() => void voice.play(cur.q.aa)}>🔊 {t('Écouter la bonne réponse')}</button>
+          <p className="qz-btns">
+            <button type="button" className="fchip" onClick={() => void voice.play(cur.q.aa)}>🔊 {t('Écouter la bonne réponse')}</button>
+            <button type="button" className="fchip" onClick={() => void voice.play(cur.q.aa, true)}>🐢 {t('Plus lentement')}</button>
+          </p>
+          <p className="qz-say-it">🗣️ <b>{t('Répète à voix haute')}</b> : <span lang="en" className="qz-it">{cur.q.aa}</span><span className="qz-tip">{t('Écoute, puis dis-le deux fois en imitant la voix : c’est comme ça qu’on apprend à bien prononcer.')}</span></p>
         </div>
       )}
       <div className="qz-foot">

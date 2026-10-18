@@ -548,3 +548,7 @@ label.btn{cursor:pointer}
 .qz-pick{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .qz-pick-l{font-weight:700;font-size:.9rem}
 .qz-skip{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.qz-btns{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px}
+.qz-say-it{margin:10px 0 2px;padding:10px 12px;border-radius:12px;background:var(--soft,rgba(120,120,160,.12));line-height:1.45}
+.qz-say-it .qz-it{font-weight:700;font-size:1.05em}
+.qz-say-it .qz-tip{display:block;margin-top:4px;font-size:.85em;opacity:.8}

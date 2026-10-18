@@ -195,11 +195,13 @@ catch-ups are counted on (older ticks count on the day of their class).
 
 ### English quiz at the door
 
-Each time the app is opened, **five questions** of English come first, from **A1 to A2 then B1** (about 930 questions):
+Each time the app is opened, **five questions** of English come first, from **A1 to A2 then B1** (about 1,230 questions):
 
-- **A1** (250): words with pictures (animals, food, objects, places, transport, clothes, body, jobs, colours), opposites, numbers, time and calendar, "to be" / "to have", articles and plurals, this / that, prepositions, can, present simple and continuous, simple dialogues, very short texts;
-- **A2** (336): whole sentences: past, present and future, comparing, quantities, prepositions of time, place and movement, modals, reflexive pronouns, questions and replies in real situations (shop, restaurant, directions, phone…), "which sentence is correct?", expressions, short texts to read;
-- **B1** (343): present perfect, past perfect and future perfect, conditionals and wishes, passive (all tenses), reported speech, relative clauses, linking words, phrasal verbs and collocations, word forms, confusing words (borrow / lend, bring / take…), idioms, opinions and complaints, longer texts with questions.
+- **A1** (355): words with pictures (animals, food, objects, places, transport, clothes, body, jobs, colours), opposites, numbers, time and calendar, "to be" / "to have", articles and plurals, this / that, prepositions, can, present simple and continuous, simple dialogues, very short texts, and a pronunciation pack (see below);
+- **A2** (436): whole sentences: past, present and future, comparing, quantities, prepositions of time, place and movement, modals, reflexive pronouns, questions and replies in real situations (shop, restaurant, directions, phone…), "which sentence is correct?", expressions, short texts to read;
+- **B1** (443): present perfect, past perfect and future perfect, conditionals and wishes, passive (all tenses), reported speech, relative clauses, linking words, phrasal verbs and collocations, word forms, confusing words (borrow / lend, bring / take…), idioms, opinions and complaints, longer texts with questions.
+
+**Pronunciation and real phrases (every level)**: it is not only words. Each level mixes in *listen and choose* (which word or sentence do you hear? minimal pairs such as ship / sheep, thirteen / thirty), words that have the same sound, rhymes, the odd one out, silent letters, word and sentence stress (the little words are weak), -ed and -s endings, words that sound alike, tricky spellings (-ough, th), words said differently in the same spelling (read, lead, wind…), how people really talk (gonna, wanna…), putting words in order, short real-life situations (shop, restaurant, phone, e-mail…) and texts that are only *spoken*. After each answer, **Plus lentement** plays the recording at 70 % speed and **Répète à voix haute** shows the sentence to say aloud, copying the voice.
 
 **Skip it, or choose your level**: a **Passer et accéder au site** button under the questions lets you in at once (nothing is recorded, the quiz is asked again at the next opening; "Désactiver ce quiz" turns it off for good). The **Niveau** chips (*Auto*, *A1*, *A2*, *B1*) in the questions and in the 🎓 Quiz window choose where the questions come from: *Auto* goes through A1, A2 and B1 in turn (below), a level of your choice asks only that level (and reviews it when it is finished). Changing the level starts a new round; what was answered is kept.
 

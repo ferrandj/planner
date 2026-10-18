@@ -6858,5 +6858,2005 @@
 },
 "qa":"The company will introduce a four-day working week next year. Employees will still work the same number of hours, but over four longer days. The managers believe this will reduce stress and improve productivity. However, some workers are worried that ten-hour days will be too tiring. What do the managers expect?",
 "aa":"Less stress and better productivity."
+},
+{
+"id":"en-b1-344",
+"level":"b1",
+"q":"Listen. Which sentence do you hear?",
+"fr":"Écoute. Quelle phrase entends-tu ?",
+"es":"Escucha. ¿Qué frase oyes?",
+"correct":"He used to live in Spain.",
+"wrong":[
+"He is used to living in Spain.",
+"He uses to live in Spain.",
+"He used to leave Spain."
+],
+"why":{
+"en":"You heard: “He used to live in Spain.” “used to” + base verb = a past habit; “is used to” + -ing = is accustomed to.",
+"fr":"Tu as entendu : « He used to live in Spain. » « used to » + verbe de base = une habitude passée ; « is used to » + -ing = être habitué à.",
+"es":"Has oído: « He used to live in Spain. » « used to » + verbo base = un hábito pasado; « is used to » + -ing = estar acostumbrado a."
+},
+"qa":"He used to live in Spain.",
+"aa":"He used to live in Spain."
+},
+{
+"id":"en-b1-345",
+"level":"b1",
+"q":"You write an email to someone you do not know well, Mr Jones. How do you start? What do you say?",
+"fr":"Tu écris un e-mail à quelqu’un que tu connais peu, M. Jones. Comment commences-tu ? Que dis-tu ?",
+"es":"Escribes un correo a alguien que no conoces bien, el Sr. Jones. ¿Cómo empiezas? ¿Qué dices?",
+"correct":"Dear Mr Jones,",
+"wrong":[
+"Hey Jonesy,",
+"Yo Mr Jones,",
+"Hi dude,"
+],
+"why":{
+"en":"“Dear Mr Jones,” is the polite way to start a formal email.",
+"fr":"« Dear Mr Jones, » est la façon polie de commencer un e-mail formel.",
+"es":"« Dear Mr Jones, » es la forma educada de empezar un correo formal."
+},
+"qa":"You write an email to someone you do not know well, Mr Jones. How do you start? What do you say?",
+"aa":"Dear Mr Jones,"
+},
+{
+"id":"en-b1-346",
+"level":"b1",
+"q":"Where is the stress on “record” in: “Please record the meeting.”",
+"fr":"Où est l’accent de « record » dans : « Please record the meeting. »",
+"es":"¿Dónde está el acento de « record » en: « Please record the meeting. »",
+"correct":"on the SECOND syllable",
+"wrong":[
+"on the FIRST syllable",
+"equally on both syllables",
+"on neither syllable"
+],
+"why":{
+"en":"Here we say re-CORD: on the SECOND syllable. Many two-syllable words are nouns when the stress is first, and verbs when it is second.",
+"fr":"Ici on dit re-CORD : accent sur la DEUXIÈME syllabe. Beaucoup de mots de deux syllabes sont des noms quand l’accent est au début, et des verbes quand il est à la fin.",
+"es":"Aquí se dice re-CORD: acento en la SEGUNDA sílaba. Muchas palabras de dos sílabas son nombres si el acento va al principio y verbos si va al final."
+},
+"qa":"Where is the stress on record in this sentence? Please record the meeting.",
+"aa":"Please record the meeting."
+},
+{
+"id":"en-b1-347",
+"level":"b1",
+"q":"Listen carefully, then answer: Why has the meeting been moved?",
+"fr":"Écoute bien, puis réponds : Why has the meeting been moved?",
+"es":"Escucha bien y responde: Why has the meeting been moved?",
+"correct":"Mr Clark is stuck in traffic.",
+"wrong":[
+"Jenny is ill.",
+"The room is not free.",
+"Mr Clark is on holiday."
+],
+"why":{
+"en":"You heard: “Hi, it’s Jenny. I’m calling about tomorrow’s meeting. It’s been moved from ten to eleven thirty because Mr Clark is stuck in traffic. Can you let the others know?”",
+"fr":"Tu as entendu : « Hi, it’s Jenny. I’m calling about tomorrow’s meeting. It’s been moved from ten to eleven thirty because Mr Clark is stuck in traffic. Can you let the others know? »",
+"es":"Has oído: « Hi, it’s Jenny. I’m calling about tomorrow’s meeting. It’s been moved from ten to eleven thirty because Mr Clark is stuck in traffic. Can you let the others know? »"
+},
+"qa":"Hi, it's Jenny. I'm calling about tomorrow's meeting. It's been moved from ten to eleven thirty because Mr Clark is stuck in traffic. Can you let the others know? Why has the meeting been moved?",
+"aa":"Mr Clark is stuck in traffic."
+},
+{
+"id":"en-b1-348",
+"level":"b1",
+"q":"Which word is usually NOT stressed (said weakly) in: “I would like a cup of tea.”",
+"fr":"Quel mot n’est généralement PAS accentué (dit faiblement) dans : « I would like a cup of tea. »",
+"es":"¿Qué palabra normalmente NO se acentúa (se dice débil) en: « I would like a cup of tea. »",
+"correct":"of",
+"wrong":[
+"like",
+"cup",
+"tea"
+],
+"why":{
+"en":"Little grammar words are weak: we say ““a CUP uv TEA””. The important words (nouns, verbs, adjectives) are stressed — this gives English its rhythm.",
+"fr":"Les petits mots de grammaire sont faibles : on dit « “a CUP uv TEA” ». Les mots importants (noms, verbes, adjectifs) sont accentués — c’est ce qui donne son rythme à l’anglais.",
+"es":"Las palabras gramaticales pequeñas son débiles: se dice « “a CUP uv TEA” ». Las palabras importantes (nombres, verbos, adjetivos) se acentúan — eso da ritmo al inglés."
+},
+"qa":"Which word is usually not stressed in this sentence? I would like a cup of tea.",
+"aa":"I would like a cup of tea."
+},
+{
+"id":"en-b1-349",
+"level":"b1",
+"q":"What does “give up” mean?",
+"fr":"Que veut dire « give up » ?",
+"es":"¿Qué significa « give up »?",
+"correct":"stop trying",
+"wrong":[
+"give a present",
+"stand up",
+"wake up"
+],
+"why":{
+"en":"“Don’t give up!” = don’t stop trying.",
+"fr":"« Don’t give up! » = n’abandonne pas.",
+"es":"« Don’t give up! » = no te rindas."
+},
+"qa":"What does give up mean?",
+"aa":"stop trying"
+},
+{
+"id":"en-b1-350",
+"level":"b1",
+"q":"Put the words in order: “been / living / how / have / long / you / here”",
+"fr":"Remets les mots dans l’ordre : « been / living / how / have / long / you / here »",
+"es":"Ordena las palabras: « been / living / how / have / long / you / here »",
+"correct":"How long have you been living here?",
+"wrong":[
+"How long you have been living here?",
+"How long have you living been here?",
+"How have you long been living here?"
+],
+"why":{
+"en":"“How long have you been living here?” Question word + have + subject + been + -ing.",
+"fr":"« How long have you been living here? » Mot interrogatif + have + sujet + been + -ing.",
+"es":"« How long have you been living here? » Palabra interrogativa + have + sujeto + been + -ing."
+},
+"qa":"Put the words in order. been , living , how , have , long , you , here",
+"aa":"How long have you been living here?"
+},
+{
+"id":"en-b1-351",
+"level":"b1",
+"q":"How do you say “lead” in: “Lead is a heavy metal.”",
+"fr":"Comment dit-on « lead » dans : « Lead is a heavy metal. »",
+"es":"¿Cómo se dice « lead » en: « Lead is a heavy metal. »",
+"correct":"like “led”",
+"wrong":[
+"like “leed”",
+"like “laid”",
+"like “lied”"
+],
+"why":{
+"en":"The metal is “led”; the verb “to lead” (a team) is “leed”.",
+"fr":"Le métal se dit « led » ; le verbe « to lead » (diriger) se dit « leed ».",
+"es":"El metal se dice « led »; el verbo « to lead » (dirigir) se dice « leed »."
+},
+"qa":"How do you say lead in this sentence? Lead is a heavy metal.",
+"aa":"Lead is a heavy metal."
+},
+{
+"id":"en-b1-352",
+"level":"b1",
+"q":"Which word has a different vowel sound?",
+"fr":"Quel mot a un son de voyelle différent ?",
+"es":"¿Qué palabra tiene un sonido de vocal distinto?",
+"correct":"bead",
+"wrong":[
+"head",
+"bread",
+"dead"
+],
+"why":{
+"en":"“bead” is /iː/; the others are /e/.",
+"fr":"« bead » se dit /iː/ ; les autres se disent /e/.",
+"es":"« bead » se dice /iː/; las otras se dicen /e/."
+},
+"qa":"Which word has a different vowel sound? head, bread, dead, bead.",
+"aa":"head, bread, dead, bead."
+},
+{
+"id":"en-b1-353",
+"level":"b1",
+"q":"What does “’d” stand for in: “I’d finished before he arrived.”",
+"fr":"Que veut dire « ’d » dans : « I’d finished before he arrived. »",
+"es":"¿Qué significa « ’d » en: « I’d finished before he arrived. »",
+"correct":"had",
+"wrong":[
+"would",
+"did",
+"should"
+],
+"why":{
+"en":"“’d” + past participle = had. “’d” + base verb = would.",
+"fr":"« ’d » + participe passé = had. « ’d » + verbe de base = would.",
+"es":"« ’d » + participio = had. « ’d » + verbo base = would."
+},
+"qa":"What does ’d stand for in this sentence? I’d finished before he arrived.",
+"aa":"I’d finished before he arrived."
+},
+{
+"id":"en-b1-354",
+"level":"b1",
+"q":"How many syllables do we usually say in “comfortable”?",
+"fr":"Combien de syllabes dit-on d’habitude dans « comfortable » ?",
+"es":"¿Cuántas sílabas se dicen normalmente en « comfortable »?",
+"correct":"Three",
+"wrong":[
+"Four",
+"Five",
+"Two"
+],
+"why":{
+"en":"We say “COMF-ta-ble”: some letters are not pronounced.",
+"fr":"On dit « COMF-ta-ble » : certaines lettres ne se prononcent pas.",
+"es":"Se dice « COMF-ta-ble »: algunas letras no se pronuncian."
+},
+"qa":"How many syllables do we usually say in comfortable? comfortable.",
+"aa":"comfortable."
+},
+{
+"id":"en-b1-355",
+"level":"b1",
+"q":"Which letter is silent in “psychology”?",
+"fr":"Quelle lettre ne se prononce pas dans « psychology » ?",
+"es":"¿Qué letra no se pronuncia en « psychology »?",
+"correct":"p",
+"wrong":[
+"s",
+"y",
+"l"
+],
+"why":{
+"en":"In “psychology” the “p” is silent: we say “sy-col-o-gy”.",
+"fr":"Dans « psychology », le « p » ne se prononce pas : on dit “sy-col-o-gy”.",
+"es":"En « psychology », la « p » no se pronuncia: se dice “sy-col-o-gy”."
+},
+"qa":"Which letter is silent in psychology? psychology.",
+"aa":"psychology."
+},
+{
+"id":"en-b1-356",
+"level":"b1",
+"q":"Which word rhymes with “thought”?",
+"fr":"Quel mot rime avec « thought » ?",
+"es":"¿Qué palabra rima con « thought »?",
+"correct":"caught",
+"wrong":[
+"though",
+"tough",
+"through"
+],
+"why":{
+"en":"“thought” and “caught” rhyme: they end with the same sound /ɔːt/. The spelling can be different!",
+"fr":"« thought » et « caught » riment : ils finissent par le même son /ɔːt/. L’orthographe peut être différente !",
+"es":"« thought » y « caught » riman: acaban con el mismo sonido /ɔːt/. ¡La ortografía puede ser distinta!"
+},
+"qa":"Which word rhymes with thought?",
+"aa":"thought. caught."
+},
+{
+"id":"en-b1-357",
+"level":"b1",
+"q":"You started an email with “Dear Mr Jones”. How do you finish? What do you say?",
+"fr":"Tu as commencé un e-mail par « Dear Mr Jones ». Comment le termines-tu ? Que dis-tu ?",
+"es":"Has empezado un correo con « Dear Mr Jones ». ¿Cómo lo terminas? ¿Qué dices?",
+"correct":"Yours sincerely,",
+"wrong":[
+"Yours faithfully,",
+"Cheers mate,",
+"Love,"
+],
+"why":{
+"en":"British rule: “Dear Mr Jones” → “Yours sincerely”. “Dear Sir or Madam” → “Yours faithfully”.",
+"fr":"Règle britannique : « Dear Mr Jones » → « Yours sincerely ». « Dear Sir or Madam » → « Yours faithfully ».",
+"es":"Regla británica: « Dear Mr Jones » → « Yours sincerely ». « Dear Sir or Madam » → « Yours faithfully »."
+},
+"qa":"You started an email with Dear Mr Jones. How do you finish? What do you say?",
+"aa":"Yours sincerely,"
+},
+{
+"id":"en-b1-358",
+"level":"b1",
+"q":"Where is the stress on “record” in: “This is a new world record.”",
+"fr":"Où est l’accent de « record » dans : « This is a new world record. »",
+"es":"¿Dónde está el acento de « record » en: « This is a new world record. »",
+"correct":"on the FIRST syllable",
+"wrong":[
+"on the SECOND syllable",
+"equally on both syllables",
+"on neither syllable"
+],
+"why":{
+"en":"Here we say REC-ord: on the FIRST syllable. Many two-syllable words are nouns when the stress is first, and verbs when it is second.",
+"fr":"Ici on dit REC-ord : accent sur la PREMIÈRE syllabe. Beaucoup de mots de deux syllabes sont des noms quand l’accent est au début, et des verbes quand il est à la fin.",
+"es":"Aquí se dice REC-ord: acento en la PRIMERA sílaba. Muchas palabras de dos sílabas son nombres si el acento va al principio y verbos si va al final."
+},
+"qa":"Where is the stress on record in this sentence? This is a new world record.",
+"aa":"This is a new world record."
+},
+{
+"id":"en-b1-359",
+"level":"b1",
+"q":"Listen carefully, then answer: How often does the speaker cook for friends?",
+"fr":"Écoute bien, puis réponds : How often does the speaker cook for friends?",
+"es":"Escucha bien y responde: How often does the speaker cook for friends?",
+"correct":"Every Sunday",
+"wrong":[
+"Every day",
+"Once a year",
+"Every Saturday"
+],
+"why":{
+"en":"You heard: “I used to hate cooking, but now I love it. I started a course last year and I’ve learned to make fresh pasta. Now I cook for my friends every Sunday.”",
+"fr":"Tu as entendu : « I used to hate cooking, but now I love it. I started a course last year and I’ve learned to make fresh pasta. Now I cook for my friends every Sunday. »",
+"es":"Has oído: « I used to hate cooking, but now I love it. I started a course last year and I’ve learned to make fresh pasta. Now I cook for my friends every Sunday. »"
+},
+"qa":"I used to hate cooking, but now I love it. I started a course last year and I've learned to make fresh pasta. Now I cook for my friends every Sunday. How often does the speaker cook for friends?",
+"aa":"Every Sunday"
+},
+{
+"id":"en-b1-360",
+"level":"b1",
+"q":"What does “run out of” mean?",
+"fr":"Que veut dire « run out of » ?",
+"es":"¿Qué significa « run out of »?",
+"correct":"have none left",
+"wrong":[
+"run very fast",
+"go out for a walk",
+"run away from"
+],
+"why":{
+"en":"“We’ve run out of milk” = there is no milk left.",
+"fr":"« We’ve run out of milk » = il n’y a plus de lait.",
+"es":"« We’ve run out of milk » = ya no queda leche."
+},
+"qa":"What does run out of mean?",
+"aa":"have none left"
+},
+{
+"id":"en-b1-361",
+"level":"b1",
+"q":"Listen. Which sentence do you hear?",
+"fr":"Écoute. Quelle phrase entends-tu ?",
+"es":"Escucha. ¿Qué frase oyes?",
+"correct":"I wish I had a bigger flat.",
+"wrong":[
+"I wish I have a bigger flat.",
+"I wish I would have a bigger flat.",
+"I wish I had a bigger fat."
+],
+"why":{
+"en":"You heard: “I wish I had a bigger flat.” After “wish” about the present, we use the past: “I wish I had”.",
+"fr":"Tu as entendu : « I wish I had a bigger flat. » Après « wish » à propos du présent, on utilise le passé : « I wish I had ».",
+"es":"Has oído: « I wish I had a bigger flat. » Después de « wish » sobre el presente se usa el pasado: « I wish I had »."
+},
+"qa":"I wish I had a bigger flat.",
+"aa":"I wish I had a bigger flat."
+},
+{
+"id":"en-b1-362",
+"level":"b1",
+"q":"Put the words in order: “if / I / were / you / I / would / apologise”",
+"fr":"Remets les mots dans l’ordre : « if / I / were / you / I / would / apologise »",
+"es":"Ordena las palabras: « if / I / were / you / I / would / apologise »",
+"correct":"If I were you, I would apologise.",
+"wrong":[
+"If I would be you, I were apologise.",
+"If I were you, I will apologise.",
+"I would apologise if were you."
+],
+"why":{
+"en":"“If I were you, I would apologise.” Second conditional: if + past (were), would + base verb.",
+"fr":"« If I were you, I would apologise. » Second conditionnel : if + prétérit (were), would + verbe de base.",
+"es":"« If I were you, I would apologise. » Segundo condicional: if + pasado (were), would + verbo base."
+},
+"qa":"Put the words in order. if , I , were , you , I , would , apologise",
+"aa":"If I were you, I would apologise."
+},
+{
+"id":"en-b1-363",
+"level":"b1",
+"q":"A colleague has an idea, but you are not sure you agree. What do you say?",
+"fr":"Un collègue a une idée, mais tu n’es pas sûr(e) d’être d’accord. Que dis-tu ?",
+"es":"Un compañero tiene una idea, pero no estás seguro de estar de acuerdo. ¿Qué dices?",
+"correct":"I see what you mean, but I’m not sure I agree.",
+"wrong":[
+"You are wrong.",
+"No way, that is stupid.",
+"I don’t care what you say."
+],
+"why":{
+"en":"Soften a disagreement: “I see what you mean, but…”",
+"fr":"Adoucis un désaccord : « I see what you mean, but… »",
+"es":"Suaviza un desacuerdo: « I see what you mean, but… »"
+},
+"qa":"A colleague has an idea, but you are not sure you agree. What do you say?",
+"aa":"I see what you mean, but I'm not sure I agree."
+},
+{
+"id":"en-b1-364",
+"level":"b1",
+"q":"How do you say “wind” in: “The wind is strong today.”",
+"fr":"Comment dit-on « wind » dans : « The wind is strong today. »",
+"es":"¿Cómo se dice « wind » en: « The wind is strong today. »",
+"correct":"like “pinned”",
+"wrong":[
+"like “find”",
+"like “wined”",
+"like “wound”"
+],
+"why":{
+"en":"The noun (moving air) rhymes with “pinned”. The verb “to wind” (a clock) rhymes with “find”.",
+"fr":"Le nom (l’air qui bouge) rime avec « pinned ». Le verbe « to wind » (remonter) rime avec « find ».",
+"es":"El nombre (aire en movimiento) rima con « pinned ». El verbo « to wind » (dar cuerda) rima con « find »."
+},
+"qa":"How do you say wind in this sentence? The wind is strong today.",
+"aa":"The wind is strong today."
+},
+{
+"id":"en-b1-365",
+"level":"b1",
+"q":"Where is the stress on “present” in: “I will present my project tomorrow.”",
+"fr":"Où est l’accent de « present » dans : « I will present my project tomorrow. »",
+"es":"¿Dónde está el acento de « present » en: « I will present my project tomorrow. »",
+"correct":"on the SECOND syllable",
+"wrong":[
+"on the FIRST syllable",
+"equally on both syllables",
+"on neither syllable"
+],
+"why":{
+"en":"Here we say pre-SENT: on the SECOND syllable. Many two-syllable words are nouns when the stress is first, and verbs when it is second.",
+"fr":"Ici on dit pre-SENT : accent sur la DEUXIÈME syllabe. Beaucoup de mots de deux syllabes sont des noms quand l’accent est au début, et des verbes quand il est à la fin.",
+"es":"Aquí se dice pre-SENT: acento en la SEGUNDA sílaba. Muchas palabras de dos sílabas son nombres si el acento va al principio y verbos si va al final."
+},
+"qa":"Where is the stress on present in this sentence? I will present my project tomorrow.",
+"aa":"I will present my project tomorrow."
+},
+{
+"id":"en-b1-366",
+"level":"b1",
+"q":"Listen carefully, then answer: Which hotel does the speaker recommend?",
+"fr":"Écoute bien, puis réponds : Which hotel does the speaker recommend?",
+"es":"Escucha bien y responde: Which hotel does the speaker recommend?",
+"correct":"The one near the park",
+"wrong":[
+"The one by the station",
+"No hotel at all",
+"The cheapest one"
+],
+"why":{
+"en":"You heard: “If you’re looking for a cheap hotel, forget the one by the station. It’s noisy, and breakfast isn’t included. The one near the park costs a bit more, but it’s much quieter.”",
+"fr":"Tu as entendu : « If you’re looking for a cheap hotel, forget the one by the station. It’s noisy, and breakfast isn’t included. The one near the park costs a bit more, but it’s much quieter. »",
+"es":"Has oído: « If you’re looking for a cheap hotel, forget the one by the station. It’s noisy, and breakfast isn’t included. The one near the park costs a bit more, but it’s much quieter. »"
+},
+"qa":"If you're looking for a cheap hotel, forget the one by the station. It's noisy, and breakfast isn't included. The one near the park costs a bit more, but it's much quieter. Which hotel does the speaker recommend?",
+"aa":"The one near the park"
+},
+{
+"id":"en-b1-367",
+"level":"b1",
+"q":"Which word is usually NOT stressed (said weakly) in: “He can swim very well.”",
+"fr":"Quel mot n’est généralement PAS accentué (dit faiblement) dans : « He can swim very well. »",
+"es":"¿Qué palabra normalmente NO se acentúa (se dice débil) en: « He can swim very well. »",
+"correct":"can",
+"wrong":[
+"swim",
+"very",
+"well"
+],
+"why":{
+"en":"Little grammar words are weak: we say ““he kn SWIM very WELL””. The important words (nouns, verbs, adjectives) are stressed — this gives English its rhythm.",
+"fr":"Les petits mots de grammaire sont faibles : on dit « “he kn SWIM very WELL” ». Les mots importants (noms, verbes, adjectifs) sont accentués — c’est ce qui donne son rythme à l’anglais.",
+"es":"Las palabras gramaticales pequeñas son débiles: se dice « “he kn SWIM very WELL” ». Las palabras importantes (nombres, verbos, adjetivos) se acentúan — eso da ritmo al inglés."
+},
+"qa":"Which word is usually not stressed in this sentence? He can swim very well.",
+"aa":"He can swim very well."
+},
+{
+"id":"en-b1-368",
+"level":"b1",
+"q":"What does “put off” mean?",
+"fr":"Que veut dire « put off » ?",
+"es":"¿Qué significa « put off »?",
+"correct":"postpone",
+"wrong":[
+"turn off",
+"put on",
+"take away"
+],
+"why":{
+"en":"“We put off the meeting” = we moved it to a later date.",
+"fr":"« We put off the meeting » = on l’a repoussée.",
+"es":"« We put off the meeting » = la aplazamos."
+},
+"qa":"What does put off mean?",
+"aa":"postpone"
+},
+{
+"id":"en-b1-369",
+"level":"b1",
+"q":"Which word has a different vowel sound?",
+"fr":"Quel mot a un son de voyelle différent ?",
+"es":"¿Qué palabra tiene un sonido de vocal distinto?",
+"correct":"hear",
+"wrong":[
+"bear",
+"hair",
+"chair"
+],
+"why":{
+"en":"“hear” is /ɪər/; the others are /eər/.",
+"fr":"« hear » se dit /ɪər/ ; les autres se disent /eər/.",
+"es":"« hear » se dice /ɪər/; las otras se dicen /eər/."
+},
+"qa":"Which word has a different vowel sound? bear, hair, chair, hear.",
+"aa":"bear, hair, chair, hear."
+},
+{
+"id":"en-b1-370",
+"level":"b1",
+"q":"Your food arrives cold in a restaurant. You complain politely. What do you say?",
+"fr":"Ton plat arrive froid au restaurant. Tu te plains poliment. Que dis-tu ?",
+"es":"Tu comida llega fría en un restaurante. Te quejas con educación. ¿Qué dices?",
+"correct":"Excuse me, I’m afraid my food is cold. Could you heat it up, please?",
+"wrong":[
+"Hey, my food is cold, change it now.",
+"Your food is horrible, take it back!",
+"Excuse me, my food is cold, you must change."
+],
+"why":{
+"en":"“I’m afraid…” and “Could you…?” keep a complaint polite.",
+"fr":"« I’m afraid… » et « Could you… ? » gardent une plainte polie.",
+"es":"« I’m afraid… » y « Could you…? » mantienen educada una queja."
+},
+"qa":"Your food arrives cold in a restaurant. You complain politely. What do you say?",
+"aa":"Excuse me, I'm afraid my food is cold. Could you heat it up, please?"
+},
+{
+"id":"en-b1-371",
+"level":"b1",
+"q":"Which letter is silent in “subtle”?",
+"fr":"Quelle lettre ne se prononce pas dans « subtle » ?",
+"es":"¿Qué letra no se pronuncia en « subtle »?",
+"correct":"b",
+"wrong":[
+"s",
+"u",
+"t"
+],
+"why":{
+"en":"In “subtle” the “b” is silent: we say “suttle”.",
+"fr":"Dans « subtle », le « b » ne se prononce pas : on dit “suttle”.",
+"es":"En « subtle », la « b » no se pronuncia: se dice “suttle”."
+},
+"qa":"Which letter is silent in subtle? subtle.",
+"aa":"subtle."
+},
+{
+"id":"en-b1-372",
+"level":"b1",
+"q":"Listen. Which sentence do you hear?",
+"fr":"Écoute. Quelle phrase entends-tu ?",
+"es":"Escucha. ¿Qué frase oyes?",
+"correct":"She has been working here for ten years.",
+"wrong":[
+"She has been working here since ten years.",
+"She has been working here for two years.",
+"She has been working here for ten days."
+],
+"why":{
+"en":"You heard: “She has been working here for ten years.” Listen for the number and for “for” (a length of time).",
+"fr":"Tu as entendu : « She has been working here for ten years. » Écoute le nombre et « for » (une durée).",
+"es":"Has oído: « She has been working here for ten years. » Escucha el número y « for » (una duración)."
+},
+"qa":"She has been working here for ten years.",
+"aa":"She has been working here for ten years."
+},
+{
+"id":"en-b1-373",
+"level":"b1",
+"q":"Where is the stress on “present” in: “I bought a present for her.”",
+"fr":"Où est l’accent de « present » dans : « I bought a present for her. »",
+"es":"¿Dónde está el acento de « present » en: « I bought a present for her. »",
+"correct":"on the FIRST syllable",
+"wrong":[
+"on the SECOND syllable",
+"equally on both syllables",
+"on neither syllable"
+],
+"why":{
+"en":"Here we say PRE-sent: on the FIRST syllable. Many two-syllable words are nouns when the stress is first, and verbs when it is second.",
+"fr":"Ici on dit PRE-sent : accent sur la PREMIÈRE syllabe. Beaucoup de mots de deux syllabes sont des noms quand l’accent est au début, et des verbes quand il est à la fin.",
+"es":"Aquí se dice PRE-sent: acento en la PRIMERA sílaba. Muchas palabras de dos sílabas son nombres si el acento va al principio y verbos si va al final."
+},
+"qa":"Where is the stress on present in this sentence? I bought a present for her.",
+"aa":"I bought a present for her."
+},
+{
+"id":"en-b1-374",
+"level":"b1",
+"q":"Listen carefully, then answer: When did the flight actually leave, approximately?",
+"fr":"Écoute bien, puis réponds : When did the flight actually leave, approximately?",
+"es":"Escucha bien y responde: When did the flight actually leave, approximately?",
+"correct":"At nine",
+"wrong":[
+"At six",
+"At three",
+"At noon"
+],
+"why":{
+"en":"You heard: “I was supposed to fly to Madrid at six, but my flight was delayed by three hours, so I had dinner at the airport.” Six o’clock plus three hours of delay = nine.",
+"fr":"Tu as entendu : « I was supposed to fly to Madrid at six, but my flight was delayed by three hours, so I had dinner at the airport. » Six heures plus trois heures de retard = neuf heures.",
+"es":"Has oído: « I was supposed to fly to Madrid at six, but my flight was delayed by three hours, so I had dinner at the airport. » Las seis más tres horas de retraso son las nueve."
+},
+"qa":"I was supposed to fly to Madrid at six, but my flight was delayed by three hours, so I had dinner at the airport. When did the flight actually leave, approximately?",
+"aa":"At nine"
+},
+{
+"id":"en-b1-375",
+"level":"b1",
+"q":"What does “get along with” mean?",
+"fr":"Que veut dire « get along with » ?",
+"es":"¿Qué significa « get along with »?",
+"correct":"have a good relationship with",
+"wrong":[
+"travel with",
+"live far from",
+"argue with"
+],
+"why":{
+"en":"“I get along with my colleagues” = we are friends.",
+"fr":"« I get along with my colleagues » = on s’entend bien.",
+"es":"« I get along with my colleagues » = me llevo bien con mis compañeros."
+},
+"qa":"What does get along with mean?",
+"aa":"have a good relationship with"
+},
+{
+"id":"en-b1-376",
+"level":"b1",
+"q":"Put the words in order: “the / woman / who / lives / next / door / is / my / aunt”",
+"fr":"Remets les mots dans l’ordre : « the / woman / who / lives / next / door / is / my / aunt »",
+"es":"Ordena las palabras: « the / woman / who / lives / next / door / is / my / aunt »",
+"correct":"The woman who lives next door is my aunt.",
+"wrong":[
+"The woman who lives next door my aunt is.",
+"The woman lives who next door is my aunt.",
+"Who the woman lives next door is my aunt."
+],
+"why":{
+"en":"“The woman who lives next door is my aunt.” “who” follows the person it describes.",
+"fr":"« The woman who lives next door is my aunt. » « who » suit la personne qu’il décrit.",
+"es":"« The woman who lives next door is my aunt. » « who » va justo después de la persona que describe."
+},
+"qa":"Put the words in order. the , woman , who , lives , next , door , is , my , aunt",
+"aa":"The woman who lives next door is my aunt."
+},
+{
+"id":"en-b1-377",
+"level":"b1",
+"q":"What does “’d” stand for in: “I’d love a coffee.”",
+"fr":"Que veut dire « ’d » dans : « I’d love a coffee. »",
+"es":"¿Qué significa « ’d » en: « I’d love a coffee. »",
+"correct":"would",
+"wrong":[
+"had",
+"did",
+"could"
+],
+"why":{
+"en":"“’d” + base verb = would.",
+"fr":"« ’d » + verbe de base = would.",
+"es":"« ’d » + verbo base = would."
+},
+"qa":"What does ’d stand for in this sentence? I’d love a coffee.",
+"aa":"I’d love a coffee."
+},
+{
+"id":"en-b1-378",
+"level":"b1",
+"q":"How many syllables do we usually say in “vegetable”?",
+"fr":"Combien de syllabes dit-on d’habitude dans « vegetable » ?",
+"es":"¿Cuántas sílabas se dicen normalmente en « vegetable »?",
+"correct":"Three",
+"wrong":[
+"Four",
+"Five",
+"Two"
+],
+"why":{
+"en":"We say “VEJ-ta-ble”: some letters are not pronounced.",
+"fr":"On dit « VEJ-ta-ble » : certaines lettres ne se prononcent pas.",
+"es":"Se dice « VEJ-ta-ble »: algunas letras no se pronuncian."
+},
+"qa":"How many syllables do we usually say in vegetable? vegetable.",
+"aa":"vegetable."
+},
+{
+"id":"en-b1-379",
+"level":"b1",
+"q":"A colleague asks: “Would you mind helping me?” You are happy to help. What do you say? What do you say?",
+"fr":"Un collègue demande : « Would you mind helping me? » Tu veux bien aider. Que réponds-tu ? Que dis-tu ?",
+"es":"Un compañero pregunta: « Would you mind helping me? » Quieres ayudar. ¿Qué respondes? ¿Qué dices?",
+"correct":"Not at all, I’d be happy to.",
+"wrong":[
+"Yes, of course!",
+"Yes, please.",
+"Sorry, I am not minding."
+],
+"why":{
+"en":"Careful! “Would you mind…?” = “Is it a problem?”. To say yes, answer “Not at all”. “Yes, of course” would mean “yes, it IS a problem”.",
+"fr":"Attention ! « Would you mind… ? » = « Ça te dérange ? ». Pour accepter, réponds « Not at all ». « Yes, of course » voudrait dire « oui, ça me dérange ».",
+"es":"¡Cuidado! « Would you mind…? » = « ¿Te molesta? ». Para aceptar, responde « Not at all ». « Yes, of course » significaría « sí, me molesta »."
+},
+"qa":"A colleague asks: Would you mind helping me? You are happy to help. What do you say? What do you say?",
+"aa":"Not at all, I'd be happy to."
+},
+{
+"id":"en-b1-380",
+"level":"b1",
+"q":"How do you say “tear” in: “A tear ran down her cheek.”",
+"fr":"Comment dit-on « tear » dans : « A tear ran down her cheek. »",
+"es":"¿Cómo se dice « tear » en: « A tear ran down her cheek. »",
+"correct":"like “beer”",
+"wrong":[
+"like “bear”",
+"like “bar”",
+"like “burr”"
+],
+"why":{
+"en":"A “tear” in the eye is “teer”; to “tear” paper is “tair”.",
+"fr":"Une « tear » (larme) se dit « teer » ; « to tear » (déchirer) se dit « tair ».",
+"es":"Una « tear » (lágrima) se dice « teer »; « to tear » (rasgar) se dice « tair »."
+},
+"qa":"How do you say tear in this sentence? A tear ran down her cheek.",
+"aa":"A tear ran down her cheek."
+},
+{
+"id":"en-b1-381",
+"level":"b1",
+"q":"You did not hear what was said on the phone. What do you say?",
+"fr":"Tu n’as pas entendu ce qui a été dit au téléphone. Que dis-tu ?",
+"es":"No has oído lo que dijeron por teléfono. ¿Qué dices?",
+"correct":"I’m sorry, I didn’t catch that. Could you say it again?",
+"wrong":[
+"I didn’t catch it, say again.",
+"I’m sorry, I didn’t take that.",
+"I didn’t catch the ball."
+],
+"why":{
+"en":"“I didn’t catch that” = I didn’t hear or understand it.",
+"fr":"« I didn’t catch that » = je n’ai pas entendu ou compris.",
+"es":"« I didn’t catch that » = no lo he oído o entendido."
+},
+"qa":"You did not hear what was said on the phone. What do you say?",
+"aa":"I'm sorry, I didn't catch that. Could you say it again?"
+},
+{
+"id":"en-b1-382",
+"level":"b1",
+"q":"Where is the stress on “increase” in: “Prices increase every year.”",
+"fr":"Où est l’accent de « increase » dans : « Prices increase every year. »",
+"es":"¿Dónde está el acento de « increase » en: « Prices increase every year. »",
+"correct":"on the SECOND syllable",
+"wrong":[
+"on the FIRST syllable",
+"equally on both syllables",
+"on neither syllable"
+],
+"why":{
+"en":"Here we say in-CREASE: on the SECOND syllable. Many two-syllable words are nouns when the stress is first, and verbs when it is second.",
+"fr":"Ici on dit in-CREASE : accent sur la DEUXIÈME syllabe. Beaucoup de mots de deux syllabes sont des noms quand l’accent est au début, et des verbes quand il est à la fin.",
+"es":"Aquí se dice in-CREASE: acento en la SEGUNDA sílaba. Muchas palabras de dos sílabas son nombres si el acento va al principio y verbos si va al final."
+},
+"qa":"Where is the stress on increase in this sentence? Prices increase every year.",
+"aa":"Prices increase every year."
+},
+{
+"id":"en-b1-383",
+"level":"b1",
+"q":"Listen carefully, then answer: What did the speaker like?",
+"fr":"Écoute bien, puis réponds : What did the speaker like?",
+"es":"Escucha bien y responde: What did the speaker like?",
+"correct":"The music",
+"wrong":[
+"The story",
+"The actors",
+"The ending"
+],
+"why":{
+"en":"You heard: “Honestly, the film was a bit disappointing. The story was boring, though the music was great.”",
+"fr":"Tu as entendu : « Honestly, the film was a bit disappointing. The story was boring, though the music was great. »",
+"es":"Has oído: « Honestly, the film was a bit disappointing. The story was boring, though the music was great. »"
+},
+"qa":"Honestly, the film was a bit disappointing. The story was boring, though the music was great. What did the speaker like?",
+"aa":"The music"
+},
+{
+"id":"en-b1-384",
+"level":"b1",
+"q":"Which word is usually NOT stressed (said weakly) in: “Tom was born in Paris.”",
+"fr":"Quel mot n’est généralement PAS accentué (dit faiblement) dans : « Tom was born in Paris. »",
+"es":"¿Qué palabra normalmente NO se acentúa (se dice débil) en: « Tom was born in Paris. »",
+"correct":"was",
+"wrong":[
+"Tom",
+"born",
+"Paris"
+],
+"why":{
+"en":"Little grammar words are weak: we say ““TOM wz BORN in PAris””. The important words (nouns, verbs, adjectives) are stressed — this gives English its rhythm.",
+"fr":"Les petits mots de grammaire sont faibles : on dit « “TOM wz BORN in PAris” ». Les mots importants (noms, verbes, adjectifs) sont accentués — c’est ce qui donne son rythme à l’anglais.",
+"es":"Las palabras gramaticales pequeñas son débiles: se dice « “TOM wz BORN in PAris” ». Las palabras importantes (nombres, verbos, adjetivos) se acentúan — eso da ritmo al inglés."
+},
+"qa":"Which word is usually not stressed in this sentence? Tom was born in Paris.",
+"aa":"Tom was born in Paris."
+},
+{
+"id":"en-b1-385",
+"level":"b1",
+"q":"What does “come across” mean?",
+"fr":"Que veut dire « come across » ?",
+"es":"¿Qué significa « come across »?",
+"correct":"find by chance",
+"wrong":[
+"cross the road",
+"arrive late",
+"understand well"
+],
+"why":{
+"en":"“I came across an old photo” = I found it by chance.",
+"fr":"« I came across an old photo » = je suis tombé sur une vieille photo.",
+"es":"« I came across an old photo » = me encontré una foto vieja."
+},
+"qa":"What does come across mean?",
+"aa":"find by chance"
+},
+{
+"id":"en-b1-386",
+"level":"b1",
+"q":"Which word has a different vowel sound?",
+"fr":"Quel mot a un son de voyelle différent ?",
+"es":"¿Qué palabra tiene un sonido de vocal distinto?",
+"correct":"love",
+"wrong":[
+"move",
+"prove",
+"soup"
+],
+"why":{
+"en":"“love” is /ʌ/; the others are /uː/.",
+"fr":"« love » se dit /ʌ/ ; les autres se disent /uː/.",
+"es":"« love » se dice /ʌ/; las otras se dicen /uː/."
+},
+"qa":"Which word has a different vowel sound? move, prove, soup, love.",
+"aa":"move, prove, soup, love."
+},
+{
+"id":"en-b1-387",
+"level":"b1",
+"q":"Listen. Which sentence do you hear?",
+"fr":"Écoute. Quelle phrase entends-tu ?",
+"es":"Escucha. ¿Qué frase oyes?",
+"correct":"If it rains, we’ll stay at home.",
+"wrong":[
+"If it rained, we’d stay at home.",
+"If it rains, we won’t stay at home.",
+"If it rains, we’ll stay at work."
+],
+"why":{
+"en":"You heard: “If it rains, we’ll stay at home.” “we’ll” = we will (a real possibility); “we’d” = we would (imaginary).",
+"fr":"Tu as entendu : « If it rains, we’ll stay at home. » « we’ll » = we will (possibilité réelle) ; « we’d » = we would (imaginaire).",
+"es":"Has oído: « If it rains, we’ll stay at home. » « we’ll » = we will (posibilidad real); « we’d » = we would (imaginario)."
+},
+"qa":"If it rains, we’ll stay at home.",
+"aa":"If it rains, we’ll stay at home."
+},
+{
+"id":"en-b1-388",
+"level":"b1",
+"q":"Put the words in order: “asked / he / me / where / I / lived”",
+"fr":"Remets les mots dans l’ordre : « asked / he / me / where / I / lived »",
+"es":"Ordena las palabras: « asked / he / me / where / I / lived »",
+"correct":"He asked me where I lived.",
+"wrong":[
+"He asked me where did I live.",
+"He asked me where I did live.",
+"He asked where lived I me."
+],
+"why":{
+"en":"“He asked me where I lived.” Reported question: normal word order, no “did”.",
+"fr":"« He asked me where I lived. » Question indirecte : ordre normal, pas de « did ».",
+"es":"« He asked me where I lived. » Pregunta indirecta: orden normal, sin « did »."
+},
+"qa":"Put the words in order. asked , he , me , where , I , lived",
+"aa":"He asked me where I lived."
+},
+{
+"id":"en-b1-389",
+"level":"b1",
+"q":"A friend has a problem with their boss. You give advice. What do you say?",
+"fr":"Un ami a un problème avec son chef. Tu lui donnes un conseil. Que dis-tu ?",
+"es":"Un amigo tiene un problema con su jefe. Le das un consejo. ¿Qué dices?",
+"correct":"If I were you, I’d talk to your manager.",
+"wrong":[
+"If I was you, I will talk to your manager.",
+"If I am you, I would talk to your manager.",
+"If I were you, I will talk to your manager."
+],
+"why":{
+"en":"Giving advice: “If I were you, I would + verb”.",
+"fr":"Pour conseiller : « If I were you, I would + verbe ».",
+"es":"Para aconsejar: « If I were you, I would + verbo »."
+},
+"qa":"A friend has a problem with their boss. You give advice. What do you say?",
+"aa":"If I were you, I'd talk to your manager."
+},
+{
+"id":"en-b1-390",
+"level":"b1",
+"q":"Which letter is silent in “column”?",
+"fr":"Quelle lettre ne se prononce pas dans « column » ?",
+"es":"¿Qué letra no se pronuncia en « column »?",
+"correct":"n",
+"wrong":[
+"c",
+"o",
+"l"
+],
+"why":{
+"en":"In “column” the “n” is silent: we say “colum”.",
+"fr":"Dans « column », le « n » ne se prononce pas : on dit “colum”.",
+"es":"En « column », la « n » no se pronuncia: se dice “colum”."
+},
+"qa":"Which letter is silent in column? column.",
+"aa":"column."
+},
+{
+"id":"en-b1-391",
+"level":"b1",
+"q":"Where is the stress in “economy”?",
+"fr":"Où est l’accent dans « economy » ?",
+"es":"¿Dónde está el acento en « economy »?",
+"correct":"e-CON-o-my",
+"wrong":[
+"E-co-no-my",
+"ec-O-no-my",
+"ec-o-NO-my"
+],
+"why":{
+"en":"We say e-CON-o-my: the loud, long syllable is in capitals. Words ending in “-omy” and “-ology” are stressed on the syllable before “-o-”.",
+"fr":"On dit e-CON-o-my : la syllabe forte et longue est en majuscules. Les mots en « -omy » et « -ology » sont accentués sur la syllabe avant « -o- ».",
+"es":"Se dice e-CON-o-my: la sílaba fuerte y larga está en mayúsculas. Las palabras en « -omy » y « -ology » se acentúan en la sílaba anterior a « -o- »."
+},
+"qa":"Where is the stress in economy? economy.",
+"aa":"economy."
+},
+{
+"id":"en-b1-392",
+"level":"b1",
+"q":"Listen carefully, then answer: Which gate is the flight leaving from?",
+"fr":"Écoute bien, puis réponds : Which gate is the flight leaving from?",
+"es":"Escucha bien y responde: Which gate is the flight leaving from?",
+"correct":"Gate twenty",
+"wrong":[
+"Gate twelve",
+"Gate two",
+"Gate twenty-two"
+],
+"why":{
+"en":"You heard: “Passengers for Dublin, please note that the gate has changed. Your flight will now board at gate twenty, not gate twelve.” “twenty”, not “twelve”: listen to the ending.",
+"fr":"Tu as entendu : « Passengers for Dublin, please note that the gate has changed. Your flight will now board at gate twenty, not gate twelve. » « twenty », pas « twelve » : écoute la fin du mot.",
+"es":"Has oído: « Passengers for Dublin, please note that the gate has changed. Your flight will now board at gate twenty, not gate twelve. » « twenty », no « twelve »: escucha el final de la palabra."
+},
+"qa":"Passengers for Dublin, please note that the gate has changed. Your flight will now board at gate twenty, not gate twelve. Which gate is the flight leaving from?",
+"aa":"Gate twenty"
+},
+{
+"id":"en-b1-393",
+"level":"b1",
+"q":"What does “break down” mean?",
+"fr":"Que veut dire « break down » ?",
+"es":"¿Qué significa « break down »?",
+"correct":"stop working",
+"wrong":[
+"break a window",
+"get angry",
+"fall asleep"
+],
+"why":{
+"en":"“Our car broke down” = it stopped working.",
+"fr":"« Our car broke down » = notre voiture est tombée en panne.",
+"es":"« Our car broke down » = nuestro coche se averió."
+},
+"qa":"What does break down mean?",
+"aa":"stop working"
+},
+{
+"id":"en-b1-394",
+"level":"b1",
+"q":"How do you say “close” in: “Please close the door.”",
+"fr":"Comment dit-on « close » dans : « Please close the door. »",
+"es":"¿Cómo se dice « close » en: « Please close the door. »",
+"correct":"like “nose”",
+"wrong":[
+"like “dose”",
+"like “lose”",
+"like “loss”"
+],
+"why":{
+"en":"The verb “close” ends with /z/ (like “nose”). The adjective “close” (near) ends with /s/.",
+"fr":"Le verbe « close » finit par /z/ (comme « nose »). L’adjectif « close » (proche) finit par /s/.",
+"es":"El verbo « close » acaba en /z/ (como « nose »). El adjetivo « close » (cerca) acaba en /s/."
+},
+"qa":"How do you say close in this sentence? Please close the door.",
+"aa":"Please close the door."
+},
+{
+"id":"en-b1-395",
+"level":"b1",
+"q":"You are late and you apologise for making someone wait. What do you say?",
+"fr":"Tu es en retard et tu t’excuses d’avoir fait attendre. Que dis-tu ?",
+"es":"Llegas tarde y te disculpas por hacer esperar. ¿Qué dices?",
+"correct":"I’m so sorry for keeping you waiting.",
+"wrong":[
+"I’m so sorry for make you wait.",
+"I’m so sorry to keeping you waiting.",
+"I’m so sorry for to keep you waiting."
+],
+"why":{
+"en":"After the preposition “for”, the verb takes -ing.",
+"fr":"Après la préposition « for », le verbe prend -ing.",
+"es":"Después de la preposición « for », el verbo lleva -ing."
+},
+"qa":"You are late and you apologise for making someone wait. What do you say?",
+"aa":"I'm so sorry for keeping you waiting."
+},
+{
+"id":"en-b1-396",
+"level":"b1",
+"q":"Listen. Which sentence do you hear?",
+"fr":"Écoute. Quelle phrase entends-tu ?",
+"es":"Escucha. ¿Qué frase oyes?",
+"correct":"I should have called you.",
+"wrong":[
+"I shouldn’t have called you.",
+"I should call you.",
+"I could have called you."
+],
+"why":{
+"en":"You heard: “I should have called you.” “should have” + participle = a regret about the past.",
+"fr":"Tu as entendu : « I should have called you. » « should have » + participe = un regret du passé.",
+"es":"Has oído: « I should have called you. » « should have » + participio = un arrepentimiento del pasado."
+},
+"qa":"I should have called you.",
+"aa":"I should have called you."
+},
+{
+"id":"en-b1-397",
+"level":"b1",
+"q":"Where is the stress in “technology”?",
+"fr":"Où est l’accent dans « technology » ?",
+"es":"¿Dónde está el acento en « technology »?",
+"correct":"tech-NOL-o-gy",
+"wrong":[
+"TECH-nol-o-gy",
+"tech-no-LO-gy",
+"tech-nol-o-GY"
+],
+"why":{
+"en":"We say tech-NOL-o-gy: the loud, long syllable is in capitals. Same rule: “-ology” → stress the syllable before it.",
+"fr":"On dit tech-NOL-o-gy : la syllabe forte et longue est en majuscules. Même règle : « -ology » → on accentue la syllabe d’avant.",
+"es":"Se dice tech-NOL-o-gy: la sílaba fuerte y larga está en mayúsculas. Misma regla: « -ology » → se acentúa la sílaba anterior."
+},
+"qa":"Where is the stress in technology? technology.",
+"aa":"technology."
+},
+{
+"id":"en-b1-398",
+"level":"b1",
+"q":"Listen carefully, then answer: What happened yesterday?",
+"fr":"Écoute bien, puis réponds : What happened yesterday?",
+"es":"Escucha bien y responde: What happened yesterday?",
+"correct":"The speaker asked the neighbour to turn the music down.",
+"wrong":[
+"The neighbour complained about the speaker.",
+"The speaker played loud music.",
+"The neighbour moved house."
+],
+"why":{
+"en":"You heard: “My neighbour is very friendly, but he plays loud music late at night. Yesterday I asked him politely to turn it down, and he apologised.”",
+"fr":"Tu as entendu : « My neighbour is very friendly, but he plays loud music late at night. Yesterday I asked him politely to turn it down, and he apologised. »",
+"es":"Has oído: « My neighbour is very friendly, but he plays loud music late at night. Yesterday I asked him politely to turn it down, and he apologised. »"
+},
+"qa":"My neighbour is very friendly, but he plays loud music late at night. Yesterday I asked him politely to turn it down, and he apologised. What happened yesterday?",
+"aa":"The speaker asked the neighbour to turn the music down."
+},
+{
+"id":"en-b1-399",
+"level":"b1",
+"q":"Which word is usually NOT stressed (said weakly) in: “Give the book to John.”",
+"fr":"Quel mot n’est généralement PAS accentué (dit faiblement) dans : « Give the book to John. »",
+"es":"¿Qué palabra normalmente NO se acentúa (se dice débil) en: « Give the book to John. »",
+"correct":"to",
+"wrong":[
+"Give",
+"book",
+"John"
+],
+"why":{
+"en":"Little grammar words are weak: we say ““GIVE the BOOK tuh JOHN””. The important words (nouns, verbs, adjectives) are stressed — this gives English its rhythm.",
+"fr":"Les petits mots de grammaire sont faibles : on dit « “GIVE the BOOK tuh JOHN” ». Les mots importants (noms, verbes, adjectifs) sont accentués — c’est ce qui donne son rythme à l’anglais.",
+"es":"Las palabras gramaticales pequeñas son débiles: se dice « “GIVE the BOOK tuh JOHN” ». Las palabras importantes (nombres, verbos, adjetivos) se acentúan — eso da ritmo al inglés."
+},
+"qa":"Which word is usually not stressed in this sentence? Give the book to John.",
+"aa":"Give the book to John."
+},
+{
+"id":"en-b1-400",
+"level":"b1",
+"q":"What does “a piece of cake” mean?",
+"fr":"Que veut dire « a piece of cake » ?",
+"es":"¿Qué significa « a piece of cake »?",
+"correct":"something very easy",
+"wrong":[
+"a slice of cake",
+"a birthday present",
+"a small dessert"
+],
+"why":{
+"en":"“The exam was a piece of cake” = very easy.",
+"fr":"« The exam was a piece of cake » = très facile.",
+"es":"« The exam was a piece of cake » = muy fácil."
+},
+"qa":"What does a piece of cake mean?",
+"aa":"something very easy"
+},
+{
+"id":"en-b1-401",
+"level":"b1",
+"q":"Put the words in order: “the / cake / was / eaten / by / the / children”",
+"fr":"Remets les mots dans l’ordre : « the / cake / was / eaten / by / the / children »",
+"es":"Ordena las palabras: « the / cake / was / eaten / by / the / children »",
+"correct":"The cake was eaten by the children.",
+"wrong":[
+"The cake eaten was by the children.",
+"The cake was ate by the children.",
+"Was the cake eaten by the children."
+],
+"why":{
+"en":"“The cake was eaten by the children.” Passive: was + past participle (eaten), then “by”.",
+"fr":"« The cake was eaten by the children. » Passif : was + participe passé (eaten), puis « by ».",
+"es":"« The cake was eaten by the children. » Pasiva: was + participio (eaten), luego « by »."
+},
+"qa":"Put the words in order. the , cake , was , eaten , by , the , children",
+"aa":"The cake was eaten by the children."
+},
+{
+"id":"en-b1-402",
+"level":"b1",
+"q":"Which word has a different vowel sound?",
+"fr":"Quel mot a un son de voyelle différent ?",
+"es":"¿Qué palabra tiene un sonido de vocal distinto?",
+"correct":"cough",
+"wrong":[
+"tough",
+"rough",
+"enough"
+],
+"why":{
+"en":"“cough” is /ɒf/ or /ɔːf/; the others are /ʌf/.",
+"fr":"« cough » se dit /ɒf/ or /ɔːf/ ; les autres se disent /ʌf/.",
+"es":"« cough » se dice /ɒf/ or /ɔːf/; las otras se dicen /ʌf/."
+},
+"qa":"Which word has a different vowel sound? cough, tough, rough, enough.",
+"aa":"cough, tough, rough, enough."
+},
+{
+"id":"en-b1-403",
+"level":"b1",
+"q":"What does “’s” stand for in: “He’s finished his homework.”",
+"fr":"Que veut dire « ’s » dans : « He’s finished his homework. »",
+"es":"¿Qué significa « ’s » en: « He’s finished his homework. »",
+"correct":"has",
+"wrong":[
+"is",
+"was",
+"does"
+],
+"why":{
+"en":"“’s” + past participle = has. “’s” + adjective or -ing = is.",
+"fr":"« ’s » + participe passé = has. « ’s » + adjectif ou -ing = is.",
+"es":"« ’s » + participio = has. « ’s » + adjetivo o -ing = is."
+},
+"qa":"What does ’s stand for in this sentence? He’s finished his homework.",
+"aa":"He’s finished his homework."
+},
+{
+"id":"en-b1-404",
+"level":"b1",
+"q":"How many syllables do we usually say in “different”?",
+"fr":"Combien de syllabes dit-on d’habitude dans « different » ?",
+"es":"¿Cuántas sílabas se dicen normalmente en « different »?",
+"correct":"Two",
+"wrong":[
+"Three",
+"Four",
+"Five"
+],
+"why":{
+"en":"We say “DIF-rent”: some letters are not pronounced.",
+"fr":"On dit « DIF-rent » : certaines lettres ne se prononcent pas.",
+"es":"Se dice « DIF-rent »: algunas letras no se pronuncian."
+},
+"qa":"How many syllables do we usually say in different? different.",
+"aa":"different."
+},
+{
+"id":"en-b1-405",
+"level":"b1",
+"q":"You want to say that you finished something a moment ago. What do you say?",
+"fr":"Tu veux dire que tu as fini quelque chose il y a un instant. Que dis-tu ?",
+"es":"Quieres decir que acabas de terminar algo. ¿Qué dices?",
+"correct":"I’ve just finished.",
+"wrong":[
+"I just have finish.",
+"I’ve just finish.",
+"I just finishing."
+],
+"why":{
+"en":"“Just” goes between “have” and the participle.",
+"fr":"« Just » se place entre « have » et le participe.",
+"es":"« Just » va entre « have » y el participio."
+},
+"qa":"You want to say that you finished something a moment ago. What do you say?",
+"aa":"I've just finished."
+},
+{
+"id":"en-b1-406",
+"level":"b1",
+"q":"How do you say “bow” in: “He took a bow after the show.”",
+"fr":"Comment dit-on « bow » dans : « He took a bow after the show. »",
+"es":"¿Cómo se dice « bow » en: « He took a bow after the show. »",
+"correct":"like “cow”",
+"wrong":[
+"like “low”",
+"like “law”",
+"like “bob”"
+],
+"why":{
+"en":"To bend forward = “bow” like “cow”. A bow and arrow = “bow” like “low”.",
+"fr":"S’incliner = « bow » comme « cow ». Un arc et des flèches = « bow » comme « low ».",
+"es":"Inclinarse = « bow » como « cow ». Un arco y flechas = « bow » como « low »."
+},
+"qa":"How do you say bow in this sentence? He took a bow after the show.",
+"aa":"He took a bow after the show."
+},
+{
+"id":"en-b1-407",
+"level":"b1",
+"q":"Where is the stress in “university”?",
+"fr":"Où est l’accent dans « university » ?",
+"es":"¿Dónde está el acento en « university »?",
+"correct":"u-ni-VER-si-ty",
+"wrong":[
+"U-ni-ver-si-ty",
+"u-NI-ver-si-ty",
+"u-ni-ver-SI-ty"
+],
+"why":{
+"en":"We say u-ni-VER-si-ty: the loud, long syllable is in capitals. Words ending in “-ity” are stressed on the syllable before “-ity”… here “VER”.",
+"fr":"On dit u-ni-VER-si-ty : la syllabe forte et longue est en majuscules. Les mots en « -ity » : l’accent est avant la fin… ici « VER ».",
+"es":"Se dice u-ni-VER-si-ty: la sílaba fuerte y larga está en mayúsculas. Las palabras en « -ity » llevan el acento antes del final… aquí « VER »."
+},
+"qa":"Where is the stress in university? university.",
+"aa":"university."
+},
+{
+"id":"en-b1-408",
+"level":"b1",
+"q":"Listen carefully, then answer: What can the speaker do now?",
+"fr":"Écoute bien, puis réponds : What can the speaker do now?",
+"es":"Escucha bien y responde: What can the speaker do now?",
+"correct":"Understand TV series with subtitles",
+"wrong":[
+"Speak perfectly",
+"Say only a few words",
+"Watch without subtitles"
+],
+"why":{
+"en":"You heard: “I’ve been learning English for two years. At first I could only say a few words, but now I can understand TV series with subtitles.”",
+"fr":"Tu as entendu : « I’ve been learning English for two years. At first I could only say a few words, but now I can understand TV series with subtitles. »",
+"es":"Has oído: « I’ve been learning English for two years. At first I could only say a few words, but now I can understand TV series with subtitles. »"
+},
+"qa":"I've been learning English for two years. At first I could only say a few words, but now I can understand TV series with subtitles. What can the speaker do now?",
+"aa":"Understand TV series with subtitles"
+},
+{
+"id":"en-b1-409",
+"level":"b1",
+"q":"What does “to be on the same page” mean?",
+"fr":"Que veut dire « to be on the same page » ?",
+"es":"¿Qué significa « to be on the same page »?",
+"correct":"to agree and understand each other",
+"wrong":[
+"to read the same book",
+"to be at the same school",
+"to turn the page together"
+],
+"why":{
+"en":"“Let’s make sure we’re on the same page” = let’s check that we understand each other.",
+"fr":"« Let’s make sure we’re on the same page » = vérifions qu’on se comprend.",
+"es":"« Let’s make sure we’re on the same page » = asegurémonos de que nos entendemos."
+},
+"qa":"What does to be on the same page mean?",
+"aa":"to agree and understand each other"
+},
+{
+"id":"en-b1-410",
+"level":"b1",
+"q":"You give your opinion in a meeting. What do you say?",
+"fr":"Tu donnes ton avis en réunion. Que dis-tu ?",
+"es":"Das tu opinión en una reunión. ¿Qué dices?",
+"correct":"In my opinion, it’s a good idea.",
+"wrong":[
+"In my opinion, is a good idea.",
+"According to me, it’s good idea.",
+"For my opinion, it’s a good idea."
+],
+"why":{
+"en":"“In my opinion” (not “for my opinion” or “according to me”).",
+"fr":"« In my opinion » (pas « for my opinion » ni « according to me »).",
+"es":"« In my opinion » (no « for my opinion » ni « according to me »)."
+},
+"qa":"You give your opinion in a meeting. What do you say?",
+"aa":"In my opinion, it's a good idea."
+},
+{
+"id":"en-b1-411",
+"level":"b1",
+"q":"Which letter is silent in “muscle”?",
+"fr":"Quelle lettre ne se prononce pas dans « muscle » ?",
+"es":"¿Qué letra no se pronuncia en « muscle »?",
+"correct":"c",
+"wrong":[
+"m",
+"s",
+"l"
+],
+"why":{
+"en":"In “muscle” the “c” is silent: we say “mussle”.",
+"fr":"Dans « muscle », le « c » ne se prononce pas : on dit “mussle”.",
+"es":"En « muscle », la « c » no se pronuncia: se dice “mussle”."
+},
+"qa":"Which letter is silent in muscle? muscle.",
+"aa":"muscle."
+},
+{
+"id":"en-b1-412",
+"level":"b1",
+"q":"Listen. Which sentence do you hear?",
+"fr":"Écoute. Quelle phrase entends-tu ?",
+"es":"Escucha. ¿Qué frase oyes?",
+"correct":"They’ve been waiting for an hour.",
+"wrong":[
+"They were waiting for an hour.",
+"They’ve been waiting for a year.",
+"They’d been waiting for an hour."
+],
+"why":{
+"en":"You heard: “They’ve been waiting for an hour.” “They’ve” = they have; “They’d” = they had. Listen to the end of the little word.",
+"fr":"Tu as entendu : « They’ve been waiting for an hour. » « They’ve » = they have ; « They’d » = they had. Écoute la fin du petit mot.",
+"es":"Has oído: « They’ve been waiting for an hour. » « They’ve » = they have; « They’d » = they had. Escucha el final de la palabrita."
+},
+"qa":"They’ve been waiting for an hour.",
+"aa":"They’ve been waiting for an hour."
+},
+{
+"id":"en-b1-413",
+"level":"b1",
+"q":"Put the words in order: “although / it / was / raining / we / went / out”",
+"fr":"Remets les mots dans l’ordre : « although / it / was / raining / we / went / out »",
+"es":"Ordena las palabras: « although / it / was / raining / we / went / out »",
+"correct":"Although it was raining, we went out.",
+"wrong":[
+"Although it was raining, but we went out.",
+"Although it was raining we out went.",
+"It although was raining, we went out."
+],
+"why":{
+"en":"“Although it was raining, we went out.” Never use “although” and “but” together.",
+"fr":"« Although it was raining, we went out. » On n’utilise jamais « although » et « but » ensemble.",
+"es":"« Although it was raining, we went out. » Nunca se usan « although » y « but » juntos."
+},
+"qa":"Put the words in order. although , it , was , raining , we , went , out",
+"aa":"Although it was raining, we went out."
+},
+{
+"id":"en-b1-414",
+"level":"b1",
+"q":"Someone asks the way and you are not sure. What do you say?",
+"fr":"Quelqu’un demande son chemin et tu n’es pas sûr(e). Que dis-tu ?",
+"es":"Alguien pregunta el camino y no estás seguro/a. ¿Qué dices?",
+"correct":"I’m not sure, but I think it’s on the left.",
+"wrong":[
+"I don’t sure, but I think it’s on the left.",
+"I’m not sure, but I think it be on the left.",
+"I haven’t sure, but I think it’s on the left."
+],
+"why":{
+"en":"“I’m not sure” = BE + adjective.",
+"fr":"« I’m not sure » = BE + adjectif.",
+"es":"« I’m not sure » = BE + adjetivo."
+},
+"qa":"Someone asks the way and you are not sure. What do you say?",
+"aa":"I'm not sure, but I think it's on the left."
+},
+{
+"id":"en-b1-415",
+"level":"b1",
+"q":"Where is the stress in “electricity”?",
+"fr":"Où est l’accent dans « electricity » ?",
+"es":"¿Dónde está el acento en « electricity »?",
+"correct":"e-lec-TRI-ci-ty",
+"wrong":[
+"E-lec-tri-ci-ty",
+"e-LEC-tri-ci-ty",
+"e-lec-tri-CI-ty"
+],
+"why":{
+"en":"We say e-lec-TRI-ci-ty: the loud, long syllable is in capitals. “-ity” → stress “TRI”, the syllable before “-ci-ty”.",
+"fr":"On dit e-lec-TRI-ci-ty : la syllabe forte et longue est en majuscules. « -ity » → on accentue « TRI ».",
+"es":"Se dice e-lec-TRI-ci-ty: la sílaba fuerte y larga está en mayúsculas. « -ity » → se acentúa « TRI »."
+},
+"qa":"Where is the stress in electricity? electricity.",
+"aa":"electricity."
+},
+{
+"id":"en-b1-416",
+"level":"b1",
+"q":"Listen carefully, then answer: Where will the speaker be after five?",
+"fr":"Écoute bien, puis réponds : Where will the speaker be after five?",
+"es":"Escucha bien y responde: Where will the speaker be after five?",
+"correct":"At the gym",
+"wrong":[
+"In the office",
+"At home",
+"At the cinema"
+],
+"why":{
+"en":"You heard: “Let me know if you need anything. I’ll be in the office until five, and then I’m going to the gym.”",
+"fr":"Tu as entendu : « Let me know if you need anything. I’ll be in the office until five, and then I’m going to the gym. »",
+"es":"Has oído: « Let me know if you need anything. I’ll be in the office until five, and then I’m going to the gym. »"
+},
+"qa":"Let me know if you need anything. I'll be in the office until five, and then I'm going to the gym. Where will the speaker be after five?",
+"aa":"At the gym"
+},
+{
+"id":"en-b1-417",
+"level":"b1",
+"q":"Which word is usually NOT stressed (said weakly) in: “A friend and I went home.”",
+"fr":"Quel mot n’est généralement PAS accentué (dit faiblement) dans : « A friend and I went home. »",
+"es":"¿Qué palabra normalmente NO se acentúa (se dice débil) en: « A friend and I went home. »",
+"correct":"and",
+"wrong":[
+"friend",
+"went",
+"home"
+],
+"why":{
+"en":"Little grammar words are weak: we say ““a FRIEND n I WENT HOME””. The important words (nouns, verbs, adjectives) are stressed — this gives English its rhythm.",
+"fr":"Les petits mots de grammaire sont faibles : on dit « “a FRIEND n I WENT HOME” ». Les mots importants (noms, verbes, adjectifs) sont accentués — c’est ce qui donne son rythme à l’anglais.",
+"es":"Las palabras gramaticales pequeñas son débiles: se dice « “a FRIEND n I WENT HOME” ». Las palabras importantes (nombres, verbos, adjetivos) se acentúan — eso da ritmo al inglés."
+},
+"qa":"Which word is usually not stressed in this sentence? A friend and I went home.",
+"aa":"A friend and I went home."
+},
+{
+"id":"en-b1-418",
+"level":"b1",
+"q":"What does “to hit the books” mean?",
+"fr":"Que veut dire « to hit the books » ?",
+"es":"¿Qué significa « to hit the books »?",
+"correct":"to study hard",
+"wrong":[
+"to throw books away",
+"to buy many books",
+"to be angry at a book"
+],
+"why":{
+"en":"“I have an exam, so I need to hit the books.” = I need to study hard.",
+"fr":"« I have an exam, so I need to hit the books. » = je dois réviser sérieusement.",
+"es":"« I have an exam, so I need to hit the books. » = tengo que estudiar mucho."
+},
+"qa":"What does to hit the books mean?",
+"aa":"to study hard"
+},
+{
+"id":"en-b1-419",
+"level":"b1",
+"q":"Which word has a different vowel sound?",
+"fr":"Quel mot a un son de voyelle différent ?",
+"es":"¿Qué palabra tiene un sonido de vocal distinto?",
+"correct":"eat",
+"wrong":[
+"great",
+"break",
+"steak"
+],
+"why":{
+"en":"“eat” is /iː/; the others are /eɪ/.",
+"fr":"« eat » se dit /iː/ ; les autres se disent /eɪ/.",
+"es":"« eat » se dice /iː/; las otras se dicen /eɪ/."
+},
+"qa":"Which word has a different vowel sound? great, break, steak, eat.",
+"aa":"great, break, steak, eat."
+},
+{
+"id":"en-b1-420",
+"level":"b1",
+"q":"How do you say “used” in: “I used to play football.”",
+"fr":"Comment dit-on « used » dans : « I used to play football. »",
+"es":"¿Cómo se dice « used » en: « I used to play football. »",
+"correct":"like “yoost”",
+"wrong":[
+"like “yoozd”",
+"like “yoosid”",
+"like “use-ed”"
+],
+"why":{
+"en":"“used to” (a past habit) is “yoost to”. “I used a pen” is “yoozd”.",
+"fr":"« used to » (habitude passée) se dit « yoost to ». « I used a pen » se dit « yoozd ».",
+"es":"« used to » (hábito pasado) se dice « yoost to ». « I used a pen » se dice « yoozd »."
+},
+"qa":"How do you say used in this sentence? I used to play football.",
+"aa":"I used to play football."
+},
+{
+"id":"en-b1-421",
+"level":"b1",
+"q":"You have to cancel an appointment. What do you say?",
+"fr":"Tu dois annuler un rendez-vous. Que dis-tu ?",
+"es":"Tienes que cancelar una cita. ¿Qué dices?",
+"correct":"I’m afraid I have to cancel our appointment.",
+"wrong":[
+"I’m afraid I must to cancel our appointment.",
+"I’m afraid I have cancel our appointment.",
+"I’m afraid I have to cancelling our appointment."
+],
+"why":{
+"en":"“Have to” + base verb.",
+"fr":"« Have to » + verbe de base.",
+"es":"« Have to » + verbo base."
+},
+"qa":"You have to cancel an appointment. What do you say?",
+"aa":"I'm afraid I have to cancel our appointment."
+},
+{
+"id":"en-b1-422",
+"level":"b1",
+"q":"Listen. Which sentence do you hear?",
+"fr":"Écoute. Quelle phrase entends-tu ?",
+"es":"Escucha. ¿Qué frase oyes?",
+"correct":"I couldn’t hear you very well.",
+"wrong":[
+"I can’t hear you very well.",
+"I couldn’t see you very well.",
+"I couldn’t hear him very well."
+],
+"why":{
+"en":"You heard: “I couldn’t hear you very well.” “couldn’t” is longer than “can’t” and ends with a soft /d/ then /nt/.",
+"fr":"Tu as entendu : « I couldn’t hear you very well. » « couldn’t » est plus long que « can’t » et contient un /d/ doux puis /nt/.",
+"es":"Has oído: « I couldn’t hear you very well. » « couldn’t » es más largo que « can’t » y tiene una /d/ suave y luego /nt/."
+},
+"qa":"I couldn’t hear you very well.",
+"aa":"I couldn’t hear you very well."
+},
+{
+"id":"en-b1-423",
+"level":"b1",
+"q":"Where is the stress in “communication”?",
+"fr":"Où est l’accent dans « communication » ?",
+"es":"¿Dónde está el acento en « communication »?",
+"correct":"com-mu-ni-CA-tion",
+"wrong":[
+"COM-mu-ni-ca-tion",
+"com-MU-ni-ca-tion",
+"com-mu-NI-ca-tion"
+],
+"why":{
+"en":"We say com-mu-ni-CA-tion: the loud, long syllable is in capitals. Before “-tion”: stress the syllable just before it.",
+"fr":"On dit com-mu-ni-CA-tion : la syllabe forte et longue est en majuscules. Avant « -tion » : on accentue la syllabe juste avant.",
+"es":"Se dice com-mu-ni-CA-tion: la sílaba fuerte y larga está en mayúsculas. Antes de « -tion »: se acentúa la sílaba justo anterior."
+},
+"qa":"Where is the stress in communication? communication.",
+"aa":"communication."
+},
+{
+"id":"en-b1-424",
+"level":"b1",
+"q":"Listen carefully, then answer: Who is taller?",
+"fr":"Écoute bien, puis réponds : Who is taller?",
+"es":"Escucha bien y responde: Who is taller?",
+"correct":"Her brother",
+"wrong":[
+"She is",
+"They are the same height",
+"We cannot know"
+],
+"why":{
+"en":"You heard: “She’s not as tall as her brother, but she’s a better basketball player.”",
+"fr":"Tu as entendu : « She’s not as tall as her brother, but she’s a better basketball player. »",
+"es":"Has oído: « She’s not as tall as her brother, but she’s a better basketball player. »"
+},
+"qa":"She's not as tall as her brother, but she's a better basketball player. Who is taller?",
+"aa":"Her brother"
+},
+{
+"id":"en-b1-425",
+"level":"b1",
+"q":"What does “under the weather” mean?",
+"fr":"Que veut dire « under the weather » ?",
+"es":"¿Qué significa « under the weather »?",
+"correct":"slightly ill",
+"wrong":[
+"in the rain",
+"very happy",
+"outside in the cold"
+],
+"why":{
+"en":"“I’m a bit under the weather” = I don’t feel well.",
+"fr":"« I’m a bit under the weather » = je ne me sens pas bien.",
+"es":"« I’m a bit under the weather » = no me siento bien."
+},
+"qa":"What does under the weather mean?",
+"aa":"slightly ill"
+},
+{
+"id":"en-b1-426",
+"level":"b1",
+"q":"Put the words in order: “she / suggested / going / to / the / beach”",
+"fr":"Remets les mots dans l’ordre : « she / suggested / going / to / the / beach »",
+"es":"Ordena las palabras: « she / suggested / going / to / the / beach »",
+"correct":"She suggested going to the beach.",
+"wrong":[
+"She suggested to go to the beach.",
+"She suggested us going the beach.",
+"She suggested go to the beach."
+],
+"why":{
+"en":"“She suggested going to the beach.” “Suggest” is followed by -ing, not “to”.",
+"fr":"« She suggested going to the beach. » Après « suggest » on met -ing, pas « to ».",
+"es":"« She suggested going to the beach. » Después de « suggest » va -ing, no « to »."
+},
+"qa":"Put the words in order. she , suggested , going , to , the , beach",
+"aa":"She suggested going to the beach."
+},
+{
+"id":"en-b1-427",
+"level":"b1",
+"q":"What does “’s” stand for in: “She’s been waiting for ages.”",
+"fr":"Que veut dire « ’s » dans : « She’s been waiting for ages. »",
+"es":"¿Qué significa « ’s » en: « She’s been waiting for ages. »",
+"correct":"has",
+"wrong":[
+"is",
+"was",
+"does"
+],
+"why":{
+"en":"“’s been” = has been.",
+"fr":"« ’s been » = has been.",
+"es":"« ’s been » = has been."
+},
+"qa":"What does ’s stand for in this sentence? She’s been waiting for ages.",
+"aa":"She’s been waiting for ages."
+},
+{
+"id":"en-b1-428",
+"level":"b1",
+"q":"How many syllables do we usually say in “chocolate”?",
+"fr":"Combien de syllabes dit-on d’habitude dans « chocolate » ?",
+"es":"¿Cuántas sílabas se dicen normalmente en « chocolate »?",
+"correct":"Two",
+"wrong":[
+"Three",
+"Four",
+"Five"
+],
+"why":{
+"en":"We say “CHOC-lit”: some letters are not pronounced.",
+"fr":"On dit « CHOC-lit » : certaines lettres ne se prononcent pas.",
+"es":"Se dice « CHOC-lit »: algunas letras no se pronuncian."
+},
+"qa":"How many syllables do we usually say in chocolate? chocolate.",
+"aa":"chocolate."
+},
+{
+"id":"en-b1-429",
+"level":"b1",
+"q":"You call someone who is not there. You want to leave a message. What do you say?",
+"fr":"Tu appelles quelqu’un qui n’est pas là. Tu veux laisser un message. Que dis-tu ?",
+"es":"Llamas a alguien que no está. Quieres dejar un mensaje. ¿Qué dices?",
+"correct":"Could you ask him to call me back, please?",
+"wrong":[
+"Could you say him to call me back, please?",
+"Could you tell him call me back, please?",
+"Could you ask to him to call me back, please?"
+],
+"why":{
+"en":"ask / tell + person + (not) to + verb.",
+"fr":"ask / tell + personne + (not) to + verbe.",
+"es":"ask / tell + persona + (not) to + verbo."
+},
+"qa":"You call someone who is not there. You want to leave a message. What do you say?",
+"aa":"Could you ask him to call me back, please?"
+},
+{
+"id":"en-b1-430",
+"level":"b1",
+"q":"Which letter is silent in “honest”?",
+"fr":"Quelle lettre ne se prononce pas dans « honest » ?",
+"es":"¿Qué letra no se pronuncia en « honest »?",
+"correct":"h",
+"wrong":[
+"o",
+"n",
+"s"
+],
+"why":{
+"en":"In “honest” the “h” is silent: we say “onest”.",
+"fr":"Dans « honest », le « h » ne se prononce pas : on dit “onest”.",
+"es":"En « honest », la « h » no se pronuncia: se dice “onest”."
+},
+"qa":"Which letter is silent in honest? honest.",
+"aa":"honest."
+},
+{
+"id":"en-b1-431",
+"level":"b1",
+"q":"Where is the stress in “opportunity”?",
+"fr":"Où est l’accent dans « opportunity » ?",
+"es":"¿Dónde está el acento en « opportunity »?",
+"correct":"op-por-TU-ni-ty",
+"wrong":[
+"OP-por-tu-ni-ty",
+"op-POR-tu-ni-ty",
+"op-por-tu-NI-ty"
+],
+"why":{
+"en":"We say op-por-TU-ni-ty: the loud, long syllable is in capitals. “-ity” again: stress “TU”.",
+"fr":"On dit op-por-TU-ni-ty : la syllabe forte et longue est en majuscules. Encore « -ity » : on accentue « TU ».",
+"es":"Se dice op-por-TU-ni-ty: la sílaba fuerte y larga está en mayúsculas. Otra vez « -ity »: se acentúa « TU »."
+},
+"qa":"Where is the stress in opportunity? opportunity.",
+"aa":"opportunity."
+},
+{
+"id":"en-b1-432",
+"level":"b1",
+"q":"Listen carefully, then answer: How long did they wait?",
+"fr":"Écoute bien, puis réponds : How long did they wait?",
+"es":"Escucha bien y responde: How long did they wait?",
+"correct":"Forty minutes",
+"wrong":[
+"Fourteen minutes",
+"Four minutes",
+"An hour"
+],
+"why":{
+"en":"You heard: “The restaurant was fully booked, so we waited forty minutes. In the end, the food was so good that we forgot about it.” “forty” (40) has no “teen” at the end; “fourteen” (14) does.",
+"fr":"Tu as entendu : « The restaurant was fully booked, so we waited forty minutes. In the end, the food was so good that we forgot about it. » « forty » (40) n’a pas de « teen » à la fin ; « fourteen » (14) en a un.",
+"es":"Has oído: « The restaurant was fully booked, so we waited forty minutes. In the end, the food was so good that we forgot about it. » « forty » (40) no lleva « teen » al final; « fourteen » (14) sí."
+},
+"qa":"The restaurant was fully booked, so we waited forty minutes. In the end, the food was so good that we forgot about it. How long did they wait?",
+"aa":"Forty minutes"
+},
+{
+"id":"en-b1-433",
+"level":"b1",
+"q":"Which word is usually NOT stressed (said weakly) in: “There is a bank near here.”",
+"fr":"Quel mot n’est généralement PAS accentué (dit faiblement) dans : « There is a bank near here. »",
+"es":"¿Qué palabra normalmente NO se acentúa (se dice débil) en: « There is a bank near here. »",
+"correct":"a",
+"wrong":[
+"bank",
+"near",
+"here"
+],
+"why":{
+"en":"Little grammar words are weak: we say ““there’s a BANK NEAR HERE””. The important words (nouns, verbs, adjectives) are stressed — this gives English its rhythm.",
+"fr":"Les petits mots de grammaire sont faibles : on dit « “there’s a BANK NEAR HERE” ». Les mots importants (noms, verbes, adjectifs) sont accentués — c’est ce qui donne son rythme à l’anglais.",
+"es":"Las palabras gramaticales pequeñas son débiles: se dice « “there’s a BANK NEAR HERE” ». Las palabras importantes (nombres, verbos, adjetivos) se acentúan — eso da ritmo al inglés."
+},
+"qa":"Which word is usually not stressed in this sentence? There is a bank near here.",
+"aa":"There is a bank near here."
+},
+{
+"id":"en-b1-434",
+"level":"b1",
+"q":"What does “once in a blue moon” mean?",
+"fr":"Que veut dire « once in a blue moon » ?",
+"es":"¿Qué significa « once in a blue moon »?",
+"correct":"very rarely",
+"wrong":[
+"every month",
+"at night",
+"when it is cold"
+],
+"why":{
+"en":"“I eat fast food once in a blue moon” = almost never.",
+"fr":"« I eat fast food once in a blue moon » = presque jamais.",
+"es":"« I eat fast food once in a blue moon » = casi nunca."
+},
+"qa":"What does once in a blue moon mean?",
+"aa":"very rarely"
+},
+{
+"id":"en-b1-435",
+"level":"b1",
+"q":"Which word has a different vowel sound?",
+"fr":"Quel mot a un son de voyelle différent ?",
+"es":"¿Qué palabra tiene un sonido de vocal distinto?",
+"correct":"though",
+"wrong":[
+"bought",
+"caught",
+"thought"
+],
+"why":{
+"en":"“though” is /oʊ/; the others are /ɔː/.",
+"fr":"« though » se dit /oʊ/ ; les autres se disent /ɔː/.",
+"es":"« though » se dice /oʊ/; las otras se dicen /ɔː/."
+},
+"qa":"Which word has a different vowel sound? bought, caught, thought, though.",
+"aa":"bought, caught, thought, though."
+},
+{
+"id":"en-b1-436",
+"level":"b1",
+"q":"How do you say “some” in: “Do you want some coffee?”",
+"fr":"Comment dit-on « some » dans : « Do you want some coffee? »",
+"es":"¿Cómo se dice « some » en: « Do you want some coffee? »",
+"correct":"like “sum”",
+"wrong":[
+"like “same”",
+"like “so”",
+"like “seem”"
+],
+"why":{
+"en":"“some” is spelled with an “o” but sounds like “sum”.",
+"fr":"« some » s’écrit avec un « o » mais se dit « sum ».",
+"es":"« some » se escribe con « o » pero suena como « sum »."
+},
+"qa":"How do you say some in this sentence? Do you want some coffee?",
+"aa":"Do you want some coffee?"
+},
+{
+"id":"en-b1-437",
+"level":"b1",
+"q":"Someone says: “Do you fancy going out tonight?” What do you answer?",
+"fr":"Quelqu’un te dit : « Do you fancy going out tonight? » Que réponds-tu ?",
+"es":"Alguien te dice: « Do you fancy going out tonight? » ¿Qué respondes?",
+"correct":"Sure, why not?",
+"wrong":[
+"Yes, I fancy.",
+"Sure, I am fancy.",
+"Sure, why not to?"
+],
+"why":{
+"en":"“Do you fancy…?” = Would you like to…? “Sure, why not?” is an easy yes.",
+"fr":"« Do you fancy… ? » = Tu as envie de… ? « Sure, why not? » est un oui facile.",
+"es":"« Do you fancy…? » = ¿Te apetece…? « Sure, why not? » es un sí fácil."
+},
+"qa":"Someone says: Do you fancy going out tonight? What do you answer?",
+"aa":"Sure, why not?"
+},
+{
+"id":"en-b1-438",
+"level":"b1",
+"q":"Listen. Which sentence do you hear?",
+"fr":"Écoute. Quelle phrase entends-tu ?",
+"es":"Escucha. ¿Qué frase oyes?",
+"correct":"My birthday is on the thirteenth of March.",
+"wrong":[
+"My birthday is on the thirtieth of March.",
+"My birthday is on the third of March.",
+"My birthday is on the thirteenth of May."
+],
+"why":{
+"en":"You heard: “My birthday is on the thirteenth of March.” “thir-TEENTH” (13th) is stressed at the end; “THIR-tieth” (30th) at the start.",
+"fr":"Tu as entendu : « My birthday is on the thirteenth of March. » « thir-TEENTH » (13e) est accentué à la fin ; « THIR-tieth » (30e) au début.",
+"es":"Has oído: « My birthday is on the thirteenth of March. » « thir-TEENTH » (13.º) se acentúa al final; « THIR-tieth » (30.º) al principio."
+},
+"qa":"My birthday is on the thirteenth of March.",
+"aa":"My birthday is on the thirteenth of March."
+},
+{
+"id":"en-b1-439",
+"level":"b1",
+"q":"Put the words in order: “enough / money / didn’t / have / she / to / buy / it”",
+"fr":"Remets les mots dans l’ordre : « enough / money / didn’t / have / she / to / buy / it »",
+"es":"Ordena las palabras: « enough / money / didn’t / have / she / to / buy / it »",
+"correct":"She didn’t have enough money to buy it.",
+"wrong":[
+"She didn’t have money enough to buy it.",
+"She had not enough money for buy it.",
+"She didn’t have enough money for buying it."
+],
+"why":{
+"en":"“She didn’t have enough money to buy it.” “Enough” comes before a noun; then “to” + verb.",
+"fr":"« She didn’t have enough money to buy it. » « Enough » se place avant un nom ; puis « to » + verbe.",
+"es":"« She didn’t have enough money to buy it. » « Enough » va antes de un nombre; luego « to » + verbo."
+},
+"qa":"Put the words in order. enough , money , didn't , have , she , to , buy , it",
+"aa":"She didn't have enough money to buy it."
+},
+{
+"id":"en-b1-440",
+"level":"b1",
+"q":"Where is the stress in “politician”?",
+"fr":"Où est l’accent dans « politician » ?",
+"es":"¿Dónde está el acento en « politician »?",
+"correct":"pol-i-TI-cian",
+"wrong":[
+"POL-i-ti-cian",
+"pol-I-ti-cian",
+"pol-i-ti-CIAN"
+],
+"why":{
+"en":"We say pol-i-TI-cian: the loud, long syllable is in capitals. “-cian” (like “-tion”) pulls the stress to the syllable before it.",
+"fr":"On dit pol-i-TI-cian : la syllabe forte et longue est en majuscules. « -cian » (comme « -tion ») attire l’accent sur la syllabe d’avant.",
+"es":"Se dice pol-i-TI-cian: la sílaba fuerte y larga está en mayúsculas. « -cian » (como « -tion ») atrae el acento a la sílaba anterior."
+},
+"qa":"Where is the stress in politician? politician.",
+"aa":"politician."
+},
+{
+"id":"en-b1-441",
+"level":"b1",
+"q":"Listen carefully, then answer: What does the customer want?",
+"fr":"Écoute bien, puis réponds : What does the customer want?",
+"es":"Escucha bien y responde: What does the customer want?",
+"correct":"Their money back",
+"wrong":[
+"A new zip",
+"A different colour",
+"To speak to a friend"
+],
+"why":{
+"en":"You heard: “Could I speak to the manager, please? I bought this jacket yesterday and the zip is already broken. I’d like a refund.”",
+"fr":"Tu as entendu : « Could I speak to the manager, please? I bought this jacket yesterday and the zip is already broken. I’d like a refund. »",
+"es":"Has oído: « Could I speak to the manager, please? I bought this jacket yesterday and the zip is already broken. I’d like a refund. »"
+},
+"qa":"Could I speak to the manager, please? I bought this jacket yesterday and the zip is already broken. I'd like a refund. What does the customer want?",
+"aa":"Their money back"
+},
+{
+"id":"en-b1-442",
+"level":"b1",
+"q":"What does “to catch up with someone” mean?",
+"fr":"Que veut dire « to catch up with someone » ?",
+"es":"¿Qué significa « to catch up with someone »?",
+"correct":"to meet and talk after a long time",
+"wrong":[
+"to run faster than someone",
+"to catch a ball",
+"to follow someone secretly"
+],
+"why":{
+"en":"“Let’s catch up soon!” = let’s meet and tell each other our news.",
+"fr":"« Let’s catch up soon! » = retrouvons-nous bientôt pour nous raconter nos nouvelles.",
+"es":"« Let’s catch up soon! » = quedemos pronto para ponernos al día."
+},
+"qa":"What does to catch up with someone mean?",
+"aa":"to meet and talk after a long time"
+},
+{
+"id":"en-b1-443",
+"level":"b1",
+"q":"Someone says: “Sorry I’m late!” What do you answer?",
+"fr":"Quelqu’un te dit : « Sorry I’m late! » Que réponds-tu ?",
+"es":"Alguien te dice: « Sorry I’m late! » ¿Qué respondes?",
+"correct":"Don’t worry about it.",
+"wrong":[
+"You’re welcome.",
+"Me neither.",
+"I’m late too, thanks."
+],
+"why":{
+"en":"“Don’t worry about it” = it’s fine.",
+"fr":"« Don’t worry about it » = ce n’est pas grave.",
+"es":"« Don’t worry about it » = no pasa nada."
+},
+"qa":"Someone says: Sorry I'm late! What do you answer?",
+"aa":"Don't worry about it."
 }
 ]
