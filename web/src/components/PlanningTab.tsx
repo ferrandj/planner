@@ -1,7 +1,7 @@
-import { useEffect, useRef, type CSSProperties, type FormEvent, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type CSSProperties, type FormEvent, type ReactNode } from 'react';
 import type { Evt } from '../types';
 import { pad, parse, wdList } from '../lib/dates';
-import { eventsOn, inScope, isDone, isLate, subjectOf, visible } from '../lib/model';
+import { byDate, eventsOn, inScope, isDone, isLate, subjectOf, visible } from '../lib/model';
 import { addSession } from '../lib/items';
 import { K } from '../lib/labels';
 import { allChoices, suggestFor, type Suggestion } from '../lib/rhythm';
@@ -22,8 +22,36 @@ export function SubjectChips(): ReactNode {
   );
 }
 
+const FOLD_KEY = 'planner.folded';
+/** Which sections of the list are folded: kept on this device (a convenience, never part of the data). */
+function useFolded(): [Record<string, boolean>, (k: string) => void] {
+  const [folded, setFolded] = useState<Record<string, boolean>>(() => {
+    try { const v = JSON.parse(localStorage.getItem(FOLD_KEY) || '{}'); return v && typeof v === 'object' ? v : {}; } catch { return {}; }
+  });
+  const toggle = (k: string): void => setFolded((f) => {
+    const n = { ...f, [k]: !f[k] };
+    if (!n[k]) delete n[k];
+    try { localStorage.setItem(FOLD_KEY, JSON.stringify(n)); } catch { /* private window: it still folds, it is just not remembered */ }
+    return n;
+  });
+  return [folded, toggle];
+}
+
+/** A heading that folds and unfolds what follows it. */
+function Fold({ id, open, onToggle, level, children }: { id: string; open: boolean; onToggle: () => void; level: 2 | 3; children: ReactNode }): ReactNode {
+  const H = level === 2 ? 'h2' : 'h3';
+  return (
+    <H className="foldh">
+      <button type="button" className="fold" aria-expanded={open} aria-controls={id} onClick={onToggle}>
+        <span className="car" aria-hidden="true">▾</span><span className="ft">{children}</span>
+      </button>
+    </H>
+  );
+}
+
 function ListView({ evs }: { evs: Evt[] }): ReactNode {
   const { ui, data, today, t, tf, fmt } = useApp();
+  const [folded, toggle] = useFolded();
   const late: Evt[] = [], byMonth: Record<string, Evt[]> = {}, order: string[] = [];
   evs.forEach((e) => {
     if (ui.scope === 'todo' && isLate(e, today, data)) { late.push(e); return; }
@@ -32,20 +60,41 @@ function ListView({ evs }: { evs: Evt[] }): ReactNode {
     byMonth[k].push(e);
   });
   if (!late.length && !order.length) return <div className="empty">{t('Rien à afficher avec ces filtres.')}</div>;
+  late.sort(byDate);                                              // oldest first, with the day, the month and the time
+  order.sort();
+  order.forEach((k) => byMonth[k].sort(byDate));
+  const todo = ui.scope === 'todo';
+  const nUpcoming = order.reduce((n, k) => n + byMonth[k].length, 0);
+  const months = (
+    order.map((k) => (
+      <div key={k} className="month">
+        <Fold id={'m-' + k} level={3} open={!folded['m:' + k]} onToggle={() => toggle('m:' + k)}>
+          <span>{fmt.month.format(parse(k + '-01'))}</span> <span className="cnt">{byMonth[k].length}</span>
+        </Fold>
+        <ul className="list" id={'m-' + k} hidden={!!folded['m:' + k]}>{byMonth[k].map((e) => <Row key={e.id} e={e} />)}</ul>
+      </div>
+    ))
+  );
   return (
     <>
       {late.length > 0 && (
         <section className="group late">
-          <h2>{t('À rattraper')} <span>{tf('{n} en attente', { n: late.length })}</span></h2>
-          <ul className="list">{late.map((e) => <Row key={e.id} e={e} />)}</ul>
+          <Fold id="g-late" level={2} open={!folded.late} onToggle={() => toggle('late')}>
+            {t('À rattraper')} <span className="cnt">{tf('{n} en attente', { n: late.length })}</span>
+          </Fold>
+          <ul className="list" id="g-late" hidden={!!folded.late}>{late.map((e) => <Row key={e.id} e={e} />)}</ul>
         </section>
       )}
-      {order.map((k) => (
-        <section key={k} className="group">
-          <h2 style={{ textTransform: 'capitalize' }}>{fmt.month.format(parse(k + '-01'))}</h2>
-          <ul className="list">{byMonth[k].map((e) => <Row key={e.id} e={e} />)}</ul>
-        </section>
-      ))}
+      {todo ? (
+        order.length > 0 && (
+          <section className="group next">
+            <Fold id="g-next" level={2} open={!folded.next} onToggle={() => toggle('next')}>
+              {t('À suivre')} <span className="cnt">{tf('{n} à venir', { n: nUpcoming })}</span>
+            </Fold>
+            <div id="g-next" hidden={!!folded.next}>{months}</div>
+          </section>
+        )
+      ) : <section className="group">{months}</section>}
     </>
   );
 }

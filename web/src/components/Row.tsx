@@ -62,7 +62,7 @@ export function Row({ e }: { e: Evt }): ReactNode {
 
   return (
     <li className={`row kind-${e.kind}${done ? ' done' : ''}`} onContextMenu={menu(ek, e.check ? key : null)}>
-      <div className="dt"><span className="wd">{fmt.wd.format(dt)}</span><span className="dn">{dt.getDate()}</span></div>
+      <div className="dt"><span className="wd">{fmt.wd.format(dt)}</span><span className="dn">{dt.getDate()}</span><span className="mo">{fmt.mo.format(dt)}</span></div>
       <div className="bd">
         <div className="tags">{tags}</div>
         <div className="tt">{title}</div>

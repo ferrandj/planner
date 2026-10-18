@@ -13,7 +13,7 @@ export const diff = (a: string, b: string): number => Math.round((parse(a).getTi
 
 export interface Fmt {
   wd: Intl.DateTimeFormat; long: Intl.DateTimeFormat; month: Intl.DateTimeFormat; mon: Intl.DateTimeFormat;
-  monShort: Intl.DateTimeFormat; wdLong: Intl.DateTimeFormat; wdNarrow: Intl.DateTimeFormat; locale: string;
+  monShort: Intl.DateTimeFormat; mo: Intl.DateTimeFormat; wdLong: Intl.DateTimeFormat; wdNarrow: Intl.DateTimeFormat; locale: string;
 }
 export function makeFmt(lang: Lang): Fmt {
   const locale = ({ fr: 'fr-FR', en: 'en-GB', es: 'es-ES' } as const)[lang] || 'fr-FR';
@@ -24,6 +24,7 @@ export function makeFmt(lang: Lang): Fmt {
     month: new Intl.DateTimeFormat(locale, { month: 'long', year: 'numeric' }),
     mon: new Intl.DateTimeFormat(locale, { month: 'long' }),
     monShort: new Intl.DateTimeFormat(locale, { month: 'short', year: '2-digit' }),
+    mo: new Intl.DateTimeFormat(locale, { month: 'short' }),
     wdLong: new Intl.DateTimeFormat(locale, { weekday: 'long' }),
     wdNarrow: new Intl.DateTimeFormat(locale, { weekday: 'narrow' })
   };
