@@ -27,11 +27,12 @@ describe('achievements', () => {
     const { sync } = await mountApp({ server: srv });
     const u = user();
     await u.click(screen.getAllByRole('checkbox', { name: /Live du soir/ })[0]);
-    expect(await screen.findByText(/Succès débloqué ! Premier live · Maths/)).toBeInTheDocument();
+    // first live: overall + Maths medals and the catch-up one (it was ticked after its day) = 4, so one grouped message
+    expect(await screen.findByText(/4 succès débloqués !/)).toBeInTheDocument();
     await saved(sync);
     expect(srv.data.done[LATE]).toBe(true);
     expect(srv.data.doneAt[LATE]).toBe('2026-10-11');
-    expect(srv.data.ach).toMatchObject({ 'all|1': '2026-10-11', 's:m1:live|1': '2026-10-11' });
+    expect(srv.data.ach).toMatchObject({ 'all|1': '2026-10-11', 'lives|1': '2026-10-11', 's:m1:live|1': '2026-10-11' });
   });
 
   it('unticking never takes a medal away', async () => {
