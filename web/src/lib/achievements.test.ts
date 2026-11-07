@@ -87,10 +87,25 @@ describe('achievements for a planner', () => {
   it('ticking sessions meets the right tiers, per subject and kind, and overall', () => {
     const { defs, d } = make((x) => { x.done.l1 = true; x.done.l2 = true; x.done.w1 = true; });
     const met = newlyMet(defs, d).map((x) => x.id).sort();
-    expect(met).toEqual(['all|1', 'all|2', 'all|3', 's:m1:live|1', 's:m1:live|2', 's:m1:webconf|1'].sort());
+    expect(met).toEqual(['all|1', 'all|2', 'all|3', 'lives|1', 'lives|2', 'webconfs|1', 's:m1:live|1', 's:m1:live|2', 's:m1:webconf|1'].sort());
+  });
+  it('has 30 medals for all the lives and 30 for all the web conferences, whatever is planned', () => {
+    const { defs, stats } = make((x) => { x.done.l1 = true; x.done.l2 = true; x.done.p1 = true; x.done.w1 = true; });
+    expect(defs.filter((d) => d.family === 'lives').map((d) => d.n)).toEqual(every(30));
+    expect(defs.filter((d) => d.family === 'webconfs').map((d) => d.n)).toEqual(every(30));
+    expect(byId(defs, 'lives|1')?.title).toBe('Premier live');
+    expect(byId(defs, 'lives|30')?.title).toBe('30 lives');
+    expect(byId(defs, 'webconfs|1')?.title).toBe('Première webconférence');
+    expect(byId(defs, 'webconfs|12')?.title).toBe('12 webconférences');
+    expect(byId(defs, 'lives|1')).toMatchObject({ glyph: 'live', group: 'sessions', rank: 0 });
+    expect(byId(defs, 'webconfs|30')).toMatchObject({ glyph: 'webconf', rank: 4 });
+    // lives are counted across subjects (l1, l2 in maths + p1 in physics), web conferences likewise
+    expect(defs.filter((d) => d.family === 'lives' && d.met).map((d) => d.n)).toEqual([1, 2, 3]);
+    expect(defs.filter((d) => d.family === 'webconfs' && d.met).map((d) => d.n)).toEqual([1]);
+    expect(stats.totalDone).toBe(4);
   });
   it('already unlocked ones are not reported again, even when no longer met', () => {
-    const { defs, d } = make((x) => { x.done.l1 = true; x.ach['s:m1:live|1'] = '2026-10-01'; x.ach['all|1'] = '2026-10-01'; x.ach['streak|60'] = '2026-10-01'; });
+    const { defs, d } = make((x) => { x.done.l1 = true; x.ach['s:m1:live|1'] = '2026-10-01'; x.ach['lives|1'] = '2026-10-01'; x.ach['all|1'] = '2026-10-01'; x.ach['streak|60'] = '2026-10-01'; });
     expect(newlyMet(defs, d)).toEqual([]);
   });
   it('counts sessions ticked after their day as caught up, and ignores ticks without a date', () => {
@@ -130,7 +145,7 @@ describe('achievements for a planner', () => {
   it('a medal exists for every tier of every achievement, with a unique id', () => {
     const { defs } = make();
     expect(new Set(defs.map((x) => x.id)).size).toBe(defs.length);
-    expect(defs.length).toBeGreaterThan(40);
+    expect(defs.length).toBeGreaterThan(100);
   });
 });
 

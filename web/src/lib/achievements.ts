@@ -37,6 +37,9 @@ export interface Def {
   met: boolean;
 }
 
+/** How many medals the overall "lives" and "web conferences" families have (1, 2, 3... 30), whatever is planned. */
+export const KIND_TIERS = 30;
+
 export type Group = 'sessions' | 'rhythm' | 'homework' | 'planner';
 export const GROUPS: Group[] = ['sessions', 'rhythm', 'homework', 'planner'];
 
@@ -157,6 +160,15 @@ export function buildDefs(model: Model, stats: Stats, t: Translate, tf: Translat
 
   fams.push({ key: 'all', name: t('Séances suivies'), group: 'sessions', glyph: 'cap', tiers: every(stats.totalAvail), value: stats.totalDone, label: num, color: '#3b7be8',
     ...plain('Première séance suivie', '{n} séances suivies', 'Coche {n} séance(s) (live ou webconférence), toutes matières confondues.') });
+  for (const kind of ['live', 'webconf'] as Kind[]) {
+    const done = Object.values(stats.bySubject).reduce((n, c) => n + c[kind].done, 0);
+    const live = kind === 'live';
+    fams.push({
+      key: live ? 'lives' : 'webconfs', name: t(live ? 'Lives' : 'Webconférences'), group: 'sessions', glyph: kind, tiers: every(KIND_TIERS), value: done, label: num, color: live ? '#1d5fd1' : '#0f8a8a',
+      title: (n) => (n === 1 ? t(live ? 'Premier live' : 'Première webconférence') : tf(live ? '{n} lives' : '{n} webconférences', { n })),
+      desc: (n) => tf(live ? 'Suis {n} live(s) du soir, toutes matières confondues.' : 'Suis {n} webconférence(s), toutes matières confondues.', { n })
+    });
+  }
   for (const s of model.subjects) {
     const c = stats.bySubject[s.id];
     for (const kind of ['live', 'webconf'] as Kind[]) {

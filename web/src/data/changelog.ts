@@ -8,6 +8,12 @@ export interface ChangeEntry { version: string; date: string; items: ChangeItem[
 
 export const CHANGELOG: ChangeEntry[] = [
   {
+    version: '1.16.0', date: '2026-11-07',
+    items: [
+      { fr: '🏅 60 nouveaux trophées : 30 pour tous les lives (du premier au 30e) et 30 pour toutes les webconférences, matières confondues.', en: '🏅 60 new trophies: 30 for all the lives (from the first to the 30th) and 30 for all the web conferences, all subjects together.', es: '🏅 60 trofeos nuevos: 30 para todos los directos (del primero al 30.º) y 30 para todas las webconferencias, de todas las asignaturas.' }
+    ]
+  },
+  {
     version: '1.15.0', date: '2026-10-18',
     items: [
       { fr: '🗣️ Le quiz d’anglais t’apprend maintenant à bien prononcer : 305 nouvelles questions, A1 : 105, A2 : 100 et B1 : 100, avec des phrases entières et pas seulement des mots.', en: '🗣️ The English quiz now teaches you to pronounce well: 305 new questions (A1: 105, A2: 100, B1: 100) with whole sentences, not only words.', es: '🗣️ El quiz de inglés ahora te enseña a pronunciar bien: 305 preguntas nuevas (A1: 105, A2: 100, B1: 100) con frases enteras y no solo palabras.' },
